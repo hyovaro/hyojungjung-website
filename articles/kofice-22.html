@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리야드 시즌 한국존 전통의상 고증 논란 현장 탐방 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-22.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="리야드 시즌 한국존 전통의상 고증 논란 현장 탐방 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-22.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="리야드 시즌 한국존 전통의상 고증 논란 현장 탐방 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화현장 — Field Report</p>
+                    <h1 class="article-title-ko">리야드 시즌 한국존 전통의상 고증 논란 현장 탐방</h1>
+                    <p class="article-title-en">On the Ground at Riyadh Season's Korea Zone — The Traditional Costume Controversy</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">22 December 2025</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · December 2025</span></div>
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<p>사우디아라비아 수도 리야드(Riyadh)에 위치한 블러바드 월드(Boulevard World)는 매년 리야드 시즌(Riyadh Season)이라는 행사를 여는데, 이 행사는 문화·엔터테인먼트·관광을 결합한 대규모의 국가 프로젝트이다. 수 개월에 걸쳐 상시 운영되는 이 행사는 다양한 공연과 전시, 테마존을 통해 세계 각국의 문화를 체험형 콘텐츠로 소개하는데 초점을 둔다.</p>
+
+<div class="article-photo"><img src="kofice-22-images/img-019.jpg" alt="사우디아라비아 수도 리야드에 위치한 블러바드 월드의 입구"></div>
+<p class="photo-caption">▲ 사우디아라비아 수도 리야드에 위치한 블러바드 월드의 입구 — 출처: 통신원 촬영</p>
+
+<p>올해 리야드 시즌에는 한국 문화를 주제로 한 '한국존(Korea Zone)'이 조성됐다. 사우디 현지 매체는 한국존을 "한국의 유산과 문명을 반영한 몰입형 아시아 문화 체험 공간"으로 표현하며 한국의 전통 가옥에서 영감을 받은 건축, 한국 전통문화를 보여주는 공연, 한국 음식, 한국 전통 공예와 문화 상품 등을 통해 한국 문화의 주요 요소들을 경험할 수 있다고 전했다. 한국존은 블러바드 월드 내 24개국 테마존 중 하나가 되며 리야드 시즌이 글로벌 문화 플랫폼으로서의 위상을 강화하는 사례로 소개됐다.</p>
+
+<div class="article-photo"><img src="kofice-22-images/img-020.jpg" alt="2025년 리야드 시즌 행사의 한국존 입구"></div>
+<p class="photo-caption">▲ 2025년 리야드 시즌 행사의 한국존 입구 — 출처: 통신원 촬영</p>
+
+<h2>블러바드 월드의 리야드 시즌에서 한국존의 구성과 현장 운영</h2>
+<p>한국존은 블러바드 월드 내 여러 국가 테마존 가운데 하나로, 서울을 상징하는 도시 이미지를 결합하여 일종의 테마형 공간으로 구성되어 있다. 입구에는 한국의 전통 성문을 연상시키는 구조물이 설치되어 있고, 내부로 들어서면 남산 타워를 모티프로 한 조형물이 눈에 띈다. 공간 곳곳에는 대형 LED 전광판이 설치되어 있어 서울의 도시 풍경과 한복을 입은 인물, 그리고 한국적인 이미지를 결합한 영상 콘텐츠가 상영되고 있었다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-22-images/img-025.jpg" alt="2025 리야드 시즌 한국존 풍경 — 남산 타워 조형물">
+    <img src="kofice-22-images/img-026.jpg" alt="2025 리야드 시즌 한국존 내부 LED 전광판">
+</div>
+<p class="photo-caption">▲ 2025 리야드 시즌 한국존 내부 풍경 — 출처: 통신원 촬영</p>
+
+<p>한국존 내부에는 한국 음식을 판매하는 매장과 아이돌 관련 굿즈 매장, 스티커 사진 부스, 한복 대여점 등이 함께 운영되고 있어 관람객들이 한국 문화를 체험할 수 있도록 구성되어 있었다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-22-images/img-031.jpg" alt="2025 리야드 시즌 한국존 내부의 한국 분식점">
+    <img src="kofice-22-images/img-033.jpg" alt="2025 리야드 시즌 한국존 내부의 아이돌 굿즈 판매점">
+</div>
+<p class="photo-caption">▲ (좌) 한국 음식 매장, (우) 아이돌 굿즈 판매점 — 출처: 통신원 촬영</p>
+
+<div class="article-photo"><img src="kofice-22-images/img-034.jpg" alt="2025 리야드 시즌 한국존 내부의 한복 대여점"></div>
+<p class="photo-caption">▲ 한국존 내부의 한복 대여점 — 출처: 통신원 촬영</p>
+
+<p>통신원이 방문했을 때는 한국존 안에 설치된 야외 무대에서 정해진 시간에 맞춰 케이팝 댄스 공연이 이어지고 있었다. 뉴진스의 〈슈퍼 샤이(Super Shy)〉를 비롯한 여러 케이팝 곡에 맞춘 퍼포먼스가 시작되자 관람객들이 자연스럽게 모여들었고, 특히 어린 관람객들이 무대 앞에서 안무를 따라추거나 공연을 촬영하는 모습이 두드러졌다.</p>
+
+<div class="article-photo"><img src="kofice-22-images/img-039.jpg" alt="한국존의 케이팝 댄스 공연"></div>
+<p class="photo-caption">▲ 한국존의 케이팝 댄스 공연 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+<h2>논란이 된 한국 전통의상</h2>
+<p>국내에서 논란이 된 것은 이번 한국존에서 공연을 진행한 팀의 한국 전통 공연 의상으로, 이 사진은 국내 언론과 SNS를 통해 확산됐다. 해당 사진 속 공연자들이 입은 의상들은 한국의 전통 한복으로 소개됐으나 과도하게 화려한 색채와 장식, 한국식 부채로 보기 어려운 용품을 활용한 연출 등으로 인해 한국 전통 한복과는 거리가 있다는 지적을 받았다. 태극 문양과 장구 등 한국적인 상징이 사용됐지만, 복식과 공연 구성 전반은 특정한 한국 전통 예술이나 의례의 맥락에 기반했다고 보기 어렵다는 평가가 줄지어 이어진 것이다. 한복 전문가들 역시 해당 의상이 전통 한복과는 관련성이 낮다는 의견을 내놓았다.</p>
+
+<h2>전통문화 고증과 앞으로의 과제</h2>
+<p>전통 예술과 의례처럼 그 나라 고유의 역사성과 맥락이 중요한 영역에서는 이를 해외에 소개하는 과정에서 보다 신중한 접근과 사전 자문이 필요하다. 특히 전통 복식과 공연은 사람들에게 잘못 전달될 경우, 이는 문화적 오해로 이어질 수 있다. 다만 사우디아라비아에는 아직 한국문화원이 공식적으로 설립돼 있지 않다는 점도 추가적으로 고려해야 한다. 제도적인 기반이 충분하지 않은 상황에서는 전통문화와 관련된 콘텐츠들을 안정적으로 기획·검수할 공식 협업 채널이 제한될 수밖에 없다.</p>
+<p>이러한 제한적인 환경 속에서 발생한 한국 전통 의상의 고증에 대한 논란을 단편적으로 비판하기보다는, 리야드 시즌이라는 해외에서 열린 대규모 체험형 플랫폼에서 한국 문화를 어떻게 하면 더 정확하고 보다 설득력 있게 사람들에게 전달하게 만들 수 있을지를 묻는 것이 중요하다. 따라서 향후에는 주 사우디 한국 대사관과 현지 한인 사회, 전통문화 전문가와의 사전 협업과 자문을 통해 전통을 활용한 콘텐츠의 고증과 그에 대한 설명을 보완할 필요가 있다. 한국 문화의 상징성과 접근성을 유지하면서도 전통 콘텐츠들의 고증과 맥락에 관한 설명이 보완된다면, 한국 문화에 대한 이해 역시 보다 입체적으로 확장될 수 있을 것이다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>통신원 촬영</p>
+    <p>코리안빌리지 공식 인스타그램(@koreanvillage_ksa)</p>
+    <p>리야드 시즌(RIYADH SEASON) 공식 웹사이트</p>
+    <p>《YTN》(2025. 12. 09). '한복 맞아?'...사우디 '코리아 빌리지' 기괴한 한복 논란[지금이뉴스]</p>
+    <p>《사우디 프레스 에이전시(Saudi Press Agency)》(2025. 10. 20). Korea Zone at Boulevard World Offers Immersive Asian Cultural Experience during Riyadh Season 2025</p>
+    <p>《아샤라크 알 아우사트(Asharq Al-Awsat)》(2025. 10. 20). Korea Zone at Boulevard World Offers Immersive Asian Cultural Experience during Riyadh Season 2025</p>
+    <p>《리스트(List)》(2025. 10. 05). Exciting new zones confirmed for Riyadh Season 2025</p>
+</div>
+</div></div>
+
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<p>Boulevard World in Riyadh, Saudi Arabia, hosts the annual Riyadh Season — a large-scale national project combining culture, entertainment, and tourism. Running continuously for several months, the event introduces the cultures of countries around the world through experiential content: performances, exhibitions, and themed zones.</p>
+
+<div class="article-photo"><img src="kofice-22-images/img-019.jpg" alt="Boulevard World entrance in Riyadh"></div>
+<p class="photo-caption">▲ Boulevard World entrance in Riyadh — Photo: Correspondent</p>
+
+<p>This year's Riyadh Season included a dedicated 'Korea Zone'. Local Saudi media described it as "an immersive Asian cultural experience reflecting Korean heritage and civilisation", offering architecture inspired by traditional Korean houses, performances showcasing Korean traditional culture, Korean food, and traditional crafts and cultural merchandise. The Korea Zone was one of 24 country-themed zones within Boulevard World, presented as a case of Riyadh Season strengthening its standing as a global cultural platform.</p>
+
+<div class="article-photo"><img src="kofice-22-images/img-020.jpg" alt="Korea Zone entrance at Riyadh Season 2025"></div>
+<p class="photo-caption">▲ Korea Zone entrance at Riyadh Season 2025 — Photo: Correspondent</p>
+
+<h2>The Korea Zone — Layout and On-Site Experience</h2>
+<p>The Korea Zone is structured as a themed space combining imagery associated with Seoul. At its entrance stands a structure evoking a traditional Korean city gate, and inside, a sculpture modelled on Namsan Tower is prominently displayed. Large LED screens throughout the space play video content combining Seoul cityscapes, figures in hanbok, and other Korean imagery — creating a particularly striking atmosphere at night as lighting and LED visuals intensify.</p>
+
+<div class="photo-grid">
+    <img src="kofice-22-images/img-025.jpg" alt="Korea Zone interior with Namsan Tower sculpture">
+    <img src="kofice-22-images/img-026.jpg" alt="Korea Zone LED screen display">
+</div>
+<p class="photo-caption">▲ Korea Zone interior at Riyadh Season 2025 — Photo: Correspondent</p>
+
+<p>Inside the zone, Korean street food vendors, K-pop idol merchandise shops, photo sticker booths, and hanbok rental shops were all operating, creating a space for visitors to engage with Korean culture.</p>
+
+<div class="photo-grid">
+    <img src="kofice-22-images/img-031.jpg" alt="Korean street food stall in the Korea Zone">
+    <img src="kofice-22-images/img-033.jpg" alt="K-pop idol merchandise shop in the Korea Zone">
+</div>
+<p class="photo-caption">▲ (left) Korean street food stall, (right) K-pop idol merchandise shop — Photo: Correspondent</p>
+
+<div class="article-photo"><img src="kofice-22-images/img-034.jpg" alt="Hanbok rental shop inside the Korea Zone"></div>
+<p class="photo-caption">▲ Hanbok rental shop inside the Korea Zone — Photo: Correspondent</p>
+
+<p>During the correspondent's visit, K-pop dance performances were taking place at set times on an outdoor stage inside the zone. As performers began dancing to tracks including NewJeans' <em>Super Shy</em> and other K-pop songs, visitors gathered naturally; younger visitors in particular were conspicuously copying choreography in front of the stage or filming the performances.</p>
+
+<div class="article-photo"><img src="kofice-22-images/img-039.jpg" alt="K-pop dance performance at the Korea Zone"></div>
+<p class="photo-caption">▲ K-pop dance performance at the Korea Zone — Source: <span class="correspondent">Correspondent's own photograph</span></p>
+
+<h2>The Controversy Over Traditional Costumes</h2>
+<p>What sparked debate in Korea was the traditional performance costumes worn by the performing group in the Korea Zone — photographs of which spread through domestic media and social networks. The costumes were introduced as traditional Korean hanbok, but critics pointed out that the excessively ornate colours and embellishments, and the use of accessories that bore little resemblance to traditional Korean fans, placed them far from authentic hanbok. While Korean symbols such as the taeguk pattern and janggu drum were incorporated, the consensus was that the overall costume design and performance structure could not be considered grounded in the context of any specific Korean traditional art or ritual form. Hanbok specialists also weighed in, noting that the costumes bore little resemblance to traditional hanbok and that the mere use of the taeguk motif does not constitute traditional dress.</p>
+
+<h2>Historical Accuracy in Traditional Culture — The Challenges Ahead</h2>
+<p>In domains where a country's own history and context matter — such as traditional arts and ritual — more careful, pre-consulted approaches are needed when introducing these abroad. Traditional costume and performance, in particular, can easily lead to cultural misunderstanding when conveyed inaccurately. It should also be noted that Saudi Arabia does not yet have an officially established Korean Cultural Centre, which limits the available official channels for planning and vetting traditional culture content in a stable way.</p>
+<p>Rather than simply criticising the controversy over historical accuracy in traditional costume — arising as it did in this constrained environment — the more important question is how to communicate Korean culture more accurately and persuasively within a large-scale experiential platform abroad like Riyadh Season. Going forward, prior collaboration and consultation with the Korean Embassy in Saudi Arabia, the local Korean community, and traditional culture specialists will be needed to strengthen both the historical accuracy of traditional content and the explanatory framing around it. If the symbolic accessibility of Korean culture is maintained while the historical grounding and contextual explanation of traditional content are improved, the depth of understanding of Korean culture among international audiences can only expand.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Photos by Correspondent</p>
+    <p>Korean Village official Instagram (@koreanvillage_ksa)</p>
+    <p>Riyadh Season official website</p>
+    <p><em>YTN</em> (2025, December 9). '한복 맞아?'...사우디 '코리아 빌리지' 기괴한 한복 논란 [지금이뉴스]</p>
+    <p><em>Saudi Press Agency</em> (2025, October 20). Korea Zone at Boulevard World Offers Immersive Asian Cultural Experience during Riyadh Season 2025.</p>
+    <p><em>Asharq Al-Awsat</em> (2025, October 20). Korea Zone at Boulevard World Offers Immersive Asian Cultural Experience during Riyadh Season 2025.</p>
+    <p><em>List</em> (2025, October 5). Exciting new zones confirmed for Riyadh Season 2025.</p>
+</div>
+</div></div>
+    </div>
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-21.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-23.html">Next →</a>
+    </div>
+</body>
+</html>

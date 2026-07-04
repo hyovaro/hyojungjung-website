@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디, 왕령으로 리야드 예술대학교 설립…문화 인재 양성 본격화 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 460px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-37.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디, 왕령으로 리야드 예술대학교 설립…문화 인재 양성 본격화 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-37.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디, 왕령으로 리야드 예술대학교 설립…문화 인재 양성 본격화 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/교육 — Cultural Policy &amp; Education</p>
+                    <h1 class="article-title-ko">사우디, 왕령으로 리야드 예술대학교 설립…문화 인재 양성 본격화</h1>
+                    <p class="article-title-en">Saudi Arabia Establishes Riyadh University of Arts by Royal Decree — Building the Arts Workforce in Earnest</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">19 March 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · March 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<p>사우디아라비아가 2026년 3월 살만 빈 압둘아지즈 알사우드(King Salman bin Abdulaziz Al Saud) 국왕의 왕령으로 예술 분야 전문 고등교육기관인 리야드 예술대학교(Riyadh University of Arts, RUA) 설립을 공식화했다. 사우디는 이번 대학 설립을 통해 문화예술 분야 인재를 체계적으로 양성하고 문화 산업 기반도 확대할 계획이다. 바드르 빈 압둘라 빈 파르한(Prince Bader bin Abdullah bin Farhan) 문화부 장관은 앞서 2025년 문화투자 콘퍼런스에서 해당 계획을 발표하며 문화 교육 분야의 핵심 투자라고 밝혔다.</p>
+
+<div class="article-photo-sm"><img src="kofice-37-images/img-01.jpg" alt="살만 빈 압둘아지즈 알사우드 국왕의 리야드 예술대학교 설립 승인 관련 보도 — 출처: 아랍뉴스(Arab News)"></div>
+<p class="photo-caption">▲ 살만 빈 압둘아지즈 알사우드 국왕의 리야드 예술대학교 설립 승인 관련 보도 — 출처: 아랍뉴스(Arab News)</p>
+
+<h2>2026년 개교 목표 — 전 과정 예술 교육 체계 구축</h2>
+
+<p>리야드 예술대학교는 문화부 산하 독립 교육기관으로 운영되며, 리야드 이르카(Irqah) 지역에 조성되는 캠퍼스를 중심으로 설립이 추진되고 있다. 대학은 단기 과정부터 학사, 석사, 박사 과정까지 이어지는 교육 체계를 갖추고 예술·문화 분야 전반의 전문 인력을 양성할 예정이다. 개교 초기에는 음악대학, 영화대학, 공연예술 분야 중심으로 먼저 운영한다. 그 이후 건축과 디자인, 요리예술, 시각예술, 문화유산 연구, 문학, 문화경영, 예술경영, 패션 등으로 확대해 총 13개 단과대학 체제로 발전한다. 장학 제도도 함께 마련해 문화예술 인재를 지원할 계획이다.</p>
+
+<h2>글로벌 예술 교육기관과 협력</h2>
+
+<p>리야드 예술대학교는 해외 예술 교육기관과 협력해 교육과정을 운영한다. 공연예술 분야는 미국 에이엠디에이 공연예술대학(AMDA College of the Performing Arts), 영화 분야는 미국 서던캘리포니아대학교 영화예술대학(USC School of Cinematic Arts), 음악 분야는 영국 길드홀 음악연극학교(Guildhall School of Music &amp; Drama), 문화경영 분야는 프랑스 에섹경영대학원(ESSEC Business School)과 협력한다. 사우디는 이들 기관과 함께 학위 과정과 연구, 문화교육 프로그램을 설계해 국제 수준의 예술 교육 체계를 빠르게 구축할 방침이다. 리야드 예술대학교는 세계 문화예술 분야 상위 50개 대학 진입을 목표로 한다.</p>
+
+<h2>문화 산업 성장과 인재 수요 대응</h2>
+
+<p>사우디 정부는 리야드 예술대학교 설립을 통해 문화 인재 양성 체계를 구축하고, 문화 산업을 국가 핵심 성장 분야로 육성하는 정책을 본격적으로 추진하고 있다. 이는 비전 2030을 기반으로 교육·산업·국제 협력을 연계한 문화 생태계 조성 전략이다. 사우디는 영화, 음악, 공연, 시각예술 등 문화 산업 전반을 새로운 성장 분야로 확대하고 있다. 사우디 문화부는 앞으로 10년 동안 문화 분야에서 약 30만 개의 일자리가 생길 것으로 내다봤다. 문화 인력 수요도 해마다 7%씩 늘어날 전망이다. 이에 따라 리야드 예술대학교는 2040년까지 2만 5,000명에서 3만 명의 졸업생을 배출하고, 1,000명에서 1,500명의 교원을 양성하는 목표를 세웠다. 문화 산업 규모도 2030년까지 약 800억 사우디 리얄(약 30조 원) 수준으로 확대될 것으로 예상된다.</p>
+
+<p>최근 사우디에서는 디리야 컨템포러리 아트 비엔날레(Diriyah Contemporary Art Biennale), 투와이크 조각 심포지엄(Tuwaiq Sculpture Symposium), 레드씨 국제영화제(Red Sea International Film Festival) 등 대형 문화 프로젝트가 이어지며 문화 생태계가 빠르게 성장하고 있다. 다만 산업 성장 속도에 비해 전문 인력을 체계적으로 양성할 교육 기반은 아직 충분하지 않다. 리야드 예술대학교는 이러한 수요를 뒷받침하는 교육 기관으로 자리 잡는 데 중요한 역할을 할 것으로 보인다. 사우디는 대학 운영을 통해 자국 예술가와 문화 인력을 키우고, 중동 지역 문화예술 교육의 거점으로 도약하겠다는 목표를 제시했다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>≪아랍뉴스(Arab News)≫ (2026. 03. 14). Royal decree establishes Riyadh University of Arts to boost cultural leadership, <a href="https://www.arabnews.com/node/2636395/saudi-arabia" target="_blank" rel="noopener">arabnews.com</a></p>
+    <p>≪사우디 가제트(Saudi Gazette)≫ (2026. 03. 14). King Salman orders establishment of Riyadh University of Arts, <a href="https://saudigazette.com.sa/article/659754/saudi-arabia/king-salman-orders-establishment-of-riyadh-university-of-arts" target="_blank" rel="noopener">saudigazette.com.sa</a></p>
+    <p>≪사우디 프레스 에이전시(Saudi Press Agency)≫ (2025. 09. 29). Culture Minister Announces the Riyadh University of Arts at the Cultural Investment Conference, <a href="https://spa.gov.sa/en/N2410400" target="_blank" rel="noopener">spa.gov.sa</a></p>
+    <p>≪영국왕립예술대학(Royal College of Art)≫ (2026. 02. 02). Royal College of Art announces programme design partnership with new Riyadh University of Arts, <a href="https://www.rca.ac.uk/news-and-events/news/royal-college-of-art-announces-programme-design-partnership-with-new-riyadh-university-of-arts/" target="_blank" rel="noopener">rca.ac.uk</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<p>In March 2026, Saudi Arabia formally established the Riyadh University of Arts (RUA) — a specialist higher education institution in the arts — through a royal decree issued by King Salman bin Abdulaziz Al Saud. Saudi Arabia plans to use the new university to systematically cultivate talent in the arts and culture sector and to expand the foundations of its cultural industry. Prince Bader bin Abdullah bin Farhan, the Minister of Culture, had announced the plan at the 2025 Cultural Investment Conference, describing it as a core investment in cultural education.</p>
+
+<div class="article-photo-sm"><img src="kofice-37-images/img-01.jpg" alt="Arab News coverage of King Salman's approval of the Riyadh University of Arts — Source: Arab News"></div>
+<p class="photo-caption">▲ Arab News coverage of the royal decree establishing the Riyadh University of Arts — Source: Arab News</p>
+
+<h2>Targeting a 2026 Opening — A Full Arts Education System from Foundation to Doctorate</h2>
+
+<p>The Riyadh University of Arts will operate as an independent institution under the Ministry of Culture, centred on a campus being developed in the Irqah district of Riyadh. The university will offer an educational pathway from short courses through to bachelor's, master's, and doctoral programmes, training specialist professionals across the full breadth of the arts and culture sector. In its early years, it will focus on colleges of music, film, and performing arts. It will subsequently expand to encompass architecture and design, culinary arts, visual arts, heritage studies, literature, cultural management, arts management, and fashion — eventually developing into a structure of thirteen colleges. A scholarship programme is also planned to support talented individuals in the arts.</p>
+
+<h2>Partnerships with Global Arts Education Institutions</h2>
+
+<p>The Riyadh University of Arts will develop its curriculum in partnership with overseas arts education institutions: AMDA College of the Performing Arts (USA) for the performing arts; the USC School of Cinematic Arts (USA) for film; the Guildhall School of Music &amp; Drama (UK) for music; and ESSEC Business School (France) for cultural management. Working with these institutions, Saudi Arabia plans to rapidly build an internationally competitive arts education system by co-designing degree programmes, research, and cultural education initiatives. The Riyadh University of Arts has set a target of entering the global top 50 in arts and culture education.</p>
+
+<h2>Responding to Cultural Industry Growth and Talent Demand</h2>
+
+<p>Through the establishment of the Riyadh University of Arts, the Saudi government is putting in place the infrastructure for training cultural talent and pursuing a policy of cultivating the cultural industry as a core national growth sector in earnest. This represents a strategy for building a cultural ecosystem that connects education, industry, and international cooperation under the framework of Vision 2030. Saudi Arabia is expanding culture — film, music, performance, visual arts — as a new growth domain across the board. The Ministry of Culture projects that approximately 300,000 jobs will be created in the cultural sector over the next decade, with demand for cultural professionals expected to grow by 7% annually. Against this backdrop, the Riyadh University of Arts has set a target of producing 25,000 to 30,000 graduates and training 1,000 to 1,500 faculty members by 2040. The cultural industry as a whole is expected to grow to approximately SAR 80 billion (approximately KRW 30 trillion) by 2030.</p>
+
+<p>Recent years have seen Saudi Arabia's cultural ecosystem grow rapidly, with major cultural projects including the Diriyah Contemporary Art Biennale, the Tuwaiq Sculpture Symposium, and the Red Sea International Film Festival. Yet the educational infrastructure for systematically training specialist professionals has not kept pace with the speed of industry growth. The Riyadh University of Arts is expected to play an important role in becoming the institution that supports this demand. Saudi Arabia has articulated a goal of nurturing domestic artists and cultural professionals through the university, and of establishing itself as a hub for arts and culture education across the Middle East.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources &amp; Photo Credits</p>
+    <p>≪Arab News≫ (2026. 03. 14). Royal decree establishes Riyadh University of Arts to boost cultural leadership, <a href="https://www.arabnews.com/node/2636395/saudi-arabia" target="_blank" rel="noopener">arabnews.com</a></p>
+    <p>≪Saudi Gazette≫ (2026. 03. 14). King Salman orders establishment of Riyadh University of Arts, <a href="https://saudigazette.com.sa/article/659754/saudi-arabia/king-salman-orders-establishment-of-riyadh-university-of-arts" target="_blank" rel="noopener">saudigazette.com.sa</a></p>
+    <p>≪Saudi Press Agency≫ (2025. 09. 29). Culture Minister Announces the Riyadh University of Arts at the Cultural Investment Conference, <a href="https://spa.gov.sa/en/N2410400" target="_blank" rel="noopener">spa.gov.sa</a></p>
+    <p>≪Royal College of Art≫ (2026. 02. 02). Royal College of Art announces programme design partnership with new Riyadh University of Arts, <a href="https://www.rca.ac.uk/news-and-events/news/royal-college-of-art-announces-programme-design-partnership-with-new-riyadh-university-of-arts/" target="_blank" rel="noopener">rca.ac.uk</a></p>
+</div>
+</div></div>
+
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <div class="float-nav">
+        <a href="kofice-36.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-38.html">Next →</a>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "Hyojung Jung 정효정",
+  "short_name": "Hyojung Jung",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#7c3a36",
+  "background_color": "#f7f4ef",
+  "display": "standalone"
+}

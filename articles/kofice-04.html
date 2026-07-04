@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 최초 '한국 영화 주간' 리야드에서 성황리에 개막 — Hyojung Jung</title>
+    <meta name="description" content="Saudi Arabia's first Korean Film Week opens in Riyadh. Published in KOFICE, August 2025. By Hyojung Jung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 300; line-height: 1.3; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; gap: 0; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en { font-size: 14px; }
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-04.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 최초 '한국 영화 주간' 리야드에서 성황리에 개막 — Hyojung Jung">
+    <meta property="og:description" content="Saudi Arabia's first Korean Film Week opens in Riyadh. Published in KOFICE, August 2025. By Hyojung Jung.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-04.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 최초 '한국 영화 주간' 리야드에서 성황리에 개막 — Hyojung Jung">
+    <meta name="twitter:description" content="Saudi Arabia's first Korean Film Week opens in Riyadh. Published in KOFICE, August 2025. By Hyojung Jung.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Cultural Policy &amp; Issues</p>
+                    <h1 class="article-title-ko">사우디 최초 '한국 영화 주간' 리야드에서 성황리에 개막</h1>
+                    <p class="article-title-en">Saudi Arabia's First Korean Film Week Opens to Great Success in Riyadh</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">29 August 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · August 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+
+                <p>2025년 1월 19일부터 23일까지 사우디아라비아 리야드의 씨네하우스(CINEHOUSE)에서 '한국 영화 주간(Korean Film Week)'이 열렸다. 사우디필름커미션(Saudi Film Commission)이 주관하고 한국 영화진흥위원회(KOFIC)가 협력한 이번 행사는 아트 시네마 이니셔티브(Art Cinema Initiative) 일환으로 사우디 내 예술 영화의 저변 확대와 한-사우디 간 문화교류를 활성화하기 위해 마련됐다.</p>
+
+                <h2>씨네하우스: 새로운 영화 문화의 거점</h2>
+
+                <p>이번 영화 주간의 무대가 된 씨네하우스는 사우디 최초의 아트하우스 시네마로 2024년 10월 리야드에 문을 열었다. 사우디 영화 프로듀서 파이살 발튜르(Faisal Baltyuor)가 주도해 설립한 이 극장은 단순한 상영관을 넘어 세계 영화의 다양성을 소개하고 창작자와 관객을 연결하는 문화 허브로 자리매김하고 있다. 씨네하우스는 80석 규모의 부티크형 상영관과 레스토랑, 라운지를 갖추고 있으며 돌비 애트모스(Dolby Atmos) 사운드와 4K 레이저 프로젝션 등 최첨단 시설을 자랑한다. 발튜르는 "씨네하우스를 단순히 영화를 보는 곳이 아니라 영화인과 관객이 함께 모여 대화와 영감을 나누는 공간으로 만들고 싶다."고 강조한 바 있다.</p>
+
+                <div class="article-photo"><img src="kofice-04-images/img-000.jpg" alt="리야드 '한국 영화 주간' 홍보 포스터"></div>
+                <p class="photo-caption">▲ 리야드 '한국 영화 주간' 홍보 포스터 — 출처: 씨네하우스 제공</p>
+
+                <h2>개막식과 현장 분위기</h2>
+
+                <p>개막일인 1월 19일 리셉션 현장에서는 사우디필름커미션 위원장(CEO) 압둘라 알에이아프(Abdullah Al-Eyaf)와 레드씨영화제 대표이사(CEO) 파이살 발튜르(Faisal Baltyuor)를 비롯해 전주국제영화제 문성경 프로그래머, 사우디 배우 바라 알렘(Baraa Alem), 씨네하우스 관계자 등이 참석해 영화산업 협력과 향후 교류 가능성에 대해 다양한 대화를 나눴다. 행사가 열린 씨네하우스는 관객이 음식을 주문해 극장 안에서 즐길 수 있는 공간으로 운영되는데 이번 '한국 영화 주간'에는 라면, 떡볶이 등 한국 음식을 특별 메뉴로 제공해 색다른 경험을 선사했다.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-04-images/img-012.jpg" alt="개막식 리셉션 현장">
+                    <img src="kofice-04-images/img-013.jpg" alt="개막식 리셉션 현장">
+                </div>
+                <p class="photo-caption">▲ 개막식 리셉션 현장 — 출처: 씨네하우스 제공</p>
+
+                <p>이어 봉준호 감독의 &lt;기생충(Parasite)&gt;이 개막작으로 상영됐다. 사우디 문화적 특성에 따라 일부 장면이 편집됐으나 현지 관객들은 영화가 담고 있는 사회적 메시지와 서사에 깊은 공감을 표하며 뜨거운 호응을 보였다.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-04-images/img-015.jpg" alt="개막작 '기생충' 홍보 포스터">
+                    <img src="kofice-04-images/img-016.jpg" alt="'기생충' 상영 현장">
+                </div>
+                <p class="photo-caption">▲ 개막식 상영작인 '기생충' 관련 홍보 포스터 및 상영 현장 — 출처: 씨네하우스 제공</p>
+
+                <p>상영 후에는 전주국제영화제 문성경 프로그래머와 사우디 배우 바라 알렘(Baraa Alem)이 함께한 대담이 이어졌다. 이들은 '한국 영화의 보편적 매력(The Universal Appeal of Korean Cinema)'을 주제로 한국 영화의 세계적 매력과 사우디 관객과의 접점에 대해 심도 있는 논의를 펼쳤다.</p>
+
+                <div class="article-photo"><img src="kofice-04-images/img-017.jpg" alt="개막식 대담 프로그램 홍보 포스터 — '한국 영화의 보편적 매력'"></div>
+                <p class="photo-caption">▲ 개막식 대담 프로그램 홍보 포스터 — 출처: 씨네하우스 제공</p>
+
+                <div class="article-photo"><img src="kofice-04-images/img-018.jpg" alt="개막식 대담 현장 — 전주국제영화제 문성경 프로그래머, 사우디 배우 바라 알렘"></div>
+                <p class="photo-caption">▲ 개막식 대담 현장 — 출처: 씨네하우스 제공</p>
+
+                <p>문성경 프로그래머는 과거 영화진흥위원회(KOFIC) 중남미 주재원으로서 아르헨티나에서 활동한 경험을 바탕으로 한국 영화가 세계 각지에서 어떻게 받아들여져 왔는지를 사례와 함께 설명했다. 그는 특히 한국 영화가 발전해 온 과정을 짚으며 "스크린쿼터제와 같은 정부의 적극적인 지원 정책이 한국 영화산업 성장의 밑거름이 됐다"고 강조했다.</p>
+
+                <h2>상영작 라인업</h2>
+
+                <p>'한국 영화 주간'은 지난 몇 년간 한국 영화계의 주요 작품을 상영하며 현지 관객에게 다양한 장르적 스펙트럼을 선보였다. 봉준호 감독의 &lt;기생충(Parasite)&gt;을 시작으로 한국형 SF 대작인 김용화 감독의 &lt;더 문(The Moon)&gt;, 영화 안의 영화를 다룬 메타 시네마인 김지운 감독의 &lt;거미집(COBWEB)&gt;, 재난 블록버스터인 엄태화 감독의 &lt;콘크리트 유토피아(Concrete Utopia)&gt;, 범죄 액션 화제작인 류승완 감독의 &lt;베테랑2(I, THE EXECUTIONER)&gt;가 그에 해당한다.</p>
+
+                <div class="article-photo"><img src="kofice-04-images/img-020.jpg" alt="리야드 '한국 영화 주간' 상영작 라인업"></div>
+                <p class="photo-caption">▲ 리야드 '한국 영화 주간' 상영작 라인업 — 출처: 씨네하우스 제공</p>
+
+                <h2>사우디 '비전 2030'과의 접점</h2>
+
+                <p>이번 리야드에서 열린 사우디 최초의 한국 영화 주간은 사우디 영화사에서 처음으로 열린 한국 영화 행사라는 점에서 큰 의의를 지닌다. 단순한 문화 행사를 넘어 양국 간 영화 교류의 새로운 장을 열었다는 상징성을 갖는다. 이번 영화 주간은 또한 사우디 정부가 추진하는 '비전 2030(Vision 2030)'의 문화 다변화 전략과도 맞닿아 있다. 한국 영화의 보편성과 세계적 매력이 현지 관객에게 전달되며 사우디가 세계 영화산업과의 연결을 확대하고 있음을 보여준다.</p>
+
+                <p>아울러 2025년 2월 체결된 사우디필름커미션–한국 영화진흥위원회 파트너십 역시 이러한 흐름을 뒷받침한다. 이미 구축된 협력 기반 위에서 공동 제작, 인재 교류, 해외 유통 등 다양한 프로젝트가 추진되며 '비전 2030'이 지향하는 문화산업 다변화와도 맞물려 본격적인 시너지를 내고 있다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>씨네하우스 홈페이지, <a href="https://www.cinehousecinema.com/" target="_blank" rel="noopener">https://www.cinehousecinema.com/</a></p>
+                    <p>씨네하우스 인스타그램 계정(@cinehousecinema), <a href="https://www.instagram.com/cinehousecinema" target="_blank" rel="noopener">https://www.instagram.com/cinehousecinema</a></p>
+                    <p>씨네하우스 X 계정(@CineHouseCinema), <a href="https://x.com/cinehousecinema" target="_blank" rel="noopener">https://x.com/cinehousecinema</a></p>
+                    <p><em>Arab News</em> (2024. 9. 26). <a href="https://www.arabnews.com/node/2572828/lifestyle" target="_blank" rel="noopener">Arthouse cinema opening soon in the heart of Saudi Arabia</a></p>
+                    <p><em>Arab News</em> (2025. 3. 29). <a href="https://www.arabnews.com/node/2595295/entertainment" target="_blank" rel="noopener">Review: 'CineHouse' in Riyadh</a></p>
+                    <p><em>Variety</em> (2024. 9. 7). <a href="https://variety.com/2024/film/global/saudi-faisal-baltyuor-first-arthouse-cinema-riyadh-zone-of-interest-fallen-leaves-1236136185/" target="_blank" rel="noopener">Saudi Film Pioneer Faisal Baltyuor Launches First Arthouse Cinema in Riyadh</a></p>
+                    <p>홍해국제영화제 홈페이지, <a href="https://redseafilmfest.com/en/about-us/faisal-baltyuor/" target="_blank" rel="noopener">https://redseafilmfest.com/en/about-us/faisal-baltyuor/</a></p>
+                    <p><em>Asharq Al-Awsat</em> (2025. 1. 19). <a href="https://english.aawsat.com/entertainment/5102994-korean-film-week-kicks-riyadh-film-commission-launches-art-cinema-initiative" target="_blank" rel="noopener">Korean Film Week Kicks Off in Riyadh as Film Commission Launches Art Cinema Initiative</a></p>
+                    <p><em>What's On Saudi Arabia</em> (2025. 1. 20). <a href="https://whatsonsaudiarabia.com/2025/01/korean-film-week-in-riyadh/" target="_blank" rel="noopener">Check out the Korean Film Week in Riyadh</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+
+                <p>From January 19 to 23, 2025, the Korean Film Week took place at CINEHOUSE in Riyadh, Saudi Arabia. Organised by the Saudi Film Commission and supported by the Korean Film Council (KOFIC), the event was held as part of the Art Cinema Initiative, with the aims of broadening the base for art cinema within Saudi Arabia and fostering cultural exchange between the two countries.</p>
+
+                <h2>CineHouse: A New Hub for Film Culture</h2>
+
+                <p>The host venue, CineHouse, is Saudi Arabia's first arthouse cinema, which opened in Riyadh in October 2024. Established under the leadership of Saudi film producer Faisal Baltyuor, the cinema has positioned itself as more than a simple screening venue — it is a cultural hub that introduces the diversity of world cinema and connects filmmakers with audiences. CineHouse boasts a boutique 80-seat screening room, a restaurant, and a lounge, along with cutting-edge facilities including Dolby Atmos sound and 4K laser projection. Baltyuor has stated his ambition "to make CineHouse not merely a place to watch films, but a space where filmmakers and audiences can gather together to share dialogue and inspiration."</p>
+
+                <div class="article-photo"><img src="kofice-04-images/img-000.jpg" alt="Promotional poster for the Korean Film Week in Riyadh"></div>
+                <p class="photo-caption">▲ Promotional poster for the Korean Film Week in Riyadh — Source: CineHouse</p>
+
+                <h2>Opening Ceremony and Atmosphere</h2>
+
+                <p>At the opening reception on January 19th, attendees included Abdullah Al-Eyaf, CEO of the Saudi Film Commission; Faisal Baltyuor, CEO of the Red Sea International Film Festival; Mun Seong-gyeong, programmer for the Jeonju International Film Festival; Saudi actor Baraa Alem; and CineHouse staff, who engaged in wide-ranging conversations about cooperation in the film industry and future possibilities for exchange. CineHouse operates as a space where audiences can order food and enjoy it inside the theatre; during the Korean Film Week, special menu items including ramyeon (instant noodles) and tteokbokki (spicy rice cakes) were offered, providing a uniquely immersive experience.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-04-images/img-012.jpg" alt="Opening reception venue">
+                    <img src="kofice-04-images/img-013.jpg" alt="Opening reception venue">
+                </div>
+                <p class="photo-caption">▲ Opening reception venue — Source: CineHouse</p>
+
+                <p>Bong Joon-ho's <em>Parasite</em> then screened as the opening film. While some scenes were edited in accordance with Saudi cultural standards, local audiences responded with deep resonance to the film's social message and narrative, showing enthusiastic reception.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-04-images/img-015.jpg" alt="Parasite promotional card for Korean Film Week">
+                    <img src="kofice-04-images/img-016.jpg" alt="Audience at CineHouse during the Parasite screening">
+                </div>
+                <p class="photo-caption">▲ <em>Parasite</em> promotional poster and opening night screening — Source: CineHouse</p>
+
+                <p>Following the screening, a talk was held featuring Mun Seong-gyeong, programmer for the Jeonju International Film Festival, and Saudi actor Baraa Alem. They engaged in substantial discussion on the theme of <em>'The Universal Appeal of Korean Cinema,'</em> exploring the global appeal of Korean films and where they connect with Saudi audiences.</p>
+
+                <div class="article-photo"><img src="kofice-04-images/img-017.jpg" alt="Talk programme poster — The Universal Appeal of Korean Cinema, with Sung Moon and Baraa Alem"></div>
+                <p class="photo-caption">▲ Opening night talk programme poster — Source: CineHouse</p>
+
+                <div class="article-photo"><img src="kofice-04-images/img-018.jpg" alt="The talk in progress inside the CineHouse screening room"></div>
+                <p class="photo-caption">▲ The talk in progress inside CineHouse — Source: CineHouse</p>
+
+                <p>Drawing on his experience as a KOFIC resident officer in Latin America — where he was based in Argentina — programmer Mun explained with examples how Korean films have been received in different parts of the world. Reflecting on the trajectory of Korean cinema's development, he emphasised that "government support policies such as the screen quota system were the foundation of the Korean film industry's growth."</p>
+
+                <h2>Screening Lineup</h2>
+
+                <p>The Korean Film Week presented key works from recent Korean cinema to local audiences, offering a diverse spectrum of genres. Beginning with Bong Joon-ho's <em>Parasite</em>, the programme included Kim Yong-hwa's Korean sci-fi epic <em>The Moon</em>, Kim Jee-woon's meta-cinema <em>Cobweb</em> (a film about the making of a film), Uhm Tae-hwa's disaster blockbuster <em>Concrete Utopia</em>, and Ryoo Seung-wan's much-talked-about crime action film <em>I, the Executioner</em> (Veteran 2).</p>
+
+                <div class="article-photo"><img src="kofice-04-images/img-020.jpg" alt="Korean Film Week Riyadh screening lineup"></div>
+                <p class="photo-caption">▲ Korean Film Week Riyadh — full screening lineup — Source: CineHouse</p>
+
+                <h2>Connection to Saudi Vision 2030</h2>
+
+                <p>This first-ever Korean film event in Saudi cinema history carries great significance — it is more than a cultural event; it has symbolic meaning as the opening of a new chapter in film exchange between the two countries. The Korean Film Week also aligns with the cultural diversification strategy of Saudi Arabia's government-driven Vision 2030. It demonstrates how Saudi Arabia is expanding its connections with the global film industry, as Korean cinema's universality and global appeal reaches local audiences.</p>
+
+                <p>The partnership between the Saudi Film Commission and KOFIC — signed in February 2025 — further underpins this momentum. Building on an already established foundation for cooperation, various projects spanning co-production, talent exchange, and international distribution are being advanced, creating real synergy with the cultural industry diversification that Vision 2030 aspires to achieve.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>CineHouse website, <a href="https://www.cinehousecinema.com/" target="_blank" rel="noopener">https://www.cinehousecinema.com/</a></p>
+                    <p>CineHouse Instagram (@cinehousecinema), <a href="https://www.instagram.com/cinehousecinema" target="_blank" rel="noopener">https://www.instagram.com/cinehousecinema</a></p>
+                    <p>CineHouse X (@CineHouseCinema), <a href="https://x.com/cinehousecinema" target="_blank" rel="noopener">https://x.com/cinehousecinema</a></p>
+                    <p><em>Arab News</em> (26 Sep 2024). <a href="https://www.arabnews.com/node/2572828/lifestyle" target="_blank" rel="noopener">Arthouse cinema opening soon in the heart of Saudi Arabia</a></p>
+                    <p><em>Arab News</em> (29 Mar 2025). <a href="https://www.arabnews.com/node/2595295/entertainment" target="_blank" rel="noopener">Review: 'CineHouse' in Riyadh</a></p>
+                    <p><em>Variety</em> (7 Sep 2024). <a href="https://variety.com/2024/film/global/saudi-faisal-baltyuor-first-arthouse-cinema-riyadh-zone-of-interest-fallen-leaves-1236136185/" target="_blank" rel="noopener">Saudi Film Pioneer Faisal Baltyuor Launches First Arthouse Cinema in Riyadh</a></p>
+                    <p>Red Sea International Film Festival, <a href="https://redseafilmfest.com/en/about-us/faisal-baltyuor/" target="_blank" rel="noopener">https://redseafilmfest.com/en/about-us/faisal-baltyuor/</a></p>
+                    <p><em>Asharq Al-Awsat</em> (19 Jan 2025). <a href="https://english.aawsat.com/entertainment/5102994-korean-film-week-kicks-riyadh-film-commission-launches-art-cinema-initiative" target="_blank" rel="noopener">Korean Film Week Kicks Off in Riyadh as Film Commission Launches Art Cinema Initiative</a></p>
+                    <p><em>What's On Saudi Arabia</em> (20 Jan 2025). <a href="https://whatsonsaudiarabia.com/2025/01/korean-film-week-in-riyadh/" target="_blank" rel="noopener">Check out the Korean Film Week in Riyadh</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding:40px 52px;border-top:0.5px solid rgba(0,0,0,0.1);">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6f6f;margin-bottom:14px;">Elsewhere on this site · 사이트의 다른 곳</div>
+        <a href="../engagement-korean-film-week.html" style="display:block;max-width:620px;text-decoration:none;color:#1a1a1a;border:0.5px solid #d5d0c8;border-radius:8px;padding:20px 24px;background:#fff;">
+            <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7c3a36;margin-bottom:8px;">Cultural Work · 현장 On the ground</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.25;margin-bottom:4px;">한국 영화 주간 — 리야드 현장</div>
+            <div style="font-size:13px;color:#5e5e5e;font-style:italic;font-family:'Cormorant Garamond',serif;">Korean Film Week Riyadh — the event, in person&nbsp;&nbsp;→</div>
+        </a>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-03.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-05.html">Next →</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박찬욱 감독 영화 〈어쩔수가없다〉 사우디 극장 개봉과 현지 반응 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-26.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="박찬욱 감독 영화 〈어쩔수가없다〉 사우디 극장 개봉과 현지 반응 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-26.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="박찬욱 감독 영화 〈어쩔수가없다〉 사우디 극장 개봉과 현지 반응 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">영화 — Film</p>
+                    <h1 class="article-title-ko">박찬욱 감독 영화 〈어쩔수가없다〉 사우디 극장 개봉과 현지 반응</h1>
+                    <p class="article-title-en">Park Chan-wook's <em>No Other Choice</em>: Saudi Theatrical Release and Local Reception</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">20 January 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · January 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<p>2026년 1월 8일, 박찬욱 감독의 영화 〈어쩔수가없다(No Other Choice)〉가 사우디아라비아의 대표 극장 체인을 통해 사우디아라비아 전역에 정식 개봉했다. 통신원은 리야드(Riyadh)의 한 극장을 직접 찾아 영화를 관람했으며, 상영 후 현지 관객들과 한국어 및 한국 문화를 공부 중인 학생들을 만나 작품에 대한 반응을 살펴봤다.</p>
+
+<p>이번 상영은 극장 체인별로 자막 제공 방식에 차이가 있었다. 복스 시네마스(VOX Cinemas)에서는 아랍어 자막만 제공됐고, 무비 시네마스(MUVI Cinemas)에서는 영어와 아랍어 자막이 함께 제공됐다. 사운드는 모두 한국어 원음으로 상영됐다. 저녁 회차의 경우 좌석이 거의 매진되며 작품에 대한 현지 관객의 높은 관심을 실감하게 했다.</p>
+
+<div class="article-photo"><img src="kofice-26-images/img-01.jpg" alt="리야드 현지 영화관에 걸린 영화 어쩔수가없다 극장 포스터 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 리야드 현지 영화관에 걸린 영화 〈어쩔수가없다〉 극장 포스터 — 출처: 통신원 촬영</p>
+
+<h2>공감과 낯섦 사이, 사우디 관객이 마주한 박찬욱 영화</h2>
+
+<p>현장에서 만난 한 현지 남성 관객은 커피 사업으로 한국을 6개월에 한 번씩 방문하고 있으며, 평소 한국 문화 전반에 관심이 많다고 밝혔다. 그는 한국 영화가 개봉했다는 소식을 듣고 바로 극장을 찾았으며, 작품을 흥미롭게 감상했다고 전했다. 또 다른 현지 여성 관객 하임(Haim)은 한국 영화의 팬으로, 특히 사운드트랙이 인상 깊었으며 주인공의 실직이라는 절박한 서사가 사우디 관객으로서도 충분히 공감 가능했다고 언급했다. 또한 봉준호 감독의 2017년 작품 〈옥자〉를 언급하며 "한국 영화는 자연을 이야기 속으로 끌어들이는 방식이 인상적이다"라며 소감을 이야기했다. 영화 〈어쩔수가없다〉에서도 나무를 베고 종이를 만들어가는 과정이 반복적으로 등장해서, 이에 대해 강한 인상을 받았다고 했다.</p>
+
+<p>한국어를 공부 중인 현지 학생 달랄(Dalal)은 "은유법과 숨겨진 의미가 신선했다"라며 작품을 극찬했다. 또한 "시작부터 분위기가 형성됐고 연기가 매우 현실적이었다"는 반응을 보였다. 다만 '팬티 장면'으로 언급된 특정 장면은 사우디 관객에게 다소 당황스럽고 낯선 충격으로 받아들여졌다. 한 관객은 "지금도 완전히 이해되지는 않지만, 그래서 오히려 더 신선하게 느껴졌다"라고 말했다.</p>
+
+<p>한편 현지에 거주 중인 스페인 출신의 남성 관객은 〈올드보이(Oldboy)〉를 비롯한 박찬욱 감독의 이른바 '복수 3부작'을 모두 관람해 온 팬이라고 밝히며, 해당 장면이 완전히 이해되지는 않았지만 강한 인상을 남겼다고 평가했다. 그는 "한국 영화는 인간의 어두운 내면과 그로테스크한 감정을 미학적으로 가감 없이 드러내는 경향이 있다. 보통의 사람들로 시작해 이야기를 비틀어 전개한다"라고 덧붙였다.</p>
+
+<h2>남성 관객 증가, '이병헌 효과'</h2>
+
+<p>현지 아랍 남성 관객의 비중도 눈에 띄었다. 이에 현지에서 한국어와 한국 문화를 공부하고 있는 이만(Eman)은 통상 한국 문화 콘텐츠는 여성 팬층이 두드러진다는 인식과 달리, 이번 상영에서는 이병헌의 연기를 보고 싶어 극장을 찾는 관객이 적지 않다고 전했다. 이는 이병헌이 출연한 〈오징어 게임〉의 글로벌 인지도와 더불어, 그가 2025년 10월 리야드에서 열린 조이 포럼(Joy Forum)에 참석해 현지 관객과 직접 교류한 영향이 이어졌다는 분석이다. 당시 포럼에서는 글로벌 제작 환경과 스트리밍 시대의 콘텐츠 경쟁력, 문화 교류의 가능성 등이 논의됐고, 사우디 영화와 한국 영화의 상호 교류에 대한 기대도 함께 언급됐다.</p>
+
+<div class="article-photo"><img src="kofice-26-images/img-02.jpg" alt="조이 포럼에 참석한 윤제균 감독, 이병헌 배우, 이정재 배우 — 출처: 사우디 온 디맨드 유튜브 채널"></div>
+<p class="photo-caption">▲ 조이 포럼(Joy Forum)에 참석한 윤제균 감독, 이병헌 배우, 이정재 배우 — 출처: 사우디 온 디맨드(Saudi On Demand) 유튜브 채널(@SaudiOnDemand)</p>
+
+<p>사우디 현지 관객의 일반적인 경향으로는 사회적 갈등이나 불편함을 전면적으로 드러내는 작품보다 비교적 완만한 서사를 선호하는 분위기가 관찰된다. 이집트나 레바논 등 비교적 오랜 영화 산업 전통을 가진 국가들과 달리, 사우디의 자국 영화 시장은 아직 형성 단계에 있는 편이다. 이러한 맥락에서 한국 영화 〈어쩔수가없다〉의 사우디 전역 상영과 그에 대한 높은 관심은 사우디 극장가에서 한국 작가주의 영화(auteur film)의 수용 범위가 점차 확장되고 있음을 보여준다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진 출처 및 참고자료</p>
+    <p>복스 시네마스(Vox Cinemas), <a href="https://ksa.voxcinemas.com/movies/no-other-choice-korean" target="_blank" rel="noopener">ksa.voxcinemas.com</a></p>
+    <p>무비 시네마스(Muvi Cinemas), <a href="https://www.muvicinemas.com/en" target="_blank" rel="noopener">muvicinemas.com</a></p>
+    <p>조이 포럼(Joy Forum), <a href="https://joyforum.com/" target="_blank" rel="noopener">joyforum.com</a></p>
+    <p>사우디 온 디맨드(Saudi On Demand) 유튜브 채널(@SaudiOnDemand) (2025.10.16). Live Streaming | Joy Forum 2025 — The Future of Entertainment, <a href="https://www.youtube.com/live/ATLLBltke4U" target="_blank" rel="noopener">youtube.com</a></p>
+    <p>≪타임 아웃 리야드 (Time Out Riyadh)≫ (2025.10.13). JOY Forum returns to Riyadh Season 2025 for another powerful meet, <a href="https://www.timeoutriyadh.com/news/joy-forum-2025-riyadh-season" target="_blank" rel="noopener">timeoutriyadh.com</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<p>On 8 January 2026, Park Chan-wook's film <em>No Other Choice</em> opened theatrically across Saudi Arabia through the country's major cinema chains. The correspondent visited a Riyadh cinema to see the film, and afterwards met with local audience members and students of Korean language and culture to gauge their reactions.</p>
+
+<p>Subtitle provision varied by cinema chain: VOX Cinemas screened the film with Arabic subtitles only, while MUVI Cinemas offered both English and Arabic. The audio was in Korean throughout. Evening screenings were nearly sold out, a tangible sign of local audience interest in the film.</p>
+
+<div class="article-photo"><img src="kofice-26-images/img-01.jpg" alt="No Other Choice theatrical poster at a Riyadh cinema — Photo: correspondent"></div>
+<p class="photo-caption">▲ <em>No Other Choice</em> theatrical poster at a Riyadh cinema — Photo: correspondent</p>
+
+<h2>Between Resonance and Unfamiliarity: Saudi Audiences Encounter Park Chan-wook</h2>
+
+<p>One local male audience member said he visits Korea every six months for his coffee business and has a general interest in Korean culture. He had come to the cinema as soon as he heard a Korean film was opening, and said he found the work absorbing. Another local female audience member, Haim, described herself as a Korean film fan. She said the soundtrack had left a particularly strong impression, and that the protagonist's desperate situation — losing his job — had resonated with her as a Saudi viewer. She also mentioned Bong Joon-ho's 2017 film <em>Okja</em>, saying, "What strikes me about Korean cinema is the way it draws nature into the story." The repeated scenes in <em>No Other Choice</em> of cutting trees and making paper had made a strong impression on her.</p>
+
+<p>Dalal, a local student studying Korean, called the film "a breath of fresh air — the metaphors and hidden meanings felt new." She said the atmosphere was established from the very first scene and that the acting felt deeply real. A particular scene — referred to as "the underwear scene" — came as something of a surprise to Saudi audience members. One viewer said: "I still can't fully explain it, but somehow that made it feel even fresher."</p>
+
+<p>A Spanish expatriate living locally said he had seen all of Park Chan-wook's so-called 'Vengeance Trilogy' including <em>Oldboy</em>, and described the scene as leaving a powerful impression even if it was not fully understood. He added: "Korean cinema has a tendency to expose the dark interior of human beings and grotesque emotions in an aesthetically unfiltered way — it starts with ordinary people and then twists the story."</p>
+
+<h2>A Rise in Male Audiences — The 'Lee Byung-hun Effect'</h2>
+
+<p>The proportion of local Arab male audience members was noticeably high. Eman, a local student of Korean language and culture, noted that while Korean cultural content is typically associated with a predominantly female fanbase, a significant number of people at this screening had come specifically wanting to see Lee Byung-hun's performance. This, she suggested, reflects both Lee's global recognition from <em>Squid Game</em> and the residual effect of his attendance at the Joy Forum in Riyadh in October 2025, where he met directly with local audiences. The forum had addressed the global production environment, content competitiveness in the streaming era, and the possibilities for cultural exchange — with hopes also expressed for greater bilateral exchange between Saudi and Korean cinema.</p>
+
+<div class="article-photo"><img src="kofice-26-images/img-02.jpg" alt="Director Yoon Je-kyoon, actor Lee Byung-hun and actor Lee Jung-jae at Joy Forum 2025 — Source: Saudi On Demand YouTube"></div>
+<p class="photo-caption">▲ Director Yoon Je-kyoon, actor Lee Byung-hun and actor Lee Jung-jae at Joy Forum 2025 — Source: Saudi On Demand YouTube channel (@SaudiOnDemand)</p>
+
+<p>A broader tendency among Saudi audiences is a preference for narratives that are relatively gentle over works that foreground social conflict or discomfort head-on. Unlike countries with longer-established film traditions such as Egypt and Lebanon, Saudi Arabia's domestic film market is still in formation. Seen in this context, the nationwide theatrical release of <em>No Other Choice</em> and the strong interest it generated suggests that the space for Korean auteur cinema in the Saudi theatrical market is gradually expanding.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Vox Cinemas, <a href="https://ksa.voxcinemas.com/movies/no-other-choice-korean" target="_blank" rel="noopener">ksa.voxcinemas.com</a></p>
+    <p>Muvi Cinemas, <a href="https://www.muvicinemas.com/en" target="_blank" rel="noopener">muvicinemas.com</a></p>
+    <p>Joy Forum, <a href="https://joyforum.com/" target="_blank" rel="noopener">joyforum.com</a></p>
+    <p>Saudi On Demand YouTube channel (@SaudiOnDemand) (2025.10.16). Live Streaming | Joy Forum 2025 — The Future of Entertainment, <a href="https://www.youtube.com/live/ATLLBltke4U" target="_blank" rel="noopener">youtube.com</a></p>
+    <p>≪타임 아웃 리야드 (Time Out Riyadh)≫ (2025.10.13). JOY Forum returns to Riyadh Season 2025 for another powerful meet, <a href="https://www.timeoutriyadh.com/news/joy-forum-2025-riyadh-season" target="_blank" rel="noopener">timeoutriyadh.com</a></p>
+</div>
+</div></div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+
+    <div class="float-nav">
+        <a href="kofice-25.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-27.html">Next →</a>
+    </div>
+</body>
+</html>

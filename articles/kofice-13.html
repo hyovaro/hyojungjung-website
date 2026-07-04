@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 여성 독자들, 한강의 『채식주의자』를 읽다 — Hyojung Jung</title>
+    <meta name="description" content="Saudi women readers at the Kalimat Literary book club discuss Han Kang's The Vegetarian. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-caption .correspondent { color: #7c3a36; font-style: italic; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en { font-size: 14px; }
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-13.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 여성 독자들, 한강의 『채식주의자』를 읽다 — Hyojung Jung">
+    <meta property="og:description" content="Saudi women readers at the Kalimat Literary book club discuss Han Kang's The Vegetarian. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-13.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 여성 독자들, 한강의 『채식주의자』를 읽다 — Hyojung Jung">
+    <meta name="twitter:description" content="Saudi women readers at the Kalimat Literary book club discuss Han Kang's The Vegetarian. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화현장 — Cultural Scene</p>
+                    <h1 class="article-title-ko">사우디 여성 독자들, 한강의 『채식주의자』를 읽다</h1>
+                    <p class="article-title-en">Saudi Women Readers Encounter Han Kang's <em>The Vegetarian</em></p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">25 October 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · October 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+
+                <h2>칼리마트 하우스, 언어와 문화로 사회를 잇다</h2>
+
+                <div class="article-photo"><img src="kofice-13-images/img-000.jpg" alt="칼리마트 하우스 설립자 안팔 K. 알하마드, 하이파 A. 알오와인 — 출처: 하이파 A.알오와인 제공"></div>
+                <p class="photo-caption">▲ 칼리마트 하우스 설립자 안팔 K. 알하마드, 하이파 A. 알오와인 — 출처: 하이파 A.알오와인 제공</p>
+
+                <p>사우디아라비아의 문화 컨설턴시 칼리마트 하우스(Kalimat House)는 예술과 사회를 잇는 대화를 만들어가는 여성 주도 플랫폼이자 문화공간이다. '칼리마트(Kalimat)'는 아랍어로 '단어들'을 뜻하며, 언어와 대화를 통해 사회를 변화시키겠다는 철학을 담고 있다. 기관은 문화전략가 안팔 K. 알하마드(Anfal K. AlHammad)와 사회개발전문가 하이파 A. 알오와인(Haifa A. AlOwain)이 공동으로 설립했다. 두 사람은 사우디 문화부와 국제 예술기관을 넘나들며 문화정책과 사회 참여, 여성의 창의적 역량 강화를 결합한 다양한 프로젝트를 이끌어왔다.</p>
+
+                <p>이들의 문학 프로그램인 칼리마트 리터러리(Kalimat Literary)는 2014년에 설립된 여성 중심 문학 커뮤니티로 문학과 문화에 열정을 지닌 사우디 여성들을 위한 열린 독서 네트워크로 성장했다. 2024년 11월에는 디리야의 부자이리 테라스(Bujairi Terrace)가 칼리마트 하우스에 프로그램 운영을 공식적으로 의뢰·지원하면서 아랍어와 영어 두 언어 그룹으로 운영되는 여성 북클럽이 출범했다. 이에 따라 비아랍어권 사람들도 참여할 수 있게 됐다. 현재는 세션마다 약 20명 안팎의 회원이 참여하며 매주 혹은 격주로 정기적인 모임을 이어가고 있다. 회원들은 서로를 '칼리마티스타스(Kalimatistas)'라는 애칭으로 부르며 언어와 문화의 경계를 넘어 사유와 연대를 이어간다. 통신원은 2024년 부자이리 론칭 세션부터 멤버로 참여해왔으며 사우디 여성 독서 문화가 지역 곳곳으로 퍼져가는 과정을 가까이에서 지켜보고 있다.</p>
+
+                <div class="article-photo"><img src="kofice-13-images/img-012.jpg" alt="칼리마트 영어 북클럽 모임 — 출처: 통신원 촬영"></div>
+                <p class="photo-caption">▲ 칼리마트 영어 북클럽 모임 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <h2>알코바르 사우디 여성 북클럽 모임, 『채식주의자』를 통해 만난 한국</h2>
+
+                <p>사우디 동부 지역의 해안 도시이자 현대적 문화 공간이 활발한 알코바르(Al Khobar)의 마르파 카페(Marfa Cafe)에서는 칼리마트 리터러리 여성 북클럽이 한국 작가 한강의 『채식주의자(The Vegetarian)』를 주제로 모임을 열었다. 한강 작가가 2024년 노벨문학상을 수상한 이후 사우디에서도 한국 문학에 대한 관심이 눈에 띄게 높아졌다.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-13-images/img-013.jpg" alt="칼리마트 리터러리 채식주의자 북토크 안내">
+                    <img src="kofice-13-images/img-014.jpg" alt="채식주의자 인용 카드">
+                </div>
+                <p class="photo-caption">▲ 칼리마트 리터러리 『채식주의자』 북토크 안내 및 인용 카드 — 출처: 칼리마트 북클럽 인스타그램(@kalimatliterary)</p>
+
+                <p>이날 모임은 단순한 독서 토론이 아니라 여성의 내면과 사회적 억압을 서로의 문화와 겹쳐 읽는 자리였다. 참가자들은 아랍어와 영어 번역본을 함께 읽으며 언어의 차이에 대해 이야기를 나눴다. 다수는 "아랍어 번역이 영어보다 더 강렬하고 폭력적인 언어를 사용해 작품의 긴장감과 권위를 강화한다."고 말했다. 또한 "해당 소설이 그동안 접해온 한국 사회의 이미지와는 전혀 다른 시각을 보여준다."며 "한국 문학의 새로운 면을 발견했다."고 평가했다. 다른 이들은 『채식주의자』가 단순히 식습관의 문제가 아니라 변화의 은유적 도구로 사용된 점을 흥미롭게 봤다. 주인공이 적극적으로 말하지 않지만 그 침묵이 주변 사회에 큰 파장을 일으킨다는 점에 주목하며 주체성의 결여(lack of agency)가 오히려 작가가 선택한 문학적 장치라는 의견이 이어졌다.</p>
+
+                <p>도서 제목에 대한 논의도 오갔다. 일부는 "이 작품이 정말 채식주의에 관한 이야기일까?"라며 식습관보다 거부와 해방의 은유로서의 채식에 주목했다. 한 참가자는 "고기를 거부한다는 것은 단순히 음식의 문제가 아니라 세상이 강요하는 질서와 폭력 자체를 거부하는 행위처럼 느껴졌다."고 말했다. 특히 형부에게 이용당하는 장면에는 많은 참가자들이 감정적으로 반응했다. 여성 독자들은 "여성의 몸이 타인의 욕망에 의해 소비되는 장면이 불쾌했다."며 "그것이 아랍 사회의 단절(disconnect)과 집착(infatuation)을 떠올리게 했다."고 말했다. 남편 인물에 대해서는 두 가지 해석이 엇갈렸다. "그가 아내를 통제하기 쉬운 존재로 여긴 점이 잔혹하다."는 시선과, "자신과 비슷한 수준의 여성을 원했다는 점은 솔직하지만 감정이 결여된 냉정함을 보여준다."는 의견이 함께 나왔다. 가족 내 폭력은 새로운 것이 아니라 익숙한 억압의 반복으로 읽혔다. 그러나 그 안에서 영혜의 변화는 순종이 아닌 저항의 형태로 인식됐다.</p>
+
+                <h2>사우디 여성의 시선으로 한국 문학을 다시 해석하다</h2>
+
+                <p>주인공이 나무로 변하는 상징에 대해서도 활발한 대화가 이어졌다. 참가자들은 "그 장면이 한국문화에서 죽음을 의미한다는 것을 몰랐다."고 말하며 흥미로워했다. 한 참가자는 "죽음이자 해방, 그리고 자연으로의 귀환이라는 해석이 인상적이었다."며 인간의 폭력과 욕망에서 벗어나 순환과 귀의로 이어지는 동양적 세계관에 대해 이야기했다. 참가자들은 사우디 문화에 빗대어 "그렇다면 우리는 죽으면 대추나무가 될까, 사막의 모래가 될까?"라며 토론에 열기를 띄었다. 후반에는 『채식주의자』가 서구 문단에서 큰 호평을 받은 이유에 대한 논의도 이어졌다. 일부는 "서구 사회가 이 작품을 아름답게 붕괴되는 동양 여성의 이야기로 소비해왔다."며 "그런 해석이 때로 오리엔탈리즘적 판타지로 이어질 수 있다."고 지적했다. 작품 속 폭력과 성적 학대 장면이 불쾌했다는 반응도 있었지만 "그것이 여성의 몸이 욕망의 대상으로 소비되는 현실을 드러내는 장치라는 점에서 문학적 설득력이 있다."고 평가하는 참가자도 있었다.</p>
+
+                <div style="margin: 28px 0 8px; display: flex; justify-content: center;"><img src="../Hankang Vegiterian Arabic version.jpg" alt="아랍어로 번역된 채식주의자 책 표지" style="max-width: 320px; width: 100%; height: auto; display: block; border-radius: 2px;"></div>
+                <p class="photo-caption">▲ 아랍어로 번역된 『채식주의자』 표지 — 출처: 한강 홈페이지</p>
+
+                <p>한편 현지 영문 매체 《Arab News(아랍 뉴스)》는 최근 서평 기사에서 알코바르에서 열린 칼리마트 북클럽 모임을 언급하며 "사우디 독자들이 아랍어 번역판을 원문에 더 가깝게 느꼈다."고 전했다. 해당 매체는 "한강의 『채식주의자』가 인간과 자연, 침묵과 저항의 경계를 섬세하게 탐구하는 작품"이라고 평했다. 토론이 끝난 뒤 참가자들은 "한국 사회를 보다 깊이 이해할 수 있는 다른 문학 작품을 추천해달라."고 통신원에게 요청했다. 또한 "한국 작품을 한국인과 함께 토론할 수 있어서 매우 뜻깊었다."며 감사의 마음을 전했다. 사우디 독자들은 낯선 문화에서 오는 새로움뿐만 아니라 그 안에서 발견되는 정서적 동질감에도 깊이 공명하고 있었다. 한국 문학을 매개로 한 이번 북클럽 모임은 두 문화가 서로의 언어로 여성과 사회의 억압, 그리고 인간의 내면을 성찰하며 문학이 언어를 넘어 문화로 이어지는 교류의 장을 형성했다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>통신원 촬영</p>
+                    <p>하이파 A.알오와인 제공</p>
+                    <p>칼리마트 북클럽 인스타그램(@kalimatliterary), <a href="https://www.instagram.com/kalimatliterary/" target="_blank" rel="noopener">https://www.instagram.com/kalimatliterary/</a></p>
+                    <p>한강 홈페이지, <a href="https://han-kang.net/The-Vegetarian-Arabic" target="_blank" rel="noopener">https://han-kang.net/The-Vegetarian-Arabic</a></p>
+                    <p>《Arab News》 (2025. 10. 24). Book Review: 'The Vegetarian' by Han Kang, <a href="https://arab.news/c67th" target="_blank" rel="noopener">https://arab.news/c67th</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+
+                <h2>Kalimat House — Connecting Society Through Language and Culture</h2>
+
+                <div class="article-photo"><img src="kofice-13-images/img-000.jpg" alt="Kalimat House founders Anfal K. AlHammad and Haifa A. AlOwain — Source: Haifa A. AlOwain"></div>
+                <p class="photo-caption">▲ Kalimat House founders Anfal K. AlHammad and Haifa A. AlOwain — Source: Haifa A. AlOwain</p>
+
+                <p>Kalimat House, a cultural consultancy in Saudi Arabia, is a women-led platform and cultural space dedicated to creating dialogue that connects art and society. 'Kalimat' means 'words' in Arabic, embodying a philosophy of transforming society through language and conversation. The organisation was co-founded by cultural strategist Anfal K. AlHammad and social development expert Haifa A. AlOwain, who have worked across Saudi Arabia's Ministry of Culture and international arts institutions, leading diverse projects that combine cultural policy, social engagement, and the creative empowerment of women.</p>
+
+                <p>Their literary programme, Kalimat Literary, is a women-centred literary community founded in 2014, which has grown into an open reading network for Saudi women with a passion for literature and culture. In November 2024, Bujairi Terrace in Diriyah formally commissioned and supported Kalimat House to run its programme, launching a women's book club operating in two language groups — Arabic and English — making it accessible to non-Arabic speakers as well. Around twenty members now participate in each session, meeting weekly or fortnightly. Members call themselves 'Kalimatistas,' forging a community of thought and solidarity across linguistic and cultural boundaries. The correspondent has been a member since the Bujairi launch session in 2024, witnessing at close range how Saudi women's reading culture has spread across different parts of the country.</p>
+
+                <div class="article-photo"><img src="kofice-13-images/img-012.jpg" alt="Kalimat English book club session — correspondent's own photograph"></div>
+                <p class="photo-caption">▲ Kalimat English book club session — Source: <span class="correspondent">correspondent's own photograph</span></p>
+
+                <h2>Al Khobar Book Club Session: Discovering Korea Through <em>The Vegetarian</em></h2>
+
+                <p>At Marfa Cafe in Al Khobar — a coastal city in eastern Saudi Arabia with a vibrant contemporary cultural scene — the Kalimat Literary women's book club held a session on Korean author Han Kang's <em>The Vegetarian</em>. Since Han Kang won the Nobel Prize in Literature in 2024, interest in Korean literature in Saudi Arabia has grown noticeably.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-13-images/img-013.jpg" alt="Kalimat Literary book discussion announcement for The Vegetarian">
+                    <img src="kofice-13-images/img-014.jpg" alt="Han Kang quote card from The Vegetarian">
+                </div>
+                <p class="photo-caption">▲ Kalimat Literary book discussion announcement and quote card for <em>The Vegetarian</em> — Source: Kalimat Literary Instagram (@kalimatliterary)</p>
+
+                <p>The gathering was not simply a book discussion but an occasion to read women's interiority and social oppression through the lens of each other's cultures. Participants read both the Arabic and English translations, comparing the differences in language. Many noted that "the Arabic translation uses more intense and violent language than the English, reinforcing the work's tension and authority." They also observed that "the novel shows a completely different picture of Korean society from the images we've encountered before," calling it a discovery of a new facet of Korean literature. Others found it intriguing that <em>The Vegetarian</em> uses vegetarianism not as a dietary matter but as a metaphorical tool for transformation. The way the protagonist does not actively speak, yet her silence sends powerful shockwaves through surrounding society, prompted discussion of how the lack of agency is itself the literary device the author chose.</p>
+
+                <p>Discussion also turned to the book's title. Some asked, "Is this really a story about vegetarianism?" — focusing on meat refusal not as a dietary choice but as a metaphor for rejection and liberation. One participant said: "Refusing to eat meat felt less like a food issue and more like refusing the order and violence that the world imposes." Many participants reacted emotionally to the scenes involving the brother-in-law. Female readers said "the scene where a woman's body is consumed by another's desire was deeply uncomfortable," and that "it called to mind the disconnect and infatuation within Arab society." Interpretations of the husband character diverged: some found it "cruel that he saw his wife as someone easy to control," while others noted that "the fact that he wanted someone at his own level is honest, but shows an emotional coldness." Family violence was read not as something new but as a familiar repetition of oppression. Yet within it, Yeong-hye's transformation was perceived as a form of resistance rather than submission.</p>
+
+                <h2>Reinterpreting Korean Literature Through Saudi Women's Eyes</h2>
+
+                <p>Lively conversation also surrounded the symbolism of the protagonist's transformation into a tree. Participants were fascinated to learn that "this scene represents death in Korean culture." One said: "The interpretation of it as death and liberation simultaneously — a return to nature — was striking," and went on to discuss the Eastern worldview of cycle and return, free from human violence and desire. Drawing a parallel with Saudi culture, participants asked: "If we died, would we become date palms, or would we become desert sand?" — energising the discussion further. Later in the session, participants discussed why <em>The Vegetarian</em> has received such acclaim in Western literary circles. Some pointed out: "Western society has consumed this work as the story of a beautiful, disintegrating Asian woman," adding that "such interpretations can sometimes feed an orientalist fantasy." Some found the violence and sexual abuse in the work uncomfortable, but others argued that "it has literary conviction precisely because it exposes the reality of a woman's body being consumed as an object of desire."</p>
+
+                <div style="margin: 28px 0 8px; display: flex; justify-content: center;"><img src="../Hankang Vegiterian Arabic version.jpg" alt="Arabic translation of The Vegetarian" style="max-width: 320px; width: 100%; height: auto; display: block; border-radius: 2px;"></div>
+                <p class="photo-caption">▲ Arabic translation of <em>The Vegetarian</em> — Source: Han Kang's website</p>
+
+                <p>Local English-language outlet <em>Arab News</em> also mentioned the Kalimat book club session in Al Khobar in a recent review, noting that "Saudi readers felt the Arabic translation was closer to the original." The outlet described <em>The Vegetarian</em> as "a work that delicately explores the boundaries between human and nature, silence and resistance." After the discussion, participants asked the correspondent to recommend other Korean literary works that would help them understand Korean society more deeply. They also expressed gratitude: "It was truly meaningful to discuss a Korean work alongside a Korean." Saudi readers resonated not only with the novelty of encountering an unfamiliar culture, but with the emotional kinship discovered within it. This book club session, mediated through Korean literature, created a space in which two cultures could reflect together — in each other's languages — on the oppression of women and society, and on the human interior, forming an exchange in which literature becomes culture across the boundaries of language.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>Correspondent's own photographs</p>
+                    <p>Photographs courtesy of Haifa A. AlOwain</p>
+                    <p>Kalimat Literary Instagram (@kalimatliterary), <a href="https://www.instagram.com/kalimatliterary/" target="_blank" rel="noopener">https://www.instagram.com/kalimatliterary/</a></p>
+                    <p>Han Kang's website, <a href="https://han-kang.net/The-Vegetarian-Arabic" target="_blank" rel="noopener">https://han-kang.net/The-Vegetarian-Arabic</a></p>
+                    <p><em>Arab News</em> (2025, October 24). Book Review: 'The Vegetarian' by Han Kang, <a href="https://arab.news/c67th" target="_blank" rel="noopener">https://arab.news/c67th</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding:40px 52px;border-top:0.5px solid rgba(0,0,0,0.1);">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6f6f;margin-bottom:14px;">Elsewhere on this site · 사이트의 다른 곳</div>
+        <a href="../soyon.html" style="display:block;max-width:620px;text-decoration:none;color:#1a1a1a;border:0.5px solid #d5d0c8;border-radius:8px;padding:20px 24px;background:#fff;">
+            <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7c3a36;margin-bottom:8px;">Nangman Theatre · Production</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.25;margin-bottom:4px;">한강 〈소년이 온다〉 — 음악낭독극</div>
+            <div style="font-size:13px;color:#5e5e5e;font-style:italic;font-family:'Cormorant Garamond',serif;">Han Kang's Human Acts, staged as music-reading theatre&nbsp;&nbsp;→</div>
+        </a>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-12.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-14.html">Next →</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 미술 창작생태허브 미스크 아트 인스티튜트 — Hyojung Jung</title>
+    <meta name="description" content="Misk Art Institute — Saudi Arabia's creative ecosystem hub for the arts, including Korean artist participation. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-caption .correspondent { color: #7c3a36; font-style: italic; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en { font-size: 14px; }
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-10.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 미술 창작생태허브 미스크 아트 인스티튜트 — Hyojung Jung">
+    <meta property="og:description" content="Misk Art Institute — Saudi Arabia's creative ecosystem hub for the arts, including Korean artist participation. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-10.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 미술 창작생태허브 미스크 아트 인스티튜트 — Hyojung Jung">
+    <meta name="twitter:description" content="Misk Art Institute — Saudi Arabia's creative ecosystem hub for the arts, including Korean artist participation. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Cultural Policy &amp; Issues</p>
+                    <h1 class="article-title-ko">사우디 미술 창작생태허브 미스크 아트 인스티튜트</h1>
+                    <p class="article-title-en">Misk Art Institute — Saudi Arabia's Creative Ecosystem Hub for the Arts</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">4 October 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · October 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+
+                <h2>창작과 교류의 허브, 미스크 아트 인스티튜트</h2>
+
+                <p>미스크 아트 인스티튜트(Misk Art Institute)는 무함마드 빈 살만 비영리재단(Mohammed bin Salman Non-Profit Foundation, Misk) 산하 기관으로 2011년 무함마드 빈 살만 왕세자가 젊은 세대의 학습과 리더십 개발을 장려하기 위해 설립한 미스크 재단이 그 모태다. 예술 부문을 담당하는 미스크 아트 인스티튜트는 리야드 프린스 파이살 빈 파드 예술홀(Prince Faisal bin Fahd Arts Hall)에 본부를 두고 창작부터 전시, 교류까지 아우르는 비영리 문화 기관으로서 공공 프로그램·레지던시·전시·출판 등 다양한 사업을 운영한다.</p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-000.jpg" alt="프린스 파이살 빈 파드 예술홀 건물 외관 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ 프린스 파이살 빈 파드 예술홀 건물 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-012.jpg" alt="건물 내부 전시장 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ 건물 내부 전시장 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <p>미스크 아트 인스티튜트가 주최하는 &lt;마사하 레지던시 프로그램(Masaha Residency Program)&gt; 10기는 9월 14일부터 12월 12일까지 진행한다. 이번 회차의 주제는 '아는 것의 경계에서(At the Edge of Knowing)'로 진실과 인식, 기억의 불확실한 경계를 탐구한다. 입주 작가들은 스튜디오 기반 창작, 멘토링, 문화유적 탐방, 비평 세션을 거치며 오는 12월 열릴 &lt;미스크 아트 위크 2025(Misk Art Week 2025)&gt;를 준비하고 있다. 특히 레지던시 프로그램들은 미스크의 핵심 축이다. 리야드 현지에서 세계 각국의 예술가를 초청하는 마사하 레지던시(Masaha Residency)와 사우디 예술가를 해외 기관에 파견하는 국제 레지던시 프로그램(International Residency Program)으로 나뉜다. 이 두 프로그램은 해외 예술가들이 리야드의 지역성과 만나도록 하고 사우디 예술가들이 세계 무대에서 시야를 넓히도록 하는 양방향 예술 교류 플랫폼으로 기능한다.</p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-013.jpg" alt="마사하 10기 레지던시 프로그램 입주 작가 단체 사진 — 미스크 아트 인스티튜트"></div>
+                <p class="photo-caption">▲ 마사하 10기 레지던시 프로그램 입주 작가 — 출처: 미스크 아트 인스티튜트</p>
+
+                <p>여기에 한국 작가들도 참여해왔다. 2021년 &lt;홈: 존재와 소속(Home: Being and Belonging)&gt; 2기 레지던시에는 개념미술을 위주로 작업하는 한국 작가 권남희(Namhee Kwon)가 참여해 소속감과 정체성을 주제로 한 설치 작업을 선보였으며 2023년에는 6기 입주작가로 시각예술가 장진승(Jinseung Jang)이 &lt;마사하 레지던시 쇼케이스(Masaha Residency Showcase)&gt;에 참가해 사우디 작가들과 공동 전시를 진행했다. 이는 사우디와 한국 간 미술 교류의 꾸준한 흐름을 보여주는 의미 있는 사례다.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-10-images/img-014.jpg" alt="2기 입주 작가 권남희(Namhee Kwon) 외 참여 작가들 — 미스크 아트 인스티튜트">
+                    <img src="kofice-10-images/img-015.jpg" alt="6기 입주 작가 장진승(Jinseung Jang) 외 참여 작가들 — 미스크 아트 인스티튜트">
+                </div>
+                <p class="photo-caption">▲ (좌) 2기 입주 작가 권남희 외 참여 작가들, (우) 6기 입주 작가 장진승 외 참여 작가들 — 출처: 미스크 아트 인스티튜트</p>
+
+                <h2>시민이 자유롭게 참여하는 창작의 공간</h2>
+
+                <p>미스크 아트 인스티튜트는 전시와 레지던시뿐 아니라 예술가·기획자·시민 모두를 위한 교육 프로그램도 활발히 운영한다. 리야드에서는 매주 &lt;마스터 클래스(Masterclass)&gt;와 &lt;창의 포럼(Creative Forum)&gt;이 열리고 있으며 &lt;현대미술 비평 글쓰기(Writing about Contemporary Art)&gt;와 &lt;문화 생태계 인프라(The Infrastructure of Cultural Ecosystem)&gt; 등 예술 실무자들을 위한 강연이 진행 중이다. 한편 시민을 위한 무료 워크숍으로는 &lt;라이브 페인팅(Live Painting)&gt;, &lt;라이브 스컬프팅(Live Sculpting)&gt;, &lt;에지 드로잉 집중 워크숍(Mastering Edges Drawing)&gt; 등이 매주 주말마다 열려 누구나 창작 과정을 체험하고 예술적 감각을 배울 수 있다.</p>
+
+                <p>이 풍경이 더욱 특별한 이유는 불과 십여 년 전만 해도 사우디에서는 와하비즘(Wahhabism)으로 대표되는 보수적 종교 해석의 영향으로 인간이나 동물의 형상을 표현하는 예술이 신성모독으로 여겨지며 제한돼 왔다는 것이다. 회화나 조각보다는 서예와 기하학적 문양이 중심이던 시절에서 이제 시민들이 직접 그림을 그리고 조각을 배우는 풍경으로 전환됐다. 이러한 변화는 빈살만 왕세자가 제시한 국가 발전 청사진의 핵심 목표 중 하나인 '삶의 질 향상'과 맞닿아 있다.</p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-016.jpg" alt="미스크 아트 인스티튜트 워크숍 전경 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ 미스크 아트 인스티튜트 워크숍 전경 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <h2>예술의 기록과 계승 — 전시로 본 사우디 미술의 흐름</h2>
+
+                <p>미스크의 전시 부문은 신진 작가 발굴과 더불어 사우디 예술사의 기록과 계승에도 힘을 쏟고 있다. 이를 상징하는 프로젝트가 바로 사우디 근대·현대미술의 주요 작가 회고전 시리즈 &lt;솔로 시리즈(Solo Series)&gt;이다. 올해 9월 25일에 막을 내린 &lt;솔로 시리즈 2025(Solo Series 2025)&gt;는 사우디 예술의 현재를 보여줬다. 할릴 하산 할릴(Khaleel Hassan Khaleel)과 모하메드 알리사예스(Dr. Mohammed Alresayes)의 작품이 나란히 전시되어 유산과 상상, 전통과 현대가 공존하는 시각적 대화를 이루었다. 알리사예스는 전통 나즈디 건축의 기하학적 구조를 평면적 추상으로 재해석했고 할릴은 '드리미즘(Dreamism)'이라 불리는 초현실적 미학으로 기억과 인간성을 탐구했다.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-10-images/img-018.jpg" alt="솔로 시리즈 2025 — 모하메드 알리사예스 'Between Forms' 전시장">
+                    <img src="kofice-10-images/img-022.jpg" alt="솔로 시리즈 2025 — 할릴 하산 할릴 전시장">
+                </div>
+                <p class="photo-caption">▲ 솔로 시리즈 2025년 전시 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <p>작년에 열린 첫 솔로 시리즈는 사우디 시각예술의 선구자 타하 알사반(Taha Alsabban)과 유세프 자하(Yousef Jaha)를 조명했다. 알사반의 &lt;뮤즈스 레버리(Muse's Reverie)&gt;는 여성성과 모성을 중심 주제로 삼았고 자하의 &lt;이어닝 포 레인(Yearning for Rain)&gt;은 자연과 건축, 인간의 관계를 회화와 설치로 풀어냈다. 두 작가의 작업을 통해 사우디 근대 미술의 정체성과 미학적 뿌리가 또렷하게 드러났다.</p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-021.jpg" alt="솔로 시리즈 2024년 전시 입구 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ 솔로 시리즈 2024년 전시 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <p>리야드의 미스크 아트 인스티튜트는 예술가와 시민, 그리고 세계를 잇는 사우디 예술 생태계의 중심 플랫폼으로 자리하고 있다. 이곳에서 예술은 단순한 전시를 넘어 과거와 현재, 지역과 세계를 연결하는 문화의 언어로 계속 확장되고 있다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>통신원 촬영</p>
+                    <p>미스크 아트 인스티튜트 공식 웹사이트, <a href="https://miskartinstitute.org" target="_blank" rel="noopener">https://miskartinstitute.org</a></p>
+                    <p>미스크 아트 인스티튜트 인스타그램(@miskartinst), <a href="https://www.instagram.com/miskartinst" target="_blank" rel="noopener">https://www.instagram.com/miskartinst</a></p>
+                    <p>Lasquier, J. (2016). Challenging the Politics of Iconoclasm: Reflections, Artists from the Asir and the Subversive Potential of Contemporary Art in Saudi Arabia. SciencesPo Kuwait Program.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+
+                <h2>A Hub for Creation and Exchange: Misk Art Institute</h2>
+
+                <p>Misk Art Institute is an institution under the Mohammed bin Salman Non-Profit Foundation (Misk), which traces its origins to the Misk Foundation established in 2011 by Crown Prince Mohammed bin Salman to encourage learning and leadership development among the younger generation. The art-focused Misk Art Institute is headquartered at the Prince Faisal bin Fahd Arts Hall in Riyadh, operating as a non-profit cultural institution that spans creation, exhibition, and exchange — running a wide range of programmes including public programming, residencies, exhibitions, and publications.</p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-000.jpg" alt="Prince Faisal bin Fahd Arts Hall exterior — correspondent's own photograph"></div>
+                <p class="photo-caption">▲ Prince Faisal bin Fahd Arts Hall — Source: <span class="correspondent">correspondent's own photograph</span></p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-012.jpg" alt="Interior gallery of the building — correspondent's own photograph"></div>
+                <p class="photo-caption">▲ Interior gallery — Source: <span class="correspondent">correspondent's own photograph</span></p>
+
+                <p>The 10th edition of the Masaha Residency Program, hosted by Misk Art Institute, runs from September 14 to December 12. This cohort's theme is "At the Edge of Knowing" — exploring the uncertain boundaries of truth, perception, and memory. Resident artists are progressing through studio-based creation, mentoring, heritage site visits, and critique sessions in preparation for Misk Art Week 2025, to be held in December. Residency programmes are central to Misk's core work. They are divided between the Masaha Residency, which invites international artists to Riyadh, and the International Residency Program, which sends Saudi artists to institutions abroad. Together, these function as a two-way platform for artistic exchange — enabling overseas artists to encounter the local character of Riyadh, while broadening Saudi artists' perspectives on the world stage.</p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-013.jpg" alt="Masaha Residency Programme 10th cohort — group photograph — Misk Art Institute"></div>
+                <p class="photo-caption">▲ Masaha Residency Programme 10th cohort — Source: Misk Art Institute</p>
+
+                <p>Korean artists have also participated in these programmes. In 2021, the 2nd cohort of the "Home: Being and Belonging" residency included Korean conceptual artist Namhee Kwon, who presented installation work exploring themes of belonging and identity. In 2023, visual artist Jinseung Jang participated as a 6th cohort resident in the Masaha Residency Showcase, staging a joint exhibition with Saudi artists. These are meaningful examples demonstrating the steady momentum of artistic exchange between Saudi Arabia and Korea.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-10-images/img-014.jpg" alt="2nd cohort participating artists including Namhee Kwon — Misk Art Institute">
+                    <img src="kofice-10-images/img-015.jpg" alt="6th cohort participating artists including Jinseung Jang — Misk Art Institute">
+                </div>
+                <p class="photo-caption">▲ (L) 2nd cohort artists including Namhee Kwon; (R) 6th cohort artists including Jinseung Jang — Source: Misk Art Institute</p>
+
+                <h2>An Open Creative Space for Citizens</h2>
+
+                <p>Misk Art Institute actively runs educational programmes for artists, curators, and citizens alike — not just exhibitions and residencies. Weekly Masterclasses and Creative Forums are held in Riyadh, along with professional lectures such as "Writing about Contemporary Art" and "The Infrastructure of Cultural Ecosystem" for art practitioners. Free public workshops — including Live Painting, Live Sculpting, and the Mastering Edges Drawing intensive — are also held every weekend, open to anyone who wishes to experience the creative process and develop their artistic sensibility.</p>
+
+                <p>What makes this landscape particularly remarkable is that little more than a decade ago, art depicting human or animal forms was considered sacrilegious and restricted in Saudi Arabia, due to the conservative religious interpretation represented by Wahhabism. The country has shifted from a culture centred on calligraphy and geometric patterns to one where citizens actively learn to paint and sculpt. This transformation aligns directly with "quality of life improvement" — one of the core goals of the national development blueprint set out by Crown Prince Mohammed bin Salman.</p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-016.jpg" alt="Misk Art Institute workshop in session — correspondent's own photograph"></div>
+                <p class="photo-caption">▲ Misk Art Institute workshop in session — Source: <span class="correspondent">correspondent's own photograph</span></p>
+
+                <h2>Documenting and Preserving Art — Saudi Visual Art Through Its Exhibitions</h2>
+
+                <p>Misk's exhibition programme not only discovers emerging artists but also devotes considerable energy to the documentation and preservation of Saudi art history. The flagship project for this is the Solo Series — a retrospective exhibition series focused on key figures in Saudi modern and contemporary art. Solo Series 2025, which concluded on September 25, offered a window onto the present state of Saudi art. Works by Khaleel Hassan Khaleel and Dr. Mohammed Alresayes were exhibited side by side, creating a visual dialogue in which heritage and imagination, tradition and modernity coexist. Alresayes reinterpreted the geometric structures of traditional Najdi architecture in flat abstraction, while Khaleel explored memory and humanity through the surrealist aesthetic he calls "Dreamism."</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-10-images/img-018.jpg" alt="Solo Series 2025 — Mohammed Alresayes 'Between Forms' exhibition space">
+                    <img src="kofice-10-images/img-022.jpg" alt="Solo Series 2025 — Khaleel Hassan Khaleel exhibition space">
+                </div>
+                <p class="photo-caption">▲ Solo Series 2025 exhibition — Source: <span class="correspondent">correspondent's own photographs</span></p>
+
+                <p>Last year's inaugural Solo Series placed the spotlight on Saudi visual arts pioneers Taha Alsabban and Yousef Jaha. Alsabban's <em>Muse's Reverie</em> centred on femininity and motherhood as its core themes, while Jaha's <em>Yearning for Rain</em> explored the relationships between nature, architecture, and humanity through painting and installation. Through the works of these two artists, the identity and aesthetic roots of Saudi modern art were brought into sharp relief.</p>
+
+                <div class="article-photo"><img src="kofice-10-images/img-021.jpg" alt="Solo Series 2024 exhibition entrance — Taha Alsabban and Yousef Jaha — correspondent's own photograph"></div>
+                <p class="photo-caption">▲ Solo Series 2024 exhibition — Source: <span class="correspondent">correspondent's own photograph</span></p>
+
+                <p>Misk Art Institute in Riyadh stands as the central platform of Saudi Arabia's artistic ecosystem — connecting artists, citizens, and the world. Here, art continues to expand beyond simple exhibition to become a cultural language that connects past and present, local and global.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>Correspondent's own photographs</p>
+                    <p>Misk Art Institute, <a href="https://miskartinstitute.org" target="_blank" rel="noopener">https://miskartinstitute.org</a></p>
+                    <p>Misk Art Institute Instagram (@miskartinst), <a href="https://www.instagram.com/miskartinst" target="_blank" rel="noopener">https://www.instagram.com/miskartinst</a></p>
+                    <p>Lasquier, J. (2016). Challenging the Politics of Iconoclasm: Reflections, Artists from the Asir and the Subversive Potential of Contemporary Art in Saudi Arabia. SciencesPo Kuwait Program.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-09.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-11.html">Next →</a>
+    </div>
+</body>
+</html>

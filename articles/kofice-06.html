@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소더비, 사우디 최초 경매 — 옛 수도 디리야에서 열리다 — Hyojung Jung</title>
+    <meta name="description" content="Sotheby's holds Saudi Arabia's first auction in the ancient capital of Diriyah. Published in KOFICE, September 2025. By Hyojung Jung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 300; line-height: 1.3; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-caption .correspondent { color: #7c3a36; font-style: italic; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en { font-size: 14px; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-06.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="소더비, 사우디 최초 경매 — 옛 수도 디리야에서 열리다 — Hyojung Jung">
+    <meta property="og:description" content="Sotheby's holds Saudi Arabia's first auction in the ancient capital of Diriyah. Published in KOFICE, September 2025. By Hyojung Jung.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-06.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="소더비, 사우디 최초 경매 — 옛 수도 디리야에서 열리다 — Hyojung Jung">
+    <meta name="twitter:description" content="Sotheby's holds Saudi Arabia's first auction in the ancient capital of Diriyah. Published in KOFICE, September 2025. By Hyojung Jung.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Cultural Policy &amp; Issues</p>
+                    <h1 class="article-title-ko">소더비, 사우디 최초 경매 — 옛 수도 디리야에서 열리다</h1>
+                    <p class="article-title-en">Sotheby's Holds Saudi Arabia's First Auction — in the Ancient Capital of Diriyah</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">14 September 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · September 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+
+                <p>세계적인 경매사 소더비(Sotheby's)가 2025년 2월 사우디아라비아 디리야(Diriyah)에서 첫 경매를 열었다. 1744년 런던에서 설립된 소더비는 크리스티(Christie's)와 함께 세계 양대 경매사로 꼽힌다. 280년 가까운 역사 속에서 미술품과 수집품 거래를 이끌어왔고, 뉴욕·파리·홍콩 등 주요 문화 도시에서 경매를 주관하며 국제 미술 시장의 흐름을 선도해왔다. '오리진스(Origins)'라는 타이틀로 진행된 이번 경매는 총 1,730만 달러의 낙찰가를 기록했으며 45개국에서 온 컬렉터들이 참여했다. 출품작에는 주얼리와 시계, 현대미술 작품, 스포츠 기념품 등이 포함됐다. 특히 구매자의 약 ⅓이 사우디 거주자로 집계돼 현지 컬렉터층의 성장과 참여를 보여줬다.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-000.jpg" alt="소더비 사우디 첫 경매 현장 — 디리야 야외 원형극장"></div>
+                <p class="photo-caption">▲ 소더비 사우디 첫 경매 현장 — 출처: 소더비</p>
+
+                <h2>디리야, 사우디 왕국의 기원지</h2>
+
+                <p>경매가 열린 디리야는 사우디아라비아 역사에서 특별한 의미를 지닌다. 18세기 초 무함마드 빈 사우드(Muhammad bin Saud)가 정착하며 첫 도읍을 세운 곳으로 '사우디 왕국의 발상지'로 불린다. 이 지역의 옛 도읍지인 앗투라이프(At-Turaif)는 전통 나즈디(Najdi) 양식의 흙벽돌 건축으로 지어진 도시 유적지이며 2010년 유네스코 세계문화유산에 등재됐다. 현재는 리야드 광역권에 포함되지만 제1사우디국의 수도였던 디리야로서의 역사적 정체성을 이어가고 있다.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-012.jpg" alt="앗투라이프 유적지 내부 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ 앗투라이프 유적지 내부 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <p>오늘날 디리야는 이러한 유산을 보존하면서도 현대적 문화지구로 변모했다. 특히 디리야 게이트 개발청(DGDA, Diriyah Gate Development Authority)이 추진하는 디리야 게이트 프로젝트는 부자이리 테라스(Bujairi Terrace)를 비롯해 문화시설, 레스토랑, 미술관 등을 조성하며 전통 보존과 관광산업 육성을 결합한 대표 사례로 꼽힌다. 부자이리 테라스와 앗투라이프는 와디 하니파(Wadi Hanifa) 계곡을 사이에 두고 마주 보고 있다. 그래서 부자이리 테라스에서 식사하거나 걸으면 바로 눈앞에 앗투라이프의 성곽을 볼 수 있다.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-013.jpg" alt="앗투라이프 유적지 전경 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ 앗투라이프 유적지 전경 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <p>이번 소더비 경매는 디리야 내 250석 규모의 야외 원형극장에서 개최됐다. 좌석이 모두 매진된 것은 물론 입석 관객까지 가득 차 뜨거운 열기 속에서 진행됐다. 경매 직전에는 부자이리 테라스에서 출품작 프리뷰 전시가 함께 열려 시민과 방문객 누구나 작품을 감상할 수 있도록 개방됐다. 르네 마그리트(René Magritte), 뱅크시(Banksy), 페르난도 보테로(Fernando Botero) 같은 세계적 거장들의 작품부터 알 살림, 라드위 등 사우디 대표 작가들의 작품까지 한자리에 선보이며 국제 경매의 현장을 현지 대중이 직접 경험할 수 있는 드문 기회를 제공했다.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-014.jpg" alt="디리야 부자이리 테라스 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ 디리야 부자이리 테라스 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-015.jpg" alt="(좌) 소더비 프리뷰 전시 현장 포스터, (우) 전시장 입구 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ (좌) 소더비 프리뷰 전시 현장 포스터, (우) 전시장 입구 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <p>이번 경매에는 세계적으로 명성 높은 서구 작가의 작품도 다수 출품돼 국제적 위상을 드러냈다. 르네 마그리트와 뱅크시의 작품은 각 120만 달러에 낙찰됐고 페르난도 보테로의 작품은 100만 달러를 기록했다. 미국 미니멀리즘 거장 제임스 터렐(James Turrell)의 설치 작품은 66만 달러, 파블로 피카소(Pablo Picasso)의 작품은 약 20만 달러에 판매되며 글로벌 컬렉터들의 눈길을 끌었다. 또한 디지털 아티스트 레픽 아나돌(Refik Anadol)의 &lt;머신 할루시네이션즈 — 스페이스(Machine Hallucinations – Space)&gt;는 약 90만 달러에 낙찰되며 신세대 컬렉터들의 관심을 확인시켰다.</p>
+
+                <h2>사우디 작가들의 활약</h2>
+
+                <p>무엇보다 이번 경매에서 돋보인 것은 사우디 작가들의 성과였다. 사우디 현대미술의 선구자로 꼽히는 모하메드 알 살림(Mohammed Al Saleem)의 작품 &lt;오 갓, 어너 갓, 어너 뎀 엔드 두 낫 어너 언 에너미 오버 뎀(O' God, Honor Them and Do Not Honor an Enemy Over Them, 1977)&gt;은 약 66만 달러에 낙찰되며 사전 추정가의 세 배를 기록했다. 사우디 모더니즘을 대표하는 압둘할림 라드위(Abdulhalim Radwi)의 &lt;언타이틀드(Untitled, 1984)&gt;는 약 26만 4,000달러에 판매되며 작가의 최고가 기록을 새로 썼다. 또한 동시대 미술을 이끄는 아흐메드 마테르(Ahmed Mater)의 &lt;일루미네이션 딥티크(Illumination Diptych, Makkiah Tale, 2012)&gt;는 10만 2,000달러, 여성 작가 마하 말루(Maha Malluh)의 &lt;마가디르(Magadeer, 2024)&gt;는 8만 4,000달러에 낙찰되며 모두 예상가를 웃도는 결과를 남겼다.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-016.jpg" alt="좌측부터 모하메드 알살림, 압둘할림 라드위, 아흐메드 마테르, 마하 말루 작품"></div>
+                <p class="photo-caption">▲ 좌측부터 모하메드 알살림, 압둘할림 라드위, 아흐메드 마테르, 마하 말루 작품 — 출처: 소더비</p>
+
+                <p>이처럼 네 명의 사우디 작가가 모두 의미 있는 성과를 기록한 사실은 현지 미술 시장이 전시와 축제를 넘어 본격적인 거래와 투자 대상으로 부상하고 있음을 보여준다. 동시에 국제 무대에서 사우디 작가들의 위상과 잠재력이 점점 더 인정받고 있다는 점을 확인시켰다.</p>
+
+                <h2>사우디 미술 시장, 국제 무대로 확대</h2>
+
+                <p>이번 경매는 단순한 판매 실적을 넘어 사우디가 국제 미술 시장의 지형 속에 편입되는 흐름을 보여주는 신호탄이자 사우디 비전 2030 전략 속 문화·관광산업 육성 전략의 흐름과도 맞닿아 있다. 런던·뉴욕·홍콩과 같은 기존 경매 허브에 이어 디리야가 새로운 거점으로 주목받고 있으며, 소더비는 리야드 도심의 알파이살리야 타워(Al Faisaliah Tower)에 상설 오피스를 열며 장기적 활동을 선언했다. 이는 일회성 이벤트가 아니라 사우디 미술 시장에서의 지속적 존재감을 확보하고자 하는 전략이다. 이러한 흐름 속에서 국제 컬렉터와 현지 작가, 사우디 컬렉터들이 교류하는 접점이 점점 확대될 전망이다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>통신원 촬영</p>
+                    <p>Diriyah Gate Development Authority (DGDA), <a href="https://www.dgda.gov.sa/en" target="_blank" rel="noopener">https://www.dgda.gov.sa/en</a></p>
+                    <p>Diriyah Project – Vision 2030, <a href="https://www.vision2030.gov.sa/en/explore/projects/diriyah" target="_blank" rel="noopener">https://www.vision2030.gov.sa/en/explore/projects/diriyah</a></p>
+                    <p>Sotheby's Riyadh Office, <a href="https://www.sothebys.com/en/about/locations/riyadh" target="_blank" rel="noopener">https://www.sothebys.com/en/about/locations/riyadh</a></p>
+                    <p><em>Sotheby's</em> (2025. 2. 14). <a href="https://www.sothebys.com/en/articles/sothebys-inaugural-auction-in-diriyah-achieves-17m" target="_blank" rel="noopener">Sotheby's Inaugural Auction in Diriyah Achieves $17M</a></p>
+                    <p><em>Financial Times</em> (2024. 11. 7). <a href="https://www.ft.com/content/a05bb485-858e-4552-a3ac-f35447ee9106" target="_blank" rel="noopener">Sotheby's announces new outpost in Saudi Arabia</a></p>
+                    <p><em>Vogue Arabia</em> (2025. 2. 11). <a href="https://www.voguearabia.com/article/sothebys-auction-in-saudi-arabia" target="_blank" rel="noopener">Showstoppers at Sotheby's Debut Auction in Saudi Arabia</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+
+                <p>In February 2025, the world-renowned auction house Sotheby's held its first auction in Diriyah, Saudi Arabia. Founded in London in 1744, Sotheby's is considered one of the world's two great auction houses alongside Christie's. Over nearly 280 years of history, it has led the trade in fine art and collectibles, setting the direction of the international art market through auctions in major cultural cities including New York, Paris, and Hong Kong. Held under the title <em>'Origins,'</em> the auction achieved a total of $17.3 million in sales, with collectors from 45 countries participating. Lots included jewellery and watches, contemporary artworks, and sports memorabilia. Notably, approximately one third of buyers were Saudi residents — demonstrating the growth and engagement of the local collector base.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-000.jpg" alt="Sotheby's inaugural Saudi auction — the outdoor amphitheatre at Diriyah"></div>
+                <p class="photo-caption">▲ Sotheby's inaugural Saudi auction at Diriyah — Source: Sotheby's</p>
+
+                <h2>Diriyah: Birthplace of the Saudi Kingdom</h2>
+
+                <p>Diriyah, where the auction was held, carries special significance in Saudi Arabian history. In the early 18th century, Muhammad bin Saud settled here and established the first capital — the site is known as the 'birthplace of the Saudi Kingdom.' The historic district of At-Turaif, built in the traditional Najdi style of mud-brick architecture, is an urban heritage site listed as a UNESCO World Heritage Site in 2010. Now part of greater Riyadh, it continues to carry the historical identity of Diriyah as the capital of the First Saudi State.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-012.jpg" alt="At-Turaif heritage site interior — correspondent's own photographs"></div>
+                <p class="photo-caption">▲ At-Turaif heritage site interior — Source: <span class="correspondent">correspondent's own photographs</span></p>
+
+                <p>Today, Diriyah has transformed into a modern cultural district while preserving this heritage. The Diriyah Gate Project, driven by the Diriyah Gate Development Authority (DGDA), has become a leading example of combining heritage preservation with tourism development — creating the Bujairi Terrace alongside cultural venues, restaurants, and galleries. The Bujairi Terrace and At-Turaif face each other across the Wadi Hanifa valley: dining or walking at Bujairi Terrace, the ancient walls of At-Turaif are visible right before one's eyes.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-013.jpg" alt="At-Turaif heritage site panorama at night — correspondent's own photographs"></div>
+                <p class="photo-caption">▲ At-Turaif heritage site at night — Source: <span class="correspondent">correspondent's own photographs</span></p>
+
+                <p>The Sotheby's auction was held in a 250-seat open-air amphitheatre within Diriyah. All seats sold out, with standing-room audiences adding to the charged atmosphere. Immediately before the auction, a preview exhibition of the lots was held at Bujairi Terrace, open to citizens and visitors alike. Works by world-renowned masters — René Magritte, Banksy, Fernando Botero — alongside pieces by leading Saudi artists including Al Saleem and Radwi were on display together, offering local audiences the rare opportunity to directly experience an international auction in person.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-014.jpg" alt="Diriyah's Bujairi Terrace — correspondent's own photographs"></div>
+                <p class="photo-caption">▲ Diriyah's Bujairi Terrace — Source: <span class="correspondent">correspondent's own photographs</span></p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-015.jpg" alt="(L) Sotheby's 'Origins' preview exhibition poster; (R) exhibition entrance — correspondent's own photographs"></div>
+                <p class="photo-caption">▲ (L) Sotheby's <em>Origins</em> preview exhibition poster; (R) exhibition entrance — Source: <span class="correspondent">correspondent's own photographs</span></p>
+
+                <p>The auction also featured works by internationally acclaimed Western artists. A piece by René Magritte and one by Banksy each sold for $1.2 million, while Fernando Botero's work achieved $1 million. An installation by American minimalist master James Turrell sold for $660,000, and a work by Pablo Picasso sold for approximately $200,000. Digital artist Refik Anadol's <em>Machine Hallucinations – Space</em> sold for approximately $900,000, confirming the interest of a new generation of collectors.</p>
+
+                <h2>Saudi Artists Take the Stage</h2>
+
+                <p>Above all, the standout of this auction was the performance of Saudi artists. Mohammed Al Saleem — considered a pioneer of Saudi contemporary art — saw his work <em>O' God, Honor Them and Do Not Honor an Enemy Over Them</em> (1977) sell for approximately $660,000, three times its pre-sale estimate. Abdulhalim Radwi's <em>Untitled</em> (1984), representing Saudi modernism, sold for approximately $264,000 — a new auction record for the artist. Ahmed Mater's <em>Illumination Diptych, Makkiah Tale</em> (2012) sold for $102,000, and female artist Maha Malluh's <em>Magadeer</em> (2024) achieved $84,000 — all exceeding their pre-sale estimates.</p>
+
+                <div class="article-photo"><img src="kofice-06-images/img-016.jpg" alt="Works by Mohammed Al Saleem, Abdulhalim Radwi, Ahmed Mater, and Maha Malluh (left to right)"></div>
+                <p class="photo-caption">▲ Works by Mohammed Al Saleem, Abdulhalim Radwi, Ahmed Mater, and Maha Malluh (left to right) — Source: Sotheby's</p>
+
+                <p>The fact that all four Saudi artists achieved meaningful results shows that the local art market is emerging as a serious arena for trade and investment, beyond exhibitions and festivals alone. It also confirms that the standing and potential of Saudi artists on the international stage is receiving ever-greater recognition.</p>
+
+                <h2>The Saudi Art Market Steps onto the International Stage</h2>
+
+                <p>This auction represents more than sales figures alone — it is a signal that Saudi Arabia is being incorporated into the landscape of the international art market, aligning with the cultural and tourism industry development strategy at the heart of Saudi Vision 2030. Following established auction hubs in London, New York, and Hong Kong, Diriyah is now attracting attention as a new base; Sotheby's has declared its long-term commitment by opening a permanent office at the Al Faisaliah Tower in central Riyadh. This is not a one-off event but a strategy to secure an ongoing presence in the Saudi art market. Within this movement, the points of contact between international collectors, local artists, and Saudi collectors are expected to continue expanding.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>Correspondent's own photographs</p>
+                    <p>Diriyah Gate Development Authority (DGDA), <a href="https://www.dgda.gov.sa/en" target="_blank" rel="noopener">https://www.dgda.gov.sa/en</a></p>
+                    <p>Diriyah Project – Vision 2030, <a href="https://www.vision2030.gov.sa/en/explore/projects/diriyah" target="_blank" rel="noopener">https://www.vision2030.gov.sa/en/explore/projects/diriyah</a></p>
+                    <p>Sotheby's Riyadh, <a href="https://www.sothebys.com/en/about/locations/riyadh" target="_blank" rel="noopener">https://www.sothebys.com/en/about/locations/riyadh</a></p>
+                    <p><em>Sotheby's</em> (14 Feb 2025). <a href="https://www.sothebys.com/en/articles/sothebys-inaugural-auction-in-diriyah-achieves-17m" target="_blank" rel="noopener">Sotheby's Inaugural Auction in Diriyah Achieves $17M</a></p>
+                    <p><em>Financial Times</em> (7 Nov 2024). <a href="https://www.ft.com/content/a05bb485-858e-4552-a3ac-f35447ee9106" target="_blank" rel="noopener">Sotheby's announces new outpost in Saudi Arabia</a></p>
+                    <p><em>Vogue Arabia</em> (11 Feb 2025). <a href="https://www.voguearabia.com/article/sothebys-auction-in-saudi-arabia" target="_blank" rel="noopener">Showstoppers at Sotheby's Debut Auction in Saudi Arabia</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-05.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-07.html">Next →</a>
+    </div>
+</body>
+</html>

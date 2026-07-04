@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤지컬 〈위키드〉 리야드 공연으로 본 사우디 공연문화산업 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-portrait { margin: 28px auto 8px; max-width: 480px; border-radius: 2px; overflow: hidden; }
+        .article-photo-portrait img { width: 100%; height: auto; display: block; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; object-fit: cover; aspect-ratio: 4/3; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-25.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="뮤지컬 〈위키드〉 리야드 공연으로 본 사우디 공연문화산업 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-25.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="뮤지컬 〈위키드〉 리야드 공연으로 본 사우디 공연문화산업 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">공연예술 — Performing Arts</p>
+                    <h1 class="article-title-ko">뮤지컬 〈위키드〉 리야드 공연으로 본 사우디 공연문화산업</h1>
+                    <p class="article-title-en"><em>Wicked</em> in Riyadh: A Window into Saudi Arabia's Performing Arts Industry</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">14 January 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · January 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<p>브로드웨이 대표 뮤지컬 〈위키드(Wicked)〉가 사우디아라비아 리야드(Riyadh)에서 2025년 12월 3일부터 2026년 1월 3일까지 진행된 공연 일정을 마무리했다. 이번 공연은 리야드 도시 개발과 문화정책을 담당하는 리야드 왕립위원회(Royal Commission for Riyadh City, 이하 RCRC)가 브로드웨이 엔터테인먼트 그룹(Broadway Entertainment Group, 이하 BEG)과 협력해 중동 지역 최초로 유치·상연한 글로벌 뮤지컬이다. 리야드의 킹 파하드 컬처 센터(King Fahad Cultural Center)에서 열린 이 공연은 당초 2025년 12월 3일부터 20일까지 예정돼 있었으나, 관객 수요에 따라 2026년 1월 3일까지 공연 기간이 연장됐다. 공식 매체에 따르면 이번 공연은 약 3만 명의 관객을 동원했다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-25-images/img-01.jpg" alt="리야드에서 열린 뮤지컬 위키드 공연 현장 — 출처: 통신원 촬영">
+    <img src="kofice-25-images/img-02.jpg" alt="리야드에서 열린 뮤지컬 위키드 공연 현장 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ 리야드에서 열린 뮤지컬 〈위키드〉 공연 현장 — 출처: 통신원 촬영</p>
+
+<p>뮤지컬 〈위키드〉는 전 세계에서 오랫동안 사랑 받아온 작품으로, 리야드에서는 〈오페라의 유령(The Phantom of the Opera)〉에 이어 두 번째로 선보인 대형 해외 뮤지컬이다. 리야드 왕립위원회(RCRC)와 브로드웨이 엔터테인먼트 그룹(BEG)은 본 공연을 사우디 비전 2030(Vision 2030)의 '삶의 질(Quality of Life)' 프로그램과 연계하여 추진했으며, 이는 사우디가 문화·공연 인프라 확대를 정책적으로 추진하고 있음을 보여준다.</p>
+
+<h2>국제 대형 공연 유치와 사우디 공연 환경</h2>
+
+<p>해당 공연이 열린 킹 파하드 컬처 센터는 연극, 음악, 오페라, 국제 콘퍼런스 등 다양한 행사를 수용할 수 있는 대형 복합 문화시설이다. 이 시설은 나즈디(Najdi) 특유의 전통 건축에서 영감을 받은 외관에 현대적인 무대 및 음향 설비를 결합한 구조를 갖추고 있다. 주 공연장은 약 2,750석 규모로 대형 뮤지컬과 오페라, 오케스트라 공연이 가능하며, 사우디아라비아 문화부(Ministry of Culture) 산하의 문화 인프라로 운영된다.</p>
+
+<div class="article-photo"><img src="kofice-25-images/img-03.jpg" alt="킹 파하드 컬처 센터 전경 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 킹 파하드 컬처 센터 전경 — 출처: 통신원 촬영</p>
+
+<div class="article-photo"><img src="kofice-25-images/img-05.jpg" alt="킹 파하드 컬처 센터 내부 — 출처: 통신원 촬영"></div>
+
+<div class="article-photo"><img src="kofice-25-images/img-04.jpg" alt="킹 파하드 컬처 센터 내부 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 킹 파하드 컬처 센터 내부 — 출처: 통신원 촬영</p>
+
+<p>통신원이 직접 방문한 공연 현장에서는 가족 단위 관람객을 비롯해 다양한 연령층의 관객이 눈에 띄었다. 공연을 관람하던 중, 일부 관객들은 어린이 관객의 말소리로 인해 공연에 집중하기 어려웠다고 이야기하며 종종 관객이 자리를 이동하거나 휴대전화를 사용하는 등으로 인해 불편을 겪었다는 아쉬움을 전했다. 한편 현지 관객 인터뷰에서는 좌석 가격대에 따라 관람 분위기에 차이가 있다는 의견도 확인됐다. 또한 회차에 따라 객석 점유율에 차이가 나타났으며, 일부 회차에서는 빈 좌석이 눈에 띄기도 했다. 이러한 관람 양상은 사우디의 공연 관람 문화와 관객의 태도 기반이 아직 형성 단계에 있음을 보여준다.</p>
+
+<div class="article-photo"><img src="kofice-25-images/img-06.jpg" alt="공연장 내부 전경 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 공연장 내부 전경 — 출처: 통신원 촬영</p>
+
+<p>이번 웨스턴 대형 뮤지컬 공연 외에도 2025년 9월에는 중국 국립 오페라단(National Opera of China)의 오페라 〈카르멘(Carmen)〉이 같은 공연장에서 상연되는 등, 지속적으로 저명한 국제 공연을 초청하는 방식으로 이어져 왔다. 아울러 자국 창작 공연 면에서는 사우디 최초의 오페라인 〈자르카 알 야마마(Zarqa Al Yamama)〉가 2024년 4월 동일한 공연장에서 초연됐으며, 통신원 역시 해당 공연을 직접 관람했다.</p>
+
+<div class="article-photo"><img src="kofice-25-images/img-07.jpg" alt="2024년에 제작된 사우디 최초 오페라 자르카 알 야마마 커튼콜 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 2024년에 제작된 사우디 최초 오페라 〈자르카 알 야마마(Zarqa Al Yamama)〉 커튼콜 — 출처: 통신원 촬영</p>
+
+<p>이처럼 해외의 라이선스(License) 공연과 자국의 창작 공연이 같은 무대에서 연이어 개최되는 모습은 리야드의 공연예술 환경이 다양성의 측면에서 확장되고 있는 초기 흐름을 보여준다. 더 나아가 사우디에서는 뮤지컬과 오페라뿐 아니라 코미디 등 라이브 엔터테인먼트 분야로도 공연 장르가 확대되고 있는 중이다. 2025년 9월부터 10월까지 리야드 블러바드 시티(Boulevard City)에서는 케빈 하트(Kevin Hart), 러셀 피터스(Russell Peters) 등 세계적인 코미디언들이 참여한 대규모 리야드 국제 코미디 페스티벌이 개최됐다.</p>
+
+<h2>사우디 공연 문화 산업의 방향과 전망</h2>
+
+<p>사우디에서는 공연 제작을 지원하는 제도적 프로그램도 운영되고 있다. 사우디 문화부 산하 사우디 연극·공연예술위원회(Theatre and Performing Arts Commission)는 2022년부터 '시타르(SITAR)' 프로그램을 통해 연극 및 공연예술과 관련된 제작 지원을 제공하고 있다. 해당 프로그램은 2022년 9월부터 2030년 12월까지 리야드를 중심으로 운영되며 공연예술 분야의 기업, 기관, 단체, 커뮤니티 극단 등을 대상으로 한다. '시타르(SITAR)'는 선정된 프로젝트에 제작 지원을 제공하는 방식으로 신청서 심사와 자격 요건 검토, 평가 기준에 따른 선발 과정을 거쳐 지원 대상이 결정된다. 이를 통해 제작 주체들이 창작 과정에서 불확실한 공연 일정이나 관객 모집 등과 같은 불안 요소들을 일부 해소하고, 작품의 완성도와 공연예술 분야의 경제적 지속성을 함께 강화하는 데 목적을 두고 있다.</p>
+
+<p>리야드에서 열린 〈위키드〉 공연을 통해 살펴본 사우디 공연 문화 산업의 현재는 본격적인 실험 단계에 접어든 모습을 드러낸다. 관람 문화, 유통 구조, 가격 전략 등의 문제로 인해 사우디의 공연 문화 산업은 아직은 초기 단계에 머물러 있으나, 글로벌 공연 콘텐츠를 수용할 수 있는 인프라와 제도적인 관심은 분명히 확인된다. 대형 해외 뮤지컬 유치와 자국 공연 제작, 정책 지원이 동시에 진행되고 있는 흐름은 향후 한국 공연 콘텐츠가 중동 시장과 만날 수 있는 가능성 역시 확대하고 있음을 시사한다. 사우디 공연 생태계의 점진적인 축적은 리야드가 중동 지역의 공연예술 중심지로서 역할을 강화할 수 있는 잠재력도 함께 보여준다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진 출처 및 참고자료</p>
+    <p>통신원 제공</p>
+    <p>리야드 왕립위원회(RCRC) X 계정(@RiyadhCitySA), <a href="https://x.com/RiyadhCitySA" target="_blank" rel="noopener">x.com/RiyadhCitySA</a></p>
+    <p>사우디 연극·공연예술위원회 공식 웹사이트, <a href="https://performingarts.moc.gov.sa/en" target="_blank" rel="noopener">performingarts.moc.gov.sa</a></p>
+    <p>퀄리티 오브 라이프 프로그램, <a href="https://www.vision2030.gov.sa/en/explore/programs/quality-of-life-program" target="_blank" rel="noopener">vision2030.gov.sa</a></p>
+    <p>≪리야드 왕립위원회≫ (2025.10.28). RCRC Extends Run of Global Hit Musical 'Wicked' in Riyadh, <a href="https://www.rcrc.gov.sa/en/111763-2/" target="_blank" rel="noopener">rcrc.gov.sa</a></p>
+    <p>≪아랍아메리카≫ (2025.12.10). From Oz to Riyadh: "Wicked" Arrives in Saudi Arabia, <a href="https://www.arabamerica.com/from-oz-to-riyadh-wicked-arrives-in-saudi-arabia/" target="_blank" rel="noopener">arabamerica.com</a></p>
+    <p>≪리야드 왕립위원회≫ (2025.8.21). RCRC Brings Famous Opera "Carmen" to Riyadh, <a href="https://www.rcrc.gov.sa/en/rcrc-brings-famous-opera-carmen-to-riyadh" target="_blank" rel="noopener">rcrc.gov.sa</a></p>
+    <p>≪더 내셔널≫ (2024.1.13). Zarqa Al Yamama: Saudi Arabia Announces Its First Grand Opera, <a href="https://www.thenationalnews.com/arts-culture/2024/01/12/zarqa-al-yamama-saudi-first-grand-opera/" target="_blank" rel="noopener">thenationalnews.com</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<p>Broadway hit musical <em>Wicked</em> concluded its Riyadh run on 3 January 2026, having opened on 3 December 2025. Organised by the Royal Commission for Riyadh City (RCRC) in partnership with Broadway Entertainment Group (BEG), it was the first major global musical to be staged anywhere in the Middle East. The production was held at King Fahad Cultural Center in Riyadh. Originally scheduled to close on 20 December 2025, it was extended to 3 January 2026 in response to audience demand. According to official sources, the run drew approximately 30,000 audience members.</p>
+
+<div class="photo-grid">
+    <img src="kofice-25-images/img-01.jpg" alt="Wicked at the King Fahad Cultural Center, Riyadh — Photo: correspondent">
+    <img src="kofice-25-images/img-02.jpg" alt="Wicked at the King Fahad Cultural Center, Riyadh — Photo: correspondent">
+</div>
+<p class="photo-caption">▲ <em>Wicked</em> at the King Fahad Cultural Center, Riyadh — Photo: correspondent</p>
+
+<p><em>Wicked</em> is one of the world's most beloved musicals, and in Riyadh it marked the second major international musical to be staged in the city, following <em>The Phantom of the Opera</em>. RCRC and BEG positioned the production within Saudi Arabia's Vision 2030 'Quality of Life' programme, reflecting the country's policy-driven push to expand its cultural and performing arts infrastructure.</p>
+
+<h2>International Productions and the Saudi Performance Environment</h2>
+
+<p>King Fahad Cultural Center, where the performance was held, is a large multi-purpose cultural complex capable of hosting theatre, music, opera, and international conferences. Its exterior draws on the traditional Najdi architectural style while integrating modern stage and sound facilities. The main auditorium seats approximately 2,750 and can accommodate large-scale musicals, opera, and orchestral performances. The venue operates as cultural infrastructure under Saudi Arabia's Ministry of Culture.</p>
+
+<div class="article-photo"><img src="kofice-25-images/img-03.jpg" alt="King Fahad Cultural Center exterior — Photo: correspondent"></div>
+<p class="photo-caption">▲ King Fahad Cultural Center exterior — Photo: correspondent</p>
+
+<div class="article-photo"><img src="kofice-25-images/img-05.jpg" alt="King Fahad Cultural Center interior — Photo: correspondent"></div>
+
+<div class="article-photo"><img src="kofice-25-images/img-04.jpg" alt="King Fahad Cultural Center interior — Photo: correspondent"></div>
+<p class="photo-caption">▲ King Fahad Cultural Center interior — Photo: correspondent</p>
+
+<p>At the performance the correspondent attended, the audience included family groups and a wide range of ages. Some attendees noted that children's noise made it difficult to concentrate, and disruptions from people moving between seats or using phones were mentioned. Local audience members also remarked that the atmosphere varied noticeably by seat price tier. Some performances had visible empty seats. This overall picture suggests that Saudi performance-going culture and audience conduct norms are still in formation.</p>
+
+<div class="article-photo"><img src="kofice-25-images/img-06.jpg" alt="Auditorium interior — Photo: correspondent"></div>
+<p class="photo-caption">▲ Auditorium interior — Photo: correspondent</p>
+
+<p>Beyond this Western musical, international productions have continued to be brought to the same venue — including the National Opera of China's staging of <em>Carmen</em> in September 2025. In terms of domestic creation, Saudi Arabia's first grand opera, <em>Zarqa Al Yamama</em>, premiered at the same venue in April 2024, which the correspondent also attended.</p>
+
+<div class="article-photo"><img src="kofice-25-images/img-07.jpg" alt="Curtain call of Zarqa Al Yamama, Saudi Arabia's first grand opera, 2024 — Photo: correspondent"></div>
+<p class="photo-caption">▲ Curtain call of <em>Zarqa Al Yamama</em> — Saudi Arabia's first grand opera, premiered 2024 — Photo: correspondent</p>
+
+<p>The fact that licensed international productions and locally created work are appearing on the same stage in quick succession reflects an early-stage broadening of Riyadh's performing arts landscape in terms of diversity. Saudi Arabia's live entertainment scene is also expanding beyond musicals and opera into comedy: the Riyadh International Comedy Festival, held at Boulevard City from September to October 2025, featured global comedians including Kevin Hart and Russell Peters.</p>
+
+<h2>Direction and Outlook for Saudi Arabia's Performing Arts Industry</h2>
+
+<p>Institutional support for performance production is also in place. The Saudi Theatre and Performing Arts Commission — under the Ministry of Culture — has been running the SITAR programme since 2022, providing production support for theatre and performing arts. The programme operates through to December 2030, centred on Riyadh, and is open to companies, institutions, groups, and community theatre companies in the performing arts sector. SITAR selects projects through an application and eligibility review process and provides production grants to chosen projects. The aim is to help producers reduce some of the uncertainties of creative work — uncertain performance schedules, audience recruitment — while simultaneously strengthening the quality of productions and the economic sustainability of the performing arts sector.</p>
+
+<p><em>Wicked</em> in Riyadh reveals a Saudi performing arts industry that has moved into a period of genuine experimentation. Challenges remain in audience culture, distribution structures, and pricing strategy, and the industry is still at an early stage — but the infrastructure capable of hosting global performing arts content, and the institutional attention surrounding it, is clearly present. The simultaneous advancement of large-scale international productions, local creation, and policy support expands the potential meeting point between Korean performing arts and the Middle East market. The gradual accumulation of Saudi Arabia's performing arts ecosystem also demonstrates Riyadh's potential to grow into a centre for performing arts across the region.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Photos: correspondent</p>
+    <p>Royal Commission for Riyadh City (RCRC) on X (@RiyadhCitySA), <a href="https://x.com/RiyadhCitySA" target="_blank" rel="noopener">x.com/RiyadhCitySA</a></p>
+    <p>Saudi Theatre and Performing Arts Commission official website, <a href="https://performingarts.moc.gov.sa/en" target="_blank" rel="noopener">performingarts.moc.gov.sa</a></p>
+    <p>Quality of Life Programme, <a href="https://www.vision2030.gov.sa/en/explore/programs/quality-of-life-program" target="_blank" rel="noopener">vision2030.gov.sa</a></p>
+    <p>Royal Commission for Riyadh City (2025, October 28). RCRC Extends Run of Global Hit Musical 'Wicked' in Riyadh, <a href="https://www.rcrc.gov.sa/en/111763-2/" target="_blank" rel="noopener">rcrc.gov.sa</a></p>
+    <p>Arab America (2025, December 10). From Oz to Riyadh: "Wicked" Arrives in Saudi Arabia, <a href="https://www.arabamerica.com/from-oz-to-riyadh-wicked-arrives-in-saudi-arabia/" target="_blank" rel="noopener">arabamerica.com</a></p>
+    <p>Royal Commission for Riyadh City (2025, August 21). RCRC Brings Famous Opera "Carmen" to Riyadh, <a href="https://www.rcrc.gov.sa/en/rcrc-brings-famous-opera-carmen-to-riyadh" target="_blank" rel="noopener">rcrc.gov.sa</a></p>
+    <p><em>The National</em> (2024, January 13). Zarqa Al Yamama: Saudi Arabia Announces Its First Grand Opera, <a href="https://www.thenationalnews.com/arts-culture/2024/01/12/zarqa-al-yamama-saudi-first-grand-opera/" target="_blank" rel="noopener">thenationalnews.com</a></p>
+</div>
+</div></div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+
+    <div class="float-nav">
+        <a href="kofice-24.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-26.html">Next →</a>
+    </div>
+</body>
+</html>

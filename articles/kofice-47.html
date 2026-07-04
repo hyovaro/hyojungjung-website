@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 극장가로 확장되는 케이팝 팬덤 문화 — 엔하이픈 공연 콘텐츠 연이어 상영 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-47.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 극장가로 확장되는 케이팝 팬덤 문화 — 엔하이픈 공연 콘텐츠 연이어 상영 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-47.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 극장가로 확장되는 케이팝 팬덤 문화 — 엔하이픈 공연 콘텐츠 연이어 상영 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">사우디 극장가로 확장되는 케이팝 팬덤 문화 — 엔하이픈 공연 콘텐츠 연이어 상영</h1>
+                <p class="article-title-en">K-pop Fandom Culture Spreads to Saudi Cinemas: A Run of ENHYPEN Concert Content on the Big Screen</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">May 25, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">K-pop / Cinema / Fandom Culture</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>최근 사우디아라비아 주요 영화관에서 그룹 엔하이픈(ENHYPEN)의 공연 기반 영화 콘텐츠가 잇따라 상영되며 현지 케이팝 팬들의 관심을 모았다. 사우디에서는 지난 3월 콘서트 필름 〈워크 더 라인 - 서머 에디션(WALK THE LINE – SUMMER EDITION)〉이 개봉한 데 이어, 5월에는 스크린엑스(ScreenX)·포디엑스(4DX) 기반 체험형 콘텐츠 〈엔하이픈: 이머전 인 시네마(ENHYPEN: IMMERSION IN CINEMAS)〉가 새롭게 상영됐다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-47-images/img-01.jpg" alt="사우디 현지 극장에서 개봉한 엔하이픈 콘텐츠 - 워크 더 라인">
+            </div>
+            <p class="photo-caption">사우디 현지 극장에서 개봉한 엔하이픈 콘텐츠 〈워크 더 라인〉 — 출처: 복스 시네마(Vox Cinemas) 홈페이지</p>
+
+            <div class="article-photo">
+                <img src="kofice-47-images/img-02.jpg" alt="사우디 현지 극장에서 개봉한 엔하이픈 콘텐츠 - 이머전 인 시네마">
+            </div>
+            <p class="photo-caption">사우디 현지 극장에서 개봉한 엔하이픈 콘텐츠 〈이머전 인 시네마〉 — 출처: 복스 시네마(Vox Cinemas) 홈페이지</p>
+
+            <p>해당 작품들은 무비 시네마(MUVI Cinemas), 복스 시네마(VOX Cinemas), 릴 시네마(REEL Cinemas) 등 사우디 주요 멀티플렉스 체인에서 상영됐으며, 영어와 아랍어 자막이 함께 제공됐다. 특히 10~20대 여성 관객들의 반응이 두드러졌으며, 일부 상영관에서는 관객들이 노래를 따라 부르거나 함께 환호하는 등 실제 콘서트장과 유사한 분위기가 연출되기도 했다.</p>
+
+            <h2>영화관에서 이어지는 '대체 콘서트 경험'</h2>
+
+            <p>최근 사우디에서는 콘서트 필름과 라이브 뷰잉(Live Viewing) 등 공연 기반 콘텐츠의 극장 상영이 점차 늘어나는 추세다. 엔하이픈 영화 역시 이러한 흐름 속에서 현지 관객들과 만나고 있다. 특히 최근 상영된 〈엔하이픈: 이머전 인 시네마〉는 스크린엑스와 포디엑스 포맷을 활용한 체험형 시네마 콘텐츠로, 공연 장면과 몰입형 연출을 결합해 현장감을 극대화했다. 〈바이트 미(Bite Me)〉, 〈엑스오(XO)〉 등 대표곡 무대는 대형 스크린과 입체 효과를 통해 더욱 생생하게 전달됐으며, 관람객들이 실제 공연장에 가까운 현장감을 느낄 수 있도록 구성됐다.</p>
+
+            <p>사우디 내 케이팝 팬덤은 단순한 온라인 소비를 넘어 영화관을 중심으로 한 집단적 문화 경험으로 점차 확장되고 있다. 한국 아이돌 그룹의 사우디 현지 단독 공연 기회가 아직 많지 않은 상황에서 영화관에서의 케이팝 관련 영상 상영은 팬들이 공연의 분위기를 간접적으로 체험하는 방식으로 자리 잡고 있다. 사회관계망서비스(SNS)에 공유된 현장 영상들에서는 관객들이 함께 응원하고 환호하는 모습이 확인됐다. 특히 젊은 여성 팬층을 중심으로 단체 관람 문화가 형성되며 일부 상영관은 실제 콘서트장과 유사한 분위기를 연출하기도 했다. 현지 팬덤은 콘서트 필름 상영을 단순 영화 관람이 아닌 공연형 이벤트 콘텐츠로 소비하는 양상을 보였으며, 일부 팬들은 이를 "인생에 한 번 있을 순간"이라고 표현하기도 했다.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-47-images/img-04.jpg" alt="틱톡에 공유된 관람 현장">
+            </div>
+            <p class="photo-caption">틱톡에 공유된 관람 현장 — 출처: 엔하이픈 팬 틱톡(TikTok) 계정(@Julia_x134)</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-47-images/img-05.jpg" alt="틱톡에 공유된 관람 현장">
+            </div>
+            <p class="photo-caption">틱톡에 공유된 관람 현장 — 출처: 엔하이픈 팬 틱톡(TikTok) 계정(@d0hal80)</p>
+
+            <p>한편 사우디 엔터테인먼트 기업 카나와트 그룹(Qanawat Group)은 지난 5월 21일부터 23일까지 엔하이픈 관련 VR 기반 이머시브(Immersive) 체험 콘텐츠를 운영했다. 해당 콘텐츠는 수도 리야드를 비롯해 담맘, 제다, 메디나, 아바하 등 사우디 주요 도시에서 진행됐으며, 관람객들은 VR 기기를 착용한 상태에서 공연형 콘텐츠를 체험하는 방식으로 참여했다. 이는 영화관에서 상영된 콘서트 필름과는 또 다른 형태의 몰입형 팬 경험 콘텐츠로, 사우디 내 케이팝 팬덤 소비가 극장 상영을 넘어 VR 체험형 콘텐츠 영역까지 확장되고 있음을 보여준다.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-47-images/img-03.jpg" alt="엔하이픈 이머시브 VR 체험형 콘텐츠">
+            </div>
+            <p class="photo-caption">엔하이픈 이머시브(Immersive) 브이알(VR) 체험형 콘텐츠 — 출처: 카나와트 그룹 인스타그램(Instagram) 계정(@qanawatgroup)</p>
+
+            <h2>굿즈·SNS·플랫폼으로 이어지는 팬덤 소비</h2>
+
+            <p>사우디에서는 2018년 영화관 재개방 이후 콘서트 필름, 애니메이션 특별 상영, 라이브 뷰잉(Live Viewing) 등 이벤트형 콘텐츠 소비가 젊은 세대를 중심으로 빠르게 확대되고 있다. 넷플릭스(Netflix), 유튜브(YouTube), 스포티파이(Spotify) 등 디지털 플랫폼 중심 소비와 함께 극장과 오프라인 체험형 콘텐츠가 결합되며 케이팝 팬덤 문화 역시 다양한 형태로 변화하는 모습이다.</p>
+
+            <p>이러한 흐름 속에서 엔하이픈(ENHYPEN)은 아랍권, 특히 걸프협력회의(GCC) 지역 10~20대 여성 팬층 사이에서 비교적 높은 온라인 반응을 얻고 있다. 엔하이픈은 그룹 방탄소년단(BTS)의 소속사 하이브(HYBE) 산하 레이블 빌리프랩(BELIFT LAB) 소속 그룹으로, 퍼포먼스 중심의 무대 연출과 서사형 콘셉트 콘텐츠를 꾸준히 선보이며 글로벌 팬층을 형성해왔다.</p>
+
+            <p>사우디 내 미니소(MINISO) 매장에서는 엔하이픈 관련 앨범과 굿즈 판매가 이뤄지고 있으며, 일부 팬들은 SNS를 통해 관련 구매 후기를 공유하고 있다. 중동 전자상거래 플랫폼 눈(Noon)과 아마존 사우디(Amazon Saudi)에서도 관련 상품 구매가 가능하다. 이처럼 공연 영상 상영부터 VR 체험 콘텐츠, 굿즈 소비, SNS 참여 문화까지 다양한 접점이 형성되며 사우디 내 케이팝 팬덤 문화도 보다 입체적인 형태로 확장되고 있다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 복스시네마(Vox Cinemas) 홈페이지 내 엔하이픈 콘텐츠 소개 페이지, <a href="https://ksa.voxcinemas.com/movies/enhypen-korean" target="_blank">ksa.voxcinemas.com/movies/enhypen-korean</a></p>
+                <p>— 엔하이픈(ENHYPEN) 팬 틱톡(TikTok) 계정 1(@Julia_x134)</p>
+                <p>— 엔하이픈(ENHYPEN) 팬 틱톡(TikTok) 계정 2(@d0hal80)</p>
+                <p>— 중동 전자상거래 웹사이트 눈(Noon), <a href="https://www.noon.com/saudi-en" target="_blank">noon.com/saudi-en</a></p>
+                <p>— 카나와트 그룹(Qanawat Group) 공식 인스타그램(@qanawatgroup), <a href="https://www.instagram.com/qanawatgroup/" target="_blank">instagram.com/qanawatgroup</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>A run of concert-based film content from the group ENHYPEN has recently screened at major cinemas across Saudi Arabia, drawing the attention of local K-pop fans. In March, the concert film <em>WALK THE LINE – SUMMER EDITION</em> opened in Saudi Arabia; it was followed in May by <em>ENHYPEN: IMMERSION IN CINEMAS</em>, an experiential offering built on the ScreenX and 4DX formats.</p>
+
+            <div class="article-photo">
+                <img src="kofice-47-images/img-01.jpg" alt="ENHYPEN content opening in Saudi cinemas — Walk the Line">
+            </div>
+            <p class="photo-caption">ENHYPEN content opening in Saudi cinemas — <em>Walk the Line</em> — Source: Vox Cinemas website</p>
+
+            <div class="article-photo">
+                <img src="kofice-47-images/img-02.jpg" alt="ENHYPEN content opening in Saudi cinemas — Immersion in Cinemas">
+            </div>
+            <p class="photo-caption">ENHYPEN content opening in Saudi cinemas — <em>Immersion in Cinemas</em> — Source: Vox Cinemas website</p>
+
+            <p>The titles screened at major Saudi multiplex chains including MUVI Cinemas, VOX Cinemas, and REEL Cinemas, with both English and Arabic subtitles. The response from female audiences in their teens and twenties was especially pronounced; in some auditoriums, viewers sang along and cheered together, recreating an atmosphere close to a real concert.</p>
+
+            <h2>An "Alternative Concert Experience" Carried On in Cinemas</h2>
+
+            <p>Lately in Saudi Arabia, cinema screenings of performance-based content — concert films, live viewings and the like — have been steadily increasing, and the ENHYPEN films are meeting local audiences within this trend. <em>ENHYPEN: IMMERSION IN CINEMAS</em>, in particular, is experiential cinema content using the ScreenX and 4DX formats, combining performance footage with immersive staging to maximise the sense of presence. Signature numbers such as <em>Bite Me</em> and <em>XO</em> came across all the more vividly through the large screen and 3-D effects, designed so that viewers could feel something close to being at an actual venue.</p>
+
+            <p>K-pop fandom in Saudi Arabia is gradually expanding beyond simple online consumption into a collective cultural experience centred on the cinema. With opportunities for Korean idol groups to hold standalone concerts in Saudi Arabia still limited, screening K-pop-related footage in cinemas has taken root as a way for fans to experience the atmosphere of a performance indirectly. Footage shared on social media showed audiences cheering and chanting together. A group-viewing culture has formed, led particularly by young female fans, and some auditoriums recreated an atmosphere much like a real concert. Local fans consumed the concert-film screenings not as ordinary moviegoing but as performance-style event content, with some describing it as "a once-in-a-lifetime moment."</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-47-images/img-04.jpg" alt="Footage of a screening shared on TikTok">
+            </div>
+            <p class="photo-caption">Footage of a screening shared on TikTok — Source: ENHYPEN fan TikTok account (@Julia_x134)</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-47-images/img-05.jpg" alt="Footage of a screening shared on TikTok">
+            </div>
+            <p class="photo-caption">Footage of a screening shared on TikTok — Source: ENHYPEN fan TikTok account (@d0hal80)</p>
+
+            <p>Meanwhile, the Saudi entertainment company Qanawat Group ran ENHYPEN-related VR-based immersive experience content from May 21 to 23. Held in major Saudi cities including the capital Riyadh as well as Dammam, Jeddah, Medina and Abha, the content invited visitors to experience performance-style material while wearing VR headsets. A different form of immersive fan-experience content from the concert films shown in cinemas, it shows that K-pop fandom consumption in Saudi Arabia is expanding beyond cinema screenings into the realm of VR experiential content.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-47-images/img-03.jpg" alt="ENHYPEN immersive VR experience content">
+            </div>
+            <p class="photo-caption">ENHYPEN immersive VR experience content — Source: Qanawat Group Instagram account (@qanawatgroup)</p>
+
+            <h2>Fandom Consumption Extending into Merch, Social Media and Platforms</h2>
+
+            <p>Since cinemas reopened in Saudi Arabia in 2018, consumption of event-style content — concert films, special animation screenings, live viewings — has expanded rapidly, led by younger generations. Alongside consumption centred on digital platforms such as Netflix, YouTube and Spotify, cinema and offline experiential content are combining, and K-pop fandom culture too is changing into a variety of forms.</p>
+
+            <p>Within this trend, ENHYPEN is drawing a comparatively strong online response among female fans in their teens and twenties in the Arab world, particularly in the Gulf Cooperation Council (GCC) region. ENHYPEN belongs to BELIFT LAB, a label under HYBE — the agency behind BTS — and has built a global fanbase by consistently presenting performance-driven staging and narrative concept content.</p>
+
+            <p>At MINISO stores in Saudi Arabia, ENHYPEN albums and merchandise are on sale, and some fans share purchase reviews via social media. Related products can also be bought on the Middle Eastern e-commerce platforms Noon and Amazon Saudi. With contact points forming across film screenings, VR experience content, merchandise consumption and social-media participation, K-pop fandom culture in Saudi Arabia is expanding into an ever more multidimensional form.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— ENHYPEN content page on the Vox Cinemas website, <a href="https://ksa.voxcinemas.com/movies/enhypen-korean" target="_blank">ksa.voxcinemas.com/movies/enhypen-korean</a></p>
+                <p>— ENHYPEN fan TikTok account 1 (@Julia_x134)</p>
+                <p>— ENHYPEN fan TikTok account 2 (@d0hal80)</p>
+                <p>— Middle Eastern e-commerce site Noon, <a href="https://www.noon.com/saudi-en" target="_blank">noon.com/saudi-en</a></p>
+                <p>— Qanawat Group official Instagram (@qanawatgroup), <a href="https://www.instagram.com/qanawatgroup/" target="_blank">instagram.com/qanawatgroup</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-45.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+    <a href="kofice-48.html">Next →</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>

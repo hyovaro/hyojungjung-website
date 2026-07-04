@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키디야 시티(Qiddiya City), 사우디 최초 엔터테인먼트 도시 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; object-fit: cover; aspect-ratio: 16/9; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-28.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="키디야 시티(Qiddiya City), 사우디 최초 엔터테인먼트 도시 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-28.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="키디야 시티(Qiddiya City), 사우디 최초 엔터테인먼트 도시 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화도시/관광 — Culture City &amp; Tourism</p>
+                    <h1 class="article-title-ko">키디야 시티(Qiddiya City), 사우디 최초 엔터테인먼트 도시</h1>
+                    <p class="article-title-en">Qiddiya City: Saudi Arabia's First Entertainment City</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">28 January 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · January 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<p>키디야 시티(Qiddiya City)는 사우디아라비아 정부가 추진 중인 대규모 엔터테인먼트·문화 복합 도시 개발 프로젝트로, 수도 리야드(Riyadh)에서 서쪽으로 약 40km 떨어진 지역에 조성되고 있다. 이 프로젝트는 관광과 여가 산업을 국가 성장 동력으로 육성하려는 사우디 비전 2030(Vision 2030)의 핵심 사업 중 하나로, 단일 관광 시설이 아닌 도시 단위의 엔터테인먼트 인프라 구축을 목표로 한다. 키디야 시티 개발은 사우디 국부펀드인 공공투자 펀드(Public Investment Fund, PIF)가 주도하고 있으며, 주요 엔터테인먼트 시설의 브랜드와 운영은 미국과 유럽 기업들이 담당하고 있다. 실제 건설과 기술 구현은 여러 국가의 기업이 참여하는 다국적 협력 구조로 진행되고 있다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-28-images/img-01.jpg" alt="키디야 시티 내 아쿠아라비아와 식스 플래그스 구역 — 출처: 키디야 투자 회사">
+    <img src="kofice-28-images/img-02.jpg" alt="키디야 시티 내 아쿠아라비아와 식스 플래그스 구역 — 출처: 키디야 투자 회사">
+</div>
+<p class="photo-caption">▲ 키디야 시티(Qiddiya City) 내 아쿠아라비아(Aquarabia)와 식스 플래그스(Six Flags) 구역 — 출처: 키디야 투자 회사(Qiddiya Investment Company)</p>
+
+<p>키디야 시티는 현재 엔터테인먼트, 스포츠, 문화, 관광 기능을 아우르는 약 9개의 핵심 구역으로 구분돼 단계적으로 개발되고 있다. 테마파크를 중심으로 한 대규모 엔터테인먼트 시설을 비롯해 공연예술 및 라이브 엔터테인먼트 공간, 영화·영상 제작을 위한 스튜디오 시설이 조성될 예정이다. 이와 함께 e스포츠와 디지털 콘텐츠에 특화된 구역, 관광·휴양 시설, 향후 주거와 상업 기능이 결합된 도시 생활 구역도 포함된다. 각 구역은 서로 다른 기능을 수행하면서도 공연과 체험 요소가 유기적으로 연결되도록 설계돼, 방문객이 도시 전체를 하나의 통합된 콘텐츠 공간으로 경험할 수 있도록 구성된다.</p>
+
+<h2>문화 구역, 공연예술과 영화·영상 제작의 복합 거점</h2>
+
+<p>문화 구역은 공연예술 시설과 영화·영상 제작 인프라를 각각 조성한 구역으로, 창작과 제작이 이루어지는 환경을 지향한다. 공연예술 부문에서는 키디야 시티 공연예술센터(Qiddiya City Performing Arts Centre)가 중심 시설로 계획돼 있으며, 영화·영상 제작 부문에서는 플레이메이커 스튜디오(PlayMaker Studios)가 제작 거점으로 조성된다. 키디야 시티 공연예술센터는 현재 건설이 진행 중인 공연예술 시설로, 완공 시 약 3,000석 규모의 공연장과 야외 공연 공간을 포함할 예정이다. 플레이메이커 스튜디오는 약 200만㎡ 규모의 제작 단지로, 국제 규격의 사운드 스테이지와 대규모 야외 촬영 공간을 갖춘 목적형 스튜디오다. 제작 사무실과 워크숍, 기술 지원 시설을 포함한 통합 제작 환경을 제공한다. 스튜디오는 이미 완공돼 운영에 들어갔으며, 국제 영화 프로젝트의 제작이 진행 중이다.</p>
+
+<div class="article-photo"><img src="kofice-28-images/img-03.jpg" alt="공연예술센터 조감도 — 출처: 키디야 투자 회사(Qiddiya Investment Company)"></div>
+<p class="photo-caption">▲ 공연예술센터(Performing Arts Centre) 조감도 — 출처: 키디야 투자 회사(Qiddiya Investment Company)</p>
+
+<div class="article-photo"><img src="kofice-28-images/img-04.jpg" alt="플레이메이커 스튜디오 전경 — 출처: 키디야 투자 회사(Qiddiya Investment Company)"></div>
+<p class="photo-caption">▲ 플레이메이커 스튜디오(PlayMaker Studios) 전경 — 출처: 키디야 투자 회사(Qiddiya Investment Company)</p>
+
+<h2>식스 플래그스 키디야 시티(Six Flags Qiddiya City) 공식 개장</h2>
+
+<p>키디야 시티 내 테마파크인 식스 플래그스 키디야 시티(Six Flags Qiddiya City)는 2025년 12월 31일 정식 개장했다. 이 시설은 미국의 대표 놀이공원 브랜드 식스 플래그스가 북미 지역 밖에서 처음으로 설계·운영하는 테마파크로, 총 28개의 놀이 기구와 체험시설을 갖추고 있다. 이 파크의 핵심 하이라이트는 롤러코스터 팔콘스 플라이트(Falcon's Flight)다. 해당 놀이기구는 약 4.25km에 달하는 트랙 길이와 최고 시속 약 250km, 최대 고도 약 195m 규모로 설계돼, 개장과 함께 세계 최고 수준의 기록급 롤러코스터로 주목을 받았다. 이 외에도 아이언 래틀러(Iron Rattler), 스핏파이어(Spitfire), 지로스핀(Gyrospin) 등 여러 대형 어트랙션이 파크 전반에 배치돼 있다.</p>
+
+<div class="article-photo"><img src="kofice-28-images/img-05.jpg" alt="롤러코스터 팔콘스 플라이트 — 출처: 키디야 투자 회사(Qiddiya Investment Company)"></div>
+<p class="photo-caption">▲ 롤러코스터 팔콘스 플라이트(Falcon's Flight) — 출처: 키디야 투자 회사(Qiddiya Investment Company)</p>
+
+<h2>키디야의 전략적 의미, 엔터테인먼트 산업을 위한 새로운 도시 실험</h2>
+
+<p>키디야 시티는 관광객 유치를 넘어, 엔터테인먼트와 문화 활동이 일상 속에서 이어지는 도시를 목표로 한다. 개별 시설을 중심으로 한 개발이 아니라, 도시 전체를 하나의 경험 공간으로 구성한 점이 특징이다. 또한 이 프로젝트는 리야드에 집중된 기능을 분산하면서, 엔터테인먼트와 문화 산업을 별도의 거점으로 육성하려는 전략의 일환이기도 하다. 이러한 개발 방식은 사우디 비전 2030이 내세운 관광 산업 다각화와 문화 산업 육성 전략을 실제 도시 공간에 옮긴 사례로 해석된다. 키디야 시티는 이 과정을 통해 사우디 문화·관광 산업이 앞으로 나아갈 방향을 가늠하게 한다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>키디야 투자 회사(Qiddiya Investment Company) 공식 웹사이트, <a href="https://qiddiya.com/" target="_blank" rel="noopener">qiddiya.com</a></p>
+    <p>식스 플래그스 키디야 시티(Six Flags Qiddiya City) 공식 웹사이트, <a href="https://sixflagsqiddiyacity.com/en" target="_blank" rel="noopener">sixflagsqiddiyacity.com</a></p>
+    <p>≪버라이어티(Variety)≫ (2025. 12. 05). Saudi Arabia's New PlayMaker Studios Launch With Production Underway on High-End Epic 'Unbroken Sword' Directed by Alik Sakharov, <a href="https://variety.com/2025/film/global/saudi-arabia-playmaker-studios-epic-unbroken-sword-1236601122/" target="_blank" rel="noopener">variety.com</a></p>
+    <p>≪걸프 뉴스(Gulf News)≫ (2025. 01. 14). How much will it cost to ride the world's fastest roller coaster at Saudi Arabia's Six Flags park?, <a href="https://gulfnews.com/world/gulf/saudi/how-much-will-it-cost-to-ride-the-worlds-fastest-roller-coaster-at-saudi-arabias-six-flags-park-1.500408227" target="_blank" rel="noopener">gulfnews.com</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<p>Qiddiya City is a large-scale entertainment and cultural complex being developed by the Saudi Arabian government approximately 40km west of the capital, Riyadh. One of the flagship projects of Saudi Vision 2030's drive to develop tourism and leisure as national growth engines, it aims not at a single tourist facility but at building entertainment infrastructure at the scale of an entire city. Development is led by the Public Investment Fund (PIF), Saudi Arabia's sovereign wealth fund, with major entertainment facility brands and operations managed by American and European companies, and construction and technical implementation carried out through a multinational partnership structure.</p>
+
+<div class="photo-grid">
+    <img src="kofice-28-images/img-01.jpg" alt="Aquarabia and Six Flags zones within Qiddiya City — Source: Qiddiya Investment Company">
+    <img src="kofice-28-images/img-02.jpg" alt="Aquarabia and Six Flags zones within Qiddiya City — Source: Qiddiya Investment Company">
+</div>
+<p class="photo-caption">▲ Aquarabia and Six Flags zones within Qiddiya City — Source: Qiddiya Investment Company</p>
+
+<p>Qiddiya City is currently being developed in phases across approximately nine core zones spanning entertainment, sports, culture, and tourism. Planned facilities include large-scale entertainment venues centred on theme parks, performing arts and live entertainment spaces, and film and video production studios. Also included are zones dedicated to e-sports and digital content, tourism and leisure facilities, and future residential and commercial districts. Each zone serves a distinct function while being designed so that performance and experiential elements connect organically — so that visitors can experience the whole city as a single integrated content space.</p>
+
+<h2>The Culture Zone: A Hub for Performing Arts and Film Production</h2>
+
+<p>The culture zone is dedicated to performing arts facilities and film and video production infrastructure, aspiring to be an environment where creation and production take place. In the performing arts sector, the Qiddiya City Performing Arts Centre is planned as the centrepiece facility; in film and video production, PlayMaker Studios will serve as the production hub. The Performing Arts Centre is currently under construction and will include, upon completion, an auditorium of approximately 3,000 seats alongside outdoor performance spaces. PlayMaker Studios is a purpose-built production complex of approximately 2 million square metres, with internationally-standard sound stages and large-scale outdoor filming spaces, offering an integrated production environment that includes production offices, workshops, and technical support facilities. The studios are already complete and operational, with international film projects currently in production.</p>
+
+<div class="article-photo"><img src="kofice-28-images/img-03.jpg" alt="Performing Arts Centre concept rendering — Source: Qiddiya Investment Company"></div>
+<p class="photo-caption">▲ Performing Arts Centre concept rendering — Source: Qiddiya Investment Company</p>
+
+<div class="article-photo"><img src="kofice-28-images/img-04.jpg" alt="PlayMaker Studios — Source: Qiddiya Investment Company"></div>
+<p class="photo-caption">▲ PlayMaker Studios — Source: Qiddiya Investment Company</p>
+
+<h2>Six Flags Qiddiya City Opens</h2>
+
+<p>Six Flags Qiddiya City — the theme park within Qiddiya City — officially opened on 31 December 2025. It is the first theme park designed and operated by the American brand Six Flags outside North America, featuring a total of 28 rides and attractions. The centrepiece is the roller coaster Falcon's Flight, designed with a track length of approximately 4.25km, a top speed of around 250km/h, and a maximum height of approximately 195m — drawing immediate attention upon opening as a record-breaking roller coaster of world-class scale. Other major attractions across the park include the Iron Rattler, Spitfire, and Gyrospin.</p>
+
+<div class="article-photo"><img src="kofice-28-images/img-05.jpg" alt="Falcon's Flight roller coaster — Source: Qiddiya Investment Company"></div>
+<p class="photo-caption">▲ Falcon's Flight roller coaster — Source: Qiddiya Investment Company</p>
+
+<h2>The Strategic Significance of Qiddiya: A New Urban Experiment for the Entertainment Industry</h2>
+
+<p>Qiddiya City aims to be more than a tourist draw — it aspires to be a city where entertainment and cultural activities flow as part of daily life. Rather than developing individual facilities, the project's defining characteristic is that the city as a whole is conceived as a single experiential space. It is also part of a strategy to decentralise functions concentrated in Riyadh and cultivate entertainment and cultural industry as a separate hub. This approach can be read as a case study in how Saudi Vision 2030's strategies for tourism industry diversification and cultural industry development are being translated into actual urban space. Through this process, Qiddiya City offers a glimpse into the direction in which Saudi Arabia's cultural and tourism industries are headed.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Qiddiya Investment Company official website, <a href="https://qiddiya.com/" target="_blank" rel="noopener">qiddiya.com</a></p>
+    <p>Six Flags Qiddiya City official website, <a href="https://sixflagsqiddiyacity.com/en" target="_blank" rel="noopener">sixflagsqiddiyacity.com</a></p>
+    <p>≪버라이어티(Variety)≫ (2025. 12. 05). Saudi Arabia's New PlayMaker Studios Launch With Production Underway on High-End Epic 'Unbroken Sword' Directed by Alik Sakharov, <a href="https://variety.com/2025/film/global/saudi-arabia-playmaker-studios-epic-unbroken-sword-1236601122/" target="_blank" rel="noopener">variety.com</a></p>
+    <p>≪걸프 뉴스(Gulf News)≫ (2025. 01. 14). How much will it cost to ride the world's fastest roller coaster at Saudi Arabia's Six Flags park?, <a href="https://gulfnews.com/world/gulf/saudi/how-much-will-it-cost-to-ride-the-worlds-fastest-roller-coaster-at-saudi-arabias-six-flags-park-1.500408227" target="_blank" rel="noopener">gulfnews.com</a></p>
+</div>
+</div></div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+
+    <div class="float-nav">
+        <a href="kofice-27.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-29.html">Next →</a>
+    </div>
+</body>
+</html>

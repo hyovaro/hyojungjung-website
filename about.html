@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Hyojung Jung 정효정</title>
+    <meta name="description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer and cultural educator. Founder of Nangman Theatre. KOFICE and KOFIC correspondent. Shakespeare Institute, University of Birmingham.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        [lang="ko"] {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+            word-break: keep-all;
+        }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        .nav-cta {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            border: 0.5px solid rgba(0,0,0,0.3);
+            padding: 7px 18px;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-cta:hover { background: #1a1a1a; color: #f7f4ef; }
+
+        /* ── Hero: photo left, name + links right ── */
+        .hero {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 500px;
+        }
+        .hero-photo {
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+        .hero-content {
+            padding: 52px 60px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hero-eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            line-height: 2;
+            margin-bottom: 24px;
+        }
+        .hero-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 72px;
+            font-weight: 300;
+            line-height: 0.92;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+        }
+        .hero-name em { font-style: italic; }
+        .hero-name-ko {
+            display: block;
+            font-family: 'Noto Serif KR', serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: #6f6f6f;
+            letter-spacing: 0.1em;
+            margin-top: 16px;
+        }
+        .hero-locations {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-top: 32px;
+        }
+        .hero-nav-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px 36px;
+            margin-top: 40px;
+        }
+        .hero-nav-link {
+            display: block;
+            border-top: 0.5px solid #b8b2a8;
+            padding-top: 12px;
+            transition: border-color 0.2s;
+        }
+        .hero-nav-link:hover { border-color: #7c3a36; }
+        .hero-nav-title {
+            display: block;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            transition: color 0.2s;
+        }
+        .hero-nav-link:hover .hero-nav-title { color: #7c3a36; }
+        .hero-nav-desc {
+            display: block;
+            margin-top: 6px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-style: italic;
+            line-height: 1.35;
+            color: #6f6f6f;
+        }
+        @media (max-width: 640px) {
+            .hero-nav-links { grid-template-columns: 1fr; }
+        }
+
+        /* ── Artistic statement ── */
+        .statement {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-style: italic;
+            font-size: 20px;
+            color: #7c3a36;
+            padding: 32px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            line-height: 1.7;
+            max-width: 900px;
+        }
+
+        /* ── Section label ── */
+        .section-label {
+            padding: 16px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .section-label span {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+
+        /* ── Biography prose ── */
+        .bio-section {
+            padding: 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .bio-col-label {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            padding-top: 5px;
+        }
+        .bio-prose {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #454545;
+        }
+        .bio-prose p + p { margin-top: 20px; }
+        .bio-prose strong { color: #1a1a1a; font-weight: 500; }
+
+        /* ── Recognition cards ── */
+        .recognition-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .rec-card {
+            padding: 32px 36px;
+            border-top: 2px solid #7c3a36;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .rec-card:last-child { border-right: none; }
+        .rec-year {
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 8px;
+        }
+        .rec-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 19px;
+            font-weight: 400;
+            color: #1a1a1a;
+            line-height: 1.25;
+            margin-bottom: 10px;
+        }
+        .rec-desc {
+            font-size: 12px;
+            color: #5e5e5e;
+            line-height: 1.75;
+        }
+
+        /* ── Info rows ── */
+        .info-row {
+            padding: 32px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .info-label {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            padding-top: 3px;
+        }
+        .info-content { font-size: 13px; color: #454545; line-height: 1.85; }
+        .info-content strong { color: #1a1a1a; font-weight: 500; }
+        .info-content p + p { margin-top: 10px; }
+        .info-year { font-size: 10px; letter-spacing: 0.06em; color: #6f6f6f; margin-left: 6px; }
+
+        /* ── Contact nudge ── */
+        .contact-nudge {
+            padding: 28px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .contact-link {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #5e5e5e;
+            border-bottom: 0.5px solid #b8b2a8;
+            padding-bottom: 3px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .contact-link:hover { color: #7c3a36; border-color: #7c3a36; }
+
+        /* ── Footer ── */
+        footer {
+            padding: 22px 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-copy { font-size: 11px; color: #6f6f6f; letter-spacing: 0.05em; }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { font-size: 11px; color: #6f6f6f; letter-spacing: 0.05em; transition: color 0.2s; }
+        .footer-links a:hover { color: #1a1a1a; }
+
+        /* ── Responsive ── */
+        @media (max-width: 1100px) {
+            .hero { grid-template-columns: 260px 1fr; }
+            .hero-name { font-size: 58px; }
+            .hero-content { padding: 44px 44px 40px; }
+        }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .hero { grid-template-columns: 200px 1fr; min-height: auto; }
+            .hero-content { padding: 36px 32px; }
+            .hero-name { font-size: 48px; }
+            .statement { padding: 24px 28px; font-size: 17px; }
+            .bio-section { grid-template-columns: 1fr; gap: 20px; padding: 36px 28px; }
+            .bio-col-label { display: none; }
+            .recognition-grid { grid-template-columns: 1fr; }
+            .rec-card { border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .rec-card:last-child { border-bottom: none; }
+            .info-row { grid-template-columns: 1fr; gap: 12px; padding: 28px 28px; }
+            .section-label { padding: 14px 28px; }
+            .contact-nudge { padding: 22px 28px; }
+            footer { padding: 18px 28px; }
+        }
+        @media (max-width: 600px) {
+            nav { padding: 14px 20px; }
+            .hero { grid-template-columns: 1fr; }
+            .hero-photo { height: 300px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .hero-content { padding: 28px 20px 32px; }
+            .hero-name { font-size: 44px; }
+            .statement { padding: 22px 20px; font-size: 16px; }
+            .bio-section { padding: 28px 20px; }
+            .rec-card { padding: 24px 20px; }
+            .info-row { padding: 22px 20px; }
+            .contact-nudge { padding: 20px 20px; }
+            footer { padding: 18px 20px; flex-direction: column; gap: 10px; text-align: center; }
+        }
+    
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    /* bd1-grade: subtle warm tone on photographs (reversible — delete this block to revert) */
+.photo-item:not(.poster-plain):not(.poster) img,
+.perf-cell:not(.poster) img,
+.lb-pic,
+.hero-photo img,
+.photo-free img,
+.about-photo img,
+.cat-photo img,
+.tz-photo img,
+.event-thumb img{filter:sepia(0.10) saturate(1.06) contrast(1.03) brightness(1.01);}
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/about.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="About — Hyojung Jung 정효정">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer and cultural educator. Founder of Nangman Theatre. KOFICE and KOFIC correspondent. Shakespeare Institute, University of Birmingham.">
+    <meta property="og:url" content="https://hyojungjung.com/about.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About — Hyojung Jung 정효정">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer and cultural educator. Founder of Nangman Theatre. KOFICE and KOFIC correspondent. Shakespeare Institute, University of Birmingham.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- Hero: portrait + name -->
+    <section class="hero" aria-label="Portrait and introduction">
+        <div class="hero-photo">
+            <img src="hyojung-jung%20Recent%20Headshot.jpeg" alt="Portrait of Hyojung Jung">
+        </div>
+        <div class="hero-content">
+            <div>
+                <p class="hero-eyebrow">
+                    Actor &nbsp;·&nbsp; Theatre Director &nbsp;·&nbsp; Writer &nbsp;·&nbsp; Cultural Educator<br>
+                    Founder &amp; Artistic Director, Nangman Theatre
+                </p>
+                <h1 class="hero-name">Hyojung<br><em>Jung</em></h1>
+                <span class="hero-name-ko" lang="ko">정효정</span>
+                <p class="hero-locations">Seoul &nbsp;·&nbsp; London &nbsp;·&nbsp; Riyadh</p>
+            </div>
+            <nav class="hero-nav-links" aria-label="Work sections">
+                <a href="theatre.html" class="hero-nav-link">
+                    <span class="hero-nav-title">Nangman Theatre →</span>
+                    <span class="hero-nav-desc">Ten years of literature staged as music-reading theatre, from Seoul to London.</span>
+                </a>
+                <a href="writing.html" class="hero-nav-link">
+                    <span class="hero-nav-title">Articles →</span>
+                    <span class="hero-nav-desc">Dispatches on Korean culture abroad, as KOFICE's Saudi Arabia correspondent.</span>
+                </a>
+                <a href="essays.html" class="hero-nav-link">
+                    <span class="hero-nav-title">Essays →</span>
+                    <span class="hero-nav-desc">Shakespeare and performance research from her MA at the Shakespeare Institute.</span>
+                </a>
+                <a href="engagement.html" class="hero-nav-link">
+                    <span class="hero-nav-title">Teaching &amp; Cultural Work →</span>
+                    <span class="hero-nav-desc">Teaching, events, and a Saudi women's choir at the King Sejong Institute, Riyadh.</span>
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Artistic statement -->
+    <p class="statement">
+        <em>I make theatre that travels between languages — and write about the cultures it crosses. For me, a stage is a place where different worlds can exist simultaneously, in tension and in conversation. I am drawn to what is lost in translation, and to what is unexpectedly found.</em>
+    </p>
+
+    <!-- Biography -->
+    <div class="section-label"><span>Biography</span></div>
+
+    <div class="bio-section">
+        <span class="bio-col-label">In full</span>
+        <div class="bio-prose">
+            <p>Hyojung Jung (<span lang="ko">정효정</span>) is a Korean actor, theatre director, writer, and cultural educator whose work moves across performance, journalism, and academic research. She operates between Seoul, London, and Riyadh, drawing on each context to ask how cultures meet each other on stage and on the page.</p>
+
+            <p>She founded <strong>Nangman Theatre</strong> (<span lang="ko">낭만씨어터</span>) in Seoul in 2016. The next year the company was selected as a <strong>Seoul Youth Arts Group</strong> (<span lang="ko">서울청년예술단</span>) — one of a small cohort backed by the city, with ₩50,000,000 in public funding — and carried a single obsession across all 25 districts of Seoul: literature, read aloud and set to music. For ten years she has taken Korean and world literature — Han Kang, Gi Hyeong-do, Stendhal, Barthes, and others — and staged it as <strong>music-reading theatre</strong>: a reading carried by live song and a single piano.</p>
+
+            <p>She moved to London in 2019 to immerse herself in Western theatre culture and further develop her expertise in musical theatre. During her time in the UK, she also gained experience across the media industry, working as an actor in film, commercial productions, and voice-over projects. Since 2024, Hyojung has been based in Riyadh as <strong>Cultural Affairs Instructor and Events Coordinator</strong> at the King Sejong Institute, Prince Sultan University. Alongside her teaching and events work, she conducts a Saudi women's choir. In 2025 she was invited to speak at <strong>Korean Film Week Saudi Arabia</strong>.</p>
+
+            <p>She writes for <strong>KOFICE</strong> (Korea Foundation for International Cultural Exchange), for whom she serves as Saudi Arabia correspondent, and for <strong>KOFIC</strong> (Korean Film Council), for whom she contributes as guest correspondent. Her journalism documents the accelerating cultural exchange between Korea and Saudi Arabia.</p>
+
+            <p>In 2025 she began an MA at the <strong>Shakespeare Institute, University of Birmingham</strong> (2025–2028, expected), asking what survives when a Korean stage claims Shakespeare — what is kept, what is changed, and what is made new. She holds an MA in Musical Theatre from the University of Seoul and a BA in Theatre and Film from INHA University.</p>
+        </div>
+    </div>
+
+    <!-- Recognition -->
+    <div class="section-label"><span>Recognition</span></div>
+
+    <div class="recognition-grid">
+        <div class="rec-card">
+            <p class="rec-year">2017</p>
+            <h2 class="rec-title">Seoul Youth Arts Group</h2>
+            <p class="rec-desc">Nangman Theatre selected as <span lang="ko">서울청년예술단</span> — one of the City of Seoul's recognised youth arts organisations — following competitive open application.</p>
+        </div>
+        <div class="rec-card">
+            <p class="rec-year">2017</p>
+            <h2 class="rec-title">₩50,000,000 Public Arts Funding</h2>
+            <p class="rec-desc">Public arts grant from the City of Seoul, recognising Nangman Theatre's programme. ₩50,000,000.</p>
+        </div>
+        <div class="rec-card">
+            <p class="rec-year">2025</p>
+            <h2 class="rec-title">Guest Speaker, Korean Film Week KSA</h2>
+            <p class="rec-desc">Invited to speak at Korean Film Week Saudi Arabia 2025, contributing to the public discourse on Korean screen culture in the Gulf region.</p>
+        </div>
+    </div>
+
+    <!-- Currently -->
+    <div class="info-row">
+        <span class="info-label">Currently</span>
+        <div class="info-content">
+            <p><strong>Cultural Affairs Instructor &amp; Events Coordinator</strong> — King Sejong Institute, Prince Sultan University, Riyadh <span class="info-year">2024–</span></p>
+            <p><strong>Conductor, Saudi Women's Choir</strong> — King Sejong Institute, Prince Sultan University, Riyadh <span class="info-year">2024–</span></p>
+            <p><strong>Saudi Arabia Correspondent</strong> — Korea Foundation for International Cultural Exchange (KOFICE) <span class="info-year">2025–</span></p>
+            <p><strong>Guest Correspondent</strong> — Korean Film Council (KOFIC) <span class="info-year">2026–</span></p>
+            <p><strong>MA Candidate</strong> — Shakespeare Institute, University of Birmingham <span class="info-year">2025–2028 (expected)</span></p>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="info-row">
+        <span class="info-label">Education</span>
+        <div class="info-content">
+            <p><strong>Shakespeare Institute, University of Birmingham</strong> — MA <span class="info-year">2025–2028 (expected)</span></p>
+            <p><strong>University of Seoul</strong> — MA in Musical Theatre <span class="info-year">2017–2019</span></p>
+            <p><strong>INHA University</strong> — BA in Theatre and Film <span class="info-year">2008–2014</span></p>
+        </div>
+    </div>
+
+    <!-- Contact nudge -->
+    <div class="contact-nudge">
+        <a href="contact.html" class="contact-link">Get in touch →</a>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>

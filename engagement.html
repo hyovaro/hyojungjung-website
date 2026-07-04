@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching & Cultural Work — Hyojung Jung 정효정</title>
+    <meta name="description" content="Hyojung Jung at the King Sejong Institute, Prince Sultan University, Riyadh — instructor of Korean drama/film acting, choir, and music video; organiser and coordinator of cultural programmes; and invited panellist on Korean culture and film.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky; top: 0; background: #f7f4ef; z-index: 100;
+        }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        .nav-cta { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1a1a1a; border: 0.5px solid rgba(0,0,0,0.3); padding: 7px 18px; border-radius: 2px; transition: background 0.2s, color 0.2s; }
+        .nav-cta:hover { background: #1a1a1a; color: #f7f4ef; }
+
+        /* ── Cinematic hero ── */
+        .hero { position: relative; height: 78vh; max-height: 660px; min-height: 460px; overflow: hidden; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+        .hero > img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; display: block; }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.05) 32%, rgba(0,0,0,0.18) 58%, rgba(0,0,0,0.72) 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 52px;
+        }
+        .hero-eyebrow { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.82); margin-bottom: 18px; line-height: 1.9; }
+        .hero-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 74px; font-weight: 300; line-height: 0.94; letter-spacing: -0.02em; color: #fff; }
+        .hero-title em { font-style: italic; }
+        .hero-statement { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 19px; color: rgba(255,255,255,0.92); max-width: 660px; margin-top: 20px; line-height: 1.6; }
+
+        /* ── Intro strip ── */
+        .intro-strip { padding: 44px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: grid; grid-template-columns: 160px 1fr; gap: 48px; align-items: start; }
+        .intro-strip .col-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; padding-top: 4px; }
+        .intro-strip p { font-size: 15px; line-height: 1.85; color: #454545; max-width: 760px; }
+        .intro-strip strong { color: #1a1a1a; font-weight: 500; }
+        .hint { margin-top: 14px; font-size: 12px; color: #7c3a36; font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; }
+
+        /* ── Category zigzag (slim) ── */
+        .cat { display: grid; grid-template-columns: 1.4fr 1fr; height: 420px; border-bottom: 0.5px solid rgba(0,0,0,0.1); cursor: pointer; background: #f7f4ef; transition: background 0.2s; }
+        .cat:hover { background: #f1ede6; }
+        .cat.flip { direction: rtl; }
+        .cat.flip > * { direction: ltr; }
+        .cat-photo { overflow: hidden; }
+        .cat-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; display: block; transition: transform 0.6s ease; }
+        .cat:hover .cat-photo img { transform: scale(1.03); }
+        .cat-info { padding: 46px 52px; display: flex; flex-direction: column; justify-content: center; }
+        .cat-num { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #7c3a36; margin-bottom: 14px; }
+        .cat-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 42px; font-weight: 300; line-height: 1.04; margin-bottom: 14px; }
+        .cat-title em { font-style: italic; }
+        .cat-desc { font-size: 14px; line-height: 1.7; color: #5e5e5e; max-width: 400px; margin-bottom: 22px; }
+        summary.cat-sum { display: block; list-style: none; outline: none; cursor: pointer; }
+        summary.cat-sum::-webkit-details-marker { display: none; }
+        summary.cat-sum::marker { content: ""; }
+        .cat-toggle { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #7c3a36; border: 0.5px solid #7c3a36; border-radius: 2px; padding: 9px 18px; align-self: flex-start; transition: background 0.2s, color 0.2s; }
+        .cat-toggle::after { content: "Explore  +"; }
+        details[open] .cat-toggle::after { content: "Close  −"; }
+        details[open] .cat-toggle, .cat:hover .cat-toggle { background: #7c3a36; color: #f7f4ef; }
+
+        /* ── Drawer ── */
+        .cat-drawer { background: #f1ede6; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+        .drawer-inner { padding: 46px 52px 14px; }
+        .dsub { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin: 0 0 22px; }
+        .dyear { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 300; color: #1a1a1a; margin: 6px 0 18px; }
+        .block-gap { margin-bottom: 46px; }
+
+        /* ── Cards ── */
+        .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(252px, 1fr)); gap: 32px 26px; }
+        .event-card { display: flex; flex-direction: column; cursor: pointer; }
+        .event-thumb { overflow: hidden; border-radius: 2px; aspect-ratio: 4 / 3; background: #e6e1d8; position: relative; }
+        .event-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+        .event-card:hover .event-thumb img { transform: scale(1.04); }
+        .event-thumb img.zoomcrop { transform: scale(1.28) rotate(1.5deg); transform-origin: 73% 55%; }
+        .event-card:hover .event-thumb img.zoomcrop { transform: scale(1.33) rotate(1.5deg); transform-origin: 73% 55%; }
+        .event-thumb.poster { background: #e6e1d8; }
+        .event-thumb.poster img { object-fit: contain; }
+        .photo-count { position: absolute; bottom: 8px; right: 8px; font-size: 10px; letter-spacing: 0.08em; color: #fff; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 2px; }
+        .event-meta { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin: 14px 0 7px; }
+        .event-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; line-height: 1.15; margin-bottom: 9px; transition: color 0.2s; }
+        .event-title em { font-style: italic; }
+        .event-card:hover .event-title { color: #7c3a36; }
+        .event-desc { font-size: 13px; line-height: 1.7; color: #5e5e5e; }
+        .event-more { margin-top: 10px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #7c3a36; }
+        /* native click-to-expand card */
+        details.event-card { display: block; }
+        summary.ec-sum { display: block; list-style: none; outline: none; cursor: pointer; }
+        summary.ec-sum::-webkit-details-marker { display: none; }
+        summary.ec-sum::marker { content: ""; }
+        .ec-head { display: flex; flex-direction: column; }
+        details.event-card[open] .event-more { color: #1a1a1a; }
+        .ec-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); gap: 8px; margin-top: 14px; padding-top: 16px; border-top: 0.5px solid rgba(0,0,0,0.14); }
+        .ec-shot { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 2px; background: #e6e1d8; }
+        .ec-shot img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .ec-shot:hover img { transform: scale(1.05); }
+        .perf-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #7c3a36; border-bottom: 0.5px solid #7c3a36; padding-bottom: 2px; align-self: flex-start; transition: opacity 0.2s; }
+        .perf-link:hover { opacity: 0.7; }
+
+        /* ── Teaching zigzag (What I Teach) ── */
+        .tz-wrap { margin: 0 -52px 8px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .tz { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 360px; }
+        .tz.flip { direction: rtl; }
+        .tz.flip > * { direction: ltr; }
+        .tz-info { padding: 44px 52px; display: flex; flex-direction: column; justify-content: center; border-right: 0.5px solid rgba(0,0,0,0.1); }
+        .tz.flip .tz-info { border-right: none; border-left: 0.5px solid rgba(0,0,0,0.1); }
+        .tz-tag { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 16px; }
+        .tz-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 36px; font-weight: 300; line-height: 1.1; margin-bottom: 16px; }
+        .tz-title em { font-style: italic; }
+        .tz-desc { font-size: 14px; line-height: 1.85; color: #5e5e5e; max-width: 410px; }
+        .tz-press { display: inline-block; margin-top: 18px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #7c3a36; border-bottom: 0.5px solid #7c3a36; padding-bottom: 2px; transition: opacity 0.2s; }
+        .tz-press:hover { opacity: 0.7; }
+        .tz-photo { overflow: hidden; }
+        .tz-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+        .tz:hover .tz-photo img { transform: scale(1.03); }
+        .tz-photos { display: grid; grid-template-rows: 1fr 1fr; overflow: hidden; }
+        .tz-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .tz-photos img:first-child { border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+
+
+        /* ── Footer ── */
+        .page-footer { padding: 56px 52px 48px; display: flex; justify-content: space-between; align-items: center; }
+        .footer-back { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; border-bottom: 0.5px solid #b8b2a8; padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+        .footer-back:hover { color: #7c3a36; border-color: #7c3a36; }
+        .footer-note { font-size: 11px; color: #6f6f6f; font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; }
+
+        @media (max-width: 760px) {
+            nav, .hero-overlay, .intro-strip, .cat-info, .drawer-inner, .page-footer { padding-left: 28px; padding-right: 28px; }
+            .hero-title { font-size: 46px; }
+            .intro-strip { grid-template-columns: 1fr; gap: 16px; }
+            .cat { grid-template-columns: 1fr; height: auto; }
+            .cat-photo { aspect-ratio: 16 / 10; }
+            .cat.flip { direction: ltr; }
+            .cat-title { font-size: 34px; }
+            .tz-wrap { margin: 0 -28px 8px; }
+            .tz { grid-template-columns: 1fr; min-height: 0; }
+            .tz.flip { direction: ltr; }
+            .tz-info { border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .tz.flip .tz-info { border-left: none; }
+            .tz-photo, .tz-photos { aspect-ratio: 4 / 3; }
+            .tz-title { font-size: 28px; }
+        }
+    
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    /* bd1-grade: subtle warm tone on photographs (reversible — delete this block to revert) */
+.photo-item:not(.poster-plain):not(.poster) img,
+.perf-cell:not(.poster) img,
+.lb-pic,
+.hero-photo img,
+.photo-free img,
+.about-photo img,
+.cat-photo img,
+.tz-photo img,
+.event-thumb img{filter:sepia(0.10) saturate(1.06) contrast(1.03) brightness(1.01);}
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/engagement.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="Teaching & Cultural Work — Hyojung Jung 정효정">
+    <meta property="og:description" content="Hyojung Jung at the King Sejong Institute, Prince Sultan University, Riyadh — instructor of Korean drama/film acting, choir, and music video; organiser and coordinator of cultural programmes; and invited panellist on Korean culture and film.">
+    <meta property="og:url" content="https://hyojungjung.com/engagement.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Teaching & Cultural Work — Hyojung Jung 정효정">
+    <meta name="twitter:description" content="Hyojung Jung at the King Sejong Institute, Prince Sultan University, Riyadh — instructor of Korean drama/film acting, choir, and music video; organiser and coordinator of cultural programmes; and invited panellist on Korean culture and film.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html">Essays</a>
+        <a href="engagement.html" class="active">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- Cinematic hero -->
+    <header class="hero">
+        <img src="images/engagement/hero-choir.jpg" alt="KOSA Choir performing, conducted by Hyojung Jung — Korean Speech Contest, Prince Sultan University, 2024">
+        <div class="hero-overlay">
+            <p class="hero-eyebrow"><span lang="ko">세종학당 리야드</span> &nbsp;·&nbsp; King Sejong Institute at Prince Sultan University</p>
+            <h1 class="hero-title">Teaching &amp;<br><em>Cultural Work</em></h1>
+            <p class="hero-statement">Teaching acting, choir, and music video; opening and coordinating cultural programmes from pansori to dance; and speaking on Korean culture and film — in Riyadh.</p>
+        </div>
+    </header>
+
+    <!-- Intro strip -->
+    <section class="intro-strip" aria-label="Overview">
+        <p class="col-label">Three Roles</p>
+        <div>
+            <p>Since 2024, Hyojung has worked at the <strong>King Sejong Institute</strong> at Prince Sultan University in Riyadh — Saudi Arabia's leading centre for Korean cultural education. Her work there takes three forms: as an <strong>instructor</strong> she teaches Korean drama and film acting, conducts the KOSA Choir, and runs the music video course; as an <strong>organiser and coordinator</strong> she opens cultural classes and stages screenings, talks, and performances; and she is an <strong>invited panellist</strong> on Korean culture and film.</p>
+            <p class="hint">Select a role below to open its events by year — and click any event to view photos.</p>
+        </div>
+    </section>
+
+    <!-- ════ ROLE 01 — INSTRUCTOR ════ -->
+    <details class="cat-wrap">
+      <summary class="cat-sum"><div class="cat">
+        <div class="cat-photo"><img src="images/engagement/conductor-2024.jpg" alt="Hyojung Jung conducting the KOSA Choir — Korean Speech Contest, 2024"></div>
+        <div class="cat-info">
+            <p class="cat-num">Role 01 — Instructor</p>
+            <h2 class="cat-title">What I <em>Teach</em></h2>
+            <p class="cat-desc">Korean drama &amp; film acting, the KOSA Choir, and the music video course — and the stages they reach.</p>
+            <span class="cat-toggle"></span>
+        </div>
+      </div></summary>
+      <div class="cat-drawer">
+        <div class="drawer-inner">
+
+            <p class="dsub">Classes I teach</p>
+            <div class="tz-wrap">
+
+                <section class="tz" aria-label="Saudi–Korean Choir">
+                    <div class="tz-info">
+                        <p class="tz-tag"><span lang="ko">코사합창단</span> &nbsp;·&nbsp; Conductor</p>
+                        <h3 class="tz-title">Saudi–Korean <em>Choir</em></h3>
+                        <p class="tz-desc">Conducting a 15-member ensemble — from Arirang to BTS — in weekly classes and several concerts a year. The choir focuses on vocal technique, ensemble listening, and the joy of singing Korean together.</p>
+                        <a class="tz-press" href="https://www.ksif.or.kr/cop/bbs/selectBoardArticle.do?nttId=9220000006792&amp;bbsId=BBSMSTR_000000000071&amp;pageIndex=1" target="_blank" rel="noopener">Featured by the Sejong Institute Foundation →</a>
+                    </div>
+                    <div class="tz-photo"><img src="images/engagement/conductor.jpg" alt="Hyojung Jung accompanying the KOSA Choir on piano"></div>
+                </section>
+
+                <section class="tz flip" aria-label="Korean Drama &amp; Film Acting">
+                    <div class="tz-info">
+                        <p class="tz-tag"><span lang="ko">케이드라마클럽</span> &nbsp;·&nbsp; Acting</p>
+                        <h3 class="tz-title">Korean Drama &amp;<br>Film <em>Acting</em></h3>
+                        <p class="tz-desc">Scene study, physical expression, and character work drawn from Korean film and television — including memorable 〈Squid Game〉 sequences — taught in Korean and English, building language competency alongside creative confidence.</p>
+                    </div>
+                    <div class="tz-photo"><img src="images/engagement/kdrama-class.jpg" alt="Korean drama and film acting class"></div>
+                </section>
+
+                <section class="tz" aria-label="Music Video Course">
+                    <div class="tz-info">
+                        <p class="tz-tag"><span lang="ko">뮤직비디오 코스</span> &nbsp;·&nbsp; Music Video</p>
+                        <h3 class="tz-title">Music <em>Video Course</em></h3>
+                        <p class="tz-desc">Students produce their own K-pop-style music videos — choreography, filming, and editing in one creative project. Past projects include ROSÉ's 〈APT.〉 and Kim Won-jun's 〈Show〉.</p>
+                    </div>
+                    <div class="tz-photos">
+                        <img src="images/engagement/mv-05.jpg" alt="Music video course — student capture 1">
+                        <img src="images/engagement/mv-06.jpg" alt="Music video course — student capture 2">
+                    </div>
+                </section>
+
+            </div>
+
+            <p class="dsub">On stage — performances led &amp; conducted</p>
+            <div class="events-grid">
+
+                <a class="event-card" href="engagement-2024-performance.html">
+                    <div class="event-thumb"><img src="images/engagement/perf-squid-1.jpg" alt="제1회 정기공연 — 〈오징어 게임〉 장면 연기"><span class="photo-count">6 photos</span></div>
+                    <p class="event-meta"><span lang="ko">제1회 정기공연</span> &nbsp;·&nbsp; March 2024</p>
+                    <h4 class="event-title">1st Annual <em>Joint Performance</em></h4>
+                    <p class="event-desc">KOSA Choir와 K-Drama Club의 첫 합동 무대 — 합창, 〈오징어 게임〉 장면, 전체 피날레.</p>
+                    <span class="event-more">View page →</span>
+                </a>
+
+                <a class="event-card" href="engagement-speech-contest-2024.html">
+                    <div class="event-thumb"><img src="images/engagement/speech-contest-2-2024.jpg" alt="제2회 한국어 말하기 대회 축하공연"><span class="photo-count">4 photos</span></div>
+                    <p class="event-meta"><span lang="ko">제2회 한국어말하기대회 축하공연</span> &nbsp;·&nbsp; May 2024</p>
+                    <h4 class="event-title">Speech Contest <em>Gala Stage</em></h4>
+                    <p class="event-desc">제2회 리야드 세종학당 한국어 말하기 대회 축하공연 합창단 무대.</p>
+                    <span class="event-more">View page →</span>
+                </a>
+
+                <a class="event-card" href="engagement-national-day.html">
+                    <div class="event-thumb"><img src="images/engagement/national-day-choir.jpg" alt="코사합창단 국경절 초청공연"><span class="photo-count">2 photos</span></div>
+                    <p class="event-meta"><span lang="ko">국경절 초청공연</span> &nbsp;·&nbsp; October 2024</p>
+                    <h4 class="event-title">Saudi National <em>Day Performance</em></h4>
+                    <p class="event-desc">사우디 국경절 기념행사에 초청된 KOSA Choir의 한국 합창 무대.</p>
+                    <span class="event-more">View page →</span>
+                </a>
+
+                <a class="event-card" href="engagement-choir-concert-2025.html">
+                    <div class="event-thumb"><img src="images/engagement/annual-performance-2025.jpg" alt="제2회 코리아-사우디 합창단 정기공연"><span class="photo-count">6 photos</span></div>
+                    <p class="event-meta"><span lang="ko">제2회 정기공연</span> &nbsp;·&nbsp; February 2025</p>
+                    <h4 class="event-title">2nd Korean–Saudi <em>Choir Concert</em></h4>
+                    <p class="event-desc">애국가와 K-pop이 울려 퍼진 코사 합창단의 2025년 정기공연 (2월 15일).</p>
+                    <span class="event-more">View page →</span>
+                </a>
+
+                <a class="event-card" href="engagement-speech-contest-2025.html">
+                    <div class="event-thumb"><img src="images/engagement/speech-contest-3-2025.jpg" alt="제3회 한국어 말하기 대회 축하공연 — 채수정 명창 합동공연"><span class="photo-count">3 photos</span></div>
+                    <p class="event-meta"><span lang="ko">제3회 말하기대회 · 채수정 명창 합동공연</span> &nbsp;·&nbsp; 2025</p>
+                    <h4 class="event-title">3rd Speech Contest <em>&amp; Pansori Gala</em></h4>
+                    <p class="event-desc">제3회 한국어 말하기 대회 축하공연 — 세계판소리협회 채수정 명창과의 합동 무대.</p>
+                    <span class="event-more">View page →</span>
+                </a>
+
+                <a class="event-card" href="engagement-speech-contest-2026.html">
+                    <div class="event-thumb"><img src="images/engagement/speech-contest-4-2026.jpg" alt="제4회 한국어 말하기 대회 초청공연"><span class="photo-count">10 photos</span></div>
+                    <p class="event-meta"><span lang="ko">제4회 한국어말하기대회 초청공연</span> &nbsp;·&nbsp; May 2026</p>
+                    <h4 class="event-title">4th Speech Contest <em>Invited Stage</em></h4>
+                    <p class="event-desc">제4회 리야드 세종학당 한국어 말하기 대회 초청공연 합창단 무대.</p>
+                    <span class="event-more">View page →</span>
+                </a>
+
+                <a class="event-card" href="engagement-music-video.html">
+                    <div class="event-thumb"><img src="images/engagement/apt-mv-course-2024.jpg" alt="뮤직비디오 코스 — K-pop 뮤직비디오 제작 수업"><span class="photo-count">6 photos</span></div>
+                    <p class="event-meta"><span lang="ko">뮤직비디오 코스</span> &nbsp;·&nbsp; 2024</p>
+                    <h4 class="event-title">Music Video <em>Course</em></h4>
+                    <p class="event-desc">학생들이 안무·촬영·편집으로 K-pop 뮤직비디오를 제작 — ROSÉ 〈APT.〉, 김원준 〈쇼〉.</p>
+                    <span class="event-more">View page →</span>
+                </a>
+
+            </div>
+
+        </div>
+      </div>
+    </details>
+
+    <!-- ════ ROLE 02 — ORGANISER & COORDINATOR ════ -->
+    <details class="cat-wrap">
+      <summary class="cat-sum"><div class="cat flip">
+        <div class="cat-photo"><img src="images/engagement/screening-group.jpg" alt="Korean film screening and director's Q&A organised in Riyadh"></div>
+        <div class="cat-info">
+            <p class="cat-num">Role 02 — Organiser &amp; Coordinator</p>
+            <h2 class="cat-title">Cultural Affairs<br>I <em>Open &amp; Run</em></h2>
+            <p class="cat-desc">Classes I open — from pansori to Korean traditional dance — and screenings, talks, and cultural events I coordinate.</p>
+            <span class="cat-toggle"></span>
+        </div>
+      </div></summary>
+      <div class="cat-drawer">
+        <div class="drawer-inner">
+
+            <p class="dsub">Classes I opened</p>
+            <div class="events-grid block-gap">
+
+                <a class="event-card card-link" href="engagement-pansori.html">
+                    <div class="ec-head">
+                    <div class="event-thumb"><img src="images/engagement/pansori-group.jpg" alt="판소리 클래스 단체사진"><span class="photo-count">8 photos</span></div>
+                    <p class="event-meta"><span lang="ko">판소리 정규수업</span> &nbsp;·&nbsp; Since 2025</p>
+                    <h4 class="event-title">Pansori <em>Course</em></h4>
+                    <p class="event-desc">한국 전통 성악 판소리 수업 개설·운영 — 원데이 클래스와 정규 과정, 전문 강사 초빙.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+                <a class="event-card card-link" href="engagement-kpop-dance.html">
+                    <div class="ec-head">
+                    <div class="event-thumb"><img src="images/engagement/kpop-online-group.jpg" alt="케이팝 댄스 클래스 단체사진"><span class="photo-count">2 photos</span></div>
+                    <p class="event-meta"><span lang="ko">케이팝 댄스 클래스</span> &nbsp;·&nbsp; 2024–2025</p>
+                    <h4 class="event-title">K-pop <em>Dance Class</em></h4>
+                    <p class="event-desc">사우디 학생을 위한 K-pop 댄스 수업 기획·코디네이트 — 현장 및 온라인 원데이 클래스 포함.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+                <a class="event-card card-link" href="engagement-traditional-dance.html">
+                    <div class="ec-head">
+                    <div class="event-thumb poster"><img src="images/engagement/traditional-dance-poster.jpg" alt="한국무용 정규수업 포스터"><span class="photo-count">2 posters</span></div>
+                    <p class="event-meta"><span lang="ko">한국무용 정규수업</span> &nbsp;·&nbsp; 2026</p>
+                    <h4 class="event-title">Korean Traditional <em>Dance Class</em></h4>
+                    <p class="event-desc">한국 전통무용 정규수업 신규 개설 — 리야드 학생들에게 한국 무용의 멋을 소개.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+            </div>
+
+            <p class="dsub">Events I coordinated</p>
+            <p class="dyear">2024</p>
+            <div class="events-grid">
+
+                <a class="event-card card-link" href="engagement-sejong-academy.html">
+                    <div class="ec-head">
+                    <div class="event-thumb"><img src="images/engagement/sejong-01.jpg" alt="세종문화아카데미 — SEJONG CULTURE ACADEMY 2024 현수막 단체사진"><span class="photo-count">8 photos</span></div>
+                    <p class="event-meta"><span lang="ko">세종문화아카데미</span> &nbsp;·&nbsp; 2024</p>
+                    <h4 class="event-title">Sejong Cultural <em>Academy K-pop</em></h4>
+                    <p class="event-desc">K-pop 이론 강의와 안무 워크숍을 결합한 세종문화아카데미 특별 프로그램 기획.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+                <a class="event-card card-link" href="engagement-screening.html">
+                    <div class="ec-head">
+                    <div class="event-thumb"><img src="images/engagement/screening-group.jpg" alt="콘크리트 유토피아 스크리닝 — 감독과의 대화"><span class="photo-count">7 photos</span></div>
+                    <p class="event-meta"><span lang="ko">한국영화 스크리닝 &amp; 감독과의 대화</span> &nbsp;·&nbsp; November 2024</p>
+                    <h4 class="event-title"><em>〈콘크리트 유토피아〉</em> Screening</h4>
+                    <p class="event-desc">한국영화 〈콘크리트 유토피아〉 상영과 감독·사우디 관객의 라이브 Q&amp;A를 공동 기획.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+                <a class="event-card card-link" href="engagement-artist-talk.html">
+                    <div class="ec-head">
+                    <div class="event-thumb"><img src="images/engagement/artist-talk-group.jpg" alt="사우디 공예전시 아티스트토크 단체사진"><span class="photo-count">3 photos</span></div>
+                    <p class="event-meta"><span lang="ko">공예전시 아티스트토크</span> &nbsp;·&nbsp; November 2024</p>
+                    <h4 class="event-title">Saudi Craft <em>Artist Talk</em></h4>
+                    <p class="event-desc">한국·사우디 공예와 예술을 잇는 공개 아티스트토크 행사를 기획·진행.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+                <a class="event-card card-link" href="engagement-embassy.html">
+                    <div class="ec-head">
+                    <div class="event-thumb"><img class="zoomcrop" src="images/engagement/embassy-04.jpg" alt="주사우디 한국대사관 오찬 초청"><span class="photo-count">6 photos</span></div>
+                    <p class="event-meta"><span lang="ko">한국대사관 오찬 초청</span> &nbsp;·&nbsp; November 2024</p>
+                    <h4 class="event-title">Korean Embassy <em>Cultural Luncheon</em></h4>
+                    <p class="event-desc">주사우디 한국대사관 초청 문화 오찬 — 한국 예술교육 확장을 논의한 자리.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+            </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- ════ ROLE 03 — INVITED PANELLIST ════ -->
+    <details class="cat-wrap">
+      <summary class="cat-sum"><div class="cat">
+        <div class="cat-photo"><img src="images/engagement/kfw-main.jpg" alt="Korean Film Week Riyadh 2025 — panel guests at CINEHOUSE, with Hyojung Jung"></div>
+        <div class="cat-info">
+            <p class="cat-num">Role 03 — Invited Panellist</p>
+            <h2 class="cat-title">Selected <em>Speaking</em></h2>
+            <p class="cat-desc">Moderating and joining discussion panels on Korean culture and film — including the 12th Saudi Film Festival (2026) and Korean Film Week Riyadh 2025.</p>
+            <span class="cat-toggle"></span>
+        </div>
+      </div></summary>
+      <div class="cat-drawer">
+        <div class="drawer-inner">
+            <p class="dyear">2026</p>
+            <div class="events-grid">
+
+                <a class="event-card card-link" href="engagement-saudi-film-festival.html">
+                    <div class="ec-head">
+                    <div class="event-thumb"><img src="images/engagement/sff-panel-4.jpg" alt="Saudi Film Festival 2026 — Hyojung Jung moderating the panel 'Korean Cinema and the Saudi Audience'"><span class="photo-count">19 photos</span></div>
+                    <p class="event-meta">12th Saudi Film Festival · Ithra, Dhahran &nbsp;·&nbsp; June 2026</p>
+                    <h4 class="event-title">Saudi Film Festival <em>2026</em></h4>
+                    <p class="event-desc">한국이 주빈국으로 초청된 제12회 사우디 필름 페스티벌에서 “Korean Cinema and the Saudi Audience” 패널 진행 — 이트라 지식의탑, 공연·대표단 방문 포함.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+            </div>
+            <p class="dyear">2025</p>
+            <div class="events-grid">
+
+                <a class="event-card card-link" href="engagement-korean-film-week.html">
+                    <div class="ec-head">
+                    <div class="event-thumb"><img src="images/engagement/kfw-panel.jpg" alt="Korean Film Week Riyadh 2025 — discussion panel"><span class="photo-count">17 photos</span></div>
+                    <p class="event-meta">Korean Film Week Riyadh &nbsp;·&nbsp; January 2025</p>
+                    <h4 class="event-title">Korean Film Week <em>Riyadh 2025</em></h4>
+                    <p class="event-desc">“Korean Culture and Its Impact on Cinema” 토론 패널로 초청 — 사우디 영화 관계자·한국 영화인과 한국 영화의 세계적 확산을 논의.</p>
+                    <span class="event-more">View page →</span>
+                </div>
+                </a>
+
+            </div>
+        </div>
+      </div>
+    </details>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+
+</body>
+</html>

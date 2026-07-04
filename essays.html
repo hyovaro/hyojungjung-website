@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakespeare Essays — Hyojung Jung 정효정</title>
+    <meta name="description" content="Academic essays on Shakespeare by Hyojung Jung — MA student at the Shakespeare Institute, University of Birmingham.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        [lang="ko"] {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+            word-break: keep-all;
+        }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        .nav-cta {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            border: 0.5px solid rgba(0,0,0,0.3);
+            padding: 7px 18px;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-cta:hover { background: #1a1a1a; color: #f7f4ef; }
+
+        /* ── Page hero ── */
+        .page-hero {
+            padding: 72px 52px 56px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            max-width: 900px;
+        }
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 28px;
+            line-height: 2;
+        }
+        .page-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 68px;
+            font-weight: 300;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            margin-bottom: 28px;
+        }
+        .page-title em { font-style: italic; }
+        .page-statement {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-style: italic;
+            font-size: 19px;
+            color: #7c3a36;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        .info-row {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .info-label {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+        .info-value {
+            font-size: 13px;
+            color: #1a1a1a;
+        }
+
+        /* ── Section label ── */
+        .section-label {
+            padding: 16px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .section-label span {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+
+        /* ── Intro prose ── */
+        .intro-section {
+            padding: 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .col-label {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            padding-top: 5px;
+        }
+        .prose {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #454545;
+        }
+        .prose p + p { margin-top: 18px; }
+        .prose strong { color: #1a1a1a; font-weight: 500; }
+
+        /* ── Logos row ── */
+        .logos-row {
+            padding: 40px 52px;
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .logos-row img {
+            height: 48px;
+            width: auto;
+            opacity: 0.65;
+            filter: grayscale(100%);
+        }
+        .logos-row .logo-label {
+            font-size: 11px;
+            color: #6f6f6f;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── Essay cards ── */
+        .essays-grid {
+            padding: 52px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(0,0,0,0.08);
+        }
+        .essay-card {
+            background: #f7f4ef;
+            padding: 40px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            transition: background 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .essay-card:hover { background: #f0ece4; }
+        .essay-card:hover .essay-read { color: #7c3a36; border-color: #7c3a36; }
+        .essay-type {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 18px;
+        }
+        .essay-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1.35;
+            letter-spacing: -0.01em;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            border-top: 2px solid #7c3a36;
+            padding-top: 18px;
+        }
+        .essay-title em { font-style: italic; }
+        .essay-desc {
+            font-size: 13px;
+            line-height: 1.75;
+            color: #5e5e5e;
+            flex: 1;
+            margin-bottom: 24px;
+        }
+        .essay-meta {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 20px;
+        }
+        .essay-read {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #5e5e5e;
+            border-bottom: 0.5px solid #b8b2a8;
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+            align-self: flex-start;
+        }
+
+        /* Language toggle */
+        .lang-toggle { display: flex; gap: 2px; margin-top: 24px; }
+        .lang-toggle button {
+            font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+            padding: 7px 16px; border: 0.5px solid rgba(0,0,0,0.2);
+            background: none; cursor: pointer; color: #5e5e5e;
+            font-family: 'Inter', sans-serif; transition: all 0.2s;
+        }
+        .lang-toggle button.active,
+        .lang-toggle button:hover { background: #7c3a36; color: #f7f4ef; border-color: #7c3a36; }
+        .lang-ko { display: none; }
+        body.korean .lang-en { display: none; }
+        body.korean .lang-ko { display: block; }
+
+        /* ── Footer ── */
+        .page-footer {
+            padding: 40px 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-back {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #5e5e5e;
+            border-bottom: 0.5px solid #b8b2a8;
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .footer-back:hover { color: #7c3a36; border-color: #7c3a36; }
+        .footer-note {
+            font-size: 11px;
+            color: #6f6f6f;
+            font-style: italic;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 760px) {
+            nav { padding: 16px 22px; }
+            .page-hero { padding: 48px 24px 36px; }
+            .intro-section {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                padding: 36px 24px;
+            }
+            .logos-row { padding: 28px 24px; flex-wrap: wrap; gap: 20px; }
+            .essays-grid {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+            .essay-card { padding: 32px 28px; }
+            .info-row { gap: 24px; }
+            .page-footer {
+                padding: 32px 24px;
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/essays.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="Shakespeare Essays — Hyojung Jung 정효정">
+    <meta property="og:description" content="Academic essays on Shakespeare by Hyojung Jung — MA student at the Shakespeare Institute, University of Birmingham.">
+    <meta property="og:url" content="https://hyojungjung.com/essays.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shakespeare Essays — Hyojung Jung 정효정">
+    <meta name="twitter:description" content="Academic essays on Shakespeare by Hyojung Jung — MA student at the Shakespeare Institute, University of Birmingham.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html" class="active">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <header class="page-hero">
+        <p class="eyebrow">MA · Shakespeare Institute &nbsp;·&nbsp; University of Birmingham &nbsp;·&nbsp; 2025–2028</p>
+        <h1 class="page-title lang-en">Shakespeare<br><em>Essays</em></h1>
+        <h1 class="page-title lang-ko" lang="ko">셰익스피어<br><em>에세이</em></h1>
+        <p class="page-statement lang-en">On colonialism, identity, and what happens when Shakespeare crosses into other languages and cultures.</p>
+        <p class="page-statement lang-ko" lang="ko">식민주의, 정체성, 그리고 셰익스피어가 다른 언어와 문화를 만날 때 일어나는 것들에 관하여.</p>
+        <div class="info-row">
+            <div class="info-item">
+                <span class="info-label lang-en">Programme</span>
+                <span class="info-label lang-ko" lang="ko">프로그램</span>
+                <span class="info-value lang-en">MA Shakespeare Studies</span>
+                <span class="info-value lang-ko" lang="ko">셰익스피어 연구 MA</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label lang-en">Institution</span>
+                <span class="info-label lang-ko" lang="ko">기관</span>
+                <span class="info-value lang-en">Shakespeare Institute, University of Birmingham</span>
+                <span class="info-value lang-ko" lang="ko">버밍엄대학교 셰익스피어 인스티튜트</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Year</span>
+                <span class="info-value">2025–2028</span>
+            </div>
+        </div>
+        <div class="lang-toggle">
+            <button id="btn-en" class="active" onclick="document.body.classList.remove('korean');document.getElementById('btn-en').classList.add('active');document.getElementById('btn-ko').classList.remove('active')">EN</button>
+            <button id="btn-ko" onclick="document.body.classList.add('korean');document.getElementById('btn-ko').classList.add('active');document.getElementById('btn-en').classList.remove('active')">한국어</button>
+        </div>
+    </header>
+
+    <div class="logos-row">
+        <img src="Shakespeare MA Essays/Shakespeare Insitute Logo.jpg" alt="Shakespeare Institute">
+        <img src="Shakespeare MA Essays/university-of-birmingham-logo-png_seeklogo-356085.jpg" alt="University of Birmingham">
+        <span class="logo-label">Shakespeare Institute · University of Birmingham</span>
+    </div>
+
+    <div class="section-label"><span class="lang-en">Context</span><span class="lang-ko" lang="ko">맥락</span></div>
+
+    <section class="intro-section" aria-label="Context">
+        <p class="col-label lang-en">About the work</p>
+        <p class="col-label lang-ko" lang="ko">작품에 대하여</p>
+        <div class="prose">
+            <div class="lang-en">
+                <p>These essays were written during Hyojung's MA in Shakespeare Studies at the Shakespeare Institute, University of Birmingham — one of the world's leading centres for Shakespeare research and performance. Based in Stratford-upon-Avon, the Institute sits at the intersection of scholarship and theatre practice.</p>
+                <p>The essays reflect her ongoing interest in how Shakespeare travels across languages, cultures, and performance traditions — particularly the encounters between Shakespeare and Korean theatre. Her work draws on her dual identity as a scholar and a practising director, and repeatedly returns to questions of adaptation, translation, and cultural interpretation.</p>
+            </div>
+            <div class="lang-ko" lang="ko">
+                <p>이 에세이들은 버밍엄대학교 셰익스피어 인스티튜트에서 진행 중인 셰익스피어 연구 MA 과정에서 작성되었다. 스트랫퍼드어폰에이번에 위치한 이 기관은 셰익스피어 연구와 공연 분야에서 세계적인 권위를 자랑하며, 학문과 연극 실천이 교차하는 지점에 있다.</p>
+                <p>이 에세이들은 셰익스피어가 어떻게 언어, 문화, 공연 전통을 가로질러 이동하는지에 관한 지속적인 관심을 반영한다 — 특히 셰익스피어와 한국 연극의 만남에 초점을 맞춘다. 학자이자 연출가로서의 이중 정체성을 바탕으로, 각색, 번역, 문화적 해석의 문제로 반복적으로 돌아간다.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-label"><span class="lang-en">Essays</span><span class="lang-ko" lang="ko">에세이</span></div>
+
+    <div class="essays-grid">
+
+        <a href="essay-1-portfolio.html" class="essay-card">
+            <p class="essay-type lang-en">Portfolio Assessment &nbsp;·&nbsp; LM Research Skills in Shakespeare</p>
+            <p class="essay-type lang-ko" lang="ko">포트폴리오 과제 &nbsp;·&nbsp; LM 셰익스피어 연구 방법론</p>
+            <h2 class="essay-title lang-en">Postgraduate Study: What Are We Doing Here, and How Do We Do It?</h2>
+            <h2 class="essay-title lang-ko" lang="ko">대학원 공부: 우리는 무엇을 하고 있는가, 그리고 어떻게 할 것인가?</h2>
+            <p class="essay-desc lang-en">A four-part reflective portfolio tracing the first term of MA study — from why Shakespeare still matters, to textual editing, historical archives, and performance analysis. Weaves together personal experience in Korea, Saudi Arabia, and London.</p>
+            <p class="essay-desc lang-ko" lang="ko">대학원 첫 학기를 추적하는 4개 단원의 성찰 포트폴리오. 셰익스피어가 왜 여전히 중요한지부터 텍스트 편집, 역사 아카이브, 공연 분석까지 다룬다. 한국, 사우디아라비아, 런던에서의 개인 경험을 엮어낸다.</p>
+            <p class="essay-meta">1,500 words</p>
+            <span class="essay-read lang-en">Read Essay →</span>
+            <span class="essay-read lang-ko" lang="ko">에세이 읽기 →</span>
+        </a>
+
+        <a href="essay-2-hamlet.html" class="essay-card">
+            <p class="essay-type lang-en">Annotated Bibliography &nbsp;·&nbsp; LM Research Skills in Shakespeare</p>
+            <p class="essay-type lang-ko" lang="ko">주석 참고문헌 &nbsp;·&nbsp; LM 셰익스피어 연구 방법론</p>
+            <h2 class="essay-title lang-en">From Attractive Prince to Paralysed Figure: Critical Approaches to <em>Hamlet</em>'s Character</h2>
+            <h2 class="essay-title lang-ko" lang="ko">매력적인 왕자에서 마비된 인물로: <em>햄릿</em> 성격에 관한 비평적 접근</h2>
+            <p class="essay-desc lang-en">Traces the critical arc from Romantic admiration of Hamlet as a refined and charismatic prince, through psychological and Freudian readings, to feminist challenges to the Hamlet-centred critical tradition.</p>
+            <p class="essay-desc lang-ko" lang="ko">낭만주의적 찬미에서 심리·프로이트적 독해를 거쳐 햄릿 중심의 비평 전통에 대한 페미니즘적 도전까지, 비평의 궤적을 추적한다.</p>
+            <p class="essay-meta">1,500 words</p>
+            <span class="essay-read lang-en">Read Essay →</span>
+            <span class="essay-read lang-ko" lang="ko">에세이 읽기 →</span>
+        </a>
+
+        <a href="essay-3-tempest.html" class="essay-card">
+            <p class="essay-type lang-en">Essay &nbsp;·&nbsp; LM Plays and Poems of Shakespeare B</p>
+            <p class="essay-type lang-ko" lang="ko">에세이 &nbsp;·&nbsp; LM 셰익스피어 희곡과 시 B</p>
+            <h2 class="essay-title lang-en">Should Shakespeare Be Changed? Colonialism and Reinterpretation in <em>The Tempest</em></h2>
+            <h2 class="essay-title lang-ko" lang="ko">셰익스피어를 바꾸어야 하는가? <em>《템페스트》</em>에서의 식민주의와 재해석</h2>
+            <p class="essay-desc lang-en">Argues that The Tempest should be engaged critically rather than simply 'changed'. Examines Prospero's colonial authority, Caliban's moral ambiguity, Miranda's selective sympathy, and Oh Tae-suk's Korean adaptation of the play.</p>
+            <p class="essay-desc lang-ko" lang="ko">《템페스트》는 단순히 '바꾸는' 것이 아닌 비판적으로 참여해야 한다고 주장한다. 프로스페로의 식민 권력, 캘리번의 도덕적 모호함, 미란다의 선택적 공감, 오태석의 한국 각색을 검토한다.</p>
+            <p class="essay-meta">4,000 words</p>
+            <span class="essay-read lang-en">Read Essay →</span>
+            <span class="essay-read lang-ko" lang="ko">에세이 읽기 →</span>
+        </a>
+
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>

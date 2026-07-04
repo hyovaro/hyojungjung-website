@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리야드 '한국 영화 주간', 한국문화의 영향 조명하며 폐막 — Hyojung Jung</title>
+    <meta name="description" content="Korean Film Week Riyadh closes with a discussion on Korean culture's impact on cinema. Hyojung Jung as guest speaker. Published in KOFICE, September 2025.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        /* Q&A styling */
+        .qa-block { margin-bottom: 28px; }
+        .qa-question { font-size: 14px; font-weight: 500; color: #1a1a1a; line-height: 1.7; margin-bottom: 10px; padding-left: 14px; border-left: 2px solid #7c3a36; }
+        .qa-answer { font-size: 15px; line-height: 2; color: #333; }
+        .text-ko .qa-answer { word-break: keep-all; }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-caption .correspondent { color: #7c3a36; font-style: italic; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en, .qa-answer { font-size: 14px; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-09.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="리야드 '한국 영화 주간', 한국문화의 영향 조명하며 폐막 — Hyojung Jung">
+    <meta property="og:description" content="Korean Film Week Riyadh closes with a discussion on Korean culture's impact on cinema. Hyojung Jung as guest speaker. Published in KOFICE, September 2025.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-09.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="리야드 '한국 영화 주간', 한국문화의 영향 조명하며 폐막 — Hyojung Jung">
+    <meta name="twitter:description" content="Korean Film Week Riyadh closes with a discussion on Korean culture's impact on cinema. Hyojung Jung as guest speaker. Published in KOFICE, September 2025.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Cultural Policy &amp; Issues</p>
+                    <h1 class="article-title-ko">리야드 '한국 영화 주간', 한국문화의 영향 조명하며 폐막</h1>
+                    <p class="article-title-en">Korean Film Week Riyadh Closes with a Discussion on Korean Culture's Impact on Cinema</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">30 September 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent &amp; Guest Speaker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · September 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+
+                <p>2025년 1월 19일부터 23일까지 리야드 씨네하우스(CineHouse)에서 열린 사우디 최초의 '한국 영화 주간(Korean Film Week)'이 23일 저녁 폐막 대담을 끝으로 막을 내렸다. 이번 행사는 사우디필름커미션(Saudi Film Commission)이 주관하고 한국 영화진흥위원회(KOFIC)가 협력했으며 사우디 내 첫 한국 영화 행사로서 의미 있는 성과를 남겼다.</p>
+
+                <h2>폐막 특별 대담: 한국문화와 영화에 끼친 영향</h2>
+
+                <p>폐막일 밤에는 폐막작으로 선정된 김지운 감독의 영화 &lt;거미집&gt; 상영 이후 '한국문화와 영화에 끼친 영향(Korean Culture and Its Impact on Cinema)'을 주제로 한 특별 대담이 열렸다. 이번 세션은 사우디 영화평론가 살만 알-아흐마디(Salman Al-ahmadi)가 사회를 맡았으며 본 통신원이 게스트 스피커로 참여해 한국 영화의 보편적 매력과 국제적 성취, 그리고 사우디 영화와의 접점에 대해 논의했다. 대담에서는 ▲한국 영화의 서사적 특징 ▲세계적 인기의 영향 ▲성장 배경과 시사점 ▲&lt;거미집&gt;의 시대 재현 등이 주요 주제로 다뤄졌다.</p>
+
+                <div class="article-photo"><img src="kofice-09-images/img-000.jpg" alt="폐막식 특별 대담 포스터 — Korean Culture and Its Impact on Cinema, 게스트 정효정"></div>
+                <p class="photo-caption">▲ 폐막식 특별 대담 포스터 — 출처: 씨네하우스 제공</p>
+
+                <div class="qa-block">
+                    <p class="qa-question">한국 영화는 어떻게 현실적인 이야기를 예술적이고 매혹적인 작품으로 발전시킬 수 있었는가?</p>
+                    <p class="qa-answer">통신원은 "한국 창작자들은 반전 있는 서사와 유머러스한 비판을 즐겨 활용한다."라고 말했으며 "이러한 요소가 한국 영화가 사회적 현실을 예술적 작품으로 승화시키는 핵심"이라고 설명했다.</p>
+                </div>
+
+                <div class="qa-block">
+                    <p class="qa-question">한국 영화와 예술의 세계적 인기가 한국인들에게 어떤 영향을 주었으며 개인적으로는 어떻게 다가왔는가?</p>
+                    <p class="qa-answer">"과거에는 해외에서 한국을 잘 알지 못했지만 이제는 케이팝, 한국 영화·드라마·뷰티산업 등을 통해 한국인이 훨씬 더 친근하고 환영받는 존재로 인식되고 있다."라며 한류의 변화가 한국인의 해외 경험에 가져온 변화를 공유했다.</p>
+                </div>
+
+                <div class="qa-block">
+                    <p class="qa-question">지난 30년간 한국 영화가 국제적 성취를 이룬 배경은 무엇이며 사우디 영화 발전에 참고할 수 있는 요인은 무엇인가?</p>
+                    <p class="qa-answer">통신원은 "한국은 고조선에서 시작해 삼국시대(고구려·백제·신라), 고려와 조선을 거쳐 수천 년의 역사를 쌓아온 나라"라며 "청나라 지배, 일제강점기, 6·25 전쟁 등 수많은 역사적 굴곡이 한국 영화의 이야기를 풍부하게 만드는 원천이 됐다."는 점을 강조했다. 또한 "한국 영화의 성장은 정부와 지자체의 정책 지원, 한국영화아카데미(KAFA)와 같은 교육 기관, 그리고 CJ와 같은 대기업의 투자·배급망 덕분이었다."라며 "사우디 역시 국가와 지자체, 기업, 교육 분야에서 꾸준히 자원을 투자한다면 영화산업 발전에 좋은 성과를 거둘 수 있을 것"이라고 조언했다.</p>
+                </div>
+
+                <div class="qa-block">
+                    <p class="qa-question">&lt;거미집&gt; 속 1970년대의 시대상은 어떻게 다가왔는가?</p>
+                    <p class="qa-answer">"1970년대를 직접 경험하지는 않았지만 부모 세대의 사진과 영상, 다큐멘터리를 통해 그 시대를 접해왔다."라며 영화 속 시대 재현의 의미를 관객들과 공유했다. "영화를 보는 동안 마치 과거 속으로 들어간 듯한 몰입감을 느꼈다."라고 소감을 전했다. 특히 당시 배우들의 연기를 실제처럼 재현한 점에 주목하며 "리얼리즘 연기가 본격적으로 자리 잡기 전이었던 1970년대 특유의 신파적이고 다소 과장된 연기 스타일을 그대로 구현해낸 점이 매우 흥미로웠다."라고 평가했다.</p>
+                </div>
+
+                <div class="photo-grid" style="align-items:stretch;">
+                    <img src="kofice-09-images/img-012.jpg" alt="행사 당일 현장 — 씨네하우스 스크린에 비친 대담 포스터" style="height:300px; object-fit:cover; object-position:center;">
+                    <img src="kofice-09-images/img-013.jpg" alt="행사 당일 현장 — 통신원과 참석자들" style="height:300px; object-fit:cover; object-position:bottom;">
+                </div>
+                <p class="photo-caption">▲ 행사 당일 현장 — 출처: 씨네하우스 제공</p>
+
+                <p>행사가 끝난 후에도 열기는 이어졌다. 히잡을 쓴 한 현지 여성 관객은 한국 영화에 자주 등장하는 샤머니즘적 요소에 깊은 관심을 보이며 질문을 던졌다. 이에 통신원은 한국이 무속, 불교, 유교가 복합적으로 어우러진 독특한 종교적 전통을 지니고 있음을 설명했다. 이를 통해 문화는 서로 다른 종교조차도 거리낌 없이 이야기할 수 있는 장이며, 종교를 넘어서는 큰 힘을 지닌다는 점을 다시금 확인할 수 있었다. 리야드 씨네하우스에서 '한국 영화 주간'을 기획하고 주도한 수잔 하마미(Susan Hammami) 씨네 웨이브 필름스 국제협력 디렉터도 개인적으로 한국문화 팬임을 밝혔다. 그는 "미국 유학 시절부터 한국 영화와 음악을 즐기며 한국어를 배워왔고 이번 행사가 성공적으로 마무리된 것에 대해 큰 보람을 느낀다."며 기쁨과 감사를 전했다.</p>
+
+                <div class="article-photo" style="max-width:480px;"><img src="kofice-09-images/img-susan.jpg" alt="수잔 하마미 국제협력 디렉터와 통신원"></div>
+                <p class="photo-caption">▲ 수잔 하마미 국제협력 디렉터와 통신원 — 출처: 씨네하우스 제공</p>
+
+                <h2>확대되는 한국 영화의 위상과 현지 관심</h2>
+
+                <p>지난해 여름 한국 영화 &lt;파묘(Exhuma)&gt;가 사우디 대형 체인 극장에서 개봉하며 현지 관객들에게 한국 오컬트 장르의 독특한 매력을 선보였다. 통신원 역시 직접 리야드 현지 극장에서 작품을 감상하는 기쁨을 누릴 수 있었다.</p>
+
+                <div class="article-photo"><img src="kofice-09-images/img-016.jpg" alt="사우디에서 개봉된 영화 '파묘' — VOX Cinemas KSA"></div>
+                <p class="photo-caption">▲ 사우디에서 개봉된 영화 '파묘' — 출처: VOX Cinemas KSA</p>
+
+                <p>또한 올해 여름 리야드 씨네하우스에서는 한국계 캐나다인 셀린 송 감독의 &lt;패스트 라이브즈(Past Lives)&gt;가 상영돼 '인연'이라는 개념과 한국계 이민 여성의 서사를 담은 작품이 현지 관객에게 소개됐다.</p>
+
+                <div class="article-photo"><img src="kofice-09-images/img-017.jpg" alt="영화 '패스트 라이브즈'가 상영 중인 리야드 씨네하우스 — 통신원 촬영"></div>
+                <p class="photo-caption">▲ 영화 '패스트 라이브즈'가 상영 중인 리야드 씨네하우스 — 출처: <span class="correspondent">통신원 촬영</span></p>
+
+                <p>이처럼 사우디에서 한국 영화를 접할 기회는 꾸준히 확대되고 있다. 영화산업에 비교적 늦게 뛰어든 사우디는 현재 국가 차원에서 영화 분야에 큰 관심과 투자를 이어가고 있으며 최근 몇 년 사이 세계적으로 주목받고 있는 한국 영화의 역사와 발전에도 큰 관심을 보이고 있다. 이러한 흐름은 사우디필름커미션과 한국 영화진흥위원회의 파트너십을 비롯한 다양한 협력으로 이어지고 있다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>통신원 촬영</p>
+                    <p>씨네하우스 홈페이지, <a href="https://www.cinehousecinema.com/" target="_blank" rel="noopener">https://www.cinehousecinema.com/</a></p>
+                    <p>VOX Cinemas KSA, <a href="https://ksa.voxcinemas.com/movies/exhuma-korean" target="_blank" rel="noopener">https://ksa.voxcinemas.com/movies/exhuma-korean</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+
+                <p>The first-ever Korean Film Week in Saudi Arabia, held at CineHouse in Riyadh from January 19 to 23, 2025, came to a close on the evening of the 23rd with a closing discussion. The event was organised by the Saudi Film Commission and supported by the Korean Film Council (KOFIC), leaving behind meaningful achievements as the first Korean film event to be held in Saudi Arabia.</p>
+
+                <h2>Closing Special Discussion: Korean Culture and Its Impact on Cinema</h2>
+
+                <p>On the closing night, following the screening of Kim Jee-woon's film <em>Cobweb</em> as the closing title, a special discussion was held on the theme of "Korean Culture and Its Impact on Cinema." The session was moderated by Saudi film critic Salman Al-ahmadi, with this correspondent participating as guest speaker to discuss the universal appeal and international achievements of Korean cinema, and its points of connection with Saudi film. The discussion covered: ▲ the narrative characteristics of Korean cinema ▲ the impact of its global popularity ▲ the background of its growth and implications ▲ the period recreation in <em>Cobweb</em>.</p>
+
+                <div class="article-photo"><img src="kofice-09-images/img-000.jpg" alt="Closing night special discussion poster — Korean Culture and Its Impact on Cinema, guest speaker Hyojung Jung"></div>
+                <p class="photo-caption">▲ Closing night special discussion poster — Source: CineHouse</p>
+
+                <div class="qa-block">
+                    <p class="qa-question">How has Korean cinema managed to develop realistic stories into artistically compelling and captivating works?</p>
+                    <p class="qa-answer">The correspondent remarked that "Korean creators make frequent use of narratives with unexpected twists and humorous social critique," noting that "these elements are key to how Korean cinema has elevated social reality into artistic work."</p>
+                </div>
+
+                <div class="qa-block">
+                    <p class="qa-question">What impact has the global popularity of Korean film and art had on Korean people, and how has it felt personally?</p>
+                    <p class="qa-answer">"In the past, Korea was little known abroad, but now, through K-pop, Korean films, dramas, and the beauty industry, Koreans are perceived as far more familiar and welcome presences." The correspondent shared how the Korean Wave has transformed the experience of Koreans living and travelling abroad.</p>
+                </div>
+
+                <div class="qa-block">
+                    <p class="qa-question">What lies behind Korean cinema's international achievements over the past 30 years, and what factors might Saudi cinema draw on for its own development?</p>
+                    <p class="qa-answer">The correspondent emphasised that "Korea is a country that has accumulated thousands of years of history, from Gojoseon through the Three Kingdoms (Goguryeo, Baekje, Silla), Goryeo, and Joseon," noting that "the many historical upheavals — including Qing dynasty subjugation, Japanese colonial rule, and the Korean War — became the wellspring that enriched the stories of Korean cinema." They also noted that "the growth of Korean cinema owed to policy support from national and local governments, educational institutions such as the Korean Academy of Film Arts (KAFA), and the investment and distribution networks of major companies such as CJ," advising that "if Saudi Arabia similarly invests resources consistently at the national, local, corporate, and educational levels, it is well placed to achieve strong results in film industry development."</p>
+                </div>
+
+                <div class="qa-block">
+                    <p class="qa-question">How did the 1970s period recreation in <em>Cobweb</em> resonate with you?</p>
+                    <p class="qa-answer">"While I didn't experience the 1970s directly, I have encountered that era through my parents' generation's photographs and footage, and through documentaries." The correspondent shared with the audience the significance of the film's period recreation, adding: "While watching, I felt a sense of deep immersion, as though I had entered the past itself." Particular attention was drawn to the authentic recreation of the acting styles of the era: "I found it very interesting that the film faithfully reproduced the melodramatic, somewhat exaggerated acting style particular to the 1970s — a time before realist acting had truly taken root in Korean cinema."</p>
+                </div>
+
+                <div class="photo-grid" style="align-items:stretch;">
+                    <img src="kofice-09-images/img-012.jpg" alt="The discussion in progress at CineHouse — event poster on screen" style="height:300px; object-fit:cover; object-position:center;">
+                    <img src="kofice-09-images/img-013.jpg" alt="Event day — the correspondent and participants after the discussion" style="height:300px; object-fit:cover; object-position:bottom;">
+                </div>
+                <p class="photo-caption">▲ Event day scenes — Source: CineHouse</p>
+
+                <p>Even after the event ended, the enthusiasm continued. One local woman in hijab showed deep interest in the shamanistic elements that frequently appear in Korean films and posed a question. The correspondent explained that Korea possesses a unique religious tradition in which shamanism, Buddhism, and Confucianism are complexly interwoven — and through this exchange, it was once again confirmed that culture is a space in which people can speak openly even across different religions, and that it holds a power greater than religion alone. Susan Hammami, International Cooperation Director of CineWaves Films — who conceived and led the Korean Film Week at CineHouse Riyadh — also revealed that she is personally a fan of Korean culture. "I have been enjoying Korean films and music and learning the Korean language since my time studying in the United States," she said, expressing delight and gratitude at the successful conclusion of the event.</p>
+
+                <div class="article-photo" style="max-width:480px;"><img src="kofice-09-images/img-susan.jpg" alt="International Cooperation Director Susan Hammami and the correspondent"></div>
+                <p class="photo-caption">▲ International Cooperation Director Susan Hammami and the correspondent — Source: CineHouse</p>
+
+                <h2>Expanding Status of Korean Cinema and Growing Local Interest</h2>
+
+                <p>Last summer, the Korean film <em>Exhuma</em> was released at a major Saudi chain cinema, introducing local audiences to the unique appeal of the Korean occult genre. This correspondent was also able to enjoy the pleasure of watching the work at a local Riyadh cinema.</p>
+
+                <div class="article-photo"><img src="kofice-09-images/img-016.jpg" alt="Exhuma screening page at VOX Cinemas KSA"></div>
+                <p class="photo-caption">▲ <em>Exhuma</em> released in Saudi Arabia — Source: VOX Cinemas KSA</p>
+
+                <p>This summer at CineHouse Riyadh, Korean-Canadian director Celine Song's <em>Past Lives</em> was also screened — introducing local audiences to a work centring on the concept of <em>in-yeon</em> (fate and connection) and the narrative of a Korean immigrant woman.</p>
+
+                <div class="article-photo"><img src="kofice-09-images/img-017.jpg" alt="Past Lives showing at CineHouse Riyadh — correspondent's own photograph"></div>
+                <p class="photo-caption">▲ <em>Past Lives</em> showing at CineHouse Riyadh — Source: <span class="correspondent">correspondent's own photograph</span></p>
+
+                <p>Opportunities to encounter Korean cinema in Saudi Arabia continue to expand. Saudi Arabia — a relatively late entrant to the film industry — is channelling significant national-level interest and investment into the sector, and is showing great interest in the history and development of Korean cinema, which has drawn worldwide attention in recent years. This momentum is translating into various forms of cooperation, including the partnership between the Saudi Film Commission and the Korean Film Council.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>Correspondent's own photographs</p>
+                    <p>CineHouse, <a href="https://www.cinehousecinema.com/" target="_blank" rel="noopener">https://www.cinehousecinema.com/</a></p>
+                    <p>VOX Cinemas KSA, <a href="https://ksa.voxcinemas.com/movies/exhuma-korean" target="_blank" rel="noopener">https://ksa.voxcinemas.com/movies/exhuma-korean</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding:40px 52px;border-top:0.5px solid rgba(0,0,0,0.1);">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6f6f;margin-bottom:14px;">Elsewhere on this site · 사이트의 다른 곳</div>
+        <a href="../engagement-korean-film-week.html" style="display:block;max-width:620px;text-decoration:none;color:#1a1a1a;border:0.5px solid #d5d0c8;border-radius:8px;padding:20px 24px;background:#fff;">
+            <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7c3a36;margin-bottom:8px;">Cultural Work · 현장 On the ground</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.25;margin-bottom:4px;">한국 영화 주간 — 리야드 현장</div>
+            <div style="font-size:13px;color:#5e5e5e;font-style:italic;font-family:'Cormorant Garamond',serif;">Korean Film Week Riyadh — the event, in person&nbsp;&nbsp;→</div>
+        </a>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-08.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-10.html">Next →</a>
+    </div>
+</body>
+</html>

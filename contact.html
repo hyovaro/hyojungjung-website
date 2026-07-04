@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Hyojung Jung 정효정</title>
+    <meta name="description" content="Contact Hyojung Jung — theatre director, writer and cultural educator working between Seoul, London and Riyadh.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+
+        /* ── Page header ── */
+        .page-header {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 220px;
+        }
+        .header-accent {
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            background: #ede9e2;
+        }
+        .header-text {
+            display: grid;
+            grid-template-columns: 45% 1fr;
+        }
+        .header-title-col {
+            padding: 44px 40px 40px 52px;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 16px;
+        }
+        .header-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 0.96;
+            letter-spacing: -0.02em;
+        }
+        .header-desc-col {
+            padding: 44px 52px 40px 44px;
+            display: flex;
+            align-items: center;
+        }
+        .header-desc {
+            font-size: 14px;
+            line-height: 1.85;
+            color: #454545;
+        }
+
+        /* ── Contact rows ── */
+        .contact-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 72px;
+            align-items: stretch;
+        }
+        .contact-context {
+            padding: 20px 20px 20px 52px;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+        }
+        .context-label {
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+        .context-org {
+            font-size: 11px;
+            color: #5e5e5e;
+        }
+        .contact-detail {
+            padding: 20px 52px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+        }
+        .contact-email {
+            font-size: 15px;
+            color: #1a1a1a;
+            transition: color 0.2s;
+        }
+        .contact-email:hover { color: #454545; }
+        .contact-note {
+            font-size: 11px;
+            color: #6f6f6f;
+        }
+
+        /* ── Locations ── */
+        .locations-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 56px;
+            align-items: center;
+        }
+        .locations-label {
+            padding: 16px 20px 16px 52px;
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .locations-values {
+            padding: 16px 52px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            align-items: center;
+        }
+        .location-tag {
+            font-size: 12px;
+            color: #454545;
+        }
+        .location-sep {
+            font-size: 11px;
+            color: #6f6f6f;
+        }
+
+        /* ── Social row ── */
+        .social-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 56px;
+            align-items: center;
+        }
+        .social-label {
+            padding: 16px 20px 16px 52px;
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .social-links {
+            padding: 16px 52px;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .social-link {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #5e5e5e;
+            border-bottom: 0.5px solid transparent;
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .social-link:hover { color: #1a1a1a; border-color: #7c3a36; }
+
+        /* ── Footer ── */
+        footer {
+            padding: 40px 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-left {
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+        .footer-right {
+            display: flex;
+            gap: 24px;
+        }
+        .footer-link {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            transition: color 0.2s;
+        }
+        .footer-link:hover { color: #1a1a1a; }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .page-header { grid-template-columns: 1fr; }
+            .header-accent { display: none; }
+            .header-text { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 28px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-desc-col { padding: 24px 28px 32px; }
+            .contact-row { grid-template-columns: 1fr; }
+            .contact-context { border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.05); padding: 14px 28px 8px; }
+            .contact-detail { padding: 8px 28px 20px; }
+            .contact-email { font-size: 13px; }
+            .locations-row, .social-row { grid-template-columns: 1fr; }
+            .locations-label, .social-label { border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.05); padding: 14px 28px 8px; }
+            .locations-values, .social-links { padding: 10px 28px 16px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/contact.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="Contact — Hyojung Jung 정효정">
+    <meta property="og:description" content="Contact Hyojung Jung — theatre director, writer and cultural educator working between Seoul, London and Riyadh.">
+    <meta property="og:url" content="https://hyojungjung.com/contact.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact — Hyojung Jung 정효정">
+    <meta name="twitter:description" content="Contact Hyojung Jung — theatre director, writer and cultural educator working between Seoul, London and Riyadh.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+    </div>
+</nav>
+
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="header-accent"></div>
+        <div class="header-text">
+            <div class="header-title-col">
+                <p class="header-eyebrow">Get in touch</p>
+                <h1 class="header-title">Contact</h1>
+            </div>
+            <div class="header-desc-col">
+                <p class="header-desc">For commissions, collaborations, speaking engagements, or general enquiries. Based in Riyadh, working internationally.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theatre -->
+    <div class="contact-row">
+        <div class="contact-context">
+            <span class="context-label">Theatre</span>
+            <span class="context-org">Nangman Theatre</span>
+        </div>
+        <div class="contact-detail">
+            <a href="mailto:nangmantheatre@gmail.com" class="contact-email">nangmantheatre@gmail.com</a>
+            <span class="contact-note">Productions, commissions, collaborations</span>
+        </div>
+    </div>
+
+    <!-- Cultural Education -->
+    <div class="contact-row">
+        <div class="contact-context">
+            <span class="context-label">Cultural Education</span>
+            <span class="context-org">Prince Sultan University</span>
+        </div>
+        <div class="contact-detail">
+            <a href="mailto:hjung@psu.edu.sa" class="contact-email">hjung@psu.edu.sa</a>
+            <span class="contact-note">King Sejong Institute, Riyadh · Cultural affairs</span>
+        </div>
+    </div>
+
+    <!-- Journalism -->
+    <div class="contact-row">
+        <div class="contact-context">
+            <span class="context-label">Journalism</span>
+            <span class="context-org">KOFICE · KOFIC</span>
+        </div>
+        <div class="contact-detail">
+            <a href="mailto:riyadh2025@kofice.or.kr" class="contact-email">riyadh2025@kofice.or.kr</a>
+            <span class="contact-note">KOFICE Riyadh correspondent · KOFIC guest correspondent</span>
+        </div>
+    </div>
+
+    <!-- Location -->
+    <div class="locations-row">
+        <span class="locations-label">Location</span>
+        <div class="locations-values">
+            <span class="location-tag">Seoul, South Korea</span>
+            <span class="location-sep">·</span>
+            <span class="location-tag">London, United Kingdom</span>
+            <span class="location-sep">·</span>
+            <span class="location-tag">Riyadh, Saudi Arabia</span>
+        </div>
+    </div>
+
+    <!-- Social -->
+    <div class="social-row">
+        <span class="social-label">Online</span>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/hyojung-jung/" class="social-link" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>

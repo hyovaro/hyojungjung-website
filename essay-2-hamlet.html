@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Attractive Prince to Paralysed Figure — Hyojung Jung</title>
+    <meta name="description" content="Annotated Bibliography: Critical Approaches to Hamlet's Character. MA Research Skills in Shakespeare, University of Birmingham.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        [lang="ko"] {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+            word-break: keep-all;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        .nav-cta {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            border: 0.5px solid rgba(0,0,0,0.3);
+            padding: 7px 18px;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-cta:hover { background: #1a1a1a; color: #f7f4ef; }
+
+        .article-header {
+            padding: 64px 52px 52px;
+            max-width: 760px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .article-eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 24px;
+            line-height: 2;
+        }
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+        .article-title em { font-style: italic; }
+        .article-meta {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .meta-item { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+        .meta-value { font-size: 12px; color: #1a1a1a; }
+
+        .article-body {
+            padding: 52px;
+            max-width: 760px;
+        }
+        .article-body p {
+            font-size: 15.5px;
+            line-height: 1.95;
+            color: #333;
+            margin-bottom: 1.4em;
+        }
+        .article-body h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 26px;
+            font-weight: 400;
+            margin: 2.6em 0 0.8em;
+            color: #1a1a1a;
+            letter-spacing: -0.01em;
+        }
+        .entry-label {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .article-body em { font-style: italic; }
+        .article-body strong { font-weight: 500; color: #1a1a1a; }
+
+        /* Intro block */
+        .intro-block {
+            border-left: 2px solid #7c3a36;
+            padding-left: 24px;
+            margin-bottom: 2.4em;
+        }
+        .intro-block p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #454545;
+            margin-bottom: 0 !important;
+        }
+
+        /* Language toggle */
+        .lang-toggle { display: flex; gap: 2px; margin-top: 24px; }
+        .lang-toggle button {
+            font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+            padding: 7px 16px; border: 0.5px solid rgba(0,0,0,0.2);
+            background: none; cursor: pointer; color: #5e5e5e;
+            font-family: 'Inter', sans-serif; transition: all 0.2s;
+        }
+        .lang-toggle button.active,
+        .lang-toggle button:hover { background: #7c3a36; color: #f7f4ef; border-color: #7c3a36; }
+        .lang-ko { display: none; }
+        body.korean .lang-en { display: none; }
+        body.korean .lang-ko { display: block; }
+
+        /* Essay figure */
+        .essay-figure {
+            margin: 2em 0;
+            border: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .essay-figure img {
+            width: 100%;
+            display: block;
+        }
+        .essay-figure figcaption {
+            padding: 12px 16px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #5e5e5e;
+            border-top: 0.5px solid rgba(0,0,0,0.08);
+            font-style: italic;
+        }
+
+        /* Footnotes */
+        .footnotes {
+            padding: 40px 52px 52px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+            max-width: 760px;
+        }
+        .footnotes h3 {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 20px;
+        }
+        .footnote-list { list-style: none; }
+        .footnote-list li {
+            font-size: 12px;
+            line-height: 1.7;
+            color: #5e5e5e;
+            padding: 6px 0;
+            border-bottom: 0.5px solid rgba(0,0,0,0.06);
+            display: flex;
+            gap: 12px;
+        }
+        .fn-num { min-width: 20px; color: #7c3a36; font-weight: 500; }
+
+        /* Bibliography */
+        .bibliography {
+            padding: 40px 52px 80px;
+            max-width: 760px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .bibliography h3 {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 20px;
+        }
+        .bibliography p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #5e5e5e;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            text-indent: -20px;
+        }
+
+        /* Float nav */
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 9px 16px;
+            border: 0.5px solid #7c3a36;
+            color: #7c3a36;
+            background: #f7f4ef;
+            transition: background 0.2s, color 0.2s;
+        }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/essay-2-hamlet.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="From Attractive Prince to Paralysed Figure — Hyojung Jung">
+    <meta property="og:description" content="Annotated Bibliography: Critical Approaches to Hamlet's Character. MA Research Skills in Shakespeare, University of Birmingham.">
+    <meta property="og:url" content="https://hyojungjung.com/essay-2-hamlet.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="From Attractive Prince to Paralysed Figure — Hyojung Jung">
+    <meta name="twitter:description" content="Annotated Bibliography: Critical Approaches to Hamlet's Character. MA Research Skills in Shakespeare, University of Birmingham.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html" class="active">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <header class="article-header">
+        <p class="article-eyebrow">Annotated Bibliography &nbsp;·&nbsp; LM Research Skills in Shakespeare &nbsp;·&nbsp; Shakespeare Institute, University of Birmingham</p>
+        <h1 class="article-title">From Attractive Prince to Paralysed Figure: Critical Approaches to <em>Hamlet</em>'s Character</h1>
+        <div class="article-meta">
+            <div class="meta-item">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Annotated Bibliography</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Word count</span>
+                <span class="meta-value">c. 1,500 words</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Module</span>
+                <span class="meta-value">LM Research Skills in Shakespeare</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">2025–2026</span>
+            </div>
+        </div>
+        <div class="lang-toggle">
+            <button id="btn-en" class="active" onclick="document.body.classList.remove('korean');document.getElementById('btn-en').classList.add('active');document.getElementById('btn-ko').classList.remove('active')">EN</button>
+            <button id="btn-ko" onclick="document.body.classList.add('korean');document.getElementById('btn-ko').classList.add('active');document.getElementById('btn-en').classList.remove('active')">한국어</button>
+        </div>
+    </header>
+
+    <article class="article-body lang-en">
+
+        <div class="intro-block">
+            <p>This annotated bibliography examines major critical interpretations of Hamlet's character across different historical and theoretical contexts. It focuses on a critical movement from early Romantic admiration of Hamlet as an attractive and inwardly refined prince toward later readings that emphasise paralysis, psychological disturbance, and destructive or emotionally disengaged behaviour.</p>
+        </div>
+
+        <p>My interest in this critical trajectory emerged after attending a production of <em>Hamlet</em> at the National Theatre in London a few months ago. In this production, Hamlet appeared neither charismatic nor emotionally engaging, but instead destructive and paralysed by indecision. This response prompted me to reflect on how my own expectations of the role had been shaped. Those expectations were strongly influenced by theatre and musical productions in South Korea, where Hamlet has often been portrayed as noble, inwardly refined, and charismatic, with his philosophical introspection and emotional struggle contributing to an attractive and compelling stage presence. I have since come to recognise that this image represents only one strand within a much broader critical tradition. The central question driving this bibliography is: how, and through what critical mechanisms, has Hamlet shifted from a figure of Romantic admiration to one associated with paralysis, psychological disturbance, and emotional disengagement — and what are the consequences of that shift for performance? The sources selected for this bibliography trace how Hamlet's character has been reinterpreted through changing critical frameworks, demonstrating how these shifts influence performance traditions and audience expectations.</p>
+
+        <h2><span class="entry-label">Entry 1</span> Early Romantic Readings: Hamlet as a Figure of Identification</h2>
+
+        <p>Thomas Kullmann argues in 'The Hamlet Project in Goethe's <em>Wilhelm Meister's Years of Apprenticeship</em>' that Hamlet came to be widely misinterpreted as a weak figure with a "beautiful soul" whose moral inwardness prevents decisive action.<sup>1</sup> According to Kullmann, this interpretation became a powerful model of identification for young German readers and later gained influence across Europe. This reading emerges most clearly through Goethe's novel <em>Wilhelm Meister's Apprenticeship</em>, in which the fictional protagonist presents Hamlet as morally elevated and inwardly refined. Kullmann further argues that this interpretation overlooks important historical and cultural contexts, including early modern Christian opposition to revenge and the ethical problem of regicide in Shakespeare's time.</p>
+
+        <p><em>Hamlet</em> was written around 1600, while <em>Wilhelm Meister's Apprenticeship</em> was published in 1795–96, nearly two centuries later. Goethe's novel marks a decisive shift in Hamlet criticism, moving the focus away from political action or revenge and towards moral inwardness and personal feeling. It is largely after Goethe that a distinctly Romantic image of Hamlet becomes dominant and culturally influential.</p>
+
+        <p>Despite these omissions, the Romantic image of Hamlet proved deeply appealing. The cultural power of this interpretation can be understood through what is often called the 'Werther effect', in which literary figures become objects of emotional identification. Goethe's <em>The Sorrows of Young Werther</em>, for example, was associated with waves of imitative behaviour among young readers. Within this context, it is understandable why Hamlet came to be seen as a figure of inward sensitivity and moral struggle.</p>
+
+        <h2><span class="entry-label">Entry 2</span> Hamlet as a Moral Tragic Figure</h2>
+
+        <p>In his lectures on Shakespearean tragedy, A. C. Bradley argues that tragedy is driven by character revealed through action, rather than by psychology separated from dramatic movement.<sup>2</sup> For Bradley, Shakespeare's tragic figures possess a certain imbalance or one-sidedness of character, which leads to catastrophe as the play unfolds. Rather than treating Hamlet as a psychological case, Bradley focuses on how moments of thought lead to decisions and consequences within the dramatic structure.</p>
+
+        <p>Bradley argues that Hamlet's delay is not simply the result of the revenge task imposed by the Ghost; in the 'To be or not to be' soliloquy, Hamlet reflects primarily on suicide rather than revenge, restrained by uncertainty about death itself. For Bradley, this demonstrates that Hamlet's weariness of life exists independently of the revenge plot.<sup>3</sup></p>
+
+        <p>Hamlet's moral nature is most clearly revealed, in Bradley's view, in the scene with his mother. Here, Hamlet's aim is not revenge but moral correction: he seeks to save Gertrude's soul rather than punish her. Bradley highlights the exchange in which Gertrude cries, 'O Hamlet, thou hast cleft my heart in twain' (3.4.147), and Hamlet replies, 'O throw away the worser part of it' (3.4.148), as representing the height of Hamlet's moral seriousness.<sup>4</sup> At the end of the play, Horatio's final words, 'Now cracks a noble heart. Good night, sweet prince' (5.2.311), confirm, in Bradley's view, Hamlet's essential nobility.<sup>5</sup></p>
+
+        <p>From an actor's perspective, Bradley's emphasis on the link between character and action can be especially useful, as it discourages performances that focus solely on mood or introspection and instead foregrounds intention, decision, and dramatic consequence. At the same time, the very clarity that makes Bradley's approach attractive for performers also reveals its historical limitations. Bradley's interpretation reflects the priorities of late nineteenth- and early twentieth-century criticism, when Shakespearean tragedy was largely understood through moral character. While persuasive within its historical context, this approach tends to place Hamlet at the centre of the play, often reducing the importance of other characters and broader theatrical dynamics.</p>
+
+        <h2><span class="entry-label">Entry 3</span> From Character to Case: Psychological Readings</h2>
+
+        <p>Where A. C. Bradley understands Hamlet's delay as a moral and emotional problem, Ernest Jones marks a decisive shift in emphasis by redefining Hamlet as a psychological case shaped by unconscious conflict. Jones's essay 'The Œdipus-Complex as an Explanation of Hamlet's Mystery' was first published in 1910, at a time when Freudian psychoanalysis was beginning to influence literary criticism.<sup>6</sup> In this essay, Jones organises earlier Hamlet criticism into three main approaches: those that explain Hamlet's delay through temperament, those that emphasise the difficulty of the task, and those that focus on a particular feature of the task itself. This classification allows Jones to reject the first two approaches and argue instead that Hamlet's hesitation is best understood as a 'specific aboulia', a paralysis of will limited to the single act of killing Claudius rather than a general weakness of character.<sup>7</sup></p>
+
+        <p>For Jones, this paralysis does not arise from moral uncertainty or from the practical difficulty of revenge. Instead, it is rooted in an unconscious repulsion towards the act itself. Killing Claudius would, in Jones's reading, activate Hamlet's repressed desires, making the act psychologically intolerable. As a result, the command to avenge his father becomes something Hamlet is unable to carry out, despite his intellectual clarity and verbal agility.<sup>8</sup></p>
+
+        <p>This interpretation relocates the source of Hamlet's delay from ethical reflection to inner psychological conflict. I was reminded of this reading through my own experience as a theatre practitioner, particularly when encountering a Korean production of <em>Hamlet</em> (2006) in which Gertrude and Ophelia were played by the same actor. This staging foregrounded psychological entanglement rather than moral hesitation, offering a practical illustration of the kind of unconscious overlap and repression emphasised in Jones's argument.</p>
+
+        <p>Taken together, Jones's interpretation represents a significant turning point in Hamlet criticism. Hamlet is no longer approached primarily as a thoughtful moral agent wrestling with ethical choice, but as a figure paralysed by a localised psychological conflict that makes decisive action impossible.</p>
+
+        <h2><span class="entry-label">Entry 4</span> Critical Consequences: Hamlet-Centred Readings</h2>
+
+        <p>Despite their differences, Romantic, moral, and psychological approaches to Hamlet share a common tendency to organise the play around Hamlet's inner life. In Jillian Luke's essay 'What If the Play Were Called <em>Ophelia</em>? Gender and Genre in <em>Hamlet</em>', this Hamlet-centred critical tradition is directly challenged through a rethinking of Ophelia's role in the play.<sup>9</sup> Luke argues that Ophelia should not be understood simply as a marginal or silenced figure whose meaning exists only in relation to Hamlet. Instead, Ophelia functions as a conduit for a wider story of female experience. As Luke explicitly states, 'she acts as a conduit for an essential story of female experience: abandonment, misogyny, patriarchal oppression, and sexual double standards.'<sup>10</sup></p>
+
+        <p>Luke locates this challenge most clearly in the so-called 'mad scene' (4.1.159), where Ophelia appears on stage of her own will.<sup>11</sup> Luke argues that through songs and anonymous ballads rather than elevated tragic speech, she resists being absorbed into a coherent tragic narrative centred on individual heroism. In this sense, Ophelia comes to function, in Luke's words, as 'the first feminist critic of <em>Hamlet</em>', exposing the genre's tendency to privilege male suffering as uniquely tragic.<sup>12</sup></p>
+
+        <p>By repositioning Ophelia as an independent tragic subject, Luke's reading implicitly challenges the assumption that Hamlet's inner life is the play's primary source of meaning — and by extension, that paralysis and indecision are its central tragic concern. The central claim is not that Ophelia naturally dominates, but that the Hamlet-centred structure continuously suppresses a significance that is always present in the role. How this dynamic plays out in contemporary performance is examined through a primary source in Entry 5.</p>
+
+        <p>Recent gender-reversed productions at the National Theatre Company of Korea (2024), which present Hamlet as a princess and Ophelia as a male character, offer a further illustration. Although tragic authority is reassigned to a female body, the play's meaning continues to be organised around Hamlet's inner struggle. As a result, the hierarchy that privileges a single figure's suffering remains largely intact.</p>
+
+        <figure class="essay-figure" style="max-width:480px;">
+            <img src="images/essays/hamlet-fig1.jpg" alt="Fig 1. Gender-reversed production of Hamlet at the National Theatre Company of Korea — Hamlet as a princess">
+            <figcaption>Fig. 1. Gender-reversed production of <em>Hamlet</em> at the National Theatre Company of Korea, presenting Hamlet as a princess. While tragic authority is reassigned to a female body, the visual composition retains a Hamlet-centred structure. Image courtesy of the National Theatre Company of Korea.</figcaption>
+        </figure>
+
+        <figure class="essay-figure">
+            <img src="images/essays/hamlet-fig2.jpg" alt="Fig 2. Male Ophelia in a gender-reversed production of Hamlet at the National Theatre Company of Korea">
+            <figcaption>Fig. 2. Male Ophelia in a gender-reversed production of <em>Hamlet</em>. Despite the reversal of gender, the character continues to be framed through a familiar visual language of longing, vulnerability, and romantic suffering. Image courtesy of the National Theatre Company of Korea.</figcaption>
+        </figure>
+
+        <h2><span class="entry-label">Entry 5</span> Primary Source: Robert Hastie's <em>Hamlet</em>, National Theatre, London (2025)</h2>
+
+        <p><em>Hamlet</em>, dir. Robert Hastie, with Hiran Abeysekera (Hamlet) and Francesca Mills (Ophelia), Lyttelton Theatre, National Theatre, London, attended 12 November 2025.</p>
+
+        <p>This production served as the initial prompt for this bibliography. Attended on 12 November 2025, it presented a markedly different Hamlet from the one that Korean theatre and musical productions had led me to expect. Under Robert Hastie's direction, Hiran Abeysekera portrayed Hamlet as a physically energetic, often comedic figure — restless, rapid-fire in delivery, and resistant to the inward, emotionally intense portrayal associated with the Romantic tradition traced in Entry 1. Where I had anticipated a noble, introspective, and charismatic prince, this Hamlet was cocky and at times almost anti-tragic in his levity.</p>
+
+        <p>Watching the production, I became aware of how strongly my own expectations had been shaped by the critical and theatrical traditions this bibliography examines. My prior experience of Hamlet had been largely through South Korean theatre and musical productions, where the character is typically presented as inwardly refined and emotionally compelling — a portrait that, as Entry 1 argues, descends from the Romantic image consolidated by Goethe. The distance between that expectation and Hastie's interpretation prompted the central question driving this bibliography: how have successive critical frameworks shaped what audiences expect from Hamlet as a character?</p>
+
+        <p>The production also offered a nuanced illustration of Luke's argument (Entry 4). The most widely praised performance was Francesca Mills's Ophelia, described by one reviewer as 'stealing the show'.<sup>13</sup> This was not because the production structurally decentred Hamlet — Ophelia remained a peripheral figure within the play's overall organisation. Rather, the comedic underplaying of Hamlet created an emotional vacancy that Mills's exceptional energy filled by contrast. The play's hierarchy was not dismantled; but the suppressed potential Luke identifies in Ophelia momentarily became visible. This is precisely what Luke argues: not that Ophelia naturally dominates, but that the Hamlet-centred structure actively suppresses a significance that is always there. The critical reception's complaint of an 'emotional vacuum at its centre' further reveals how deeply ingrained the expectation of a commanding Hamlet remains — a product of the critical tradition this bibliography traces.</p>
+
+        <h2>Conclusion</h2>
+
+        <p>This bibliography has traced a critical trajectory from the Romantic image of Hamlet as an inwardly refined and attractive prince, through moral and psychological readings that gradually shifted emphasis towards paralysis and disturbance, to feminist challenges that question the very centrality of Hamlet as the play's organising figure. What emerges from this survey is that each interpretive framework does not simply describe Hamlet's character — it actively shapes what audiences and practitioners expect from him on stage. As my experience of Hastie's 2025 National Theatre production demonstrates, those expectations run deep: when they are not met, the response is not neutrality but disappointment. Understanding this critical history is therefore not merely an academic exercise; it is a condition for more self-aware engagement with the play — as reader, director, or performer.</p>
+
+        <p>Several questions emerge from this survey that point towards further research and practice. The sources examined here are predominantly drawn from British and European critical traditions. A productive next step would be to investigate how Hamlet travels into performance contexts where the play is relatively unfamiliar — and what new possibilities open up there. Having lived and worked in Saudi Arabia for two years, I am drawn to the question of what it would mean to create a new adaptation of Hamlet in that context: not simply to transplant the existing play, but to use the encounter between the text and an unfamiliar performance culture as the basis for something genuinely new. The critical tradition traced in this bibliography — from Romantic identification through psychological paralysis to feminist challenge — has produced a set of expectations so deeply ingrained that staging Hamlet in a context largely free from that tradition might make it possible to move beyond Hamlet-centred structures entirely, rather than merely critiquing them. My background in South Korean theatre, where the Romantic image of Hamlet has been deeply influential, has already shaped my expectations in ways this bibliography has helped me to identify. Placing that experience alongside the possibilities of the Middle East suggests a creative project that goes beyond comparative reception: the chance to reimagine the play from outside the critical tradition altogether, and to ask what Hamlet — and Ophelia — might become when the weight of that tradition is lifted.</p>
+
+    </article>
+
+    <article class="article-body lang-ko" lang="ko">
+
+        <div class="intro-block">
+            <p>이 주석 참고문헌은 서로 다른 역사적·이론적 맥락 속에서 이루어진 햄릿의 성격에 관한 주요 비평적 해석들을 검토한다. 낭만주의적 관점에서 햄릿을 매력적이고 내면적으로 세련된 왕자로 찬미했던 초기 독해에서, 마비, 심리적 장애, 파괴적이거나 감정적으로 단절된 행동을 강조하는 후기 독해로의 비평적 흐름에 초점을 맞춘다.</p>
+        </div>
+
+        <p>이 비평적 궤적에 관심을 갖게 된 계기는 몇 달 전 런던 내셔널 시어터에서 《햄릿》 공연을 관람하고 나서였다. 이 공연에서 햄릿은 카리스마 있거나 감정적으로 공감을 불러일으키는 인물이 아닌, 우유부단함으로 마비된 파괴적인 존재로 등장했다. 이 경험은 필자의 기대가 어떻게 형성되었는지 되돌아보게 했다. 그 기대는 한국의 연극과 뮤지컬 공연에 크게 영향을 받은 것이었는데, 한국에서 햄릿은 흔히 고귀하고 내면적으로 세련되며 카리스마 있는 인물로 그려지고, 그의 철학적 성찰과 감정적 갈등이 매력적이고 설득력 있는 무대적 존재감에 기여한다. 이 이미지가 실은 훨씬 더 폭넓은 비평적 전통 안의 한 갈래에 불과하다는 것을 이제는 알게 되었다. 본 참고문헌이 묻는 핵심 질문은 다음과 같다: 비평적 틀의 변화를 통해, 햄릿은 어떻게 낭만주의적 찬미의 대상에서 마비, 심리적 장애, 감정적 단절과 연결된 인물로 이동해왔는가 — 그리고 그 변화는 공연에 어떤 결과를 남겼는가? 이 참고문헌에 선정된 자료들은 이 질문을 중심으로 변화하는 비평적 틀을 추적하며, 그 변화가 공연 전통과 관객의 기대에 미친 영향을 살펴본다.</p>
+
+        <h2><span class="entry-label">항목 1</span> 초기 낭만주의 독해: 동일시의 대상으로서의 햄릿</h2>
+
+        <p>토마스 쿨만은 「괴테의 <em>빌헬름 마이스터의 수업 시대</em>에서의 햄릿 프로젝트」에서, 햄릿이 결단력 있는 행동을 가로막는 '아름다운 영혼'을 가진 나약한 인물로 널리 오해받게 되었다고 주장한다.<sup>1</sup> 이 해석은 독일의 젊은 독자들에게 강력한 동일시의 모델이 되었고 이후 유럽 전역으로 영향을 미쳤다. 특히 괴테의 소설 <em>빌헬름 마이스터의 수업 시대</em>를 통해 가장 명확하게 나타나는데, 소설 속 주인공은 햄릿을 도덕적으로 고양되고 내면적으로 세련된 인물로 제시한다. 쿨만은 이 해석이 복수와 시해(弑害)에 대한 초기 근대의 기독교적 반감을 비롯한 중요한 역사적·문화적 맥락을 간과한다고 덧붙인다.</p>
+
+        <p>《햄릿》은 약 1600년에 쓰였고, <em>빌헬름 마이스터의 수업 시대</em>는 거의 두 세기 후인 1795~96년에 출판되었다. 괴테의 소설은 햄릿 비평에서 결정적인 전환점을 나타낸다. 정치적 행동이나 복수에서 도덕적 내면성과 개인적 감정으로 초점이 이동한 것이다. 낭만주의적 햄릿 이미지가 지배적이고 문화적으로 영향력 있는 것으로 자리 잡게 된 것은 대체로 괴테 이후의 일이다.</p>
+
+        <p>이러한 한계에도 불구하고, 낭만주의적 햄릿 이미지는 강력한 매력을 발휘했다. 이 해석의 문화적 힘은 흔히 '베르테르 효과'로 불리는 현상을 통해 이해할 수 있다 — 문학 속 인물이 감정적 동일시의 대상이 되는 현상이다. 괴테의 <em>젊은 베르테르의 슬픔</em>이 젊은 독자들 사이에서 모방 행동을 유발했다는 이야기가 이를 잘 보여준다. 이러한 맥락에서, 햄릿이 내면의 섬세함과 도덕적 갈등을 지닌 인물로 여겨지게 된 것은 자연스러운 흐름이었다.</p>
+
+        <h2><span class="entry-label">항목 2</span> 도덕적 비극의 인물로서의 햄릿</h2>
+
+        <p>A. C. 브래들리는 셰익스피어 비극 강의에서, 비극은 극적 움직임과 분리된 심리가 아닌 행동을 통해 드러나는 성격에 의해 추동된다고 주장한다.<sup>2</sup> 브래들리에게 셰익스피어의 비극적 인물들은 일종의 불균형 또는 편향성을 지니며, 이것이 비극이 전개되면서 파국으로 이어진다. 햄릿을 심리적 사례로 다루는 대신, 브래들리는 사유의 순간이 어떻게 극적 구조 안에서 결정과 결과로 이어지는지에 초점을 맞춘다.</p>
+
+        <p>브래들리는 햄릿의 지연이 단순히 유령이 부과한 복수 임무의 결과가 아니라고 주장한다. '사느냐 죽느냐' 독백에서 햄릿은 복수보다는 자살에 대해 성찰하며, 죽음 그 자체에 대한 불확실성으로 인해 억제된다. 브래들리에게 이것은 햄릿의 삶에 대한 권태가 복수 플롯과 무관하게 존재함을 보여준다.<sup>3</sup></p>
+
+        <p>브래들리가 보기에 햄릿의 도덕적 본성이 가장 명확하게 드러나는 것은 어머니와의 장면이다. 여기서 햄릿의 목적은 복수가 아닌 도덕적 교정으로, 거트루드를 벌하기보다 그녀의 영혼을 구하려 한다. 거트루드가 '오 햄릿, 네가 내 마음을 둘로 갈랐구나' (3.4.147)라고 외치고 햄릿이 '오, 나쁜 쪽은 버리세요' (3.4.148)라고 답하는 장면을 브래들리는 햄릿의 도덕적 진지함의 절정으로 강조한다.<sup>4</sup> 극의 말미에서 호레이쇼의 마지막 말, '고귀한 심장이 무너지는구나. 잘 자라, 사랑스런 왕자여' (5.2.311)는 브래들리의 관점에서 햄릿의 본질적인 고귀함을 확인시켜 준다.<sup>5</sup></p>
+
+        <p>배우의 관점에서, 성격과 행동의 연결을 강조하는 브래들리의 접근은 분위기나 성찰에만 집중하는 공연을 막고 의도, 결단, 극적 결과를 전면에 내세운다는 점에서 유용하다. 동시에 이 명확성은 역사적 한계를 드러내기도 한다. 브래들리의 해석은 셰익스피어 비극이 주로 도덕적 성격을 통해 이해되었던 19세기 말~20세기 초 비평의 우선순위를 반영한다. 설득력 있는 접근이지만, 햄릿을 극의 중심에 놓는 경향으로 인해 다른 인물들과 더 넓은 연극적 역학의 중요성을 축소하는 한계가 있다.</p>
+
+        <h2><span class="entry-label">항목 3</span> 성격에서 사례로: 심리적 독해</h2>
+
+        <p>A. C. 브래들리가 햄릿의 지연을 도덕적·감정적 문제로 이해하는 데 반해, 어니스트 존스는 햄릿을 무의식적 갈등에 의해 형성된 심리적 사례로 재정의함으로써 결정적인 전환을 이룬다. 존스의 에세이 「햄릿의 미스터리에 대한 오이디푸스 콤플렉스의 설명」은 프로이트적 정신분석이 문학 비평에 영향을 미치기 시작한 1910년에 처음 발표되었다.<sup>6</sup> 존스는 기존의 햄릿 비평을 세 가지 주요 접근으로 분류한다: 기질로 설명하는 것, 임무의 어려움을 강조하는 것, 임무 자체의 특정 측면에 초점을 맞추는 것. 이 분류를 통해 존스는 앞의 두 접근을 거부하고, 햄릿의 망설임이 일반적인 성격 결함이 아닌 클로디어스를 죽이는 단 하나의 행위에만 한정된 '특수한 의지 마비'로 가장 잘 이해된다고 주장한다.<sup>7</sup></p>
+
+        <p>존스에게 이 마비는 도덕적 불확실성이나 복수의 현실적 어려움에서 비롯되지 않는다. 그 행위 자체에 대한 무의식적 혐오에 근거한다. 클로디어스를 죽이는 것은 존스의 독해에서 햄릿의 억압된 욕망을 활성화시켜, 그 행위를 심리적으로 불가능하게 만든다. 결과적으로, 아버지를 복수하라는 명령은 햄릿의 지적 명료함과 언어적 민첩성에도 불구하고 수행 불가능한 것이 된다.<sup>8</sup></p>
+
+        <p>이 해석은 햄릿의 지연의 원천을 윤리적 성찰에서 내면의 심리적 갈등으로 옮겨놓는다. 필자는 이 독해를 연극 실무자로서의 경험을 통해 다시 떠올렸는데, 특히 거트루드와 오필리어를 동일 배우가 연기한 한국의 《햄릿》 공연(2006)을 보았을 때였다. 이 무대는 도덕적 망설임보다 심리적 얽힘을 전면에 내세우며, 존스가 강조한 무의식적 중첩과 억압의 실제적 사례를 보여주었다.</p>
+
+        <p>종합하면, 존스의 해석은 햄릿 비평의 중요한 전환점을 이룬다. 햄릿은 더 이상 윤리적 선택과 씨름하는 도덕적 행위자로서가 아니라, 결정적인 행동을 불가능하게 만드는 심리적 갈등으로 마비된 인물로 접근하게 된다.</p>
+
+        <h2><span class="entry-label">항목 4</span> 비평적 결과: 햄릿 중심의 독해</h2>
+
+        <p>낭만주의적, 도덕적, 심리적 접근은 차이점에도 불구하고, 극을 햄릿의 내면 세계를 중심으로 구성하는 공통된 경향을 공유한다. 질리언 루크의 에세이 「만약 이 연극의 제목이 <em>오필리어</em>였다면? 《햄릿》에서의 젠더와 장르」에서 이 햄릿 중심의 비평 전통은 오필리어의 역할에 대한 재고를 통해 직접적으로 도전받는다.<sup>9</sup> 루크는 오필리어가 햄릿과의 관계 속에서만 의미를 갖는 주변적이거나 침묵당한 인물로 이해되어서는 안 된다고 주장한다. 오필리어는 더 넓은 여성 경험의 이야기를 전달하는 매개다. 루크의 말을 빌리면, '그녀는 여성 경험의 본질적인 이야기, 즉 버림받음, 여성혐오, 가부장적 억압, 이중 성 기준의 매개 역할을 한다.'<sup>10</sup></p>
+
+        <p>루크는 이 도전을 오필리어가 스스로의 의지로 무대에 등장하는 소위 '광란 장면'(4.1.159)에서 가장 명확하게 찾는다.<sup>11</sup> 오필리어는 고상한 비극적 연설 대신 노래와 익명의 민요를 통해, 개인적 영웅주의를 중심으로 한 일관된 비극적 서사에 흡수되기를 거부한다. 이런 의미에서 오필리어는 루크의 말처럼 '《햄릿》의 첫 번째 페미니스트 비평가'로 기능하며, 장르가 남성의 고통을 유일하게 비극적인 것으로 특권화하는 경향을 폭로한다.<sup>12</sup></p>
+
+        <p>루크의 독해는 오필리어를 독립적 비극의 주체로 재정립함으로써, 햄릿의 내면이 연극의 의미를 구성하는 유일한 원천이라는 전제에 도전한다. 루크의 핵심 주장은 오필리어가 자연스럽게 전면에 나선다는 것이 아니라, 햄릿 중심의 구조가 항상 존재해온 오필리어의 의미를 지속적으로 억압하고 있다는 것이다. 이 주장이 현대 공연에서 어떻게 드러나는지는 항목 5에서 1차 자료를 통해 분석한다.</p>
+
+        <p>국립극단의 젠더 전환 공연(2024)은 이 역학의 또 다른 사례다. 햄릿을 공주로, 오필리어를 남성으로 제시하는 이 공연은 비극적 권위를 여성의 몸으로 이동시키지만, 연극의 의미는 여전히 햄릿의 내면 갈등을 중심으로 구성된다. 한 인물의 고통을 특권화하는 위계는 대체로 그대로 유지된다.</p>
+
+        <figure class="essay-figure" style="max-width:480px;">
+            <img src="images/essays/hamlet-fig1.jpg" alt="그림 1. 국립극단의 젠더 전환 《햄릿》 — 공주로서의 햄릿">
+            <figcaption>그림 1. 국립극단의 젠더 전환 《햄릿》 공연 — 햄릿을 공주로 제시. 비극적 권위가 여성의 몸에 재배치되지만, 시각적 구성은 여전히 햄릿 중심의 구조를 유지한다. 이미지 제공: 국립극단.</figcaption>
+        </figure>
+
+        <figure class="essay-figure">
+            <img src="images/essays/hamlet-fig2.jpg" alt="그림 2. 국립극단의 젠더 전환 《햄릿》 — 남성 오필리어">
+            <figcaption>그림 2. 젠더 전환 《햄릿》의 남성 오필리어. 젠더 전환에도 불구하고, 인물은 여전히 갈망, 취약성, 낭만적 고통의 익숙한 시각적 언어를 통해 표현된다. 이미지 제공: 국립극단.</figcaption>
+        </figure>
+
+        <h2><span class="entry-label">항목 5</span> 1차 자료: 로버트 헤이스티 연출 <em>햄릿</em>, 내셔널 시어터, 런던 (2025)</h2>
+
+        <p>윌리엄 셰익스피어, <em>햄릿</em>, 연출 로버트 헤이스티, 히란 아베이세케라(햄릿)·프란체스카 밀스(오필리어) 출연, 리틀턴 시어터, 내셔널 시어터, 런던, 2025년 11월 12일 관람.</p>
+
+        <p>본 참고문헌을 쓰게 된 직접적인 계기가 된 공연이다. 한국 연극과 뮤지컬을 통해 형성된 기대와는 전혀 다른 햄릿을 목격했기 때문이다. 헤이스티의 연출 아래, 히란 아베이세케라는 햄릿을 신체적으로 활달하고 희극적인 인물로 표현했다. 빠른 말투에 가볍고 건방진 태도 — 항목 1에서 다룬 낭만주의 전통의 내성적이고 감정적으로 밀도 높은 햄릿과는 거리가 멀었다. 고귀하고 사유하는 왕자를 기대했던 필자에게, 이 햄릿은 때로 반(反)비극적으로까지 느껴졌다.</p>
+
+        <p>공연을 보면서, 필자의 기대가 어디서 왔는지를 되돌아보게 되었다. 그동안 접했던 햄릿은 주로 한국 연극과 뮤지컬을 통한 것이었고, 그곳에서 햄릿은 대체로 내면적으로 세련되고 감정적으로 설득력 있는 인물로 그려진다. 항목 1에서 살핀 대로, 괴테 이후 낭만주의 비평이 공고화한 이미지다. 헤이스티의 해석이 이 기대를 충족시키지 못했을 때 느낀 위화감이 본 참고문헌의 핵심 질문으로 이어졌다: 비평적 틀의 변화는 관객이 햄릿에게 기대하는 것을 어떻게 형성해왔는가?</p>
+
+        <p>이 공연은 루크의 주장(항목 4)에 대한 미묘한 사례를 제공한다. 가장 많은 호평을 받은 것은 프란체스카 밀스의 오필리어였다. 한 리뷰어는 그녀가 '공연을 훔쳤다'고 표현했다.<sup>13</sup> 그러나 이는 공연이 구조적으로 햄릿을 탈중심화했기 때문이 아니었다 — 오필리어는 여전히 주변부 인물로 머물렀다. 희극적으로 약화된 햄릿이 만든 감정적 공백을 밀스의 압도적인 에너지가 메운 것이다. 연극의 위계는 무너지지 않았지만, 루크가 말하는 오필리어의 억눌린 가능성이 잠깐 수면 위로 드러났다. 루크의 주장의 핵심은 오필리어가 자연스럽게 전면에 나선다는 것이 아니라, 햄릿 중심의 구조가 항상 존재해온 오필리어의 의미를 지속적으로 억압하고 있다는 것이다. '감정적 공허함'에 대한 비평의 반응은 강력하고 진지한 햄릿에 대한 기대가 얼마나 깊이 새겨져 있는지를 보여준다 — 본 참고문헌이 추적하는 수백 년의 비평 전통이 빚어낸 기대다.</p>
+
+        <h2>결론</h2>
+
+        <p>이 참고문헌은 낭만주의적 매력의 왕자로서의 햄릿 이미지에서 출발해, 마비와 심리적 장애를 강조하는 독해를 거쳐, 햄릿 중심의 구조 자체에 의문을 제기하는 페미니스트 비평에 이르는 궤적을 살펴보았다. 각각의 해석 틀은 단순히 햄릿의 성격을 기술하는 데 그치지 않는다 — 관객과 실연자가 무대 위의 햄릿에게 무엇을 기대할지를 능동적으로 형성해왔다. 2025년 내셔널 시어터 공연에서 경험했듯, 그 기대는 깊이 각인되어 있다. 기대가 충족되지 않을 때 반응은 중립이 아닌 실망이다. 비평사를 이해하는 것은 그러므로 단순한 학문적 작업이 아니다 — 독자로서, 연출가로서, 혹은 연기자로서 이 연극과 더 자각적으로 관계 맺기 위한 조건이다.</p>
+
+        <p>이 고찰은 몇 가지 후속 연구 및 창작 방향을 시사한다. 본 참고문헌이 검토한 자료들은 주로 영국과 유럽의 비평 전통에 편중되어 있다. 유의미한 다음 단계는, 《햄릿》이 이 비평 전통에 낯선 공연 문화와 만날 때 어떤 새로운 가능성이 열리는지를 탐구하는 것이다. 사우디아라비아에서 2년간 생활하고 활동한 경험을 가진 필자로서, 그 맥락에서 《햄릿》을 새롭게 재창작한다면 어떨지에 대한 강한 끌림을 느낀다 — 단순히 기존 작품을 이식하는 것이 아니라, 텍스트와 낯선 공연 문화의 만남을 새로운 창작의 출발점으로 삼는 것이다. 본 참고문헌이 추적한 비평 전통 — 낭만주의적 동일시에서 심리적 마비를 거쳐 페미니스트 도전에 이르기까지 — 은 너무 깊이 각인된 기대를 형성해왔기에, 그 전통으로부터 비교적 자유로운 문화권에서 《햄릿》을 만든다면 햄릿 중심의 구조를 단지 비판하는 것을 넘어 그것으로부터 완전히 벗어날 수 있는 가능성이 생긴다. 한국 연극에서 훈련받은 연극인으로서, 낭만주의적 햄릿 이미지가 필자의 기대를 어떻게 형성해왔는지를 이번 연구를 통해 비로소 명확히 인식하게 되었다. 한국에서의 경험과 중동에서의 가능성을 나란히 놓을 때, 단순한 비교 연구를 넘어선 창작 프로젝트의 윤곽이 보인다 — 비평 전통의 무게에서 벗어나, 햄릿이, 그리고 오필리아가 무엇이 될 수 있는지를 새롭게 상상하는 작업.</p>
+
+    </article>
+
+    <section class="footnotes" aria-label="Notes">
+        <h3>Notes</h3>
+        <ol class="footnote-list">
+            <li><span class="fn-num">1</span><span>Thomas Kullmann, 'The Hamlet Project in Goethe's <em>Wilhelm Meister's Years of Apprenticeship</em>', <em>Multicultural Shakespeare: Translation, Appropriation and Performance</em>, 15.30 (2017), pp. 1–18.</span></li>
+            <li><span class="fn-num">2</span><span>A. C. Bradley, <em>Shakespearean Tragedy: Lectures on Hamlet, Othello, King Lear, Macbeth</em>, 2nd edn (Macmillan, 1919), pp. 129–74.</span></li>
+            <li><span class="fn-num">3</span><span>Bradley, <em>Shakespearean Tragedy</em>, p. 144.</span></li>
+            <li><span class="fn-num">4</span><span>Bradley, <em>Shakespearean Tragedy</em>, p. 138.</span></li>
+            <li><span class="fn-num">5</span><span>Bradley, <em>Shakespearean Tragedy</em>, p. 147.</span></li>
+            <li><span class="fn-num">6</span><span>Ernest Jones, 'The Œdipus-Complex as an Explanation of Hamlet's Mystery: A Study in Motive', <em>The American Journal of Psychology</em>, 21.1 (1910), pp. 75–76.</span></li>
+            <li><span class="fn-num">7</span><span>Jones, 'Œdipus-Complex', p. 86.</span></li>
+            <li><span class="fn-num">8</span><span>Jones, 'Œdipus-Complex', pp. 86–87.</span></li>
+            <li><span class="fn-num">9</span><span>Jillian Luke, 'What If the Play Were Called <em>Ophelia</em>? Gender and Genre in <em>Hamlet</em>', <em>Cambridge Quarterly</em>, 49.1 (2020), pp. 1–18, doi: 10.1093/camqtly/bfz038.</span></li>
+            <li><span class="fn-num">10</span><span>Luke, 'What If the Play Were Called <em>Ophelia</em>?', p. 5.</span></li>
+            <li><span class="fn-num">11</span><span>Luke, 'What If the Play Were Called <em>Ophelia</em>?', p. 9.</span></li>
+            <li><span class="fn-num">12</span><span>Luke, 'What If the Play Were Called <em>Ophelia</em>?', p. 15.</span></li>
+            <li><span class="fn-num">13</span><span>Arifa Akbar, 'Hamlet review – a cocky prince of infinite jest runs riot at the National', <em>The Guardian</em>, 3 October 2025 &lt;https://www.theguardian.com/stage/2025/oct/03/hamlet-review-lyttelton-theatre-national-theatre-london&gt; [accessed: 10 January 2026].</span></li>
+        </ol>
+    </section>
+
+    <section class="bibliography" aria-label="Bibliography">
+        <h3>Bibliography</h3>
+        <p>Akbar, Arifa, 'Hamlet review – a cocky prince of infinite jest runs riot at the National', <em>The Guardian</em>, 3 October 2025, &lt;https://www.theguardian.com/stage/2025/oct/03/hamlet-review-lyttelton-theatre-national-theatre-london&gt; [accessed: 10 January 2026]</p>
+        <p>Bradley, A. C., <em>Shakespearean Tragedy: Lectures on Hamlet, Othello, King Lear, Macbeth</em>, 2nd edn (Macmillan, 1919)</p>
+        <p>Jones, Ernest, 'The Œdipus-Complex as an Explanation of Hamlet's Mystery: A Study in Motive', <em>The American Journal of Psychology</em>, 21.1 (1910), pp. 72–113, doi: 10.2307/1412950</p>
+        <p>Kullmann, Thomas, 'The Hamlet Project in Goethe's <em>Wilhelm Meister's Years of Apprenticeship</em>', <em>Multicultural Shakespeare: Translation, Appropriation and Performance</em>, 15.30 (2017), pp. 1–18, doi: 10.1515/mstap-2017-0011</p>
+        <p>Luke, Jillian, 'What If the Play Were Called <em>Ophelia</em>? Gender and Genre in <em>Hamlet</em>', <em>Cambridge Quarterly</em>, 49.1 (2020), pp. 1–18, doi: 10.1093/camqtly/bfz038</p>
+        <p>Shakespeare, William, <em>Hamlet</em>, dir. Robert Hastie, with Hiran Abeysekera and Francesca Mills, Lyttelton Theatre, National Theatre, London, attended 12 November 2025</p>
+        <p>Shakespeare, William, <em>Hamlet</em>, ed. by Ann Thompson and Neil Taylor, Arden Shakespeare, 3rd series (Bloomsbury, 2006)</p>
+    </section>
+
+    <div style="max-width:760px;margin:0 auto;padding:44px 0 8px;border-top:0.5px solid rgba(0,0,0,0.1);">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6f6f;margin-bottom:14px;">Elsewhere on this site · 사이트의 다른 곳</div>
+        <a href="theatre.html" style="display:block;max-width:620px;text-decoration:none;color:#1a1a1a;border:0.5px solid #d5d0c8;border-radius:8px;padding:20px 24px;background:#fff;">
+            <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7c3a36;margin-bottom:8px;">Practice · Nangman Theatre</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.25;margin-bottom:4px;">글에서 무대로 — 음악낭독극 연출</div>
+            <div style="font-size:13px;color:#5e5e5e;font-style:italic;font-family:'Cormorant Garamond',serif;">From page to stage — directing music-reading theatre&nbsp;&nbsp;→</div>
+        </a>
+        <p style="font-size:13px;color:#888780;margin-top:14px;max-width:620px;line-height:1.6;">The question this essay asks of a text on the page is the one I ask as a director of the same text on the stage.</p>
+    </div>
+
+    <div class="float-nav" aria-label="Essay navigation">
+        <a href="essay-1-portfolio.html">← Previous Essay</a>
+        <a href="essays.html">All Essays</a>
+        <a href="essay-3-tempest.html">Next Essay →</a>
+    </div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+</body>
+</html>

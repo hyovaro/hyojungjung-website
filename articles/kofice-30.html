@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창고에서 전시장으로, 작스 디스트릭트에서 만난 디리야 현대미술 비엔날레 2026 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; object-fit: cover; aspect-ratio: 4/3; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-30.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="창고에서 전시장으로, 작스 디스트릭트에서 만난 디리야 현대미술 비엔날레 2026 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-30.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="창고에서 전시장으로, 작스 디스트릭트에서 만난 디리야 현대미술 비엔날레 2026 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">현대미술/문화공간 — Contemporary Art &amp; Cultural Space</p>
+                    <h1 class="article-title-ko">창고에서 전시장으로, 작스 디스트릭트(JAX District)에서 만난 디리야 현대미술 비엔날레 2026</h1>
+                    <p class="article-title-en">From Warehouse to Exhibition Space: The Diriyah Contemporary Art Biennale 2026 at JAX District</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">8 February 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · February 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<p>'디리야 현대미술 비엔날레(Diriyah Contemporary Art Biennale)' 2026은 1월 30일부터 5월 2일까지 리야드 인근 디리야의 작스 디스트릭트(JAX District)에서 열리고 있다. 디리야 비엔날레 재단은 리야드와 제다에서 각각 다른 성격의 비엔날레를 운영 중이다. 리야드에서는 현대미술 중심의 전시가 열리는 반면, 제다에서는 이슬람 미술을 다루는 비엔날레가 진행된다. 통신원은 이번 리야드 디리야에서 열리는 현대미술 비엔날레의 현장을 직접 방문해 전시를 관람했다. 이번 비엔날레의 주제는 '막간과 이동 사이에서(In Interludes and Transitions / في الِح ّل والترحال)'로, 아라비아반도의 유목 문화에서 사용되던 구어적 표현에서 가져왔다.</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-01.jpg" alt="디리야 현대미술 비엔날레 2026 전경 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ '디리야 현대미술 비엔날레' 2026 전경 — 출처: 통신원 촬영</p>
+
+<p>전시는 머무름과 이동, 정착과 여정을 반복해온 지역의 역사에서 출발해, 오늘날까지 이어지는 이주와 변화의 경험을 중심 맥락으로 삼는다. 인간의 이동뿐만 아니라 바람과 무역, 이주와 망명, 기술과 정보의 흐름까지 함께 탐구하며, 이러한 움직임은 노래와 이야기, 소리, 영상, 퍼포먼스 등 다양한 형식의 작품으로 선보인다. 전시 공간 연출은 디자인 스튜디오 포마판타스마(Formafantasma)가 맡았다. 전시는 하나의 고정된 동선을 따르지 않고 여러 장면이 이어지는 구조로 설계되어, 관람객이 공간을 이동하며 작품 사이의 흐름을 체험할 수 있도록 구성됐다. 예술감독은 노라 라지안(Nora Razian)과 사비 아하메드(Sabih Ahmed)가 맡았으며, 다수의 국제 큐레이터가 참여해 전시를 기획했다.</p>
+
+<p>이번 비엔날레에는 전 세계 70여 명의 작가가 참여하며, 시각예술뿐 아니라 음악, 영화, 건축, 글쓰기 등 다양한 분야의 작품이 함께 소개된다. 이 가운데 20점 이상의 작품은 이번 전시를 위해 새롭게 제작된 신작이다. 소리와 퍼포먼스, 설치, 연구 기반 작업이 어우러지며, 개인의 기억과 집단의 역사, 지역의 경험이 어떻게 이어지고 변형되는지를 살펴볼 수 있다. 특히 이번 비엔날레에는 콜롬비아·한국계 미국인 작가 갈라 포라스-킴(Gala Porras-Kim)도 참여했다. 그동안 작가는 언어와 역사, 제도 비판을 주제로 작업을 이어왔으며, 이번 전시에서는 이동과 기록이라는 주제를 다른 각도에서 조명한다.</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-04.jpg" alt="디리야 현대미술 비엔날레 출품작 — 출처: 통신원 촬영"></div>
+<div class="photo-grid">
+    <img src="kofice-30-images/img-02.jpg" alt="디리야 현대미술 비엔날레 출품작 — 출처: 통신원 촬영">
+    <img src="kofice-30-images/img-03.jpg" alt="디리야 현대미술 비엔날레 출품작 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ '디리야 현대미술 비엔날레'에 출품된 작품들 — 출처: 통신원 촬영</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-05.jpg" alt="디리야 현대미술 비엔날레에 출품된 갈라 포라스-킴의 작품 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ '디리야 현대미술 비엔날레'에 출품된 갈라 포라스-킴(Gala Porras-Kim)의 작품 — 출처: 통신원 촬영</p>
+
+<h2>작스 디스트릭트(JAX District), 산업 지구에서 예술 지구로 탈바꿈</h2>
+
+<p>작스 디스트릭트는 과거 물류와 산업 시설이 집중된 지역이었다. 현재는 전시장과 작업 공간, 공연 및 프로그램 공간이 함께 운영되는 예술 지구로 조성되어, 리야드에서 열리는 주요 미술 행사의 중심지로 자리 잡았다. 이 지역의 특징은 기존 산업 시설의 건축 구조를 유지한 채 전시 공간으로 전환했다는 점이다. 창고의 골조와 재료가 그대로 남아 있어, 공간은 완성된 미술관이라기보다 작업 현장에 가까운 인상을 준다. 이러한 구조는 대형 설치 작품이나 영상, 사운드 작업을 수용하는 데 적합하다.</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-06.jpg" alt="디리야 현대미술 비엔날레가 열리고 있는 작스 디스트릭트 전경 — 출처: 통신원 촬영"></div>
+
+<div class="article-photo"><img src="kofice-30-images/img-07.jpg" alt="디리야 현대미술 비엔날레가 열리고 있는 작스 디스트릭트 전경 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 디리야 현대미술 비엔날레가 열리고 있는 작스 디스트릭트 전경 — 출처: 통신원 촬영</p>
+
+<p>또한, 작스 디스트릭트는 특정 전시 기간에만 활용되는 임시 공간이 아니라 연중 다양한 전시와 프로그램이 이어지는 장소로 운영된다. '디리야 현대미술 비엔날레' 기간에는 일부 작가들의 작업 공간을 관객이 직접 볼 수 있는 오픈 스튜디오 프로그램도 마련되어 있다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-30-images/img-08.jpg" alt="작스 디스트릭트 오픈 스튜디오 전경 — 출처: 통신원 촬영">
+    <img src="kofice-30-images/img-09.jpg" alt="작스 디스트릭트 오픈 스튜디오 전경 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ 작스 디스트릭트(JAX District) 오픈 스튜디오 전경 — 출처: 통신원 촬영</p>
+
+<p>작스 디스트릭트에는 사우디아라비아 최초의 현대미술관인 사모카(SAMOCA)를 비롯해 다수의 갤러리와 창작 스튜디오, 문화 관련 기관이 입주해 있다. 이들은 지역 예술 생태계를 구성하는 기반으로 기능하며, 리야드 문화 인프라의 한 축을 형성하고 있다. 또한 '디리야 현대미술 비엔날레'를 비롯해 음악·미디어·패션 분야의 대형 문화 행사가 이곳에서 개최되고 있다. 이러한 행사들은 작스 디스트릭트를 국제적 문화 교류의 장으로 확장시키며, 리야드 문화 지형 내에서의 위상을 더욱 공고히 하고 있다.</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-10.jpg" alt="작스 디스트릭트 지도 전경 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 작스 디스트릭트 지도 전경 — 출처: 통신원 촬영</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>통신원 촬영</p>
+    <p>디리야 비엔날레 파운데이션(Diriyah Biennale Foundation) 웹사이트, <a href="https://biennale.org.sa/en" target="_blank" rel="noopener">biennale.org.sa</a></p>
+    <p>작스 디스트릭트(Jax District) 웹사이트, <a href="https://jaxdistrict.com/" target="_blank" rel="noopener">jaxdistrict.com</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<p>The Diriyah Contemporary Art Biennale 2026 is running from 30 January to 2 May at JAX District in Diriyah, near Riyadh. The Diriyah Biennale Foundation operates two biennales with distinct characters — a contemporary art exhibition in Riyadh, and an Islamic art biennale in Jeddah. The correspondent visited the Riyadh biennale in person. This year's theme is 'In Interludes and Transitions (في الِح ّل والترحال)' — a phrase drawn from the oral tradition of nomadic cultures on the Arabian Peninsula.</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-01.jpg" alt="Diriyah Contemporary Art Biennale 2026 — Photo: correspondent"></div>
+<p class="photo-caption">▲ Diriyah Contemporary Art Biennale 2026 — Photo: correspondent</p>
+
+<p>The exhibition takes as its central context the region's history of dwelling and movement, settlement and journey — and the experience of migration and change that continues to this day. It explores not only human movement but also the flow of wind and trade, migration and asylum, technology and information. These movements are presented through works in a wide range of forms: song, story, sound, video, and performance. The spatial design was handled by design studio Formafantasma. Rather than following a single fixed route, the exhibition is structured as a series of scenes, allowing visitors to experience the flow between works as they move through the space. Artistic directors Nora Razian and Sabih Ahmed led the curatorial team, with multiple international curators contributing to the programme.</p>
+
+<p>The biennale brings together over 70 artists from around the world, presenting works spanning not only visual art but also music, film, architecture, and writing. More than 20 of the works are new commissions created specifically for this exhibition. Sound, performance, installation, and research-based practice interweave to explore how individual memory, collective history, and local experience connect and transform over time. Among the participating artists is Gala Porras-Kim, a Colombian-Korean American artist whose practice has long addressed language, history, and institutional critique. In this exhibition, she approaches the themes of movement and documentation from a fresh angle.</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-04.jpg" alt="Works at the Diriyah Contemporary Art Biennale — Photo: correspondent"></div>
+<div class="photo-grid">
+    <img src="kofice-30-images/img-02.jpg" alt="Works at the Diriyah Contemporary Art Biennale — Photo: correspondent">
+    <img src="kofice-30-images/img-03.jpg" alt="Works at the Diriyah Contemporary Art Biennale — Photo: correspondent">
+</div>
+<p class="photo-caption">▲ Works at the Diriyah Contemporary Art Biennale — Photo: correspondent</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-05.jpg" alt="Work by Gala Porras-Kim at the Diriyah Contemporary Art Biennale — Photo: correspondent"></div>
+<p class="photo-caption">▲ Work by Gala Porras-Kim at the Diriyah Contemporary Art Biennale — Photo: correspondent</p>
+
+<h2>JAX District: From Industrial Zone to Arts District</h2>
+
+<p>JAX District was formerly an area concentrated with logistics and industrial facilities. It has now been developed into an arts district where exhibition spaces, work spaces, and performance and programme venues operate together, establishing itself as the centre of Riyadh's major art events. The area's defining characteristic is that it has been converted into exhibition space while retaining the architectural structure of its former industrial buildings. The warehouse frames and materials remain intact, giving the space the feel of a working site rather than a finished museum. This structure is well suited to large-scale installation, video, and sound works.</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-06.jpg" alt="JAX District, venue of the Diriyah Contemporary Art Biennale — Photo: correspondent"></div>
+
+<div class="article-photo"><img src="kofice-30-images/img-07.jpg" alt="JAX District, venue of the Diriyah Contemporary Art Biennale — Photo: correspondent"></div>
+<p class="photo-caption">▲ JAX District, venue of the Diriyah Contemporary Art Biennale — Photo: correspondent</p>
+
+<p>JAX District is not a temporary space used only during specific exhibition periods — it operates as a venue for diverse exhibitions and programmes throughout the year. During the Diriyah Contemporary Art Biennale, an open studio programme is also available, allowing visitors to see some of the artists' working spaces directly.</p>
+
+<div class="photo-grid">
+    <img src="kofice-30-images/img-08.jpg" alt="JAX District open studio — Photo: correspondent">
+    <img src="kofice-30-images/img-09.jpg" alt="JAX District open studio — Photo: correspondent">
+</div>
+<p class="photo-caption">▲ JAX District open studio — Photo: correspondent</p>
+
+<p>JAX District is home to SAMOCA (the Saudi Art Museum of Contemporary Art — Saudi Arabia's first contemporary art museum), alongside numerous galleries, creative studios, and cultural organisations. These form the foundation of the local arts ecosystem and constitute a key element of Riyadh's cultural infrastructure. Major cultural events in music, media, and fashion are also held at JAX District. Such events expand the space's role as a venue for international cultural exchange, reinforcing its position within Riyadh's cultural landscape.</p>
+
+<div class="article-photo"><img src="kofice-30-images/img-10.jpg" alt="JAX District map — Photo: correspondent"></div>
+<p class="photo-caption">▲ JAX District map — Photo: correspondent</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Photos: correspondent</p>
+    <p>Diriyah Biennale Foundation website, <a href="https://biennale.org.sa/en" target="_blank" rel="noopener">biennale.org.sa</a></p>
+    <p>Jax District website, <a href="https://jaxdistrict.com/" target="_blank" rel="noopener">jaxdistrict.com</a></p>
+</div>
+</div></div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+
+    <div class="float-nav">
+        <a href="kofice-29.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-31.html">Next →</a>
+    </div>
+</body>
+</html>

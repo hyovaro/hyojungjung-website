@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should Shakespeare Be Changed? — Hyojung Jung</title>
+    <meta name="description" content="Colonialism and Reinterpretation in The Tempest. MA Plays and Poems of Shakespeare B, University of Birmingham.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        [lang="ko"] {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+            word-break: keep-all;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        .nav-cta {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            border: 0.5px solid rgba(0,0,0,0.3);
+            padding: 7px 18px;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-cta:hover { background: #1a1a1a; color: #f7f4ef; }
+
+        .article-header {
+            padding: 64px 52px 52px;
+            max-width: 760px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .article-eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 24px;
+            line-height: 2;
+        }
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+        .article-title em { font-style: italic; }
+        .article-meta {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .meta-item { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+        .meta-value { font-size: 12px; color: #1a1a1a; }
+
+        .article-body {
+            padding: 52px;
+            max-width: 760px;
+        }
+        .article-body p {
+            font-size: 15.5px;
+            line-height: 1.95;
+            color: #333;
+            margin-bottom: 1.4em;
+        }
+        .article-body h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 28px;
+            font-weight: 400;
+            margin: 2.8em 0 0.8em;
+            color: #1a1a1a;
+            letter-spacing: -0.01em;
+            border-top: 0.5px solid rgba(0,0,0,0.12);
+            padding-top: 2em;
+        }
+        .section-num {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .article-body em { font-style: italic; }
+        .article-body strong { font-weight: 500; color: #1a1a1a; }
+
+        /* Intro block */
+        .intro-block {
+            border-left: 2px solid #7c3a36;
+            padding-left: 24px;
+            margin-bottom: 2.4em;
+        }
+        .intro-block p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #454545;
+            margin-bottom: 0.8em !important;
+        }
+
+        /* Block quote */
+        blockquote {
+            margin: 1.6em 0 1.6em 32px;
+            padding: 0;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #454545;
+            font-style: italic;
+        }
+        blockquote cite {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            letter-spacing: 0.06em;
+            color: #6f6f6f;
+            margin-top: 6px;
+        }
+
+        /* Korean folk refrain */
+        .folk-verse {
+            margin: 1.6em 0 1.6em 32px;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 17px;
+            font-style: italic;
+            line-height: 2;
+            color: #454545;
+        }
+        .folk-verse-ko {
+            font-family: 'Noto Serif KR', serif;
+            font-style: normal;
+        }
+
+        /* Language toggle */
+        .lang-toggle { display: flex; gap: 2px; margin-top: 24px; }
+        .lang-toggle button {
+            font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+            padding: 7px 16px; border: 0.5px solid rgba(0,0,0,0.2);
+            background: none; cursor: pointer; color: #5e5e5e;
+            font-family: 'Inter', sans-serif; transition: all 0.2s;
+        }
+        .lang-toggle button.active,
+        .lang-toggle button:hover { background: #7c3a36; color: #f7f4ef; border-color: #7c3a36; }
+        .lang-ko { display: none; }
+        body.korean .lang-en { display: none; }
+        body.korean .lang-ko { display: block; }
+
+        /* Essay figure */
+        .essay-figure { margin: 2em 0; border: 0.5px solid rgba(0,0,0,0.1); }
+        .essay-figure img { width: 100%; display: block; }
+        .essay-figure figcaption {
+            padding: 12px 16px; font-size: 12px; line-height: 1.6;
+            color: #5e5e5e; border-top: 0.5px solid rgba(0,0,0,0.08); font-style: italic;
+        }
+
+        /* Footnotes */
+        .footnotes {
+            padding: 40px 52px 52px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+            max-width: 760px;
+        }
+        .footnotes h3 {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 20px;
+        }
+        .footnote-list { list-style: none; }
+        .footnote-list li {
+            font-size: 12px;
+            line-height: 1.7;
+            color: #5e5e5e;
+            padding: 6px 0;
+            border-bottom: 0.5px solid rgba(0,0,0,0.06);
+            display: flex;
+            gap: 12px;
+        }
+        .fn-num { min-width: 20px; color: #7c3a36; font-weight: 500; }
+
+        /* Bibliography */
+        .bibliography {
+            padding: 40px 52px 80px;
+            max-width: 760px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .bibliography h3 {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 20px;
+        }
+        .bibliography p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #5e5e5e;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            text-indent: -20px;
+        }
+
+        /* Float nav */
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 9px 16px;
+            border: 0.5px solid #7c3a36;
+            color: #7c3a36;
+            background: #f7f4ef;
+            transition: background 0.2s, color 0.2s;
+        }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/essay-3-tempest.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="Should Shakespeare Be Changed? — Hyojung Jung">
+    <meta property="og:description" content="Colonialism and Reinterpretation in The Tempest. MA Plays and Poems of Shakespeare B, University of Birmingham.">
+    <meta property="og:url" content="https://hyojungjung.com/essay-3-tempest.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Should Shakespeare Be Changed? — Hyojung Jung">
+    <meta name="twitter:description" content="Colonialism and Reinterpretation in The Tempest. MA Plays and Poems of Shakespeare B, University of Birmingham.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html" class="active">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <header class="article-header">
+        <p class="article-eyebrow">Essay &nbsp;·&nbsp; LM Plays and Poems of Shakespeare B &nbsp;·&nbsp; Shakespeare Institute, University of Birmingham</p>
+        <h1 class="article-title">Should Shakespeare Be Changed? Colonialism and Reinterpretation in <em>The Tempest</em></h1>
+        <div class="article-meta">
+            <div class="meta-item">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Essay</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Word count</span>
+                <span class="meta-value">c. 4,000 words</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Module</span>
+                <span class="meta-value">LM Plays and Poems of Shakespeare B</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">2025–2026</span>
+            </div>
+        </div>
+        <div class="lang-toggle">
+            <button id="btn-en" class="active" onclick="document.body.classList.remove('korean');document.getElementById('btn-en').classList.add('active');document.getElementById('btn-ko').classList.remove('active')">EN</button>
+            <button id="btn-ko" onclick="document.body.classList.add('korean');document.getElementById('btn-ko').classList.add('active');document.getElementById('btn-en').classList.remove('active')">한국어</button>
+        </div>
+    </header>
+
+    <article class="article-body lang-en">
+
+        <div class="intro-block">
+            <p>Should Shakespeare be 'changed' for modern audiences? This question has become increasingly important in discussions surrounding race, colonialism, gender, and representation in classical literature. <em>The Tempest</em> in particular continues to feel uncomfortable to many modern audiences.</p>
+            <p>This essay argues that <em>The Tempest</em> should not simply be 'changed' in order to avoid uncomfortable themes. Instead, modern audiences should engage critically with the play through close reading, reinterpretation, and performance.</p>
+        </div>
+
+        <p>Although Shakespeare wrote the play more than four hundred years ago, relationships of domination, servitude, racialised otherness, and power still remain deeply visible within the text. In particular, Prospero's treatment of Caliban often resembles a form of colonial control, while the play's representation of beauty, civilisation, and morality can also feel troubling from modern perspectives. Because of these tensions, <em>The Tempest</em> has become an important text within discussions surrounding colonialism, race, gender, and reinterpretation.</p>
+
+        <p>Some critics argue that Shakespeare's works contain problematic ideas that should be challenged or reconsidered, while others believe these tensions should be critically examined rather than removed. The essay will first examine how Prospero exercises authority over Ariel and Caliban through fear, punishment, and conditional freedom. It will then explore Caliban as a complex figure of resistance, dispossession, and moral ambiguity. The essay will also consider how Miranda reflects both colonial attitudes and patriarchal ideals surrounding beauty, virtue, and obedience. Finally, it will examine how modern reinterpretations — particularly Oh Tae-suk's Korean adaptation of <em>The Tempest</em> — reshape Shakespeare through different cultural, historical, linguistic, and theatrical contexts. This essay therefore suggests that reinterpretation is not an exception to Shakespearean performance, but one of the reasons Shakespeare continues to survive across different cultures and historical periods.</p>
+
+        <h2><span class="section-num">1</span> Colonial Power and Prospero</h2>
+
+        <p>When <em>The Tempest</em> is read from a modern postcolonial perspective, many uncomfortable moments emerge throughout the play. In particular, Prospero's treatment of Ariel and Caliban reveals the violence and control behind his authority. Rather than ruling only through wisdom, knowledge, or moral superiority, Prospero often maintains power through fear, punishment, emotional pressure, and the promise of conditional freedom. Because of this, modern postcolonial critics challenge older interpretations that present Prospero as a purely wise and benevolent figure.</p>
+
+        <p>Prospero's relationship with Ariel already demonstrates the controlling nature of his authority. Although Prospero presents himself as Ariel's rescuer, his treatment of Ariel is not based on equality or friendship. When Ariel asks for the liberty that Prospero promised him, Prospero immediately reminds him of the 'torment' from which he rescued him. Ariel's gratitude is repeatedly used to justify his continued service. In this sense, Prospero's authority over Ariel depends not only on magic, but also on memory, obligation, guilt, and fear. The threatening nature of this relationship becomes even clearer when Ariel continues to ask for freedom. Prospero responds with violent intimidation:</p>
+
+        <blockquote>
+            If thou more murmur'st, I will rend an oak<br>
+            And peg thee in his knotty entrails till<br>
+            Thou hast howled away twelve winters.
+            <cite>(<em>The Tempest</em>, I.2.192)</cite>
+        </blockquote>
+
+        <p>This image of Ariel trapped inside the oak recalls the very punishment from which Prospero claims to have rescued him. Prospero therefore uses Ariel's former imprisonment as a threat that he could repeat at any moment. Ariel immediately apologises and promises to obey 'gently', revealing that his obedience is maintained through intimidation rather than genuine loyalty.</p>
+
+        <p>Although Prospero speaks to Ariel more gently than he speaks to Caliban, his authority still relies on coercion. He secures obedience by combining threats with promises of future liberation, repeatedly postponing Ariel's freedom while continuing to demand service. This makes Ariel's final release significant but also ironic. At the end of the play, Prospero eventually grants Ariel freedom, but only after Ariel has completely fulfilled Prospero's commands. Ariel is rewarded because he remains obedient, useful, refined, and loyal to Prospero's plans. This creates an important contrast with Caliban. Ariel is spiritual, invisible, compliant, and associated with harmony, whereas Caliban is bodily, resistant, grotesque, and associated with physical labour. Prospero's mercy therefore appears selective: he frees the servant who conforms to his authority, while Caliban's position remains far more unresolved (<em>The Tempest</em>, V.1.305–06).</p>
+
+        <p>This violence becomes even clearer in Prospero's treatment of Caliban. Throughout the play, Prospero repeatedly abuses and dehumanises him through language, calling him a 'poisonous slave', 'hag-seed', 'devil' and even 'thou earth' (<em>The Tempest</em>, I.2.194–97). These insults reduce Caliban to something less than fully human, associating him with dirt, evil, savagery, and monstrosity. Prospero's authority over Caliban is also maintained through open threats of violence and physical punishment:</p>
+
+        <blockquote>
+            If thou neglect'st, or dost unwillingly<br>
+            What I command, I'll rack thee with old cramps,<br>
+            Fill all thy bones with aches, make thee roar,<br>
+            That beasts shall tremble at thy din.
+            <cite>(<em>The Tempest</em>, I.2.198)</cite>
+        </blockquote>
+
+        <p>Prospero therefore rules Caliban not through mutual respect, but through fear, intimidation, and suffering. Such language presents Caliban as dangerous, uncivilised, and naturally inferior. As Edward Said argues, supposedly 'civilised' societies often define themselves through opposition to those they consider savage, uncivilised, or foreign.<sup>1</sup> Prospero therefore defines himself partly through opposition to Caliban, who becomes constructed as the threatening colonial 'other'.</p>
+
+        <p>Prospero's authority also extends to language and education. At first, Prospero and Miranda might appear kind because they teach Caliban language and attempt to educate him. Caliban's statement that he once 'loved' Prospero (<em>The Tempest</em>, I.2.196) suggests that he initially trusted him before feeling betrayed. However, their relationship later becomes one based on coercion and control. Caliban's famous statement reveals this conflict clearly:</p>
+
+        <blockquote>
+            You taught me language, and my profit on't<br>
+            Is I know how to curse.
+            <cite>(<em>The Tempest</em>, I.2.198)</cite>
+        </blockquote>
+
+        <p>For Prospero and Miranda, language represents civilisation and improvement. For Caliban, however, it becomes a reminder of domination and a tool of resistance. Rather than expressing gratitude, he uses the coloniser's language to curse the people who taught it to him.</p>
+
+        <p>Even at the end of the play, Prospero's forgiveness appears limited and selective. He reconciles with Alonso and Antonio because they still belong to his own social and political world. Ariel is eventually granted freedom because he has served obediently. Caliban, however, remains largely excluded from this restoration. Although Caliban promises to 'seek for grace' (<em>The Tempest</em>, V.1.305), the play never clearly offers him liberation or justice. From this perspective, Prospero's authority cannot be separated from coercion, intimidation, and the unequal treatment of those under his control.</p>
+
+        <h2><span class="section-num">2</span> Caliban, Colonialism, and Moral Ambiguity</h2>
+
+        <p>One of the most complex aspects of <em>The Tempest</em> is Shakespeare's representation of Caliban. Modern postcolonial criticism often reads Caliban as a figure of the colonised subject whose land, language, and freedom have been taken away by Prospero. However, Shakespeare does not present Caliban as a purely innocent victim. Instead, the play constructs a morally unstable and deeply uncomfortable relationship between coloniser and colonised.</p>
+
+        <p>Caliban repeatedly insists that the island originally belonged to him through his mother, Sycorax:</p>
+
+        <blockquote>
+            This island's mine by Sycorax, my mother,<br>
+            Which thou tak'st from me.
+            <cite>(<em>The Tempest</em>, I.2.195)</cite>
+        </blockquote>
+
+        <p>The language of possession and dispossession strongly echoes colonial structures of occupation and control. Caliban presents himself as the original inhabitant of the island, while Prospero appears as an outsider who seizes authority and territory. Caliban also recalls how he initially welcomed Prospero and Miranda, showing them 'all the qualities o'th' isle', including its 'fresh springs' and 'fertile' places (<em>The Tempest</em>, I.2.196). This memory suggests that Caliban originally approached Prospero with trust and hospitality before their relationship transformed into one of domination and servitude.</p>
+
+        <p>Prospero justifies his authority through the language of civilisation, education, and moral superiority. He claims that he treated Caliban 'with humane care' and attempted to civilise him through language and education. Miranda similarly insists that she 'took pains to make thee speak' when Caliban was unable to communicate properly (<em>The Tempest</em>, I.2.197). These moments strongly resemble colonial narratives in which European powers justified domination through claims of education, civilisation, and moral improvement. Miranda's statement that Caliban belongs to a 'vile race' also suggests that his supposed inferiority is imagined not simply as individual behaviour, but as something inherent within his identity and nature.</p>
+
+        <p>At the same time, Caliban is repeatedly described through animalistic and monstrous imagery rather than as a fully human figure. Characters refer to him as a 'monster', 'fish', and a 'mooncalf' (<em>The Tempest</em>, II.2.230–35). Even his body and appearance become objects of disgust and ridicule. Trinculo and Stephano frequently mock his smell, shape, and physical appearance, while Prospero compares him to animals and curses him as something less than human. This language reflects processes of dehumanisation commonly associated with colonial discourse, in which indigenous or racialised bodies are represented as savage, uncivilised, grotesque, or subhuman in order to justify authority and control.</p>
+
+        <p>Trinculo's reaction to Caliban also resembles the logic of spectacle and exhibition. Upon first seeing him, Trinculo wonders whether Caliban is 'a man or a fish' before imagining how profitable he would be if displayed in England, declaring that 'this monster' could 'make a man'. Rather than recognising Caliban as fully human, Trinculo imagines exhibiting him as a strange and exotic curiosity for public entertainment. This language anticipates later colonial practices in which racialised or physically different bodies were displayed as spectacles for entertainment and profit.</p>
+
+        <p>However, Shakespeare also complicates any simple postcolonial reading of Caliban. Although Caliban is clearly dispossessed and enslaved, he is not portrayed as entirely innocent. Prospero accuses him of attempting to violate Miranda, and significantly, Caliban does not deny the accusation. Instead, he responds:</p>
+
+        <blockquote>
+            O ho, O ho! Would't had been done;<br>
+            Thou didst prevent me, I had peopled else<br>
+            This isle with Calibans.
+            <cite>(<em>The Tempest</em>, I.2.197)</cite>
+        </blockquote>
+
+        <p>This response creates profound moral discomfort within the play. Shakespeare does not allow the audience to sympathise with Caliban unconditionally, despite the fact that he is colonised and dispossessed by Prospero. Caliban is repeatedly associated with physical monstrosity, aggression, rebellion, and moral danger throughout the play.</p>
+
+        <p>As a result, Shakespeare does not construct a simple opposition between an entirely evil coloniser and a purely innocent victim. Instead, both Prospero and Caliban become associated with forms of violence, hierarchy, and power. Yet despite these moral complications, Caliban still emerges as one of the play's most powerful figures of resistance. His rejection of Prospero's authority demonstrates how colonial systems of education and civilisation can also generate resistance and hostility rather than obedience.</p>
+
+        <p>At several moments, however, Shakespeare also grants Caliban surprising poetic and emotional depth. His description of the island as 'full of noises, | Sounds and sweet airs' (<em>The Tempest</em>, III.2.254) reveals sensitivity, imagination, and lyrical beauty that sharply contrast with how other characters describe him. These moments complicate the image of Caliban as merely monstrous or savage and suggest that Shakespeare intentionally leaves his character unresolved and unstable.</p>
+
+        <p>Caliban's submission to Stephano also reflects another unstable dimension of colonial power within the play. Upon encountering Stephano's alcohol, Caliban immediately associates him with divine authority, calling him a 'brave god' who bears 'celestial liquor'. His fascination with alcohol contributes to his comic degradation and reinforces stereotypes of the colonised subject as irrational, easily manipulated, and morally weak. Stephano and Trinculo exploit alcohol in order to control and mock him, effectively replacing one form of domination with another.</p>
+
+        <p>As Ania Loomba argues, reducing <em>The Tempest</em> entirely to a straightforward allegory of modern European colonialism risks oversimplifying the play's historical and cultural complexities.<sup>2</sup> Shakespeare wrote during a period in which ideas of race, conquest, religion, slavery, and 'otherness' were still unstable and evolving rather than fully fixed within later colonial structures. The play therefore reflects overlapping anxieties surrounding power, difference, servitude, and civilisation rather than a single unified colonial framework.</p>
+
+        <p>Nevertheless, postcolonial interpretations remain highly influential because modern audiences continue to recognise forms of dispossession, domination, racialisation, and resistance within the relationship between Prospero and Caliban. Even at the end of the play, Caliban's position is not fully resolved. While Prospero regains his dukedom and prepares to return to Milan, Caliban remains associated with labour, obedience, and servitude. Although he promises to 'be wise hereafter', Shakespeare does not clearly offer him liberation or freedom. This unresolved ending helps explain why <em>The Tempest</em> continues to generate conflicting interpretations within postcolonial criticism, as Shakespeare ultimately refuses to present colonial domination, resistance, and morality in simple or stable terms.</p>
+
+        <h2><span class="section-num">3</span> Miranda and Selective Sympathy</h2>
+
+        <p>Miranda is often presented as one of the most innocent and compassionate characters in <em>The Tempest</em>. She shows emotional sensitivity toward Ferdinand's suffering and immediately responds to him with admiration, sympathy, and affection. When she sees Ferdinand carrying logs, she begs him not to work so hard and even offers to carry the logs herself. These moments present Miranda as emotionally generous, gentle, and caring. She appears sincere, compassionate, and emotionally open in ways that many other characters in the play are not. However, her sympathy within the play is also highly selective. While she immediately idealises Ferdinand, she expresses deep hostility and disgust toward Caliban.</p>
+
+        <p>From the moment Miranda first sees Ferdinand, she associates his physical appearance with nobility, beauty, and moral goodness. She describes him as possessing 'a brave form' and later insists:</p>
+
+        <blockquote>
+            There's nothing ill can dwell in such a temple.
+            <cite>(<em>The Tempest</em>, I.2.204)</cite>
+        </blockquote>
+
+        <p>Miranda therefore assumes that Ferdinand must be morally good because he appears beautiful, graceful, and noble. Throughout the play, physical beauty becomes closely connected to virtue, civilisation, and moral worth. Ferdinand is repeatedly associated with harmony, refinement, and emotional sensitivity, while Miranda reacts to him with admiration and wonder, even calling him 'divine' (<em>The Tempest</em>, I.2.201).</p>
+
+        <p>In contrast, Miranda's language toward Caliban is deeply hostile and dehumanising. Although she presents herself as a civilising figure who taught him language and communication, she ultimately describes him as an 'abhorred slave' belonging to a 'vile race' (<em>The Tempest</em>, I.2.197). Miranda therefore occupies a complicated position within the play. Although she herself remains controlled by Prospero's authority and functions within patriarchal structures, she also reproduces colonial attitudes toward Caliban. She does not simply describe him as dangerous because of his actions, but repeatedly treats him as naturally inferior, uncivilised, and morally corrupt.</p>
+
+        <p>Of course, Miranda's hatred toward Caliban can be understood to some extent because Shakespeare deliberately establishes the attempted violation of Miranda as part of the play's given circumstances. Miranda therefore does not simply fear Caliban without reason; her disgust is connected to violence, fear, and personal trauma. However, Shakespeare pushes this contrast much further through the play's repeated emphasis on appearance, beauty, and bodily difference. The contrast between Ferdinand and Caliban is especially striking. Ferdinand is consistently associated with beauty, nobility, harmony, and emotional sensitivity, whereas Caliban is associated with monstrosity, savagery, bodily difference, and moral corruption. Miranda's reactions to both characters reinforce these oppositions. As a result, <em>The Tempest</em> repeatedly links physical appearance to moral value, creating a hierarchy in which ugliness and bodily difference become associated with inferiority and danger.</p>
+
+        <p>To modern audiences, this hierarchy can feel deeply uncomfortable. The play often appears to suggest that attractive and physically 'ideal' people are naturally noble and civilised, while ugly, grotesque, or physically different people are morally dangerous or socially inferior. In this sense, Shakespeare's representation of Caliban may also be interpreted through modern discussions surrounding beauty standards, bodily otherness, ableism, and exclusion.</p>
+
+        <p>Miranda can also be interpreted through a feminist perspective. Although she displays emotional honesty and sincerity, her role within the play remains heavily shaped by male authority. Prospero carefully controls her interactions with Ferdinand and orchestrates their relationship almost like a theatrical performance. Miranda herself frequently expresses love through obedience, devotion, and self-sacrifice:</p>
+
+        <blockquote>
+            I am your wife, if you will marry me…<br>
+            I'll be your servant<br>
+            Whether you will or no.
+            <cite>(<em>The Tempest</em>, III.1.245–246)</cite>
+        </blockquote>
+
+        <p>Rather than imagining love as equality, Miranda repeatedly expresses affection through submission and service. These moments reflect patriarchal ideals of femininity centred on purity, obedience, emotional innocence, and devotion to male authority. While this essay does not focus primarily on feminist criticism, Miranda's characterisation nevertheless reveals how <em>The Tempest</em> may also invite modern feminist readings, particularly regarding gender hierarchy, female submission, and the relationship between beauty, virtue, and patriarchal control.</p>
+
+        <h2><span class="section-num">4</span> Modern Reinterpretations of <em>The Tempest</em></h2>
+
+        <p>The question of whether Shakespeare should be 'changed' is closely connected to the long history of reinterpretation surrounding <em>The Tempest</em>. Aimé Césaire's postcolonial rewriting <em>A Tempest</em> demonstrates how Shakespeare's plays continue to be reshaped through changing political and historical perspectives.<sup>3</sup> Writing during the anti-colonial movements of the Caribbean, Césaire transformed Caliban into a much more openly resistant and politically vocal figure. His rewriting reflects how Shakespeare can be reimagined to address the concerns of different historical moments and cultural contexts.</p>
+
+        <p>Korean adaptations of <em>The Tempest</em> also demonstrate how Shakespeare changes across cultures and performance traditions. In Oh Tae-suk's adaptation, Prospero becomes a figure closer to a Korean spiritual practitioner or shamanic magician, while the island is reimagined as part of the southern Korean coast during the conflict between Gaya and Silla. Traditional Korean theatrical forms such as <em lang="ko">마당극</em> (madanggeuk), mask performance, drumming, and <em lang="ko">씻김굿</em> (ssitgimgut) are used to reconstruct the storm, spirits, and supernatural atmosphere of the play. Rather than reproducing Shakespeare through Western realism, the production reconstructs the play through Korean collective movement, ritual imagery, rhythm, and musicality. The adaptation also incorporates elements of Korean Buddhism, shamanistic and Taoist spirituality, as well as traditional forms of humour and satire.</p>
+
+        <figure class="essay-figure">
+            <img src="images/essays/tempest-fig1.jpg" alt="Fig 1. Scene from Oh Tae-suk's adaptation of The Tempest by the Mokhwa Repertory Company">
+            <figcaption>Fig. 1. Scene from Oh Tae-suk's adaptation of <em>The Tempest</em> by the Mokhwa Repertory Company. Photograph by 2DOHEE, via London Korean Links, 2010.</figcaption>
+        </figure>
+
+        <p>The adaptation also transforms Shakespeare's language itself. Because English iambic pentameter cannot be reproduced directly in Korean, Oh Tae-suk reconstructs the musicality of the play through Korean rhythmic speech patterns, oral repetition, and folk-song structures. In Shakespeare's original text, Caliban encourages Stephano and Trinculo to seize Prospero's books and murder him in order to reclaim the island. In Oh Tae-suk's adaptation, this scene is transformed through Korean folk-song rhythm and oral performance traditions:<sup>4</sup></p>
+
+        <div class="folk-verse">
+            <span class="folk-verse-ko">아리아리 수리수리 아라리요</span> (a rhythmic folk refrain)<br>
+            <span class="folk-verse-ko">아리랑 고개로 넘어간다</span> (Crossing over the Arirang Pass)
+        </div>
+
+        <p>These phrases resemble the cadence of <em lang="ko">아리랑</em> (Arirang) and Korean folk chants more than Elizabethan verse. By combining Caliban's desire for revenge with familiar rhythms of Korean folk performance, the adaptation reconstructs Shakespeare's language through Korean musical and theatrical traditions. In addition, many sections of dialogue are reconstructed through the vocal rhythms and musical styles of traditional Korean <em lang="ko">판소리</em> (pansori) and folk-song traditions.</p>
+
+        <p>At the same time, Oh Tae-suk's adaptation also changes the representation of Caliban. Rather than presenting him mainly as a racialised colonial figure, the production reshapes Caliban into a grotesque, comic, and highly physical character influenced by Korean mask dance and folk performance traditions. However, themes of dispossession, servitude, and resistance still remain beneath this transformation.</p>
+
+        <p>Interestingly, although the production radically transforms Shakespeare through Korean spirituality, rhythm, theatrical aesthetics, humour, and performance traditions, it does not strongly foreground anti-colonial political resistance in the way Césaire's rewriting does. Instead, Oh Tae-suk's production places greater emphasis on theatricality, ritual energy, collective movement, humour, reconciliation, and emotional experience. This difference is particularly interesting given Korea's own histories of colonisation, war, and national division.</p>
+
+        <p>At the same time, many forms of traditional Korean performance culture have historically been connected to the expression, release, and transformation of <em lang="ko">한</em> (<em>han</em>) — a complex Korean emotional concept associated with accumulated sorrow, grief, resentment, endurance, and unresolved historical suffering. Rituals such as <em lang="ko">씻김굿</em>, traditional songs, mask dance, and folk performance often attempt not simply to represent suffering, but to transform and release it collectively through rhythm, movement, music, and performance. In this sense, Oh Tae-suk's adaptation may reflect not only Korea's historical experiences, but also a broader Korean performative tradition that seeks emotional release, reconciliation, and transformation through theatrical ritual.</p>
+
+        <p>However, Korean reinterpretations of <em>The Tempest</em> do not always foreground explicit postcolonial resistance. Instead, they often reshape Shakespeare through Korean aesthetics, rhythm, spirituality, performance traditions, and emotional structures. This suggests that Shakespeare changes not only according to political history, but also according to the cultural aesthetics and performative traditions of each society.</p>
+
+        <p>Recent Korean productions also demonstrate how Shakespeare continues to be reshaped through contemporary perspectives on identity and gender. In the National Theatre Company of Korea's 2025 production of <em>The Tempest</em>, Prospero was reimagined as the female character 'Prospera'.<sup>5</sup> Similarly, recent Korean adaptations of <em>Hamlet</em> have experimented with reversing or reconstructing traditional gender roles.<sup>6</sup> These reinterpretations reflect how contemporary theatre continues to question fixed identities and reinterpret classical texts through modern social concerns.</p>
+
+        <p>Ultimately, Shakespeare survives not because the plays remain unchanged, but because each culture repeatedly rediscovers and reshapes them through its own histories, rhythms, theatrical traditions, political realities, and audience experiences. Theatre is always influenced by the relationship between text, performers, audiences, and cultural context. Whether Shakespeare intended these meanings or not, modern audiences inevitably reinterpret the plays through the realities of their own time and place. Shakespeare therefore survives not as a fixed literary monument, but as a living performance tradition that continually transforms across different regions, generations, and historical moments.</p>
+
+        <h2><span class="section-num">Conclusion</span></h2>
+
+        <p><em>The Tempest</em> continues to generate new meanings because theatre is never experienced as a fixed or neutral text. Different audiences respond to Shakespeare through their own historical experiences, cultural backgrounds, political realities, and personal perspectives. As a result, Shakespeare's plays continually transform through reinterpretation, translation, adaptation, and performance. This process becomes especially visible in cross-cultural adaptations such as Oh Tae-suk's Korean reinterpretation of <em>The Tempest</em>. Rather than preserving Shakespeare literally, the production reshapes the play through Korean rhythm, spirituality, humour, oral tradition, and theatrical aesthetics. In doing so, it demonstrates how Shakespeare survives not as a fixed literary monument, but as a living performance tradition that changes across different cultures and historical periods.</p>
+
+        <p>At the same time, some recent Korean productions of Shakespeare appear to prioritise accessibility, entertainment, romance, humour, and emotional immediacy over deeper critical engagement with the plays' historical and political tensions. This tendency is understandable because Shakespeare is often perceived by Korean audiences as linguistically difficult, emotionally heavy, and closely associated with tragedy and elitist theatre culture. In particular, <em>The Tempest</em> is less widely known in Korea than Shakespeare's major tragedies, which may encourage productions to approach the play through more audience-friendly theatrical styles. Nevertheless, future reinterpretations may benefit from engaging more directly with the complex political, colonial, gendered, and ethical tensions that continue to exist within Shakespeare's works. Accessibility and critical interpretation do not necessarily have to oppose one another. Shakespeare's continued relevance may depend precisely on the ability of productions to balance entertainment, emotional accessibility, and critical reflection.</p>
+
+        <p>Certain moments in <em>The Tempest</em> may feel emotionally uncomfortable, disturbing, or unexpectedly personal to modern audiences in ways that Shakespeare himself may not have fully anticipated. In this sense, some scenes or images may function similarly to what Roland Barthes describes as a <em>punctum</em> — a detail that unexpectedly pierces or emotionally affects the viewer.<sup>7</sup> Although Barthes originally developed this concept in relation to photography, it may also help explain why Shakespeare continues to resonate so strongly in performance. Different audiences are affected by different moments depending on their own memories, emotions, identities, and historical experiences.</p>
+
+        <p>Perhaps the continued power of Shakespeare lies partly in the ability of his plays to affect audiences in deeply personal and unpredictable ways. In this sense, <em>The Tempest</em> survives not because its meanings remain stable, but because each generation continues to rediscover and reinterpret the play through its own historical, political, emotional, and cultural experiences.</p>
+
+    </article>
+
+    <article class="article-body lang-ko" lang="ko">
+
+        <div class="intro-block">
+            <p>셰익스피어를 현대 관객을 위해 '바꾸어야' 하는가? 이 질문은 고전 문학에서의 인종, 식민주의, 젠더, 재현에 관한 논의에서 점점 더 중요해지고 있습니다. 특히 《템페스트》는 많은 현대 관객에게 여전히 불편함을 주는 작품입니다.</p>
+            <p>이 에세이는 《템페스트》를 불편한 주제를 피하기 위해 단순히 '바꾸어서는' 안 된다고 주장합니다. 대신, 현대 관객은 정밀한 독해, 재해석, 그리고 공연을 통해 이 작품과 비판적으로 만나야 합니다.</p>
+        </div>
+
+        <p>셰익스피어가 이 희곡을 쓴 것은 사백 년도 더 전의 일이지만, 지배, 예속, 인종화된 타자성과 권력의 관계는 텍스트 안에 여전히 깊이 새겨져 있습니다. 특히 프로스페로의 캘리번에 대한 대우는 종종 식민 통제의 형태와 닮아 있으며, 아름다움, 문명, 도덕에 관한 이 희곡의 표현도 현대적 관점에서는 불편하게 느껴질 수 있습니다. 이러한 긴장감 때문에 《템페스트》는 식민주의, 인종, 젠더, 재해석에 관한 논의에서 중요한 텍스트가 되었습니다.</p>
+
+        <p>이 에세이는 먼저 프로스페로가 에어리얼과 캘리번에 대해 공포, 처벌, 조건부 자유를 통해 어떻게 권위를 행사하는지 살펴봅니다. 이어서 저항, 박탈, 도덕적 모호함의 복잡한 인물로서의 캘리번을 탐구합니다. 또한 미란다가 어떻게 식민주의적 태도와 아름다움, 덕성, 복종을 둘러싼 가부장적 이상 양쪽을 반영하는지도 살펴봅니다. 마지막으로 현대적 재해석들, 특히 오태석의 한국 각색 《템페스트》가 어떻게 다른 문화적·역사적·언어적·연극적 맥락을 통해 셰익스피어를 재형성하는지 검토합니다. 따라서 이 에세이는 재해석이 셰익스피어 공연의 예외가 아니라, 셰익스피어가 서로 다른 문화와 역사적 시기를 가로질러 지속적으로 살아남을 수 있는 이유 중 하나라고 제안합니다.</p>
+
+        <h2><span class="section-num">1</span> 식민 권력과 프로스페로</h2>
+
+        <p>현대의 탈식민주의적 관점에서 《템페스트》를 읽으면, 희곡 전체에 걸쳐 불편한 순간들이 많이 드러납니다. 특히 에어리얼과 캘리번에 대한 프로스페로의 대우는 그의 권위 뒤에 감춰진 폭력과 통제를 드러냅니다. 프로스페로는 지혜나 지식, 도덕적 우월성만으로 통치하는 것이 아니라, 공포, 처벌, 감정적 압박, 조건부 자유의 약속을 통해 권력을 유지합니다. 이 때문에 현대의 탈식민주의 비평가들은 프로스페로를 순수하게 현명하고 자애로운 인물로 그리는 이전의 해석에 이의를 제기합니다.</p>
+
+        <p>프로스페로의 에어리얼과의 관계는 이미 그의 권위의 통제적인 성격을 보여줍니다. 프로스페로는 자신을 에어리얼의 구원자로 제시하지만, 에어리얼에 대한 그의 대우는 평등이나 우정에 기반하지 않습니다. 에어리얼이 프로스페로가 약속한 자유를 요청하면, 프로스페로는 즉시 자신이 에어리얼을 구해낸 '고통'을 상기시킵니다. 에어리얼의 감사함은 반복적으로 계속된 봉사를 정당화하는 데 이용됩니다. 이런 의미에서 에어리얼에 대한 프로스페로의 권위는 마법뿐 아니라 기억, 의무, 죄책감, 공포에도 의존합니다. 이 관계의 위협적인 성격은 에어리얼이 자유를 계속 요청할 때 더욱 명확해집니다. 프로스페로는 폭력적인 협박으로 응수합니다:</p>
+
+        <blockquote>
+            "더 이상 불평한다면, 나는 참나무를 쪼개고<br>
+            네 놈을 그 매듭진 속에 가두어<br>
+            열두 겨울 동안 울부짖게 할 것이다."
+            <cite>(《템페스트》, I.2.192)</cite>
+        </blockquote>
+
+        <p>에어리얼이 나무 안에 갇히는 이 이미지는 프로스페로가 자신이 구해주었다고 주장하는 바로 그 처벌을 떠올리게 합니다. 에어리얼은 즉시 사과하고 '부드럽게' 복종하겠다고 약속하는데, 이는 그의 복종이 진정한 충성심이 아닌 협박을 통해 유지되고 있음을 보여줍니다.</p>
+
+        <p>프로스페로는 캘리번보다 에어리얼에게 더 온화하게 말하지만, 그의 권위는 여전히 강제에 의존합니다. 그는 미래의 해방 약속과 위협을 결합하여 복종을 확보하면서, 에어리얼의 자유를 반복적으로 미루며 계속 봉사를 요구합니다. 이것이 에어리얼의 최종 해방을 중요하지만 동시에 역설적으로 만듭니다. 극의 말미에서 프로스페로는 에어리얼에게 자유를 주지만, 에어리얼이 프로스페로의 명령을 완전히 이행한 후에야 그렇게 합니다. 에어리얼은 순종적이고 유용하며 세련되고 프로스페로의 계획에 충실하게 남아 있었기 때문에 보상받습니다. 이것은 캘리번과 중요한 대조를 이룹니다. 에어리얼은 영적이고 투명하며 순종적이고 조화와 연관되는 반면, 캘리번은 육체적이고 저항적이며 기괴하고 육체 노동과 연관됩니다 (《템페스트》, V.1.305-06).</p>
+
+        <p>이 폭력은 캘리번에 대한 프로스페로의 대우에서 더욱 명확해집니다. 프로스페로는 캘리번을 언어로 반복적으로 학대하고 비인간화하며, 그를 '독이 있는 노예', '마녀의 씨앗', '악마', 심지어 '흙덩이'라고 부릅니다 (I.2.194-97). 프로스페로의 권위도 노골적인 폭력 위협과 신체적 처벌을 통해 유지됩니다:</p>
+
+        <blockquote>
+            "만약 내가 명하는 것을 게을리하거나 내키지 않는 듯 행한다면,<br>
+            나는 낡은 경련으로 너를 고문하고,<br>
+            네 뼈를 온통 쑤시게 해,<br>
+            짐승들이 네 신음 소리에 떨게 만들겠다."
+            <cite>(《템페스트》, I.2.198)</cite>
+        </blockquote>
+
+        <p>에드워드 사이드가 주장하듯, 소위 '문명화된' 사회는 종종 자신들이 야만적이고 미개하거나 이질적이라고 여기는 이들과의 대립을 통해 스스로를 정의합니다.<sup>1</sup> 프로스페로의 권위는 언어와 교육으로도 확장됩니다. 캘리번의 유명한 말이 이 갈등을 분명히 드러냅니다:</p>
+
+        <blockquote>
+            "당신은 내게 언어를 가르쳤고, 그것으로 내가 얻은 것은<br>
+            욕하는 법을 안다는 것입니다."
+            <cite>(《템페스트》, I.2.198)</cite>
+        </blockquote>
+
+        <p>프로스페로와 미란다에게 언어는 문명과 향상을 의미합니다. 그러나 캘리번에게 그것은 지배의 상기물이자 저항의 도구가 됩니다. 극의 말미에서도 프로스페로의 용서는 제한적이고 선택적으로 나타납니다. 캘리번은 이 회복에서 대체로 배제된 채로 남습니다. 이 관점에서 프로스페로의 권위는 강제, 협박, 그리고 그의 지배하에 있는 이들에 대한 불평등한 대우에서 분리될 수 없습니다.</p>
+
+        <h2><span class="section-num">2</span> 캘리번, 식민주의, 그리고 도덕적 모호함</h2>
+
+        <p>《템페스트》의 가장 복잡한 측면 중 하나는 셰익스피어의 캘리번 표현입니다. 현대의 탈식민주의 비평은 종종 캘리번을 프로스페로에 의해 땅, 언어, 자유를 빼앗긴 피식민 주체의 형상으로 읽습니다. 그러나 셰익스피어는 캘리번을 순수한 무고한 희생자로 그리지 않습니다.</p>
+
+        <p>캘리번은 어머니 사이코랙스를 통해 섬이 원래 자신의 것이었다고 반복적으로 주장합니다:</p>
+
+        <blockquote>
+            "이 섬은 어머니 사이코랙스에게서 받은 내 것,<br>
+            당신이 내게서 빼앗았소."
+            <cite>(《템페스트》, I.2.195)</cite>
+        </blockquote>
+
+        <p>소유와 박탈의 언어는 식민지 점령과 통제의 구조를 강하게 반향합니다. 프로스페로는 문명, 교육, 도덕적 우월성의 언어를 통해 자신의 권위를 정당화합니다. 이러한 순간들은 유럽 열강이 교육, 문명화, 도덕적 향상이라는 주장을 통해 지배를 정당화했던 식민지 서사와 강하게 닮아 있습니다.</p>
+
+        <p>캘리번은 동시에 동물과 괴물의 이미지를 통해 반복적으로 묘사됩니다. 등장인물들은 그를 '괴물', '물고기', '달의 송아지' (II.2.230-35)라고 부릅니다. 이 언어는 식민지 담론에서 흔히 볼 수 있는 비인간화 과정을 반영합니다.</p>
+
+        <p>그러나 셰익스피어는 캘리번에 대한 단순한 탈식민주의적 독해를 복잡하게 만들기도 합니다. 프로스페로는 그가 미란다를 범하려 했다고 비난하는데, 중요하게도 캘리번은 이 비난을 부정하지 않습니다:</p>
+
+        <blockquote>
+            "오, 그랬으면 좋았을 것을;<br>
+            당신이 막았지만, 아니었다면<br>
+            이 섬을 캘리번들로 가득 채웠을 것이오."
+            <cite>(《템페스트》, I.2.197)</cite>
+        </blockquote>
+
+        <p>이 응수는 희곡 안에 깊은 도덕적 불편함을 만들어냅니다. 셰익스피어는 관객이 캘리번에게 무조건적으로 공감하는 것을 허용하지 않습니다. 그 결과, 셰익스피어는 완전히 악한 식민자와 순수한 희생자 사이의 단순한 대립을 구성하지 않습니다.</p>
+
+        <p>그러나 여러 순간에 셰익스피어는 캘리번에게 놀라운 시적·감정적 깊이도 부여합니다. 섬이 '소음으로 가득 차 있고, | 소리와 달콤한 공기가 있다' (III.2.254)는 그의 묘사는 다른 인물들이 그를 묘사하는 방식과 선명하게 대조되는 감수성과 서정적 아름다움을 드러냅니다.</p>
+
+        <p>아니아 룸바가 주장하듯, 《템페스트》를 전적으로 현대 유럽 식민주의의 단순 알레고리로 환원하는 것은 희곡의 역사적·문화적 복잡성을 지나치게 단순화할 위험이 있습니다.<sup>2</sup> 그럼에도 탈식민주의적 해석이 매우 영향력 있는 이유는, 현대 관객들이 프로스페로와 캘리번의 관계 안에서 박탈, 지배, 인종화, 저항의 형태를 계속 인식하기 때문입니다.</p>
+
+        <h2><span class="section-num">3</span> 미란다와 선택적 공감</h2>
+
+        <p>미란다는 종종 《템페스트》에서 가장 순수하고 자비로운 인물 중 하나로 제시됩니다. 그러나 희곡 안에서 그녀의 공감은 매우 선택적입니다. 그녀는 페르디난드를 즉각적으로 이상화하면서, 캘리번에게는 깊은 적대감과 혐오감을 표출합니다.</p>
+
+        <p>미란다는 페르디난드를 처음 만나는 순간부터 그의 외모를 고귀함, 아름다움, 도덕적 선과 연결시킵니다:</p>
+
+        <blockquote>
+            "그런 신전에 나쁜 것이 깃들 수 없어요."
+            <cite>(《템페스트》, I.2.204)</cite>
+        </blockquote>
+
+        <p>이와 대조적으로, 미란다의 캘리번을 향한 언어는 매우 적대적이고 비인간화하는 방식입니다. 그녀는 결국 그를 '비천한 종족'에 속하는 '혐오스러운 노예'라고 묘사합니다 (I.2.197). 따라서 미란다는 희곡 안에서 복잡한 위치를 차지합니다. 그녀 자신이 프로스페로의 권위에 의해 통제되고 가부장적 구조 안에서 기능하고 있음에도, 그녀는 캘리번을 향한 식민주의적 태도를 재생산합니다.</p>
+
+        <p>미란다는 또한 페미니즘적 관점에서도 해석할 수 있습니다. 그녀의 역할은 남성적 권위에 의해 크게 형성됩니다. 미란다 자신도 복종, 헌신, 자기희생을 통해 사랑을 자주 표현합니다:</p>
+
+        <blockquote>
+            "제가 원한다면 당신의 아내가 되겠어요…<br>
+            당신이 원하든 원치 않든 당신의 하인이 되겠어요."
+            <cite>(《템페스트》, III.1.245-246)</cite>
+        </blockquote>
+
+        <p>이러한 순간들은 순수함, 복종, 감정적 순진함, 남성 권위에 대한 헌신을 중심으로 하는 여성성에 관한 가부장적 이상을 반영합니다.</p>
+
+        <h2><span class="section-num">4</span> 《템페스트》의 현대적 재해석</h2>
+
+        <p>셰익스피어를 '바꾸어야' 하는가의 질문은 《템페스트》를 둘러싼 긴 재해석의 역사와 밀접하게 연결됩니다. 에메 세제르의 탈식민주의적 재창작 《어떤 폭풍》은 셰익스피어의 희곡이 변화하는 정치적·역사적 관점을 통해 어떻게 계속해서 재형성되는지를 보여줍니다.<sup>3</sup> 카리브해의 반식민 운동 시기에 글을 쓴 세제르는 캘리번을 훨씬 더 공개적으로 저항적이고 정치적으로 목소리를 내는 인물로 변환했습니다.</p>
+
+        <p>한국의 《템페스트》 각색들도 셰익스피어가 문화와 공연 전통을 가로질러 어떻게 변화하는지를 보여줍니다. 오태석의 각색에서 프로스페로는 한국의 무속적 영적 수행자에 가까운 인물이 되고, 섬은 가야와 신라의 갈등 시기 한반도 남쪽 해안으로 재상상됩니다. 마당극, 탈춤, 장단, 씻김굿과 같은 전통 한국 연극 형식들이 희곡의 폭풍, 정령, 초자연적 분위기를 재구성하는 데 사용됩니다.</p>
+
+        <figure class="essay-figure">
+            <img src="images/essays/tempest-fig1.jpg" alt="그림 1. 목화레퍼토리컴퍼니의 오태석 각색 《템페스트》 장면">
+            <figcaption>그림 1. 목화레퍼토리컴퍼니의 오태석 각색 《템페스트》 장면. 사진: 2DOHEE, London Korean Links 제공, 2010.</figcaption>
+        </figure>
+
+        <p>이 각색은 셰익스피어의 언어 자체도 변형합니다. 영어의 약강 5보격은 한국어로 직접 재현될 수 없기 때문에, 오태석은 한국의 리듬적 화법 패턴, 구술 반복, 민요 구조를 통해 희곡의 음악성을 재구성합니다.<sup>4</sup></p>
+
+        <div class="folk-verse">
+            <span class="folk-verse-ko">아리아리 수리수리 아라리요</span> (리듬적 민요 후렴)<br>
+            <span class="folk-verse-ko">아리랑 고개로 넘어간다</span>
+        </div>
+
+        <p>이 구절들은 엘리자베스 시대의 시보다 아리랑과 한국 민요의 리듬에 더 가깝습니다. 또한 많은 대화 부분들이 전통 한국 판소리와 민요 전통의 성악 리듬과 음악 스타일을 통해 재구성됩니다.</p>
+
+        <p>흥미롭게도, 이 공연이 한국의 영성, 리듬, 연극 미학을 통해 셰익스피어를 근본적으로 변형함에도 불구하고, 세제르의 재창작처럼 강하게 반식민적 정치 저항을 전면에 내세우지는 않습니다. 대신 오태석의 공연은 연극성, 의례적 에너지, 집단 움직임, 유머, 화해, 감정적 경험에 더 큰 강조점을 둡니다. 이 차이는 한국 자신의 식민화, 전쟁, 민족 분단의 역사를 고려할 때 특히 흥미롭습니다.</p>
+
+        <p>동시에, 많은 전통 한국 공연 문화는 역사적으로 한(恨)의 표현, 해방, 변환과 연결되어 있습니다. 씻김굿, 전통 노래, 탈춤, 민속 공연과 같은 의례들은 종종 고통을 단순히 표현하는 것이 아니라, 리듬, 움직임, 음악, 공연을 통해 집단적으로 변환하고 해방하려 합니다.</p>
+
+        <p>최근 한국 공연들도 셰익스피어가 현대적 관점을 통해 어떻게 계속 재형성되는지를 보여줍니다. 국립극단의 2025년 《템페스트》 공연에서 프로스페로는 여성 캐릭터 '프로스페라'로 재상상되었습니다.<sup>5</sup> 궁극적으로, 셰익스피어가 살아남는 것은 희곡들이 변하지 않았기 때문이 아니라, 각 문화가 자신의 역사, 리듬, 연극 전통을 통해 그것들을 반복적으로 재발견하고 재형성하기 때문입니다.</p>
+
+        <h2><span class="section-num">결론</span></h2>
+
+        <p>《템페스트》는 연극이 고정되거나 중립적인 텍스트로 경험되지 않기 때문에 계속해서 새로운 의미를 만들어냅니다. 서로 다른 관객들은 자신의 역사적 경험, 문화적 배경, 정치적 현실, 개인적 관점을 통해 셰익스피어에 반응합니다. 오태석의 한국적 《템페스트》 재해석은 셰익스피어가 고정된 문학적 기념물이 아닌, 서로 다른 문화와 역사적 시기를 가로질러 변화하는 살아있는 공연 전통으로 살아남는다는 것을 보여줍니다.</p>
+
+        <p>최근 한국의 셰익스피어 공연들은 희곡의 역사적·정치적 긴장감에 대한 더 깊은 비판적 참여보다 접근성, 오락, 감정적 즉각성을 우선시하는 경향이 있습니다. 그럼에도 불구하고, 미래의 재해석들은 셰익스피어 작품 안에 계속 존재하는 복잡한 정치적, 식민지적, 젠더화된, 윤리적 긴장감에 더 직접적으로 참여함으로써 이익을 얻을 수 있습니다. 접근성과 비판적 해석이 반드시 서로 대립할 필요는 없습니다.</p>
+
+        <p>아마도 셰익스피어의 지속적인 힘은 부분적으로 그의 희곡이 관객에게 깊이 개인적이고 예측 불가능한 방식으로 영향을 미치는 능력에 있을 것입니다. 롤랑 바르트가 <em>푼크툼</em>이라고 묘사한 것, 즉 감상자를 예상치 못하게 찌르거나 감정적으로 영향을 미치는 세부 사항처럼,<sup>7</sup> 서로 다른 관객들은 자신의 기억, 감정, 정체성, 역사적 경험에 따라 서로 다른 순간에 영향을 받습니다. 《템페스트》가 살아남는 것은 그 의미가 안정적이기 때문이 아니라, 각 세대가 자신의 경험을 통해 이 희곡을 계속 재발견하고 재해석하기 때문입니다.</p>
+
+    </article>
+
+    <section class="footnotes" aria-label="Notes">
+        <h3>Notes</h3>
+        <ol class="footnote-list">
+            <li><span class="fn-num">1</span><span>Edward W. Said, <em>Orientalism</em>, 25th anniversary edn (Knopf Doubleday Publishing Group, 2014), pp. 63–65.</span></li>
+            <li><span class="fn-num">2</span><span>Ania Loomba, <em>Shakespeare, Race, and Colonialism</em> (Oxford University Press, 2002), pp. 165–66.</span></li>
+            <li><span class="fn-num">3</span><span>Aimé Césaire, <em>A Tempest</em> (Alexander Street Press, 2010).</span></li>
+            <li><span class="fn-num">4</span><span>Oh Tae-suk, <em>The Tempest</em>, trans. and adapted script, MIT Global Shakespeares &lt;https://globalshakespeares.mit.edu/tempest-oh-tae-suk-2011/&gt; [accessed 21 May 2026].</span></li>
+            <li><span class="fn-num">5</span><span>National Theatre Company of Korea, 'The Tempest', &lt;https://www.ntck.or.kr/en/performance/info/257262&gt; [accessed 20 May 2026].</span></li>
+            <li><span class="fn-num">6</span><span>National Theatre Company of Korea, 'Hamlet', &lt;https://www.ntck.or.kr/en/performance/info/257006&gt; [accessed 20 May 2026].</span></li>
+            <li><span class="fn-num">7</span><span>Roland Barthes, <em>Camera Lucida: Reflections on Photography</em>, trans. by Richard Howard (Flamingo, 1984), p. 27.</span></li>
+        </ol>
+    </section>
+
+    <section class="bibliography" aria-label="Bibliography">
+        <h3>Bibliography</h3>
+        <p>Barthes, Roland, <em>Camera Lucida: Reflections on Photography</em>, trans. by Richard Howard (Flamingo, 1984)</p>
+        <p>Césaire, Aimé, <em>A Tempest</em> (Alexander Street Press, 2010)</p>
+        <p>Loomba, Ania, <em>Shakespeare, Race, and Colonialism</em> (Oxford University Press, 2002)</p>
+        <p>National Theatre Company of Korea, 'Hamlet', &lt;https://www.ntck.or.kr/en/performance/info/257006&gt; [accessed 20 May 2026]</p>
+        <p>National Theatre Company of Korea, 'The Tempest', &lt;https://www.ntck.or.kr/en/performance/info/257262&gt; [accessed 20 May 2026]</p>
+        <p>Oh, Tae-suk, <em>The Tempest</em>, trans. and adapted script, MIT Global Shakespeares, &lt;https://globalshakespeares.mit.edu/tempest-oh-tae-suk-2011&gt; [accessed 20 May 2026]</p>
+        <p>Shakespeare, William, <em>The Tempest</em>, ed. by Alden T. Vaughan and Virginia Mason Vaughan (Bloomsbury, 2014)</p>
+        <p>Said, Edward W., <em>Orientalism</em>, 25th anniversary edn (Knopf Doubleday Publishing Group, 2014)</p>
+    </section>
+
+    <div style="max-width:760px;margin:0 auto;padding:44px 0 8px;border-top:0.5px solid rgba(0,0,0,0.1);">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6f6f;margin-bottom:14px;">Elsewhere on this site · 사이트의 다른 곳</div>
+        <a href="theatre.html" style="display:block;max-width:620px;text-decoration:none;color:#1a1a1a;border:0.5px solid #d5d0c8;border-radius:8px;padding:20px 24px;background:#fff;">
+            <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7c3a36;margin-bottom:8px;">Practice · Nangman Theatre</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.25;margin-bottom:4px;">글에서 무대로 — 음악낭독극 연출</div>
+            <div style="font-size:13px;color:#5e5e5e;font-style:italic;font-family:'Cormorant Garamond',serif;">From page to stage — directing music-reading theatre&nbsp;&nbsp;→</div>
+        </a>
+        <p style="font-size:13px;color:#888780;margin-top:14px;max-width:620px;line-height:1.6;">The question this essay asks of a text on the page is the one I ask as a director of the same text on the stage.</p>
+    </div>
+
+    <div class="float-nav" aria-label="Essay navigation">
+        <a href="essay-2-hamlet.html">← Previous Essay</a>
+        <a href="essays.html">All Essays</a>
+    </div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+</body>
+</html>

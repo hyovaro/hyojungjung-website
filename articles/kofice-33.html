@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국예술종합학교–사우디 왕립전통예술학교, 전통 기반 창작 교육 협력 확대 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: 260px; object-fit: cover; display: block; border-radius: 2px; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-33.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="한국예술종합학교–사우디 왕립전통예술학교, 전통 기반 창작 교육 협력 확대 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-33.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="한국예술종합학교–사우디 왕립전통예술학교, 전통 기반 창작 교육 협력 확대 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">전통예술/교육협력 — Traditional Arts &amp; Educational Cooperation</p>
+                    <h1 class="article-title-ko">한국예술종합학교–사우디 왕립전통예술학교, 전통 기반 창작 교육 협력 확대</h1>
+                    <p class="article-title-en">Korea National University of Arts and Saudi Royal Institute of Traditional Arts Expand Tradition-Based Creative Education Partnership</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">25 February 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · February 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<h2>한국무용 교수진 파견된 왕립전통예술학교 안무 디플로마 과정</h2>
+
+<p>사우디 왕립전통예술학교(Royal Institute of Traditional Arts)는 전통예술의 체계적인 교육과 현대적 발전을 목표로 설립된 왕립 교육기관으로, 리야드 알푸타(Al Futah)에 위치해 있다. 이 기관은 '워르스(Wrth)'라는 브랜드명을 함께 사용하며, 이는 아랍어로 '유산'과 '계승'을 의미한다.</p>
+
+<div class="article-photo"><img src="kofice-33-images/img-01.jpg" alt="사우디 왕립전통예술학교 안무 전문 과정 — 출처: 사우디 왕립전통예술학교(Royal Institute of Traditional Arts) 웹사이트"></div>
+<p class="photo-caption">▲ 사우디 왕립전통예술학교(Royal Institute of Traditional Arts) 안무 전문 과정 — 출처: 사우디 왕립전통예술학교 웹사이트</p>
+
+<p>현재 운영 중인 안무 전문 과정은 2년(4학기)로 진행되며, 한국예술종합학교 무용원 한국무용 교수진들이 참여하고 있다. 이 과정은 전통 사우디 공연 양식을 바탕으로 움직임 구성과 안무, 공연 기획을 아우르며 이론과 실습을 병행한다. 학생들은 실제 무대 프로젝트에 참여해 창작과 협업 과정을 경험한다. 교육은 사우디 국적자를 대상으로 무료로 운영되며, 실기와 면접을 통해 선발한다. 현재는 남성 과정으로 운영되고 있다.</p>
+
+<h2>제도권 교육 협력으로 확대</h2>
+
+<p>양 기관의 교류는 2023년 사우디 무용수들이 한국예술종합학교를 방문하면서 본격화됐다. 당시 사우디 무용수 4명은 약 2주간 한예종에서 한국 전통무용을 배우고 공동 창작 작업에 참여했다. 이들이 참여한 작품은 같은 해 11월 26일부터 28일까지 리야드에서 열린 한–사우디 전통예술 공연 '만남' 무대에서 선보였다. 이러한 성과의 배경에는 김삼진 한국예술종합학교 무용원 학장이 이전부터 사우디 측과 전통무용 분야 교류를 이어온 점이 자리하고 있다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-33-images/img-02.jpg" alt="한–사우디 전통예술 협력 무용공연 '만남' 입구 — 출처: 통신원 촬영">
+    <img src="kofice-33-images/img-03.jpg" alt="한–사우디 전통예술 협력 무용공연 '만남' 공연 현장 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ 2023년 11월, 리야드에서 열린 한–사우디 전통예술 협력 무용공연 '만남(التقاء)' 현장 — 출처: 통신원 촬영</p>
+
+<p>이후 원격 수업을 통해 협력이 이어졌고, 2025년 11월부터는 한국예술종합학교 한국무용 교수진이 사우디 현지에 체류하며 직접 지도에 나서고 있다. 이에 따라 양 기관의 교류는 제도권 교육 협력 단계로 확대됐다. 최근 2월 16일 사우디 왕립전통예술학교에서는 약 3개월간의 훈련을 마무리하는 내부 발표 자리도 마련됐다. 외부에 공개된 공연은 아니었지만, 사우디 전통무용과 한국 전통무용을 결합한 창작 작품이 선보이며 교육 과정의 성과를 점검하는 계기가 됐다.</p>
+
+<h2>한국무용 전통 계승 방식, 사우디 교육 현장에 적용</h2>
+
+<p>한국과 사우디의 전통무용 교육 협력은 단순한 기술 전수를 넘어 전통을 계승하는 교육 방식의 교류라는 점에서 의미가 있다. 유럽과 미국, 러시아 등 오랜 무용 교육 전통을 지닌 국가들이 있음에도 사우디 측이 한국무용 교육 모델에 관심을 보였다는 점은 주목할 만하다. 한국무용은 전통을 보존하는 동시에 현대적 해석을 통해 동시대 예술로 발전해온 사례로 평가된다. 이러한 계승 구조는 자국 전통예술의 정체성을 유지하면서 현대화를 추진하고 있는 사우디의 문화 정책 방향과도 맞닿아 있다. 제도권 교육 협력으로 자리 잡아가고 있는 두 기관의 협력이 향후 어떤 성과로 이어질지 주목된다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>통신원 촬영</p>
+    <p>사우디 왕립전통예술학교(Royal Institute of Traditional Arts) 공식 웹사이트, <a href="https://wrth.edu.sa/en/" target="_blank" rel="noopener">wrth.edu.sa</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<h2>Korea National University of Arts Faculty Deployed to Royal Institute's Choreography Diploma Programme</h2>
+
+<p>The Royal Institute of Traditional Arts is a royal educational institution established with the aim of providing systematic education in traditional arts and fostering their contemporary development, located in the Al Futah district of Riyadh. The institution also operates under the brand name 'Wrth' — meaning 'heritage' and 'inheritance' in Arabic.</p>
+
+<div class="article-photo"><img src="kofice-33-images/img-01.jpg" alt="Royal Institute of Traditional Arts choreography programme — Source: Royal Institute of Traditional Arts website"></div>
+<p class="photo-caption">▲ Royal Institute of Traditional Arts choreography programme — Source: Royal Institute of Traditional Arts website</p>
+
+<p>The current Intermediate Diploma in Choreography runs over two years (four semesters), with faculty from the Korean Dance Department at the Korea National University of Arts (K-Arts) participating directly. The programme is built upon traditional Saudi performance forms and encompasses movement composition, choreography, and production planning, combining theory with practical training. Students participate in actual stage projects, gaining experience in creation and collaborative processes. The programme is offered free of charge to Saudi nationals and selects students through practical auditions and interviews. It currently operates as a men's programme.</p>
+
+<h2>Exchange Expands into Formal Institutional Cooperation</h2>
+
+<p>The exchange between the two institutions began in earnest in 2023, when Saudi dancers visited the Korea National University of Arts. At that time, four Saudi dancers spent approximately two weeks at K-Arts studying Korean traditional dance and participating in collaborative creative work. The resulting work was presented at <em>Encounter (만남 / التقاء)</em>, a Korea–Saudi traditional arts performance held in Riyadh from 26 to 28 November of that year. Underlying this achievement is the fact that Kim Sam-jin, Dean of the Korean Dance Department at K-Arts, had been cultivating exchange with the Saudi side in the field of traditional dance for some time prior.</p>
+
+<div class="photo-grid">
+    <img src="kofice-33-images/img-02.jpg" alt="Entrance to the Korea–Saudi traditional arts performance 'Encounter' — Source: correspondent's photograph">
+    <img src="kofice-33-images/img-03.jpg" alt="Stage of the Korea–Saudi traditional arts performance 'Encounter' — Source: correspondent's photograph">
+</div>
+<p class="photo-caption">▲ Korea–Saudi traditional arts collaborative performance <em>Encounter (만남 / التقاء)</em>, Riyadh, November 2023 — Source: correspondent's photograph</p>
+
+<p>Cooperation continued thereafter through remote classes, and from November 2025 Korean dance faculty from K-Arts have been residing in Saudi Arabia and providing instruction in person. As a result, the exchange between the two institutions has expanded into the stage of formal institutional educational cooperation. On 16 February, the Royal Institute of Traditional Arts held an internal presentation to mark the conclusion of approximately three months of training. Though not open to the public, the event showcased creative works combining Saudi traditional dance with Korean traditional dance, serving as an occasion to assess the outcomes of the educational programme.</p>
+
+<h2>Korea's Model of Preserving and Transmitting Traditional Dance Applied in Saudi Educational Settings</h2>
+
+<p>The Korea–Saudi traditional dance education partnership carries significance as an exchange not merely of technique but of the very approach to transmitting tradition. It is noteworthy that the Saudi side chose to engage with the Korean dance education model even amid countries with long-established dance education traditions — Europe, the United States, Russia and others. Korean dance is regarded as a case in which tradition has been preserved while simultaneously evolving into a contemporary art form through modern reinterpretation. This model of transmission resonates with Saudi Arabia's cultural policy direction of pursuing modernisation while maintaining the identity of its traditional arts. The question of what outcomes this partnership — now taking shape as formal institutional cooperation — will produce in the future merits close attention.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources &amp; Photo Credits</p>
+    <p>Photographs by correspondent</p>
+    <p>Royal Institute of Traditional Arts official website, <a href="https://wrth.edu.sa/en/" target="_blank" rel="noopener">wrth.edu.sa</a></p>
+</div>
+</div></div>
+
+    </div><!-- article-body -->
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <div class="float-nav">
+        <a href="kofice-32.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-34.html">Next →</a>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>

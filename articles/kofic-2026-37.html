@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년 사우디아라비아 영화산업 결산 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 780px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 40px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-ko h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 400; color: #1a1a1a; margin: 28px 0 12px; }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 40px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 28px 0 12px; }
+        .text-en em { font-style: italic; }
+        /* Tables */
+        .data-table-wrap { margin: 28px 0 8px; overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .data-table caption { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; text-align: left; margin-bottom: 8px; padding-bottom: 6px; }
+        .data-table th { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; font-weight: 500; padding: 8px 12px; border-bottom: 0.5px solid rgba(0,0,0,0.15); text-align: left; background: #ede9e2; white-space: nowrap; }
+        .data-table td { padding: 9px 12px; border-bottom: 0.5px solid rgba(0,0,0,0.07); color: #333; vertical-align: top; line-height: 1.6; }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:nth-child(even) td { background: rgba(0,0,0,0.018); }
+        .data-table td.rank { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; color: #7c3a36; text-align: center; width: 36px; }
+        .table-note { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-top: 6px; margin-bottom: 24px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 24px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 14px; font-weight: 400; color: #5e5e5e; margin: 16px 0 6px; letter-spacing: 0.04em; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 5px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofic-2026-37.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="2025년 사우디아라비아 영화산업 결산 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofic-2026-37.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2025년 사우디아라비아 영화산업 결산 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofic-logo.png" alt="KOFIC">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFIC</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">영화산업 — Film Industry</p>
+                    <h1 class="article-title-ko">2025년 사우디아라비아 영화산업 결산</h1>
+                    <p class="article-title-en">2025 Saudi Arabia Film Industry Year-End Review</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">22 May 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFIC 통신원리포트 2026_Vol.37 — Korea Film Council</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — KOFIC Saudi Arabia Guest Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFIC · May 2026 · Vol.37</span></div>
+
+        <!-- ═══════════════════════════════ KOREAN ═══════════════════════════════ -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<h2>1. 2025년 영화산업 개요</h2>
+
+<p>사우디 영화산업은 2016년 '비전 2030(Vision 2030)' 이후 국가 전략 산업으로 육성되기 시작했으며, 2018년 극장 상영 재개를 계기로 본격적인 시장 확대가 이루어졌다. 2025년 사우디 박스오피스 매출은 약 9억 2080만 사우디 리얄(약 3315억 원), 총 관객 수는 약 1880만 명을 기록하며 극장 재개 이후 최고 수준을 나타냈다. 또한 사우디는 최근 세계 박스오피스 시장 상위 15위권에 진입하며 중동 지역 핵심 영화 소비 시장으로 성장하고 있다.</p>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-01.jpg" alt="2020~2025년 사우디 극장 상영 영화 편수 추이 — 출처: 사우디 필름 커미션, 필자 재구성"></div>
+<p class="photo-caption">▲ 그림 1. 2020~2025년 사우디 극장 상영 영화 편수 추이 — 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>2020년 이후 사우디 극장 상영 영화 편수는 전반적인 증가 흐름을 보이고 있다. 2020년 279편이었던 상영 영화 수는 2022년 488편까지 확대되었으며, 2023년에는 437편으로 일시적 감소를 나타냈으나 이후 다시 증가세로 전환되었다. 2024년에는 504편, 2025년에는 538편을 기록하며 상영 영화 공급 규모가 지속적으로 확대되고 있다. 이러한 성장세는 정부의 문화산업 육성 정책과 극장 인프라 확대, 해외 영화 유입 증가 등이 복합적으로 작용한 결과로 분석된다.</p>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-02.jpg" alt="2018~2025년 사우디 영화관 매출 추이 — 출처: 사우디 필름 커미션, 필자 재구성"></div>
+<p class="photo-caption">▲ 그림 2. 2018~2025년 사우디 영화관 매출 추이 (단위: 백만 사우디 리얄) — 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-03.jpg" alt="2018~2025년 사우디 영화관 총 관객 수 추이 — 출처: 사우디 필름 커미션, 필자 재구성"></div>
+<p class="photo-caption">▲ 그림 3. 2018~2025년 사우디 영화관 총 관객 수 추이 (단위: 백만 명) — 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>영화산업이 공식적으로 개방되기 시작한 2018년부터 2025년까지의 사우디 박스오피스 매출 및 관객 수 추이를 살펴보면, 2018년 극장 상영 재개 이후 사우디 영화 시장은 빠르게 성장했으며 2020년 코로나19 영향으로 일시적 둔화를 겪은 뒤 2021년 이후 다시 회복세를 나타냈다. 이후 시장은 안정적인 성장 흐름을 유지하며 2025년 역대 최고 수준의 매출과 관객 수를 기록했다.</p>
+
+<p>현재 시장은 미국 영화 중심 구조가 강하게 유지되고 있으며, 이집트와 인도 영화 역시 주요 비중을 차지하고 있다. 반면 사우디 자국 영화는 개봉 편수 기준으로는 제한적이지만, 일부 흥행작을 중심으로 점진적인 성장세를 보이고 있다. 장르별로는 액션과 코미디 중심 상업영화 소비 비중이 높은 편이다.</p>
+
+<p>사우디 영화산업은 정부 주도의 정책 지원과 민간 투자 확대가 결합된 구조를 특징으로 한다. 사우디 필름 커미션(Saudi Film Commission)을 중심으로 제작 지원과 인력 양성, 국제 협력 확대 등이 추진되고 있으며, 최근에는 제작 기반 산업으로의 전환도 함께 시도되고 있다.</p>
+
+
+<h2>2. 극장 산업 구조 및 흥행 시장 분석</h2>
+
+<p>사우디아라비아 극장 산업은 상영 사업자 간 경쟁 구조와 빠른 인프라 확장을 바탕으로 시장 성장을 견인하고 있다. 2025년 기준 사우디 전역 10개 지역에 총 62개 극장과 603개 스크린이 운영되고 있으며, 극장과 스크린 수는 지속적으로 증가하며 관객 접근성이 크게 개선되었다. 영화 소비는 리야드를 중심으로 한 대도시에 집중되는 구조를 보이며, 지역 간 격차가 존재하는 특징을 나타낸다.</p>
+
+<p>한편, 프리미엄 상영관 확대는 극장 산업의 수익 구조 변화에도 영향을 미치고 있다. 특히 아이맥스(IMAX), 4DX, VIP 상영관 등 프리미엄 상영 서비스 확대와 함께 관람 경험 중심 소비가 강화되고 있다. 더불어 계절과 종교 행사에 따라 월별 흥행 흐름 역시 뚜렷한 변동성을 보이고 있다.</p>
+
+<h3>1) 주요 상영 사업자와 극장 소비 구조</h3>
+
+<p>사우디 영화관은 정부의 허가 및 규제 체계 하에서 운영되며, 복수의 사업자가 시장에 진입하는 형태를 보이고 있다. 주요 사업자로는 아랍에미리트 기반의 중동 최대 체인 복스 시네마스(VOX Cinemas), 사우디 현지 기업인 무비 시네마스(muvi Cinemas), 그리고 미국계 글로벌 체인인 에이엠씨 시네마스(AMC Cinemas) 등이 있다. 특히 무비 시네마스는 200개 이상의 스크린을 운영하며 가장 큰 규모를 형성하고 있으며, 복스 시네마스 역시 100개 이상의 스크린을 기반으로 주요 도시에서 확장하고 있다. 이 외에도 레바논 기반의 엠파이어 시네마스(Empire Cinemas)와 그랜드 시네마스(Grand Cinemas), 아랍에미리트의 릴 시네마스(Reel Cinemas) 등 중동 지역 사업자들이 함께 참여하며 경쟁 구도를 이루고 있다.</p>
+
+<p>영화 유통 측면에서는 워너 브라더스(Warner Bros.), 디즈니(Disney), 파라마운트(Paramount) 등 할리우드 메이저 스튜디오의 글로벌 배급망 영향력이 크게 나타나고 있다. 사우디 로컬 영화 유통에서는 카나와트 그룹(Qanawat Group) 등 현지 배급사의 역할도 확대되고 있다.</p>
+
+<p>사우디 영화관은 대부분 대형 쇼핑몰 내 복합문화공간 형태로 운영되고 있다. 영화관 주변에는 쇼핑 시설과 레스토랑, 카페, 대형마트, 볼링장, 아케이드 게임존 등 다양한 실내 여가시설이 함께 조성되어 있어 영화 관람은 가족·친구 단위의 복합 여가 활동과 함께 이루어지는 경향이 나타난다. 더불어 야간 중심 라이프스타일 영향으로 늦은 시간대 영화 관람 수요 역시 비교적 높은 편이다.</p>
+
+<p>요일별 평균 티켓 가격은 월요일이 약 41.4 사우디 리얄(약 1만 5천 원)로 가장 낮은 수준을 보이며 주말로 갈수록 가격이 상승하는 경향이 나타난다. 특히 토요일은 약 52.1 리얄(약 1만 9천 원)로 가장 높은 수준을 기록하며, 주말 수요 증가가 가격에 반영된 것으로 보인다. 프리미엄 상영은 약 75 리얄(약 2만 7천 원), 리클라이너 좌석(Lounger)은 약 80 리얄(약 2만 9천 원) 수준으로 운영되고 있으며, 무비 시네마스의 럭셔리 스위트(Luxury Suites) 좌석은 약 185 리얄(약 6만 7천 원)에 이른다.</p>
+
+<h3>2) 지역 분포 및 매출</h3>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>표 1 — 2025년 사우디아라비아 지역별 영화 매출액, 관객 수, 인구 수 (단위: 리얄, 명)</caption>
+<thead>
+<tr>
+    <th>지역</th>
+    <th>매출액</th>
+    <th>관객 수</th>
+    <th>인구 수</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>리야드(Riyadh)</td><td>4억 3440만 (약 1,600억 원)</td><td>800만</td><td>약 760만</td></tr>
+<tr><td>메카(Mecca)</td><td>2억 4190만 (약 870억 원)</td><td>520만</td><td>약 880만</td></tr>
+<tr><td>동부지역(Eastern Province)</td><td>1억 4340만 (약 520억 원)</td><td>320만</td><td>약 520만</td></tr>
+<tr><td>알 카심(Al Qassim)</td><td>2250만 (약 81억 원)</td><td>54만</td><td>약 150만</td></tr>
+<tr><td>메디나(Madinah)</td><td>2400만 (약 86억 원)</td><td>55만</td><td>약 220만</td></tr>
+<tr><td>아시르(Aseer)</td><td>2340만 (약 84억 원)</td><td>51만</td><td>약 230만</td></tr>
+<tr><td>타북(Tabuk)</td><td>970만 (약 35억 원)</td><td>28만</td><td>약 100만</td></tr>
+<tr><td>헤일(Hail)</td><td>790만 (약 28억 원)</td><td>24만</td><td>약 70만</td></tr>
+<tr><td>자잔(Jazan)</td><td>1160만 (약 42억 원)</td><td>27만</td><td>약 170만</td></tr>
+<tr><td>북부지역(Northern Borders)</td><td>220만 (약 8억 원)</td><td>6만</td><td>약 40만</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* 매출액: 1사우디 리얄 ≈ 360원 기준 환산. 인구 수: Worldometer 통계자료 참고. 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>지역별 매출과 관객 분포를 종합적으로 살펴보면, 영화 소비는 수도 리야드를 중심으로 한 대도시 집중 구조가 뚜렷하게 나타난다. 리야드는 전체 박스오피스 매출의 약 47%를 차지하며 시장을 주도하고 있으며, 메카(약 26%), 동부지역(약 15%)이 그 뒤를 잇는 구조를 보인다. 특히 상위 3개 지역이 전체 매출의 약 80% 이상을 차지하고 있어, 영화 소비가 특정 지역에 집중되는 경향이 강한 것으로 분석된다. 이 통계는 행정구역 단위로 집계되기 때문에 제다(Jeddah)와 같은 대도시의 영화 소비는 메카 지역에 함께 반영되었다.</p>
+
+<div class="article-photo" style="border: 1px solid #1a1a1a;"><img src="kofic-2026-37-images/fig-04.jpg" alt="2025년 월별 영화 매출 및 관객 수 추이 — 출처: 사우디 필름 커미션, 필자 재구성"></div>
+<p class="photo-caption">▲ 그림 4. 2025년 월별 영화 매출 및 관객 수 추이 — 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>2025년 월별 영화 매출을 보면, 7월 약 1억 2250만 사우디 리얄(약 440억 원)로 연중 최고치를 기록했고, 3월은 약 1490만 사우디 리얄(약 54억 원)로 가장 낮은 수준을 보였다. 전반적으로 여름철에 매출이 높고, 봄에는 낮은 흐름이 나타났다. 여름철에는 기온 상승으로 야외 활동이 줄고 실내 중심의 여가 활동이 늘어나면서 영화관 이용이 자연스럽게 증가하는 경향이 있다.</p>
+
+<p>반면 라마단(Ramadan) 기간이 포함된 3월에는 영화 관람 수요가 크게 줄어든다. 낮 동안 금식으로 외출이 감소하고, 저녁에는 이프타르(Iftar, 일몰 후 금식을 마치고 하는 식사)를 중심으로 가족 중심의 활동이 늘어나기 때문이다. 이 시기에는 종교적 분위기도 강해지면서 오락 소비 자체가 전반적으로 줄어드는 경향이 있다.</p>
+
+
+<h2>3. 2025년 주요 흥행작 분석</h2>
+
+<h3>1) 전체 상위 10위 흥행작 구성 분석</h3>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>표 2 — 2025년 사우디 영화 상위 10위 흥행작</caption>
+<thead>
+<tr>
+    <th>순위</th>
+    <th>작품명</th>
+    <th>국가</th>
+    <th>상영 기간</th>
+    <th>매출액</th>
+    <th>관객 수</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="rank">1</td><td>F1 더 무비</td><td>미국</td><td>19주</td><td>3910만 리얄 (약 140억 원)</td><td>65만 명</td></tr>
+<tr><td class="rank">2</td><td>릴로 &amp; 스티치</td><td>미국</td><td>27주</td><td>3680만 리얄 (약 132억 원)</td><td>85만 명</td></tr>
+<tr><td class="rank">3</td><td>알 자르파</td><td>사우디</td><td>24주</td><td>3070만 리얄 (약 111억 원)</td><td>73만 명</td></tr>
+<tr><td class="rank">4</td><td>엘 셀렘 와 엘 토반</td><td>이집트</td><td>7주</td><td>2990만 리얄 (약 108억 원)</td><td>54만 명</td></tr>
+<tr><td class="rank">5</td><td>샤밥 엘 봄 2</td><td>사우디</td><td>17주</td><td>2720만 리얄 (약 98억 원)</td><td>60만 명</td></tr>
+<tr><td class="rank">6</td><td>호발</td><td>사우디</td><td>16주</td><td>2460만 리얄 (약 89억 원)</td><td>58만 명</td></tr>
+<tr><td class="rank">7</td><td>미션 임파서블: 파이널 레코닝</td><td>미국</td><td>11주</td><td>2200만 리얄 (약 79억 원)</td><td>37만 명</td></tr>
+<tr><td class="rank">8</td><td>리스타트</td><td>이집트</td><td>8주</td><td>2080만 리얄 (약 75억 원)</td><td>41만 명</td></tr>
+<tr><td class="rank">9</td><td>귀멸의 칼날</td><td>일본</td><td>13주</td><td>2050만 리얄 (약 74억 원)</td><td>40만 명</td></tr>
+<tr><td class="rank">10</td><td>데인저러스 애니멀스</td><td>미국</td><td>15주</td><td>2020만 리얄 (약 73억 원)</td><td>44만 명</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* 환율: 1사우디 리얄 ≈ 360원 기준 환산. 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>2025년 사우디아라비아 박스오피스 상위 10위 흥행작을 살펴보면, 미국 영화가 높은 비중을 차지하며 시장을 주도하는 구조가 나타난다. 특히 &lt;F1 더 무비&gt;, &lt;릴로 &amp; 스티치&gt;, &lt;미션 임파서블: 파이널 레코닝&gt;, &lt;데인저러스 애니멀스&gt; 등 할리우드 작품이 다수 포함되어 있다.</p>
+
+<p>한편, 사우디 자국 영화 역시 상위권에 다수 진입하며 점진적인 성장세를 보이고 있다. &lt;알 자르파&gt;, &lt;샤밥 엘 봄 2&gt;, &lt;호발&gt;은 비교적 긴 상영 기간을 유지하며 안정적인 관객 수를 확보한 것으로 나타난다. 특히 이들 작품은 16주 이상 상영되며 일정 수준 이상의 관객 동원을 지속하고 있어, 자국 콘텐츠에 대한 관객 수요가 점차 확대되고 있는 흐름으로 해석할 수 있다.</p>
+
+<p>이집트 영화 또한 상위 10위 내에 포함되며 아랍권 콘텐츠의 영향력을 보여준다. 또한 일본 애니메이션 &lt;귀멸의 칼날&gt;이 포함된 점은 사우디 영화 시장이 다양한 국가의 콘텐츠를 수용하는 다층적인 소비 구조를 형성하고 있음을 시사한다.</p>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-05.jpg" alt="2025년 사우디아라비아 영화 제작국 기준 영화관 매출 점유율 — 출처: 사우디 필름 커미션, 필자 재구성"></div>
+<p class="photo-caption">▲ 그림 5. 2025년 사우디아라비아 영화 제작국 기준 영화관 매출 점유율 — 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>2025년 사우디아라비아 박스오피스 매출 점유율을 제작국 기준으로 살펴보면, 미국이 55.5%로 과반의 비중을 차지하며 시장을 주도하고 있다. 이어 이집트가 22.2%로 두 번째로 높은 비중을 차지하고 있으며, 사우디아라비아는 13.3%의 점유율을 기록하며 자국 영화의 존재감을 일정 수준 유지하고 있다. 인도(3.7%), 일본(2.9%), 영국(1.0%) 등 기타 국가 영화는 상대적으로 낮은 점유율을 보였다.</p>
+
+<p>특히 한국 영화는 2025년 제작국 기준 주요 점유율 국가에는 포함되지 못한 것으로 나타났다. 이는 한국 콘텐츠가 사우디 시장에서 OTT를 중심으로 인지도를 확대하고 있으나, 극장 상업영화 시장 내 영향력은 아직 제한적인 수준에 머물러 있음을 보여준다.</p>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>표 3 — 2025년 사우디아라비아 영화 제작국 기준 영화관 상영 편수</caption>
+<thead>
+<tr>
+    <th>순위</th>
+    <th>국가</th>
+    <th>영화 편수</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="rank">1</td><td>미국</td><td>213편</td></tr>
+<tr><td class="rank">2</td><td>인도</td><td>130편</td></tr>
+<tr><td class="rank">3</td><td>이집트</td><td>40편</td></tr>
+<tr><td class="rank">4</td><td>영국</td><td>30편</td></tr>
+<tr><td class="rank">5</td><td>일본</td><td>12편</td></tr>
+<tr><td class="rank">6</td><td>사우디아라비아</td><td>11편</td></tr>
+<tr><td class="rank">7</td><td>독일</td><td>9편</td></tr>
+<tr><td class="rank">8</td><td>중국</td><td>8편</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>국가별 영화 상영 편수를 보면 미국이 213편으로 가장 높은 비중을 차지하고 있으며, 이어 인도 130편, 이집트 40편 순으로 나타난다. 반면 인도 영화는 많은 편수가 개봉되고 있음에도 매출 점유율은 3.7%에 그쳐, 사우디 내 남아시아 노동 인구를 중심으로 한 특정 관객층 소비가 반영된 제한적인 시장 구조를 보인다. 사우디 자국 영화는 11편으로 상영 편수는 많지 않지만, 매출 점유율은 13.3%를 기록하며 상대적으로 높은 시장 영향력을 나타냈다.</p>
+
+<h3>2) 장르 및 관람 등급별 흥행 구조</h3>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-06.jpg" alt="2025년 사우디 영화 장르별 매출 점유율 — 출처: 사우디 필름 커미션, 필자 재구성"></div>
+<p class="photo-caption">▲ 그림 6. 2025년 사우디 영화 장르별 매출 점유율 — 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>표 4 — 2025년 사우디 영화관 장르별 매출, 상영 편수 및 주요 흥행작</caption>
+<thead>
+<tr>
+    <th>장르</th>
+    <th>매출 (백만 리얄)</th>
+    <th>상영 편수</th>
+    <th>주요 흥행작</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>액션</td><td>2억 9780만 (약 1072억 원)</td><td>136편</td><td>F1 더 무비</td></tr>
+<tr><td>코미디</td><td>2억 3770만 (약 856억 원)</td><td>73편</td><td>알 자르파</td></tr>
+<tr><td>공포</td><td>1억 1140만 (약 401억 원)</td><td>74편</td><td>데인저러스 애니멀스</td></tr>
+<tr><td>드라마</td><td>9630만 (약 347억 원)</td><td>99편</td><td>호발</td></tr>
+<tr><td>애니메이션</td><td>7140만 (약 257억 원)</td><td>63편</td><td>귀멸의 칼날</td></tr>
+<tr><td>어드벤처</td><td>5940만 (약 214억 원)</td><td>17편</td><td>릴로 &amp; 스티치</td></tr>
+<tr><td>기타</td><td>4680만 (약 168억 원)</td><td>76편</td><td>나우 유 씨 미: 나우 유 돈트</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>2025년 영화 장르별 매출 점유율을 살펴보면, 액션 장르가 32.3%로 가장 높은 비중을 차지하며 시장을 주도했다. 코미디 장르는 25.8%로 두 번째로 높은 비중을 기록했으며, &lt;알 자르파&gt;와 같은 사우디 자국 영화의 흥행이 주요 요인으로 작용했다. 드라마 장르는 99편으로 많은 상영 편수를 기록했으나, 매출 점유율은 10.5%에 머물렀다. 반면 어드벤처 장르는 17편으로 상영 편수는 적었으나 6.5%의 매출 점유율을 기록하며 비교적 높은 수익성을 나타냈다.</p>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>표 5 — 2025년 사우디 영화 관람 등급별 매출 및 관객 비중</caption>
+<thead>
+<tr>
+    <th>관람 등급</th>
+    <th>등급 설명</th>
+    <th>매출 비중</th>
+    <th>관객 수</th>
+    <th>상영 편수</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>G</td><td>전체 관람가</td><td>0.02%</td><td>6천 명</td><td>4편</td></tr>
+<tr><td>PG</td><td>보호자 지도 권장</td><td>10.5%</td><td>230만 명</td><td>61편</td></tr>
+<tr><td>PG12</td><td>12세 미만 보호자 지도 필요</td><td>10.2%</td><td>210만 명</td><td>22편</td></tr>
+<tr><td>PG15</td><td>15세 미만 보호자 지도 필요</td><td>13.4%</td><td>250만 명</td><td>55편</td></tr>
+<tr><td>R15</td><td>15세 미만 관람 불가</td><td>20.4%</td><td>360만 명</td><td>104편</td></tr>
+<tr><td>R18</td><td>18세 미만 관람 불가</td><td>45.4%</td><td>830만 명</td><td>292편</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>관람 등급별 흥행 구조를 살펴보면, 18세 미만 관람 불가(R18) 등급 영화가 전체 매출의 45.4%를 차지하며 가장 높은 비중을 기록했다. 이어 15세 미만 관람 불가(R15) 등급이 20.4%, 15세 미만 보호자 지도 필요(PG15) 등급이 13.4%를 기록하며 성인 및 청소년 이상 관객 중심의 소비 구조가 뚜렷하게 나타났다. 반면 전체 관람가(G) 영화의 비중은 0.02% 수준에 머물렀다.</p>
+
+<h3>3) 사우디 자국 영화의 성과</h3>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>표 6 — 2025년 사우디 자국 영화 상위 10위 흥행작</caption>
+<thead>
+<tr>
+    <th>순위</th>
+    <th>작품명</th>
+    <th>상영 기간</th>
+    <th>장르</th>
+    <th>매출</th>
+    <th>관객 수</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="rank">1</td><td>알 자르파</td><td>24주</td><td>코미디</td><td>3070만 리얄 (약 111억 원)</td><td>73만 명</td></tr>
+<tr><td class="rank">2</td><td>샤밥 엘 봄 2</td><td>17주</td><td>코미디</td><td>2720만 리얄 (약 98억 원)</td><td>60만 명</td></tr>
+<tr><td class="rank">3</td><td>호발</td><td>16주</td><td>드라마</td><td>2460만 리얄 (약 89억 원)</td><td>58만 명</td></tr>
+<tr><td class="rank">4</td><td>에사프</td><td>14주</td><td>코미디/액션</td><td>1870만 리얄 (약 67억 원)</td><td>38만 명</td></tr>
+<tr><td class="rank">5</td><td>시와르</td><td>12주</td><td>드라마</td><td>1090만 리얄 (약 39억 원)</td><td>25만 명</td></tr>
+<tr><td class="rank">6</td><td>파크르 알 수와이디</td><td>14주</td><td>코미디</td><td>680만 리얄 (약 24억 원)</td><td>15만 명</td></tr>
+<tr><td class="rank">7</td><td>라일 나하르</td><td>9주</td><td>코미디</td><td>390만 리얄 (약 14억 원)</td><td>8만 명</td></tr>
+<tr><td class="rank">8</td><td>알 가이드</td><td>5주</td><td>스릴러/어드벤처</td><td>210만 리얄 (약 8억 원)</td><td>6만 명</td></tr>
+<tr><td class="rank">9</td><td>사이피</td><td>4주</td><td>다크 코미디</td><td>32만 리얄 (약 1억 1천만 원)</td><td>8천 명</td></tr>
+<tr><td class="rank">10</td><td>카슈무</td><td>2주</td><td>코미디</td><td>28만 리얄 (약 1억 원 미만)</td><td>6천 명</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* 환율: 1사우디 리얄 ≈ 360원 기준 환산. 출처: 사우디 필름 커미션, 필자 재구성</p>
+
+<p>2025년 사우디 자국 영화 상위 10위 흥행작을 살펴보면, 일부 흥행작에 매출과 관객이 집중되는 구조가 뚜렷하게 나타났다. 특히 &lt;알 자르파&gt;는 약 3070만 리얄(약 111억 원)의 매출과 73만 명의 관객을 기록하며 가장 높은 흥행 성과를 거두었다. 이들 작품은 앞서 살펴본 전체 흥행작 상위 10위에도 포함되어 있으며, 할리우드 및 기타 국가 영화와의 경쟁 속에서도 의미 있는 성과를 거둔 사례로 평가된다.</p>
+
+<p>전반적으로 2025년 사우디 자국 영화 시장은 코미디 장르 중심의 제작 구조가 두드러졌다. 상위 10위 작품 가운데 절반 이상이 코미디 또는 코미디 기반 장르로 구성되어 있으며, 이는 가족 단위 관람과 대중적 오락 콘텐츠 선호가 강한 사우디 극장 시장 특성과 맞닿아 있다. 사우디 자국 영화는 제한적인 제작 편수에도 불구하고 일부 흥행작을 중심으로 시장 내 영향력을 확대하며 로컬 콘텐츠의 상업적 가능성을 입증했다.</p>
+
+
+<h2>4. 극장 외 흥행 (OTT·유료 TV·부가 시장)</h2>
+
+<p>사우디아라비아에서는 극장 산업 성장과 함께 OTT 중심의 영상 콘텐츠 소비 역시 빠르게 확대되고 있다. 높은 인터넷 보급률과 스마트폰 사용률, 젊은 인구 구조를 바탕으로 스트리밍 서비스 이용이 증가하면서 영화 소비 방식 역시 변화하고 있다.</p>
+
+<p>현재 사우디 OTT 시장은 넷플릭스(Netflix), 디즈니플러스(Disney+), 아마존 프라임 비디오(Amazon Prime Video)와 같은 글로벌 플랫폼과 샤히드(Shahid), 스타즈플레이(Starzplay) 등 중동 지역 플랫폼이 경쟁 구도를 형성하고 있다.</p>
+
+<p>옴디아(Omdia)에 따르면 2025년 중동·북아프리카(MENA) 온라인 동영상 시장 규모는 약 15억 달러에 이를 것으로 전망되며, 구독형 OTT 가입자 수 역시 2700만 명을 넘어설 것으로 예상된다. 특히 중동 주요 미디어 그룹 MBC 산하 OTT 플랫폼인 샤히드는 약 440만 명의 가입자를 확보하며 지역 대표 OTT 플랫폼 가운데 하나로 자리 잡고 있다.</p>
+
+<p>극장에서는 할리우드 블록버스터와 프리미엄 상영 중심 소비가 이루어지는 반면, OTT에서는 중소규모 영화와 장르 영화, 시리즈 콘텐츠 소비가 활발하게 이루어지고 있다. 과거 위성방송과 DVD 중심이었던 영화 부가 시장은 최근 IPTV·VOD·모바일 스트리밍 중심으로 빠르게 재편되고 있으며, 온라인 플랫폼을 통한 영화 소비 비중도 꾸준히 증가하는 추세다.</p>
+
+<p>한국 영화가 아직 사우디 극장 시장에서 큰 비중을 차지하지 못하는 것과 달리 OTT 환경에서는 점차 소비가 확대되고 있다. 특히 넷플릭스를 중심으로 한국 영화가 꾸준히 공개되면서 사우디 관객과의 접점도 늘어나고 있다. 실제로 2025년 넷플릭스 사우디아라비아 주간 순위에서는 한국 영화가 영화 부문 상위 10위권에 반복적으로 진입하는 사례가 나타났다. 샤히드에서도 일부 한국 콘텐츠가 아랍어 자막과 함께 제공되고 있으며, 현재는 드라마 중심 콘텐츠가 주로 제공되고 있지만 한국 콘텐츠 전반에 대한 인지도 확대는 향후 한국 영화 유통 확대에도 긍정적인 영향을 미칠 수 있다.</p>
+
+
+<h2>5. 정부지원 및 국제협력 현황</h2>
+
+<h3>1) 정부 지원 및 제작 인프라 확대</h3>
+
+<p>사우디는 정부 지원과 대규모 문화 인프라 투자를 바탕으로 촬영 인프라와 제작 지원, 글로벌 협력 확대를 함께 추진하며 중동 지역의 새로운 콘텐츠 제작 거점으로 성장하고 있다. 촬영·후반작업·VFX·사운드 등 전문 인력은 여전히 해외 인력 의존도가 높은 편으로, 워크숍과 제작 지원 사업, 신인 영화인 육성 프로그램 등을 통해 자국 영화산업 기반 확대에 집중하고 있다.</p>
+
+<p>사우디 정부는 해외 촬영 유치와 제작 인프라 확대에도 적극적으로 투자하고 있다. 대표적으로 네옴(NEOM)과 알울라(AlUla)는 국제 촬영지로 개발되며 해외 영화와 드라마 촬영 유치에 활용되고 있다. 이와 함께 사우디 필름 커미션은 자국 영화 제작 활성화를 위해 다우 필름 컴페티션(Daw' Film Competition)과 같은 제작 지원 프로그램도 운영하고 있다. 2025년 사우디 전체 박스오피스 흥행 순위 6위를 기록한 사우디 자국영화 &lt;호발&gt; 역시 해당 프로그램 선정작 가운데 하나로, 네옴의 촬영 인프라와 제작 지원을 기반으로 제작되었다.</p>
+
+<p>또한 사막과 해안, 미래형 도시 환경 등 다양한 로케이션을 기반으로 글로벌 제작사들의 관심이 확대되고 있으며, 사우디 정부는 해외 제작 유치를 위해 최대 40% 수준의 현금 리베이트(cash rebate) 정책도 운영하고 있다.</p>
+
+<p>사우디 대표 촬영 허브 가운데 하나로 성장하고 있는 필름 알울라(Film AlUla)는 촬영 허가 지원과 로케이션 제공, 제작 인센티브 등을 운영하며 국제 영화와 OTT 콘텐츠 제작 유치 확대에 나서고 있다. 리야드의 잭스 디스트릭트(JAX District)에는 사운드 스테이지와 버추얼 프로덕션 시설 등을 포함한 잭스 필름 스튜디오(Jax Film Studios)가 현재 조성되고 있으며, 리야드 인근 초대형 엔터테인먼트 도시인 키디야(Qiddiya)에서도 플레이메이커 스튜디오(PlayMaker Studios) 설립이 진행 중이다.</p>
+
+<p>한편, 2025년에는 기존 상업영화 중심 구조 속에서 씨네하우스(Cinehouse)와 같은 아트하우스 상영 공간 확대가 이루어지는 등 상영 문화가 점차 다양화되고 있음을 시사하는 움직임도 나타났다.</p>
+
+<h3>2) 국제 영화제 및 해외 협력</h3>
+
+<p>사우디아라비아는 국제 영화제와 글로벌 콘텐츠 협력을 통해 영화산업의 국제 네트워크를 빠르게 확대하고 있다. 대표적으로 레드씨국제영화제(Red Sea International Film Festival, RSIFF)는 2021년 출범 이후 중동·북아프리카(MENA) 지역을 대표하는 국제 영화제로 성장하며 사우디 영화산업의 핵심 플랫폼 역할을 하고 있다. 영화제는 제다의 유네스코 세계문화유산 지역인 알 발라드(Al-Balad) 일대에서 개최되며, 국제 영화 상영과 산업 교류 프로그램을 함께 운영하고 있다.</p>
+
+<p>RSIFF는 단순 영화 상영을 넘어 투자·제작·배급·교육이 결합된 산업 플랫폼으로 기능하고 있다. 영화제 기간 운영되는 '레드씨 수크(Red Sea Souk)'에서는 글로벌 투자사와 제작사, 영화인 간 네트워킹과 공동제작 논의가 이루어지고 있다. 최근에는 할리우드 배우와 글로벌 영화인들의 참여도 크게 늘어나고 있다. 2025년 RSIFF에는 앤서니 홉킨스, 아드리엔 브로디, 제시카 알바, 대런 아로노프스키 감독 등 세계 영화인들이 참석했다.</p>
+
+<p>사우디는 최근 미국·유럽 중심 협력을 넘어 아시아 영화 시장과의 교류도 확대하고 있다. 2025년 사우디 필름 페스티벌에서는 일본 쇼트쇼츠 국제단편영화제 &amp; 아시아(Short Shorts Film Festival &amp; Asia)와 협력 프로그램이 운영되었으며, 사우디 필름 커미션은 베이징국제영화제와 상하이국제영화제에도 참가해 중국 시장과의 협력 확대에 나섰다.</p>
+
+<p>이와 함께 2025년에는 한국과 사우디의 영화·문화 교류 역시 점차 확대되었다. 특히 2025년 1월 리야드 씨네하우스에서는 사우디 필름 커미션과 영화진흥위원회(KOFIC)가 공동으로 '한국영화주간(Korean Film Week)' 행사를 개최하였다. 행사에서는 &lt;기생충&gt;, &lt;거미집&gt; 등 한국영화 특별전과 함께 '한국영화의 글로벌 경쟁력'을 주제로 한 대담 및 세미나도 진행되었다.</p>
+
+<p>이어 리야드에서 열린 조이 포럼(Joy Forum)에는 배우 이정재와 이병헌, 윤제균 감독 등이 참석해 글로벌 콘텐츠 산업과 영화 협력을 주제로 한 포럼이 진행되었다. 같은 해 RSIFF 경쟁 부문에는 윤가은 감독의 &lt;세계의 주인(The World of Love)&gt;이 공식 초청되었으며, 배우 서수빈은 해당 작품으로 여우주연상을 수상했다.</p>
+
+
+<h2>6. 향후 전망과 과제</h2>
+
+<p>사우디아라비아 영화산업은 2018년 극장 상영 재개 이후 빠른 성장세를 이어가며 중동 지역 핵심 영화 시장으로 자리 잡고 있다. 박스오피스 매출과 관객 수는 지속적으로 증가하고 있으며, 정부 지원과 제작 인프라 확대가 이루어지는 가운데 OTT 시장도 성장하고 있다. 특히 2025년에는 사우디 자국영화의 박스오피스 점유율과 흥행 사례가 확대되며 로컬 콘텐츠의 성장 가능성이 한층 뚜렷해졌다.</p>
+
+<p>다만 현재 사우디 영화산업은 여전히 해결해야 할 과제도 안고 있다. 극장 시장은 여전히 할리우드 중심 구조가 강하며, 자국 영화의 제작 편수와 시장 규모는 아직 제한적인 수준에 머물러 있다. 영화 제작 인력과 전문 기술 인력 부족 문제 역시 여전히 지적되고 있으며, 지역 간 영화 소비와 극장 인프라 격차 역시 여전히 나타나고 있다. 또한 문화·종교적 기준에 따른 심의와 편집이 중요한 요소로 작용하고 있으며, 일부 해외 영화는 극장 상영 과정에서 성인 장면이나 민감한 표현이 편집되는 사례도 나타나고 있다.</p>
+
+<p>한국영화는 사우디 극장 시장 내에서는 아직 제한적인 규모에 머물러 있으나, OTT 플랫폼과 영화제·문화 행사를 중심으로 접점이 점차 확대되고 있다. 특히 2026년 6월 26일부터 7월 2일까지 아람코(Aramco)가 설립한 킹 압둘아지즈 세계문화센터인 이쓰라(Ithra)에서 열리는 제12회 사우디 필름 페스티벌에서는 부산국제영화제(BIFF)와 협력한 한국영화 특별전과 단편영화 상영 프로그램도 예정되어 있어, 향후 양국 영화산업 간 교류도 더욱 확대될 것으로 기대된다.</p>
+
+<p>종합적으로 볼 때 사우디 영화산업은 소비 중심 시장에서 제작·투자 중심 산업으로 전환을 시도하는 과도기 단계에 있으며, 정부 지원과 제작 인프라 확대, 국제 협력 강화를 바탕으로 중동 지역 콘텐츠 산업의 주요 거점으로 성장해 나갈 것으로 전망된다.</p>
+
+<div class="sources">
+<p class="sources-label">참고문헌</p>
+<h3>단행본·보고서</h3>
+<p>Donovan Vanderbilt. (2026). <em>Film Industry Saudi Arabia 2025: Production and Market Overview.</em> Vision2030.</p>
+<p>Renub Research. (2026). <em>Saudi Arabia Cinema Market Forecast Report.</em> Renub Research.</p>
+<p>Saudi Film Commission. (2026). <em>Saudi Box Office Report – 2025.</em> Saudi Film Commission.</p>
+<h3>신문·잡지</h3>
+<p>BroadcastPro. (2026.4.16.). Saudi Film Commission reports $245m box office as local films surge in 2025. <a href="https://www.broadcastprome.com/news/analyst-reports/saudi-film-commission-reports-245m-box-office-as-local-films-surge-in-2025/" target="_blank" rel="noopener">broadcastprome.com</a></p>
+<p>Omdia. (2025.5.13.). SVOD growth to drive MENA streaming market past $1.5 billion in 2025. <a href="https://omdia.tech.informa.com/pr/2025/may/svod-growth-to-drive-mena-streaming-market-past-1point5-billion-dollars-in-2025/" target="_blank" rel="noopener">omdia.tech.informa.com</a></p>
+<p>Red Sea International Film Festival. (2025.12.12.). Red Sea International Film Festival Presents 2025 Closing Night and Yusr Awards. <a href="https://redseafilmfest.com/en/press/red-sea-international-film-festival-presents-2025-closing-night-and-yusr-awards/" target="_blank" rel="noopener">redseafilmfest.com</a></p>
+<p>Saudi Press Agency. (2025.4.18.). Saudi Film Commission showcases Saudi cinema at Beijing International Film Festival. <a href="https://www.spa.gov.sa/en/N2301636/" target="_blank" rel="noopener">spa.gov.sa</a></p>
+<p>Saudi Press Agency. (2025.6.12.). Film Commission highlights creative and commercial potential at Shanghai International Film Festival. <a href="https://www.spa.gov.sa/en/N2338863" target="_blank" rel="noopener">spa.gov.sa</a></p>
+<p>Saudi Press Agency. (2025.1.19.). Korean Film Week Kicks Off in Riyadh. <a href="https://spa.gov.sa/en/N2246288/" target="_blank" rel="noopener">spa.gov.sa</a></p>
+<p>Time Out Riyadh. (2025.11.11.). JAX Film Studios launches virtual production platform. <a href="https://www.timeoutriyadh.com/movies/movies-news/jax-film-studios-in-riyadh/" target="_blank" rel="noopener">timeoutriyadh.com</a></p>
+<p>Time Out Riyadh. (2025.10.13.). JOY Forum returns to Riyadh Season 2025. <a href="https://www.timeoutriyadh.com/news/joy-forum-2025-riyadh-season/" target="_blank" rel="noopener">timeoutriyadh.com</a></p>
+<h3>인터넷 사이트</h3>
+<p>Film AlUla — <a href="https://filming.experiencealula.com" target="_blank" rel="noopener">filming.experiencealula.com</a></p>
+<p>Netflix Saudi Arabia Top10 — <a href="https://www.netflix.com/tudum/top10/saudi-arabia" target="_blank" rel="noopener">netflix.com/tudum/top10/saudi-arabia</a></p>
+<p>Qiddiya Film Studio — <a href="https://qiddiya.com/qiddiya-city/assets/playmaker-studios/" target="_blank" rel="noopener">qiddiya.com</a></p>
+<p>Red Sea International Film Festival — <a href="https://redseafilmfest.com/en/" target="_blank" rel="noopener">redseafilmfest.com</a></p>
+<p>Saudi Film Commission — <a href="https://film.moc.gov.sa/en/Film-Saudi/" target="_blank" rel="noopener">film.moc.gov.sa</a></p>
+<p>Saudi Film Commission, Daw Film Competition — <a href="https://film.sa/daw/" target="_blank" rel="noopener">film.sa/daw</a></p>
+<p>Saudipedia, Hobal Film — <a href="https://saudipedia.com/en/hobal-film/" target="_blank" rel="noopener">saudipedia.com</a></p>
+</div>
+</div></div>
+
+        <!-- ═══════════════════════════════ ENGLISH ═══════════════════════════════ -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<h2>1. Overview of the 2025 Film Industry</h2>
+
+<p>The Saudi film industry began to be cultivated as a national strategic industry following Vision 2030 in 2016, and with the resumption of theatrical screenings in 2018, the market began to expand in earnest. In 2025, Saudi Arabia's box office revenue reached approximately SAR 920.8 million (approximately KRW 331.5 billion), with total admissions of around 18.8 million — the highest figures since cinemas reopened. Saudi Arabia has recently entered the top 15 of global box office markets, establishing itself as the core film consumption market in the Middle East.</p>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-01.jpg" alt="Number of Films Screened in Saudi Cinemas 2020–2025 — Source: Saudi Film Commission"></div>
+<p class="photo-caption">▲ Figure 1. Number of films screened in Saudi cinemas, 2020–2025 — Source: Saudi Film Commission, reconstructed by the author</p>
+
+<p>Since 2020, the number of films screened in Saudi cinemas has shown a general upward trend. The count rose from 279 titles in 2020 to 488 in 2022, dipped temporarily to 437 in 2023, then resumed growth — reaching 504 in 2024 and 538 in 2025. This growth reflects the combined effect of government cultural industry policies, expanding cinema infrastructure, and increasing inflows of foreign films.</p>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-02.jpg" alt="Saudi Cinema Revenue Trend 2018–2025 — Source: Saudi Film Commission"></div>
+<p class="photo-caption">▲ Figure 2. Saudi cinema revenue trend, 2018–2025 (unit: million SAR) — Source: Saudi Film Commission, reconstructed by the author</p>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-03.jpg" alt="Saudi Cinema Total Admissions Trend 2018–2025 — Source: Saudi Film Commission"></div>
+<p class="photo-caption">▲ Figure 3. Saudi cinema total admissions trend, 2018–2025 (unit: million) — Source: Saudi Film Commission, reconstructed by the author</p>
+
+<p>Looking at the box office revenue and admissions trend from 2018 — when the market officially opened — through 2025: the Saudi film market grew rapidly after cinemas reopened in 2018, experienced a temporary slowdown due to COVID-19 in 2020, then recovered from 2021 onward. The market has since maintained stable growth, recording all-time highs in both revenue and admissions in 2025.</p>
+
+<p>The market continues to be dominated by American films, with Egyptian and Indian films also holding significant shares. Saudi domestic films are limited in terms of the number of releases, but have shown gradual growth centred on certain breakout hits. Action and comedy are the dominant commercial genres by consumption share.</p>
+
+<p>The Saudi film industry is characterised by a structure combining government-led policy support with expanding private investment. The Saudi Film Commission leads efforts in production support, workforce development, and international cooperation, while a transition toward a production-based industry is also underway.</p>
+
+
+<h2>2. Cinema Industry Structure and Box Office Market Analysis</h2>
+
+<p>Saudi Arabia's cinema industry is driving market growth on the back of competitive dynamics among exhibitors and rapid infrastructure expansion. As of 2025, 62 cinemas and 603 screens operate across 10 regions nationwide, and cinema and screen counts continue to increase, greatly improving audience accessibility. Film consumption is concentrated in major cities, particularly Riyadh, with notable regional disparities.</p>
+
+<p>The expansion of premium screens is also influencing changes in the revenue structure of the cinema industry. Premium screening services — including IMAX, 4DX, and VIP auditoriums — are expanding alongside growing experience-centred consumption. Monthly box office trends also show marked volatility driven by seasonal factors and religious observances.</p>
+
+<h3>1) Major Exhibitors and Cinema Consumption Patterns</h3>
+
+<p>Saudi cinemas operate under government licensing and regulatory frameworks, with multiple operators competing in the market. Major players include VOX Cinemas (the Middle East's largest chain, based in the UAE), muvi Cinemas (a local Saudi company), and AMC Cinemas (a US global chain). muvi Cinemas operates over 200 screens and holds the largest footprint; VOX Cinemas is expanding in major cities with over 100 screens. Other regional operators — Lebanon-based Empire Cinemas and Grand Cinemas, and UAE-based Reel Cinemas — complete a competitive landscape.</p>
+
+<p>In film distribution, the global reach of Hollywood majors — Warner Bros., Disney, Paramount — is strongly felt. In local Saudi film distribution, regional distributors such as Qanawat Group are playing an increasingly significant role.</p>
+
+<p>Most Saudi cinemas operate as multiplex entertainment complexes within large shopping malls, situated alongside retail, restaurants, cafés, supermarkets, bowling alleys, and arcade game zones. Filmgoing thus tends to be part of family or group leisure outings. A night-oriented lifestyle means late-evening screenings also attract considerable demand.</p>
+
+<p>Average ticket prices by day of the week range from approximately SAR 41.4 (around KRW 15,000) on Monday — the lowest — rising towards the weekend. Saturday is the highest at around SAR 52.1 (approximately KRW 19,000). Premium screenings run at approximately SAR 75 (KRW 27,000) and Lounger seats at around SAR 80 (KRW 29,000), while muvi Cinemas' Luxury Suites reach approximately SAR 185 (KRW 67,000).</p>
+
+<h3>2) Regional Distribution and Revenue</h3>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>Table 1 — 2025 Saudi Arabia Box Office Revenue, Admissions and Population by Region</caption>
+<thead>
+<tr>
+    <th>Region</th>
+    <th>Revenue</th>
+    <th>Admissions</th>
+    <th>Population</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Riyadh</td><td>SAR 434.4M (approx. KRW 156.4B)</td><td>8.0M</td><td>approx. 7.6M</td></tr>
+<tr><td>Mecca</td><td>SAR 241.9M (approx. KRW 87.1B)</td><td>5.2M</td><td>approx. 8.8M</td></tr>
+<tr><td>Eastern Province</td><td>SAR 143.4M (approx. KRW 51.6B)</td><td>3.2M</td><td>approx. 5.2M</td></tr>
+<tr><td>Al Qassim</td><td>SAR 22.5M (approx. KRW 8.1B)</td><td>540K</td><td>approx. 1.5M</td></tr>
+<tr><td>Madinah</td><td>SAR 24.0M (approx. KRW 8.6B)</td><td>550K</td><td>approx. 2.2M</td></tr>
+<tr><td>Aseer</td><td>SAR 23.4M (approx. KRW 8.4B)</td><td>510K</td><td>approx. 2.3M</td></tr>
+<tr><td>Tabuk</td><td>SAR 9.7M (approx. KRW 3.5B)</td><td>280K</td><td>approx. 1.0M</td></tr>
+<tr><td>Hail</td><td>SAR 7.9M (approx. KRW 2.8B)</td><td>240K</td><td>approx. 0.7M</td></tr>
+<tr><td>Jazan</td><td>SAR 11.6M (approx. KRW 4.2B)</td><td>270K</td><td>approx. 1.7M</td></tr>
+<tr><td>Northern Borders</td><td>SAR 2.2M (approx. KRW 0.8B)</td><td>60K</td><td>approx. 0.4M</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* Revenue converted at approx. SAR 1 ≈ KRW 360. Population: Worldometer statistics. Source: Saudi Film Commission, reconstructed by the author.</p>
+
+<p>Looking at the regional revenue and admissions distribution, film consumption is clearly concentrated in major cities centred on Riyadh. Riyadh accounts for approximately 47% of total box office revenue, followed by Mecca (approx. 26%) and the Eastern Province (approx. 15%). The top three regions together account for over 80% of total revenue. Note that as the data is aggregated by administrative region, major city consumption — such as that from Jeddah — is captured within the Mecca region figure.</p>
+
+<div class="article-photo" style="border: 1px solid #1a1a1a;"><img src="kofic-2026-37-images/fig-04.jpg" alt="Monthly Box Office Revenue and Admissions Trend 2025 — Source: Saudi Film Commission"></div>
+<p class="photo-caption">▲ Figure 4. Monthly box office revenue and admissions trend, 2025 — Source: Saudi Film Commission, reconstructed by the author</p>
+
+<p>Looking at monthly box office revenue for 2025, July recorded the year's highest at approximately SAR 122.5 million (around KRW 44.1 billion), while March was the weakest at approximately SAR 14.9 million (around KRW 5.4 billion). Revenue is generally higher in summer and lower in spring. In summer, rising temperatures reduce outdoor activity and increase indoor leisure, naturally boosting cinema attendance.</p>
+
+<p>By contrast, March — which includes the Ramadan period — sees a significant decline in cinema demand. Daytime fasting reduces outings, while evenings centre on iftar (the post-sunset meal) and family-oriented activities. The prevailing religious atmosphere also tends to reduce entertainment consumption broadly during this period.</p>
+
+
+<h2>3. Analysis of 2025's Major Box Office Hits</h2>
+
+<h3>1) Top 10 Overall Box Office Breakdown</h3>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>Table 2 — Top 10 Box Office Films in Saudi Arabia, 2025</caption>
+<thead>
+<tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Country</th>
+    <th>Run</th>
+    <th>Revenue</th>
+    <th>Admissions</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="rank">1</td><td><em>F1 The Movie</em></td><td>US</td><td>19 wks</td><td>SAR 39.1M (approx. KRW 14.1B)</td><td>650K</td></tr>
+<tr><td class="rank">2</td><td><em>Lilo &amp; Stitch</em></td><td>US</td><td>27 wks</td><td>SAR 36.8M (approx. KRW 13.2B)</td><td>850K</td></tr>
+<tr><td class="rank">3</td><td><em>Al Zarfa</em></td><td>Saudi</td><td>24 wks</td><td>SAR 30.7M (approx. KRW 11.1B)</td><td>730K</td></tr>
+<tr><td class="rank">4</td><td><em>El Selem W El Thoban</em></td><td>Egypt</td><td>7 wks</td><td>SAR 29.9M (approx. KRW 10.8B)</td><td>540K</td></tr>
+<tr><td class="rank">5</td><td><em>Shabab El Bomb 2</em></td><td>Saudi</td><td>17 wks</td><td>SAR 27.2M (approx. KRW 9.8B)</td><td>600K</td></tr>
+<tr><td class="rank">6</td><td><em>Hobal</em></td><td>Saudi</td><td>16 wks</td><td>SAR 24.6M (approx. KRW 8.9B)</td><td>580K</td></tr>
+<tr><td class="rank">7</td><td><em>Mission: Impossible – The Final Reckoning</em></td><td>US</td><td>11 wks</td><td>SAR 22.0M (approx. KRW 7.9B)</td><td>370K</td></tr>
+<tr><td class="rank">8</td><td><em>Restart</em></td><td>Egypt</td><td>8 wks</td><td>SAR 20.8M (approx. KRW 7.5B)</td><td>410K</td></tr>
+<tr><td class="rank">9</td><td><em>Demon Slayer</em></td><td>Japan</td><td>13 wks</td><td>SAR 20.5M (approx. KRW 7.4B)</td><td>400K</td></tr>
+<tr><td class="rank">10</td><td><em>Dangerous Animals</em></td><td>US</td><td>15 wks</td><td>SAR 20.2M (approx. KRW 7.3B)</td><td>440K</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* Exchange rate: approx. SAR 1 ≈ KRW 360. Source: Saudi Film Commission, reconstructed by the author.</p>
+
+<p>The top 10 box office titles of 2025 reveal a market dominated by American films — including Hollywood titles such as <em>F1 The Movie</em>, <em>Lilo &amp; Stitch</em>, <em>Mission: Impossible – The Final Reckoning</em>, and <em>Dangerous Animals</em>.</p>
+
+<p>Saudi domestic films have also made significant inroads into the top ranks, showing gradual growth. <em>Al Zarfa</em>, <em>Shabab El Bomb 2</em>, and <em>Hobal</em> each maintained relatively long theatrical runs and secured stable audiences, running for 16 weeks or more — an indication that audience demand for local content is gradually broadening.</p>
+
+<p>Egyptian films also feature within the top 10, reflecting the influence of Arabic-language content. The inclusion of Japanese anime title <em>Demon Slayer</em> further suggests that the Saudi film market is developing a multi-layered consumption structure that accommodates content from a diverse range of countries.</p>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-05.jpg" alt="2025 Saudi Arabia Box Office Market Share by Country of Production — Source: Saudi Film Commission"></div>
+<p class="photo-caption">▲ Figure 5. 2025 Saudi Arabia box office market share by country of production — Source: Saudi Film Commission, reconstructed by the author</p>
+
+<p>By country of production, the US accounts for 55.5% of total box office revenue, with Hollywood content remaining the dominant commercial force. Egypt follows at 22.2%, and Saudi Arabia registers 13.3% — a comparatively strong showing given the limited number of domestic releases. India (3.7%), Japan (2.9%), and the UK (1.0%) record lower shares.</p>
+
+<p>Notably, Korean films did not feature among the leading countries by market share in 2025. This reflects the fact that while Korean content is growing in recognition on Saudi OTT platforms, its footprint in the theatrical market remains limited.</p>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>Table 3 — Number of Films Screened in Saudi Cinemas by Country of Production, 2025</caption>
+<thead>
+<tr>
+    <th>#</th>
+    <th>Country</th>
+    <th>No. of Titles</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="rank">1</td><td>United States</td><td>213</td></tr>
+<tr><td class="rank">2</td><td>India</td><td>130</td></tr>
+<tr><td class="rank">3</td><td>Egypt</td><td>40</td></tr>
+<tr><td class="rank">4</td><td>United Kingdom</td><td>30</td></tr>
+<tr><td class="rank">5</td><td>Japan</td><td>12</td></tr>
+<tr><td class="rank">6</td><td>Saudi Arabia</td><td>11</td></tr>
+<tr><td class="rank">7</td><td>Germany</td><td>9</td></tr>
+<tr><td class="rank">8</td><td>China</td><td>8</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* Source: Saudi Film Commission, reconstructed by the author.</p>
+
+<p>The US leads with 213 titles, followed by India (130) and Egypt (40). Despite India's high volume of releases, its box office share is just 3.7%, reflecting a limited audience structure concentrated among South Asian migrant workers. Saudi domestic films, though just 11 titles, achieved a 13.3% market share — indicating a growing audience base for local content.</p>
+
+<h3>2) Box Office by Genre and Age Rating</h3>
+
+<div class="article-photo"><img src="kofic-2026-37-images/fig-06.jpg" alt="2025 Saudi Arabia Box Office Share by Genre — Source: Saudi Film Commission"></div>
+<p class="photo-caption">▲ Figure 6. 2025 Saudi Arabia box office share by genre — Source: Saudi Film Commission, reconstructed by the author</p>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>Table 4 — 2025 Saudi Cinema Revenue, Number of Titles and Top Films by Genre</caption>
+<thead>
+<tr>
+    <th>Genre</th>
+    <th>Revenue</th>
+    <th>Titles</th>
+    <th>Top Film</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Action</td><td>SAR 297.8M (approx. KRW 107.2B)</td><td>136</td><td><em>F1 The Movie</em></td></tr>
+<tr><td>Comedy</td><td>SAR 237.7M (approx. KRW 85.6B)</td><td>73</td><td><em>Al Zarfa</em></td></tr>
+<tr><td>Horror</td><td>SAR 111.4M (approx. KRW 40.1B)</td><td>74</td><td><em>Dangerous Animals</em></td></tr>
+<tr><td>Drama</td><td>SAR 96.3M (approx. KRW 34.7B)</td><td>99</td><td><em>Hobal</em></td></tr>
+<tr><td>Animation</td><td>SAR 71.4M (approx. KRW 25.7B)</td><td>63</td><td><em>Demon Slayer</em></td></tr>
+<tr><td>Adventure</td><td>SAR 59.4M (approx. KRW 21.4B)</td><td>17</td><td><em>Lilo &amp; Stitch</em></td></tr>
+<tr><td>Other</td><td>SAR 46.8M (approx. KRW 16.8B)</td><td>76</td><td><em>Now You See Me: Now You Don't</em></td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* Source: Saudi Film Commission, reconstructed by the author.</p>
+
+<p>By genre, action leads with a 32.3% market share, driven by large-scale commercial blockbusters such as <em>F1 The Movie</em>. Comedy comes second at 25.8%, boosted significantly by Saudi domestic films like <em>Al Zarfa</em>. Drama, while recording the second-highest number of titles (99), holds just 10.5% of revenue. Adventure, with only 17 titles, achieved a comparatively strong 6.5% share. Horror maintained stable demand at 12.1%, and animation reached 7.8% on the back of <em>Demon Slayer</em>.</p>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>Table 5 — 2025 Saudi Cinema Revenue and Admissions Share by Age Rating</caption>
+<thead>
+<tr>
+    <th>Rating</th>
+    <th>Description</th>
+    <th>Revenue Share</th>
+    <th>Admissions</th>
+    <th>Titles</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>G</td><td>All ages</td><td>0.02%</td><td>6K</td><td>4</td></tr>
+<tr><td>PG</td><td>Parental guidance advised</td><td>10.5%</td><td>2.3M</td><td>61</td></tr>
+<tr><td>PG12</td><td>Parental guidance for under-12s</td><td>10.2%</td><td>2.1M</td><td>22</td></tr>
+<tr><td>PG15</td><td>Parental guidance for under-15s</td><td>13.4%</td><td>2.5M</td><td>55</td></tr>
+<tr><td>R15</td><td>Restricted: under-15s not admitted</td><td>20.4%</td><td>3.6M</td><td>104</td></tr>
+<tr><td>R18</td><td>Restricted: under-18s not admitted</td><td>45.4%</td><td>8.3M</td><td>292</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* Source: Saudi Film Commission, reconstructed by the author.</p>
+
+<p>By age rating, R18 films account for 45.4% of total revenue — the largest share — followed by R15 at 20.4% and PG15 at 13.4%. This reflects a consumption structure dominated by adult and teen audiences, with G-rated films capturing just 0.02% of the market. The data suggests that adult-oriented action, horror, and thriller content drives the market.</p>
+
+<h3>3) Performance of Saudi Domestic Films</h3>
+
+<div class="data-table-wrap">
+<table class="data-table">
+<caption>Table 6 — Top 10 Saudi Domestic Films at the Box Office, 2025</caption>
+<thead>
+<tr>
+    <th>#</th>
+    <th>Title</th>
+    <th>Run</th>
+    <th>Genre</th>
+    <th>Revenue</th>
+    <th>Admissions</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="rank">1</td><td><em>Al Zarfa</em></td><td>24 wks</td><td>Comedy</td><td>SAR 30.7M (approx. KRW 11.1B)</td><td>730K</td></tr>
+<tr><td class="rank">2</td><td><em>Shabab El Bomb 2</em></td><td>17 wks</td><td>Comedy</td><td>SAR 27.2M (approx. KRW 9.8B)</td><td>600K</td></tr>
+<tr><td class="rank">3</td><td><em>Hobal</em></td><td>16 wks</td><td>Drama</td><td>SAR 24.6M (approx. KRW 8.9B)</td><td>580K</td></tr>
+<tr><td class="rank">4</td><td><em>Esaaf</em></td><td>14 wks</td><td>Comedy/Action</td><td>SAR 18.7M (approx. KRW 6.7B)</td><td>380K</td></tr>
+<tr><td class="rank">5</td><td><em>Siwar</em></td><td>12 wks</td><td>Drama</td><td>SAR 10.9M (approx. KRW 3.9B)</td><td>250K</td></tr>
+<tr><td class="rank">6</td><td><em>Fakhr Al-Suwaidi</em></td><td>14 wks</td><td>Comedy</td><td>SAR 6.8M (approx. KRW 2.4B)</td><td>150K</td></tr>
+<tr><td class="rank">7</td><td><em>Leil Nahar</em></td><td>9 wks</td><td>Comedy</td><td>SAR 3.9M (approx. KRW 1.4B)</td><td>80K</td></tr>
+<tr><td class="rank">8</td><td><em>Al-Ghayed</em></td><td>5 wks</td><td>Thriller/Adventure</td><td>SAR 2.1M (approx. KRW 0.8B)</td><td>60K</td></tr>
+<tr><td class="rank">9</td><td><em>Saify</em></td><td>4 wks</td><td>Dark Comedy</td><td>SAR 320K (approx. KRW 115M)</td><td>8K</td></tr>
+<tr><td class="rank">10</td><td><em>Qashmou</em></td><td>2 wks</td><td>Comedy</td><td>SAR 280K (approx. KRW 101M)</td><td>6K</td></tr>
+</tbody>
+</table>
+</div>
+<p class="table-note">* Exchange rate: approx. SAR 1 ≈ KRW 360. Source: Saudi Film Commission, reconstructed by the author.</p>
+
+<p><em>Al Zarfa</em> was the standout domestic performer, with SAR 30.7 million (approx. KRW 11.1 billion) in revenue and 730,000 admissions. <em>Shabab El Bomb 2</em> and <em>Hobal</em> also featured in the overall top 10, proving locally produced films can hold their own against Hollywood and other international competition. The top domestic titles notably sustained runs of 16 weeks or more.</p>
+
+<p>The domestic market is markedly comedy-driven: more than half of the top 10 are comedies or comedy-based genres. This aligns with the Saudi theatrical market's strong preference for family-friendly and broadly entertaining content. While the number of Saudi domestic releases remains small, a handful of breakout hits have demonstrated the commercial potential of local content and shown that an audience base is forming.</p>
+
+
+<h2>4. Non-Theatrical Revenue (OTT, Pay TV, and Ancillary Markets)</h2>
+
+<p>Alongside the growth of the theatrical market, OTT-centred video content consumption is expanding rapidly in Saudi Arabia. Driven by high internet penetration, smartphone usage, and a young demographic, streaming service usage is rising and film consumption habits are shifting accordingly.</p>
+
+<p>The Saudi OTT market is shaped by competition between global platforms — Netflix, Disney+, Amazon Prime Video — and regional platforms such as Shahid and Starzplay. According to Omdia, the MENA online video market is projected to reach approximately USD 1.5 billion in 2025, with SVOD subscribers forecast to exceed 27 million. MBC Group's OTT platform Shahid has secured approximately 4.4 million subscribers and is firmly established as one of the leading regional platforms.</p>
+
+<p>While theatrical consumption is dominated by Hollywood blockbusters and premium screenings, OTT is the arena for mid-budget genre films, series, and niche content. The ancillary market — formerly centred on satellite TV and DVD — has rapidly reorganised around IPTV, VOD, and mobile streaming, with online platform consumption growing steadily.</p>
+
+<p>Unlike in the theatrical market, Korean films are gradually expanding their presence on OTT in Saudi Arabia. Korean films are regularly made available via Netflix, and in 2025 Korean titles repeatedly entered the Saudi Netflix weekly Top 10 for films. Arabic-subtitled Korean content is also available on Shahid, where drama series currently lead; but the growing recognition of Korean content broadly is expected to have a positive knock-on effect on the distribution of Korean films going forward.</p>
+
+
+<h2>5. Government Support and International Cooperation</h2>
+
+<h3>1) Government Support and Expanding Production Infrastructure</h3>
+
+<p>Saudi Arabia is developing into a new content production hub for the Middle East, combining government support and large-scale cultural infrastructure investment to expand filming infrastructure, production assistance, and global partnerships. The industry still relies heavily on foreign talent for cinematography, post-production, VFX, and sound, and is focusing on building its domestic film industry base through workshops, production support programmes, and emerging filmmaker development initiatives.</p>
+
+<p>The Saudi government is also actively investing in attracting overseas productions and expanding production infrastructure. NEOM and AlUla are being developed as international filming destinations, with incentives to attract foreign film and drama productions. The Saudi Film Commission also runs production support programmes such as the Daw' Film Competition. <em>Hobal</em> — which ranked sixth in the 2025 Saudi overall box office — was one of the programme's selected projects, developed with NEOM's filming infrastructure and production support.</p>
+
+<p>The country's varied locations — desert, coastline, futuristic urban environments — are attracting increasing interest from global producers, and the Saudi government offers a cash rebate of up to 40% to attract international productions.</p>
+
+<p>Film AlUla, one of Saudi Arabia's leading filming hubs, operates production incentives alongside location access and filming permit support. Riyadh's JAX District is developing Jax Film Studios — a major production facility including sound stages and virtual production facilities. PlayMaker Studios is also under development in the mega-entertainment city of Qiddiya, near Riyadh. Both aim to serve as international film and OTT production hubs.</p>
+
+<p>The year 2025 also saw signs of diversification in cinema culture: arthouse venues such as Cinehouse have been expanding, suggesting the screening landscape is gradually broadening beyond the blockbuster-dominant structure.</p>
+
+<h3>2) International Film Festivals and Global Cooperation</h3>
+
+<p>Saudi Arabia is rapidly expanding its international film network through international film festivals and global content collaboration. The Red Sea International Film Festival (RSIFF), launched in 2021, has grown into the representative international film festival of the MENA region and serves as a key platform for the Saudi film industry. The festival is held in the UNESCO World Heritage area of Al-Balad in Jeddah, combining international film screenings with industry exchange programmes.</p>
+
+<p>RSIFF functions as an integrated industry platform encompassing investment, production, distribution, and education. The Red Sea Souk — held during the festival — facilitates networking and co-production discussions between global investors, producers, and filmmakers. The 2025 RSIFF was attended by international film industry figures including Anthony Hopkins, Adrien Brody, Jessica Alba, and director Darren Aronofsky.</p>
+
+<p>Beyond the US and Europe, Saudi Arabia is broadening its engagement with Asian film markets. The 2025 Saudi Film Festival featured a collaboration programme with Japan's Short Shorts Film Festival &amp; Asia, and the Saudi Film Commission participated in both the Beijing International Film Festival and the Shanghai International Film Festival to expand cooperation with China.</p>
+
+<p>Korean–Saudi film and cultural exchange also expanded in 2025. In January, the Saudi Film Commission and KOFIC co-hosted the Korean Film Week at Cinehouse in Riyadh, featuring a retrospective including <em>Parasite</em> and <em>Spider-Web</em> alongside a talk and seminar on Korean cinema's global competitiveness.</p>
+
+<p>The Joy Forum in Riyadh was attended by actors Lee Jung-jae and Lee Byung-hun and director Yoon Je-kyoon, with discussions centred on the global content industry and film cooperation. At the same year's RSIFF, director Yoon Ga-eun's <em>The World of Love</em> received an official competition invitation, and actress Seo Su-bin won the Best Actress award for her role in the film.</p>
+
+
+<h2>6. Outlook and Challenges</h2>
+
+<p>Saudi Arabia's film industry has maintained rapid growth since cinemas reopened in 2018, establishing itself as a core film market in the Middle East. Box office revenue and admissions continue to grow, with government support and production infrastructure expansion ongoing and the OTT market also developing. In 2025, domestic films' box office share and breakout successes were more visible than ever, demonstrating the growing potential of local content.</p>
+
+<p>The industry still faces challenges, however. The theatrical market remains strongly dominated by Hollywood, and domestic film production volume and market scale remain limited. Shortages of skilled production personnel — particularly in directing, cinematography, and post-production — continue to be cited as a concern. Regional disparities in cinema consumption and infrastructure persist, with the market concentrated in Riyadh, Jeddah, and other major cities. Cultural and religious review criteria also play a significant role, with some foreign films edited for theatrical release.</p>
+
+<p>Korean cinema's footprint in the Saudi theatrical market remains limited, but touchpoints are gradually expanding through OTT platforms, film festivals, and cultural events. The 12th Saudi Film Festival — to be held at Ithra, the King Abdulaziz Center for World Culture established by Aramco, from 26 June to 2 July 2026 — is scheduled to include a Korean film programme in collaboration with the Busan International Film Festival (BIFF), pointing to further bilateral exchange ahead.</p>
+
+<p>Overall, Saudi Arabia's film industry is in a transitional phase from a consumption-centred market toward a production- and investment-oriented industry. Underpinned by government support, expanding production infrastructure, and growing international cooperation, it is expected to emerge as a major content industry hub in the Middle East.</p>
+
+<div class="sources">
+<p class="sources-label">References</p>
+<h3>Books &amp; Reports</h3>
+<p>Donovan Vanderbilt. (2026). <em>Film Industry Saudi Arabia 2025: Production and Market Overview.</em> Vision2030.</p>
+<p>Renub Research. (2026). <em>Saudi Arabia Cinema Market Forecast Report.</em> Renub Research.</p>
+<p>Saudi Film Commission. (2026). <em>Saudi Box Office Report – 2025.</em> Saudi Film Commission.</p>
+<h3>Newspapers &amp; Periodicals</h3>
+<p>BroadcastPro. (2026, April 16). Saudi Film Commission reports $245m box office as local films surge in 2025. <a href="https://www.broadcastprome.com/news/analyst-reports/saudi-film-commission-reports-245m-box-office-as-local-films-surge-in-2025/" target="_blank" rel="noopener">broadcastprome.com</a></p>
+<p>Omdia. (2025, May 13). SVOD growth to drive MENA streaming market past $1.5 billion in 2025. <a href="https://omdia.tech.informa.com/pr/2025/may/svod-growth-to-drive-mena-streaming-market-past-1point5-billion-dollars-in-2025/" target="_blank" rel="noopener">omdia.tech.informa.com</a></p>
+<p>Red Sea International Film Festival. (2025, December 12). Red Sea International Film Festival Presents 2025 Closing Night and Yusr Awards. <a href="https://redseafilmfest.com/en/press/red-sea-international-film-festival-presents-2025-closing-night-and-yusr-awards/" target="_blank" rel="noopener">redseafilmfest.com</a></p>
+<p>Saudi Press Agency. (2025, January 19). Korean Film Week Kicks Off in Riyadh. <a href="https://spa.gov.sa/en/N2246288/" target="_blank" rel="noopener">spa.gov.sa</a></p>
+<p>Saudi Press Agency. (2025, April 18). Saudi Film Commission Showcases Saudi Cinema at Beijing International Film Festival. <a href="https://www.spa.gov.sa/en/N2301636/" target="_blank" rel="noopener">spa.gov.sa</a></p>
+<p>Saudi Press Agency. (2025, June 12). Film Commission Highlights Creative and Commercial Potential at Shanghai International Film Festival. <a href="https://www.spa.gov.sa/en/N2338863" target="_blank" rel="noopener">spa.gov.sa</a></p>
+<p>Time Out Riyadh. (2025, November 11). JAX Film Studios launches virtual production platform. <a href="https://www.timeoutriyadh.com/movies/movies-news/jax-film-studios-in-riyadh/" target="_blank" rel="noopener">timeoutriyadh.com</a></p>
+<p>Time Out Riyadh. (2025, October 13). JOY Forum returns to Riyadh Season 2025. <a href="https://www.timeoutriyadh.com/news/joy-forum-2025-riyadh-season/" target="_blank" rel="noopener">timeoutriyadh.com</a></p>
+<h3>Websites</h3>
+<p>Film AlUla — <a href="https://filming.experiencealula.com" target="_blank" rel="noopener">filming.experiencealula.com</a></p>
+<p>Netflix Saudi Arabia Top 10 — <a href="https://www.netflix.com/tudum/top10/saudi-arabia" target="_blank" rel="noopener">netflix.com/tudum/top10/saudi-arabia</a></p>
+<p>Qiddiya Film Studio — <a href="https://qiddiya.com/qiddiya-city/assets/playmaker-studios/" target="_blank" rel="noopener">qiddiya.com</a></p>
+<p>Red Sea International Film Festival — <a href="https://redseafilmfest.com/en/" target="_blank" rel="noopener">redseafilmfest.com</a></p>
+<p>Saudi Film Commission — <a href="https://film.moc.gov.sa/en/Film-Saudi/" target="_blank" rel="noopener">film.moc.gov.sa</a></p>
+<p>Saudi Film Commission, Daw Film Competition — <a href="https://film.sa/daw/" target="_blank" rel="noopener">film.sa/daw</a></p>
+<p>Saudipedia, Hobal Film — <a href="https://saudipedia.com/en/hobal-film/" target="_blank" rel="noopener">saudipedia.com</a></p>
+</div>
+</div></div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+
+    <div class="float-nav">
+        <a href="kofice-24.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강한 기후 속에서 주목받는 한국 뷰티 스킨케어 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-24.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="강한 기후 속에서 주목받는 한국 뷰티 스킨케어 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-24.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강한 기후 속에서 주목받는 한국 뷰티 스킨케어 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Industry &amp; Trends</p>
+                    <h1 class="article-title-ko">강한 기후 속에서 주목받는 한국 뷰티 스킨케어</h1>
+                    <p class="article-title-en">Korean Beauty Skincare Gaining Attention in an Intense Climate</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">31 December 2025</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · December 2025</span></div>
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<h2>한류 확산 이후 형성된 한국 뷰티 관심</h2>
+
+<p>사우디아라비아에서 한국 스킨케어에 대한 관심은 한국 드라마와 케이팝을 통해 형성되기 시작했다. 드라마와 음악을 통해 노출된 배우와 아이돌의 피부 관리 방식은 자연스럽게 뷰티와 라이프 스타일에 대한 관심으로 이어졌고, 이는 한국 화장품에 대한 호기심과 소비로 확장되는 계기로 작용했다. 특히 세럼·수분 크림·멀티밤 등 실용적인 기초화장품이 현지 온라인 쇼핑몰과 플랫폼을 중심으로 꾸준히 소비되고 있다.</p>
+
+<p>더불어 사우디의 강한 자외선과 건조한 기후 환경 속에서 보습과 피부 진정을 중시하는 한국식 스킨케어 방식은 현지 소비자들의 피부 관리 습관과 자연스럽게 맞물리며 긍정적인 반응을 얻고 있다. 또한 사우디의 수질 특성과 강한 자외선 환경으로 인해 헤어케어에 대한 관심 역시 높은 편이다. 특히 탈모 예방이나 두피 관리와 관련된 세럼·오일 등 기능성 제품에 대해 통신원에게 직접 문의하거나 일상적인 대화 속에서 관심을 보이는 사례도 관찰된다.</p>
+
+<h2>소비 기준과 시장 환경의 변화</h2>
+
+<p>한국 화장품에 대한 관심은 제품 선택 기준에서도 드러난다. 할랄(halal) 인증 여부와 성분의 안전성, 저자극 포뮬러에 대한 정보는 현지에서 소비자 신뢰도를 높이는 중요한 요소로 작용하고 있으며, 성분을 중심으로 제품을 비교·선택하는 소비 경향도 점차 확산되고 있다. 특히 사우디는 소셜 미디어 이용률이 매우 높은 편으로, 뷰티·라이프스타일 트렌드에 대한 노출과 확산 속도가 빠른 시장으로 해석된다.</p>
+
+<div class="article-photo"><img src="kofice-24-images/img-021.jpg" alt="사우디아라비아 기반 한국 뷰티 마케팅 — 출처: 케이뷰티 아라비아 공식 인스타그램(@kbeautyarabia)"></div>
+<p class="photo-caption">▲ 사우디아라비아 기반 한국 뷰티 마케팅 — 출처: 케이뷰티 아라비아(K-Beauty Arabia) 공식 인스타그램(@kbeautyarabia)</p>
+
+<p>일부 시장 분석에서는 사우디아라비아를 포함한 중동 지역에서 한국 뷰티 제품에 대한 수요가 확대되고 있으며, 특히 스킨케어 중심의 소비가 향후 성장 가능성을 지닌 분야로 언급되고 있다. 시장 조사 기관 아이마크 그룹(IMARC Group) 역시 사우디아라비아 화장품 시장을 중동 지역 내 성장 잠재력이 높은 시장으로 평가하며, 젊은 연령층 비중이 높은 인구 구성과 온라인 소비 환경의 확산, 기후적 요인이 스킨케어 수요를 견인하고 있다고 분석한다.</p>
+
+<h2>산업 접점과 유통의 한계</h2>
+
+<p>매년 개최되는 '뷰티월드 사우디아라비아(Beautyworld Saudi Arabia)'는 사우디 및 GCC(걸프 협력 회의) 지역 최대 규모의 뷰티 산업 박람회로, 글로벌 화장품 브랜드와 현지 바이어들이 한자리에 모여 시장 동향을 공유하는 장으로 기능한다. 이 같은 국제 박람회는 사우디 뷰티 시장의 성장 가능성을 보여주는 동시에, 해외 브랜드들이 현지 시장과의 접점을 모색하는 계기로 작용하고 있다. 올해 4월에 개최된 해당 행사에는 한국 브랜드도 참여한 바 있으며 2026년 5월에 다시 개최될 예정이다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-24-images/img-022.jpg" alt="2025 뷰티월드 사우디아라비아 행사 — 출처: 뷰티월드 사우디아라비아 홈페이지">
+    <img src="kofice-24-images/img-023.jpg" alt="2025 뷰티월드 사우디아라비아 포럼 — 출처: 뷰티월드 사우디아라비아 홈페이지">
+</div>
+<p class="photo-caption">▲ 2025 뷰티월드 사우디아라비아(Beautyworld Saudi Arabia) 행사 — 출처: 뷰티월드 사우디아라비아 공식 홈페이지</p>
+
+<p>다만 현재 사우디 내에서 한국 화장품은 주로 온라인 플랫폼이나 멀티 브랜드 유통 채널을 통해 유통되고 있으며, 브랜드 단위의 상시 단독 매장은 아직 제한적인 상황이다. 이로 인해 한국에서는 널리 알려진 화장품이라 하더라도 현지에서는 구매처를 찾기 어려운 경우가 적지 않다. 일부 소비자들은 현지에서 구매가 어려운 특정 브랜드의 화장품을 해외 배송을 통해 구입하고 있으나, 한국어 기반의 구매 환경은 비 한국어 사용자에게 또 다른 장벽으로 작용하고 있다. 이러한 상황을 고려할 때, 현지 소비자의 접근성을 높이기 위한 공식 매장 등 오프라인 유통 채널의 확충과 함께 보다 다양한 한국 화장품 브랜드를 접할 수 있는 환경 조성의 필요성도 함께 제기된다.</p>
+
+<p>아울러 사우디아라비아로 수입되는 대부분의 상품에는 15%의 부가가치세(VAT)가 부과되며, 화장품의 경우 상업적 목적의 정식 관세가 추가로 적용될 수 있다. 이러한 유통 및 수입 구조는 해외 직구뿐만 아니라 정식 유통을 통한 판매 과정에서도 비용 부담으로 작용할 가능성이 있으며, 소비자 체감 가격에도 영향을 미칠 수 있어 향후 시장 확대 과정에서 가격 경쟁력에 대한 고려가 필요할 것으로 보인다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진 출처 및 참고자료</p>
+    <p>딥 마켓 인사이츠(Deep Market Insights). Saudi Arabia K-Beauty Products Market Size &amp; Outlook, 2025–2033.</p>
+    <p>아이마크 그룹(IMARC Group). Saudi Arabia Skincare Market Size, Share, Trends and Forecast by Category, Ingredient Type, Gender, Distribution Channel, and Region, 2025–2033.</p>
+    <p>켄 리서치(Ken Research) (2025. 10). KSA K-Beauty Products Market Report Size, Share, Growth Drivers, Trends, Opportunities &amp; Forecast 2025–2030.</p>
+    <p>《뷰티 매터(Beauty Matter)》(2025. 10. 12). K-Beauty Powerhouse Korea Town Expands Across the Gulf, <a href="https://beautymatter.com/articles/k-beauty-powerhouse-korea-town-expands-across-the-gulf/" target="_blank" rel="noopener">beautymatter.com</a></p>
+    <p>《데이터 리포털(Data Reportal)》(2025. 03. 03). Digital 2025: Saudi Arabia, <a href="https://datareportal.com/reports/digital-2025-saudi-arabia" target="_blank" rel="noopener">datareportal.com</a></p>
+    <p>뷰티월드 사우디아라비아(Beautyworld Saudi Arabia) 공식 웹사이트, <a href="https://www.beautyworld-saudi-arabia.com" target="_blank" rel="noopener">beautyworld-saudi-arabia.com</a></p>
+    <p>케이뷰티 아라비아(K-Beauty Arabia) 공식 인스타그램(@kbeautyarabia), <a href="https://www.instagram.com/kbeautyarabia/" target="_blank" rel="noopener">instagram.com/kbeautyarabia</a></p>
+</div>
+</div></div>
+
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<h2>K-Beauty Interest Shaped by the Spread of Hallyu</h2>
+
+<p>Interest in Korean skincare in Saudi Arabia began forming through Korean dramas and K-pop. The skincare routines of actors and idols seen through drama and music naturally led to broader curiosity about beauty and lifestyle, which in turn expanded into interest in and consumption of Korean cosmetics. In particular, practical base products — serums, moisturisers, and multi-balms — have been selling steadily through local online shopping platforms.</p>
+
+<p>Beyond the cultural influence, the Korean approach to skincare — prioritising hydration and skin-soothing — has resonated naturally with local consumers' skincare habits in the face of Saudi Arabia's intense UV exposure and dry climate. Interest in hair care is also high, given the local water quality and the harshness of the sun. The correspondent has directly noticed this: people asking her in everyday conversation about functional products such as serums and oils for scalp care and hair loss prevention.</p>
+
+<h2>Shifting Consumer Standards and Market Environment</h2>
+
+<p>Interest in Korean cosmetics is also evident in how people choose products. Halal certification, ingredient safety, and information about low-irritant formulas are all becoming important factors in building consumer trust locally, and a tendency to compare and select products based on ingredients is gradually spreading. Saudi Arabia, with its very high social media usage rates, is a market where exposure to and the spread of beauty and lifestyle trends moves fast.</p>
+
+<div class="article-photo"><img src="kofice-24-images/img-021.jpg" alt="Saudi Arabia-based Korean beauty marketing — Source: K-Beauty Arabia official Instagram (@kbeautyarabia)"></div>
+<p class="photo-caption">▲ Saudi Arabia-based Korean beauty marketing — Source: K-Beauty Arabia official Instagram (@kbeautyarabia)</p>
+
+<p>Some market analyses indicate that demand for Korean beauty products is expanding across the Middle East including Saudi Arabia, with skincare-centred consumption in particular cited as a sector with significant growth potential. Market research firm IMARC Group assesses the Saudi Arabian cosmetics market as one with high growth potential within the Middle East, analysing that a young demographic profile, the spread of online shopping, and climatic factors are all driving skincare demand.</p>
+
+<h2>Industry Touchpoints and the Limits of Distribution</h2>
+
+<p>The annual Beautyworld Saudi Arabia — the largest beauty industry exhibition in Saudi Arabia and the GCC region — brings global cosmetic brands and local buyers together to share market trends. Events like this demonstrate the Saudi beauty market's growth potential while also providing overseas brands with a platform to explore entry into the local market. Korean brands participated in the April 2025 edition, and the next event is scheduled for May 2026.</p>
+
+<div class="photo-grid">
+    <img src="kofice-24-images/img-022.jpg" alt="Beautyworld Saudi Arabia 2025 — Source: Beautyworld Saudi Arabia official website">
+    <img src="kofice-24-images/img-023.jpg" alt="Beautyworld Saudi Arabia 2025 forum — Source: Beautyworld Saudi Arabia official website">
+</div>
+<p class="photo-caption">▲ Beautyworld Saudi Arabia 2025 — Source: Beautyworld Saudi Arabia official website</p>
+
+<p>At present, however, Korean cosmetics in Saudi Arabia are distributed primarily through online platforms and multi-brand retail channels, with dedicated standalone brand stores remaining limited. This means that even well-known Korean cosmetics brands can be difficult to purchase locally. Some consumers import specific brands through international shipping, though the Korean-language purchasing environment presents an additional barrier for non-Korean speakers. Given this context, there is a growing case for expanding offline distribution channels — including official stores — to improve local consumer access, and for creating an environment in which a wider range of Korean cosmetics brands can be encountered.</p>
+
+<p>It should also be noted that most goods imported into Saudi Arabia are subject to 15% VAT, with cosmetics potentially subject to additional commercial duties. This distribution and import structure may add cost burdens both in the case of direct overseas purchases and in formal distribution channels, affecting the prices consumers actually pay. As the market expands, careful consideration of price competitiveness will likely be necessary.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Deep Market Insights. Saudi Arabia K-Beauty Products Market Size &amp; Outlook, 2025–2033.</p>
+    <p>IMARC Group. Saudi Arabia Skincare Market Size, Share, Trends and Forecast by Category, Ingredient Type, Gender, Distribution Channel, and Region, 2025–2033.</p>
+    <p>Ken Research (2025, October). KSA K-Beauty Products Market Report Size, Share, Growth Drivers, Trends, Opportunities &amp; Forecast 2025–2030.</p>
+    <p><em>Beauty Matter</em> (2025, October 12). K-Beauty Powerhouse Korea Town Expands Across the Gulf, <a href="https://beautymatter.com/articles/k-beauty-powerhouse-korea-town-expands-across-the-gulf/" target="_blank" rel="noopener">beautymatter.com</a></p>
+    <p><em>Data Reportal</em> (2025, March 3). Digital 2025: Saudi Arabia, <a href="https://datareportal.com/reports/digital-2025-saudi-arabia" target="_blank" rel="noopener">datareportal.com</a></p>
+    <p>Beautyworld Saudi Arabia official website, <a href="https://www.beautyworld-saudi-arabia.com" target="_blank" rel="noopener">beautyworld-saudi-arabia.com</a></p>
+    <p>K-Beauty Arabia official Instagram (@kbeautyarabia), <a href="https://www.instagram.com/kbeautyarabia/" target="_blank" rel="noopener">instagram.com/kbeautyarabia</a></p>
+</div>
+</div></div>
+    </div>
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-23.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-25.html">Next →</a>
+    </div>
+</body>
+</html>

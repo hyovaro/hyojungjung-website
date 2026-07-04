@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리야드 공공미술 프로젝트 '투와이크 조각 심포지엄(Tuwaiq Sculpture Symposium) 2026' — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: 260px; object-fit: cover; display: block; border-radius: 2px; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-35.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="리야드 공공미술 프로젝트 '투와이크 조각 심포지엄(Tuwaiq Sculpture Symposium) 2026' — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-35.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="리야드 공공미술 프로젝트 '투와이크 조각 심포지엄(Tuwaiq Sculpture Symposium) 2026' — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">공공미술/문화정책 — Public Art &amp; Cultural Policy</p>
+                    <h1 class="article-title-ko">리야드 공공미술 프로젝트 '투와이크 조각 심포지엄(Tuwaiq Sculpture Symposium) 2026'</h1>
+                    <p class="article-title-en">Riyadh Public Art Project: Tuwaiq Sculpture Symposium 2026</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">8 March 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · March 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<h2>도심 거리에서 펼쳐진 '라이브 조각' 전시</h2>
+
+<p>리야드 도심에서는 국제 조각 행사 〈투와이크 조각 심포지엄(Tuwaiq Sculpture Symposium) 2026〉이 열렸다. 올해로 7회를 맞은 이번 행사는 도시 공간을 야외 미술관처럼 활용하는 공공미술 프로젝트로, 리야드의 대표 거리인 프린스 모하메드 빈 압둘아지즈 스트리트(Prince Mohammed bin Abdulaziz Street, 일명 Tahlia Street)에서 진행됐다.</p>
+
+<div class="article-photo"><img src="kofice-35-images/img-01.jpg" alt="투와이크 조각 심포지엄 야외전시장 입구 전경 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ '투와이크 조각 심포지엄(Tuwaiq Sculpture Symposium)' 야외전시장 입구 전경 — 출처: 통신원 촬영</p>
+
+<p>이번 행사에는 18개국에서 참여한 25명의 작가가 다양한 조각 작품을 선보였다. 작가들이 현장에서 직접 작품을 제작하는 '라이브 조각(live sculpting)' 방식으로 진행돼 관람객들이 조각이 완성되는 과정을 가까이에서 지켜볼 수 있었다. 이러한 방식은 작가와 관람객 사이의 거리를 좁히고 예술을 도시의 일상 속으로 끌어들이는 공공미술의 새로운 형태로 평가된다.</p>
+
+<div class="article-photo"><img src="kofice-35-images/img-02.jpg" alt="야외 전시장에서 작업 중인 작가들 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 야외 전시장에서 작업 중인 작가들 — 출처: 통신원 촬영</p>
+
+<p>심포지엄은 1월 12일부터 2월 5일까지 진행됐다. 전시는 1월 9일부터 2월 22일까지 열릴 예정이었으나 관람객들의 호응으로 2월 28일까지 연장됐다. 행사 기간 동안 퍼블릭 워크숍, 패널 토크, 마스터클래스 등 다양한 프로그램도 함께 열렸으며 전시 입장과 워크숍 참가비는 무료로 운영됐다.</p>
+
+<h2>사우디 역사와 도시 이야기를 담은 조각들</h2>
+
+<p>올해 행사는 '다가올 변화의 흔적들(Traces of What Will Be)'을 주제로 진행됐다. 전시는 도시의 역사와 변화, 그리고 미래를 예술적으로 탐구하는 작품들을 소개했다. 전시가 열린 타흘리아 스트리트(Tahlia Street)는 리야드의 대표적인 상업·문화 거리로 도시의 사회적 변화와 발전을 상징하는 공간으로 알려져 있다. 이러한 장소적 맥락은 작품들이 도시 환경과 상호작용하며 새로운 의미를 만들어내는 배경이 됐다.</p>
+
+<div class="article-photo"><img src="kofice-35-images/img-03.jpg" alt="완성 전 야외 전시장 풍경 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 완성 전 야외 전시장 풍경 — 출처: 통신원 촬영</p>
+
+<p>통신원은 행사 초반과 전시 종료 무렵 두 차례 현장을 방문해 작품 제작 과정과 완성된 결과물을 비교해 볼 수 있었다. 도심 거리 한가운데 설치된 대형 조각 작품들은 관람객들이 자유롭게 오가며 감상할 수 있도록 배치돼 있었으며, 예술이 도시의 일상 속에 자연스럽게 스며든 풍경을 확인할 수 있었다. 특히 사우디 특정 지역에서 채굴된 석재를 활용한 작품이나 과거 대형 선박 침몰 사건을 모티프로 한 작품 등 사우디아라비아의 역사적 서사를 담은 조각들이 눈길을 끌었다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-35-images/img-04.jpg" alt="완성 후 야외 전시장 풍경 — 출처: 통신원 촬영">
+    <img src="kofice-35-images/img-05.jpg" alt="완성 후 야외 전시장 풍경 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ 완성 후 야외 전시장 풍경 — 출처: 통신원 촬영</p>
+
+<h2>한국 뉴미디어 아티스트 티안(Tahn) 특별 참여</h2>
+
+<p>이번 전시에는 사우디 비주얼 아트 커미션(Visual Arts Commission) 산하 인터믹스 레지던시(Intermix Residency)에 참여하고 있는 한국 작가인 뉴미디어 아티스트 티안(Tahn)도 특별 참여해 데이터 기반 미디어아트 작품을 선보였다. 대부분의 작가들이 석재와 금속을 활용한 물리적인 조각 작업을 선보인 가운데 티안 작가는 빛과 데이터를 활용한 뉴미디어 작업으로 참여한 유일한 미디어아티스트였다. 그는 관람객의 움직임과 다양한 데이터를 작품에 반영하는 방식으로 물질이 아닌 빛과 데이터로 구현되는 '비물질적 조각'을 선보였다.</p>
+
+<div class="article-photo"><img src="kofice-35-images/img-06.jpg" alt="야외 전시장에 투사된 티안 작가의 미디어아트 작품 — 출처: 티안 작가 인스타그램(@tahn_artis)"></div>
+<p class="photo-caption">▲ 야외 전시장에 투사된 티안(Tahn) 작가의 미디어아트 작품 — 출처: 티안 작가 인스타그램(@tahn_artis)</p>
+
+<h2>공공미술 정책 '리야드 아트(Riyadh Art)'</h2>
+
+<p>투와이크 조각 심포지엄은 리야드 전역에 공공미술 작품을 설치하는 도시 문화 프로젝트 '리야드 아트(Riyadh Art)'의 주요 프로그램 가운데 하나다. 리야드 아트는 2019년 사우디 국왕 살만 빈 압둘아지즈(Salman bin Abdulaziz Al Saud)가 발표한 대형 도시 프로젝트로, 리야드 왕립위원회가 추진하고 있다. 사우디의 국가 발전 전략인 비전 2030(Vision 2030)에 따라 진행되는 이 프로젝트는 도시 곳곳에 공공미술 작품을 설치해 시민들이 일상 속에서 예술을 접할 수 있도록 하는 것을 목표로 한다. 장기적으로는 1,000점 이상의 공공미술 작품을 도시 전역에 설치해 리야드를 '벽 없는 미술관'과 같은 문화 도시로 조성하는 것을 지향한다. 리야드 아트는 국제 조각 행사인 투와이크 조각 심포지엄뿐만 아니라 세계 최대 규모의 빛 예술 축제로 알려진 누르 리야드(Noor Riyadh) 등 다양한 프로그램을 통해 도시 공공미술 프로젝트를 확장하고 있다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>통신원 촬영</p>
+    <p>리야드 아트(Riyadh Art) 공식 웹사이트, <a href="https://riyadhart.rcrc.gov.sa/en/" target="_blank" rel="noopener">riyadhart.rcrc.gov.sa</a></p>
+    <p>리야드 왕립위원회(Royal Commission for Riyadh City) 공식 웹사이트, <a href="https://www.rcrc.gov.sa/en/200281-2/" target="_blank" rel="noopener">rcrc.gov.sa</a></p>
+    <p>≪프리즈(Frieze)≫ (2026. 02. 20). Sarah Alruwayti on Training the Next Generation of Saudi Sculptors, <a href="https://www.frieze.com/partner-content/sponsored/article/tuwaiq-sculpture-symposium-sarah-alruwayti-interview" target="_blank" rel="noopener">frieze.com</a></p>
+    <p>티안 작가 인스타그램(@tahn_artis), <a href="https://www.instagram.com/tahn_artist/" target="_blank" rel="noopener">instagram.com</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<h2>'Live Sculpting' Exhibition Unfolds on the City Streets</h2>
+
+<p>The international sculpture event <em>Tuwaiq Sculpture Symposium 2026</em> was held in central Riyadh. Now in its seventh edition, the event is a public art project that uses urban space as an open-air gallery, taking place along Prince Mohammed bin Abdulaziz Street — commonly known as Tahlia Street — one of Riyadh's defining thoroughfares.</p>
+
+<div class="article-photo"><img src="kofice-35-images/img-01.jpg" alt="Tuwaiq Sculpture Symposium outdoor exhibition entrance — Source: correspondent's photograph"></div>
+<p class="photo-caption">▲ Tuwaiq Sculpture Symposium outdoor exhibition entrance — Source: correspondent's photograph</p>
+
+<p>The event brought together 25 artists from 18 countries to present a diverse range of sculptural works. The symposium was conducted through 'live sculpting' — with artists creating their works on-site in full view of the public — allowing visitors to observe the process of a sculpture taking shape up close. This approach is regarded as a new form of public art that closes the distance between artist and audience, drawing art into the fabric of everyday urban life.</p>
+
+<div class="article-photo"><img src="kofice-35-images/img-02.jpg" alt="Artists at work in the outdoor exhibition space — Source: correspondent's photograph"></div>
+<p class="photo-caption">▲ Artists at work in the outdoor exhibition space — Source: correspondent's photograph</p>
+
+<p>The symposium ran from 12 January to 5 February. The exhibition had been scheduled to close on 22 February but was extended to 28 February in response to strong public attendance. Throughout the event, a range of programmes including public workshops, panel talks, and masterclasses were held alongside the exhibition, with both admission and workshop participation offered free of charge.</p>
+
+<h2>Sculptures Carrying the History and Stories of Saudi Arabia</h2>
+
+<p>This year's event was organised around the theme 'Traces of What Will Be'. The exhibition presented works that artistically explored the city's history, transformation, and future. Tahlia Street, where the exhibition was held, is one of Riyadh's defining commercial and cultural thoroughfares — a space widely understood to symbolise the city's social change and development. This sense of place provided the backdrop against which the works generated new meaning through interaction with their urban environment.</p>
+
+<div class="article-photo"><img src="kofice-35-images/img-03.jpg" alt="The outdoor exhibition space before completion — Source: correspondent's photograph"></div>
+<p class="photo-caption">▲ The outdoor exhibition space before completion — Source: correspondent's photograph</p>
+
+<p>The correspondent visited the site twice — once at the start of the event and again near the close of the exhibition — enabling a comparison of the works in progress and the completed results. The large-scale sculptures installed in the middle of the city streets were arranged so that visitors could move freely among them, offering a glimpse of art seamlessly woven into the rhythms of daily urban life. Particularly noteworthy were sculptures that drew on Saudi Arabia's historical narratives — including works using stone quarried from specific regions of the country and a piece inspired by a historic maritime shipwreck.</p>
+
+<div class="photo-grid">
+    <img src="kofice-35-images/img-04.jpg" alt="The outdoor exhibition space after completion — Source: correspondent's photograph">
+    <img src="kofice-35-images/img-05.jpg" alt="The outdoor exhibition space after completion — Source: correspondent's photograph">
+</div>
+<p class="photo-caption">▲ The outdoor exhibition space after completion — Source: correspondent's photograph</p>
+
+<h2>Korean New Media Artist Tahn Participates as Special Contributor</h2>
+
+<p>The exhibition also featured the participation of Tahn, a Korean new media artist currently taking part in the Intermix Residency under Saudi Arabia's Visual Arts Commission, who presented data-driven media art works. While most participating artists showcased physical sculptural work using stone and metal, Tahn was the only media artist in the exhibition, contributing work that employed light and data. Using visitor movement and various forms of data as material, Tahn presented an 'immaterial sculpture' realised not through physical matter but through light and information.</p>
+
+<div class="article-photo"><img src="kofice-35-images/img-06.jpg" alt="Tahn's media art work projected at the outdoor exhibition — Source: @tahn_artis on Instagram"></div>
+<p class="photo-caption">▲ Tahn's media art work projected in the outdoor exhibition space — Source: @tahn_artis on Instagram</p>
+
+<h2>Public Art Policy: Riyadh Art</h2>
+
+<p>The Tuwaiq Sculpture Symposium is one of the flagship programmes of 'Riyadh Art', an urban cultural project installing public artworks across Riyadh. Announced in 2019 by King Salman bin Abdulaziz Al Saud, Riyadh Art is a major city-scale project driven by the Royal Commission for Riyadh City. Aligned with Vision 2030 — Saudi Arabia's national development strategy — the project aims to install public artworks throughout the city so that citizens can encounter art in their daily lives. The long-term vision is to install more than 1,000 public artworks across Riyadh, transforming the city into a cultural destination akin to 'a museum without walls'. Beyond the Tuwaiq Sculpture Symposium, Riyadh Art continues to expand its urban public art programming through events including Noor Riyadh, the largest light art festival in the world.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources &amp; Photo Credits</p>
+    <p>Photographs by correspondent</p>
+    <p>Riyadh Art official website, <a href="https://riyadhart.rcrc.gov.sa/en/" target="_blank" rel="noopener">riyadhart.rcrc.gov.sa</a></p>
+    <p>Royal Commission for Riyadh City official website, <a href="https://www.rcrc.gov.sa/en/200281-2/" target="_blank" rel="noopener">rcrc.gov.sa</a></p>
+    <p>≪Frieze≫ (2026. 02. 20). Sarah Alruwayti on Training the Next Generation of Saudi Sculptors, <a href="https://www.frieze.com/partner-content/sponsored/article/tuwaiq-sculpture-symposium-sarah-alruwayti-interview" target="_blank" rel="noopener">frieze.com</a></p>
+    <p>Tahn artist Instagram (@tahn_artis), <a href="https://www.instagram.com/tahn_artist/" target="_blank" rel="noopener">instagram.com</a></p>
+</div>
+</div></div>
+
+    </div><!-- article-body -->
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <div class="float-nav">
+        <a href="kofice-34.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-36.html">Next →</a>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 최대 서점 체인 자릴 북스토어에서 만난 한국문학 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-48.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 최대 서점 체인 자릴 북스토어에서 만난 한국문학 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-48.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 최대 서점 체인 자릴 북스토어에서 만난 한국문학 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">사우디 최대 서점 체인 자릴 북스토어에서 만난 한국문학</h1>
+                <p class="article-title-en">Korean Literature at Jarir Bookstore, Saudi Arabia's Largest Bookstore Chain</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">May 31, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Korean Literature / Publishing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>최근 사우디아라비아는 출판과 번역 산업을 문화산업의 주요 분야 가운데 하나로 육성하고 있다. 문화부 산하 문학·출판·번역위원회를 중심으로 번역 지원 사업과 국제도서전이 활발히 운영되며, 리야드 국제도서전(Riyadh International Book Fair)과 제다 국제도서전(Jeddah International Book Fair)은 중동 지역의 주요 출판 행사로 자리 잡았다. 이러한 분위기 속에서 현지 서점가에도 다양한 해외 문학 작품이 소개되며, 한국 문학 역시 독자층을 꾸준히 넓혀가고 있다.</p>
+
+            <h2>사우디 최대 서점 체인에서 만난 한국문학</h2>
+
+            <p>자릴 북스토어(Jarir Bookstore)는 1974년 리야드의 작은 서점에서 시작해 현재 사우디아라비아와 걸프협력회의(GCC) 국가 전역으로 사업을 확장한 대표적인 서점·유통 기업이다. 도서뿐 아니라 전자기기, 문구류, 교육용품 등을 함께 판매하며, 중동 지역의 대표적인 문화·유통 브랜드 가운데 하나로 꼽힌다.</p>
+
+            <p>이런 가운데 통신원이 직접 리야드 소재 자릴 북스토어 그라나다몰(Granada Mall) 지점을 방문해 한국 문학 번역서 현황을 살폈다. 이번에 방문한 그라나다몰 지점은 2026년 4월 새롭게 문을 연 매장으로, 세계문학 코너를 중심으로 다양한 국가의 번역 문학을 소개하고 있다. 매장 내 세계문학 코너에서는 다양한 한국 소설과 에세이가 영어와 아랍어 번역본으로 판매되고 있었으며, 한국 문학이 별도 진열대를 통해 독자들과 만나고 있었다. 현지 직원은 최근 한국 문학을 찾는 독자들이 꾸준히 늘어난다고 전했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-48-images/img-01.jpg" alt="자릴 북스토어 내부">
+            </div>
+            <p class="photo-caption">자릴 북스토어 내부 — 출처: 통신원 촬영</p>
+
+            <div class="article-photo">
+                <img src="kofice-48-images/img-02.jpg" alt="사우디 서점에서 판매되고 있는 한국문학">
+            </div>
+            <p class="photo-caption">사우디 서점에서 판매되고 있는 한국문학 — 출처: 통신원 촬영</p>
+
+            <h2>사우디 서점에 진열된 한국문학</h2>
+
+            <p>매장에서 확인한 한국 문학 작품은 소설, 에세이, 단편집 등 다양한 장르에 걸쳤다. 아랍어 번역본으로는 김호연의 『불편한 편의점』, 황보름의 『어서 오세요, 휴남동 서점입니다』, 최은영의 『쇼코의 미소』, 이미예의 『달러구트 꿈 백화점 2』 등이, 영어 번역본으로는 손원평의 『아몬드』, 조남주의 『82년생 김지영』, 온라인 동영상 서비스(OTT) 드라마 시리즈의 원작으로 알려진 김려령의 『트렁크』, 천선란의 『천 개의 파랑』, 황보름의 『어서 오세요, 휴남동 서점입니다』, 허태연의 『바쿠다 사진관』, 유영광의 『비가 오면 열리는 상점』 등이 판매됐다. 김수현의 『나는 나로 살기로 했다』와 하태완의 『모든 순간이 너였다』 등 한국 에세이 작품들도 함께 진열됐다. 일부 작품은 영어판과 아랍어판이 나란히 놓여 있어 독자들이 원하는 언어로 선택할 수 있도록 구성돼 있었다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-48-images/img-03.jpg" alt="자릴 북스토어에 진열된 조남주 작가의 82년생 김지영 영어판과 아랍어판">
+            </div>
+            <p class="photo-caption">자릴 북스토어에 진열된 조남주 작가의 《82년생 김지영》 영어판과 아랍어판 — 출처: 통신원 촬영</p>
+
+            <p>진열된 작품들은 대부분 국내에서도 높은 판매고와 두터운 독자층을 확보한 베스트셀러였다. 성장 서사를 담은 손원평의 『아몬드』, 여성의 삶과 사회적 현실을 조명한 조남주의 『82년생 김지영』, 공동체 속 인간관계와 위로를 그린 김호연의 『불편한 편의점』 등은 여러 언어로 번역되며 해외 독자들과 만나고 있는 대표적인 한국 문학 작품이다. 황보름의 『어서 오세요, 휴남동 서점입니다』는 퇴사를 결심한 주인공이 동네 서점을 운영하며 다양한 사람들과 관계를 맺어가는 이야기로, 한국뿐 아니라 여러 국가에서 번역 출간되며 독자들의 호응을 얻고 있다.</p>
+
+            <h2>한국 콘텐츠 열풍, 문학으로 확장되다</h2>
+
+            <p>자릴 북스토어 그라나다몰 지점 직원 곤잘라그디(Gonzalagdi)는 통신원과의 인터뷰에서 "예전에는 동아시아 문학 가운데 일본문학을 찾는 고객들이 많았지만, 최근에는 한국 드라마와 영화, 케이팝 등의 영향으로 한국 문학을 찾는 고객들이 늘고 있다"고 말했다. 그는 현재 매장에서 인기 있는 한국 문학 작품으로 황보름의 『어서 오세요, 휴남동 서점입니다』를 꼽았다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-48-images/img-04.jpg" alt="인기 있는 한국 작품을 들고 있는 자릴 북스토어 직원 곤잘라그디">
+            </div>
+            <p class="photo-caption">인기 있는 한국 작품을 들고 있는 자릴 북스토어 직원 곤잘라그디(Gonzalagdi) — 출처: 통신원 촬영</p>
+
+            <p>자릴 북스토어는 개별 도서의 판매량이나 판매 순위를 공식적으로 공개하지 않아 정확한 판매 통계를 확인하기는 어렵다. 다만 곤잘라그디는 주요 진열대에 배치된 작품들이 독자들의 관심과 수요를 반영한다고 설명했다. 세계문학 코너에 다양한 한국 문학 작품이 꾸준히 진열되고 있다는 사실 자체가 현지 독자들의 관심을 가늠하게 하는 근거이다.</p>
+
+            <p>불과 1~2년 전만 해도 사우디 서점에서 한국 문학을 지금처럼 쉽게 마주치기는 어려웠다. 한국 드라마와 영화, 케이팝이 중동 지역 젊은 층을 중심으로 빠르게 확산하며, 그 관심이 문학으로까지 이어진다. 한국 콘텐츠에 대한 관심이 단순한 유행을 넘어 문화 전반에 대한 호기심으로 깊어지고 있다는 신호로도 읽힌다. 사우디아라비아가 문화산업 육성을 국가 전략으로 추진하는 만큼, 번역 출판 시장의 성장과 함께 한국 문학의 입지는 앞으로 더욱 넓어질 것으로 전망된다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 통신원 촬영</p>
+                <p>— 자릴 북스토어(Jarir Bookstore), <a href="https://www.jarir.com/sa-en/" target="_blank">jarir.com/sa-en</a></p>
+                <p>— 문학·출판·번역위원회(Literature, Publishing, and Translation Commission), <a href="https://lpt.moc.gov.sa/en/AboutUs?id=commission" target="_blank">lpt.moc.gov.sa</a></p>
+                <p>— 자릴 마케팅 컴퍼니(Jarir Marketing Company) (2026. 04. 19). "Jarir Marketing Company announces the opening of a new showroom in Granada Mall – Riyadh." Saudi Exchange.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>Saudi Arabia has lately been nurturing publishing and translation as one of the key pillars of its cultural industries. Centred on the Literature, Publishing and Translation Commission under the Ministry of Culture, translation-support programmes and international book fairs are run actively, and the Riyadh International Book Fair and the Jeddah International Book Fair have established themselves as major publishing events in the Middle East. Within this climate, a wide range of foreign literary works are being introduced to local bookstores, and Korean literature too is steadily broadening its readership.</p>
+
+            <h2>Korean Literature at the Kingdom's Largest Bookstore Chain</h2>
+
+            <p>Jarir Bookstore began in 1974 as a small shop in Riyadh and has since grown into a leading bookstore-and-retail company with operations across Saudi Arabia and the Gulf Cooperation Council (GCC) states. Alongside books, it sells electronics, stationery and educational supplies, and is counted among the region's representative culture-and-retail brands.</p>
+
+            <p>Against this backdrop, the correspondent visited Jarir Bookstore's Granada Mall branch in Riyadh in person to survey the state of translated Korean literature on its shelves. The Granada Mall branch, which newly opened in April 2026, showcases translated literature from a range of countries, organised around a world-literature section. There, a variety of Korean novels and essays were on sale in both English and Arabic translation, with Korean literature meeting readers through a dedicated display. A local staff member noted that the number of readers seeking out Korean literature has been steadily rising.</p>
+
+            <div class="article-photo">
+                <img src="kofice-48-images/img-01.jpg" alt="Inside Jarir Bookstore">
+            </div>
+            <p class="photo-caption">Inside Jarir Bookstore — Source: photo by the correspondent</p>
+
+            <div class="article-photo">
+                <img src="kofice-48-images/img-02.jpg" alt="Korean literature on sale at a Saudi bookstore">
+            </div>
+            <p class="photo-caption">Korean literature on sale at a Saudi bookstore — Source: photo by the correspondent</p>
+
+            <h2>Korean Literature on Saudi Bookshelves</h2>
+
+            <p>The Korean literary works found in store spanned a range of genres — novels, essays and short-story collections. Arabic translations on sale included Kim Ho-yeon's <em>The Uncanny Convenience Store</em>, Hwang Bo-reum's <em>Welcome to the Hyunam-dong Bookshop</em>, Choi Eun-young's <em>Shoko's Smile</em> and Lee Mi-ye's <em>The Dallergut Dream Department Store 2</em>; English translations included Sohn Won-pyung's <em>Almond</em>, Cho Nam-joo's <em>Kim Jiyoung, Born 1982</em>, Kim Ryeo-ryeong's <em>The Trunk</em> (known as the original work behind the OTT drama series), Cheon Seon-ran's <em>A Thousand Blues</em>, Hwang Bo-reum's <em>Welcome to the Hyunam-dong Bookshop</em>, Heo Tae-yeon's <em>Bakuda Photo Studio</em> and Yoo Young-gwang's <em>The Rainfall Shop</em>. Korean essay titles were also on display, including Kim Su-hyun's <em>I Decided to Live as Myself</em> and Ha Tae-wan's <em>Every Moment Was You</em>. Some titles sat side by side in their English and Arabic editions, allowing readers to choose the language they preferred.</p>
+
+            <div class="article-photo">
+                <img src="kofice-48-images/img-03.jpg" alt="The English and Arabic editions of Cho Nam-joo's Kim Jiyoung, Born 1982 on display at Jarir Bookstore">
+            </div>
+            <p class="photo-caption">The English and Arabic editions of Cho Nam-joo's <em>Kim Jiyoung, Born 1982</em> on display at Jarir Bookstore — Source: photo by the correspondent</p>
+
+            <p>Most of the titles on display were bestsellers that have secured strong sales and a broad readership in Korea as well. Sohn Won-pyung's <em>Almond</em>, a coming-of-age narrative; Cho Nam-joo's <em>Kim Jiyoung, Born 1982</em>, which illuminates women's lives and social realities; and Kim Ho-yeon's <em>The Uncanny Convenience Store</em>, which portrays human relationships and consolation within a community, are all representative Korean works that have been translated into multiple languages and are reaching readers abroad. Hwang Bo-reum's <em>Welcome to the Hyunam-dong Bookshop</em> — the story of a protagonist who, after deciding to leave her job, runs a neighbourhood bookshop and builds relationships with all kinds of people — has been published in translation in many countries beyond Korea and has won a warm response from readers.</p>
+
+            <h2>The Korean-Content Wave Extends into Literature</h2>
+
+            <p>Gonzalagdi, a staff member at the Jarir Bookstore Granada Mall branch, said in an interview with the correspondent: "In the past, many customers looking for East Asian literature sought out Japanese works, but lately, under the influence of Korean dramas, films and K-pop, the number of customers seeking Korean literature is growing." He named Hwang Bo-reum's <em>Welcome to the Hyunam-dong Bookshop</em> as a Korean title currently popular at the store.</p>
+
+            <div class="article-photo">
+                <img src="kofice-48-images/img-04.jpg" alt="Jarir Bookstore staff member Gonzalagdi holding a popular Korean title">
+            </div>
+            <p class="photo-caption">Jarir Bookstore staff member Gonzalagdi holding a popular Korean title — Source: photo by the correspondent</p>
+
+            <p>Jarir Bookstore does not officially disclose sales figures or rankings for individual titles, so exact sales statistics are hard to verify. Even so, Gonzalagdi explained that the works placed on the main display tables reflect readers' interest and demand. The very fact that a variety of Korean literary works are consistently displayed in the world-literature section is itself a basis for gauging local readers' interest.</p>
+
+            <p>Only a year or two ago, it was not as easy to come across Korean literature in Saudi bookstores as it is now. As Korean dramas, films and K-pop spread rapidly among young people across the Middle East, that interest is carrying over into literature as well. It can also be read as a sign that interest in Korean content is deepening beyond a passing trend into a broader curiosity about the culture as a whole. As Saudi Arabia pursues the cultivation of its cultural industries as a national strategy, Korean literature's foothold is expected to widen further alongside the growth of the translation-publishing market.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— Photos by the correspondent</p>
+                <p>— Jarir Bookstore, <a href="https://www.jarir.com/sa-en/" target="_blank">jarir.com/sa-en</a></p>
+                <p>— Literature, Publishing and Translation Commission, <a href="https://lpt.moc.gov.sa/en/AboutUs?id=commission" target="_blank">lpt.moc.gov.sa</a></p>
+                <p>— Jarir Marketing Company (2026. 04. 19). "Jarir Marketing Company announces the opening of a new showroom in Granada Mall – Riyadh." Saudi Exchange.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-47.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>

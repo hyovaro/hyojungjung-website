@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년 리야드 국제도서전 — Hyojung Jung</title>
+    <meta name="description" content="2025 Riyadh International Book Fair — a major literary festival connecting Korean and Saudi publishing. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-caption .correspondent { color: #7c3a36; font-style: italic; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en { font-size: 14px; }
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-12.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="2025년 리야드 국제도서전 — Hyojung Jung">
+    <meta property="og:description" content="2025 Riyadh International Book Fair — a major literary festival connecting Korean and Saudi publishing. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-12.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2025년 리야드 국제도서전 — Hyojung Jung">
+    <meta name="twitter:description" content="2025 Riyadh International Book Fair — a major literary festival connecting Korean and Saudi publishing. Published in KOFICE, October 2025. By Hyojung Jung.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Cultural Policy &amp; Issues</p>
+                    <h1 class="article-title-ko">2025년 리야드 국제도서전</h1>
+                    <p class="article-title-en">2025 Riyadh International Book Fair</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">21 October 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · October 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+
+                <p>지난 10월 2일부터 11일까지 열린 리야드 국제도서전(Riyadh International Book Fair; RIBF)은 사우디아라비아 문화부 산하 문학·출판·번역위원회(Literature, Publishing &amp; Translation Commission; LPTC)가 주관하는 10일간의 문화 행사다. 사우디 최대 규모의 문학 축제 중 하나로 전 세계의 출판사·작가·독자가 한자리에 모이며, 해마다 주빈국을 선정해 세미나와 강연, 다양한 프로그램을 통해 해당 국가의 문학과 선구적 인물을 조명한다.</p>
+
+                <div class="article-photo"><img src="kofice-12-images/img-000.jpg" alt="2025년 리야드 국제도서전 현장 — 출처: SPA(Saudi Press Agency)"></div>
+
+                <div class="photo-grid">
+                    <img src="kofice-12-images/img-001.jpg" alt="2025년 리야드 국제도서전 현장 1 — 출처: SPA(Saudi Press Agency)">
+                    <img src="kofice-12-images/img-002.jpg" alt="2025년 리야드 국제도서전 현장 2 — 출처: SPA(Saudi Press Agency)">
+                </div>
+                <p class="photo-caption">▲ 2025년 리야드 국제도서전 현장 — 출처: SPA(Saudi Press Agency)</p>
+
+                <h2>우즈베키스탄 주빈국, 2,000여 출판사 참여</h2>
+
+                <p>2025년 리야드 국제도서전은 우즈베키스탄을 주빈국으로 초청해 25개국 2,000여 출판사가 참가했다. 행사장은 프린세스 누라 빈트 압둘라흐만 대학교(PNU) 캠퍼스에 마련됐고, 전시·판매를 넘어 작가 사인회, 지식·문화 서비스 파빌리온, 할인 도서관, 출판사가 없는 작가 쇼케이스 등 폭넓은 프로그램을 운영했다. 또한 세미나·강연·워크숍, 연극·영화 상영, 시 낭송회, 어린이 전용 프로그램, '올해의 문화 인물' 시상, 업계 네트워킹을 위한 비즈니스 공간까지 갖춰 출판 생태계를 입체적으로 연결했다.</p>
+
+                <h2>번역 신뢰와 원전 접근 강화, 테크 부상</h2>
+
+                <p>영국·인도·프랑스·벨기에·일본·중국·미국·한국 등 다국적 관람객이 운집해 아랍권 대형 국제도서 행사로서의 위상을 확인했다. 해외 관람객들은 동시대 사우디 소설의 지적 대담성과 인간적 깊이, 그리고 고품질 번역을 강점으로 꼽았다. 한국 관람객은 합리적인 가격의 아랍어 원전을 직접 접할 수 있는 점 즉, '1차 자료 접근성'을 높이 평가했다. 아울러 프로그램과 관람 추이에서는 문학과 지식·테크 콘텐츠(AI·재생에너지 등)가 쌍축으로 소비되는 흐름이 두드러졌다.</p>
+
+                <h2>서울-다란-리야드로 이어진 2025년 한국-사우디아라비아 교류</h2>
+
+                <p>6월 서울 코엑스에서 열린 서울국제도서전에서 사우디아라비아는 공식 파빌리온을 운영했다. 킹 압둘아지즈 공공도서관(KAPL), 킹 파드 국립도서관(KFNL), 사우디 출판협회, 킹 살만 세계아랍어아카데미(KSGAAL), 프린스 사탐 빈 압둘아지즈 대학교(PSAU), 나세르(Nasher) 등 주요 기관이 동참해 번역·언어 협력과 업계 미팅을 확대했다. 이어서 7월에는 사우디 다란(Dhahran)에서 열린 이쓰라(Ithra) 제5회 어린이도서전에 한국이 주빈국으로 초청돼 한국 아동문학 전시와 참여형 프로그램을 선보였다. 특히 한담희 작가의 『별 아저씨(Star Papa)』 아랍어판이 현장에서 소개되며 4세~14세 사우디 독자에게 한국 그림책의 미학과 주제가 전달됐다. 이렇게 형성된 접점은 10월 리야드 국제도서전으로 이어져 저작권·공역·공동 마케팅 등 실무형 교류로 확장되는 연결 동선을 만들었다.</p>
+
+                <div class="article-photo"><img src="kofice-12-images/img-014.jpg" alt="2025 이쓰라 어린이도서전 관계자, 문병준 주사우디아라비아대한민국대사관 대사대리 — 출처: Ithra"></div>
+                <p class="photo-caption">▲ 2025 이쓰라 어린이도서전 관계자, 문병준 주사우디아라비아대한민국대사관 대사대리 — 출처: Ithra</p>
+
+                <div class="article-photo" style="max-width:320px; margin-left:auto; margin-right:auto;"><img src="kofice-12-images/img-015.jpg" alt="한담희 작가의 별 아저씨(Star Papa) 아랍어판 — 출처: Ithra"></div>
+                <p class="photo-caption">▲ 한담희 작가의 『별 아저씨(Star Papa)』 아랍어판 — 출처: Ithra</p>
+
+                <p>리야드 국제도서전은 단순한 도서 판매를 넘어 번역과 상호이해의 플랫폼으로 진화하고 있다. 한국 독자와 출판계에는 원전 접근-공동 편집-다국어 확산을 시험할 최적의 현장이며, 사우디 독자들에게는 한국 문학의 아랍어 번역본을 더 폭넓게 만날 수 있는 기회로 작용한다. 향후 더 많은 한국 작가의 작품이 아랍어로 소개돼 현지 독자층을 확장하기를 기대한다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>SPA(Saudi Press Agency) 홈페이지, <a href="https://spa.gov.sa/en" target="_blank" rel="noopener">https://spa.gov.sa/en</a></p>
+                    <p>사우디 관광청 홈페이지, <a href="https://www.visitsaudi.com/en/riyadh/events/riyadh-international-bookfair" target="_blank" rel="noopener">visitsaudi.com</a></p>
+                    <p>《ARAB NEWS》 (2025. 10. 7). AI focus of discussion at Riyadh Book Fair, <a href="https://www.arabnews.com/node/2618096/saudi-arabia" target="_blank" rel="noopener">arabnews.com</a></p>
+                    <p>《Saudi Press Agency News》 (2025. 10. 11). International Visitors Praise Cultural Diversity at Riyadh Book Fair 2025.</p>
+                    <p>《Ithra News》 (2025. 7. 16). Ithra Launches Fifth Edition of Children's Book Fair with South Korea as Guest of Honor, <a href="https://www.ithra.com/en/news/ithra-launches-fifth-edition-childrens-book-fair-south-korea-guest-honor" target="_blank" rel="noopener">ithra.com</a></p>
+                    <p>《The Korea Times》 (2025. 7. 17). Korean stories inspire Saudi readers at Ithra Children's Book Fair, <a href="https://www.koreatimes.co.kr/lifestyle/books/20250717/korean-stories-inspire-saudi-readers-at-ithra-childrens-book-fair" target="_blank" rel="noopener">koreatimes.co.kr</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+
+                <p>The Riyadh International Book Fair (RIBF), held from 2 to 11 October, is a ten-day cultural event organised by the Literature, Publishing &amp; Translation Commission (LPTC), under the Saudi Ministry of Culture. One of Saudi Arabia's largest literary festivals, it brings together publishers, writers, and readers from around the world. Each year a Guest of Honour country is selected, with seminars, talks, and a range of programmes shining a spotlight on that country's literature and trailblazing figures.</p>
+
+                <div class="article-photo"><img src="kofice-12-images/img-000.jpg" alt="2025 Riyadh International Book Fair — Source: SPA (Saudi Press Agency)"></div>
+
+                <div class="photo-grid">
+                    <img src="kofice-12-images/img-001.jpg" alt="2025 Riyadh International Book Fair — Source: SPA (Saudi Press Agency)">
+                    <img src="kofice-12-images/img-002.jpg" alt="2025 Riyadh International Book Fair — Source: SPA (Saudi Press Agency)">
+                </div>
+                <p class="photo-caption">▲ 2025 Riyadh International Book Fair — Source: SPA (Saudi Press Agency)</p>
+
+                <h2>Uzbekistan as Guest of Honour; Over 2,000 Publishers Attend</h2>
+
+                <p>The 2025 Riyadh International Book Fair welcomed Uzbekistan as its Guest of Honour, with over 2,000 publishers from 25 countries participating. The venue was set up on the campus of Princess Nourah bint Abdulrahman University (PNU). Beyond exhibitions and sales, the fair ran a wide range of programmes — including author signings, knowledge and cultural service pavilions, discounted book libraries, a showcase for authors without publishers, seminars, lectures, workshops, theatre and film screenings, poetry recitations, children's dedicated programmes, a Cultural Figure of the Year award, and business networking spaces for the industry — creating a multi-layered connection across the publishing ecosystem.</p>
+
+                <h2>Growing Trust in Translation, Direct Access to Originals, and the Rise of Tech</h2>
+
+                <p>Visitors from across the globe converged — from the UK, India, France, Belgium, Japan, China, the US, and Korea — confirming the fair's standing as one of the Arab world's major international book events. International visitors highlighted the intellectual boldness and human depth of contemporary Saudi fiction, as well as its high-quality translations. Korean visitors particularly valued the opportunity to access affordable Arabic original texts directly — what they described as 'primary source accessibility.' The programme and visitor trends also showed a marked pattern of literary and knowledge/tech content (AI, renewable energy, etc.) being consumed in tandem.</p>
+
+                <h2>Korea–Saudi Arabia Exchange in 2025: Seoul to Dhahran to Riyadh</h2>
+
+                <p>In June, Saudi Arabia ran an official pavilion at the Seoul International Book Fair at COEX. Major institutions joined — including the King Abdulaziz Public Library (KAPL), the King Fahd National Library (KFNL), the Saudi Publishers Association, the King Salman Global Academy for Arabic Language (KSGAAL), Prince Sattam bin Abdulaziz University (PSAU), and Nasher — expanding translation and language cooperation as well as industry meetings. Then in July, Korea was invited as Guest of Honour at the 5th Ithra Children's Book Fair in Dhahran, presenting Korean children's literature exhibitions and participatory programmes. The Arabic edition of author Han Dam-hee's <em>Star Papa</em> (별 아저씨) was introduced on-site, bringing the aesthetics and themes of Korean picture books to Saudi readers aged four to fourteen. The connections formed through these encounters flowed into the October Riyadh International Book Fair, creating a productive circuit of practical exchanges around copyright, co-translation, and joint marketing.</p>
+
+                <div class="article-photo" style="overflow:hidden; max-height:420px;"><img src="kofice-12-images/img-014.jpg" alt="Ithra Children's Book Fair 2025 — Chargé d'Affaires Moon Byung-jun — Source: Ithra" style="width:100%; margin-top:-80px;"></div>
+                <p class="photo-caption">▲ Ithra Children's Book Fair 2025 — Chargé d'Affaires Moon Byung-jun — Source: Ithra</p>
+
+                <div class="article-photo" style="max-width:320px; margin-left:auto; margin-right:auto;"><img src="kofice-12-images/img-015.jpg" alt="Star Papa by Han Dam-hee in Arabic — Source: Ithra"></div>
+                <p class="photo-caption">▲ <em>Star Papa</em> (별 아저씨) by Han Dam-hee — Arabic edition — Source: Ithra</p>
+
+                <p>The Riyadh International Book Fair is evolving beyond simple book sales into a platform for translation and mutual understanding. For Korean readers and publishers, it is an ideal arena for testing direct access to originals, co-editing, and multilingual distribution. For Saudi readers, it serves as an opportunity to encounter a wider range of Korean literature in Arabic translation. We look forward to seeing the works of more Korean authors introduced in Arabic, expanding the readership base in the region.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>SPA (Saudi Press Agency), <a href="https://spa.gov.sa/en" target="_blank" rel="noopener">https://spa.gov.sa/en</a></p>
+                    <p>Saudi Tourism Authority, <a href="https://www.visitsaudi.com/en/riyadh/events/riyadh-international-bookfair" target="_blank" rel="noopener">visitsaudi.com</a></p>
+                    <p><em>Arab News</em> (2025, October 7). AI focus of discussion at Riyadh Book Fair, <a href="https://www.arabnews.com/node/2618096/saudi-arabia" target="_blank" rel="noopener">arabnews.com</a></p>
+                    <p><em>Saudi Press Agency News</em> (2025, October 11). International Visitors Praise Cultural Diversity at Riyadh Book Fair 2025.</p>
+                    <p><em>Ithra News</em> (2025, July 16). Ithra Launches Fifth Edition of Children's Book Fair with South Korea as Guest of Honor, <a href="https://www.ithra.com/en/news/ithra-launches-fifth-edition-childrens-book-fair-south-korea-guest-honor" target="_blank" rel="noopener">ithra.com</a></p>
+                    <p><em>The Korea Times</em> (2025, July 17). Korean stories inspire Saudi readers at Ithra Children's Book Fair, <a href="https://www.koreatimes.co.kr/lifestyle/books/20250717/korean-stories-inspire-saudi-readers-at-ithra-childrens-book-fair" target="_blank" rel="noopener">koreatimes.co.kr</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-11.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-13.html">Next →</a>
+    </div>
+</body>
+</html>

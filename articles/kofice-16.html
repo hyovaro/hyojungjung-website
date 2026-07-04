@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리야드에서 만난 한국 전통공연 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-caption .correspondent { color: #7c3a36; font-style: italic; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-16.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="리야드에서 만난 한국 전통공연 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-16.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="리야드에서 만난 한국 전통공연 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화현장 — Cultural Scene</p>
+                    <h1 class="article-title-ko">리야드에서 만난 한국 전통공연</h1>
+                    <p class="article-title-en">Korean Traditional Performance Comes to Riyadh</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">17 November 2025</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · November 2025</span></div>
+        <div class="article-text" id="text-ko"><div class="text-ko">
+<h2>리야드에서 열린 제18회 한국-아랍 프렌드십 카라반</h2>
+<p>지난 11월 8일, 리야드 프린스 술탄 대학교(Prince Sultan University)에서 제18회 한국-아랍 프렌드십 카라반 공연이 개최됐다. 이 행사는 2008년부터 이어져 온 한국-아랍 소사이어티(Korea-Arab Society)의 대표 문화교류 프로그램으로, 매년 아랍권 주요 도시를 순회하며 한국의 전통·현대 공연예술을 소개해왔다. 올해 리야드 공연에는 판굿, 부채춤, 진도아리랑, 사물놀이 등 다양한 전통 공연과 더불어 익스프레션 크루(Expression Crew)의 비보잉 퍼포먼스가 함께 무대에 올랐다. 현지 매체 《아랍 뉴스(Arab News)》 역시 해당 공연을 보도하며 서로 다른 다섯 가지 공연이 각기 다른 한국 문화의 유산과 정체성을 보여주었다고 전했다. 행사 당일에는 해당 대학교에서 공연뿐만 아니라 리야드 세종학당에서 마련한 한국 문화 체험 프로그램도 함께 진행돼, 관람객들이 보다 다양한 방식으로 한국 문화를 경험할 수 있었다.</p>
+<div style="margin: 28px 0 8px; display: flex; justify-content: center;"><img src="kofice-16-images/img-000.jpg" alt="제18회 한국-아랍 프렌드십 카라반 공연 포스터" style="max-width: 400px; width: 100%; height: auto; display: block; border-radius: 2px;"></div>
+<p class="photo-caption">▲ 제18회 한국-아랍 프렌드십 카라반 공연 포스터 — 출처: 주 사우디아라비아 한국대사관</p>
+<div class="article-photo"><img src="kofice-16-images/img-012.jpg" alt="현지 매체 보도 기사 및 공연 사진 — 출처: 아랍 뉴스(Arab News)"></div>
+<p class="photo-caption">▲ 현지 매체 보도 — 출처: 아랍 뉴스(Arab News)</p>
+<h2>한국 전통예술 × 사우디 여성합창단 협업 공연</h2>
+<p>올해 5월에는 같은 프린스 술탄 대학교에서 특별한 협동 공연이 진행됐다. 판소리 명창 채수정 교수와 한국 전통음악가들, 그리고 세종학당 리야드 소속 사우디 여성합창단이 함께 무대에 오른 것이다. 이번 협업은 통신원이 직접 기획한 프로젝트로, 공연에 앞서 세종학당 리야드에서 한국 판소리 민요 전문가와 함께 온라인 판소리 수업을 운영하며 사우디 학생들이 장단·발성·가창을 익힐 수 있도록 사전 교육 과정이 마련됐다. 통신원도 한국 현지 판소리 강사진들에게 온라인으로 직접 장구 연주 수업을 받고, 학생들과 연습부터 공연까지 함께 참여했다. 한국 전통문화 공연팀과 사우디 여성합창단은 &lt;꽃타령&gt;과 &lt;강강술래&gt;를 함께 합창하며 사우디 내 최초의 '한국 전통음악-현지 여성합창단 공동 무대'를 만들어냈다. 공연은 관객과 교육기관 관계자들로부터 큰 호응을 얻었으며, 현장에서는 감동으로 눈물을 보이는 사우디 관람객도 있었다. 참여 학생들은 한국 판소리 대가인 명창 채수정 교수와 그의 제자들과 함께 무대에 선 것에 대해 "영광스럽고 잊지 못할 경험이었다"라고 소감을 전했다.</p>
+<div class="article-photo"><img src="kofice-16-images/img-013.jpg" alt="협동 공연팀 대기실 단체 사진 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 협동 공연팀 대기실 단체 사진 — 출처: <span class="correspondent">통신원 촬영</span></p>
+<div class="article-photo"><img src="kofice-16-images/img-014.jpg" alt="공연 현장 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 공연 현장 — 출처: <span class="correspondent">통신원 촬영</span></p>
+<h2>프린스 술탄 대학교-세종학당 리야드 매개 문화교류</h2>
+<p>5월 협업 공연과 11월 카라반 공연이 모두 프린스 술탄 대학교에서 진행된 것은, 동 대학 내에 세종학당 리야드가 설치되어 있어 한국 문화·한국어 교육 프로그램이 운영되고 있다는 구조적 기반 덕분이다. 이 교육기관 기반의 연결점이 한국 전통예술 프로그램의 연속적인 개최를 가능하게 했으며, 현지 내에서 한국문화 체험과 교육을 연계하는 중요한 플랫폼으로 기능하고 있다. 특히 해외에서의 한류가 드라마·영화·케이팝 등 대중문화 중심으로 확산되는 가운데, 전통예술을 현지 교육기관과 결합해 소개하는 이러한 시도는 한국 문화의 폭을 넓히는 의미 있는 흐름으로 볼 수 있다.</p>
+<div class="sources">
+    <p class="sources-label">사진 출처 및 참고자료</p>
+    <p>통신원 촬영</p>
+    <p>주 사우디아라비아 한국대사관 (2025. 10. 28). The 18th Korean-Arab Friendship Caravan, <a href="https://www.mofa.go.kr/sab-ar/rd/m_10974/view.do?seq=759402" target="_blank" rel="noopener">https://www.mofa.go.kr/sab-ar/rd/m_10974/view.do?seq=759402</a></p>
+    <p>《Arab News》 (2025. 11. 08). Korea-Arab Friendship Caravan strengthens cultural ties in Riyadh, <a href="https://www.arabnews.com/node/2621876/saudi-arabia" target="_blank" rel="noopener">arabnews.com</a></p>
+    <p>리야드 세종학당 웹사이트, <a href="https://ksi-riyadh.org/" target="_blank" rel="noopener">https://ksi-riyadh.org/</a></p>
+</div>
+</div></div>
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+<h2>The 18th Korea-Arab Friendship Caravan in Riyadh</h2>
+<p>On 8 November, the 18th Korea-Arab Friendship Caravan performance was held at Prince Sultan University in Riyadh. Running since 2008, this is a signature cultural exchange programme of the Korea-Arab Society, which tours major Arab cities each year to introduce Korean traditional and contemporary performing arts. This year's Riyadh performance featured a range of traditional acts — pungmul percussion, fan dance, Jindo Arirang, and samulnori — alongside a b-boying performance by Expression Crew. Local outlet <em>Arab News</em> also covered the event, reporting that the five distinct performances each showcased a different facet of Korea's cultural heritage and identity. On the day, the university hosted not just the performances but also a Korean cultural experience programme prepared by King Sejong Institute Riyadh, giving audiences a wider range of ways to engage with Korean culture.</p>
+<div style="margin: 28px 0 8px; display: flex; justify-content: center;"><img src="kofice-16-images/img-000.jpg" alt="18th Korea-Arab Friendship Caravan poster" style="max-width: 400px; width: 100%; height: auto; display: block; border-radius: 2px;"></div>
+<p class="photo-caption">▲ 18th Korea-Arab Friendship Caravan poster — Source: Korean Embassy in Saudi Arabia</p>
+<div class="article-photo"><img src="kofice-16-images/img-012.jpg" alt="Local media coverage — Source: Arab News"></div>
+<p class="photo-caption">▲ Local media coverage — Source: Arab News</p>
+<h2>Korean Traditional Arts × Saudi Women's Choir: A Collaborative Performance</h2>
+<p>In May, a special collaborative performance took place at the same Prince Sultan University. Master pansori singer Professor Chae Su-jeong and Korean traditional musicians joined the Saudi women's choir of King Sejong Institute Riyadh on stage together. This collaboration was a project organised directly by the correspondent. In preparation, an online pansori class was run at King Sejong Institute Riyadh with a Korean pansori folk song specialist, giving Saudi students the opportunity to learn rhythm patterns, vocal technique, and singing in advance. The correspondent also received online janggu drum lessons directly from Korean pansori teachers and participated with the students from rehearsals all the way through to the performance. The Korean traditional performing arts team and the Saudi women's choir performed together in <em>Kkot Taryeong</em> and <em>Ganggangsullae</em>, creating Saudi Arabia's first joint stage featuring Korean traditional music with a local women's choir. The performance received a warm reception from audiences and educational institution representatives alike, with some Saudi audience members moved to tears. Participating students said it was "an honour and an unforgettable experience" to share the stage with master pansori singer Professor Chae Su-jeong and her students.</p>
+<div class="article-photo"><img src="kofice-16-images/img-013.jpg" alt="Collaborative performance team backstage — correspondent's own photograph"></div>
+<p class="photo-caption">▲ Collaborative performance team backstage — Source: <span class="correspondent">correspondent's own photograph</span></p>
+<div class="article-photo"><img src="kofice-16-images/img-014.jpg" alt="Performance in progress — correspondent's own photograph"></div>
+<p class="photo-caption">▲ Performance in progress — Source: <span class="correspondent">correspondent's own photograph</span></p>
+<h2>King Sejong Institute Riyadh and Prince Sultan University as a Cultural Exchange Platform</h2>
+<p>The fact that both the May collaboration and the November Caravan performance took place at Prince Sultan University owes to the structural foundation of King Sejong Institute Riyadh being based within that university, running Korean culture and language education programmes. This educational anchor has enabled the consecutive staging of Korean traditional arts programmes, functioning as an important platform that links Korean cultural experience and education within the local community. At a time when hallyu abroad is spreading primarily through popular culture — drama, film, K-pop — this approach of introducing traditional arts in partnership with a local educational institution represents a meaningful broadening of Korean cultural reach.</p>
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Correspondent's own photographs</p>
+    <p>Korean Embassy in Saudi Arabia (2025, October 28). The 18th Korean-Arab Friendship Caravan, <a href="https://www.mofa.go.kr/sab-ar/rd/m_10974/view.do?seq=759402" target="_blank" rel="noopener">https://www.mofa.go.kr/sab-ar/rd/m_10974/view.do?seq=759402</a></p>
+    <p><em>Arab News</em> (2025, November 8). Korea-Arab Friendship Caravan strengthens cultural ties in Riyadh.</p>
+    <p>King Sejong Institute Riyadh, <a href="https://ksi-riyadh.org/" target="_blank" rel="noopener">https://ksi-riyadh.org/</a></p>
+</div>
+</div></div>
+    </div>
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-15.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-17.html">Next →</a>
+    </div>
+</body>
+</html>

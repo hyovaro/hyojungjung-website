@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스포티파이(Spotify) 사우디아라비아 7년 누적 차트, 감성 팝 강세 속 정국 세븐(Seven) 7위 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 480px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        /* Chart table */
+        .chart-table-wrap { margin: 28px 0 28px; overflow-x: auto; }
+        .chart-table-title { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 10px; }
+        .chart-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .chart-table thead tr { border-bottom: 1px solid #c5c0b8; }
+        .chart-table th { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #6f6f6f; font-weight: 500; padding: 8px 10px; text-align: left; }
+        .chart-table td { padding: 10px 10px; border-bottom: 0.5px solid rgba(0,0,0,0.07); vertical-align: middle; line-height: 1.4; }
+        .chart-table tr:last-child td { border-bottom: none; }
+        .chart-table .rank { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 300; color: #1a1a1a; width: 36px; text-align: center; }
+        .chart-table .rank.kpop { color: #7c3a36; font-weight: 400; }
+        .chart-table .song { font-weight: 500; color: #1a1a1a; }
+        .chart-table .artist { font-size: 12px; color: #5e5e5e; }
+        .chart-table .streams { font-size: 12px; color: #454545; white-space: nowrap; }
+        .chart-table .weeks { font-size: 12px; color: #6f6f6f; white-space: nowrap; }
+        .chart-table tr.kpop-row td { background: rgba(124,58,54,0.04); }
+        .chart-source { font-size: 10px; color: #6f6f6f; margin-top: 8px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-42.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="스포티파이(Spotify) 사우디아라비아 7년 누적 차트, 감성 팝 강세 속 정국 세븐(Seven) 7위 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-42.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="스포티파이(Spotify) 사우디아라비아 7년 누적 차트, 감성 팝 강세 속 정국 세븐(Seven) 7위 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">음악 / 스트리밍 — Music &amp; Streaming</p>
+                    <h1 class="article-title-ko">스포티파이(Spotify) 사우디아라비아 7년 누적 차트, 감성 팝 강세 속 정국 &lt;세븐(Seven)&gt; 7위</h1>
+                    <p class="article-title-en">Spotify Saudi Arabia 7-Year Cumulative Chart: Jungkook's "Seven" at No. 7 Amid Emotional Pop Dominance</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">20 April 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · April 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<p>사우디아라비아의 음원 시장은 감성 팝(pop) 중심의 장기 소비 구조를 보인다. 2019년 6월 27일부터 2026년 4월 16일 기준, 스포티파이(Spotify) 사우디아라비아의 주간 차트를 기준으로 한 누적 스트리밍 집계에서 감성 팝 중심의 장기 흥행이 뚜렷하다. 약 7년에 걸친 누적 데이터는 단기간의 화제성보다 꾸준한 소비가 순위를 좌우하는 흐름을 보여준다.</p>
+
+<h2>▣ 스포티파이 사우디아라비아 누적 스트리밍 TOP 10</h2>
+
+<div class="chart-table-wrap">
+    <table class="chart-table">
+        <thead>
+            <tr>
+                <th>순위</th>
+                <th>아티스트</th>
+                <th>곡명</th>
+                <th>차트 체류</th>
+                <th>누적 스트리밍</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="rank">1</td><td><span class="song">Another Love</span><br><span class="artist">톰 오델 (Tom Odell)</span></td><td></td><td class="weeks">242주</td><td class="streams">12,778,685</td></tr>
+            <tr><td class="rank">2</td><td><span class="song">Sweater Weather</span><br><span class="artist">더 네이버후드 (The Neighbourhood)</span></td><td></td><td class="weeks">286주</td><td class="streams">12,451,786</td></tr>
+            <tr><td class="rank">3</td><td><span class="song">BIRDS OF A FEATHER</span><br><span class="artist">빌리 아일리시 (Billie Eilish)</span></td><td></td><td class="weeks">100주</td><td class="streams">10,915,991</td></tr>
+            <tr><td class="rank">4</td><td><span class="song">Apocalypse</span><br><span class="artist">시가렛 애프터 섹스 (Cigarettes After Sex)</span></td><td></td><td class="weeks">230주</td><td class="streams">10,907,672</td></tr>
+            <tr><td class="rank">5</td><td><span class="song">WILDFLOWER</span><br><span class="artist">빌리 아일리시 (Billie Eilish)</span></td><td></td><td class="weeks">100주</td><td class="streams">10,652,292</td></tr>
+            <tr><td class="rank">6</td><td><span class="song">Set Fire to the Rain</span><br><span class="artist">아델 (Adele)</span></td><td></td><td class="weeks">202주</td><td class="streams">10,157,074</td></tr>
+            <tr class="kpop-row"><td class="rank kpop">7</td><td><span class="song">Seven</span><br><span class="artist">정국 (Jung Kook)</span></td><td></td><td class="weeks">140주</td><td class="streams">9,904,619</td></tr>
+            <tr><td class="rank">8</td><td><span class="song">I Wanna Be Yours</span><br><span class="artist">아틱 몽키스 (Arctic Monkeys)</span></td><td></td><td class="weeks">202주</td><td class="streams">9,529,010</td></tr>
+            <tr><td class="rank">9</td><td><span class="song">lovely</span><br><span class="artist">빌리 아일리시 (Billie Eilish)</span></td><td></td><td class="weeks">316주</td><td class="streams">9,044,776</td></tr>
+            <tr><td class="rank">10</td><td><span class="song">Die With A Smile</span><br><span class="artist">레이디 가가 (Lady Gaga)</span></td><td></td><td class="weeks">87주</td><td class="streams">8,841,764</td></tr>
+        </tbody>
+    </table>
+    <p class="chart-source">※ 출처: Spotify. 'Saudi Arabia Weekly Top Songs Chart' (2019.06.27 ~ 2026.04.16 기준)</p>
+</div>
+
+<p>이번 집계에서 1위는 톰 오델(Tom Odell)의 &lt;어나더 러브(Another Love)&gt;로 약 1,277만 회의 스트리밍(streaming)을 기록했다. 이어서 더 네이버후드(The Neighbourhood)의 &lt;스웨터 웨더(Sweater Weather)&gt;, 빌리 아일리시(Billie Eilish)의 &lt;버즈 오브 어 페더(BIRDS OF A FEATHER)&gt;, 시가렛 애프터 섹스(Cigarettes After Sex)의 &lt;아포칼립스(Apocalypse)&gt; 등이 상위권을 형성했다. 전반적으로 잔잔한 분위기의 팝과 인디 계열 곡들이 오랜 기간 차트에 머물며 누적 스트리밍을 축적한 것이 특징이다.</p>
+
+<p>이처럼 감성적이고 잔잔한 곡들이 장기간 소비되는 양상은 현지 청취 환경이 일상 속 배경음악 소비와 밀접하게 연결되어 있음을 보여준다. 이는 운전, 카페, 휴식 등 비교적 차분한 청취 상황에서 음악이 소비되는 비중이 높은 것으로 해석할 수 있다.</p>
+
+<h2>정국의 &lt;세븐(Seven)&gt;, 7년 누적 차트 7위의 의미</h2>
+
+<p>이러한 구조 속에서 케이팝의 성과는 제한적이지만 분명한 존재감을 드러냈다. 정국(Jung Kook)의 &lt;세븐(Seven)&gt;은 약 990만 회의 스트리밍을 기록하며 7위에 올랐다. 장기 체류 곡이 절대적으로 유리한 누적 구조에서 정국의 &lt;세븐(Seven)&gt;은 비교적 최근 발매 곡이 7년 누적 차트 중에서 톱 10에 진입한 사례로 주목된다.</p>
+
+<div class="article-photo-sm"><img src="kofice-42-images/img-01.jpg" alt="정국의 '세븐(Seven)' 싱글 및 정규앨범 — 출처: 스포티파이(Spotify)"></div>
+<p class="photo-caption">▲ 정국의 '세븐(Seven)' 싱글 및 정규앨범 &lt;GOLDEN&gt; — 출처: 스포티파이(Spotify)</p>
+
+<p>이는 케이팝이 음원이 발매되던 초기 강한 소비력을 기반으로 단기간에 높은 스트리밍을 형성하는 특징을 보여준다. 일반적으로 케이팝은 발매 초기에는 팬덤을 중심으로 한 대규모 스트리밍이 집중되며 빠르게 순위를 끌어올리는 '고밀도 단기 소비 구조'의 성격을 보인다. 반면 서구 팝은 재생목록(playlist)을 기반으로 한 반복 청취를 통해 장기간 스트리밍을 누적하는 '장기 체류형 소비 구조'가 특징이다. 다만 &lt;세븐(Seven)&gt;의 경우, 초기 집중 소비 이후에도 꾸준한 재생이 이어지며 장기 누적형 소비로 확장되는 흐름을 보이고 있다. 이는 케이팝이 기존의 단기 소비 패턴을 넘어 전 세계 음악 시장의 소비 구조와 점차 접점을 넓혀가고 있음을 시사한다.</p>
+
+<p>정국의 &lt;세븐(Seven)&gt;의 흥행은 단순히 케이팝으로만 평가하기보다는 글로벌(global) 팝 시스템 안에서 제작되고 유통되면서 다른 팝 아티스트(artist)들과 함께 동일한 방식으로 소비된다는 점에서 이를 보다 확장된 맥락에서 이해할 필요가 있다. 즉 장르는 케이팝이지만 제작에서부터 소비에 이르는 전반적인 구조는 이미 글로벌 팝 시장에 존재하는 곡들과 크게 다르지 않다. 작곡·프로듀싱 단계부터 해외 인력이 함께 참여하고, 플랫폼(platform) 기반으로 전 세계에서 동시 소비가 이루어지는 구조이기 때문이다.</p>
+
+<h2>글로벌 팝 중심 시장에서의 케이팝 위치</h2>
+
+<p>톱 100으로 범위를 넓히면 케이팝의 양상은 보다 뚜렷해진다. 지민(Jimin)의 &lt;라이크 크레이지(Like Crazy)&gt;(35위)와 &lt;후(Who)&gt;(55위), 뷔(V)의 &lt;러브 미 어게인(Love Me Again)&gt;(49위), 로제(ROSÉ)의 &lt;아파트(APT.)&gt;(90위), 정국(Jung Kook)의 &lt;3D&gt;(96위) 등 총 6곡이 순위권에 포함됐다. 특히 이 가운데 대부분이 방탄소년단(BTS) 구성원들의 개인곡으로 나타나며, 특정 인물을 중심으로 소비가 집중되는 경향을 보였다.</p>
+
+<p>가장 최근인 2026년 4월 10일~4월 16일 기준, 스포티파이 사우디아라비아 집계 기준으로 방탄소년단(BTS)이 탑 아티스트(Top Artist) 1위를 차지했고, 방탄소년단(BTS)의 &lt;스윔(Swim)&gt;이 탑 송(Top Songs)에서 7위를 차지하여 눈길을 끌었다.</p>
+
+<div class="article-photo-sm"><img src="kofice-42-images/img-02.jpg" alt="스포티파이 사우디아라비아 탑 아티스트 1위 방탄소년단(BTS) — 출처: 스포티파이"></div>
+<div class="article-photo-sm" style="margin-top:8px;"><img src="kofice-42-images/img-03.jpg" alt="스포티파이 사우디아라비아 탑 송 7위 BTS Swim — 출처: 스포티파이"></div>
+<p class="photo-caption">▲ 스포티파이(Spotify) 사우디아라비아 주간 차트: 탑 아티스트 1위이자 탑 송 7위를 기록한 방탄소년단(BTS) — 출처: 스포티파이(Spotify) (2026.04.10~04.16 기준)</p>
+
+<p>이와 같은 결과는 사우디아라비아 음원 시장에서 방탄소년단(BTS) 브랜드의 영향력이 여전히 유효함을 보여주며, 이는 사우디아라비아 시장에서 케이팝이 장르 자체로 확산되기보다는, 특정한 유명 아티스트를 중심으로 소비가 이루어지고 있음을 시사한다. 즉 사우디아라비아에서 케이팝은 유명 팬덤 기반의 선택적인 소비가 강하게 작동하고 있으며, 이는 현지에서 케이팝의 저변 확대가 아직 제한적인 것과 동시에 핵심 아티스트들의 영향력은 매우 견고한 이중적인 구조를 보인다.</p>
+
+<p>결과적으로 사우디아라비아의 음악 시장은 일명 '장기 체류형 글로벌 팝'과 '단기 집중형 케이팝'이 공존하는 구조를 보인다. 전자는 감성적인 공감과 일상적인 소비를 기반으로 꾸준히 누적되는 반면, 후자는 팬덤 중심의 강한 초기 반응을 통해 존재감을 확보한다. 다만 &lt;세븐(Seven)&gt;과 같은 사례는 이러한 구분이 점차 완화되며, 케이팝이 추후 사우디아라비아에서 장기적인 소비 구조로 확장될 수 있는 가능성을 보여주는 대표적인 사례로 볼 수 있다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>— 스포티파이(Spotify) 국가별 순위. <a href="https://charts.spotify.com/charts/overview/sa" target="_blank">charts.spotify.com</a></p>
+    <p>— 쿼브(Kworb) 집계. <a href="https://kworb.net/spotify/country/sa_weekly_totals.html" target="_blank">kworb.net</a></p>
+</div>
+
+        </div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<p>Saudi Arabia's music market is characterised by long-term consumption of emotional pop. A cumulative streaming count based on Spotify Saudi Arabia's weekly chart from 27 June 2019 to 16 April 2026 reveals a clear dominance of emotional pop and sustained long-term listening. The approximately seven years of cumulative data show that consistent consumption — rather than short-lived viral momentum — is what determines the rankings.</p>
+
+<h2>Spotify Saudi Arabia — Cumulative Streaming TOP 10</h2>
+
+<div class="chart-table-wrap">
+    <table class="chart-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Artist / Title</th>
+                <th></th>
+                <th>Weeks on Chart</th>
+                <th>Cumulative Streams</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="rank">1</td><td><span class="song">Another Love</span><br><span class="artist">Tom Odell</span></td><td></td><td class="weeks">242 wks</td><td class="streams">12,778,685</td></tr>
+            <tr><td class="rank">2</td><td><span class="song">Sweater Weather</span><br><span class="artist">The Neighbourhood</span></td><td></td><td class="weeks">286 wks</td><td class="streams">12,451,786</td></tr>
+            <tr><td class="rank">3</td><td><span class="song">BIRDS OF A FEATHER</span><br><span class="artist">Billie Eilish</span></td><td></td><td class="weeks">100 wks</td><td class="streams">10,915,991</td></tr>
+            <tr><td class="rank">4</td><td><span class="song">Apocalypse</span><br><span class="artist">Cigarettes After Sex</span></td><td></td><td class="weeks">230 wks</td><td class="streams">10,907,672</td></tr>
+            <tr><td class="rank">5</td><td><span class="song">WILDFLOWER</span><br><span class="artist">Billie Eilish</span></td><td></td><td class="weeks">100 wks</td><td class="streams">10,652,292</td></tr>
+            <tr><td class="rank">6</td><td><span class="song">Set Fire to the Rain</span><br><span class="artist">Adele</span></td><td></td><td class="weeks">202 wks</td><td class="streams">10,157,074</td></tr>
+            <tr class="kpop-row"><td class="rank kpop">7</td><td><span class="song">Seven</span><br><span class="artist">Jung Kook</span></td><td></td><td class="weeks">140 wks</td><td class="streams">9,904,619</td></tr>
+            <tr><td class="rank">8</td><td><span class="song">I Wanna Be Yours</span><br><span class="artist">Arctic Monkeys</span></td><td></td><td class="weeks">202 wks</td><td class="streams">9,529,010</td></tr>
+            <tr><td class="rank">9</td><td><span class="song">lovely</span><br><span class="artist">Billie Eilish</span></td><td></td><td class="weeks">316 wks</td><td class="streams">9,044,776</td></tr>
+            <tr><td class="rank">10</td><td><span class="song">Die With A Smile</span><br><span class="artist">Lady Gaga</span></td><td></td><td class="weeks">87 wks</td><td class="streams">8,841,764</td></tr>
+        </tbody>
+    </table>
+    <p class="chart-source">※ Source: Spotify. 'Saudi Arabia Weekly Top Songs Chart' (27 June 2019 – 16 April 2026)</p>
+</div>
+
+<p>Tom Odell's "Another Love" topped the chart with approximately 12.78 million streams. It was followed by The Neighbourhood's "Sweater Weather," Billie Eilish's "BIRDS OF A FEATHER," and Cigarettes After Sex's "Apocalypse." The dominant pattern is one of calm, emotionally resonant pop and indie tracks accumulating streams over extended periods on the chart.</p>
+
+<p>This long-term consumption of gentle, emotionally driven music suggests that listening habits in Saudi Arabia are closely tied to music as ambient, everyday background sound — consumed during driving, in cafés, or at rest, rather than in active, engaged listening contexts.</p>
+
+<h2>Jungkook's "Seven" at No. 7: What It Means</h2>
+
+<p>Within this structure, K-pop's footprint is limited but unmistakable. Jung Kook's "Seven" ranked seventh with approximately 9.9 million streams — a remarkable result given that cumulative charts structurally favour songs with long chart residency, and "Seven" is a comparatively recent release to have broken into the top 10 of a seven-year cumulative ranking.</p>
+
+<div class="article-photo-sm"><img src="kofice-42-images/img-01.jpg" alt="Jung Kook 'Seven' single and GOLDEN album — Source: Spotify"></div>
+<p class="photo-caption">▲ Jung Kook's "Seven" single and album <em>GOLDEN</em> — Source: Spotify</p>
+
+<p>This reflects K-pop's characteristic pattern of intense early consumption: at release, fandom-driven mass streaming concentrates rapidly, producing a "high-density short-burst" effect that drives rankings upward quickly. Western pop, by contrast, tends to accumulate streams over time through repeated playlist listening — a "long-stay" consumption pattern. What makes "Seven" notable is that its initial surge has been followed by sustained, ongoing play, suggesting that it is shifting toward the long-stay model. This points to K-pop gradually finding common ground with the broader global music consumption structure.</p>
+
+<p>The success of "Seven" is perhaps best understood not purely as a K-pop phenomenon, but as something produced and distributed within the global pop system and consumed alongside other pop artists in the same way. While its genre is K-pop, its production and distribution structure — involving international collaborators from the composition and production stage, and simultaneous global release on streaming platforms — is not fundamentally different from the global pop songs it shares charts with.</p>
+
+<h2>K-pop's Position in a Global Pop-Centred Market</h2>
+
+<p>Extending the view to the top 100, K-pop's presence becomes more pronounced. A total of six K-pop tracks appeared in the rankings: Jimin's "Like Crazy" (35th), "Who" (55th), V's "Love Me Again" (49th), ROSÉ's "APT." (90th), and Jung Kook's "3D" (96th). Notably, most of these are solo tracks by BTS members, reflecting a tendency for consumption to concentrate around specific individuals rather than the genre as a whole.</p>
+
+<p>In the most recent weekly chart (10–16 April 2026), BTS ranked first as Top Artist on Spotify Saudi Arabia, and their track "Swim" reached seventh in the Top Songs chart.</p>
+
+<div class="article-photo-sm"><img src="kofice-42-images/img-02.jpg" alt="BTS #1 Top Artist on Spotify Saudi Arabia — Source: Spotify"></div>
+<div class="article-photo-sm" style="margin-top:8px;"><img src="kofice-42-images/img-03.jpg" alt="BTS Swim #7 Top Songs Saudi Arabia — Source: Spotify"></div>
+<p class="photo-caption">▲ BTS: No. 1 Top Artist and No. 7 Top Song ("Swim") on Spotify Saudi Arabia, week of 10–16 April 2026 — Source: Spotify</p>
+
+<p>These results confirm that BTS's brand influence remains potent in the Saudi music market. They also suggest that K-pop's presence in Saudi Arabia is sustained not by the genre spreading broadly, but by consumption concentrating around specific high-profile artists. The picture is a dual one: K-pop's general reach in the market remains limited, while the influence of its core artists is exceptionally strong.</p>
+
+<p>Saudi Arabia's music market, in sum, operates as a coexistence of "long-stay global pop" and "short-burst K-pop." The former accumulates steadily through emotional resonance and everyday listening; the latter secures visibility through the concentrated intensity of early fandom response. Cases like "Seven," however, suggest that this distinction is softening — and that K-pop holds the potential to expand into a long-term consumption structure in Saudi Arabia in the years ahead.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>— Spotify country charts. <a href="https://charts.spotify.com/charts/overview/sa" target="_blank">charts.spotify.com</a></p>
+    <p>— Kworb cumulative totals. <a href="https://kworb.net/spotify/country/sa_weekly_totals.html" target="_blank">kworb.net</a></p>
+</div>
+
+        </div></div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <div class="float-nav">
+        <a href="kofice-41.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-43.html">Next →</a>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>

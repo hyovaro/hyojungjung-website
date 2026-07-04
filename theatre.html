@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nangman Theatre — Hyojung Jung 정효정</title>
+    <meta name="description" content="Nangman Theatre — founded by Hyojung Jung in 2016. A Seoul-based musical theatre company creating original Korean productions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+            word-break: keep-all;
+        }
+        .nav-cta {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            border: 0.5px solid rgba(0,0,0,0.3);
+            padding: 7px 18px;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-cta:hover { background: #1a1a1a; color: #f7f4ef; }
+
+        /* ── Page header ── */
+        .page-header {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 260px;
+        }
+        .header-logo-col {
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            background: #ede9e2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 24px;
+        }
+        .header-logo-col img {
+            max-width: 130px;
+            max-height: 80px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+        .header-text-col {
+            display: grid;
+            grid-template-columns: 45% 1fr;
+        }
+        .header-title-col {
+            padding: 44px 40px 40px 52px;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .header-eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 16px;
+        }
+        .header-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 0.96;
+            letter-spacing: -0.02em;
+        }
+        .header-title em { font-style: italic; }
+        .header-tagline {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.35;
+            color: #7c3a36;
+            margin-top: 14px;
+        }
+        .header-tagline [lang="ko"] { font-style: normal; }
+        .header-subtitle {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-top: 18px;
+        }
+        .header-desc-col {
+            padding: 44px 52px 40px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-desc {
+            font-size: 14px;
+            line-height: 1.85;
+            color: #454545;
+        }
+        .header-desc p + p { margin-top: 14px; }
+        .header-meta {
+            margin-top: 28px;
+            display: flex;
+            gap: 32px;
+        }
+        .meta-item { }
+        .meta-label {
+            font-size: 9px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 5px;
+        }
+        .meta-value {
+            font-size: 12px;
+            color: #454545;
+        }
+
+        /* ── Section label ── */
+        .section-label {
+            padding: 16px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .section-label span {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+
+        /* ── Productions grid ── */
+        /* ── Featured (Selected work) band ── */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .featured-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            border-top: 2px solid #7c3a36;
+        }
+        .featured-card:last-child { border-right: none; }
+        .featured-img {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            background: #ede9e2;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .featured-img img {
+            width: 100%; height: 100%;
+            object-fit: cover; display: block;
+            transition: transform 0.5s ease;
+        }
+        .featured-card:hover .featured-img img { transform: scale(1.03); }
+        .featured-img-overlay {
+            position: absolute; inset: 0;
+            background: rgba(26,26,26,0.45);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .featured-img-overlay span {
+            color: #f7f4ef; font-size: 11px;
+            letter-spacing: 0.12em; text-transform: uppercase;
+        }
+        .featured-card:hover .featured-img-overlay { opacity: 1; }
+        .featured-info { padding: 26px 28px 30px; }
+
+        .productions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .production-card {
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            cursor: default;
+        }
+        .production-card:last-child { border-right: none; }
+        .production-card:nth-child(3n) { border-right: none; }
+        .production-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: #ede9e2;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .production-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .production-card:hover .production-img img { transform: scale(1.03); }
+        .production-card--linked {
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .production-img { position: relative; }
+        .production-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(26,26,26,0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .production-img-overlay span {
+            color: #f7f4ef;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .production-card--linked:hover .production-img-overlay { opacity: 1; }
+        .production-info {
+            padding: 24px 28px 28px;
+        }
+        .production-year {
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 10px;
+        }
+        .production-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+        .production-title em { font-style: italic; }
+        .production-title em[lang="ko"] { display: block; }
+        .production-title em[lang="ko"] + em { display: block; color: #6f6f6f; font-size: 20px; margin-top: 2px; }
+        .production-by {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 14px;
+            font-style: italic;
+            color: #7c3a36;
+            margin: -2px 0 10px;
+        }
+        .production-role {
+            font-size: 11px;
+            color: #5e5e5e;
+            line-height: 1.6;
+        }
+        .production-venue {
+            font-size: 11px;
+            color: #6f6f6f;
+            margin-top: 6px;
+        }
+
+        /* ── Poster row ── */
+        .history-section {
+            padding: 0 52px 48px;
+            max-width: 800px;
+        }
+        .history-item {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 24px;
+            padding: 20px 0;
+            border-bottom: 0.5px solid rgba(0,0,0,0.07);
+        }
+        .history-item:last-child { border-bottom: none; }
+        .history-year {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            color: #7c3a36;
+            font-weight: 500;
+            padding-top: 2px;
+            white-space: nowrap;
+        }
+        .history-desc p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #454545;
+            margin: 0;
+        }
+        .history-desc p + p {
+            margin-top: 4px;
+            color: #6f6f6f;
+            font-size: 13px;
+        }
+        .poster-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .poster-item {
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            background: #ede9e2;
+        }
+        .poster-item:last-child { border-right: none; }
+        .poster-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .poster-item:hover img { transform: scale(1.03); }
+
+        /* ── Info rows ── */
+        .info-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 56px;
+            align-items: center;
+        }
+        .info-label {
+            padding: 16px 20px 16px 52px;
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .info-values {
+            padding: 16px 52px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            align-items: center;
+        }
+        .info-tag {
+            font-size: 11px;
+            color: #454545;
+        }
+        .info-tag-muted {
+            font-size: 11px;
+            color: #5e5e5e;
+        }
+
+        /* ── Partners ── */
+        .partners-section {
+            padding: 48px 52px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .partners-label {
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 32px;
+        }
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        .partner-item img {
+            height: 40px;
+            width: auto;
+            max-width: 160px;
+            object-fit: contain;
+            display: block;
+            mix-blend-mode: multiply;
+        }
+
+        /* ── Contact strip ── */
+        .contact-strip {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 56px;
+            align-items: center;
+        }
+        .contact-label {
+            padding: 16px 20px 16px 52px;
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .contact-link {
+            padding: 16px 52px;
+            font-size: 12px;
+            color: #454545;
+            transition: color 0.2s;
+        }
+        .contact-link:hover { color: #1a1a1a; }
+
+        /* ── Footer ── */
+        footer {
+            padding: 40px 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-left {
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+        .footer-right {
+            display: flex;
+            gap: 24px;
+        }
+        .footer-link {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            transition: color 0.2s;
+        }
+        .footer-link:hover { color: #1a1a1a; }
+
+        /* ── Responsive ── */
+        @media (max-width: 1100px) {
+            .productions-grid { grid-template-columns: repeat(2, 1fr); }
+            .production-card:nth-child(3n) { border-right: 0.5px solid rgba(0,0,0,0.1); }
+            .production-card:nth-child(2n) { border-right: none; }
+        }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .page-header { grid-template-columns: 1fr; }
+            .header-logo-col { min-height: 120px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-text-col { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 28px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-desc-col { padding: 28px 28px 32px; }
+            .section-label { padding: 14px 28px; }
+            .productions-grid { grid-template-columns: 1fr; }
+            .production-card:nth-child(n) { border-right: none; }
+            .featured-grid { grid-template-columns: 1fr; }
+            .featured-card { border-right: none; }
+            .poster-row { grid-template-columns: repeat(2, 1fr); }
+            .poster-item:nth-child(2) { border-right: none; }
+            .poster-item:nth-child(4) { border-right: none; }
+            .info-row { grid-template-columns: 1fr; }
+            .info-label { border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.05); padding: 14px 28px; }
+            .info-values { padding: 12px 28px 16px; }
+            .contact-strip { grid-template-columns: 1fr; }
+            .contact-label { border-right: none; padding: 14px 28px 6px; }
+            .contact-link { padding: 6px 28px 14px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            nav { padding: 16px 20px; }
+            .header-title { font-size: 36px; }
+            .poster-row { grid-template-columns: repeat(2, 1fr); }
+            .info-label { padding: 12px 20px; }
+            .info-values { padding: 10px 20px 14px; }
+        }
+    
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/theatre.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="Nangman Theatre — Hyojung Jung 정효정">
+    <meta property="og:description" content="Nangman Theatre — founded by Hyojung Jung in 2016. A Seoul-based musical theatre company creating original Korean productions.">
+    <meta property="og:url" content="https://hyojungjung.com/theatre.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nangman Theatre — Hyojung Jung 정효정">
+    <meta name="twitter:description" content="Nangman Theatre — founded by Hyojung Jung in 2016. A Seoul-based musical theatre company creating original Korean productions.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html" class="active">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="header-logo-col">
+            <img src="images/nangman-logo-new.png" alt="Nangman Theatre">
+        </div>
+        <div class="header-text-col">
+            <div class="header-title-col">
+                <div>
+                    <p class="header-eyebrow">Theatre Company — Founded 2016</p><!-- year confirmed 2016 -->
+                    <h1 class="header-title">Nangman<br><em>Theatre</em></h1>
+                    <p class="header-tagline"><span lang="ko">문학을 노래하는 음악극</span> · Literature, set to music</p>
+                    <p class="header-subtitle" lang="ko">낭만씨어터 · Seoul</p>
+                </div>
+                <div class="header-meta">
+                    <div class="meta-item">
+                        <p class="meta-label">Role</p>
+                        <p class="meta-value">Founder & Artistic Director</p>
+                    </div>
+                    <div class="meta-item">
+                        <p class="meta-label">Based</p>
+                        <p class="meta-value">Seoul, South Korea</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-desc-col">
+                <div class="header-desc">
+                    <p>Nangman Theatre is an independent musical theatre company founded in Seoul in 2016. Selected as Seoul Youth Arts Group (서울청년예술단) in 2017, with ₩50,000,000 in public funding. The company creates and produces original work rooted in Korean storytelling, with an international perspective shaped by collaborations across South Korea, the United Kingdom, and the Middle East.</p>
+                    <p>As Founder and Artistic Director, Hyojung Jung leads the creative vision of each production — from dramaturgy and direction through to performance, often inhabiting multiple roles in a single work.</p>
+                    <div style="display:flex; gap:16px; margin-top:20px;">
+                        <a href="https://www.youtube.com/@NangmanTheatre" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; color:#6f6f6f; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#1a1a1a'" onmouseout="this.style.color='#6f6f6f'">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                            <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase;">YouTube</span>
+                        </a>
+                        <a href="https://www.instagram.com/nangmantheatre/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:6px; color:#6f6f6f; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#1a1a1a'" onmouseout="this.style.color='#6f6f6f'">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+                            <span style="font-size:10px; letter-spacing:0.12em; text-transform:uppercase;">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Productions label -->
+    <div class="section-label"><span>All productions</span></div>
+
+    <!-- Productions grid -->
+    <div class="productions-grid">
+
+        <a href="soyon.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/soyon-card.jpg" alt="음악낭독극 소년이 온다">
+                <div class="production-img-overlay"><span>Into the room →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2026</p>
+                <h2 class="production-title"><em lang="ko">한강 〈소년이 온다〉</em> <em>Human Acts</em></h2>
+                <p class="production-by">by Han Kang</p>
+                <p class="production-role"><span lang="ko">음악낭독극</span> · 연출 · 출연 · Director &amp; Performer</p>
+                <p class="production-venue"><span lang="ko">한강 장편소설 원작 · 서울</span><br>music-reading theatre after Han Kang's novel · Seoul</p>
+            </div>
+        </a>
+
+        <a href="scratch-2025.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/scratch-card.jpg" alt="Nangman Theatre Scratch Project, London 2025">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2025</p>
+                <h2 class="production-title"><em lang="ko">〈스크래치 프로젝트〉</em> <em>Scratch Project</em></h2>
+                <p class="production-role">극작 · 연출 · 출연 · Writer, Director &amp; Performer</p>
+                <p class="production-venue">신작 희곡 두 편 낭독공연 · Bernie's Studio, Hackney Wick, London</p>
+            </div>
+        </a>
+
+        <a href="ginginbam-2023.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/ginginbam-card.jpg" alt="음악낭독극 긴긴밤, 국립세종도서관 2023">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2023</p>
+                <h2 class="production-title"><em lang="ko">루리 〈긴긴밤〉</em> <em>The Long Long Night</em></h2>
+                <p class="production-by">by Luri</p>
+                <p class="production-role"><span lang="ko">음악낭독극</span> · 연출 · 출연 · Director &amp; Performer</p>
+                <p class="production-venue"><span lang="ko">동화 원작 · 국립세종도서관, 세종</span><br>music-reading theatre · National Sejong Library, Sejong</p>
+            </div>
+        </a>
+
+        <a href="nataeju.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/nataeju-card.jpg" alt="음악낭독극 꽃을 보듯 너를 본다, 나태주, 낭만씨어터 2018·2022">
+                <div class="production-img-overlay"><span>Read aloud →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2018 · 2022</p>
+                <h2 class="production-title"><em lang="ko">나태주 〈꽃을 보듯 너를 본다〉</em> <em>I Look at You as a Flower</em></h2>
+                <p class="production-by">poems by Na Tae-joo</p>
+                <p class="production-role"><span lang="ko">음악낭독극</span> · music-reading theatre</p>
+                <p class="production-venue"><span lang="ko">서울교원문학 발간기념회 · 창덕여자고등학교</span><br>Seoul Teachers' Literature · Changdeok Girls' High School</p>
+            </div>
+        </a>
+
+        <a href="gig.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/gig-card.jpg" alt="낭만씨어터 긱 — 크리스마스 긱 포스터 일러스트, 런던 웨스트엔드">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2020–2021</p>
+                <h2 class="production-title"><em lang="ko">긱</em> <em>Gig</em></h2>
+                <p class="production-role"><span lang="ko">온라인 긱 · 국제 협업</span> · Online gig</p>
+                <p class="production-venue"><span lang="ko">런던 온라인 스트리밍</span><br>Live from London (online)</p>
+            </div>
+        </a>
+
+        <a href="wanju-festival.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/wanju-card.jpg" alt="완주 윈터푸드 페스티벌, 낭만씨어터 2018–2019">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2018–2019</p>
+                <h2 class="production-title"><em lang="ko">오가와 이토 〈따뜻함을 드세요〉</em> <em>Taste the Warmth</em></h2>
+                <p class="production-by">by Ito Ogawa</p>
+                <p class="production-role"><span lang="ko">뮤지컬</span> · Musical</p>
+                <p class="production-venue"><span lang="ko">완주 윈터푸드 페스티벌 · 삼례문화예술촌, 완주</span><br>Wanju Winter Food Festival · Samnye, Wanju</p>
+            </div>
+        </a>
+
+        <a href="recital.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/recital-card.jpg" alt="낭만씨어터 뮤지컬 리사이틀, 서울시립대 UOS아트홀 2019">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2019</p>
+                <h2 class="production-title"><em lang="ko">낭만씨어터 뮤지컬 리사이틀</em> <em>Musical Recital</em></h2>
+                <p class="production-role"><span lang="ko">낭만씨어터 창작곡 리사이틀</span> · Recital of original songs</p>
+                <p class="production-venue"><span lang="ko">서울시립대 UOS아트홀, 서울</span><br>UOS Art Hall, University of Seoul</p>
+            </div>
+        </a>
+
+        <a href="wonder.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/wonder-card.jpg" alt="음악낭독극 원더, R. J. 팔라시오, 낭만씨어터 2019">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2019</p>
+                <h2 class="production-title"><em lang="ko">R. J. 팔라시오 〈원더〉</em> <em>Wonder</em></h2>
+                <p class="production-by">after R. J. Palacio</p>
+                <p class="production-role"><span lang="ko">음악낭독극</span> · music-reading theatre</p>
+                <p class="production-venue"><span lang="ko">서울가든호텔 · 서울동부교육지원청 연수</span><br>Seoul Garden Hotel · Seoul, teacher training</p>
+            </div>
+        </a>
+
+        <a href="haitani.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/haitani-card.jpg" alt="음악낭독극 나는 선생님이 좋아요, 하이타니 겐지로, 낭만씨어터 2019">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2019</p>
+                <h2 class="production-title"><em lang="ko">하이타니 겐지로 〈나는 선생님이 좋아요〉</em> <em>I Like My Teacher</em></h2>
+                <p class="production-by">after Haitani Genjiro</p>
+                <p class="production-role"><span lang="ko">음악낭독극</span> · music-reading theatre</p>
+                <p class="production-venue"><span lang="ko">충무아트센터, 서울</span><br>Chungmu Art Center, Seoul</p>
+            </div>
+        </a>
+
+        <a href="dream.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/dream-card.jpg" alt="뮤지컬 토크 콘서트 드림, 낭만씨어터 살롱프로젝트 2017">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2017</p>
+                <h2 class="production-title"><em lang="ko">드림</em> <em>Dream</em></h2>
+                <p class="production-role"><span lang="ko">뮤지컬 토크 콘서트</span> · Musical talk concert</p>
+                <p class="production-venue"><span lang="ko">플랫폼창동61 · 투어 인 서울 마무리, 서울</span><br>Platform Changdong 61 · Tour in Seoul finale</p>
+            </div>
+        </a>
+
+        <a href="leegiseong.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/leegiseong-card.jpg" alt="음악낭독극 굴소년의 노래, 이기성, 낭만씨어터 2017">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2017</p>
+                <h2 class="production-title"><em lang="ko">이기성 〈굴소년의 노래〉</em> <em>Song of the Oyster Boy</em></h2>
+                <p class="production-by">poems by Lee Ki-seong</p>
+                <p class="production-role"><span lang="ko">음악낭독극</span> · music-reading theatre</p>
+                <p class="production-venue"><span lang="ko">마포중앙도서관 〈시가 빛나는 밤에〉</span><br>Mapo Central Library</p>
+            </div>
+        </a>
+
+        <a href="gongjiyoung.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/gongjiyoung-card.jpg" alt="음악낭독극 할머니는 죽지 않는다, 공지영, 낭만씨어터 2017">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2017</p>
+                <h2 class="production-title"><em lang="ko">공지영 〈할머니는 죽지 않는다〉</em> <em>Grandmother Does Not Die</em></h2>
+                <p class="production-by">after Gong Ji-young</p>
+                <p class="production-role"><span lang="ko">음악낭독극</span> · music-reading theatre</p>
+                <p class="production-venue"><span lang="ko">관악구청 인문학콘서트, 서울</span><br>Gwanak-gu humanities concert</p>
+            </div>
+        </a>
+
+        <a href="kimjiyeon.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/kimjiyeon-card.jpg" alt="음악낭독극 명줄, 김지연, 낭만씨어터 문학콘서트 2017">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2017</p>
+                <h2 class="production-title"><em lang="ko">김지연 〈명줄〉</em> <em>Lifeline</em></h2>
+                <p class="production-by">after Kim Ji-yeon</p>
+                <p class="production-role"><span lang="ko">음악낭독극</span> · music-reading theatre</p>
+                <p class="production-venue"><span lang="ko">은평문화예술회관 문학콘서트, 서울</span><br>Eunpyeong literary concert</p>
+            </div>
+        </a>
+
+        <a href="almost-a-love-story.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/almost-card.jpg" alt="Almost a Love Story, 낭만씨어터 음악극 2017">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2017</p>
+                <h2 class="production-title"><em>Almost a Love Story</em></h2>
+                <p class="production-role"><span lang="ko">살롱프로젝트 4탄 · 음악극</span> · Salon Project IV</p>
+                <p class="production-venue"><span lang="ko">서울청년예술단 · 서울 자치구 순회</span><br>Seoul Youth Arts Group · citywide tour</p>
+            </div>
+        </a>
+
+        <a href="camera-lucida.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/camera-lucida-card.jpg" alt="카메라 루시다, 롤랑 바르트, 낭만씨어터 음악낭독극·단편영화·사진전 2017">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2017</p>
+                <h2 class="production-title"><em lang="ko">롤랑 바르트 〈카메라 루시다〉</em> <em>Camera Lucida</em></h2>
+                <p class="production-by">after Roland Barthes</p>
+                <p class="production-role"><span lang="ko">살롱프로젝트 3탄 · 음악낭독극·단편영화·사진전</span> · Salon Project III</p>
+                <p class="production-venue"><span lang="ko">서울청년예술단 · 서울시립미술관 · 서울 프린지</span><br>Seoul Youth Arts Group · SeMA &amp; Seoul Fringe</p>
+            </div>
+        </a>
+
+        <a href="yeonaeron.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/yeonaeron-card.jpg" alt="연애론, 스탕달, 낭만씨어터 음악낭독극 2017">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2017</p>
+                <h2 class="production-title"><em lang="ko">스탕달 〈연애론〉</em> <em>On Love</em></h2>
+                <p class="production-by">after Stendhal</p>
+                <p class="production-role"><span lang="ko">살롱프로젝트 2탄 · 음악낭독극</span> · Salon Project II</p>
+                <p class="production-venue"><span lang="ko">서울청년예술단 · 서울 카페 순회</span><br>Seoul Youth Arts Group · Seoul café tour</p>
+            </div>
+        </a>
+
+        <a href="gihyungdo.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/gihyungdo-card.jpg" alt="음악낭독극 사랑을 잃고 나는 쓰네, 기형도, 낭만씨어터">
+                <div class="production-img-overlay"><span>Read aloud →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2016–2021</p>
+                <h2 class="production-title"><em lang="ko">기형도 〈사랑을 잃고 나는 쓰네〉</em> <em>Having Lost Love, I Write</em></h2>
+                <p class="production-by">poems by Gi Hyeong-do</p>
+                <p class="production-role"><span lang="ko">살롱프로젝트 1탄 · 음악낭독극</span> · Salon Project I</p>
+                <p class="production-venue"><span lang="ko">서울청년예술단 · 서울 순회 · 기형도문학관</span><br>Seoul Youth Arts Group · Seoul tour &amp; the Literature House</p>
+            </div>
+        </a>
+
+        <a href="gaeul.html" class="production-card production-card--linked">
+            <div class="production-img">
+                <img src="images/gaeul-card.jpg" alt="가을아 오면 가지 말아라, 빌스트리트 스윙밴드와 낭만씨어터, 광주 양림동 2016">
+                <div class="production-img-overlay"><span>View production →</span></div>
+            </div>
+            <div class="production-info">
+                <p class="production-year">2016</p>
+                <h2 class="production-title"><em lang="ko">가을아 오면 가지 말아라</em> <em>When Autumn Comes</em></h2>
+                <p class="production-by">with Bill Street Swing Band</p>
+                <p class="production-role"><span lang="ko">뮤지컬 × 재즈 콘서트</span> · Musical × jazz</p>
+                <p class="production-venue"><span lang="ko">양림동 우월순선교사사택, 광주</span><br>Yangnim-dong, Gwangju</p>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Selected History -->
+    <div class="section-label"><span>Selected History · 연혁</span></div>
+    <div class="history-section">
+        <div class="history-item">
+            <span class="history-year">2016</span>
+            <div class="history-desc">
+                <p>Company founded — premiere of <em>Salon Project I</em>: <em>Having Lost Love, I Write</em>, a music-reading theatre on the poems of Gi Hyeong-do</p>
+                <p lang="ko">낭만씨어터 창단 — 〈살롱프로젝트〉 1탄 음악낭독극 〈사랑을 잃고 나는 쓰네〉(기형도) 초연</p>
+                <p>Outdoor busking set at <em>Bring Your Own Body (몸몸)</em>, the SOMA Museum open-air festival</p>
+                <p lang="ko">소마미술관 야외공연축제 〈몸몸 Bring Your Own Body〉 야외 버스킹 무대</p>
+            </div>
+        </div>
+        <div class="history-item">
+            <span class="history-year">2017</span>
+            <div class="history-desc">
+                <p>Selected as Seoul Youth Arts Group — ₩50,000,000 public funding, city-wide tour across 25 districts<br>
+                <em>Salon Project</em> series (4 works): Gi Hyeong-do <em>Having Lost Love, I Write</em> · Stendhal <em>On Love</em> · Roland Barthes <em>Camera Lucida</em> · <em>Almost a Love Story</em></p>
+                <p lang="ko">서울청년예술단 선정 — 5천만원 공공지원, 서울 25개 자치구 순회공연<br>
+                살롱프로젝트 1–4탄: 기형도 사랑을 잃고 나는 쓰네 · 스탕달 연애론 · 롤랑바르트 카메라루시다 · 〈Almost a Love Story〉</p>
+            </div>
+        </div>
+        <div class="history-item">
+            <span class="history-year">2017–2019</span>
+            <div class="history-desc">
+                <p>Invited performances at museums, libraries, and literary concerts across South Korea</p>
+                <p lang="ko">전국 박물관, 도서관, 문학 콘서트 초청공연</p>
+            </div>
+        </div>
+        <div class="history-item">
+            <span class="history-year">2018–2023</span>
+            <div class="history-desc">
+                <p>Music-reading theatre works based on contemporary Korean literature</p>
+                <p lang="ko">현대 한국 문학 원작 문학뮤지컬 제작</p>
+            </div>
+        </div>
+        <div class="history-item">
+            <span class="history-year">2019</span>
+            <div class="history-desc">
+                <p>Nangman Theatre Musical Recital — UOS Art Hall, University of Seoul</p>
+                <p lang="ko">낭만씨어터 뮤지컬 리사이틀 · 서울시립대 UOS아트홀</p>
+            </div>
+        </div>
+        <div class="history-item">
+            <span class="history-year">2020–2021</span>
+            <div class="history-desc">
+                <p>Online gigs streamed from London — <em>Christmas Gig</em> (2020) &amp; <em>Viva la Vida</em> (2021), with Moumen Rais and Sunny<br>Work-in-progress showings and live performances, London (UK)</p>
+                <p lang="ko">런던 온라인 긱 〈Christmas Gig〉(2020)·〈Viva la Vida〉(2021) — 모우멘 라이즈·써니와 협업<br>영국 런던 쇼케이스 및 라이브 공연</p>
+            </div>
+        </div>
+        <div class="history-item">
+            <span class="history-year">2023</span>
+            <div class="history-desc">
+                <p>Invited performance — 10th Anniversary of the National Sejong Library<br><em>The Long Long Night</em> (긴긴밤), based on the children's novel by Luri</p>
+                <p lang="ko">국립세종도서관 개관 10주년 기념 초청공연<br>루리 동화 원작 음악낭독극 〈긴긴밤〉</p>
+            </div>
+        </div>
+        <div class="history-item">
+            <span class="history-year">2025</span>
+            <div class="history-desc">
+                <p>Scratch Project performances, London (UK)</p>
+                <p lang="ko">영국 런던 스크래치 프로젝트 공연</p>
+            </div>
+        </div>
+        <div class="history-item">
+            <span class="history-year">2026</span>
+            <div class="history-desc">
+                <p>Invited performance — 46th National Manhae Poetry Contest Award Ceremony<br><em>Human Acts</em> (소년이 온다), based on the novel by Han Kang</p>
+                <p lang="ko">제46회 전국만해백일장 시상식 초청공연<br>한강 소설 원작 뮤지컬 〈소년이 온다〉</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info rows -->
+    <div class="info-row">
+        <span class="info-label">Active since</span>
+        <div class="info-values">
+            <span class="info-tag">2016 — Present</span>
+        </div>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Disciplines</span>
+        <div class="info-values">
+            <span class="info-tag">Musical Theatre</span>
+            <span class="info-tag">Original Works</span>
+            <span class="info-tag">Direction</span>
+            <span class="info-tag">Performance</span>
+            <span class="info-tag">Dramaturgy</span>
+        </div>
+    </div>
+    <div class="info-row">
+        <span class="info-label">Geography</span>
+        <div class="info-values">
+            <span class="info-tag">Seoul, South Korea</span>
+            <span class="info-tag-muted">·</span>
+            <span class="info-tag">United Kingdom</span>
+            <span class="info-tag-muted">·</span>
+            <span class="info-tag">Saudi Arabia</span>
+        </div>
+    </div>
+
+    <div class="info-row">
+        <span class="info-label">Korean Authors · 한국 작가</span>
+        <div class="info-values">
+            <span class="info-tag">한강 Han Kang (Nobel Laureate) — 소년이 온다 <em>Human Acts</em></span>
+            <span class="info-tag">공지영 Gong Ji-young — 할머니는 죽지 않는다 <em>Grandma Never Dies</em></span>
+            <span class="info-tag">나태주 Na Tae-joo — 꽃을 보듯 너를 본다 <em>I See You as I See a Flower</em></span>
+            <span class="info-tag">김지연 Kim Ji-yeon — 명줄 <em>Lifeline</em></span>
+            <span class="info-tag">루리 Luri — 긴긴밤 <em>The Long Long Night</em></span>
+        </div>
+    </div>
+    <div class="info-row">
+        <span class="info-label">International Authors</span>
+        <div class="info-values">
+            <span class="info-tag">하이타니 겐지로 Kenjirō Haitani — 나는 선생님이 좋아요</span>
+            <span class="info-tag">오가와 이토 Ito Ogawa — 따뜻함을 드세요</span>
+            <span class="info-tag">R. J. 팔라시오 R. J. Palacio — 원더 Wonder</span>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-strip">
+        <span class="contact-label">Enquiries</span>
+        <a href="mailto:nangmantheatre@gmail.com" class="contact-link">nangmantheatre@gmail.com</a>
+    </div>
+
+    <!-- Partners -->
+    <div class="partners-section">
+        <p class="partners-label">Partners &amp; Support</p>
+        <div class="partners-grid">
+            <div class="partner-item"><img src="images/partners/logos/seoul.png" alt="서울시"></div>
+            <div class="partner-item"><img src="images/partners/logos/sema.png" alt="서울시립미술관"></div>
+            <div class="partner-item"><img src="images/partners/logos/sejong-lib.png" alt="국립세종도서관"></div>
+            <div class="partner-item"><img src="images/partners/logos/kfta-extracted.jpg" alt="한국교총"></div>
+            <div class="partner-item"><img src="images/partners/logos/seoul-edu-extracted.jpg" alt="서울특별시교육청"></div>
+            <div class="partner-item"><img src="images/partners/logos/gwanak-extracted.jpg" alt="관악구"></div>
+            <div class="partner-item"><img src="images/partners/logos/wanju-extracted.jpg" alt="완주군"></div>
+            <div class="partner-item"><img src="images/partners/logos/jeonbuk-extracted.jpg" alt="전북특별자치도"></div>
+            <div class="partner-item"><img src="images/partners/logos/gwangju-extracted.jpg" alt="광주광역시"></div>
+            <div class="partner-item"><img src="images/partners/logos/changbi.png" alt="창비"></div>
+            <div class="partner-item"><img src="images/partners/logos/gimpo-extracted.jpg" alt="경기도교육청김포도서관"></div>
+            <div class="partner-item"><img src="images/partners/logos/munhak.png" alt="문학동네"></div>
+            <div class="partner-item"><img src="images/partners/logos/gochon.png" alt="고촌도서관"></div>
+            <div class="partner-item"><img src="images/partners/logos/gwangmyeong-extracted.jpg" alt="광명시"></div>
+            <div class="partner-item"><img src="images/partners/logos/gcf.jpg" alt="광명문화재단"></div>
+        </div>
+    </div>
+
+    <div style="padding:40px 52px;border-top:0.5px solid rgba(0,0,0,0.1);">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6f6f;margin-bottom:14px;">Elsewhere on this site · 사이트의 다른 곳</div>
+        <a href="essays.html" style="display:block;max-width:620px;text-decoration:none;color:#1a1a1a;border:0.5px solid #d5d0c8;border-radius:8px;padding:20px 24px;background:#fff;">
+            <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7c3a36;margin-bottom:8px;">Writing · Shakespeare Institute</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.25;margin-bottom:4px;">무대 뒤의 글 — 셰익스피어 에세이</div>
+            <div style="font-size:13px;color:#5e5e5e;font-style:italic;font-family:'Cormorant Garamond',serif;">The thinking behind the staging — Shakespeare essays&nbsp;&nbsp;→</div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+</body>
+</html>

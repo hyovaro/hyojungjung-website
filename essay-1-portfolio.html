@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postgraduate Study: What Are We Doing Here? — Hyojung Jung</title>
+    <meta name="description" content="Portfolio Assessment — MA Research Skills in Shakespeare. Shakespeare Institute, University of Birmingham.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        [lang="ko"] {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+            word-break: keep-all;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        .nav-cta {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            border: 0.5px solid rgba(0,0,0,0.3);
+            padding: 7px 18px;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-cta:hover { background: #1a1a1a; color: #f7f4ef; }
+
+        /* Article header */
+        .article-header {
+            padding: 64px 52px 52px;
+            max-width: 760px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .article-eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 24px;
+            line-height: 2;
+        }
+        .article-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+        .article-title em { font-style: italic; }
+        .article-meta {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .meta-label {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+        .meta-value {
+            font-size: 12px;
+            color: #1a1a1a;
+        }
+
+        /* Body */
+        .article-body {
+            padding: 52px;
+            max-width: 760px;
+        }
+        .article-body p {
+            font-size: 15.5px;
+            line-height: 1.95;
+            color: #333;
+            margin-bottom: 1.4em;
+        }
+        .article-body h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 26px;
+            font-weight: 400;
+            margin: 2.4em 0 0.8em;
+            color: #1a1a1a;
+            letter-spacing: -0.01em;
+        }
+        .unit-number {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .article-body em { font-style: italic; }
+        .article-body strong { font-weight: 500; color: #1a1a1a; }
+
+        /* Footnotes */
+        .footnotes {
+            padding: 40px 52px 52px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+            max-width: 760px;
+        }
+        .footnotes h3 {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 20px;
+        }
+        .footnote-list {
+            list-style: none;
+        }
+        .footnote-list li {
+            font-size: 12px;
+            line-height: 1.7;
+            color: #5e5e5e;
+            padding: 6px 0;
+            border-bottom: 0.5px solid rgba(0,0,0,0.06);
+            display: flex;
+            gap: 12px;
+        }
+        .fn-num {
+            min-width: 20px;
+            color: #7c3a36;
+            font-weight: 500;
+        }
+
+        /* Language toggle */
+        .lang-toggle {
+            display: flex;
+            gap: 2px;
+            margin-top: 24px;
+        }
+        .lang-toggle button {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 7px 16px;
+            border: 0.5px solid rgba(0,0,0,0.2);
+            background: none;
+            cursor: pointer;
+            color: #5e5e5e;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s;
+        }
+        .lang-toggle button.active,
+        .lang-toggle button:hover { background: #7c3a36; color: #f7f4ef; border-color: #7c3a36; }
+        .lang-ko { display: none; }
+        body.korean .lang-en { display: none; }
+        body.korean .lang-ko { display: block; }
+
+        /* Float nav */
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 9px 16px;
+            border: 0.5px solid #7c3a36;
+            color: #7c3a36;
+            background: #f7f4ef;
+            transition: background 0.2s, color 0.2s;
+        }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/essay-1-portfolio.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="Postgraduate Study: What Are We Doing Here? — Hyojung Jung">
+    <meta property="og:description" content="Portfolio Assessment — MA Research Skills in Shakespeare. Shakespeare Institute, University of Birmingham.">
+    <meta property="og:url" content="https://hyojungjung.com/essay-1-portfolio.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Postgraduate Study: What Are We Doing Here? — Hyojung Jung">
+    <meta name="twitter:description" content="Portfolio Assessment — MA Research Skills in Shakespeare. Shakespeare Institute, University of Birmingham.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html" class="active">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <header class="article-header">
+        <p class="article-eyebrow">Portfolio Assessment &nbsp;·&nbsp; LM Research Skills in Shakespeare &nbsp;·&nbsp; Shakespeare Institute, University of Birmingham</p>
+        <h1 class="article-title">Postgraduate Study: What Are We Doing Here, and How Do We Do It?</h1>
+        <div class="article-meta">
+            <div class="meta-item">
+                <span class="meta-label">Type</span>
+                <span class="meta-value">Portfolio Assessment</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Word count</span>
+                <span class="meta-value">c. 1,500 words</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Module</span>
+                <span class="meta-value">LM Research Skills in Shakespeare</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Year</span>
+                <span class="meta-value">2025–2026</span>
+            </div>
+        </div>
+        <div class="lang-toggle">
+            <button id="btn-en" class="active" onclick="document.body.classList.remove('korean');document.getElementById('btn-en').classList.add('active');document.getElementById('btn-ko').classList.remove('active')">EN</button>
+            <button id="btn-ko" onclick="document.body.classList.add('korean');document.getElementById('btn-ko').classList.add('active');document.getElementById('btn-en').classList.remove('active')">한국어</button>
+        </div>
+    </header>
+
+    <article class="article-body lang-en">
+
+        <h2><span class="unit-number">Unit 1</span> Postgraduate Study: What Are We Doing Here, and How Do We Do It?</h2>
+
+        <p>Growing up in South Korea, I first encountered Shakespeare not in English but through Korean theatre and musical adaptations. I did not meaningfully experience his work in English until I visited the UK in 2011. When I shared my ambition to study Shakespeare in the UK, a few people responded with scepticism and wondered why anyone would study him today, suggesting that his language was outdated or even 'dead.' At the time, I found it difficult to explain why I still felt drawn to his work despite hearing these comments.</p>
+
+        <p>Collini's argument that the value of academic enquiry cannot be determined by immediate usefulness helped me clarify this.<sup>1</sup> His idea that scholarship is an open-ended pursuit, supported by universities acting as partly protected spaces, offered a framework that made sense to me. Reading his article allowed me to respond internally to the doubt I had encountered in Korea, Saudi Arabia, and the UK, and helped me articulate why studying Shakespeare still feels meaningful in my own life.</p>
+
+        <p>My interest in Shakespeare has never been centred on the English language. Rather, I am fascinated by how his plays travel, transform, and are reimagined across cultures. Growing up watching Korean adaptations naturally made me wonder what happens when Shakespeare's work encounters different languages and cultural environments beyond English. Additionally, after living in Saudi Arabia for two years, I became especially curious about how Shakespeare might take root in a place where his work is still emerging. This raises questions about how his plays may be reshaped, translated, or reinterpreted in cultural landscapes sometimes described as 'Shakespeare deserts.'</p>
+
+        <p>This direction aligns closely with my identity as an actor and director. Understanding how text, culture, and performance interact will strengthen my ability to analyse character, story, and staging choices, while also supporting my long-term development as a theatre-maker who works across different countries and languages. Studying Shakespeare inevitably involves engaging with theatre history, British history, and feminist perspectives, and I believe these studies will enrich my creative practice rather than intimidate me.</p>
+
+        <p>Reflecting on all these ideas helped me understand why postgraduate study feels meaningful at this stage in my journey. It also offers a space where I can question, explore, and grow without needing to justify everything in terms of immediate practicality.</p>
+
+        <h2><span class="unit-number">Unit 2</span> Textual Studies and Editing</h2>
+
+        <p>During this unit, I realised that my learning unexpectedly connected with work I was doing outside the module. At the same time, I attended the final session of my Introduction to Directing course at Hampstead Theatre, where Kwame Owusu, the Revival Director of <em>Titus Andronicus</em> at the RSC, described approaching Shakespeare's text as if reading a musical score.<sup>2</sup> Because I studied Music at Master's level, this analogy resonated and encouraged me to approach Shakespeare's textual cues with greater sensitivity.</p>
+
+        <p>During this week's task, when we compared early and modern versions of Shakespeare's texts, I began to recognise consistent patterns. The modern 'U' often appears as 'V' in early editions, and the character 'ʃ' represents the modern 's', such as in 'kiʃt' meaning 'kissed'. Once I understood these conventions, early texts felt far less intimidating. More importantly, I began to recognise how significantly modern editorial choices shape a reader's experience. Layout, punctuation, and the decision to use full character names can all influence how accessible a text becomes.</p>
+
+        <p>I was especially struck by the precision required in the emendation process. It demands wide historical knowledge as well as the ability to move between close attention to detail and a broader structural understanding. This made me reflect on how Korean Shakespeare productions choose their English source texts when creating translations or adaptations. In South Korea, authors' rights are not as strictly protected as in the UK, which makes it easier for directors or external authorities to alter dialogue or stage directions. While this flexibility can support creativity, it can also obscure authorial intention. Studying emendation helped me see these cultural differences more clearly.</p>
+
+        <p>I run a small theatre production, Nangman Theatre, where I often work as director, producer, performer and dramaturg, adapting novels and poems into music-reading theatre. These projects required flexible editing, and I frequently prioritised the client's needs and my own directorial ideas, deciding which parts of the text could be transformed into lyrics and freely reshaping or cutting lines. In doing so, I sometimes overlooked the author's original intention. This unit reminded me to reflect more critically on my textual decisions and to approach adaptation with greater responsibility.</p>
+
+        <h2><span class="unit-number">Unit 3</span> Investigating Shakespeare's Historical Context</h2>
+
+        <p>Exploring <em>Early English Books Online</em> (<em>EEBO</em>) was particularly valuable for me. I expect to rely heavily on this tool when preparing assessments and eventually my dissertation. It felt extraordinary to view actual early texts and encounter a broad range of materials that bring the early modern world closer. Because I have a personal interest in the relationship between music and drama, I was immediately drawn to the first item that appeared when I typed 'Hamlet' into <em>EEBO</em>: a song set by John Eccles and sung by Mr. Knapp in <em>The Tragedy of Hamlet, Prince of Denmark</em>.<sup>3</sup> I wanted to listen to it and even felt an urge to sit at a piano with the score, imagining how it might have sounded on an early modern stage. This brief moment allowed me to feel as though I were stepping into the world of Shakespeare's original audiences.</p>
+
+        <p>Reading William Kemp's <em>Nine Days Wonder</em> was another memorable experience.<sup>4</sup> His voice felt lively and humorous, and his journey came across as unexpectedly charming. Through his writing, I glimpsed the working life of an early modern comedy actor. Kemp's text made the period feel vivid and human rather than distant.</p>
+
+        <p>This week also introduced me to Natasha Korda's chapter 'Much Ado About Ruffs: Laundry Time in Feminist Counter-Archives'.<sup>5</sup> Her discussion of laundresses, ruffs maintenance, and the invisible labour supporting theatrical production offered a powerful reminder of how easily certain kinds of work disappear from history. This perspective connected closely to our broader discussions about visibility, marginal groups, and the challenges of reconstructing performance histories.</p>
+
+        <p>While I was reading this article, it reminded me of my own experience last summer at the National Theatre. After seeing <em>Inter Alia</em>, a wardrobe team member I knew gave me a backstage tour and explained how demanding the work becomes during <em>Ballet Shoes</em> season, with fast changes and heavy laundry cycles. Reading Korda's article made me recognise that this unseen labour is also part of theatre history. Reflecting on this helped me realise that I, too, participate in theatre history in my own small way. Theatre does not belong only to directors or principal actors but to everyone who contributes to making it happen.</p>
+
+        <h2><span class="unit-number">Unit 4</span> Writing About Performance</h2>
+
+        <p>This week, I found the resources we explored particularly valuable. <em>Digital Theatre Plus</em>, in particular, offered excellent video quality and access to numerous filmed past productions.<sup>6</sup> Recently I have been especially interested in Hamlet's 'To be or not to be' soliloquy, and I became curious about how different editions emend this speech depending on their chosen copy text. One feature I especially appreciated in <em>Digital Theatre Plus</em> was the timeline organised by scene. With a single click, I could go directly to the 'To be or not to be' moment in each production, which made visual comparison incredibly convenient. Being able to watch the same scene across different stagings allowed me to notice interpretive differences far more clearly than I could through reading alone.</p>
+
+        <p>Our discussion of semiotics was also illuminating. I realised that I had been unconsciously mixing up the distinctions between icon, index, and symbol. Reviewing the definitions clarified them for me: an icon creates meaning through resemblance, an index through physical or causal connection, and a symbol through cultural convention. Having a clearer understanding has already changed the way I think about performance analysis.<sup>7</sup> I now feel encouraged to apply this framework when watching performances, examining staging choices, and even when viewing visual art.</p>
+
+        <p>I also felt slightly regretful because if I had learned this earlier, I could have applied it to the performance review I recently wrote for the National Theatre of Korea magazine about <em>Inter Alia</em>. Still, I know there will be more opportunities to write reviews in the future, and I now feel better prepared to approach them in a more analytical and precise way. I plan to apply this approach when I see the upcoming RSC production of <em>Twelfth Night</em>.</p>
+
+        <p>On a slightly different note, I also realised how much my reading confidence has developed over the term. In Week 1, I often found academic texts difficult to follow, but by Week 9 I had become noticeably more comfortable navigating them. This change eased my initial anxiety and strengthened my confidence about continuing my postgraduate study.</p>
+
+    </article>
+
+    <article class="article-body lang-ko" lang="ko">
+
+        <h2><span class="unit-number">Unit 1</span> 대학원 공부: 우리는 무엇을 하고 있는가, 그리고 어떻게 할 것인가?</h2>
+
+        <p>어린 시절 한국에서 셰익스피어를 처음 접한 것은 영어 원문이 아닌, 한국 연극과 뮤지컬 각색 작품을 통해서였다. 영국을 방문한 2011년이 되어서야 비로소 영어로 그의 작품을 제대로 경험하게 되었다. 영국에서 셰익스피어를 공부하겠다는 포부를 밝혔을 때, 몇몇 사람들은 회의적인 반응을 보이며 오늘날 왜 셰익스피어를 공부해야 하는지 의아해했다. 그의 언어가 구식이거나 심지어 '죽은' 것이라고까지 말하기도 했다. 당시에는 그런 말을 들으면서도 왜 그의 작품에 이끌리는지 설명하기가 어려웠다.</p>
+
+        <p>콜리니는 학문적 탐구의 가치는 즉각적인 유용성으로 판단할 수 없다고 주장한다.<sup>1</sup> 대학이 일종의 보호된 공간으로서 열린 탐구를 지원한다는 그의 생각은 설득력 있게 다가왔다. 그의 글을 읽으면서, 한국과 사우디아라비아, 그리고 영국에서 마주쳤던 회의적인 시선에 내면적으로 답할 수 있게 되었고, 셰익스피어 공부가 왜 여전히 의미 있는지 스스로에게 설명할 수 있게 되었다.</p>
+
+        <p>셰익스피어에 대한 관심은 영어 언어 자체에 있지 않다. 오히려 그의 희곡이 어떻게 문화를 가로질러 이동하고 변화하며 재상상되는지에 매료되어 있다. 한국의 각색 작품들을 보며 자란 덕분에, 셰익스피어의 작품이 영어 권역을 벗어나 다른 언어와 문화 환경을 만날 때 어떤 일이 벌어지는지 자연스럽게 궁금해지게 되었다. 또한 사우디아라비아에서 2년간 생활하면서, 셰익스피어가 아직 낯선 곳에서 어떻게 뿌리내릴 수 있는지에 더욱 관심을 갖게 되었다. '셰익스피어 사막'으로 불리기도 하는 문화 환경에서 그의 희곡이 어떻게 재해석되고 번역될 수 있는지에 대한 질문이 생겨났다.</p>
+
+        <p>이러한 관심은 배우이자 연출가로서의 정체성과도 밀접하게 연결된다. 텍스트, 문화, 공연이 어떻게 상호작용하는지를 이해하면, 인물과 이야기, 무대 선택을 분석하는 능력이 강화되고, 다양한 나라와 언어를 넘나드는 연극인으로서 장기적으로 성장하는 데에도 도움이 될 것이다. 셰익스피어를 공부한다는 것은 필연적으로 연극사, 영국사, 그리고 페미니즘적 관점을 다루는 일이기도 하며, 이러한 공부가 오히려 창작 실천을 풍요롭게 해줄 것이라 믿는다.</p>
+
+        <p>이 모든 생각들을 되돌아보며, 지금 이 시점에 대학원 공부가 왜 의미 있는지 다시 한번 확인할 수 있었다. 그것은 즉각적인 실용성을 입증하지 않아도 되는 공간에서, 스스로 질문하고 탐구하며 성장할 수 있는 기회이다.</p>
+
+        <h2><span class="unit-number">Unit 2</span> 텍스트 연구와 편집</h2>
+
+        <p>이 단원에서는 예상치 못하게 모듈 밖에서 하던 작업과 연결되는 부분을 발견했다. 같은 시기에 햄스테드 시어터에서 진행 중이던 연출 입문 과정의 마지막 수업에 참석했는데, RSC의 <em>타이터스 앤드로니커스</em> 부활 연출가인 퀘임 오우수가 셰익스피어 텍스트를 마치 악보를 읽듯이 접근한다고 이야기했다.<sup>2</sup> 음악을 석사 과정에서 공부했던 필자로서는 이 비유가 매우 와닿았고, 셰익스피어 텍스트의 신호를 더 세심하게 다루고 싶어졌다.</p>
+
+        <p>이번 주 과제에서 셰익스피어 텍스트의 초기 판본과 현대 판본을 비교하면서 일정한 패턴을 발견하기 시작했다. 현대의 'U'는 초기 판본에서 'V'로, 'ʃ'는 현대의 's'를 나타내는 글자로 쓰이는 경우가 많다. 이러한 규칙을 이해하고 나니 초기 텍스트가 훨씬 덜 낯설게 느껴졌다. 더 중요한 것은, 현대 편집자의 선택이 독자의 경험에 얼마나 큰 영향을 미치는지 인식하기 시작했다는 점이다. 레이아웃, 구두점, 등장인물 이름을 표기하는 방식 모두가 텍스트의 접근성에 영향을 줄 수 있다.</p>
+
+        <p>특히 수정 편집 과정에서 요구되는 정밀함에 강한 인상을 받았다. 폭넓은 역사적 지식과 함께 세부 사항에 대한 집중력과 구조적 이해를 동시에 요구하는 작업이다. 이를 통해 한국의 셰익스피어 공연에서 번역이나 각색을 만들 때 어떤 영어 원본 텍스트를 선택하는지에 대해 다시 생각하게 되었다. 한국에서는 저작권이 영국만큼 엄격하게 보호되지 않기 때문에 연출가나 외부 기관이 대사나 무대 지문을 수정하기가 더 쉽다. 이러한 유연성은 창의성을 지원하기도 하지만, 원작자의 의도를 흐릴 수도 있다. 수정 편집에 대해 공부하며 이러한 문화적 차이를 더 분명하게 볼 수 있게 되었다.</p>
+
+        <p>필자는 낭만씨어터라는 소규모 공연단체를 운영하며, 연출가·프로듀서·배우·드라마터그로 활동하면서 소설과 시를 음악낭독극으로 각색하는 작업을 한다. 그 과정에서 편집은 유연하게 이루어졌고, 자주 의뢰인의 요구와 연출 아이디어를 우선시하면서 어떤 부분을 가사로 만들지, 어떤 대사를 자르거나 바꿀지를 자유롭게 결정했다. 그 과정에서 원작자의 의도를 간과했던 경우도 있었다. 이번 단원을 통해 텍스트에 관한 결정을 더 비판적으로 성찰하고, 각색에 보다 책임감 있게 접근해야 함을 다시금 깨닫게 되었다.</p>
+
+        <h2><span class="unit-number">Unit 3</span> 셰익스피어의 역사적 맥락 탐구</h2>
+
+        <p><em>Early English Books Online</em>(<em>EEBO</em>)를 탐색하는 것은 특히 유용한 경험이었다. 앞으로 과제 준비와 논문 작성 시 이 도구를 많이 활용하게 될 것이다. 실제 초기 인쇄본을 직접 보고, 초기 근대 세계를 생생하게 전달하는 다양한 자료를 접하는 일이 무척 경이롭게 느껴졌다. 음악과 드라마의 관계에 개인적인 관심이 있는 필자는, <em>EEBO</em>에서 '햄릿'을 입력했을 때 가장 먼저 등장한 항목에 눈길이 갔다. 존 에클즈가 작곡하고 냅 씨가 부른 <em>햄릿 왕자</em>의 노래였다.<sup>3</sup> 직접 들어보고 싶었고, 악보를 앞에 놓고 피아노를 치며 초기 근대 무대에서 어떻게 들렸을지 상상해보고 싶었다. 그 짧은 순간, 셰익스피어 동시대 관객들의 세계 속으로 걸어 들어가는 느낌이었다.</p>
+
+        <p>윌리엄 켐프의 <em>9일간의 경이</em>를 읽는 경험도 기억에 남는다.<sup>4</sup> 그의 목소리는 생동감 있고 유머러스했으며, 그의 여정은 예상외로 매력적이었다. 그의 글을 통해 초기 근대 희극 배우의 직업적 삶을 잠깐 엿볼 수 있었다. 켐프의 텍스트는 그 시대를 생생하고 인간적으로 느끼게 해주었다.</p>
+
+        <p>이번 주에는 나타샤 코르다의 챕터 「러프에 관한 소동: 페미니스트 반-아카이브에서의 세탁 시간」도 읽었다. 세탁부, 러프 관리, 그리고 공연 제작을 지탱했던 보이지 않는 노동에 관한 그녀의 논의는, 특정 종류의 노동이 얼마나 쉽게 역사에서 사라지는지를 강력하게 상기시켜 주었다. 이 관점은 가시성, 소외 집단, 그리고 공연 역사 재구성의 어려움에 관한 더 넓은 토론과도 긴밀히 연결되었다.</p>
+
+        <p>이 글을 읽으면서 지난 여름 내셔널 시어터에서의 경험이 떠올랐다. <em>인터 알리아</em>(<em>Inter Alia</em>)를 관람한 후, 아는 의상팀 멤버가 백스테이지 투어를 안내해주며 발레 슈즈 시즌에는 빠른 의상 교체와 많은 세탁물로 얼마나 힘든 시간을 보내는지 이야기해 주었다. 코르다의 글을 읽으면서 이 보이지 않는 노동 역시 연극 역사의 일부임을 깨달았다. 연극은 연출가나 주역 배우만의 것이 아니라, 그것을 만들어내는 모든 사람의 것이다.</p>
+
+        <h2><span class="unit-number">Unit 4</span> 공연 비평 쓰기</h2>
+
+        <p>이번 주에 탐색한 자료들은 매우 유용했다. 특히 <em>Digital Theatre Plus</em>는 영상 품질이 뛰어나고 수많은 과거 공연 녹화물을 제공한다는 점에서 눈이 트이는 경험이었다.<sup>5</sup> 최근 필자는 특히 햄릿의 유명한 독백인 '죽느냐 사느냐'에 관심을 갖고, 서로 다른 편집본이 선택한 원본 텍스트에 따라 이 대사를 어떻게 수정하는지 궁금했다. <em>Digital Theatre Plus</em>에서 특히 마음에 들었던 기능은 장면 단위로 구성된 타임라인이었다. 클릭 하나로 각 공연의 '죽느냐 사느냐' 장면으로 바로 이동할 수 있어, 시각적 비교가 매우 편리했다. 같은 장면을 여러 무대에서 비교해서 볼 수 있었기에, 독서만으로는 알아채기 어려웠던 해석의 차이를 훨씬 명확하게 인식할 수 있었다.</p>
+
+        <p>기호학에 관한 토론 역시 많은 것을 깨닫게 해주었다. 아이콘, 인덱스, 상징의 구분을 무의식적으로 혼동하고 있었다는 것을 알게 되었다. 정의를 다시 검토하며 명확해졌다. 아이콘은 유사성을 통해, 인덱스는 물리적·인과적 연결을 통해, 상징은 문화적 관습을 통해 의미를 만들어낸다. 이 틀을 더 명확하게 이해하게 된 것이 이미 공연 분석 방식에 변화를 가져왔다.<sup>6</sup> 앞으로 공연을 관람하거나, 무대 선택을 분석하거나, 시각예술을 감상할 때도 이 틀을 적용하고자 한다.</p>
+
+        <p>또한 미리 배웠다면 좋았을 것이라는 약간의 아쉬움도 들었다. 최근 국립극단 잡지에 <em>인터 알리아</em> 공연 리뷰를 썼는데, 그때 이 틀을 적용할 수 있었다면 좋았을 것이다. 하지만 앞으로도 리뷰를 쓸 기회는 있을 것이고, 이제는 더 분석적이고 정확한 방식으로 접근할 수 있을 것이다. 곧 있을 RSC <em>십이야</em> 공연을 볼 때 이 접근 방식을 적용해 볼 계획이다.</p>
+
+        <p>덧붙여, 이번 학기 동안 학술 텍스트를 읽는 자신감이 얼마나 성장했는지도 느꼈다. 1주차에는 학술 텍스트를 따라가기 어렵다고 느꼈지만, 9주차에 이르러서는 확연히 더 편안하게 읽을 수 있게 되었다. 이러한 변화가 초기의 불안감을 덜어주었고, 앞으로의 대학원 공부를 이어가는 데 대한 자신감을 키워주었다.</p>
+
+    </article>
+
+    <section class="footnotes" aria-label="Notes">
+        <h3>Notes</h3>
+        <ol class="footnote-list">
+            <li><span class="fn-num">1</span><span>Stefan Collini, 'Who Does the University Belong To?', in Collini, <em>Speaking of Universities</em> (Verso, 2017), pp. 92–93.</span></li>
+            <li><span class="fn-num">2</span><span>Kwame Owusu, interview with the author, 27 October 2025.</span></li>
+            <li><span class="fn-num">3</span><span>John Eccles, <em>A Song Set by Mr. John Eccles, Sung by Mr. Knapp in the Tragedy of Hamlet, Prince of Denmark, and Exactly Engrav'd by Tho. Cross</em> (London: s.n., 1704), <em>Early English Books Online</em> &lt;https://www.proquest.com/eebo&gt; [accessed 2 December 2025].</span></li>
+            <li><span class="fn-num">4</span><span>William Kemp, <em>Kemps Nine Daies Wonder Performed in a Daunce from London to Norwich</em> (London: E. Allde for Nicholas Ling, 1600), <em>Early English Books Online</em> &lt;https://www.proquest.com/eebo&gt; [accessed 2 December 2025].</span></li>
+            <li><span class="fn-num">5</span><span>Natasha Korda, 'Much Ado About Ruffs: Laundry Time in Feminist Counter-Archives', in <em>Early Modern Histories of Time: The Periodizations of Sixteenth- and Seventeenth-Century England</em>, ed. by Kristen Poole and Owen Williams (University of Pennsylvania Press, 2019), pp. 131–47.</span></li>
+            <li><span class="fn-num">6</span><span><em>Digital Theatre Plus</em>, &lt;https://edu.digitaltheatreplus.com&gt; [accessed 2 December 2025].</span></li>
+            <li><span class="fn-num">7</span><span>Martin Esslin, <em>The Field of Drama: How the Signs of Drama Create Meaning on Stage and Screen</em> ('The Signs of Drama: Icon, Index, Symbol') (London: Methuen Drama, 1988), pp. 43–51.</span></li>
+        </ol>
+    </section>
+
+    <div class="float-nav" aria-label="Essay navigation">
+        <a href="essays.html">← All Essays</a>
+        <a href="essay-2-hamlet.html">Next Essay →</a>
+    </div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+</body>
+</html>

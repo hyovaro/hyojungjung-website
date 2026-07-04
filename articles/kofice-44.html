@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 넷플릭스 4월 리포트: 한국 콘텐츠 강세, 그리고 OTT 시대 '홀드백'의 변화 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 560px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-44.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 넷플릭스 4월 리포트: 한국 콘텐츠 강세, 그리고 OTT 시대 '홀드백'의 변화 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-44.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 넷플릭스 4월 리포트: 한국 콘텐츠 강세, 그리고 OTT 시대 '홀드백'의 변화 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">사우디 넷플릭스 4월 리포트: 한국 콘텐츠 강세, 그리고 OTT 시대 '홀드백(holdback)'의 변화</h1>
+                <p class="article-title-en">Saudi Netflix April Report: Korean Content Dominates, and the Evolving 'Holdback' Debate in the OTT Era</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">April 30, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">OTT / Korean Content / Film Distribution</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <h2>영화 부문: &lt;휴민트&gt; 1위와 OTT 직행의 의미</h2>
+
+            <p>사우디아라비아 넷플릭스 4월 영화 부문에서는 조인성, 박정민 주연의 액션 영화 &lt;휴민트&gt;(감독 류승완)가 공개 직후 1위를 기록하며, 2주 연속 상위권을 유지했다. 넷플릭스 통계에서 한국 콘텐츠는 드라마에 비해 영화 부문이 상대적으로 약세를 보이는 가운데, &lt;휴민트&gt;의 성과는 눈에 띄는 흐름이다. 이 작품은 한국에서는 2026년 2월 11일 극장 개봉 이후 4월 1일 넷플릭스에 공개된 작품으로, 비교적 빠르게 OTT로 이동한 사례다.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-44-images/img-01.jpg" alt="사우디 넷플릭스 영화 톱10 1위 휴민트 (4월 1주차)">
+            </div>
+            <p class="photo-caption">사우디 넷플릭스 영화 톱10 1위 '휴민트'(4월 1주차) — 출처: 넷플릭스 홈페이지</p>
+
+            <p>&lt;휴민트&gt;는 손익분기점 약 400만 명 대비 국내 관객 수 198만 명으로 집계되며 극장에서는 기대만큼의 성적을 내지 못했다. 이후 비교적 짧은 기간 안에 OTT로 넘어가면서, 극장 성과와 별개로 글로벌 플랫폼에서 다시 소비되는 흐름을 보여준다. 이 과정은 영화 유통 구조 변화와 연결된다. 극장 개봉 이후 OTT 공개까지의 기간, 이른바 '홀드백(holdback)'은 원래 극장 산업을 보호하기 위한 장치였다. 하지만 OTT 성장과 관객 소비 방식 변화로 이 기간은 점점 짧아지고 있다. 최근에는 개봉 한 달 내 OTT 공개, 혹은 극장 개봉 없이 바로 온라인 공개되는 사례도 늘고 있다.</p>
+
+            <h2>드라마 부문: 장르 확장과 동시 소비 구조</h2>
+
+            <p>드라마 부문에서는 한국 콘텐츠의 강세가 뚜렷하게 나타났다. 4월 3일 공개된 7부작 액션 드라마 &lt;사냥개들 시즌2&gt;(연출·극본 김주환)는 1주차에 5위로 진입한 뒤 2주차에는 2위까지 올랐다. 동시에 전 시즌 &lt;사냥개들 시즌1&gt;(2023년)도 7위에 다시 오르며 시리즈 전체가 함께 소비되는 흐름을 만들었다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-44-images/img-02.jpg" alt="사우디 넷플릭스 쇼 톱10 (4월 2주차) 2위 사냥개들 시즌2">
+            </div>
+            <p class="photo-caption">사우디 넷플릭스 쇼 톱10(4월 2주차) 2위 '사냥개들 시즌2' — 출처: 넷플릭스 홈페이지</p>
+
+            <p>넷플릭스 오리지널 드라마 &lt;엑스오, 키티 시즌3&gt;(XO, Kitty)(연출 제니 한)도 6위에 올랐다. 이 작품은 서울과 부산 등 한국 로케이션을 배경으로 기숙학교 이야기를 전개하면서, 한국 공간이 글로벌 콘텐츠 안에서 확장되는 모습을 보여준다. 같은 기간 &lt;신이랑 법률사무소&gt;(연출 신중훈, 극본 김가영·강철규)가 9위에 오르며 법정 장르까지 포함해 한국 및 한국 관련 콘텐츠가 상위권의 상당 부분을 차지했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-44-images/img-03.jpg" alt="4월 1주차 쇼부문 5위 사냥개들, 6위 엑스오 키티 시즌3, 7위 신이랑 법률사무소">
+            </div>
+            <p class="photo-caption">4월 1주차 쇼부문 5위 '사냥개들', 6위 '엑스오, 키티 시즌3', 7위 '신이랑 법률사무소' — 출처: 넷플릭스</p>
+
+            <p>4주차에는 4월 22일 공개된 12부작 드라마 &lt;오늘도 매진했습니다&gt;(연출 안종연, 극본 진승희)가 순위권에 진입했다. 농촌을 배경으로 농부와 쇼호스트의 관계를 중심으로 전개되는 작품으로, 한국의 농촌 공간을 활용한 로맨스 서사가 특징이다. 신선한 소재와 익숙하지 않은 배경 설정이 해외 시청자들의 관심을 끌고 있는 것으로 보인다.</p>
+
+            <p>이어 4월 24일 공개된 8부작 공포 드라마 &lt;기리고&gt;(연출 박윤서, 극본 박중섭)가 같은 주차에 8위에 오르면서 액션, 로맨스, 법정, 공포까지 장르 전반에서 한국 콘텐츠 소비가 고르게 나타났다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-44-images/img-04.jpg" alt="4월 4주차 쇼부문 6위 오늘도 매진했습니다, 9위 기리고">
+            </div>
+            <p class="photo-caption">4월 4주차 쇼부문 6위 '오늘도 매진했습니다', 9위 '기리고' — 출처: 넷플릭스</p>
+
+            <h2>홀드백(holdback) 논쟁: 영화 유통 구조의 변화</h2>
+
+            <p>OTT 중심 소비가 확산된 배경에는 영화 유통 구조 변화가 있다. 홀드백은 극장 개봉 이후 VOD, IPTV, OTT로 넘어가기까지의 시간을 조정해 각 플랫폼의 수익 구조를 보호하는 장치였다. 하지만 OTT가 커지면서 이 구조는 빠르게 흔들리고 있다. 일부 작품은 개봉 한 달 만에 OTT로 이동하고, 아예 극장 개봉 없이 온라인으로 공개되는 경우도 생기고 있다. 특히 &lt;휴민트&gt;처럼 빠르게 넷플릭스로 이동한 사례는 이런 변화의 상징처럼 언급된다.</p>
+
+            <p>현재 국내에서는 홀드백을 최소 6개월로 법제화하려는 논의도 이어지고 있다. 하지만 업계 입장은 갈린다. 극장은 관객 이탈을 막기 위해 일정 기간 보호가 필요하다고 보고, 제작·배급사는 작품 성격에 따라 유통 전략이 달라져야 한다고 본다. 여기에 관객 인식도 변하고 있다. 사우디 관람객 입장에서는 OTT 공개 시점이 빠를수록 접근성이 높아지는 만큼, 긴 홀드백 구조보다 유연한 유통 방식이 더 긍정적으로 작용한다. 창작자들 역시 일률적인 규제가 콘텐츠 유통의 다양성을 줄일 수 있다는 점을 우려하고 있다. 결국 이 논쟁은 '극장을 어떻게 살릴 것인가'와 '콘텐츠를 어떻게 더 빨리 소비하게 할 것인가' 사이의 균형 문제로 이어지고 있다.</p>
+
+            <h2>홀드백 논쟁의 이면: 사우디 시청자의 시선</h2>
+
+            <p>결국 한국 영화 콘텐츠는 극장 성적과 별개로 OTT를 통해 다시 평가받는 구조가 만들어지고 있다. 한국에서는 홀드백 기간을 둘러싼 논쟁이 이어지고 있지만, 사우디아라비아에서는 한국 영화가 극장에서 개봉되는 경우 자체가 드물다. OTT는 사우디 관람객이 한국 영화를 접할 수 있는 사실상 가장 현실적인 창구인 셈이다. 홀드백이 짧아질수록, OTT를 통한 접근이 빨라질수록, 사우디 시청자들에게 선택지는 더 넓어진다. 국내에서 논쟁이 계속되는 동안에도, 사우디 OTT 시청자들에게 이 변화는 분명 반가운 소식이다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 투둠 바이 넷플릭스(Tudum by Netflix) 홈페이지, <a href="https://www.netflix.com/tudum/top10/saudi-arabia/tv" target="_blank">www.netflix.com/tudum/top10/saudi-arabia/tv</a></p>
+                <p>— 헤럴드경제 (2026.3.30). '휴민트' 개봉 49일 만에 안방극장 출격…'홀드백' 논쟁 재점화하나, <a href="https://biz.heraldcorp.com/article/10706589" target="_blank">biz.heraldcorp.com/article/10706589</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <h2>Film: <em>HUMINT</em> at #1 and the Meaning of Going Straight to OTT</h2>
+
+            <p>In Saudi Arabia's Netflix film rankings for April, the action film <em>HUMINT</em> (directed by Ryoo Seung-wan, starring Jo In-sung and Park Jung-min) shot to #1 immediately upon release and held upper-tier positions for two consecutive weeks. While Korean content on Netflix tends to underperform in the film category relative to dramas, <em>HUMINT</em>'s showing stands out. In South Korea it opened theatrically on February 11, 2026, then moved to Netflix on April 1 — a relatively quick pivot to OTT.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-44-images/img-01.jpg" alt="Saudi Netflix Top 10 Movies #1 HUMINT (Week 1, April)">
+            </div>
+            <p class="photo-caption">Saudi Netflix Top 10 Movies — #1 <em>HUMINT</em>, Week 1 of April — Source: Netflix</p>
+
+            <p><em>HUMINT</em> drew 1.98 million domestic admissions against a break-even target of approximately 4 million, falling short of theatrical expectations. Its rapid shift to OTT shows how a film can find a second audience on a global platform independent of its box-office result. This connects to a broader structural shift in film distribution. The "holdback" — the window between a theatrical release and its availability on VOD, IPTV, and OTT — was originally designed to protect the cinema industry. But as OTT platforms grow and viewer habits change, that window is shrinking fast. Some films now land on streaming within a month of opening; others skip theatres altogether.</p>
+
+            <h2>Drama: Genre Breadth and the Simultaneous Consumption Effect</h2>
+
+            <p>Korean drama content dominated the charts throughout April. <em>Bloodhounds Season 2</em> (written and directed by Kim Joo-hwan), a seven-episode action series released on April 3, entered the top 10 at #5 in its first week and climbed to #2 the following week. Simultaneously, the original <em>Bloodhounds Season 1</em> (2023) re-entered the chart at #7 — a clear sign that audiences are consuming the entire series back-to-back.</p>
+
+            <div class="article-photo">
+                <img src="kofice-44-images/img-02.jpg" alt="Saudi Netflix Top 10 Shows Week 2 April — Bloodhounds Season 2 at #2">
+            </div>
+            <p class="photo-caption">Saudi Netflix Top 10 Shows — #2 <em>Bloodhounds Season 2</em>, Week 2 of April — Source: Netflix</p>
+
+            <p>Netflix original <em>XO, Kitty Season 3</em> (directed by Jenny Han) also ranked at #6. The series, a spin-off of <em>To All the Boys I've Loved Before</em>, follows protagonist Kitty (Anna Cathcart) at an elite boarding school in Seoul — a case of Korean spaces becoming the setting for globally distributed content. In the same period, <em>Phantom Lawyer</em> (directed by Shin Jung-hoon, written by Kim Ga-young and Kang Cheol-kyu) entered at #9, meaning Korean or Korea-adjacent content occupied a significant share of the top tier across action, romance, and legal genres alike.</p>
+
+            <div class="article-photo">
+                <img src="kofice-44-images/img-03.jpg" alt="Saudi Netflix Top 10 Shows Week 1 April — Bloodhounds S2 at 5, XO Kitty S3 at 6, Phantom Lawyer at 7">
+            </div>
+            <p class="photo-caption">Week 1 of April — #5 <em>Bloodhounds</em>, #6 <em>XO, Kitty Season 3</em>, #7 <em>Phantom Lawyer</em> — Source: Netflix</p>
+
+            <p>In the fourth week, <em>Sold Out on You</em> (directed by Ahn Jong-yeon, written by Jin Seung-hee) — a twelve-episode romance released April 22 centred on a farmer and a home-shopping host in rural Korea — entered the rankings. The fresh, unfamiliar setting appears to be drawing overseas viewers' attention. Hot on its heels, the eight-episode horror drama <em>Giriboy</em> (directed by Park Yoon-seo, written by Park Jung-seop), released April 24, debuted at #8 the same week, confirming that Korean content is being consumed evenly across action, romance, legal, and horror genres.</p>
+
+            <div class="article-photo">
+                <img src="kofice-44-images/img-04.jpg" alt="Saudi Netflix Top 10 Shows Week 4 April — Sold Out on You at 6, Giriboy at 9">
+            </div>
+            <p class="photo-caption">Week 4 of April — #6 <em>Sold Out on You</em>, #9 <em>Giriboy</em> — Source: Netflix</p>
+
+            <h2>The Holdback Debate: A Changing Film Distribution Landscape</h2>
+
+            <p>The spread of OTT-first consumption is rooted in structural changes to film distribution. The holdback was originally a mechanism for managing the timeline from theatrical release through VOD, IPTV, and OTT, protecting each platform's revenue window in turn. But OTT growth is destabilising this model rapidly. Some titles move to streaming within a month of opening; others bypass cinemas entirely. Cases like <em>HUMINT</em>'s fast track to Netflix are cited as emblematic of this shift.</p>
+
+            <p>In South Korea there are ongoing discussions about legally mandating a minimum six-month holdback. But industry opinion is divided. Exhibitors argue that a protected window is necessary to stop audience haemorrhage; producers and distributors counter that the optimal release strategy should vary by project. Audience expectations are shifting too. From a Saudi viewer's perspective, the sooner a Korean film is available on OTT, the more accessible it is — making a flexible distribution model more appealing than a rigid holdback. Creators, meanwhile, worry that blanket regulation could reduce the diversity of how content reaches audiences. Ultimately the debate is about balance: how to keep cinemas viable while also meeting the demand for faster, more flexible content consumption.</p>
+
+            <h2>The Other Side of the Holdback Debate: A Saudi Viewer's Perspective</h2>
+
+            <p>Ultimately, a new structure is taking shape: Korean film content is being re-evaluated through OTT, independent of its theatrical performance. While the holdback debate continues in South Korea, the reality in Saudi Arabia is quite different — Korean films rarely receive theatrical releases there at all. For Saudi audiences, OTT is effectively the most realistic window through which Korean cinema becomes accessible. The shorter the holdback, the faster that access arrives and the wider the choices become. Whatever the outcome of the domestic debate, for Saudi OTT viewers this shift is unambiguously good news.</p>
+
+            <div class="sources">
+                <p class="sources-label">Sources</p>
+                <p>— Tudum by Netflix, <a href="https://www.netflix.com/tudum/top10/saudi-arabia/tv" target="_blank">www.netflix.com/tudum/top10/saudi-arabia/tv</a></p>
+                <p>— Herald Economy (2026.3.30). 'HUMINT hits home screens 49 days after release — is it reigniting the holdback debate?', <a href="https://biz.heraldcorp.com/article/10706589" target="_blank">biz.heraldcorp.com/article/10706589</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-43.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+    <a href="kofice-46.html">Next →</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>

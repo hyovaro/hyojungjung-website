@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명줄 · Lifeline — Nangman Theatre</title>
+    <meta name="description" content="음악낭독극 〈명줄〉 — 소설가 김지연의 소설을 옮긴 낭만씨어터의 음악낭독극. 2017년 김지연 작가와 함께 하는 문학콘서트, 은평문화예술회관.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        [lang="ko"] {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+            word-break: keep-all;
+        }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #5e5e5e;
+        }
+        .nav-links a { transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+
+        /* ── Hero ── */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            max-width: 1100px;
+            margin: 72px auto 0;
+            padding: 0 52px;
+            align-items: start;
+        }
+        .hero-poster { position: static; }
+        .hero-poster img {
+            width: 100%;
+            display: block;
+            border-radius: 2px;
+        }
+        .poster-cap {
+            font-size: 11px;
+            color: #6f6f6f;
+            letter-spacing: 0.06em;
+            margin-top: 8px;
+        }
+        .hero-grid { padding-top: 4px; }
+        .hero-grid > div + div { margin-top: 36px; }
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 20px;
+        }
+        .production-heading {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 1.08;
+            letter-spacing: -0.01em;
+            margin-bottom: 10px;
+        }
+        .production-heading[lang="ko"] { font-weight: 400; letter-spacing: 0; }
+        .production-heading em {
+            font-style: italic;
+            color: #7c3a36;
+        }
+        .production-heading[lang="ko"] em { font-style: normal; }
+        .production-en {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 19px;
+            font-weight: 300;
+            font-style: italic;
+            color: #6f6f6f;
+            margin-bottom: 28px;
+        }
+        .production-source {
+            font-size: 13px;
+            color: #6f6f6f;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .divider {
+            width: 40px;
+            height: 0.5px;
+            background: #c5c0b8;
+            margin-bottom: 28px;
+        }
+        .context-note {
+            font-size: 12px;
+            color: #6f6f6f;
+            border-left: 2px solid #c5c0b8;
+            padding-left: 14px;
+            line-height: 1.6;
+        }
+        .credits {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .credit-row {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .credit-label {
+            min-width: 150px;
+            color: #6f6f6f;
+            flex-shrink: 0;
+        }
+        .credit-value { color: #1a1a1a; }
+
+        /* ── Sections ── */
+        .intro {
+            max-width: 1100px;
+            margin: 72px auto;
+            padding: 0 52px;
+        }
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            padding-bottom: 12px;
+            margin-bottom: 32px;
+        }
+        .intro-text {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        .intro-text p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #454545;
+        }
+        .intro-text p + p { margin-top: 16px; }
+        .about-en { align-self: start; }
+        .year-credits { margin-top: 40px; }
+
+        /* ── Stagings timeline ── */
+        .schedule { max-width: 1100px; margin: 64px auto 0; padding: 0 52px; }
+        .schedule-list { list-style: none; }
+        .schedule-list li {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 18px;
+            font-size: 13px;
+            line-height: 1.5;
+            padding: 11px 0;
+            border-bottom: 0.5px solid rgba(0,0,0,0.07);
+        }
+        .schedule-list li:first-child { border-top: 0.5px solid rgba(0,0,0,0.07); }
+        .sch-date { color: #7c3a36; }
+        .sch-venue { color: #454545; }
+        .sch-en {
+            font-family: 'Inter', sans-serif;
+            font-size: 11.5px;
+            color: #6f6f6f;
+            letter-spacing: 0;
+        }
+        .sch-date .sch-en { color: #a98884; }
+        .program-note {
+            font-size: 12px;
+            color: #6f6f6f;
+            margin-top: 18px;
+            line-height: 1.7;
+        }
+
+        /* ── Photo grid / materials ── */
+        .photos {
+            max-width: 1100px;
+            margin: 64px auto 0;
+            padding: 0 52px;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .photo-grid .wide { grid-column: span 2; }
+        .photo-item {
+            overflow: hidden;
+            background: #ede9e2;
+        }
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .photo-item:hover img { transform: scale(1.02); }
+        .poster-plain { overflow: hidden; background: transparent; }
+        .poster-plain img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+        .poster-plain:hover img { transform: scale(1.02); }
+        .photo-caption {
+            font-size: 11px;
+            color: #6f6f6f;
+            letter-spacing: 0.06em;
+            margin-top: 6px;
+        }
+
+        /* ── Float Nav ── */
+        .float-nav {
+            position: fixed;
+            bottom: 32px;
+            right: 40px;
+            display: flex;
+            gap: 8px;
+            z-index: 200;
+        }
+        .float-nav a {
+            display: inline-block;
+            padding: 9px 18px;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 1px solid #7c3a36;
+            color: #7c3a36;
+            background: #f7f4ef;
+            border-radius: 1px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 24px; }
+            .hero { padding: 0 24px; margin-top: 32px; grid-template-columns: 1fr; gap: 32px; }
+            .hero-poster { max-width: 360px; }
+            .production-heading { font-size: 40px; }
+            .intro, .photos, .schedule { padding: 0 24px; }
+            .intro-text { grid-template-columns: 1fr; gap: 0; }
+            .photo-grid { grid-template-columns: 1fr; }
+            .photo-grid .wide { grid-column: span 1; }
+            .about-en { margin-top: 16px; }
+            .credit-label { min-width: 120px; }
+            .schedule-list li { grid-template-columns: 1fr; gap: 2px; padding: 10px 0; }
+            .sch-date { font-size: 12px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    /* bd1-grade: subtle warm tone on photographs (reversible — delete this block to revert) */
+.photo-item:not(.poster-plain):not(.poster) img,
+.perf-cell:not(.poster) img,
+.lb-pic,
+.hero-photo img,
+.photo-free img,
+.about-photo img,
+.cat-photo img,
+.tz-photo img,
+.event-thumb img{filter:sepia(0.10) saturate(1.06) contrast(1.03) brightness(1.01);}
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* ===== be1-musicstand : spine rail + paper (reversible — delete this block + the .spine markup to revert) ===== */
+:root{--spine:96px;}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity:.05;mix-blend-mode:multiply;}
+@media(min-width:821px){body{padding-left:var(--spine);}}
+.spine{position:fixed;top:0;left:0;bottom:0;width:var(--spine);border-right:.5px solid #d5d0c8;
+  display:flex;flex-direction:column;align-items:center;padding-top:82px;z-index:80;background:#f7f4ef;}
+.spine .folio{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;color:#7c3a36;line-height:1;}
+.spine .rest{width:1px;flex:1;margin:26px 0;background:#d5d0c8;position:relative;}
+.spine .rest::before,.spine .rest::after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:11px;height:.5px;background:#7c3a36;}
+.spine .rest::before{top:34%;}.spine .rest::after{top:66%;}
+.spine .runmark{writing-mode:vertical-rl;text-orientation:mixed;font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;color:#6f6f6f;margin-bottom:30px;}
+@media(max-width:820px){.spine{display:none;}}
+/* masthead typesetting (be1 full-parity) */
+.masthead{max-width:1100px;margin:0 auto;padding:56px 52px 0;}
+.score-line{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7c3a36;margin-bottom:26px;display:flex;align-items:center;gap:12px;}
+.score-line::before{content:"";width:22px;height:.5px;background:#7c3a36;}
+.mast-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start;}
+.mast-poster img{width:100%;display:block;border-radius:2px;}
+.mast-body{padding-top:2px;}
+.duet-author{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:300;color:#6f6f6f;margin-bottom:6px;}
+.duet-ko{font-family:'Noto Serif KR',serif;font-weight:500;font-size:52px;line-height:1.08;letter-spacing:-.01em;color:#1a1a1a;}
+.duet-ko em{font-style:normal;}
+.duet-en{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:400;font-size:30px;line-height:1.1;color:#7c3a36;margin-top:12px;}
+.duet-source{font-size:13px;color:#6f6f6f;margin-top:20px;}
+.colophon{margin-top:22px;}
+.colo-row{display:grid;grid-template-columns:172px 1fr;gap:20px;padding:9px 0;border-bottom:.5px solid rgba(0,0,0,.06);font-size:13px;line-height:1.6;align-items:baseline;}
+.colo-label{font-size:12px;color:#6f6f6f;}
+.colo-value{color:#1a1a1a;}
+.masthead .context-note{font-size:12px;color:#6f6f6f;border-left:2px solid #d5d0c8;padding-left:14px;line-height:1.6;margin-top:26px;}
+.staff{max-width:1100px;margin:66px auto 0;padding:0 52px;}
+.staff-lines{border-top:.5px solid #d5d0c8;}
+@keyframes setType{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@keyframes drawLine{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+.duet-author{animation:setType .7s ease both;}
+.duet-ko{animation:setType .7s .08s ease both;}
+.duet-en{animation:setType .7s .18s ease both;}
+.score-line::before{transform-origin:left;animation:drawLine .6s .1s ease both;}
+@media(prefers-reduced-motion:reduce){.duet-author,.duet-ko,.duet-en,.score-line::before{animation:none !important;}}
+@media(max-width:820px){
+  .mast-grid{grid-template-columns:1fr;gap:32px;}
+  .masthead{padding:40px 24px 0;} .staff{padding:0 24px;}
+  .duet-ko{font-size:40px;} .duet-en{font-size:24px;}
+}
+/* /be1-musicstand */
+
+/* be3-lightbox-pager-crumb */
+.crumb{padding:16px 52px 0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8a857c;display:flex;gap:9px;flex-wrap:wrap;align-items:center;}
+.crumb a{color:#8a857c;border-bottom:.5px solid transparent;transition:color .2s,border-color .2s;}
+.crumb a:hover{color:#7c3a36;border-color:#7c3a36;}
+.crumb .sep{color:#c5c0b8;}
+.crumb .here{color:#1a1a1a;}
+.crumb .here [lang="ko"]{font-weight:400;}
+.photo-item{position:relative;}
+.lb-open{display:block;width:100%;height:100%;cursor:zoom-in;}
+.photo-item::after{content:"\2922";position:absolute;right:8px;bottom:6px;color:#fff;font-size:14px;opacity:0;transition:opacity .2s;text-shadow:0 1px 3px rgba(0,0,0,.5);pointer-events:none;z-index:2;}
+@media(hover:hover){.photo-item:hover::after{opacity:.85;}}
+@media(hover:none){.photo-item::after{opacity:.6;}}
+.lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(20,18,16,.95);}
+.lb:target{display:flex;}
+.lb-back{position:absolute;inset:0;cursor:zoom-out;}
+.lb-pic{position:relative;z-index:2;max-width:90vw;max-height:84vh;object-fit:contain;border-radius:2px;}
+.lb-cap{position:absolute;bottom:20px;left:0;right:0;z-index:3;text-align:center;color:#e8e4dd;font-size:12.5px;letter-spacing:.04em;padding:0 60px;}
+.lb-cap [lang="ko"]{font-weight:300;}
+.lb-count{position:absolute;top:20px;left:26px;z-index:3;color:#c5c0b8;font-size:12px;letter-spacing:.1em;}
+.lb-close{position:absolute;top:14px;right:24px;z-index:3;font-size:30px;color:#fff;line-height:1;width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);z-index:3;font-size:46px;color:#fff;padding:0 22px;min-width:44px;opacity:.8;user-select:none;}
+.lb-prev{left:4px;}.lb-next{right:4px;}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{opacity:1;}
+.pager{max-width:1000px;margin:64px auto 0;padding:26px 52px 0;border-top:.5px solid #d5d0c8;display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;}
+.pager-cell{display:flex;flex-direction:column;gap:3px;}
+.pager-cell.next{text-align:right;align-items:flex-end;}
+.pager-kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#a09a90;}
+.pager-title{font-family:'Cormorant Garamond',serif;font-size:19px;color:#1a1a1a;transition:color .2s;line-height:1.2;}
+.pager-title [lang="ko"]{font-family:'Noto Serif KR',serif;font-size:15px;color:#6a655c;}
+.pager-cell a:hover .pager-title{color:#7c3a36;}
+a.pager-all{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7c3a36;border:1px solid #7c3a36;padding:9px 16px;border-radius:1px;white-space:nowrap;transition:background .2s,color .2s;}
+a.pager-all:hover{background:#7c3a36;color:#f7f4ef;}
+.pager-cell.empty{visibility:hidden;}
+@media(max-width:768px){
+.crumb{padding:14px 24px 0;}
+.pager{padding-left:24px;padding-right:24px;grid-template-columns:1fr;gap:16px;text-align:left;}
+.pager-cell.next{text-align:left;align-items:flex-start;order:3;}
+a.pager-all{order:2;justify-self:start;}
+}
+/* /be3-lightbox-pager-crumb */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/kimjiyeon.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="명줄 · Lifeline — Nangman Theatre">
+    <meta property="og:description" content="음악낭독극 〈명줄〉 — 소설가 김지연의 소설을 옮긴 낭만씨어터의 음악낭독극. 2017년 김지연 작가와 함께 하는 문학콘서트, 은평문화예술회관.">
+    <meta property="og:url" content="https://hyojungjung.com/kimjiyeon.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/kimjiyeon-poster.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="명줄 · Lifeline — Nangman Theatre">
+    <meta name="twitter:description" content="음악낭독극 〈명줄〉 — 소설가 김지연의 소설을 옮긴 낭만씨어터의 음악낭독극. 2017년 김지연 작가와 함께 하는 문학콘서트, 은평문화예술회관.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/kimjiyeon-poster.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html" class="active">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+<!-- be3 breadcrumb -->
+<nav class="crumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">/</span>
+  <a href="theatre.html">Theatre</a>
+  <span class="sep">/</span>
+  <span class="here"><span lang="ko">명줄</span> · Lifeline</span>
+</nav>
+
+
+<!-- Spine rail (be1-musicstand) -->
+<div class="spine">
+    <div class="folio">i</div>
+    <div class="rest"></div>
+    <div class="runmark" lang="ko">낭만씨어터 · Nangman Theatre</div>
+</div>
+
+
+<!-- Masthead — title page of a score (be1-musicstand) -->
+<header class="masthead">
+    <div class="mast-grid">
+        <div class="mast-poster">
+            <img src="images/kimjiyeon-poster.jpg" alt="김지연 작가와 함께 하는 문학콘서트 — 소설 〈명줄〉 포스터 (2017)">
+        </div>
+        <div class="mast-body">
+            <div class="score-line"><span lang="ko">음악낭독극</span> · Music-reading theatre</div>
+            <p class="duet-author" lang="ko">김지연 <span style="font-style:italic">Kim Ji-yeon</span></p>
+            <h1 class="duet-ko" lang="ko">명줄</h1>
+            <p class="duet-en">Lifeline</p>
+            <p class="duet-source"><span lang="ko">소설 〈명줄〉 원작</span> · after the novel by Kim Ji-yeon</p>
+
+            <div class="colophon">
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">연출</span> · Director</span>
+                    <span class="colo-value"><span lang="ko">정효정</span> Hyojung Jung</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">원작</span> · Based on the novel by</span>
+                    <span class="colo-value"><span lang="ko">김지연</span> Kim Ji-yeon</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">제작</span> · Production</span>
+                    <span class="colo-value"><span lang="ko">낭만씨어터</span> Nangman Theatre</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">일시</span> · Date</span>
+                    <span class="colo-value"><span lang="ko">2017년 9월 28일</span> · 28 September 2017</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">장소</span> · Venue</span>
+                    <span class="colo-value" lang="ko">은평문화예술회관 숲속극장, Seoul</span>
+                </div>
+            </div>
+            <p class="context-note"><span lang="ko">김지연 작가와 함께 하는 문학콘서트 1부</span> · Part I of a literary concert with the author</p>
+        </div>
+    </div>
+</header>
+
+<div class="staff"><div class="staff-lines"></div></div>
+
+<div class="intro">
+    <div class="section-label">About</div>
+    <div class="intro-text">
+        <div>
+            <p lang="ko">〈명줄〉은 소설가 김지연의 동명 소설을 옮긴 음악낭독극이다. 낭만씨어터는 이 작품을 ‘김지연 작가와 함께 하는 문학콘서트’의 1부 무대로 올렸다. 화려한 장치 없이 배우들의 낭독과 노래, 피아노 반주만으로 소설의 한 대목을 관객과 가까이에서 나눈다.</p>
+            <p lang="ko">김지연은 한국소설가협회 이사장을 지낸 소설가로, 〈명줄〉·〈인생〉·〈논개〉 등을 쓰고 채만식 문학상을 받았다. 이 무대에 이어 가수 박경하의 초대공연, 작가의 문학 인생 이야기(2부), 관객과의 대화(3부)가 펼쳐졌으며, 문학평론가 허희가 진행을 맡았다.</p>
+        </div>
+        <div class="about-en">
+            <p><em>Lifeline</em> (Myeongjul) is a music-reading theatre piece adapted from the novel of the same name by Kim Ji-yeon. Nangman Theatre presented it as Part I of a literary concert held with the author. Carried by the performers' reading, song, and piano alone, it shares a passage of the novel up close with the audience.</p>
+            <p>Kim Ji-yeon, a senior Korean novelist who served as chair of the Korean Novelists' Association, is the author of works including <em>Myeongjul</em>, <em>Insaeng</em>, and <em>Nongae</em>, and a winner of the Chae Man-sik Literary Award. The reading opened an evening that continued with a guest performance, the author's reflections on her life in literature, and a conversation with the audience, hosted by the literary critic Heo Hee.</p>
+        </div>
+    </div>
+    <div class="year-credits">
+        <div class="credits">
+            <div class="credit-row"><span class="credit-label">출연 · Cast</span><span class="credit-value" lang="ko">정효정 Hyojung Jung — 딸 · 여자 간병인 역 <span lang="en">the Daughter · a caregiver</span><br>김다흰 Daheen Kim — 해설 · 아버지 역 <span lang="en">Narrator · the Father</span><br>김현식 Hyun-sik Kim — 큰아들 영우 역 <span lang="en">Yeong-woo, the elder son</span><br>임승범 Seung-beom Lim — 작은아들 영찬 · 의사 역 <span lang="en">Yeong-chan, the younger son · a Doctor</span></span></div>
+            <div class="credit-row"><span class="credit-label">피아노 · Piano</span><span class="credit-value" lang="ko">백영록 Young-rok Baek</span></div>
+            <div class="credit-row"><span class="credit-label">작곡 · Composer</span><span class="credit-value" lang="ko">백은숙 Eunsook Baek</span></div>
+            <div class="credit-row"><span class="credit-label">원작 · Source</span><span class="credit-value" lang="ko">김지연 소설 〈명줄〉 · <span lang="en">Kim Ji-yeon, <em>Lifeline</em></span></span></div>
+            <div class="credit-row"><span class="credit-label">진행 · Host</span><span class="credit-value" lang="ko">허희 Heo Hee <span lang="en" style="color:#6f6f6f;">문학평론가 · literary critic</span></span></div>
+            <div class="credit-row"><span class="credit-label">주최 · Hosted by</span><span class="credit-value" lang="ko">은평구 · <span lang="en">Eunpyeong-gu, Seoul</span></span></div>
+            <div class="credit-row"><span class="credit-label">주관 · Organised by</span><span class="credit-value" lang="ko">문화예술기획 시선 · <span lang="en">Siseon Arts Planning</span></span></div>
+        </div>
+    </div>
+</div>
+
+<div class="schedule">
+    <div class="section-label" style="max-width:none;">공연 연혁 · Staging</div>
+    <ul class="schedule-list" lang="ko">
+        <li>
+            <span class="sch-date">2017년 9월 28일<br><span class="sch-en">28 Sep 2017</span></span>
+            <span class="sch-venue">은평문화예술회관 숲속극장, 서울 — 김지연 작가와 함께 하는 문학콘서트<br><span class="sch-en">Eunpyeong Culture &amp; Arts Center, Forest Theatre, Seoul — a literary concert with the author</span></span>
+        </li>
+    </ul>
+</div>
+
+<div class="photos" style="margin-bottom:48px;">
+    <div class="section-label" style="max-width:none;">공연 사진 · 자료 · Photos &amp; materials</div>
+    <div class="photo-grid">
+        <div class="wide">
+            <div class="photo-item" style="aspect-ratio: 16 / 9;"><a class="lb-open" href="#lb-1"><img src="images/kimjiyeon-perf1.jpg" alt="〈명줄〉 음악낭독극 공연 전경 — 네 배우의 낭독과 피아노, 은평문화예술회관 (2017)"></a></div>
+            <p class="photo-caption" lang="ko">공연 전경 · 은평문화예술회관 숲속극장 (2017)<br><span lang="en" style="font-family:'Inter',sans-serif;">In performance · the full stage, Eunpyeong Culture &amp; Arts Center</span></p>
+        </div>
+        <div>
+            <div class="photo-item" style="aspect-ratio: 16 / 9;"><a class="lb-open" href="#lb-2"><img src="images/kimjiyeon-perf2.jpg" alt="〈명줄〉 음악낭독극 — 배우 김다흰과 피아니스트 백영록 (2017)" style="object-position: center 20%;"></a></div>
+            <p class="photo-caption" lang="ko">배우 김다흰 · 피아노 백영록 (2017)<br><span lang="en" style="font-family:'Inter',sans-serif;">Actor Daheen Kim · Young-rok Baek, piano</span></p>
+        </div>
+        <div>
+            <div class="photo-item" style="aspect-ratio: 16 / 9;"><a class="lb-open" href="#lb-3"><img src="images/kimjiyeon-perf3.jpg" alt="〈명줄〉 음악낭독극 — 낭독하는 배우 김현식과 임승범 (2017)"></a></div>
+            <p class="photo-caption" lang="ko">배우 김현식 · 임승범 (2017)<br><span lang="en" style="font-family:'Inter',sans-serif;">Actors Hyun-sik Kim &amp; Seung-beom Lim</span></p>
+        </div>
+        <div>
+            <div class="photo-item poster-plain"><a class="lb-open" href="#lb-4"><img src="images/kimjiyeon-poster.jpg" alt="김지연 작가와 함께 하는 문학콘서트 — 소설 〈명줄〉 포스터 (2017)"></a></div>
+            <p class="photo-caption" lang="ko">포스터 · 김지연 작가와 함께 하는 문학콘서트 (2017)<br><span lang="en" style="font-family:'Inter',sans-serif;">Poster · a literary concert with Kim Ji-yeon</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- be3 pager -->
+    <div class="float-nav">
+        <a href="gongjiyoung.html">← Previous</a>
+        <a href="theatre.html" class="float-center">All Productions</a>
+        <a href="almost-a-love-story.html">Next →</a>
+    </div>
+
+
+
+<!-- be3 lightbox overlays -->
+<div class="lb" id="lb-1"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">1 / 4</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-4" aria-label="Previous">‹</a><a class="lb-next" href="#lb-2" aria-label="Next">›</a><img class="lb-pic" src="images/kimjiyeon-perf1.jpg" alt=""><div class="lb-cap"><span lang="ko">〈명줄〉 음악낭독극 공연 전경 — 네 배우의 낭독과 피아노, 은평문화예술회관 (2017)</span></div></div>
+<div class="lb" id="lb-2"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">2 / 4</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-1" aria-label="Previous">‹</a><a class="lb-next" href="#lb-3" aria-label="Next">›</a><img class="lb-pic" src="images/kimjiyeon-perf2.jpg" alt=""><div class="lb-cap"><span lang="ko">〈명줄〉 음악낭독극 — 배우 김다흰과 피아니스트 백영록 (2017)</span></div></div>
+<div class="lb" id="lb-3"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">3 / 4</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-2" aria-label="Previous">‹</a><a class="lb-next" href="#lb-4" aria-label="Next">›</a><img class="lb-pic" src="images/kimjiyeon-perf3.jpg" alt=""><div class="lb-cap"><span lang="ko">〈명줄〉 음악낭독극 — 낭독하는 배우 김현식과 임승범 (2017)</span></div></div>
+<div class="lb" id="lb-4"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">4 / 4</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-3" aria-label="Previous">‹</a><a class="lb-next" href="#lb-1" aria-label="Next">›</a><img class="lb-pic" src="images/kimjiyeon-poster.jpg" alt=""><div class="lb-cap"><span lang="ko">김지연 작가와 함께 하는 문학콘서트 — 소설 〈명줄〉 포스터 (2017)</span></div></div>
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리야드에 설립된 세계 최대 뮤직 스튜디오 메르와스 Merwas 탐방기 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-19.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="리야드에 설립된 세계 최대 뮤직 스튜디오 메르와스 Merwas 탐방기 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-19.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="리야드에 설립된 세계 최대 뮤직 스튜디오 메르와스 Merwas 탐방기 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화현장 — Field Report</p>
+                    <h1 class="article-title-ko">리야드에 설립된 세계 최대 뮤직 스튜디오 메르와스 Merwas 탐방기</h1>
+                    <p class="article-title-en">Visiting Merwas — the World's Largest Music Production Studio in Riyadh</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">30 November 2025</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · November 2025</span></div>
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<h2>사우디 국부 펀드가 지원한 초대형 음악 창작 인프라의 탄생</h2>
+<p>사우디아라비아 리야드의 핵심 엔터테인먼트 '불러바드 시티(Boulevard City)' 한가운데에는 거대한 복합 뮤직·콘텐츠 스튜디오 단지 메르와스(Merwas)가 자리하고 있다. 메르와스는 '엔터테인먼트 팩토리'를 표방하며 설립된 통합 음악 제작 공간이다. 창립자 나다 알 투와이지리(Nada Al Tuwaijri)와 루마이얀 알 루마이얀(Rumayyan Al-Rumayyan)의 아이디어에서 출발해, 사우디 국부 펀드(PIF)의 문화·예술 지원 정책과 '비전 2030' 전략에 힘입어 2022년 10월 공식 오픈했다. 음악·예술·엔터테인먼트 전문가들이 모여 있는 이 공간은 다양한 스튜디오뿐 아니라 교육·제작 생태계를 결합하여 사우디 창작자들을 지원하고 있으며, 지식 재산권 보호와 지속 가능한 창작 생태계 구축을 핵심 가치로 삼고 있다.</p>
+
+<div class="article-photo"><img src="kofice-19-images/img-000.jpg" alt="메르와스 스튜디오 단지 입구 전경"></div>
+<p class="photo-caption">▲ 메르와스 스튜디오 단지 입구 전경 — 출처: 통신원 촬영</p>
+
+<div class="article-photo"><img src="kofice-19-images/img-012.jpg" alt="음악적 사운드를 모티프로 한 인테리어 디자인"></div>
+<p class="photo-caption">▲ 음악적 사운드를 모티프로 한 인테리어 디자인 — 출처: 통신원 촬영</p>
+
+<p>전체 규모는 4,023.83㎡로, 2022년 11월 26일 기네스 세계 기록에서 '세계에서 가장 큰 음악 제작 스튜디오(Largest Music Production Studio)'로 공식 인증을 받았다. 22개의 리코딩 룸과 라이브 룸, 포스트 프로덕션 시설, 마스터링 룸, 전자음악 전용 EMP Suite, 리허설 룸, 팟캐스트·라디오 부스, 그린 스크린 및 컬러 그레이딩까지 음악·영상 제작의 전 공정을 한 시설 안에서 소화할 수 있다는 점이 특징이다. 메르와스는 중동·북아프리카(MENA) 지역 음악·콘텐츠 산업의 새로운 허브 구축을 목표로 한 국가적 계획의 상징적인 결과물이다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-19-images/img-013.jpg" alt="녹음 스튜디오">
+    <img src="kofice-19-images/img-014.jpg" alt="콘텐츠 시사실 내부">
+</div>
+<p class="photo-caption">▲ (좌) 녹음 스튜디오, (우) 콘텐츠 시사실 내부 — 출처: 통신원 촬영</p>
+
+<div class="article-photo"><img src="kofice-19-images/img-015.jpg" alt="세계 최대 음악 제작 스튜디오 기네스 인증 플라크"></div>
+<p class="photo-caption">▲ 세계 최대 음악 제작 스튜디오 기네스 인증 플라크 — 출처: 통신원 촬영</p>
+
+<h2>세계 음악 시장이 주목한 워너뮤직–메르와스 파트너십</h2>
+<p>이 초대형 스튜디오가 국제 음악 시장의 관심을 끌게 된 배경에는, 2025년 10월 발표된 워너뮤직 그룹(Warner Music Group, WMG)과의 전략적 파트너십이 있다. 워너뮤직은 리야드 기반의 멀티미디어·콘텐츠 제작사 메르와스와 손잡고, 현지에 새로운 레코드 레이블을 설립하는 합의를 체결했다. 이번 협업은 단순한 제휴를 넘어, MENA 지역 아티스트들의 음악을 글로벌 시장으로 확장시키기 위한 본격적인 공동 벤처로 설명된다. 워너뮤직과 메르와스는 중동·북아프리카 지역의 슈퍼스타는 물론 떠오르는 신예 아티스트까지 공동으로 발굴·계약하고, 메르와스가 보유한 첨단 제작 인프라를 활용해 이들의 음악을 지역과 세계에 연결하겠다는 구상을 내놓고 있다.</p>
+
+<div class="article-photo"><img src="kofice-19-images/img-016.jpg" alt="워너뮤직-메르와스 파트너십 협약 사진"></div>
+<p class="photo-caption">▲ 워너뮤직-메르와스 파트너십 협약 — 출처: 워너뮤직 그룹(Warner Music Group)</p>
+
+<p>워너뮤직 MENA 담당 총괄 역시 이 지역을 '세계 음악 산업에서 가장 빠르게 성장하는 시장 중 하나'라고 언급하며, 메르와스와 함께 지역 음악을 글로벌 플랫폼으로 확장시키겠다는 의지를 밝혔다. 메르와스 측 또한 중동 음악의 국제적 확장을 가속화할 파트너로 워너뮤직을 지목하며 강한 기대감을 드러냈다. 이 같은 글로벌 레이블과의 파트너십은 메르와스가 단순히 '세계 최대 규모'를 자랑하는 인프라를 넘어, 국제 음악 산업 구조 속에서 핵심적인 창작 허브로 자리 잡아가고 있음을 보여준다.</p>
+
+<h2>케이팝에 높은 관심을 보이는 메르와스의 글로벌 확장 전략</h2>
+<p>메르와스의 초청을 받은 통신원은 직접 단지를 둘러보며 관계자들과 대화를 나누는 시간을 가졌다. 외형적인 규모나 최첨단 장비만큼 인상 깊었던 것은 메르와스가 '교육'과 '글로벌 협업'을 동시에 지향하는 기관이라는 점이었다. 메르와스는 단순 스튜디오를 넘어 '아카데미' 기능을 결합하고 있다. 작곡, 미디(MIDI) 기반 음악 제작, 리코딩·믹싱·마스터링을 다루는 실기 중심의 클래스가 운영되고 있으며, 젊은 창작자를 발굴하는 레지던스 프로그램도 구축되어 있었다. 또한 아티스트 쇼케이스 등 대면 네트워킹 프로그램을 통해 창작자와 산업 관계자 간의 교류를 촉진하며, 창작 생태계의 연결점을 넓히는 역할도 수행하고 있다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-19-images/img-017.jpg" alt="보컬 부스">
+    <img src="kofice-19-images/img-018.jpg" alt="오케스트라 리코딩 스튜디오">
+</div>
+<p class="photo-caption">▲ (좌) 보컬 부스, (우) 오케스트라 리코딩 스튜디오 — 출처: 통신원 촬영</p>
+
+<p>특히 흥미로웠던 점은 메르와스가 케이팝에 높은 관심을 보이고 있었다는 사실이다. 인터뷰 중 한국식 보컬·연기 교육, 뮤지컬 트레이닝, 한국 드라마·영화 OST 중심의 단기 과정 등 한국의 콘텐츠 교육 모델에 대한 다수의 질문이 이어졌으며, 이를 자사 아카데미 프로그램에 어떻게 접목할 수 있을지 함께 아이디어를 나누기도 했다. 한국 작곡가·프로듀서와의 단기 협업, 보컬 디렉팅 및 미디 작곡 워크숍, 뮤지컬 넘버 제작 과정 등 보다 구체적인 공동 프로그램에 대한 관심도 높았다. 관계자들은 특히 젊은 세대에서 나타나는 케이팝 선호도와 영향력을 직접 체감하고 있으며, 이를 기반으로 한 교류 확대 가능성을 긍정적으로 평가했다. 메르와스는 한국 대중가요를 단순히 '수입 콘텐츠'로 소비하는 데 그치지 않고 함께 교육하고 공동 제작할 수 있는 파트너로 바라보고 있었다.</p>
+
+<h2>미래의 MENA-글로벌 음악 허브로 향하는 메르와스</h2>
+<p>'세계 최대 뮤직 스튜디오'라는 상징성을 지닌 메르와스는 로컬 아티스트를 육성하는 교육기관이자 글로벌 레이블과 창작자들이 만나는 플랫폼으로 자리매김했으며, 케이팝을 포함한 다양한 문화권의 음악이 교차하는 새로운 접점으로도 확장될 가능성을 보여준다. 이번 탐방에서 확인한 메르와스는 사우디 음악 산업의 현재와 향후 전략을 가장 잘 보여주는 공간이었으며, 동시에 MENA 지역 음악·콘텐츠가 세계 시장과 어떻게 접속해 갈지를 가늠하게 하는 유의미한 관찰 지점이었다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>통신원 촬영</p>
+    <p>메르와스 공식 웹사이트, <a href="https://merwas.sa" target="_blank" rel="noopener">https://merwas.sa</a></p>
+    <p>사우디 엔터테인먼트청, <a href="https://www.gea.gov.sa/en/merwas" target="_blank" rel="noopener">https://www.gea.gov.sa/en/merwas</a></p>
+    <p>기네스 기록 공식 웹사이트, <a href="https://buly.kr/EduPRmp" target="_blank" rel="noopener">https://buly.kr/EduPRmp</a></p>
+    <p>《Music Business Worldwide》(2025. 10. 20). IN LATEST MENA MOVE, WARNER MUSIC STRIKES PARTNERSHIP WITH RIYADH-BASED MERWAS TO FORM NEW LABEL</p>
+</div>
+</div></div>
+
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<h2>The Birth of a Mega Music Infrastructure Backed by Saudi Arabia's Sovereign Wealth Fund</h2>
+<p>At the heart of Boulevard City, one of Riyadh's key entertainment districts, stands Merwas — a vast integrated music and content studio complex. Positioning itself as an 'entertainment factory', Merwas was conceived by founders Nada Al Tuwaijri and Rumayyan Al-Rumayyan and officially opened in October 2022, backed by the Saudi Public Investment Fund (PIF) and the nation's Vision 2030 strategy. The complex brings together professionals in music, arts, and entertainment, combining studio facilities with an education and production ecosystem to support Saudi creators, with intellectual property protection and a sustainable creative ecosystem at its core.</p>
+
+<div class="article-photo"><img src="kofice-19-images/img-000.jpg" alt="Merwas studio complex entrance"></div>
+<p class="photo-caption">▲ Merwas studio complex entrance — Photo: Correspondent</p>
+
+<div class="article-photo"><img src="kofice-19-images/img-012.jpg" alt="Interior design inspired by musical sound waves"></div>
+<p class="photo-caption">▲ Interior design inspired by musical sound waves — Photo: Correspondent</p>
+
+<p>Spanning 4,023.83 square metres, Merwas was officially certified by Guinness World Records on 26 November 2022 as the world's Largest Music Production Studio. Its facilities cover the full spectrum of music and video production: 22 recording and live rooms, post-production suites, a mastering room, a dedicated EMP Suite for electronic music, rehearsal rooms, podcast and radio booths, green screen, and colour grading — all under one roof. Merwas stands as the symbolic result of a national plan to establish a new hub for the music and content industries across the MENA region.</p>
+
+<div class="photo-grid">
+    <img src="kofice-19-images/img-013.jpg" alt="Recording studio">
+    <img src="kofice-19-images/img-014.jpg" alt="Content screening room">
+</div>
+<p class="photo-caption">▲ (left) Recording studio, (right) Content screening room — Photo: Correspondent</p>
+
+<div class="article-photo"><img src="kofice-19-images/img-015.jpg" alt="Guinness World Record plaque for Largest Music Production Studio"></div>
+<p class="photo-caption">▲ Guinness World Record plaque — Largest Music Production Studio — Photo: Correspondent</p>
+
+<h2>The Warner Music–Merwas Partnership That Caught the World's Attention</h2>
+<p>The announcement that drew the international music market's attention was a strategic partnership with Warner Music Group (WMG), announced in October 2025. Warner Music joined forces with Riyadh-based multimedia and content producer Merwas to establish a new record label in the city. The collaboration goes beyond a simple alliance: it is described as a full joint venture aimed at expanding MENA artists' music into global markets. Warner Music and Merwas plan to jointly discover and sign artists — from established superstars to emerging talents across the Middle East and North Africa — and connect their music to regional and global audiences through Merwas's state-of-the-art production infrastructure.</p>
+
+<div class="article-photo"><img src="kofice-19-images/img-016.jpg" alt="Warner Music–Merwas partnership signing ceremony"></div>
+<p class="photo-caption">▲ Warner Music–Merwas partnership signing — Source: Warner Music Group</p>
+
+<p>Warner Music's head of MENA described the region as 'one of the fastest-growing markets in the global music industry', reaffirming the company's commitment to expanding local music onto global platforms alongside Merwas. Merwas, in turn, named Warner Music as the partner to accelerate the international expansion of Middle Eastern music, expressing strong anticipation for the collaboration. This partnership with a global label signals that Merwas is evolving beyond its 'world's largest' credentials to establish itself as a central creative hub within the international music industry.</p>
+
+<h2>Merwas's Global Expansion Strategy — with a Keen Eye on K-Pop</h2>
+<p>Invited by Merwas, this correspondent had the opportunity to tour the complex and speak with staff. As impressive as the sheer scale and cutting-edge equipment was the discovery that Merwas sees itself equally as an institution for education and global collaboration. Beyond a studio, Merwas incorporates an academy: it runs practice-oriented classes in composition, MIDI-based music production, recording, mixing, and mastering, alongside a residency programme for discovering young creators. Through artist showcases and in-person networking events, it also facilitates exchange between creators and industry professionals, broadening the connective tissue of the creative ecosystem.</p>
+
+<div class="photo-grid">
+    <img src="kofice-19-images/img-017.jpg" alt="Vocal booth">
+    <img src="kofice-19-images/img-018.jpg" alt="Orchestra recording studio">
+</div>
+<p class="photo-caption">▲ (left) Vocal booth, (right) Orchestra recording studio — Photo: Correspondent</p>
+
+<p>Particularly striking was Merwas's keen interest in K-pop. During interviews, a series of questions arose about Korean-style vocal and performance training, musical theatre coaching, and short-term programmes focused on Korean drama and film OST production — and we exchanged ideas about how these Korean content education models might be incorporated into Merwas's own academy. There was also significant interest in more concrete joint programmes: short-term collaborations with Korean composers and producers, vocal directing and MIDI composition workshops, and musical number production courses. Staff shared that they are directly experiencing the influence and preference for K-pop among younger generations, and they view this as a basis for expanding cultural exchange. Merwas is looking at Korean popular music not simply as imported content to consume, but as a partner to learn with and co-produce.</p>
+
+<h2>Merwas — Heading Toward a MENA-Global Music Hub</h2>
+<p>Merwas — carrying the symbolism of 'world's largest music studio' — has established itself as both an educational institution nurturing local artists and a platform where global labels and creators converge. It shows every sign of expanding further into a new crossroads where music from K-pop and many other cultural traditions can meet. This visit confirmed that Merwas is the space that best illustrates the present and future strategy of Saudi Arabia's music industry — and a meaningful observation point for understanding how MENA music and content will connect with global markets.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Photos by Correspondent</p>
+    <p>Merwas official website, <a href="https://merwas.sa" target="_blank" rel="noopener">https://merwas.sa</a></p>
+    <p>General Entertainment Authority of Saudi Arabia, <a href="https://www.gea.gov.sa/en/merwas" target="_blank" rel="noopener">https://www.gea.gov.sa/en/merwas</a></p>
+    <p>Guinness World Records, <a href="https://buly.kr/EduPRmp" target="_blank" rel="noopener">https://buly.kr/EduPRmp</a></p>
+    <p><em>Music Business Worldwide</em> (2025, October 20). In Latest MENA Move, Warner Music Strikes Partnership with Riyadh-Based Merwas to Form New Label.</p>
+</div>
+</div></div>
+    </div>
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-18.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-20.html">Next →</a>
+    </div>
+</body>
+</html>

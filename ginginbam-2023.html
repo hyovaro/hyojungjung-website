@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>긴긴밤 — Nangman Theatre</title>
+    <meta name="description" content="음악낭독극 〈긴긴밤〉 — 루리 원작, 낭만씨어터 제작, 정효정 연출·출연. 국립세종도서관 개관 10주년 기념 초청공연, 2023년 12월 12일.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        [lang="ko"] {
+            font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+            word-break: keep-all;
+        }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #5e5e5e;
+            transition: color 0.2s;
+        }
+        .nav-brand-ko {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 12px;
+            font-weight: 300;
+            margin-left: 4px;
+        }
+        .nav-brand:hover { color: #7c3a36; }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #5e5e5e;
+        }
+        .nav-links a { transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+
+        /* ── Hero ── */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            max-width: 1100px;
+            margin: 72px auto 0;
+            padding: 0 52px;
+            align-items: start;
+        }
+        .hero-poster {
+            position: static;
+        }
+        .hero-poster img {
+            width: 100%;
+            display: block;
+            border-radius: 2px;
+        }
+        .hero-left > div + div {
+            margin-top: 28px;
+        }
+        .hero-eventposter img {
+            width: 100%;
+            display: block;
+            border-radius: 2px;
+        }
+        .hero-grid {
+            padding-top: 4px;
+        }
+        .hero-grid > div + div {
+            margin-top: 36px;
+        }
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 20px;
+        }
+        .production-heading {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            margin-bottom: 8px;
+        }
+        .production-heading em {
+            font-style: italic;
+            color: #7c3a36;
+        }
+        .production-en {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 300;
+            font-style: italic;
+            color: #6f6f6f;
+            margin-bottom: 4px;
+        }
+        .production-source {
+            font-size: 13px;
+            color: #6f6f6f;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .divider {
+            width: 40px;
+            height: 0.5px;
+            background: #c5c0b8;
+            margin-bottom: 28px;
+        }
+        .context-note {
+            font-size: 12px;
+            color: #6f6f6f;
+            border-left: 2px solid #c5c0b8;
+            padding-left: 14px;
+            line-height: 1.6;
+        }
+        .credits {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .credit-row {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .credit-label {
+            min-width: 96px;
+            color: #6f6f6f;
+            flex-shrink: 0;
+        }
+        .credit-value {
+            color: #1a1a1a;
+        }
+
+        /* ── Intro ── */
+        .intro {
+            max-width: 1100px;
+            margin: 72px auto;
+            padding: 0 52px;
+        }
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            padding-bottom: 12px;
+            margin-bottom: 32px;
+        }
+        .about-poster {
+            width: 100%;
+            margin: 0 0 24px;
+        }
+        .about-en {
+            align-self: center;
+        }
+        .about-poster img {
+            width: 100%;
+            display: block;
+            border-radius: 2px;
+        }
+        .intro-text {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        .intro-text p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #454545;
+        }
+        .intro-text p + p {
+            margin-top: 16px;
+        }
+
+        /* ── Photo Grid ── */
+        .photos {
+            max-width: 1100px;
+            margin: 0 auto 80px;
+            padding: 0 52px;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .photo-grid .wide {
+            grid-column: span 2;
+        }
+        .photo-item {
+            overflow: hidden;
+            background: #ede9e2;
+        }
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .photo-item:hover img { transform: scale(1.02); }
+        .photo-tall { aspect-ratio: 4/3; }
+        .photo-wide { aspect-ratio: 16/9; }
+        .photo-portrait { aspect-ratio: 4/5; }
+        .photo-poster { aspect-ratio: 3/4; background: #fff; }
+        .photo-poster img { object-fit: contain; }
+        .photo-caption {
+            font-size: 11px;
+            color: #6f6f6f;
+            letter-spacing: 0.06em;
+            margin-top: 6px;
+        }
+
+        /* ── Press ── */
+        .press-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .press-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px 18px;
+            padding: 16px 22px;
+            border: 1px solid #d5d0c8;
+            border-radius: 1px;
+            background: #fbf9f5;
+        }
+        .press-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+        .press-name .en {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            color: #6f6f6f;
+            letter-spacing: 0.04em;
+            margin-left: 6px;
+        }
+        .press-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-left: auto;
+        }
+        .press-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 16px;
+            border: 1px solid #7c3a36;
+            color: #7c3a36;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            border-radius: 1px;
+            transition: background 0.2s, color 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .press-link:hover { background: #7c3a36; color: #f7f4ef; }
+        .press-link svg { flex-shrink: 0; }
+
+        /* ── Float Nav ── */
+        .float-nav {
+            position: fixed;
+            bottom: 32px;
+            right: 40px;
+            display: flex;
+            gap: 8px;
+            z-index: 200;
+        }
+        .float-nav a {
+            display: inline-block;
+            padding: 9px 18px;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 1px solid #7c3a36;
+            color: #7c3a36;
+            background: #f7f4ef;
+            border-radius: 1px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 24px; }
+            .hero { padding: 0 24px; margin-top: 32px; grid-template-columns: 1fr; gap: 32px; }
+            .hero-poster { max-width: 460px; }
+            .production-heading { font-size: 38px; }
+            .intro, .photos { padding: 0 24px; }
+            .intro-text { grid-template-columns: 1fr; gap: 0; }
+            .photo-grid { grid-template-columns: 1fr; }
+            .photo-grid .wide { grid-column: span 1; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    /* bd1-grade: subtle warm tone on photographs (reversible — delete this block to revert) */
+.photo-item:not(.poster-plain):not(.poster) img,
+.perf-cell:not(.poster) img,
+.lb-pic,
+.hero-photo img,
+.photo-free img,
+.about-photo img,
+.cat-photo img,
+.tz-photo img,
+.event-thumb img{filter:sepia(0.10) saturate(1.06) contrast(1.03) brightness(1.01);}
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* ===== be1-musicstand : spine rail + paper (reversible — delete this block + the .spine markup to revert) ===== */
+:root{--spine:96px;}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity:.05;mix-blend-mode:multiply;}
+@media(min-width:821px){body{padding-left:var(--spine);}}
+.spine{position:fixed;top:0;left:0;bottom:0;width:var(--spine);border-right:.5px solid #d5d0c8;
+  display:flex;flex-direction:column;align-items:center;padding-top:82px;z-index:80;background:#f7f4ef;}
+.spine .folio{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:22px;color:#7c3a36;line-height:1;}
+.spine .rest{width:1px;flex:1;margin:26px 0;background:#d5d0c8;position:relative;}
+.spine .rest::before,.spine .rest::after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:11px;height:.5px;background:#7c3a36;}
+.spine .rest::before{top:34%;}.spine .rest::after{top:66%;}
+.spine .runmark{writing-mode:vertical-rl;text-orientation:mixed;font-size:9.5px;letter-spacing:.32em;text-transform:uppercase;color:#6f6f6f;margin-bottom:30px;}
+@media(max-width:820px){.spine{display:none;}}
+/* masthead typesetting (be1 full-parity) */
+.masthead{max-width:1100px;margin:0 auto;padding:56px 52px 0;}
+.score-line{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7c3a36;margin-bottom:26px;display:flex;align-items:center;gap:12px;}
+.score-line::before{content:"";width:22px;height:.5px;background:#7c3a36;}
+.mast-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start;}
+.mast-poster img{width:100%;display:block;border-radius:2px;}
+.mast-body{padding-top:2px;}
+.duet-author{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:300;color:#6f6f6f;margin-bottom:6px;}
+.duet-ko{font-family:'Noto Serif KR',serif;font-weight:500;font-size:52px;line-height:1.08;letter-spacing:-.01em;color:#1a1a1a;}
+.duet-ko em{font-style:normal;}
+.duet-en{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:400;font-size:30px;line-height:1.1;color:#7c3a36;margin-top:12px;}
+.duet-source{font-size:13px;color:#6f6f6f;margin-top:20px;}
+.colophon{margin-top:22px;}
+.colo-row{display:grid;grid-template-columns:172px 1fr;gap:20px;padding:9px 0;border-bottom:.5px solid rgba(0,0,0,.06);font-size:13px;line-height:1.6;align-items:baseline;}
+.colo-label{font-size:12px;color:#6f6f6f;}
+.colo-value{color:#1a1a1a;}
+.masthead .context-note{font-size:12px;color:#6f6f6f;border-left:2px solid #d5d0c8;padding-left:14px;line-height:1.6;margin-top:26px;}
+.staff{max-width:1100px;margin:66px auto 0;padding:0 52px;}
+.staff-lines{border-top:.5px solid #d5d0c8;}
+@keyframes setType{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@keyframes drawLine{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+.duet-author{animation:setType .7s ease both;}
+.duet-ko{animation:setType .7s .08s ease both;}
+.duet-en{animation:setType .7s .18s ease both;}
+.score-line::before{transform-origin:left;animation:drawLine .6s .1s ease both;}
+@media(prefers-reduced-motion:reduce){.duet-author,.duet-ko,.duet-en,.score-line::before{animation:none !important;}}
+@media(max-width:820px){
+  .mast-grid{grid-template-columns:1fr;gap:32px;}
+  .masthead{padding:40px 24px 0;} .staff{padding:0 24px;}
+  .duet-ko{font-size:40px;} .duet-en{font-size:24px;}
+}
+/* /be1-musicstand */
+
+/* be3-lightbox-pager-crumb */
+.crumb{padding:16px 52px 0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8a857c;display:flex;gap:9px;flex-wrap:wrap;align-items:center;}
+.crumb a{color:#8a857c;border-bottom:.5px solid transparent;transition:color .2s,border-color .2s;}
+.crumb a:hover{color:#7c3a36;border-color:#7c3a36;}
+.crumb .sep{color:#c5c0b8;}
+.crumb .here{color:#1a1a1a;}
+.crumb .here [lang="ko"]{font-weight:400;}
+.photo-item{position:relative;}
+.lb-open{display:block;width:100%;height:100%;cursor:zoom-in;}
+.photo-item::after{content:"\2922";position:absolute;right:8px;bottom:6px;color:#fff;font-size:14px;opacity:0;transition:opacity .2s;text-shadow:0 1px 3px rgba(0,0,0,.5);pointer-events:none;z-index:2;}
+@media(hover:hover){.photo-item:hover::after{opacity:.85;}}
+@media(hover:none){.photo-item::after{opacity:.6;}}
+.lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(20,18,16,.95);}
+.lb:target{display:flex;}
+.lb-back{position:absolute;inset:0;cursor:zoom-out;}
+.lb-pic{position:relative;z-index:2;max-width:90vw;max-height:84vh;object-fit:contain;border-radius:2px;}
+.lb-cap{position:absolute;bottom:20px;left:0;right:0;z-index:3;text-align:center;color:#e8e4dd;font-size:12.5px;letter-spacing:.04em;padding:0 60px;}
+.lb-cap [lang="ko"]{font-weight:300;}
+.lb-count{position:absolute;top:20px;left:26px;z-index:3;color:#c5c0b8;font-size:12px;letter-spacing:.1em;}
+.lb-close{position:absolute;top:14px;right:24px;z-index:3;font-size:30px;color:#fff;line-height:1;width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);z-index:3;font-size:46px;color:#fff;padding:0 22px;min-width:44px;opacity:.8;user-select:none;}
+.lb-prev{left:4px;}.lb-next{right:4px;}
+.lb-close:hover,.lb-prev:hover,.lb-next:hover{opacity:1;}
+.pager{max-width:1000px;margin:64px auto 0;padding:26px 52px 0;border-top:.5px solid #d5d0c8;display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;}
+.pager-cell{display:flex;flex-direction:column;gap:3px;}
+.pager-cell.next{text-align:right;align-items:flex-end;}
+.pager-kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#a09a90;}
+.pager-title{font-family:'Cormorant Garamond',serif;font-size:19px;color:#1a1a1a;transition:color .2s;line-height:1.2;}
+.pager-title [lang="ko"]{font-family:'Noto Serif KR',serif;font-size:15px;color:#6a655c;}
+.pager-cell a:hover .pager-title{color:#7c3a36;}
+a.pager-all{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7c3a36;border:1px solid #7c3a36;padding:9px 16px;border-radius:1px;white-space:nowrap;transition:background .2s,color .2s;}
+a.pager-all:hover{background:#7c3a36;color:#f7f4ef;}
+.pager-cell.empty{visibility:hidden;}
+@media(max-width:768px){
+.crumb{padding:14px 24px 0;}
+.pager{padding-left:24px;padding-right:24px;grid-template-columns:1fr;gap:16px;text-align:left;}
+.pager-cell.next{text-align:left;align-items:flex-start;order:3;}
+a.pager-all{order:2;justify-self:start;}
+}
+/* /be3-lightbox-pager-crumb */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/ginginbam-2023.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="긴긴밤 — Nangman Theatre">
+    <meta property="og:description" content="음악낭독극 〈긴긴밤〉 — 루리 원작, 낭만씨어터 제작, 정효정 연출·출연. 국립세종도서관 개관 10주년 기념 초청공연, 2023년 12월 12일.">
+    <meta property="og:url" content="https://hyojungjung.com/ginginbam-2023.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="긴긴밤 — Nangman Theatre">
+    <meta name="twitter:description" content="음악낭독극 〈긴긴밤〉 — 루리 원작, 낭만씨어터 제작, 정효정 연출·출연. 국립세종도서관 개관 10주년 기념 초청공연, 2023년 12월 12일.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html" class="active">Theatre</a>
+        <a href="writing.html">Articles</a>
+        <a href="essays.html">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+<!-- be3 breadcrumb -->
+<nav class="crumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">/</span>
+  <a href="theatre.html">Theatre</a>
+  <span class="sep">/</span>
+  <span class="here"><span lang="ko">긴긴밤</span> · The Long Long Night</span>
+</nav>
+
+
+<!-- Spine rail (be1-musicstand) -->
+<div class="spine">
+    <div class="folio">i</div>
+    <div class="rest"></div>
+    <div class="runmark" lang="ko">낭만씨어터 · Nangman Theatre</div>
+</div>
+
+
+<!-- Hero -->
+<!-- Masthead — title page of a score (be1-musicstand) -->
+<header class="masthead">
+    <div class="mast-grid">
+        <div class="mast-poster">
+            <img src="images/ginginbam-event-poster.jpg" alt="국립세종도서관 개관 10주년 기념행사 공식 포스터">
+        </div>
+        <div class="mast-body">
+            <div class="score-line"><span lang="ko">음악낭독극</span> · Music-reading theatre</div>
+            <p class="duet-author" lang="ko">루리 <span style="font-style:italic">Luri</span></p>
+            <h1 class="duet-ko" lang="ko">긴긴밤</h1>
+            <p class="duet-en">The Long Long Night</p>
+            <p class="duet-source"><span lang="ko">루리 동화 『긴긴밤』(문학동네) 원작 · 제21회 문학동네어린이문학상 대상작</span> · after Luri's <em>The Long Long Night</em> (Munhakdongne)</p>
+
+            <div class="colophon">
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">연출</span> · Director</span>
+                    <span class="colo-value"><span lang="ko">정효정</span> Hyojung Jung</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">출연</span> · Performers</span>
+                    <span class="colo-value"><span lang="ko">남명렬</span> Myung-ryeol Nam · <span lang="ko">김기순</span> Gi-sun Kim · <span lang="ko">정효정</span> Hyojung Jung</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">작곡·연주</span> · Music</span>
+                    <span class="colo-value" lang="ko">신디 SINDY</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">원작</span> · Original</span>
+                    <span class="colo-value"><span lang="ko">루리 『긴긴밤』 (문학동네)</span> Luri, <em>The Long Long Night</em></span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">제작</span> · Production</span>
+                    <span class="colo-value"><span lang="ko">낭만씨어터</span> Nangman Theatre</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">주최</span> · Host</span>
+                    <span class="colo-value"><span lang="ko">국립세종도서관</span> National Sejong Library</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">일시</span> · Date</span>
+                    <span class="colo-value"><span lang="ko">2023년 12월 12일 (화)</span> · 12 December 2023</span>
+                </div>
+                <div class="colo-row">
+                    <span class="colo-label"><span lang="ko">장소</span> · Venue</span>
+                    <span class="colo-value" lang="ko">국립세종도서관 1층 로비 가설무대, Sejong</span>
+                </div>
+            </div>
+            <p class="context-note"><span lang="ko">국립세종도서관 개관 10주년 기념 초청공연</span> · Invited performance — 10th Anniversary of the National Sejong Library</p>
+        </div>
+    </div>
+</header>
+
+<div class="staff"><div class="staff-lines"></div></div>
+
+<!-- Intro -->
+<div class="intro">
+    <div class="section-label">About the Production</div>
+    <div class="intro-text">
+        <div>
+            <div class="about-poster">
+                <img src="images/ginginbam-poster.jpg" alt="음악낭독극 긴긴밤 2023 포스터 — 낭만씨어터">
+            </div>
+            <p lang="ko">루리의 동화 『긴긴밤』을 음악이 있는 낭독극으로 재구성한 작품. 멸종 위기에 놓인 흰바위코뿔소와 홀로 남겨진 어린 펭귄이 서로에게 기대어 길고 긴 밤을 건너 바다를 향해 나아가는, 우정과 생명에 관한 이야기다.</p>
+            <p lang="ko">낭만씨어터가 제작하고 정효정이 연출과 배우를 겸했다. 남명렬·김기순·정효정 배우가 출연하고, 신디(SINDY)가 작곡과 연주를 맡았다. 국립세종도서관 개관 10주년 기념행사의 초청공연으로 도서관 1층 로비 가설무대에서 관객과 만났다.</p>
+        </div>
+        <div class="about-en">
+            <p>A music-reading-theatre adaptation of Luri's <em>The Long Long Night</em>, winner of the 21st Munhakdongne Children's Literature Award. The story follows the last white rhino and an orphaned penguin who lean on one another to cross the long, long night toward the sea — a tale of friendship and life.</p>
+            <p>Produced by Nangman Theatre and directed and performed by Hyojung Jung, with actors Myung-ryeol Nam, Gi-sun Kim, and Hyojung Jung, and original music composed and performed by SINDY. The work was presented as an invited performance on the lobby stage for the 10th anniversary of the National Sejong Library.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Photos -->
+<div class="photos">
+    <div class="section-label">Photos</div>
+    <div class="photo-grid">
+        <div class="wide">
+            <div class="photo-item photo-wide">
+                <a class="lb-open" href="#lb-1"><img src="images/ginginbam-perf2.jpg" alt="긴긴밤 낭독극 공연 사진"></a>
+            </div>
+            <p class="photo-caption" lang="ko">공연 사진 — 음악이 있는 낭독극 · Performance — music-reading-theatre</p>
+        </div>
+        <div>
+            <div class="photo-item photo-portrait">
+                <a class="lb-open" href="#lb-2"><img src="images/ginginbam-perf1.jpg" alt="긴긴밤 낭독극 공연 사진"></a>
+            </div>
+            <p class="photo-caption" lang="ko">공연 사진 · Performance</p>
+        </div>
+        <div>
+            <div class="photo-item photo-portrait">
+                <a class="lb-open" href="#lb-3"><img src="images/ginginbam-banner.jpg" alt="긴긴밤 공연 거리 현수막"></a>
+            </div>
+            <p class="photo-caption" lang="ko">공연 현수막 — 출연 남명렬·김기순·정효정 · Street banner</p>
+        </div>
+        <div class="wide">
+            <div class="photo-item photo-wide">
+                <a class="lb-open" href="#lb-4"><img src="images/ginginbam-lobby.jpg" alt="국립세종도서관 1층 로비 무대와 관객"></a>
+            </div>
+            <p class="photo-caption" lang="ko">국립세종도서관 1층 로비 가설무대 · The Sejong Library lobby stage</p>
+        </div>
+        <div>
+            <div class="photo-item photo-tall">
+                <a class="lb-open" href="#lb-5"><img src="images/ginginbam-backstage.jpg" alt="공연 전 남명렬 배우" style="object-position: center 30%;"></a>
+            </div>
+            <p class="photo-caption" lang="ko">공연 전 — 남명렬 배우 · Before the show — actor Myung-ryeol Nam</p>
+        </div>
+        <div>
+            <div class="photo-item photo-tall">
+                <a class="lb-open" href="#lb-6"><img src="images/ginginbam-fourcut.jpg" alt="공연 후 출연진 네컷사진" style="object-position: center 30%;"></a>
+            </div>
+            <p class="photo-caption" lang="ko">공연 후 출연진과 함께 · The company after the performance</p>
+        </div>
+    </div>
+</div>
+
+<!-- Press -->
+<div class="intro" style="margin-top: 0; margin-bottom: 72px;">
+    <div class="section-label">Press · 언론 보도</div>
+    <div class="press-list">
+        <div class="press-item">
+            <span class="press-name" lang="ko">연합뉴스 <span class="en">Yonhap News · 2023.12.07</span></span>
+            <span class="press-actions">
+                <a href="https://n.news.naver.com/article/001/0014376536" target="_blank" rel="noopener" class="press-link">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M6 3H3v8h8V8"/><path d="M9 2h3v3M12 2L7 7"/></svg>
+                    원문 보기 Read online
+                </a>
+                <a href="ginginbam-press-yonhap.pdf" target="_blank" rel="noopener" class="press-link">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 2h7l3 3v7H2z"/><path d="M9 2v3h3M5 8h4M5 10h4"/></svg>
+                    PDF
+                </a>
+            </span>
+        </div>
+        <div class="press-item">
+            <span class="press-name" lang="ko">대전일보 <span class="en">Daejeon Ilbo · 2023.12.07</span></span>
+            <span class="press-actions">
+                <a href="https://n.news.naver.com/article/656/0000072168" target="_blank" rel="noopener" class="press-link">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M6 3H3v8h8V8"/><path d="M9 2h3v3M12 2L7 7"/></svg>
+                    원문 보기 Read online
+                </a>
+                <a href="ginginbam-press-daejeon.pdf" target="_blank" rel="noopener" class="press-link">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 2h7l3 3v7H2z"/><path d="M9 2v3h3M5 8h4M5 10h4"/></svg>
+                    PDF
+                </a>
+            </span>
+        </div>
+        <div class="press-item">
+            <span class="press-name" lang="ko">문화저널 맥 <span class="en">The Mac Culture Journal · 2023.12.07</span></span>
+            <span class="press-actions">
+                <a href="https://www.themac.co.kr/news/articleView.html?idxno=3341" target="_blank" rel="noopener" class="press-link">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M6 3H3v8h8V8"/><path d="M9 2h3v3M12 2L7 7"/></svg>
+                    원문 보기 Read online
+                </a>
+                <a href="ginginbam-press-themac.pdf" target="_blank" rel="noopener" class="press-link">
+                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 2h7l3 3v7H2z"/><path d="M9 2v3h3M5 8h4M5 10h4"/></svg>
+                    PDF
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- be3 pager -->
+    <div class="float-nav">
+        <a href="scratch-2025.html">← Previous</a>
+        <a href="theatre.html" class="float-center">All Productions</a>
+        <a href="nataeju.html">Next →</a>
+    </div>
+
+
+
+<!-- be3 lightbox overlays -->
+<div class="lb" id="lb-1"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">1 / 6</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-6" aria-label="Previous">‹</a><a class="lb-next" href="#lb-2" aria-label="Next">›</a><img class="lb-pic" src="images/ginginbam-perf2.jpg" alt=""><div class="lb-cap"><span lang="ko">긴긴밤 낭독극 공연 사진</span></div></div>
+<div class="lb" id="lb-2"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">2 / 6</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-1" aria-label="Previous">‹</a><a class="lb-next" href="#lb-3" aria-label="Next">›</a><img class="lb-pic" src="images/ginginbam-perf1.jpg" alt=""><div class="lb-cap"><span lang="ko">긴긴밤 낭독극 공연 사진</span></div></div>
+<div class="lb" id="lb-3"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">3 / 6</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-2" aria-label="Previous">‹</a><a class="lb-next" href="#lb-4" aria-label="Next">›</a><img class="lb-pic" src="images/ginginbam-banner.jpg" alt=""><div class="lb-cap"><span lang="ko">긴긴밤 공연 거리 현수막</span></div></div>
+<div class="lb" id="lb-4"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">4 / 6</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-3" aria-label="Previous">‹</a><a class="lb-next" href="#lb-5" aria-label="Next">›</a><img class="lb-pic" src="images/ginginbam-lobby.jpg" alt=""><div class="lb-cap"><span lang="ko">국립세종도서관 1층 로비 무대와 관객</span></div></div>
+<div class="lb" id="lb-5"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">5 / 6</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-4" aria-label="Previous">‹</a><a class="lb-next" href="#lb-6" aria-label="Next">›</a><img class="lb-pic" src="images/ginginbam-backstage.jpg" alt=""><div class="lb-cap"><span lang="ko">공연 전 남명렬 배우</span></div></div>
+<div class="lb" id="lb-6"><a class="lb-back" href="#_" aria-label="Close"></a><span class="lb-count">6 / 6</span><a class="lb-close" href="#_" aria-label="Close">×</a><a class="lb-prev" href="#lb-5" aria-label="Previous">‹</a><a class="lb-next" href="#lb-1" aria-label="Next">›</a><img class="lb-pic" src="images/ginginbam-fourcut.jpg" alt=""><div class="lb-cap"><span lang="ko">공연 후 출연진 네컷사진</span></div></div>
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+</body>
+</html>

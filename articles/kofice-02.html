@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리야드의 여름을 물들인 케이팝 공연들 — Hyojung Jung</title>
+    <meta name="description" content="K-Pop Performances That Coloured Riyadh's Summer. Published in KOFICE, July 2025. By Hyojung Jung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+
+        /* ── Article header ── */
+        .article-header {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 240px;
+        }
+        .header-accent {
+            background: #ede9e2;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 28px 20px;
+        }
+        .header-accent img {
+            max-width: 120px;
+            max-height: 44px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content {
+            display: grid;
+            grid-template-columns: 45% 1fr;
+        }
+        .header-title-col {
+            padding: 44px 40px 40px 52px;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .article-category {
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 14px;
+        }
+        .article-title-ko {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1.3;
+            color: #1a1a1a;
+        }
+        .article-title-en {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.4;
+            color: #5e5e5e;
+            margin-top: 10px;
+        }
+        .header-meta-col {
+            padding: 44px 52px 40px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+
+        /* ── Language toggle ── */
+        .lang-bar {
+            padding: 14px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        .lang-btn {
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border: 0.5px solid rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.2s;
+            background: transparent;
+            color: #6f6f6f;
+        }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child  { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+
+        /* ── Article body ── */
+        .article-body {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+        }
+        .article-sidebar {
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            padding: 40px 20px 40px 52px;
+        }
+        .sidebar-label {
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .article-text {
+            padding: 48px 80px 64px 52px;
+            max-width: 760px;
+        }
+        .article-text.hidden { display: none; }
+
+        /* Korean text */
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 22px;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin: 36px 0 16px;
+            padding-top: 20px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+
+        /* English text */
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 22px;
+            font-weight: 400;
+            font-style: italic;
+            color: #1a1a1a;
+            margin: 36px 0 16px;
+            padding-top: 20px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .text-en em { font-style: italic; }
+
+        /* Photos */
+        .article-photo {
+            width: 100%;
+            margin: 28px 0 8px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .article-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .photo-caption {
+            font-size: 11px;
+            color: #6f6f6f;
+            line-height: 1.6;
+            margin-bottom: 28px;
+            padding-left: 12px;
+            border-left: 2px solid #e0dbd3;
+        }
+
+        /* Sources */
+        .sources {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .sources-label {
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 12px;
+        }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+
+        /* ── Footer ── */
+        footer {
+            padding: 40px 52px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en { font-size: 14px; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-02.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="리야드의 여름을 물들인 케이팝 공연들 — Hyojung Jung">
+    <meta property="og:description" content="K-Pop Performances That Coloured Riyadh's Summer. Published in KOFICE, July 2025. By Hyojung Jung.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-02.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="리야드의 여름을 물들인 케이팝 공연들 — Hyojung Jung">
+    <meta name="twitter:description" content="K-Pop Performances That Coloured Riyadh's Summer. Published in KOFICE, July 2025. By Hyojung Jung.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- Article header -->
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Cultural Policy &amp; Issues</p>
+                    <h1 class="article-title-ko">리야드의 여름을 물들인 케이팝 공연들</h1>
+                    <p class="article-title-en">K-Pop Performances That Coloured Riyadh's Summer</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">31 July 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Language toggle -->
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <!-- Body -->
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · July 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+                <p>지난해 사우디에서 열릴 예정이었던 KCON 2024가 예매율 저조로 취소돼 사우디 한류 팬들에게 많은 아쉬움을 남겼다. 그러나 2025년 여름 한국 가수들의 공연이 리야드에서 이어지며 현지 케이팝 팬들의 기대에 부응하고 있다.</p>
+
+                <h2>세븐틴 디노, 사우디서 열린 2025년 e스포츠 월드컵 개막 공연 장식</h2>
+
+                <p>2025년 7월 10일 리야드 문화·엔터테인먼트 복합 구역 볼리바드 시티(Boulevard City)에 위치한 ANB 아레나에서 e스포츠 월드컵(EWC) 개막 오프닝 공연이 열렸다. 이 무대에서 케이팝 그룹 세븐틴의 멤버 디노가 세계적인 아티스트들과 어깨를 나란히 했다.</p>
+
+                <div class="article-photo"><img src="kofice-02-images/img-000.jpg" alt="EWC 개막 공연 홍보 포스터"></div>
+                <p class="photo-caption">▲ 개막 공연 홍보 포스터 — 출처: PR Newswire</p>
+
+                <div class="article-photo"><img src="kofice-02-images/img-001.jpg" alt="세븐틴 디노, 덕워스, 텔 스미스 합동 공연"></div>
+                <p class="photo-caption">▲ 세븐틴 디노, 덕워스, 텔 스미스 합동 공연 — 출처: Esports World Cup Foundation</p>
+
+                <p>디노는 미국 래퍼 덕워스(Duckwrth), 록 밴드 더 워드 얼라이브(The Word Alive)의 보컬 텔 스미스(Telle Smith)와 함께 공식 테마곡 &lt;Til My Fingers Bleed&gt;를 열창하며 뜨거운 호응을 이끌어냈다. 케이팝, 힙합, 록을 결합한 장르 혼합형 협업 무대는 현장 분위기를 압도했고 소셜미디어에서도 폭발적인 반응을 얻었다. 공연 당일 ANB 아레나에는 수천 명의 관객이 운집했으며 팬들은 공항에서도 세븐틴 디노를 환영했다. 현지 팬 니스린(2000년생)은 "케이팝 아티스트의 공연을 직접 본 건 오랜만이라 감격스러웠다."고 말하며 리야드 입국 장면부터 공연까지 전 과정을 직접 촬영해 공유했다.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-02-images/img-013.jpg" alt="리야드 킹칼리드국제공항에서 세븐틴 디노를 환대하는 사우디 팬들">
+                    <img src="kofice-02-images/img-015.jpg" alt="개막식 공연 현장">
+                </div>
+                <p class="photo-caption">▲ (좌) 리야드 킹칼리드국제공항에서 세븐틴 디노를 환대하는 사우디 팬들 &nbsp;·&nbsp; (우) 개막식 공연 현장 — 출처: 사우디 케이팝 팬 니스린 제공</p>
+
+                <h2>K-드라마와 감성 교류, OST 콘서트</h2>
+
+                <p>이어 7월 23일 문화체육관광부가 주최하고 한국콘텐츠진흥원(KOCCA)이 주관한 '2025 K-콘텐츠 엑스포 in 사우디아라비아' 일환으로 리야드 라디슨 블루 호텔 컨벤션 센터에서 K-드라마 OST 콘서트가 열렸다. 가수 황치열과 김기태가 &lt;이태원 클라쓰&gt;, &lt;구르미 그린 달빛&gt; 등 인기 K-드라마 OST를 선보였으며 총 2,233석 규모의 객석은 사전 예매로 매진됐다. 공연장에는 K-드라마를 통해 한국문화를 접해온 현지 팬들로 가득 찼고 무대는 한국 콘텐츠가 사우디 팬들과 정서적으로 깊이 연결되고 있음을 상징적으로 보여줬다.</p>
+
+                <div class="article-photo"><img src="kofice-02-images/img-016.jpg" alt="K-드라마 OST 콘서트 홍보 포스터"></div>
+                <p class="photo-caption">▲ K-드라마 OST 콘서트 홍보 포스터 — 출처: Platinumlist</p>
+
+                <h2>문화교류의 여름, 다시 시작된 공명</h2>
+
+                <p>KCON처럼 대규모 페스티벌은 아니었지만 2025년 7월 리야드에서 열린 두 차례의 케이팝 공연은 팬들에게 오랜 기다림 끝에 찾아온 사막에 내린 단비 같은 순간이었다. 공연장에 울려 퍼진 케이팝과 함성은 한국과 사우디 사이의 정서적 거리를 한층 좁히는 계기가 됐다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>Esports World Cup Foundation</p>
+                    <p>유튜브 계정(@ewc), <a href="https://www.youtube.com/@ewc" target="_blank" rel="noopener">https://www.youtube.com/@ewc</a></p>
+                    <p>사우디 케이팝 팬 니스린 제공</p>
+                    <p>Platinumlist, <a href="https://platinumlist.net/" target="_blank" rel="noopener">https://platinumlist.net/</a></p>
+                    <p><em>Pollstar</em> (2024. 7. 19). <a href="https://news.pollstar.com/2024/07/19/asia-news-kcon-saudi-arabia-uncertain-fuji-rock-streaming-ticketsurrogates/" target="_blank" rel="noopener">Asia News: KCON Saudi Arabia Uncertain</a></p>
+                    <p><em>PR Newswire</em> (2025. 7. 15). <a href="https://www.prnewswire.co.uk/news-releases/esports-world-cup-kicks-off-2025-event-with-star-studded-opening-ceremony-in-riyadh302505356.html" target="_blank" rel="noopener">Esports World Cup Kicks Off 2025 Event with Star-Studded Opening Ceremony in Riyadh</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+                <p>KCON 2024, which had been scheduled to take place in Saudi Arabia, was cancelled due to low ticket sales — leaving many Saudi Hallyu fans bitterly disappointed. But the summer of 2025 has brought a wave of Korean artist performances to Riyadh, more than meeting local K-pop fans' long-held expectations.</p>
+
+                <h2>Seventeen's DK Performs at the 2025 Esports World Cup Opening Ceremony</h2>
+
+                <p>On 10 July 2025, the opening ceremony of the Esports World Cup (EWC) took place at the ANB Arena in Boulevard City, Riyadh's cultural and entertainment complex. On that stage, DINO — a member of K-pop group Seventeen — performed alongside globally acclaimed artists.</p>
+
+                <div class="article-photo"><img src="kofice-02-images/img-000.jpg" alt="EWC Opening Ceremony promotional poster"></div>
+                <p class="photo-caption">▲ Opening ceremony promotional poster — Source: PR Newswire</p>
+
+                <div class="article-photo"><img src="kofice-02-images/img-001.jpg" alt="DINO of Seventeen, Duckwrth and Telle Smith performing together"></div>
+                <p class="photo-caption">▲ DINO of Seventeen, Duckwrth and Telle Smith performing together — Source: Esports World Cup Foundation</p>
+
+                <p>DINO joined American rapper Duckwrth and The Word Alive vocalist Telle Smith to perform the official theme song <em>Til My Fingers Bleed</em>, drawing an electrifying response from the crowd. The genre-blending collaboration — merging K-pop, hip-hop, and rock — commanded the atmosphere of the arena and generated explosive reactions across social media. Thousands of fans packed the ANB Arena on the night of the performance, and supporters had already gathered to welcome DINO at the airport upon his arrival in Riyadh. Local fan Nisreen (born 2000) said, "It's been a long time since I saw a K-pop artist perform live — I was genuinely moved." She filmed and shared the entire experience, from DINO's arrival at the airport to the performance itself.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-02-images/img-013.jpg" alt="Saudi fans welcoming Seventeen's DINO at King Khalid International Airport, Riyadh">
+                    <img src="kofice-02-images/img-015.jpg" alt="The opening ceremony in progress">
+                </div>
+                <p class="photo-caption">▲ (left) Saudi fans welcoming Seventeen's DINO at King Khalid International Airport &nbsp;·&nbsp; (right) The opening ceremony in progress — Source: Saudi K-pop fan Nisreen</p>
+
+                <h2>K-Drama and Emotional Connection: An OST Concert</h2>
+
+                <p>Then, on 23 July, a K-Drama OST Concert was held at the Convention Centre of the Radisson Blu Hotel in Riyadh, as part of the '2025 K-Content Expo in Saudi Arabia' — organised by the Ministry of Culture, Sports and Tourism and hosted by the Korea Creative Content Agency (KOCCA). Singers Hwang Chi-yeol and Kim Ki-tae performed beloved OSTs from popular K-dramas including <em>Itaewon Class</em> and <em>Moonlight Drawn by Clouds</em>. All 2,233 seats sold out in advance. The venue was filled with local fans who had first encountered Korean culture through K-dramas, and the stage offered a vivid illustration of how deeply Korean content has emotionally resonated with Saudi audiences.</p>
+
+                <div class="article-photo"><img src="kofice-02-images/img-016.jpg" alt="K-Drama OST Concert promotional poster"></div>
+                <p class="photo-caption">▲ K-Drama OST Concert promotional poster — Source: Platinumlist</p>
+
+                <h2>A Summer of Cultural Exchange — Resonance, Renewed</h2>
+
+                <p>They were not large-scale festivals like KCON, but the two K-pop performances held in Riyadh in July 2025 felt to fans like the first rain to fall on the desert after a long wait. The K-pop music and cheers that rang through those venues brought Korea and Saudi Arabia a little closer — emotionally, and culturally.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>Esports World Cup Foundation</p>
+                    <p>YouTube (@ewc), <a href="https://www.youtube.com/@ewc" target="_blank" rel="noopener">https://www.youtube.com/@ewc</a></p>
+                    <p>Saudi K-pop fan Nisreen (personal contribution)</p>
+                    <p>Platinumlist, <a href="https://platinumlist.net/" target="_blank" rel="noopener">https://platinumlist.net/</a></p>
+                    <p><em>Pollstar</em> (19 Jul 2024). <a href="https://news.pollstar.com/2024/07/19/asia-news-kcon-saudi-arabia-uncertain-fuji-rock-streaming-ticketsurrogates/" target="_blank" rel="noopener">Asia News: KCON Saudi Arabia Uncertain</a></p>
+                    <p><em>PR Newswire</em> (15 Jul 2025). <a href="https://www.prnewswire.co.uk/news-releases/esports-world-cup-kicks-off-2025-event-with-star-studded-opening-ceremony-in-riyadh302505356.html" target="_blank" rel="noopener">Esports World Cup Kicks Off 2025 Event with Star-Studded Opening Ceremony in Riyadh</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-01.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-03.html">Next →</a>
+    </div>
+</body>
+</html>

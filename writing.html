@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles — Hyojung Jung 정효정</title>
+    <meta name="description" content="Articles by Hyojung Jung — KOFICE Saudi Arabia correspondent and KOFIC guest correspondent. Reporting on Korean–Saudi cultural exchange.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-cta { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #1a1a1a; border: 0.5px solid rgba(0,0,0,0.3); padding: 7px 18px; border-radius: 2px; transition: background 0.2s, color 0.2s; }
+        .nav-cta:hover { background: #1a1a1a; color: #f7f4ef; }
+
+        /* ── Page header ── */
+        .page-header {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 220px;
+        }
+        .header-logos {
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            background: #ede9e2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 28px 20px;
+        }
+        .header-logos img {
+            max-width: 130px;
+            max-height: 48px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+        .header-divider { width: 40px; height: 0.5px; background: #c5c0b8; }
+        .header-text {
+            display: grid;
+            grid-template-columns: 45% 1fr;
+        }
+        .header-title-col {
+            padding: 44px 40px 40px 52px;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .header-eyebrow { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 16px; }
+        .header-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 48px; font-weight: 300; line-height: 0.96; letter-spacing: -0.02em; }
+        .header-meta { display: flex; gap: 28px; margin-top: 0; }
+        .meta-item .meta-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 4px; }
+        .meta-item .meta-value { font-size: 11px; color: #454545; }
+        .header-desc-col { padding: 44px 52px 40px 44px; display: flex; align-items: center; }
+        .header-desc { font-size: 14px; line-height: 1.85; color: #454545; }
+
+        /* ── Section label ── */
+        .section-label {
+            padding: 16px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section-label span { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #6f6f6f; }
+        .section-count { font-size: 9px; letter-spacing: 0.1em; color: #6f6f6f; }
+        .filter-row { padding: 10px 52px; display: flex; align-items: center; gap: 6px; border-bottom: 0.5px solid rgba(0,0,0,0.06); }
+        .filter-row:last-of-type { border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+        .filter-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #5e5e5e; margin-right: 6px; }
+        .filter-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 5px 14px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; border-radius: 2px; }
+        .filter-btn.active { background: #7c3a36; color: #f7f4ef; border-color: #7c3a36; }
+        .filter-btn:not(.active):hover { color: #1a1a1a; border-color: rgba(0,0,0,0.4); }
+        .article-row.hidden { display: none; }
+        /* pagination (reversible — delete this block + #article-pager + its script to revert) */
+        .pager { padding: 30px 52px 8px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+        .pager-info { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #6f6f6f; }
+        .pager-nav { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: center; }
+        .pager-btn { font-size: 11px; min-width: 38px; min-height: 38px; padding: 0 10px; border: 0.5px solid rgba(0,0,0,0.2); background: transparent; color: #6f6f6f; cursor: pointer; border-radius: 2px; transition: all 0.2s; }
+        .pager-btn.active { background: #7c3a36; color: #f7f4ef; border-color: #7c3a36; }
+        .pager-btn:not(.active):not(:disabled):hover { color: #1a1a1a; border-color: rgba(0,0,0,0.4); }
+        .pager-btn:disabled { opacity: 0.3; cursor: default; }
+        .pager-gap { color: #6f6f6f; padding: 0 2px; font-size: 11px; }
+
+        /* ── Article list ── */
+        .article-row {
+            display: grid;
+            grid-template-columns: 180px 1fr auto;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 64px;
+            align-items: center;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .article-row:hover { background: rgba(0,0,0,0.025); }
+        .article-meta {
+            padding: 18px 20px 18px 52px;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+        }
+        .article-pub {
+            font-size: 9px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+        }
+        .article-date {
+            font-size: 11px;
+            color: #6f6f6f;
+        }
+        .article-body {
+            padding: 18px 40px 18px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+        }
+        .article-title {
+            font-family: 'Cormorant Garamond', 'Noto Serif KR', Georgia, serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+        .article-title-en {
+            font-size: 11px;
+            color: #5e5e5e;
+            line-height: 1.5;
+            margin-top: 3px;
+        }
+        .article-action {
+            padding: 18px 52px 18px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .pdf-link {
+            font-size: 9px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            border: 0.5px solid #d5d0c8;
+            padding: 6px 14px;
+            border-radius: 2px;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .pdf-link:hover { border-color: #7c3a36; color: #1a1a1a; }
+
+        /* ── Footer ── */
+        footer {
+            padding: 40px 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .page-header { grid-template-columns: 1fr; }
+            .header-logos { min-height: 100px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-divider { width: 0.5px; height: 30px; }
+            .header-text { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 28px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-desc-col { padding: 24px 28px 32px; }
+            .section-label { padding: 14px 28px; }
+            .article-row { grid-template-columns: 1fr; }
+            .article-meta { border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.05); padding: 14px 28px 8px; flex-direction: row; gap: 12px; }
+            .article-body { padding: 10px 28px 12px; }
+            .article-action { padding: 10px 28px 18px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            nav { padding: 16px 20px; }
+            .article-meta { padding: 12px 20px 6px; }
+            .article-body { padding: 8px 20px 10px; }
+            .article-action { padding: 8px 20px 16px; }
+            .article-title { font-size: 16px; }
+        }
+    
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+        /* bb4-article-link */
+        .article-link { display: block; text-decoration: none; color: inherit; }
+        .article-row { cursor: default; }
+        .article-row:hover .article-title { color: #7c3a36; }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/writing.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="Articles — Hyojung Jung 정효정">
+    <meta property="og:description" content="Articles by Hyojung Jung — KOFICE Saudi Arabia correspondent and KOFIC guest correspondent. Reporting on Korean–Saudi cultural exchange.">
+    <meta property="og:url" content="https://hyojungjung.com/writing.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Articles — Hyojung Jung 정효정">
+    <meta name="twitter:description" content="Articles by Hyojung Jung — KOFICE Saudi Arabia correspondent and KOFIC guest correspondent. Reporting on Korean–Saudi cultural exchange.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="theatre.html">Theatre</a>
+        <a href="writing.html" class="active">Articles</a>
+        <a href="essays.html">Essays</a>
+        <a href="engagement.html">Teaching</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- Page header -->
+    <div class="page-header">
+        <div class="header-logos">
+            <img src="images/kofice-logo.png" alt="KOFICE">
+            <div class="header-divider"></div>
+            <img src="images/kofic-logo.png" alt="KOFIC">
+            <div class="header-divider"></div>
+            <img src="images/monthly-nt-logo.jpg" alt="월간국립극장">
+        </div>
+        <div class="header-text">
+            <div class="header-title-col">
+                <div>
+                    <p class="header-eyebrow">Journalism — Riyadh &amp; London</p>
+                    <h1 class="header-title">Articles</h1>
+                </div>
+                <div class="header-meta">
+                    <div class="meta-item">
+                        <p class="meta-label">KOFICE</p>
+                        <p class="meta-value">Since 2025</p>
+                    </div>
+                    <div class="meta-item">
+                        <p class="meta-label">KOFIC</p>
+                        <p class="meta-value">Since 2026</p>
+                    </div>
+                    <div class="meta-item">
+                        <p class="meta-label">Monthly National Theatre</p>
+                        <p class="meta-value">Since 2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-desc-col">
+                <p class="header-desc">Reporting on Korean culture, events, and issues in Saudi Arabia for the Korea Foundation for International Cultural Exchange (KOFICE, 한국국제문화교류진흥원); covering the Saudi film industry for the Korean Film Council (KOFIC, 영화진흥위원회). Also contributing theatre journalism from the United Kingdom for Monthly National Theatre of Korea (월간국립극장).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- KOFICE Articles -->
+    <div class="section-label">
+        <span>United Kingdom — Theatre</span>
+        <span class="section-count">1 article</span>
+    </div>
+
+    <div class="article-row">
+        <div class="article-meta"><span class="article-pub">Monthly National Theatre</span><span class="article-date">November 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/nt-inter-alia.html">
+            <p class="article-title">영국 공연예술의 심장 — 내셔널시어터 〈인터 알리아〉</p>
+            <p class="article-title-en">At the Heart of British Performing Arts — National Theatre's <em>Inter Alia</em></p>
+        </a></div>
+        <div class="article-action" style="display:flex; gap:8px;">
+            <a href="articles/nt-inter-alia.html" class="pdf-link">Read</a>
+            <a href="articles/nt-inter-alia.pdf" target="_blank" class="pdf-link">PDF</a>
+        </div>
+    </div>
+
+    <div class="section-label">
+        <span>Saudi Arabia</span>
+        <span class="section-count">49 articles</span>
+    </div>
+
+    <div class="filter-row">
+        <span class="filter-label">Publisher</span>
+        <button class="filter-btn active" onclick="filterPub('all', this)">All</button>
+        <button class="filter-btn" onclick="filterPub('kofice', this)">KOFICE</button>
+        <button class="filter-btn" onclick="filterPub('kofic', this)">KOFIC</button>
+    </div>
+    <div class="filter-row">
+        <span class="filter-label">Year</span>
+        <button class="filter-btn active" onclick="filterYear('all', this)">All</button>
+        <button class="filter-btn" onclick="filterYear('2026', this)">2026</button>
+        <button class="filter-btn" onclick="filterYear('2025', this)">2025</button>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">May 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-48.html">
+            <p class="article-title">사우디 최대 서점 체인 자릴 북스토어에서 만난 한국문학</p>
+            <p class="article-title-en">Korean Literature at Jarir Bookstore, Saudi Arabia's Largest Bookstore Chain</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-48.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">May 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-47.html">
+            <p class="article-title">사우디 극장가로 확장되는 케이팝 팬덤 문화 — 엔하이픈 공연 콘텐츠 연이어 상영</p>
+            <p class="article-title-en">K-pop Fandom Culture Spreads to Saudi Cinemas: A Run of ENHYPEN Concert Content on the Big Screen</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-47.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">May 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-45.html">
+            <p class="article-title">일본 만화 산업 도입하는 사우디 '망가 아라비아'·'망가 프로덕션', 한국 웹툰 진출과 현지 반응</p>
+            <p class="article-title-en">Saudi Arabia Adopts Japan's Manga Model: Manga Arabia, Manga Productions, and the Entry of Korean Webtoons</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-45.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">May 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-46.html">
+            <p class="article-title">사우디 청년들 한국어 배움 열풍 — 리야드 세종학당 '제4회 한국어 말하기 대회' 개최</p>
+            <p class="article-title-en">Korean-Learning Fervour Among Saudi Youth: Riyadh King Sejong Institute Holds the 4th Korean Speech Contest</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-46.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofic" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFIC</span><span class="article-date">May 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofic-2026-37.html">
+            <p class="article-title">2025년 사우디아라비아 영화산업 결산</p>
+            <p class="article-title-en">2025 Saudi Arabia Film Industry Year-End Report — KOFIC Correspondent Report Vol. 37</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofic-2026-37.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">April 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-44.html">
+            <p class="article-title">사우디 넷플릭스 4월 리포트: 한국 콘텐츠 강세, 그리고 OTT 시대 '홀드백(holdback)'의 변화</p>
+            <p class="article-title-en">Saudi Netflix April Report: Korean Content Dominates, and the Evolving 'Holdback' Debate in the OTT Era</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-44.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">April 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-43.html">
+            <p class="article-title">사우디 국립미술관, 결혼을 다시 묻다</p>
+            <p class="article-title-en">Saudi Arabia's National Museum of Contemporary Art Asks What Marriage Means</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-43.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">April 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-42.html">
+            <p class="article-title">스포티파이(Spotify) 사우디아라비아 7년 누적 차트, 감성 팝 강세 속 정국 &lt;세븐(Seven)&gt; 7위</p>
+            <p class="article-title-en">Spotify Saudi Arabia 7-Year Cumulative Chart: Jungkook's "Seven" at No. 7 Amid Emotional Pop Dominance</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-42.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">April 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-41.html">
+            <p class="article-title">석유를 전시하다: 리야드 '블랙 골드 박물관(Black Gold Museum)' 개관</p>
+            <p class="article-title-en">Exhibiting Oil: Riyadh's Black Gold Museum Opens</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-41.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">April 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-40.html">
+            <p class="article-title">사우디 시각미술 레지던시에서 만난 한국 작가 김호빈, 디아스포라와 이주의 서사를 기록하다</p>
+            <p class="article-title-en">Korean Artist Ho Bin Kim at the Saudi Visual Arts Residency — Documenting the Narratives of Diaspora and Migration</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-40.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">March 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-39.html">
+            <p class="article-title">사우디 넷플릭스 3월 통계, BTS 라이브 흥행과 한국 배경 콘텐츠 확장</p>
+            <p class="article-title-en">Saudi Arabia Netflix March Stats — BTS Live Hits Big, Korean-Set Content Expands</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-39.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">March 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-38.html">
+            <p class="article-title">3월 사우디아라비아 케이팝(K-pop) 스트리밍 중심 소비 흐름… BTS 데일리 차트 1위</p>
+            <p class="article-title-en">Saudi Arabia's March K-pop Streaming Landscape — BTS Tops the Daily Chart</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-38.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">March 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-37.html">
+            <p class="article-title">사우디, 왕령으로 리야드 예술대학교 설립…문화 인재 양성 본격화</p>
+            <p class="article-title-en">Saudi Arabia Establishes Riyadh University of Arts by Royal Decree — Building the Arts Workforce in Earnest</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-37.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">March 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-36.html">
+            <p class="article-title">사우디 비주얼 아트 커미션(Visual Arts Commission) 레지던시 참여 한국 작가 '티안'</p>
+            <p class="article-title-en">Korean New Media Artist Tahn on the Saudi Visual Arts Commission Residency — An Interview</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-36.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">March 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-35.html">
+            <p class="article-title">리야드 공공미술 프로젝트 '투와이크 조각 심포지엄(Tuwaiq Sculpture Symposium) 2026'</p>
+            <p class="article-title-en">Riyadh Public Art Project: Tuwaiq Sculpture Symposium 2026</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-35.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">February 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-34.html">
+            <p class="article-title">사우디 넷플릭스 2월 통계 — 〈레이디 두아〉 1위, 한국 콘텐츠 강세 지속</p>
+            <p class="article-title-en">Saudi Arabia Netflix February Statistics — <em>Lady Dua</em> No. 1, Korean Content Continues to Dominate</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-34.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">February 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-33.html">
+            <p class="article-title">한국예술종합학교–사우디 왕립전통예술학교, 전통 기반 창작 교육 협력 확대</p>
+            <p class="article-title-en">Korea National University of Arts and Saudi Royal Institute of Traditional Arts Expand Tradition-Based Creative Education Partnership</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-33.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">February 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-32.html">
+            <p class="article-title">사우디 월드 디펜스 쇼(World Defense Show) 현장, 대한민국 공군 블랙이글스(Black Eagles) 에어 쇼(Air Show)</p>
+            <p class="article-title-en">World Defense Show Saudi Arabia: ROK Air Force Black Eagles Air Show</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-32.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">February 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-31.html">
+            <p class="article-title">사우디 최대 OTT '엠비씨 샤히드(MBC Shahid)' 속 한국 콘텐츠</p>
+            <p class="article-title-en">Korean Content on Saudi Arabia's Largest OTT, MBC Shahid</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-31.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">February 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-30.html">
+            <p class="article-title">창고에서 전시장으로, 작스 디스트릭트(JAX District)에서 만난 디리야 현대미술 비엔날레 2026</p>
+            <p class="article-title-en">From Warehouse to Exhibition Space: The Diriyah Contemporary Art Biennale 2026 at JAX District</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-30.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">January 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-29.html">
+            <p class="article-title">사우디 1월 넷플릭스 통계 – 다양한 한국 콘텐츠 최상위권 진입</p>
+            <p class="article-title-en">Saudi Arabia Netflix Statistics, January 2026 – Diverse Korean Content Enters the Top Ranks</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-29.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">January 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-28.html">
+            <p class="article-title">키디야 시티(Qiddiya City), 사우디 최초 엔터테인먼트 도시</p>
+            <p class="article-title-en">Qiddiya City: Saudi Arabia's First Entertainment City</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-28.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">January 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-27.html">
+            <p class="article-title">이병헌·이정재, 사우디 최대 대중문화 시상식 조이 어워즈(Joy Awards) 시상자로 참석</p>
+            <p class="article-title-en">Lee Byung-hun and Lee Jung-jae Attend Saudi Arabia's Joy Awards as Presenters</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-27.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">January 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-26.html">
+            <p class="article-title">박찬욱 감독 영화 〈어쩔수가없다〉 사우디 극장 개봉과 현지 반응</p>
+            <p class="article-title-en">Park Chan-wook's <em>No Other Choice</em>: Saudi Theatrical Release and Local Reception</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-26.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2026">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">January 2026</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-25.html">
+            <p class="article-title">뮤지컬 〈위키드〉 리야드 공연으로 본 사우디 공연문화산업</p>
+            <p class="article-title-en"><em>Wicked</em> in Riyadh: A Window into Saudi Arabia's Performing Arts Industry</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-25.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">December 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-24.html">
+            <p class="article-title">강한 기후 속에서 주목받는 한국 뷰티 스킨케어</p>
+            <p class="article-title-en">Korean Beauty Skincare Gaining Attention in Harsh Climates</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-24.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">December 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-23.html">
+            <p class="article-title">사우디에서 확산되는 한국음식</p>
+            <p class="article-title-en">The Spread of Korean Food in Saudi Arabia</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-23.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">December 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-22.html">
+            <p class="article-title">리야드 시즌 한국존 전통의상 고증 논란 현장 탐방</p>
+            <p class="article-title-en">On the Ground at Riyadh Season's Korea Zone — The Traditional Costume Controversy</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-22.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">December 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-21.html">
+            <p class="article-title">서수빈, 레드씨 국제영화제 여우주연상 — 한국 배우 최초</p>
+            <p class="article-title-en">Seo Su-bin Wins Best Actress at the Red Sea International Film Festival — A First for a Korean Actor</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-21.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">December 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-20.html">
+            <p class="article-title">윤가은 감독 〈세계의 주인〉, 레드씨 국제 영화제 경쟁 부문 공식 초청</p>
+            <p class="article-title-en">Director Yoon Ga-eun's <em>The World of Love</em> Officially Selected for the Red Sea International Film Festival Competition</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-20.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">November 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-19.html">
+            <p class="article-title">리야드에 설립된 세계 최대 뮤직 스튜디오 메르와스 Merwas 탐방기</p>
+            <p class="article-title-en">Visiting Merwas — the World's Largest Music Production Studio in Riyadh</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-19.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">November 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-18.html">
+            <p class="article-title">11월 넷플릭스 통계 — &lt;당신이 죽였다&gt; 1위 및 한국 예능 상위권</p>
+            <p class="article-title-en">November Netflix Rankings — 'You Killed Me' No.1 and Korean Variety Shows in the Top Tier</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-18.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">November 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-17.html">
+            <p class="article-title">리야드 메트로 개통, 사우디의 시간·생활·미래를 바꾸다</p>
+            <p class="article-title-en">The Riyadh Metro Opens — Transforming Saudi Arabia's Time, Daily Life and Future</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-17.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">November 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-16.html">
+            <p class="article-title">리야드에서 만난 한국 전통공연</p>
+            <p class="article-title-en">Korean Traditional Performance Comes to Riyadh</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-16.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">November 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-15.html">
+            <p class="article-title">문화·기술·관광·스포츠 융복합 도시, 네옴 시티</p>
+            <p class="article-title-en">NEOM City — Where Culture, Technology, Tourism and Sports Converge</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-15.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">October 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-14.html">
+            <p class="article-title">세계 스포츠 스타 유치의 명암</p>
+            <p class="article-title-en">The Light and Shadow of Recruiting World Sports Superstars</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-14.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">October 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-13.html">
+            <p class="article-title">사우디 여성 독자들, 한강의 『채식주의자』를 읽다</p>
+            <p class="article-title-en">Saudi Women Readers Encounter Han Kang's <em>The Vegetarian</em></p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-13.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">October 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-12.html">
+            <p class="article-title">2025년 리야드 국제도서전</p>
+            <p class="article-title-en">2025 Riyadh International Book Fair</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-12.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">October 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-11.html">
+            <p class="article-title">K-드라마 &lt;다 이루어질지니&gt;, 종교적 상징 논란 속에서도 사우디에서 인기 상승</p>
+            <p class="article-title-en">K-Drama "Genie: Make a Wish" — Rising Popularity in Saudi Arabia Despite Religious Controversy</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-11.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">October 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-10.html">
+            <p class="article-title">사우디 미술 창작생태허브 미스크 아트 인스티튜트</p>
+            <p class="article-title-en">Misk Art Institute — Saudi Arabia's Creative Arts Ecosystem Hub</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-10.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">September 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-09.html">
+            <p class="article-title">리야드 '한국 영화 주간', 한국문화의 영향 조명하며 폐막</p>
+            <p class="article-title-en">Riyadh Korean Film Week Closes, Highlighting Korean Cultural Influence</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-09.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">September 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-08.html">
+            <p class="article-title">사우디 내셔널 데이 — 청년 세대의 열정과 국가 정체성의 문화적 확장</p>
+            <p class="article-title-en">Saudi National Day — Youth Passion and the Cultural Expansion of National Identity</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-08.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">September 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-07.html">
+            <p class="article-title">넷플릭스 통계 — 〈폭군의 셰프〉와 〈케이팝 데몬 헌터스〉 상위권 기록</p>
+            <p class="article-title-en">Netflix Stats — <em>Chef of the Tyrant</em> and <em>K-pop Demon Hunters</em> Chart High</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-07.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">September 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-06.html">
+            <p class="article-title">소더비, 사우디 최초 경매 — 옛 수도 디리야에서 열리다</p>
+            <p class="article-title-en">Sotheby's Holds Saudi Arabia's First Auction in Historic Diriyah</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-06.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">September 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-05.html">
+            <p class="article-title">2025년 e스포츠 월드컵 한국 종합 2위</p>
+            <p class="article-title-en">Korea Ranks 2nd Overall at 2025 Esports World Cup</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-05.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">August 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-04.html">
+            <p class="article-title">사우디 최초 '한국 영화 주간' 리야드에서 성황리에 개막</p>
+            <p class="article-title-en">Saudi Arabia's First Korean Film Week Opens to Great Success in Riyadh</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-04.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">August 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-03.html">
+            <p class="article-title">BTS, KCON부터 CJ ENM 사우디 법인까지</p>
+            <p class="article-title-en">From BTS and KCON to CJ ENM Saudi Arabia — K-pop and Saudi Vision 2030</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-03.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">July 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-02.html">
+            <p class="article-title">리야드의 여름을 물들인 케이팝 공연들</p>
+            <p class="article-title-en">K-pop Performances That Coloured Riyadh's Summer</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-02.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <div class="article-row" data-pub="kofice" data-year="2025">
+        <div class="article-meta"><span class="article-pub">KOFICE</span><span class="article-date">July 2025</span></div>
+        <div class="article-body"><a class="article-link" href="articles/kofice-01.html">
+            <p class="article-title">한국-사우디 영화산업 협력 현장</p>
+            <p class="article-title-en">Korea–Saudi Film Industry Cooperation</p>
+        </a></div>
+        <div class="article-action"><a href="articles/kofice-01.html" class="pdf-link">Read</a></div>
+    </div>
+
+    <nav id="article-pager" class="pager" aria-label="Article pages"></nav>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<script>
+var PAGE_SIZE = 12;
+var activePub = 'all', activeYear = 'all', currentPage = 1;
+var rows = Array.prototype.slice.call(document.querySelectorAll('.article-row[data-year]'));
+var pager = document.getElementById('article-pager');
+
+function matches(row) {
+    var pubMatch = activePub === 'all' || row.dataset.pub === activePub;
+    var yearMatch = activeYear === 'all' || row.dataset.year === activeYear;
+    return pubMatch && yearMatch;
+}
+
+function render() {
+    var filtered = rows.filter(matches);
+    var pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    if (currentPage > pages) currentPage = pages;
+    if (currentPage < 1) currentPage = 1;
+    var start = (currentPage - 1) * PAGE_SIZE, end = start + PAGE_SIZE;
+    rows.forEach(function(row) { row.classList.add('hidden'); });
+    filtered.forEach(function(row, i) {
+        row.classList.toggle('hidden', !(i >= start && i < end));
+    });
+    buildPager(filtered.length, pages);
+}
+
+function pageList(pages) {
+    var out = [];
+    if (pages <= 7) { for (var i = 1; i <= pages; i++) out.push(i); return out; }
+    out.push(1);
+    var lo = Math.max(2, currentPage - 1), hi = Math.min(pages - 1, currentPage + 1);
+    if (lo > 2) out.push('gap');
+    for (var j = lo; j <= hi; j++) out.push(j);
+    if (hi < pages - 1) out.push('gap');
+    out.push(pages);
+    return out;
+}
+
+function makeBtn(label, enabled, onClick, active) {
+    var b = document.createElement('button');
+    b.className = 'pager-btn' + (active ? ' active' : '');
+    b.textContent = label;
+    if (!enabled) { b.disabled = true; } else { b.addEventListener('click', onClick); }
+    return b;
+}
+
+function buildPager(total, pages) {
+    pager.innerHTML = '';
+    if (total === 0) return;
+    var start = (currentPage - 1) * PAGE_SIZE + 1;
+    var end = Math.min(currentPage * PAGE_SIZE, total);
+    var info = document.createElement('span');
+    info.className = 'pager-info';
+    info.textContent = 'Showing ' + start + '–' + end + ' of ' + total;
+    pager.appendChild(info);
+    if (pages <= 1) return;
+    var nav = document.createElement('div');
+    nav.className = 'pager-nav';
+    nav.appendChild(makeBtn('‹', currentPage > 1, function() { go(currentPage - 1); }, false));
+    pageList(pages).forEach(function(p) {
+        if (p === 'gap') {
+            var s = document.createElement('span'); s.className = 'pager-gap'; s.textContent = '…'; nav.appendChild(s);
+        } else {
+            nav.appendChild(makeBtn(String(p), true, function() { go(p); }, p === currentPage));
+        }
+    });
+    nav.appendChild(makeBtn('›', currentPage < pages, function() { go(currentPage + 1); }, false));
+    pager.appendChild(nav);
+}
+
+function go(p) {
+    currentPage = p;
+    render();
+    var anchor = document.querySelector('.filter-row');
+    if (anchor && anchor.scrollIntoView) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function filterPub(pub, btn) {
+    activePub = pub; currentPage = 1;
+    document.querySelectorAll('[onclick^="filterPub"]').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    render();
+}
+
+function filterYear(year, btn) {
+    activeYear = year; currentPage = 1;
+    document.querySelectorAll('[onclick^="filterYear"]').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    render();
+}
+
+render();
+</script>
+</body>
+</html>

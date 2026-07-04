@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국-사우디 영화산업 협력 현장 — Hyojung Jung</title>
+    <meta name="description" content="Korea–Saudi Film Industry Cooperation. Published in KOFICE, July 2025. By Hyojung Jung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f7f4ef;
+            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        /* ── Navigation ── */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: #f7f4ef;
+            z-index: 100;
+        }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+
+        /* ── Article header ── */
+        .article-header {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            min-height: 240px;
+        }
+        .header-accent {
+            background: #ede9e2;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 28px 20px;
+        }
+        .header-accent img {
+            max-width: 120px;
+            max-height: 44px;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content {
+            display: grid;
+            grid-template-columns: 45% 1fr;
+        }
+        .header-title-col {
+            padding: 44px 40px 40px 52px;
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .article-category {
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 14px;
+        }
+        .article-title-ko {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1.3;
+            color: #1a1a1a;
+        }
+        .article-title-en {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.4;
+            color: #5e5e5e;
+            margin-top: 10px;
+        }
+        .header-meta-col {
+            padding: 44px 52px 40px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+
+        /* ── Language toggle ── */
+        .lang-bar {
+            padding: 14px 52px;
+            border-bottom: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        .lang-btn {
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border: 0.5px solid rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.2s;
+            background: transparent;
+            color: #6f6f6f;
+        }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child  { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+
+        /* ── Article body ── */
+        .article-body {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+        }
+        .article-sidebar {
+            border-right: 0.5px solid rgba(0,0,0,0.1);
+            padding: 40px 20px 40px 52px;
+        }
+        .sidebar-label {
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .article-text {
+            padding: 48px 80px 64px 52px;
+            max-width: 760px;
+        }
+        .article-text.hidden { display: none; }
+
+        /* Korean text */
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 22px;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin: 36px 0 16px;
+            padding-top: 20px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .text-ko .caption {
+            font-size: 11px;
+            color: #6f6f6f;
+            line-height: 1.6;
+            margin-top: -16px;
+            margin-bottom: 28px;
+            padding-left: 12px;
+            border-left: 2px solid #e0dbd3;
+        }
+
+        /* English text */
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 22px;
+            font-weight: 400;
+            font-style: italic;
+            color: #1a1a1a;
+            margin: 36px 0 16px;
+            padding-top: 20px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .text-en .caption {
+            font-size: 11px;
+            color: #6f6f6f;
+            line-height: 1.6;
+            margin-top: -14px;
+            margin-bottom: 28px;
+            padding-left: 12px;
+            border-left: 2px solid #e0dbd3;
+        }
+        .text-en em { font-style: italic; }
+
+        /* Sources */
+        .sources {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .sources-label {
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #6f6f6f;
+            margin-bottom: 12px;
+        }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+
+        /* Author note */
+        /* Photos */
+        .article-photo {
+            width: 100%;
+            margin: 28px 0 8px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .article-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .photo-caption {
+            font-size: 11px;
+            color: #6f6f6f;
+            line-height: 1.6;
+            margin-bottom: 28px;
+            padding-left: 12px;
+            border-left: 2px solid #e0dbd3;
+        }
+
+        .author-note {
+            margin-top: 40px;
+            padding: 20px 24px;
+            background: #ede9e2;
+            border-radius: 2px;
+            font-size: 12px;
+            color: #454545;
+            line-height: 1.7;
+        }
+        .author-note strong { color: #1a1a1a; }
+
+        /* ── Footer ── */
+        footer {
+            padding: 40px 52px;
+            border-top: 0.5px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en { font-size: 14px; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-01.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="한국-사우디 영화산업 협력 현장 — Hyojung Jung">
+    <meta property="og:description" content="Korea–Saudi Film Industry Cooperation. Published in KOFICE, July 2025. By Hyojung Jung.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-01.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="한국-사우디 영화산업 협력 현장 — Hyojung Jung">
+    <meta name="twitter:description" content="Korea–Saudi Film Industry Cooperation. Published in KOFICE, July 2025. By Hyojung Jung.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <!-- Article header -->
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Cultural Policy & Issues</p>
+                    <h1 class="article-title-ko">한국-사우디 영화산업 협력 현장</h1>
+                    <p class="article-title-en">Korea–Saudi Film Industry Cooperation</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">5 July 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Language toggle -->
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <!-- Body -->
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · July 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+                <p>사우디아라비아의 영화산업은 이제 막 본격적인 성장 궤도에 올라서고 있다. 1930년대 아람코(Aramco) 주거 단지 내에서 처음으로 영화가 상영됐지만 1980년대 이슬람 보수주의의 확산으로 모든 영화관이 폐쇄됐다. 그 뒤 약 35년간 공식적인 극장 운영은 금지됐고 사우디인들은 위성방송이나 DVD, 해외여행 등을 통해 간접적으로 영화를 접해야 했다. 전환점은 2018년, 사우디 정부가 영화관 운영을 공식 허용하면서 리야드에 첫 상업 극장이 개장됐고 마블 영화 &lt;블랙 팬서(Black Panther)&gt;가 상영되면서 역사적인 포문을 열었다. 그 후 VOX, AMC 등 글로벌 체인이 진출했고 사우디는 '비전 2030' 프로젝트 일환으로 문화산업 육성에 박차를 가하며 국내 영화 제작 및 해외 영화 유통 모두를 확장하고 있다.</p>
+
+                <p>이를 제도적으로 뒷받침하기 위해 2020년 사우디 문화부 산하에 사우디 필름 커미션(Saudi Film Commission)이 설립됐다. 해당 기관은 영화 제작 지원, 국제 공동 제작 유치, 영화인 교육 등 전반적인 산업 인프라 조성에 집중하고 있다. 2024년 6월에는 국제영화위원회협회(AFCI)에도 정식 가입하며 글로벌 콘텐츠 협력과 해외 유통을 위한 교두보 역할을 강화하고 있다.</p>
+
+                <p>이 가운데 사우디 필름 커미션이 주목한 대상은 다름 아닌 한국 영화였다. 봉준호 감독의 &lt;기생충&gt;이 비영어권 영화 최초로 아카데미 작품상을 수상하고, 황동혁 감독의 넷플릭스 드라마 &lt;오징어 게임&gt;이 전 세계적인 인기를 얻으며 미국 방송계 최고 권위의 에미상 6관왕을 달성하는 등 한국이 콘텐츠산업의 선두주자로 부상했기 때문이다. 사우디는 이 성공 사례를 벤치마킹해 자국 영화산업 제도 및 콘텐츠 제작에 반영하고 있다.</p>
+
+                <h2>실질적 교류의 현장</h2>
+
+                <p>2024년 10월 부산 아시아콘텐츠&amp;필름마켓(ACFM)에서 열린 한국-사우디 양국간 패널 토론에서 한국영화아카데미(KAFA)가 사우디 미래형 스마트시티 네옴(NEOM) 미디어 허브와 협력해 연출, 제작, 촬영 워크숍을 12월부터 진행할 예정이라고 발표했다. 이에 2024년 11월 3일부터 28일까지 한국영화아카데미 소속 전문가들이 사우디 민영방송사 MBC 산하 교육기관인 MBC 아카데미와 협력해 사우디 현지 신진 영화인을 대상으로 연출, 촬영, 제작, 사운드디자인 마스터클래스와 집중 워크숍 프로그램인 '2024 KAFA 부트캠프'를 운영했다.</p>
+
+                <p>참가자들은 시나리오, 연출, 촬영, 제작, 편집, 색보정 등 영화 제작 전 과정을 실습하며 최종 단편영화를 완성하고 상영하는 과정까지 직접 경험했다. 한국 측 관계자에 따르면 해당 워크숍은 장비와 제작 인프라 측면에서 사우디 정부의 전폭적인 지원을 받았다.</p>
+
+                <div class="article-photo"><img src="kofice-01-images/img-010.jpg" alt="2024 KAFA 부트캠프 현장"></div>
+                <p class="photo-caption">▲ '2024 KAFA 부트캠프' 현장 — 출처: 영화진흥위원회, 한국영화아카데미</p>
+
+                <h2>한국 영화 &lt;콘크리트 유토피아&gt; 리야드 상영 및 엄태화 감독과의 만남</h2>
+
+                <p>2024년 11월 27일 리야드 U 워크(U Walk) 내 영화관에서 영화 &lt;콘크리트 유토피아&gt; 상영과 엄태화 감독과 관객과의 대화(GV)가 열렸다. 해당 영화는 한국에서 2023년 8월 9일에 개봉했고, 사우디에서는 2024년 9월 5일 개봉했다.</p>
+
+                <p>한국영화아카데미와 사우디 MBC 아카데미의 주관으로 열린 해당 행사에는 총 150여 명이 참석했다. 행사 관계자와 통신원을 비롯한 세종학당 현지 문화 수업 수강생, MBC 아카데미 수강생, 일반 관객들이 함께했다. 영화 상영 전에는 리셉션과 레드카펫 행사가 마련돼 주요 관계자들과 현지 영화 관계자 간 자유로운 교류가 이뤄졌고, 상영 후에는 감독과의 심도 있는 대화가 이어졌다.</p>
+
+                <div class="article-photo"><img src="kofice-01-images/img-012.jpg" alt="리셉션 현장"></div>
+                <p class="photo-caption">▲ 2024년 11월 27일 리야드 U 워크에서 열린 리셉션 현장 — 출처: 사우디 MBC 아카데미</p>
+
+                <div class="article-photo"><img src="kofice-01-images/img-013.jpg" alt="영화 상영 관객석"></div>
+                <p class="photo-caption">▲ 영화 상영 관객석 — 출처: 사우디 MBC 아카데미</p>
+
+                <p>특히 엄태화 감독의 친동생이 배우 엄태구라는 사실까지 알고 있을 정도로 현지 관객들의 수준 높은 관심은 한국인인 통신원에게도 인상적이었다. 감독과의 대화 시간에는 영화의 연출 의도, 장르적 특성, 한국 영화계의 변화 등에 대한 다양한 질문이 쏟아져 행사 수준을 한층 끌어올렸다. 이번 프로그램은 한국 영화에 대한 현지인의 이해를 높이는 문화교류의 장으로 평가받았다.</p>
+
+                <div class="article-photo"><img src="kofice-01-images/img-015.jpg" alt="관계자 단체사진"></div>
+                <p class="photo-caption">▲ 관계자, 엄태화 감독, 조근식 한국영화아카데미 원장, 통신원, 세종학당 문화수업 학생들 — 출처: 사우디 MBC 아카데미</p>
+
+                <h2>한-사우디 영화 협력, 산업적 기반 다지기</h2>
+
+                <p>2025년 2월 사우디아라비아 필름 커미션과 영화진흥위원회(KOFIC)는 서울 코리아프레스센터에서 전략적 파트너십 협약을 체결했다. 이번 파트너십을 통해 양국은 공동 제작, 인재 양성, 기술 협력, 정책 교류, 해외 유통 활성화 등 영화 생태계 전반에 걸친 폭넓은 협업을 추진할 계획이다. 특히 사우디의 레드씨국제영화제와 한국의 부산국제영화제를 중심으로 정기적인 네트워킹이 장려될 전망이다. 또한 제작자, 시나리오 작가, 애니메이터, 감독 등을 대상으로 워크숍과 멘토링 프로그램도 운영될 예정이다. 이번 협력은 단발성 교류를 넘어 한국과 중동 간 영화산업의 지속가능한 파트너십을 예고하는 신호탄이자, 사우디 내 한국 영화의 소개와 양국 간 문화교류 확대에 중요한 계기로 작용할 것으로 보인다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>영화진흥위원회, 한국영화아카데미</p>
+                    <p>VOX Cinemas KSA 홈페이지</p>
+                    <p>사우디 MBC 아카데미 인스타그램 (@mbcacademyme)</p>
+                    <p><em>Variety</em> (2024.10.5). <a href="https://variety.com/2024/film/news/neom-kofic-training-korea-saudi-arabia-busan-1236168938/" target="_blank" rel="noopener">Neom and KOFIC to Launch Training Initiative as Korea, Saudi Arabia Look to Strengthen Ties – Busan ACFM</a></p>
+                    <p><em>Screen Daily</em> (2025.2.24). <a href="https://www.screendaily.com/news/saudi-film-commission-and-korean-film-council-sign-strategic-partnership/5202320.article" target="_blank" rel="noopener">Saudi Film Commission, Korean Film Council sign strategic partnership to boost industry-wide collaboration</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+                <p>Saudi Arabia's film industry is now firmly entering a phase of full-scale growth. Films were first screened in the 1930s within Aramco residential compounds, but as Islamic conservatism spread in the 1980s, all cinemas were shut down. For roughly 35 years, no official theatres operated, and Saudis could only access films indirectly — through satellite television, DVDs, or while travelling abroad. The turning point came in 2018, when the Saudi government officially permitted cinemas to reopen. The first commercial theatre launched in Riyadh, and Marvel's <em>Black Panther</em> made history as the inaugural screening. Global chains such as VOX and AMC followed, and Saudi Arabia has since accelerated its cultural industry development as part of Vision 2030, expanding both domestic film production and international distribution.</p>
+
+                <p>To provide institutional support for this growth, the Saudi Film Commission was established in 2020 under the Ministry of Culture. It focuses on supporting film production, attracting international co-productions, and training filmmakers across the full infrastructure of the industry. In June 2024, Saudi Arabia also became an official member of the Association of Film Commissioners International (AFCI), strengthening its role as a gateway for global content collaboration and overseas distribution.</p>
+
+                <p>Among the industries the Saudi Film Commission looked to for inspiration, Korean cinema stood out. Director Bong Joon-ho's <em>Parasite</em> became the first non-English language film to win the Academy Award for Best Picture, and director Hwang Dong-hyuk's Netflix series <em>Squid Game</em> achieved global popularity, winning six Emmy Awards — the highest honour in American television. Korea had emerged as a leading force in the content industry, and Saudi Arabia is now benchmarking these successes to inform its own film infrastructure and content production.</p>
+
+                <h2>On the Ground: Real Exchange</h2>
+
+                <p>At a Korea–Saudi panel discussion held at the Asian Contents & Film Market (ACFM) in Busan in October 2024, the Korean Academy of Film Arts (KAFA) announced plans to collaborate with the NEOM media hub — Saudi Arabia's futuristic smart city project — to run directing, production, and cinematography workshops from December onwards. From 3 to 28 November 2024, KAFA specialists partnered with MBC Academy (the educational arm of Saudi private broadcaster MBC) to run the "2024 KAFA Bootcamp" — an intensive masterclass and workshop programme covering directing, cinematography, production, and sound design for emerging Saudi filmmakers.</p>
+
+                <p>Participants worked through the entire filmmaking process — from screenplay and direction through to cinematography, production, editing, and colour grading — ultimately completing and screening their own short films. According to Korean officials involved, the workshop received full support from the Saudi government in terms of equipment and production infrastructure.</p>
+
+                <div class="article-photo"><img src="kofice-01-images/img-010.jpg" alt="2024 KAFA Bootcamp in session"></div>
+                <p class="photo-caption">▲ 2024 KAFA Bootcamp in session — Source: Korean Film Council / Korean Academy of Film Arts</p>
+
+                <h2>Screening of <em>Concrete Utopia</em> in Riyadh, and a Meeting with Director Um Tae-hwa</h2>
+
+                <p>On 27 November 2024, a screening of <em>Concrete Utopia</em> followed by a director's Q&A was held at a cinema in U Walk, Riyadh. The film had originally opened in Korea on 9 August 2023 and was released in Saudi Arabia on 5 September 2024.</p>
+
+                <p>Organised by KAFA and Saudi MBC Academy, the event attracted around 150 attendees — including event officials, the correspondent, King Sejong Institute cultural class students, MBC Academy students, and general audiences. Before the screening, a reception and red carpet event enabled informal exchanges between key figures and local film industry professionals. After the screening, a substantive conversation with the director followed.</p>
+
+                <div class="article-photo"><img src="kofice-01-images/img-012.jpg" alt="Reception at U Walk, Riyadh"></div>
+                <p class="photo-caption">▲ Reception at U Walk, Riyadh, 27 November 2024 — Source: Saudi MBC Academy</p>
+
+                <div class="article-photo"><img src="kofice-01-images/img-013.jpg" alt="Audience at the screening"></div>
+                <p class="photo-caption">▲ Audience at the screening — Source: Saudi MBC Academy</p>
+
+                <p>What struck even this Korean correspondent was the sophistication of the local audience's engagement — they knew, for instance, that the director's younger brother is actor Um Tae-goo. The Q&A drew a range of thoughtful questions about directorial intent, genre characteristics, and shifts in Korean cinema, elevating the standard of the event considerably. The programme was widely regarded as a meaningful space for cultural exchange that deepened local understanding of Korean film.</p>
+
+                <div class="article-photo"><img src="kofice-01-images/img-015.jpg" alt="Group photo with officials and students"></div>
+                <p class="photo-caption">▲ Officials, Director Um Tae-hwa, KAFA President Jo Geun-sik, the correspondent, and King Sejong Institute cultural class students — Source: Saudi MBC Academy</p>
+
+                <h2>Korea–Saudi Film Cooperation: Building Industrial Foundations</h2>
+
+                <p>In February 2025, the Saudi Film Commission and the Korean Film Council (KOFIC) signed a strategic partnership agreement at the Korea Press Center in Seoul. Through this partnership, the two countries plan to pursue broad collaboration across the film ecosystem — including co-production, talent development, technical cooperation, policy exchange, and the activation of overseas distribution. Regular networking opportunities are expected to be encouraged, centred on Saudi Arabia's Red Sea International Film Festival and South Korea's Busan International Film Festival. Workshops and mentoring programmes for producers, screenwriters, animators, and directors are also planned. This collaboration signals more than a one-off exchange — it marks the beginning of a sustainable partnership between Korea and the Middle East in the film industry, and a significant milestone in the promotion of Korean cinema in Saudi Arabia and the expansion of cultural exchange between the two nations.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>Korean Film Council (KOFIC) / Korean Academy of Film Arts (KAFA)</p>
+                    <p>VOX Cinemas KSA official website</p>
+                    <p>Saudi MBC Academy Instagram (@mbcacademyme)</p>
+                    <p><em>Variety</em> (5 Oct 2024). <a href="https://variety.com/2024/film/news/neom-kofic-training-korea-saudi-arabia-busan-1236168938/" target="_blank" rel="noopener">Neom and KOFIC to Launch Training Initiative as Korea, Saudi Arabia Look to Strengthen Ties – Busan ACFM</a></p>
+                    <p><em>Screen Daily</em> (24 Feb 2025). <a href="https://www.screendaily.com/news/saudi-film-commission-and-korean-film-council-sign-strategic-partnership/5202320.article" target="_blank" rel="noopener">Saudi Film Commission, Korean Film Council sign strategic partnership to boost industry-wide collaboration</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-02.html">Next →</a>
+    </div>
+</body>
+</html>

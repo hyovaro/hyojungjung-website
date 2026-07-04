@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 청년들 한국어 배움 열풍 — 리야드 세종학당 '제4회 한국어 말하기 대회' — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 420px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-46.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 청년들 한국어 배움 열풍 — 리야드 세종학당 '제4회 한국어 말하기 대회' — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-46.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 청년들 한국어 배움 열풍 — 리야드 세종학당 '제4회 한국어 말하기 대회' — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">사우디 청년들 한국어 배움 열풍 — 리야드 세종학당 '제4회 한국어 말하기 대회' 개최</h1>
+                <p class="article-title-en">Korean-Learning Fervour Among Saudi Youth: Riyadh King Sejong Institute Holds the 4th Korean Speech Contest</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">May 9, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Korean Language / Education / King Sejong Institute</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>지난 5월 2일 사우디아라비아 리야드 프린스 술탄 대학교(Prince Sultan University, 이하 PSU)에서 '제4회 사우디 한국어 말하기 대회(The 4th Saudi Korean Speech Contest)'가 열렸다. 리야드 세종학당과 프린스 술탄 대학교가 공동 주최·주관하고 주사우디아라비아 대한민국 대사관이 협력한 이번 행사에는 삼성과 엘지(LG)를 비롯한 사우디아라비아 현지 한국 기업들도 후원사로 참여했다. 이들 기업은 참가자를 위한 시상품도 지원했다. 이날 행사에는 사우디아라비아 각지에서 예선을 통과한 참가자가 모여 한국어 실력을 겨뤘다. 통신원도 세종학당 문화교원으로 현장에 참석했다.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-46-images/img-01.jpg" alt="제4회 한국어 말하기 대회 포스터">
+            </div>
+            <p class="photo-caption">사우디서 열린 제4회 한국어 말하기 대회 포스터 — 출처: 리야드 세종학당</p>
+
+            <p>행사가 시작되기 전부터 본선 진출자들의 예행연습(리허설)이 이어졌다. 학생들은 무대에 올라 자신이 준비한 한국어 발표를 반복해 연습했고, 서로 발음을 점검하거나 마지막까지 원고를 확인하는 모습을 보였다. 대회장 곳곳에서는 한국어 인사말을 연습하는 목소리가 이어졌고, 참가자들의 긴장감과 기대감이 동시에 나타났다. 행사는 피에스유(PSU) 101동 500석 규모의 대강당에서 진행됐다. 올해 새롭게 부임한 강신철 주사우디아라비아 대한민국 대사를 비롯해 대학 관계자들과 한국 교민 사회 인사들도 참석했다.</p>
+
+            <p>행사에 앞서 참가자들과 관계자들은 대학 본관 귀빈실(VIP룸)로 이동해 피에스유(PSU) 총장단 및 학교 관계자들과 환담을 나눴다. 피에스유(PSU) 측은 공식 환영 행사도 마련했다. 대학 공식 사회관계망서비스(SNS)는 이번 대회를 "문화적 다양성과 세계적(글로벌) 언어에 대한 개방성을 확대하기 위한 행사"라고 소개하며 한국어 교육과 문화 교류의 의미를 강조했다. 이날 행사에는 피에스유(PSU) 대표로 이브라힘 알 감라스(Ibrahim Al-Ghemlas) 평생교육원장, 사드 알루와이타(Saad Al-Ruwaita) 행정·재무 부총장, 헤바 쿠샤임(Heba Khushaim) 학생처 부총장도 참석했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-46-images/img-02.jpg" alt="프린스 술탄대학교 공식 소셜미디어에 올라온 대회 참가자 및 관계자 단체사진">
+            </div>
+            <p class="photo-caption">프린스 술탄 대학교 공식 소셜미디어에 올라온 대회 참가자 및 관계자 단체사진 — 출처: PSU 공식 소셜미디어(@psu_ruh)</p>
+
+            <h2>"왜 한국어를 배우나요?" 사우디 청년들의 진심 담긴 발표</h2>
+
+            <p>이번 대회 참가자는 '내 일상 속 한국어(Korean in My Daily Life)'와 '나는 왜 한국어를 배우는가(Why I am Learning Korean)'를 주제로 1~2분 분량의 한국어 발표 영상을 사전에 제출했고, 예선을 통과한 참가자 17인이 본선 무대에 올랐다. 참가자는 한국어를 배우게 된 계기와 일상 속 한국 문화 경험, 자신의 꿈 등을 한국어로 발표했다. 무대에 오른 참가자는 발표가 시작되자 또렷한 발음과 자연스러운 표현으로 객석의 집중을 이끌어냈고, 발표가 끝날 때마다 박수가 이어졌다. 심사에는 주사우디아라비아 대한민국 대사관 공사를 비롯해 한인회장, 민주평화통일자문회의 사우디지회장, 리야드 한국학교장, 대한무역투자진흥공사(KOTRA) 관장, 건설업협의회장, 지상사협의회장, 사우디 왕립예술원 교수 등 총 8명의 심사위원단이 참여했다. 심사위원들은 참가자들의 한국어 표현력과 전달력, 발표 내용 등을 종합적으로 평가했다.</p>
+
+            <h2>한국 동요부터 케이팝까지, 세종학당 합창단 축하공연 눈길</h2>
+
+            <p>순위 발표에 앞서 통신원이 지휘를 맡은 리야드 세종학당 소속 '코사(KOSA·Korean-Saudi)' 합창단의 축하공연이 이어졌다. 한국 문화와 음악에 관심 있는 사우디아라비아 및 중동 지역 학생들로 구성된 이 합창단은 2024년 제2회 한국어 말하기 대회 이후 올해까지 3년째 매년 축하공연 무대에 오른다. 이날 학생들은 한국어로 〈엄마야 누나야〉와 〈섬집아기〉를 돌림노래 형식으로 선보이며 맑은 화음을 들려줬고, 이어 최신 인기 케이팝 곡인 〈굿굿바이(Good Goodbye)〉와 〈골든(Golden)〉 무대까지 이어가며 현장 분위기를 주도했다. 공연이 끝날 때마다 객석에서는 박수와 환호가 쏟아졌다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-46-images/img-03.jpg" alt="세종학당 소속 코사(KOSA) 합창단 단원 및 통신원">
+            </div>
+            <p class="photo-caption">세종학당 소속 코사(KOSA) 합창단 단원 및 통신원 — 출처: 합창단 단원 가족 제공</p>
+
+            <h2>"아버지 영향으로 한국에 관심"… 1위 차지한 메이(May)</h2>
+
+            <p>공연 이후 이어진 시상식에서는 메이(May)가 1위를 차지했고, 라님(Raneem)이 2위, 기나(Ghena)가 3위에 이름을 올렸다. 우승자에게는 오는 10월 한국 방문 기회가 제공되며, 한국에서 열리는 세계 한국어 말하기 대회 참석을 위한 2차 예선에 사우디아라비아 대표로 참가할 기회 역시 주어진다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-46-images/img-04.jpg" alt="1위를 수상한 메이(May)">
+            </div>
+            <p class="photo-caption">1위를 수상한 메이(May) — 출처: 리야드 세종학당 제공</p>
+
+            <p>1위를 차지한 메이는 수상 소감에서 "어렸을 때부터 아버지가 한국에 관심이 많아 한국 이야기를 자주 들으며 자연스럽게 한국 문화에 관심을 갖게 됐다"고 말했다. 앞으로 한국어와 사우디를 잇는 가교 역할을 하겠다는 포부도 밝혔다. 현재 메이는 사우디아라비아에서 활발하게 활동 중인 아랍어-한국어 통역 인재이기도 하다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-46-images/img-05.jpg" alt="시상식 이후 진행된 기념 선물 전달식">
+            </div>
+            <p class="photo-caption">시상식 이후 진행된 기념 선물 전달식. (왼쪽부터) 리야드 세종학당장 이태열 교수, 프린스 술탄 대학교 평생교육원장 이브라힘 알 감라스(Ibrahim Al-Ghemlas), 강신철 주사우디 대한민국 대사 및 배우자 — 출처: 통신원 촬영</p>
+
+            <p>시상식 이후에는 헤바 쿠샤임(Heba Khushaim) 프린스 술탄 대학교 학생처 부총장이 강신철 주사우디아라비아 대한민국 대사에게 기념 선물을 전달하는 시간이 마련됐다. 이후 관계자들은 함께 기념 촬영을 하며 행사를 마무리했다.</p>
+
+            <p>최근 사우디아라비아에서는 케이팝과 한국 드라마를 넘어 한국어 자체를 배우려는 관심도 높아진다. 세종학당을 중심으로 한국어 교육과 문화 프로그램 참여가 꾸준히 늘어나며, 한국어를 바탕으로 통번역 분야를 꿈꾸거나 한국 대학 진학을 준비하는 학생도 점차 증가한다. 단순한 어학연수를 넘어 정보기술(IT), 디자인, 미디어, 예술 등 자신의 전공 분야를 한국에서 더 깊이 배우기 위해 유학을 희망하는 학생도 증가하는 추세다. 이날 대회 역시 단순한 언어 경연을 넘어, 한국어를 통해 한국 문화를 이해하고 자신의 미래와 가능성을 직접 표현하려는 사우디아라비아 청년들의 열정을 확인하는 자리였다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 통신원 촬영</p>
+                <p>— 코사합창단 단원 가족 제공</p>
+                <p>— 프린스술탄대학교 공식 소셜미디어(@psu_ruh), <a href="https://www.instagram.com/psu_ruh/" target="_blank">instagram.com/psu_ruh</a></p>
+                <p>— 리야드 세종학당, <a href="https://ksi-riyadh.org/" target="_blank">ksi-riyadh.org</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>On May 2, the 4th Saudi Korean Speech Contest was held at Prince Sultan University (PSU) in Riyadh, Saudi Arabia. Co-hosted and organised by the Riyadh King Sejong Institute and Prince Sultan University, with the cooperation of the Embassy of the Republic of Korea in Saudi Arabia, the event also drew local Korean companies in Saudi Arabia — including Samsung and LG — as sponsors, who provided prizes for the participants. Contestants who had advanced through preliminaries from across Saudi Arabia gathered to test their Korean. I attended in person as a cultural instructor with the King Sejong Institute.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-46-images/img-01.jpg" alt="Poster for the 4th Korean Speech Contest">
+            </div>
+            <p class="photo-caption">Poster for the 4th Korean Speech Contest held in Saudi Arabia — Source: Riyadh King Sejong Institute</p>
+
+            <p>Even before the event began, the finalists ran through their rehearsals. Students took to the stage to practise their prepared Korean presentations again and again, checking each other's pronunciation and reviewing their scripts to the last minute. Voices rehearsing Korean greetings echoed throughout the venue, and the contestants' nervousness and anticipation were palpable in equal measure. The contest took place in the 500-seat grand auditorium of PSU's Building 101. Among the attendees were Ambassador Kang Shin-cheol — newly appointed this year as Korea's ambassador to Saudi Arabia — along with university officials and members of the local Korean community.</p>
+
+            <p>Before the event, participants and officials moved to the VIP room in the university's main building to talk with the PSU leadership and faculty. PSU also arranged an official welcome ceremony. On its official social media, the university introduced the contest as "an event to broaden cultural diversity and openness toward global languages," underscoring the significance of Korean-language education and cultural exchange. Representing PSU were Ibrahim Al-Ghemlas, Dean of Lifelong Learning; Saad Al-Ruwaita, Vice-Rector for Administration and Finance; and Heba Khushaim, Vice-Rector for Student Affairs.</p>
+
+            <div class="article-photo">
+                <img src="kofice-46-images/img-02.jpg" alt="Group photo of contestants and officials from PSU's official social media">
+            </div>
+            <p class="photo-caption">Group photo of contestants and officials posted on PSU's official social media — Source: PSU official social media (@psu_ruh)</p>
+
+            <h2>"Why Learn Korean?" — Heartfelt Presentations by Saudi Youth</h2>
+
+            <p>Contestants had submitted one-to-two-minute Korean presentation videos in advance on the themes "Korean in My Daily Life" and "Why I am Learning Korean," and the 17 who cleared the preliminaries took the finals stage. They spoke in Korean about what first drew them to the language, their everyday experiences of Korean culture, and their dreams. Once on stage, participants commanded the room's attention with clear pronunciation and natural expression, drawing applause after each presentation. The judging panel comprised eight members in total — including the Minister-Counsellor of the Korean Embassy, the president of the Korean Residents' Association, the Saudi chapter chair of the National Unification Advisory Council, the principal of the Riyadh Korean School, the head of the KOTRA office, the chair of the construction industry council, the chair of the resident companies' council, and a professor from a Saudi royal arts academy. The judges evaluated the contestants comprehensively on expressiveness, delivery, and content.</p>
+
+            <h2>From Korean Children's Songs to K-pop: The Sejong Choir's Celebratory Stage</h2>
+
+            <p>Ahead of the results announcement, the "KOSA" (Korean-Saudi) choir of the Riyadh King Sejong Institute, which I conduct, performed a celebratory stage. Made up of students from Saudi Arabia and the wider Middle East with an interest in Korean culture and music, the choir has taken the celebratory stage every year for three years running since the 2nd Korean Speech Contest in 2024. This time the students performed the Korean songs <em>Eomma-ya Nuna-ya</em> and <em>Seomjip Agi</em> as a round, delivering clear harmonies, before carrying on to recent K-pop hits <em>Good Goodbye</em> and <em>Golden</em> — leading the energy in the hall. Applause and cheers poured from the audience at the end of each number.</p>
+
+            <div class="article-photo">
+                <img src="kofice-46-images/img-03.jpg" alt="Members of the King Sejong Institute's KOSA choir with the correspondent">
+            </div>
+            <p class="photo-caption">Members of the King Sejong Institute's KOSA choir with the correspondent — Source: provided by a choir member's family</p>
+
+            <h2>"Interested in Korea Through My Father" — Winner May Takes First</h2>
+
+            <p>At the awards ceremony that followed the performance, May took first place, with Raneem second and Ghena third. The winner is offered a chance to visit Korea this October, along with the opportunity to represent Saudi Arabia in the second-round preliminaries for the World Korean Speech Contest held in Korea.</p>
+
+            <div class="article-photo">
+                <img src="kofice-46-images/img-04.jpg" alt="First-place winner May">
+            </div>
+            <p class="photo-caption">First-place winner May — Source: provided by the Riyadh King Sejong Institute</p>
+
+            <p>In her acceptance remarks, May said, "Ever since I was young, my father has been very interested in Korea, so I often heard stories about it and naturally grew interested in Korean culture." She added that she hopes to serve as a bridge between Korean and Saudi society. May is also a working Arabic-Korean interpreter, active in Saudi Arabia today.</p>
+
+            <div class="article-photo">
+                <img src="kofice-46-images/img-05.jpg" alt="Commemorative gift presentation after the awards ceremony">
+            </div>
+            <p class="photo-caption">The commemorative gift presentation after the awards ceremony. From left: Professor Lee Tae-yeol, head of the Riyadh King Sejong Institute; Ibrahim Al-Ghemlas, Dean of Lifelong Learning at Prince Sultan University; and Ambassador Kang Shin-cheol and his spouse — Source: photographed by the correspondent</p>
+
+            <p>After the ceremony, Heba Khushaim, Vice-Rector for Student Affairs at Prince Sultan University, presented a commemorative gift to Ambassador Kang Shin-cheol. The officials then closed the event with a group photo.</p>
+
+            <p>Lately in Saudi Arabia, interest has been growing in learning the Korean language itself, beyond K-pop and Korean dramas. Participation in Korean-language education and cultural programmes — centred on the King Sejong Institute — keeps rising, and a growing number of students aspire to careers in translation and interpretation or are preparing to enter Korean universities. Beyond simple language study, more students hope to study abroad in Korea to deepen their own majors — IT, design, media, the arts. This contest, too, was more than a language competition: it was an occasion to witness the passion of Saudi youth seeking to understand Korean culture through the language and to express their own futures and possibilities in their own words.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— Photographed by the correspondent</p>
+                <p>— Provided by a KOSA choir member's family</p>
+                <p>— Prince Sultan University official social media (@psu_ruh), <a href="https://www.instagram.com/psu_ruh/" target="_blank">instagram.com/psu_ruh</a></p>
+                <p>— Riyadh King Sejong Institute, <a href="https://ksi-riyadh.org/" target="_blank">ksi-riyadh.org</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-44.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+    <a href="kofice-45.html">Next →</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>

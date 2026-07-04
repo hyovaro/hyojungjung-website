@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 월드 디펜스 쇼 현장, 대한민국 공군 블랙이글스 에어 쇼 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: 260px; object-fit: cover; display: block; border-radius: 2px; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; word-break: break-all; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-32.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 월드 디펜스 쇼 현장, 대한민국 공군 블랙이글스 에어 쇼 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-32.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 월드 디펜스 쇼 현장, 대한민국 공군 블랙이글스 에어 쇼 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">방위산업/문화행사 — Defence Industry &amp; Cultural Events</p>
+                    <h1 class="article-title-ko">사우디 월드 디펜스 쇼(World Defense Show) 현장, 대한민국 공군 블랙이글스(Black Eagles) 에어 쇼(Air Show)</h1>
+                    <p class="article-title-en">World Defense Show Saudi Arabia: ROK Air Force Black Eagles Air Show</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">21 February 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · February 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<h2>역대 최대 규모로 열린 2026 '월드 디펜스 쇼(World Defense Show)', 글로벌 방위 산업 한자리에</h2>
+
+<p>사우디아라비아에서 2년마다 개최되는 글로벌 방위 산업 전시회, '월드 디펜스 쇼(World Defense Show)'가 2026년 역대 최대 규모로 열렸다. 사우디 군수산업총국(General Authority for Military Industries, GAMI)이 주관한 이번 행사는 2월 8일부터 12일까지 리야드 인근 말함(Malham) 지역에서 진행됐다. 전시장은 리야드 중심부에서 북쪽으로 약 70km 떨어진 곳에 위치했으며, 행사 기간 동안 도심에서는 무료 셔틀버스가 운행되어 관람객의 편의를 지원했다.</p>
+
+<p>이번 행사에는 89개국에서 총 1,486개 기업과 121개국 513개 공식 대표단이 참가했으며, 약 137,000명의 방문객이 전시장을 찾았다. 전시 면적은 272,500㎡로 제1회 행사 대비 58% 확대되며 규모 면에서도 사상 최대를 기록했다. 행사 기간 동안 총 355회의 현장 시연이 진행됐으며, 항공 전시에는 정적 전시 63대와 비행 시연 25대가 포함됐다. 또한 약 330억 사우디리얄(약 11조 7,000억 원), 미화 약 88억 달러 규모의 계약이 발표되며 전 세계 방위 산업 관계자들의 높은 관심을 입증했다.</p>
+
+<div class="article-photo"><img src="kofice-32-images/img-01.jpg" alt="2026 월드 디펜스 쇼 전시장 전경 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 2026 '월드 디펜스 쇼(World Defense Show)' 전시장 전경 — 출처: 통신원 촬영</p>
+
+<p>전시장에서는 지상, 공중, 해상, 우주 분야를 아우르는 다양한 방산 시스템과 실시간 시연 프로그램, 국제 컨퍼런스 세션이 마련됐다. 특히 대규모 야외 전시 공간은 항공 시연과 실물 장비 전시를 병행할 수 있도록 설계되어 관람객들의 관심을 끌었다. 이 가운데 사우디관에 대한 관심이 가장 높았다. 관람객과 군 관계자, 주요 인사들이 지속적으로 부스를 방문했으며, 사우디아라비아 군수산업회사(Saudi Arabian Military Industries, SAMI) 부스에서는 자국 방산 기술과 현지화 전략이 집중적으로 소개됐다. 대형 장비 전시와 디지털 기반 연출은 사우디 방산 산업의 확장 방향을 보여주는 핵심 요소로 평가됐다.</p>
+
+<div class="article-photo"><img src="kofice-32-images/img-02.jpg" alt="사우디 군수산업회사(SAMI) 전시관 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 사우디 군수산업회사(SAMI) 전시관 — 출처: 통신원 촬영</p>
+
+<h2>관람객의 이목이 집중된 블랙이글스(Black Eagles) 에어 쇼(Air Show)</h2>
+
+<p>이번 '월드 디펜스 쇼(World Defense Show)'에서 관람객의 관심이 가장 집중된 구역은 항공 시연 공간이었다. 야외 활주로 주변에는 공연 시작 전부터 관람객들이 자리를 잡고 기다리는 모습이 이어졌다. 각국을 대표하는 공군 특수비행팀의 에어쇼는 이번 행사의 핵심 프로그램으로, 단순한 산업 전시를 넘어 국가 이미지와 항공 역량을 동시에 보여주는 무대가 됐다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-32-images/img-03.jpg" alt="대한민국 공군 블랙이글스 T-50 전투기 — 출처: 통신원 촬영">
+    <img src="kofice-32-images/img-04.jpg" alt="블랙이글스 에어 쇼 편대 비행 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ 대한민국 공군 블랙이글스(Black Eagles) 전투기와 에어 쇼 — 출처: 통신원 촬영</p>
+
+<p>이번 에어쇼에서는 사우디 호크스(Saudi Hawks)와 한국의 블랙이글스(Black Eagles)가 각각 자국 공군을 대표해 정밀 편대 비행과 고난도 기동을 선보였다. 항공 시연은 단순한 기체 성능을 보여주는 것을 넘어 조종사의 숙련도와 조직 역량을 드러내는 프로그램으로, 연막이 하늘에 대형을 그릴 때마다 관람객들의 환호가 이어졌다. 에어쇼에는 영국, 아일랜드, 네덜란드 등 해외 항공 촬영 애호가들도 방문했다. 현장에서 만난 영국인 이안(Ian)은 2년 전에도 이 전시의 에어쇼를 보기 위해 방문했다고 전하며, 한국 공군 블랙이글스의 공연이 특히 인상적이었다고 말했다. 블랙이글스와 한국 전투기 관련 배지를 착용하고 한국 기업의 기념품을 찾는 관람객들도 다수 확인되며, 한국 공군과 방산 기술에 대한 국제적 관심을 확인할 수 있었다.</p>
+
+<div class="article-photo"><img src="kofice-32-images/img-05.jpg" alt="대한민국 공군 블랙이글스 조종사들과 통신원, 현장 사우디인 통역사 — 출처: 통신원 촬영"></div>
+<p class="photo-caption">▲ 대한민국 공군 블랙이글스 조종사들과 통신원, 현장 사우디인 통역사 — 출처: 통신원 촬영</p>
+
+<p>한편 전시장에서는 각국 군악대의 연주와 공식 대표단의 의전 행렬이 이어졌다. 또한 사우디 전통 공연인 사우디 아르다(Saudi Ardah)도 진행되어 이목을 집중시켰다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-32-images/img-06.jpg" alt="군악대 연주 — 출처: 통신원 촬영">
+    <img src="kofice-32-images/img-07.jpg" alt="사우디 아르다(Saudi Ardah) 공연 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ (좌) 군악대 연주, (우) 사우디 아르다(Saudi Ardah) 공연 — 출처: 통신원 촬영</p>
+
+<h2>약 40개 한국 방산 기업의 전시 참여</h2>
+
+<p>이번 사우디아라비아 '월드 디펜스 쇼(World Defense Show)'에는 약 40개 한국 기업이 참가해 주요 무기 체계와 방위 기술을 선보였다. 일부 부스에서는 항공·지상 체계 관련 기술 설명과 함께 중동 지역 바이어들과 상담이 진행되며, 산업 협력 가능성을 모색하는 모습도 확인됐다. 이번 행사는 단순한 방위 산업 전시를 넘어 국가 이미지와 문화적 상징을 함께 연출하는 공간으로 기능했다. 항공 시연과 군악 공연, 전통 의전 문화가 결합하면서 각국은 기술력과 더불어 자국의 정체성을 시각적으로 드러냈다. 한국 역시 블랙이글스 항공 시연과 기업 참여를 통해 산업 역량과 국가 이미지를 동시에 선보였다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-32-images/img-08.jpg" alt="한국 방산 기업 전시관 전경 — 출처: 통신원 촬영">
+    <img src="kofice-32-images/img-09.jpg" alt="한화(Hanwha) K9A1 자주포 전시 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ 한국 방산 기업 전시관 전경 — (좌) LIG 넥스원 에어 디펜스, (우) 한화(Hanwha) K9A1 자주포 — 출처: 통신원 촬영</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>통신원 촬영</p>
+    <p>사우디아라비아 월드 디펜스 쇼(World Defence Show) 공식 웹사이트, <a href="https://www.worlddefenseshow.com/en" target="_blank" rel="noopener">worlddefenseshow.com</a></p>
+    <p>≪월드 디펜스 쇼(World Defence Show)≫ (2026. 01. 25). Black Eagles Aerobatic Team to Perform at World Defense Show 2026, <a href="https://www.worlddefenseshow.com/en/media/news/175" target="_blank" rel="noopener">worlddefenseshow.com</a></p>
+    <p>≪디펜스 히어(Defence Here)≫ (2026. 02. 13). World Defense Show 2026 Concludes in Riyadh with $8.8 Billion in Deals, <a href="https://defensehere.com/en/world-defense-show-2026-concludes-in-riyadh/" target="_blank" rel="noopener">defensehere.com</a></p>
+    <p>≪아랍 뉴스(Arab News)≫ (2026. 02. 12). Deals worth $8bn signed at World Defense Show 2026, <a href="https://www.arabnews.com/node/2632798/saudi-arabia" target="_blank" rel="noopener">arabnews.com</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<h2>The 2026 World Defense Show — Largest Edition in History Brings Global Defence Industry Together</h2>
+
+<p>The World Defense Show, a global defence industry exhibition held biennially in Saudi Arabia, opened in 2026 as its largest edition to date. Organised by Saudi Arabia's General Authority for Military Industries (GAMI), the event ran from 8 to 12 February in the Malham area near Riyadh. The venue is located approximately 70km north of Riyadh's city centre; free shuttle buses operated from the city during the event for the convenience of visitors.</p>
+
+<p>The exhibition drew a total of 1,486 companies from 89 countries and 513 official delegations from 121 countries, with approximately 137,000 visitors in attendance. The exhibition floor covered 272,500 square metres — a 58% increase over the inaugural event, setting a new record in scale. A total of 355 live demonstrations took place during the event, with the aviation display comprising 63 static exhibits and 25 flight demonstrations. Contracts worth approximately SAR 33 billion (approximately KRW 11.7 trillion / USD 8.8 billion) were announced, demonstrating the high level of interest from global defence industry stakeholders.</p>
+
+<div class="article-photo"><img src="kofice-32-images/img-01.jpg" alt="2026 World Defense Show exhibition floor — Source: correspondent's photograph"></div>
+<p class="photo-caption">▲ 2026 World Defense Show exhibition floor — Source: correspondent's photograph</p>
+
+<p>The exhibition floor offered a wide range of defence systems spanning land, air, sea, and space domains, alongside live demonstration programmes and international conference sessions. The large outdoor exhibition space was designed to accommodate both aerial demonstrations and full-scale equipment displays, drawing considerable visitor interest. Among all sections, the Saudi pavilion attracted the greatest attention. Visitors, military officials, and VIPs made continuous trips to the booths, while the Saudi Arabian Military Industries (SAMI) booth focused prominently on domestic defence technology and localisation strategies. Large-scale equipment displays combined with digital-based presentations were regarded as a key showcase of the direction Saudi Arabia's defence industry is heading.</p>
+
+<div class="article-photo"><img src="kofice-32-images/img-02.jpg" alt="Saudi Arabian Military Industries (SAMI) pavilion — Source: correspondent's photograph"></div>
+<p class="photo-caption">▲ Saudi Arabian Military Industries (SAMI) pavilion — Source: correspondent's photograph</p>
+
+<h2>The Black Eagles Air Show That Captivated the Crowd</h2>
+
+<p>The section that attracted the greatest visitor attention at the 2026 World Defense Show was the aerial demonstration area. Visitors began claiming their spots around the outdoor runway well before the performances began. The air show featuring elite aerobatic teams representing various nations was a highlight of the event, serving as a stage that went beyond industrial display to demonstrate national image and aviation capability simultaneously.</p>
+
+<div class="photo-grid">
+    <img src="kofice-32-images/img-03.jpg" alt="ROK Air Force Black Eagles T-50 aircraft — Source: correspondent's photograph">
+    <img src="kofice-32-images/img-04.jpg" alt="Black Eagles air show formation flight — Source: correspondent's photograph">
+</div>
+<p class="photo-caption">▲ ROK Air Force Black Eagles aircraft and air show — Source: correspondent's photograph</p>
+
+<p>At the air show, Saudi Arabia's Saudi Hawks and Korea's Black Eagles each represented their respective air forces, showcasing precision formation flying and high-difficulty manoeuvres. The aerial demonstration went beyond exhibiting aircraft performance to reveal the skill of individual pilots and the organisational capacity of their units; with each smoke formation drawn across the sky, the crowd responded with cheers. The air show also attracted aviation photography enthusiasts from the United Kingdom, Ireland, and the Netherlands. Ian, a British visitor met on-site, mentioned that he had attended the previous edition's air show two years earlier, and that the Korean Air Force Black Eagles' performance had been particularly impressive. Visitors wearing Black Eagles and Korean fighter jet badges and seeking Korean company merchandise were also spotted, confirming international interest in the Korean Air Force and its defence technology.</p>
+
+<div class="article-photo"><img src="kofice-32-images/img-05.jpg" alt="ROK Air Force Black Eagles pilots with the correspondent and local Saudi interpreter — Source: correspondent's photograph"></div>
+<p class="photo-caption">▲ ROK Air Force Black Eagles pilots with the correspondent and local Saudi interpreter — Source: correspondent's photograph</p>
+
+<p>Meanwhile, military band performances and official delegation ceremonial processions from various countries continued throughout the venue. Saudi traditional performance — Saudi Ardah — was also staged and drew considerable attention.</p>
+
+<div class="photo-grid">
+    <img src="kofice-32-images/img-06.jpg" alt="Military band performance — Source: correspondent's photograph">
+    <img src="kofice-32-images/img-07.jpg" alt="Saudi Ardah performance — Source: correspondent's photograph">
+</div>
+<p class="photo-caption">▲ (Left) Military band performance; (Right) Saudi Ardah performance — Source: correspondent's photograph</p>
+
+<h2>Approximately 40 Korean Defence Companies Participate</h2>
+
+<p>Approximately 40 Korean companies participated in the World Defense Show in Saudi Arabia, showcasing major weapons systems and defence technology. At a number of booths, technical briefings on aviation and ground systems were held alongside consultations with Middle Eastern buyers, with efforts to explore industrial cooperation opportunities in evidence. The event functioned not merely as a defence industry exhibition but as a space that staged national image and cultural symbolism alongside technical capability. As aerial demonstrations, military band performances, and traditional ceremonial culture came together, each country visually expressed its identity alongside its technical prowess. Korea, through the Black Eagles air show and corporate participation, presented both its industrial capability and national image simultaneously.</p>
+
+<div class="photo-grid">
+    <img src="kofice-32-images/img-08.jpg" alt="Korean defence industry exhibition hall — Source: correspondent's photograph">
+    <img src="kofice-32-images/img-09.jpg" alt="Hanwha K9A1 self-propelled howitzer on display — Source: correspondent's photograph">
+</div>
+<p class="photo-caption">▲ Korean defence industry exhibition hall — (Left) LIG Nex1 Air Defence; (Right) Hanwha K9A1 self-propelled howitzer — Source: correspondent's photograph</p>
+
+<div class="sources">
+    <p class="sources-label">Sources &amp; Photo Credits</p>
+    <p>Photographs by correspondent</p>
+    <p>World Defence Show official website, <a href="https://www.worlddefenseshow.com/en" target="_blank" rel="noopener">worlddefenseshow.com</a></p>
+    <p>≪World Defence Show≫ (2026. 01. 25). Black Eagles Aerobatic Team to Perform at World Defense Show 2026, <a href="https://www.worlddefenseshow.com/en/media/news/175" target="_blank" rel="noopener">worlddefenseshow.com</a></p>
+    <p>≪Defence Here≫ (2026. 02. 13). World Defense Show 2026 Concludes in Riyadh with $8.8 Billion in Deals, <a href="https://defensehere.com/en/world-defense-show-2026-concludes-in-riyadh/" target="_blank" rel="noopener">defensehere.com</a></p>
+    <p>≪Arab News≫ (2026. 02. 12). Deals worth $8bn signed at World Defense Show 2026, <a href="https://www.arabnews.com/node/2632798/saudi-arabia" target="_blank" rel="noopener">arabnews.com</a></p>
+</div>
+</div></div>
+
+    </div><!-- article-body -->
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <div class="float-nav">
+        <a href="kofice-31.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-33.html">Next →</a>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>

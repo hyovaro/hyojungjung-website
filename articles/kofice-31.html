@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 최대 OTT '엠비씨 샤히드(MBC Shahid)' 속 한국 콘텐츠 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; word-break: break-all; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-31.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 최대 OTT '엠비씨 샤히드(MBC Shahid)' 속 한국 콘텐츠 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-31.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 최대 OTT '엠비씨 샤히드(MBC Shahid)' 속 한국 콘텐츠 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">미디어/OTT — Media &amp; OTT</p>
+                    <h1 class="article-title-ko">사우디 최대 OTT '엠비씨 샤히드(MBC Shahid)' 속 한국 콘텐츠</h1>
+                    <p class="article-title-en">Korean Content on Saudi Arabia's Largest OTT, MBC Shahid</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">16 February 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · February 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<h2>중동의 대표 OTT, 엠비씨 샤히드(MBC Shahid)</h2>
+
+<p>샤히드(Shahid)는 사우디아라비아 기반의 중동 최대 미디어 그룹 MBC가 운영하는 스트리밍 플랫폼으로, 사우디를 비롯한 중동·아프리카 지역에서 영향력 있는 OTT 서비스로 자리 잡았다. 2025년 기준, 샤히드는 약 440만 명의 구독자를 확보하며 중동·북아프리카(SVOD) 시장에서 가장 많은 구독자를 보유한 플랫폼으로 평가된다. 이는 유튜브 프리미엄(YouTube Premium) 약 370만 명, 넷플릭스(Netflix) 약 300만 명을 웃도는 수치다. 전문가들은 샤히드가 현지화 전략과 중동 콘텐츠 라인업 강화로 구독자 수를 꾸준히 늘리며, 지역 내 스트리밍 시장 경쟁에서 독보적인 위치를 확보하고 있다고 분석한다.</p>
+
+<div class="article-photo"><img src="kofice-31-images/img-01.jpg" alt="엠비씨 샤히드(MBC Shahid) OTT 화면 — 출처: 엠비씨 샤히드(MBC Shahid)"></div>
+<p class="photo-caption">▲ 엠비씨 샤히드(MBC Shahid) 온라인 동영상 서비스(OTT) 화면 — 출처: 엠비씨 샤히드(MBC Shahid)</p>
+
+<p>사우디 국부펀드(Public Investment Fund, PIF)는 2025년 MBC 그룹 지분 54%를 인수하며 주요 주주로 올라섰다. 이는 비전(Vision) 2030 정책 아래 미디어·콘텐츠 산업을 전략적으로 육성하려는 움직임의 일환으로 해석된다. 최근 샤히드(MBC Shahid)에서는 사우디 오리지널 드라마와 예능 제작이 확대되고 있으며, 청년 세대와 여성 서사를 다루는 작품도 증가하는 추세다. 단순한 콘텐츠 유통을 넘어, 자국 제작 콘텐츠를 확장하는 플랫폼으로 기능하며 중동 콘텐츠 산업의 변화에 핵심적인 역할을 하고 있다. 샤히드의 월 구독료는 약 44.99~89.99리얄(한화 약 1만 6천~3만 4천 원) 수준으로, 드라마와 영화뿐만 아니라 스포츠 경기, 라이브 TV 방송까지 포함한 종합 콘텐츠 구성을 갖추고 있다. 또한 짧은 형식의 영상 콘텐츠(Shorts) 서비스도 제공해 모바일 시청 환경에 대응하고 있다. 기존 위성 방송 중심의 미디어 환경이 모바일 기반 스트리밍으로 빠르게 이동하면서, 샤히드는 사우디 콘텐츠 산업 변화의 상징적 플랫폼으로 평가받고 있다. 전문가들은 "샤히드의 콘텐츠 확장과 모바일 친화적 서비스는 플랫폼 경쟁력을 높이는 동시에, 사우디 자체 콘텐츠 산업 성장에도 기여하고 있다"고 분석했다.</p>
+
+<h2>엠비씨 샤히드 내 한국 콘텐츠의 확장</h2>
+
+<p>샤히드(MBC Shahid)는 아랍권 콘텐츠뿐만 아니라 미국, 유럽, 아시아 작품까지 함께 제공하며 글로벌 OTT 경쟁 속에서 다양한 해외 콘텐츠 유통 전략을 취하고 있다. 대부분의 작품은 무료로 제공되지만, 광고 시청이 필수이며 일부 작품과 광고 없이 시청을 원하는 경우에는 구독 서비스가 필요하다. 이러한 전략은 이용자 접근성을 높이면서도 유료 구독을 통한 수익 모델을 확보하려는 플랫폼 운영 전략으로 평가된다. 특히 한국 콘텐츠의 확장은 샤히드가 중동 시청자에게 다양한 문화적 경험을 제공하는 동시에, 한류 콘텐츠에 대한 관심을 반영하고 있다는 점에서 주목된다.</p>
+
+<div class="photo-grid">
+    <img src="kofice-31-images/img-02.jpg" alt="엠비씨 샤히드에서 제공하는 한국드라마 — 출처: 엠비씨 샤히드(MBC Shahid)">
+    <img src="kofice-31-images/img-03.jpg" alt="엠비씨 샤히드에서 제공하는 한국드라마 — 출처: 엠비씨 샤히드(MBC Shahid)">
+</div>
+<p class="photo-caption">▲ 엠비씨 샤히드(MBC Shahid)에서 제공하는 한국드라마 — 출처: 엠비씨 샤히드(MBC Shahid)</p>
+
+<p>샤히드(MBC Shahid)에서 특히 눈에 띄는 영역은 한국 콘텐츠 카테고리다. 〈푸른 바다의 전설〉, 〈도깨비〉 등 이미 중동 지역에서 인지도를 확보한 한국 드라마가 제공되며, 아랍어 자막으로 시청할 수 있다. 이는 한국 드라마가 글로벌 OTT 플랫폼을 넘어 중동 지역의 로컬 OTT 환경에서도 활발히 유통되고 있음을 보여준다. 그동안 한국 드라마의 로맨스, 가족 서사, 감정 중심의 이야기 구조는 아랍권 시청자들과 일정 부분 정서적 접점을 형성해 왔다. 전문가들은 "한국 드라마는 감정 표현과 서사 구조에서 아랍권 시청자와 공감대를 형성하며, 샤히드 내 한국 콘텐츠 확장에 중요한 역할을 하고 있다"고 분석했다.</p>
+
+<p>샤히드(MBC Shahid) 내에서는 한국 드라마는 활발히 제공되고 있지만, 한국 예능과 영화 콘텐츠는 아직 찾아보기 어려운 상황이다. 다만, 한국 배우 이병헌이 출연한 할리우드 영화 〈지.아이.조〉는 샤히드 내 '사우디아라비아 톱 무비(Top Movies in Saudi Arabia)' 순위에서 6위에 올라 눈길을 끈다. 이 사례는 한국 배우 출연작이 중동 시청자에게 주목받고 있음을 보여주며, 향후 한국 영화 및 예능 콘텐츠 확장 가능성을 시사한다.</p>
+
+<div class="article-photo"><img src="kofice-31-images/img-04.jpg" alt="2월 기준 엠비씨 샤히드 사우디아라비아 영화 톱텐 6위 지.아이.조 — 출처: 엠비씨 샤히드(MBC Shahid)"></div>
+<p class="photo-caption">▲ 2월 기준 엠비씨 샤히드(MBC Shahid) '사우디아라비아 영화 톱텐' 6위: 〈지.아이.조〉 — 출처: 엠비씨 샤히드(MBC Shahid)</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>엠비씨 샤히드(MBC Shahid) 홈페이지, <a href="https://shahid.mbc.net/en" target="_blank" rel="noopener">shahid.mbc.net</a></p>
+    <p>≪사우디국부펀드(Public Investment Fund)≫ (2025. 9. 22). PIF completes acquisition of 54% of media company MBC Group, <a href="https://www.pif.gov.sa/en/news-and-insights/press-releases/2025/pif-completes-acquisition-of-54-percent-of-media-company-mbc-group" target="_blank" rel="noopener">pif.gov.sa</a></p>
+    <p>≪옴디아(Omdia)≫ (2025. 5. 13). SVOD growth to drive MENA streaming market past $1.5 billion in 2025, <a href="https://omdia.tech.informa.com/pr/2025/may/svod-growth-to-drive-mena-streaming-market-past-1point5-billion-dollars-in-2025" target="_blank" rel="noopener">omdia.tech.informa.com</a></p>
+</div>
+</div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<h2>The Middle East's Leading OTT: MBC Shahid</h2>
+
+<p>Shahid is a streaming platform operated by MBC — Saudi Arabia's largest media group and the largest in the Middle East — that has established itself as an influential OTT service across Saudi Arabia and the broader Middle East and Africa region. As of 2025, Shahid has secured approximately 4.4 million subscribers, making it the platform with the largest subscriber base in the MENA SVOD market — ahead of YouTube Premium (approx. 3.7 million) and Netflix (approx. 3 million). Analysts assess that Shahid is steadily growing its subscriber count through localisation strategies and an expanded Middle Eastern content lineup, cementing a leading position in the regional streaming market.</p>
+
+<div class="article-photo"><img src="kofice-31-images/img-01.jpg" alt="MBC Shahid OTT platform — Source: MBC Shahid"></div>
+<p class="photo-caption">▲ MBC Shahid online video service (OTT) — Source: MBC Shahid</p>
+
+<p>Saudi Arabia's Public Investment Fund (PIF) acquired a 54% stake in MBC Group in 2025, becoming a major shareholder — a move interpreted as part of Vision 2030's strategy to cultivate the media and content industry as a national priority. Saudi original dramas and variety programmes are expanding on Shahid, with works addressing youth and female narratives on the rise. Beyond content distribution, the platform is functioning as a hub for expanding domestically produced content, playing a central role in the transformation of the Middle East's content industry. Shahid's monthly subscription fee ranges from approximately SAR 44.99 to 89.99 (approximately KRW 16,000–34,000), covering not only drama and film but also sports and live TV broadcasts. It also offers a short-form video content (Shorts) service in response to mobile viewing habits. As the media environment shifts rapidly from satellite broadcasting to mobile-based streaming, Shahid is regarded as a symbolic platform in Saudi Arabia's content industry transformation.</p>
+
+<h2>The Expansion of Korean Content on MBC Shahid</h2>
+
+<p>MBC Shahid provides not only Arabic-language content but also American, European, and Asian works, adopting a diverse foreign content distribution strategy within the competitive global OTT landscape. Most content is available for free, though advertising is required; a subscription is needed for some titles and for ad-free viewing. This strategy is seen as a platform approach to improving user accessibility while securing a revenue model through paid subscriptions. The expansion of Korean content in particular is notable as it reflects both Shahid's aim to offer diverse cultural experiences to Middle Eastern viewers and the growing interest in Korean Wave content.</p>
+
+<div class="photo-grid">
+    <img src="kofice-31-images/img-02.jpg" alt="Korean dramas available on MBC Shahid — Source: MBC Shahid">
+    <img src="kofice-31-images/img-03.jpg" alt="Korean dramas available on MBC Shahid — Source: MBC Shahid">
+</div>
+<p class="photo-caption">▲ Korean dramas available on MBC Shahid — Source: MBC Shahid</p>
+
+<p>The Korean content category is a particularly notable area on MBC Shahid. Well-known Korean dramas that have already gained recognition across the Middle East — including <em>Legend of the Blue Sea</em> and <em>Goblin</em> — are available with Arabic subtitles. This demonstrates that Korean dramas are actively distributed not only on global OTT platforms but also in local OTT environments across the Middle East. Korean drama's romance, family narratives, and emotion-centred storytelling have formed emotional resonance with Arab audiences over time. Analysts note that "Korean dramas form common ground with Arab viewers in emotional expression and narrative structure, playing an important role in the expansion of Korean content on Shahid."</p>
+
+<p>While Korean dramas are actively available on MBC Shahid, Korean variety and film content remains harder to find. However, the Hollywood film <em>G.I. Joe</em> — featuring Korean actor Lee Byung-hun — drew attention by ranking sixth in Shahid's 'Top Movies in Saudi Arabia' chart. This case shows that works featuring Korean actors are gaining the attention of Middle Eastern viewers, and suggests the potential for further expansion of Korean film and variety content going forward.</p>
+
+<div class="article-photo"><img src="kofice-31-images/img-04.jpg" alt="G.I. Joe at No. 6 in Shahid's Saudi Arabia Top 10 Movies (February) — Source: MBC Shahid"></div>
+<p class="photo-caption">▲ <em>G.I. Joe</em> at No. 6 in MBC Shahid's 'Top Movies in Saudi Arabia' (February) — Source: MBC Shahid</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>MBC Shahid website, <a href="https://shahid.mbc.net/en" target="_blank" rel="noopener">shahid.mbc.net</a></p>
+    <p>≪사우디국부펀드(Public Investment Fund)≫ (2025. 9. 22). PIF completes acquisition of 54% of media company MBC Group, <a href="https://www.pif.gov.sa/en/news-and-insights/press-releases/2025/pif-completes-acquisition-of-54-percent-of-media-company-mbc-group" target="_blank" rel="noopener">pif.gov.sa</a></p>
+    <p>≪옴디아(Omdia)≫ (2025. 5. 13). SVOD growth to drive MENA streaming market past $1.5 billion in 2025, <a href="https://omdia.tech.informa.com/pr/2025/may/svod-growth-to-drive-mena-streaming-market-past-1point5-billion-dollars-in-2025" target="_blank" rel="noopener">omdia.tech.informa.com</a></p>
+</div>
+</div></div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+
+    <div class="float-nav">
+        <a href="kofice-30.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-32.html">Next →</a>
+    </div>
+</body>
+</html>

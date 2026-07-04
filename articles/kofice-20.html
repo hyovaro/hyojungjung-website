@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤가은 감독 &lt;세계의 주인&gt;, 레드씨 국제 영화제 경쟁 부문 공식 초청 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-20.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="윤가은 감독 &lt;세계의 주인&gt;, 레드씨 국제 영화제 경쟁 부문 공식 초청 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-20.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="윤가은 감독 &lt;세계의 주인&gt;, 레드씨 국제 영화제 경쟁 부문 공식 초청 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Policy &amp; Issues</p>
+                    <h1 class="article-title-ko">윤가은 감독 &lt;세계의 주인&gt;, 레드씨 국제 영화제 경쟁 부문 공식 초청</h1>
+                    <p class="article-title-en">Director Yoon Ga-eun's <em>The World of Love</em> Officially Selected for the Red Sea International Film Festival Competition</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">9 December 2025</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · December 2025</span></div>
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<h2>중동·아프리카 영화 산업의 새로운 중심지로 떠오르는 RSIFF</h2>
+<p>사우디아라비아 제다에서 개최되는 '레드씨 국제 영화제(Red Sea International Film Festival, RSIFF)'는 2025년 12월 4일부터 13일까지 10일간 열리며, 2021년 출범 이후 불과 5년 만에 MENA(중동·북아프리카) 지역을 대표하는 국제 영화제로 빠르게 성장했다. 유네스코 세계문화유산 지역 알 발라드(Al-Balad) 일대에서 진행되는 영화제는 도시의 역사 질감과 현대 영화문화가 결합된 독특한 분위기로 세계 영화인들의 주목을 받고 있다.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-000.jpg" alt="레드씨 국제 영화제 전경"></div>
+<p class="photo-caption">▲ 레드씨 국제 영화제 전경 — 출처: The Gulf Independent</p>
+
+<p>레드씨 국제 영화제(RSIFF)는 지금까지 520편 이상의 세계 각국 작품을 소개하며 신인 창작자 발굴, 여성 영화인 지원, 글로벌 영화산업 협력 확대를 주요 목표로 삼아왔다. 특히 2018년 극장이 재개된 이후 빠르게 성장한 사우디 영화산업의 현재와 미래를 동시에 보여주는 상징 플랫폼으로 자리매김했다. 올해 영화제는 앤서니 홉킨스, 아드리엔 브로디, 니콜라스 홀트, 제시카 알바, 다코타 존슨, 대런 아로노프스키 감독 등이 영화제를 찾았으며, '인 컨버세이션(In Conversation) 프로그램'을 통해 관객과 직접 소통하며 RSIFF의 국제 위상을 더욱 공고히 했다.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-015.jpg" alt="인 컨버세이션 섹션에 참여한 주요 영화인들"></div>
+<p class="photo-caption">▲ 인 컨버세이션(In Conversation) 섹션에 참여한 주요 영화인들 — 출처: 레드씨 국제영화제 공식 웹사이트</p>
+
+<h2>레드씨 영화제 주요 섹션 소개</h2>
+<p>레드씨 국제 영화제는 ▲ 메인 경쟁 섹션 '컴피티션(Competition)', ▲ 올해 전 세계 주요 영화제를 휩쓴 화제작을 모은 '페스티벌 페이버릿츠(Festival Favorites)', ▲ 아랍권 주요 작품을 조명하는 '아랍 스펙태큘러(Arab Spectacular)', ▲ 국제 비경쟁 쇼케이스 '인터내셔널 스펙태큘러(International Spectacular)', ▲ 사우디 로컬 신작을 소개하는 '뉴 사우디 시네마(New Saudi Cinema)', ▲ 세계적 영화인과의 대담 프로그램 '인 컨버세이션(In Conversation)' 등 다양한 섹션으로 구성된다.</p>
+
+<h2>한국 감독·배우 작품 나란히 RSIFF 진출</h2>
+<p>올해 RSIFF 메인 경쟁 부문에는 총 16편의 작품이 공식 초청되었으며, 그 중 하나로 윤가은 감독의 신작 &lt;세계의 주인(The World of Love, 2025)&gt;이 선정됐다. 현재 한국에서도 상영 중인 이 작품은 '인싸'와 '관종' 사이의 경계에 선, 속내를 알 수 없는 열여덟 살 여고생 '주인'이 전교생이 참여한 서명 운동을 홀로 거부한 뒤 정체불명의 쪽지를 받기 시작하면서 펼쳐지는 이야기를 그린다. 윤가은 감독은 두 여성 주인공의 감정과 관계를 섬세하게 포착하며, 그녀 특유의 따뜻한 감수성과 날카로운 서사가 돋보인다.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-016.jpg" alt="메인 경쟁 부문 공식 초청작 한국 영화 세계의 주인"></div>
+<p class="photo-caption">▲ 메인 경쟁 부문 공식 초청작 한국 영화 '세계의 주인' — 출처: 레드씨 국제영화제 공식 웹사이트</p>
+
+<p>윤가은 감독은 한국 독립 영화계에서 자신만의 미학과 서사를 확립해온 대표 여성 감독으로, 이번 RSIFF 메인 경쟁 부문 공식 초청으로 한국 여성 감독 작품의 국제적 영향력을 다시 한번 입증했다. 한편 올해 경쟁 부문에는 한국 배우 심은경이 출연한 일본 감독 미야케 쇼(Sho Miyake)의 &lt;여행과 나날(Two Seasons, Two Strangers)&gt;도 올라 눈길을 끈다.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-017.jpg" alt="경쟁 부문 초청작 한국 배우 심은경 주연의 일본영화 여행과 나날"></div>
+<p class="photo-caption">▲ 경쟁 부문 초청작, 한국 배우 심은경 주연의 일본 영화 '여행과 나날' — 출처: 레드씨 국제영화제 공식 웹사이트</p>
+
+<p>또한 최근 일본 실사 영화 사상 최초로 천만 관객을 돌파하며 큰 화제를 모은 재일교포 3세 영화감독 이상일의 영화 &lt;국보(Kokuho)&gt;가 'RSIFF Festival Favourites' 섹션에 포함됐다. 이상일 감독이 15년에 걸쳐 준비한 이 작품은 가부키의 '오나가타'(여성 역할을 연기하는 남성 배우) 전통과 그 예술적 유산을 깊이 있게 탐구하는 드라마로, 일본 박스오피스에서 흥행과 작품성을 모두 인정받았다.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-018.jpg" alt="페스티벌 페이버릿츠 부문 초청작 일본 영화 국보"></div>
+<p class="photo-caption">▲ 페스티벌 페이버릿츠(Festival Favourites) 부문 초청작, 일본 영화 '국보' — 출처: 레드씨 국제영화제 공식 웹사이트</p>
+
+<h2>산업·미디어 파트너십 강화로 확장된 영화제 플랫폼</h2>
+<p>2025년 RSIFF는 사우디 영화 산업의 성장 속도에 맞춰 산업·재정·미디어 생태계가 총집결된 해로 평가된다. 올해 주목받은 변화는 중동 최대 미디어 기업 MBC 그룹의 프린시펄 파트너(Principal Partner) 참여다. MBC는 개막식과 폐막식을 《MBC1》, 《MBC MASR》, 《MBC IRAQ》 및 《Shahid》를 통해 중계해 영화제의 도달 범위를 중동 전역으로 확장했다. Film AlUla는 전략 파트너로 참여해 '필름 알울라 관객상'와 '필름 알울라 최우수 사우디 영화상' 두 개의 상을 제정·후원했으며, 각 5만 달러(약 7,160만 원)의 상금이 제공된다.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-019.jpg" alt="엠비씨(MBC) 제작 현장의 현지 여성 영화인"></div>
+<p class="photo-caption">▲ MBC 제작 현장의 현지 여성 영화인 — 출처: Platinumlist</p>
+
+<p>문화발전기금(Cultural Development Fund, CDF)은 올해로 4년 연속 영화제의 산업 허브인 레드씨 수크(Red Sea Souk)을 공식 후원하며 영화 산업의 기획부터 제작·배급·교육까지 전 단계를 아우르는 투자 유치를 추진했다. 이는 사우디가 콘텐츠 소비국을 넘어 문화산업 투자 중심지로 성장하고 있음을 보여준다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진출처 및 참고자료</p>
+    <p>레드씨 국제 영화제 공식 웹사이트, <a href="https://redseafilmfest.com" target="_blank" rel="noopener">https://redseafilmfest.com</a></p>
+    <p>《The Gulf Independent》(2025. 12. 04). Red Sea Film Festival 2025 Adds Big-Name Hollywood Stars to Conversation Series</p>
+    <p>《Platinumlist》(2025. 12. 03). All Details about Red Sea International Film Festival in Jeddah: Celebrity Guests and Line-up of Films in 2025</p>
+    <p>《RSIFF》(2025. 12. 01). MBC Group Joins Red Sea International Film Festival As Principal Partner</p>
+    <p>《RSIFF》(2025. 12. 02). Film AlUla to Sponsor Two Awards at the Red Sea International Film Festival 2025</p>
+    <p>《RSIFF》(2025. 12. 03). The Cultural Development Fund Sponsors the Red Sea Souk at the 5th Edition of the Red Sea International Film Festival 2025</p>
+    <p>《Cineuropa》(2025. 11. 06). The fifth Red Sea International Film Festival announces its full line-up</p>
+</div>
+</div></div>
+
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<h2>RSIFF — Rising as the New Centre of the Middle East and African Film Industry</h2>
+<p>The Red Sea International Film Festival (RSIFF), held in Jeddah, Saudi Arabia, ran for ten days from 4 to 13 December 2025. In just five years since its launch in 2021, it has rapidly grown into the leading international film festival of the MENA (Middle East and North Africa) region. Set in Al-Balad, a UNESCO World Heritage site, the festival draws filmmakers from across the world with its distinctive atmosphere — a blend of the city's historic texture and contemporary cinema culture.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-000.jpg" alt="Red Sea International Film Festival aerial view"></div>
+<p class="photo-caption">▲ Red Sea International Film Festival — Source: The Gulf Independent</p>
+
+<p>RSIFF has introduced over 520 works from around the world, with its core goals being the discovery of emerging creators, support for women in film, and expanding global industry cooperation. It has become a symbolic platform that showcases both the present state and future trajectory of the Saudi film industry, which grew rapidly after cinemas reopened in 2018. This year the festival drew Anthony Hopkins, Adrien Brody, Nicholas Hoult, Jessica Alba, Dakota Johnson, and director Darren Aronofsky, who engaged directly with audiences through the 'In Conversation' programme, further cementing RSIFF's international standing.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-015.jpg" alt="Major filmmakers at the In Conversation programme"></div>
+<p class="photo-caption">▲ Major filmmakers at the In Conversation programme — Source: RSIFF official website</p>
+
+<h2>An Overview of RSIFF's Key Sections</h2>
+<p>The Red Sea International Film Festival is structured around a rich variety of sections: the main Competition; Festival Favourites, gathering the most acclaimed works from major global festivals this year; Arab Spectacular, spotlighting key works from the Arab world; International Spectacular, an international non-competition showcase; New Saudi Cinema, presenting new local Saudi works; and In Conversation, a programme of dialogues with major filmmakers from around the world.</p>
+
+<h2>Korean Director and Actor Works Side by Side at RSIFF</h2>
+<p>Sixteen works were officially invited to this year's RSIFF main competition, among them director Yoon Ga-eun's new film <em>The World of Love</em> (2025), currently screening in Korea. The film follows eighteen-year-old Ju-in — a girl whose true feelings are difficult to read, hovering between social insider and attention-seeker — who alone refuses to sign a school-wide petition, then begins receiving anonymous notes. Director Yoon captures the emotions and relationship between two female protagonists with characteristic delicacy, her signature warmth and sharp storytelling very much in evidence.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-016.jpg" alt="The World of Love — official competition entry at RSIFF"></div>
+<p class="photo-caption">▲ <em>The World of Love</em> — official competition entry at RSIFF — Source: RSIFF official website</p>
+
+<p>Director Yoon Ga-eun is one of Korea's foremost female independent filmmakers, having established her own distinctive aesthetic and narrative voice, and this RSIFF competition selection again demonstrates the international reach of Korean women directors' work. Also in the competition this year is <em>Two Seasons, Two Strangers</em> by Japanese director Sho Miyake, starring Korean actress Shim Eun-kyung.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-017.jpg" alt="Two Seasons, Two Strangers — competition entry featuring Korean actress Shim Eun-kyung"></div>
+<p class="photo-caption">▲ <em>Two Seasons, Two Strangers</em> — competition entry featuring Korean actress Shim Eun-kyung — Source: RSIFF official website</p>
+
+<p>In the Festival Favourites section, <em>Kokuho</em> by Korean-Japanese third-generation director Lee Sang-il was also included. The film, which recently became the first live-action Japanese film to surpass ten million admissions, explores the kabuki tradition of onnagata (male actors playing female roles) and its artistic legacy — praised equally for its box office success and critical acclaim.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-018.jpg" alt="Kokuho — in the Festival Favourites section"></div>
+<p class="photo-caption">▲ <em>Kokuho</em> — Festival Favourites section — Source: RSIFF official website</p>
+
+<h2>An Expanded Festival Platform Through Strengthened Industry and Media Partnerships</h2>
+<p>The 2025 RSIFF is regarded as the year that the industry, financial, and media ecosystems converged at full scale around Saudi Arabia's growing film sector. A notable change this year was the participation of MBC Group — the Middle East's largest media company — as a Principal Partner. MBC broadcast the opening and closing ceremonies across MBC1, MBC MASR, MBC IRAQ, and Shahid, extending the festival's reach across the entire Middle East. Film AlUla participated as a strategic partner, sponsoring two new awards — the Film AlUla Audience Award and the Film AlUla Best Saudi Film Award — each carrying a prize of USD 50,000.</p>
+
+<div class="article-photo"><img src="kofice-20-images/img-019.jpg" alt="Local female filmmaker on the MBC production set"></div>
+<p class="photo-caption">▲ Local female filmmaker on the MBC production set — Source: Platinumlist</p>
+
+<p>The Cultural Development Fund (CDF) officially sponsored the festival's industry hub, the Red Sea Souk, for the fourth consecutive year, pursuing investment across the full spectrum of the film industry — from development and production to distribution and education — demonstrating Saudi Arabia's emergence as a centre for cultural industry investment, beyond mere content consumption.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Red Sea International Film Festival official website, <a href="https://redseafilmfest.com" target="_blank" rel="noopener">https://redseafilmfest.com</a></p>
+    <p><em>The Gulf Independent</em> (2025, December 4). Red Sea Film Festival 2025 Adds Big-Name Hollywood Stars to Conversation Series.</p>
+    <p><em>Platinumlist</em> (2025, December 3). All Details about Red Sea International Film Festival in Jeddah: Celebrity Guests and Line-up of Films in 2025.</p>
+    <p><em>RSIFF</em> (2025, December 1). MBC Group Joins Red Sea International Film Festival As Principal Partner.</p>
+    <p><em>RSIFF</em> (2025, December 2). Film AlUla to Sponsor Two Awards at the Red Sea International Film Festival 2025.</p>
+    <p><em>RSIFF</em> (2025, December 3). The Cultural Development Fund Sponsors the Red Sea Souk at the 5th Edition of the Red Sea International Film Festival 2025.</p>
+    <p><em>Cineuropa</em> (2025, November 6). The fifth Red Sea International Film Festival announces its full line-up.</p>
+</div>
+</div></div>
+    </div>
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-19.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-21.html">Next →</a>
+    </div>
+</body>
+</html>

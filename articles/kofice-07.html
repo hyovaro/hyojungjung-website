@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9월 넷플릭스 통계 — 〈폭군의 셰프〉와 〈케이팝 데몬 헌터스〉 상위권 기록 — Hyojung Jung</title>
+    <meta name="description" content="September Netflix rankings in Saudi Arabia — Korean dramas and K-pop animation chart high. Published in KOFICE, September 2025. By Hyojung Jung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .article-nav-bottom { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 28px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); background: #f7f4ef; }
+        .anb-prev, .anb-next { display: inline-flex; align-items: center; padding: 10px 20px; border: 1px solid #7c3a36; border-radius: 2px; transition: all 0.2s; text-decoration: none; color: #7c3a36; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+        .anb-prev:hover, .anb-next:hover { background: #7c3a36; color: #f7f4ef; }
+        .anb-home { background: #1a1a1a; color: #f7f4ef; border: none; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; text-decoration: none; }
+        .anb-home:hover { background: #333; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .article-text { padding: 28px 20px 40px; }
+            .text-ko, .text-en { font-size: 14px; }
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-07.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="9월 넷플릭스 통계 — 〈폭군의 셰프〉와 〈케이팝 데몬 헌터스〉 상위권 기록 — Hyojung Jung">
+    <meta property="og:description" content="September Netflix rankings in Saudi Arabia — Korean dramas and K-pop animation chart high. Published in KOFICE, September 2025. By Hyojung Jung.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-07.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="9월 넷플릭스 통계 — 〈폭군의 셰프〉와 〈케이팝 데몬 헌터스〉 상위권 기록 — Hyojung Jung">
+    <meta name="twitter:description" content="September Netflix rankings in Saudi Arabia — Korean dramas and K-pop animation chart high. Published in KOFICE, September 2025. By Hyojung Jung.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">통계자료 — Statistics</p>
+                    <h1 class="article-title-ko">9월 넷플릭스 통계 — 〈폭군의 셰프〉와 〈케이팝 데몬 헌터스〉 상위권 기록</h1>
+                    <p class="article-title-en">September Netflix Rankings — <em>The Chef of the Tyrant</em> and <em>K-pop Demon Hunters</em> Chart High in Saudi Arabia</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row">
+                        <span class="meta-label">Published</span>
+                        <span class="meta-value">17 September 2025</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Publication</span>
+                        <span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Author</span>
+                        <span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar">
+            <span class="sidebar-label">KOFICE · September 2025</span>
+        </div>
+
+        <!-- Korean text -->
+        <div class="article-text" id="text-ko">
+            <div class="text-ko">
+
+                <h2>드라마 부문, 한국 작품의 꾸준한 상위권 성과</h2>
+
+                <p>2025년 9월 사우디아라비아 넷플릭스 차트에서 한국 드라마와 한국문화를 소재로 한 글로벌 영화가 동시에 주목받았다. 한국 드라마 &lt;폭군의 셰프(장태유 연출, fGRD 극본)&gt;는 8월 마지막 주 드라마 부문 1위를 차지한 데 이어, 9월 들어서도 2위와 3위를 오가며 꾸준히 상위권을 유지했다. 화려한 사극 비주얼과 로맨스 서사를 결합한 이 작품은 현지 시청자들에게도 높은 몰입도를 선사하며 한국 사극 장르의 저력을 보여줬다. 동기간 한국 법정극 &lt;에스콰이어: 변호사를 꿈꾸는 변호사들(김재홍 연출, 박미현 극본)&gt; 역시 6위에 올라 다양한 장르의 한국 드라마가 사우디 시청자들의 선택을 받고 있음을 알 수 있었다.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-07-images/img-000.jpg" alt="사우디 넷플릭스 TV 차트 9/8–9/14, 폭군의 셰프 2위">
+                    <img src="kofice-07-images/img-001.jpg" alt="사우디 넷플릭스 TV 차트 9/8–9/14, 에스콰이어 6위">
+                </div>
+                <p class="photo-caption">▲ 9월 둘째 주 사우디 넷플릭스 TV 프로그램 부문 각 2위, 6위에 오른 〈폭군의 셰프〉와 〈에스콰이어: 변호사를 꿈꾸는 변호사들〉 — 출처: 넷플릭스</p>
+
+                <h2>영화 부문, 케이팝과 로맨틱코미디의 주목</h2>
+
+                <p>영화 부문에서는 흥미로운 움직임이 있었다. 미국에서 제작됐지만 케이팝 아이돌 문화를 전면에 내세운 애니메이션 &lt;케이팝 데몬 헌터스(메기 강·크리스 애펄헌즈 감독)&gt;가 9월 둘째 주 영화 부문 2위에 올랐다. 이 작품은 이미 글로벌 시장에서 화제가 된 바 있으며 사우디에서도 상위권에 오르며 현지 시청자들의 눈길을 끌었다. 글로벌 흥행이 현지에서도 일정 부분 반영된 것으로 해석된다.</p>
+
+                <div class="article-photo"><img src="kofice-07-images/img-012.jpg" alt="케이팝 데몬 헌터스, 9월 둘째 주 사우디 넷플릭스 영화 부문 2위"></div>
+                <p class="photo-caption">▲ 애니메이션 영화 〈케이팝 데몬 헌터스〉, 9월 둘째 주 사우디 넷플릭스 영화 부문 2위 기록 — 출처: 넷플릭스</p>
+
+                <p>또 다른 사례로는 로맨틱코미디 영화 &lt;고백의 역사(남궁선 감독)&gt;가 있다. 이 작품은 8월부터 10위권을 지켜왔고, 9월 첫째 주에는 3위까지 올라 꾸준한 인기를 보여줬다.</p>
+
+                <div class="article-photo"><img src="kofice-07-images/img-013.jpg" alt="고백의 역사, 9월 첫째 주 사우디 넷플릭스 영화 부문 3위"></div>
+                <p class="photo-caption">▲ 한국 영화 〈고백의 역사〉, 9월 첫째 주 사우디 넷플릭스 영화 부문 3위 기록 — 출처: 넷플릭스</p>
+
+                <h2>사우디에서 확산되는 한류 장르 다변화와 플랫폼 변화</h2>
+
+                <p>이번 통계는 사우디에서 한국 콘텐츠 소비가 특정 장르에 머물지 않고 점차 다변화되고 있음을 시사한다. 전통적인 로맨스 드라마뿐만 아니라 사극, 법정극, 케이팝을 소재로 한 글로벌 영화까지 시청자들의 선택을 받고 있다. 이는 한국 제작사에게 다양한 소재의 흥행 가능성을 확인시켜 주는 동시에 한류 문화를 활용한 해외 콘텐츠가 현지 시청자에게 다가갈 여지를 넓히고 있다.</p>
+
+                <p>한국 콘텐츠는 이미 지난 몇 년간 사우디에서 꾸준히 관심을 받아왔다. 현지 언론은 과거 넷플릭스 시리즈 &lt;지옥(연상호 감독)&gt;을 비롯한 여러 작품을 집중적으로 다룬 바 있으며 "K-드라마 열풍이 사우디 시청자들에게도 뚜렷하게 나타난다."고 전했다. 학술 연구에서도 사우디 젊은 세대를 중심으로 K-드라마와 케이팝의 인기가 높아지고 있으며 이로 인해 미디어 소비 습관, 패션 및 뷰티 트렌드, 한국어와 한국문화에 대한 관심이 눈에 띄게 증가하고 있는 것으로 나타났다.</p>
+
+                <p>더불어 2025년 7월 MBC와 넷플릭스가 사우디아라비아를 포함한 중동 및 북아프리카(MENA) 지역에서 MBCNOW 플랫폼을 통해 넷플릭스 글로벌 콘텐츠와 아랍 오리지널, MBC 라이브 채널을 하나의 번들로 제공하는 제휴를 발표했다. 이로써 현지 시청자들의 넷플릭스 접근성이 한층 높아졌고 한국 드라마와 영화가 시청자들에게 노출될 기회도 이전보다 넓어졌다.</p>
+
+                <div class="sources">
+                    <p class="sources-label">사진 출처 및 참고자료</p>
+                    <p>넷플릭스 TOP 10 (사우디아라비아), <a href="https://www.netflix.com/tudum/top10/saudi-arabia" target="_blank" rel="noopener">https://www.netflix.com/tudum/top10/saudi-arabia</a></p>
+                    <p><em>Arab News</em> (2024. 10. 30). <a href="https://www.arabnews.com/node/2577409/lifestyle" target="_blank" rel="noopener">'Hellbound' resonates with Saudi audiences amid global K-drama boom</a></p>
+                    <p><em>Arab News</em> (2024. 10. 21). <a href="https://www.arabnews.com/node/2576116/six-k-drama-shows-binge-netflix" target="_blank" rel="noopener">Six K-Drama shows to binge on Netflix</a></p>
+                    <p><em>Omdia</em> (2025. 8. 4). <a href="https://omdia.tech.informa.com/om138018/netflix-and-mbc-now-announce-partnership-to-capture-saudi-arabia-market" target="_blank" rel="noopener">Netflix and MBC NOW announce partnership to capture Saudi Arabia market</a></p>
+                    <p>Abdullah, A., &amp; Ubaidillah, I. (2023). The impact of the cross-border cultural phenomenon of the Korean wave on cultural transformation in Saudi Arabia. <em>Center of Middle Eastern Studies (CMES)</em>, 16(1), 25–35. <a href="https://www.researchgate.net/publication/372099739" target="_blank" rel="noopener">ResearchGate</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- English translation -->
+        <div class="article-text hidden" id="text-en">
+            <div class="text-en">
+
+                <h2>Drama Category: Korean Shows Consistently Top the Charts</h2>
+
+                <p>In the Saudi Arabian Netflix charts for September 2025, Korean dramas and a globally produced film centred on Korean culture attracted simultaneous attention. The Korean drama <em>The Chef of the Tyrant</em> (dir. Jang Tae-yu, written by fGRD) had topped the drama category in the final week of August before continuing to rank 2nd and 3rd consistently into September. Blending lavish historical-drama visuals with a romance narrative, the show delivered high levels of engagement to local viewers, demonstrating the enduring power of the Korean historical drama genre. During the same period, the Korean legal drama <em>Esquire: Lawyers Who Dream of Becoming Lawyers</em> (dir. Kim Jae-hong, written by Park Mi-hyun) also ranked 6th — showing that Korean dramas spanning a variety of genres are finding favour with Saudi audiences.</p>
+
+                <div class="photo-grid">
+                    <img src="kofice-07-images/img-000.jpg" alt="Saudi Arabia Netflix Top 10 Shows, week of 9/8–9/14: The Chef of the Tyrant at #2">
+                    <img src="kofice-07-images/img-001.jpg" alt="Saudi Arabia Netflix Top 10 Shows, week of 9/8–9/14: Esquire at #6">
+                </div>
+                <p class="photo-caption">▲ <em>The Chef of the Tyrant</em> (2nd) and <em>Esquire: Lawyers Who Dream of Becoming Lawyers</em> (6th) in the Saudi Netflix TV shows chart, week of 9/8–9/14 — Source: Netflix</p>
+
+                <h2>Film Category: K-pop and Romantic Comedy in the Spotlight</h2>
+
+                <p>The film category brought some interesting movement. <em>K-pop Demon Hunters</em> (dir. Maggie Kang and Chris Appelhans), an animated film produced in the United States but centering squarely on K-pop idol culture, reached 2nd place in the film category in the second week of September. The film had already generated considerable buzz in the global market, and its appearance in the Saudi top rankings caught local viewers' attention — suggesting that global box-office momentum is being reflected in local charts to a meaningful degree.</p>
+
+                <div class="article-photo"><img src="kofice-07-images/img-012.jpg" alt="K-pop Demon Hunters at #2 in Saudi Netflix film chart, week of 9/8–9/14"></div>
+                <p class="photo-caption">▲ <em>K-pop Demon Hunters</em> at 2nd place in the Saudi Netflix film chart, week of 9/8–9/14 — Source: Netflix</p>
+
+                <p>Another notable case is the romantic comedy <em>History of a Confession</em> (dir. Nam Gung-seon), which had been holding a top-10 position since August before climbing to 3rd place in the first week of September — demonstrating sustained popularity with local audiences.</p>
+
+                <div class="article-photo"><img src="kofice-07-images/img-013.jpg" alt="History of a Confession at #3 in Saudi Netflix film chart, week of 9/1–9/7"></div>
+                <p class="photo-caption">▲ <em>History of a Confession</em> at 3rd place in the Saudi Netflix film chart, week of 9/1–9/7 — Source: Netflix</p>
+
+                <h2>Genre Diversification and Platform Shifts in Saudi Arabia</h2>
+
+                <p>These statistics suggest that consumption of Korean content in Saudi Arabia is gradually diversifying beyond specific genres. Beyond traditional romance dramas, viewers are choosing historical dramas, legal dramas, and globally produced films built around K-pop — confirming for Korean producers the box-office viability of a wide range of subject matter, while also broadening the scope for overseas content leveraging Hallyu to reach local viewers.</p>
+
+                <p>Korean content has already attracted sustained interest in Saudi Arabia over the past several years. Local media has covered various works in depth — including the Netflix series <em>Hellbound</em> (dir. Yeon Sang-ho) — reporting that "the K-drama wave is clearly resonating with Saudi audiences." Academic research has also shown a growing popularity of K-dramas and K-pop among Saudi Arabia's younger generation, with noticeable corresponding increases in media consumption habits, fashion and beauty trends, and interest in the Korean language and culture.</p>
+
+                <p>Furthermore, in July 2025, MBC and Netflix announced a partnership for the Middle East and North Africa (MENA) region including Saudi Arabia, bundling Netflix global content, Arab originals, and MBC live channels through the MBCNOW platform. This has significantly improved local viewers' access to Netflix, and broadened the opportunities for Korean dramas and films to reach audiences to a greater extent than before.</p>
+
+                <div class="sources">
+                    <p class="sources-label">Sources</p>
+                    <p>Netflix TOP 10 (Saudi Arabia), <a href="https://www.netflix.com/tudum/top10/saudi-arabia" target="_blank" rel="noopener">https://www.netflix.com/tudum/top10/saudi-arabia</a></p>
+                    <p><em>Arab News</em> (30 Oct 2024). <a href="https://www.arabnews.com/node/2577409/lifestyle" target="_blank" rel="noopener">'Hellbound' resonates with Saudi audiences amid global K-drama boom</a></p>
+                    <p><em>Arab News</em> (21 Oct 2024). <a href="https://www.arabnews.com/node/2576116/six-k-drama-shows-binge-netflix" target="_blank" rel="noopener">Six K-Drama shows to binge on Netflix</a></p>
+                    <p><em>Omdia</em> (4 Aug 2025). <a href="https://omdia.tech.informa.com/om138018/netflix-and-mbc-now-announce-partnership-to-capture-saudi-arabia-market" target="_blank" rel="noopener">Netflix and MBC NOW announce partnership to capture Saudi Arabia market</a></p>
+                    <p>Abdullah, A., &amp; Ubaidillah, I. (2023). The impact of the cross-border cultural phenomenon of the Korean wave on cultural transformation in Saudi Arabia. <em>Center of Middle Eastern Studies (CMES)</em>, 16(1), 25–35. <a href="https://www.researchgate.net/publication/372099739" target="_blank" rel="noopener">ResearchGate</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-06.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-08.html">Next →</a>
+    </div>
+</body>
+</html>

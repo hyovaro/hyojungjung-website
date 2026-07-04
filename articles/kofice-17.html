@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리야드 메트로 개통, 사우디의 시간·생활·미래를 바꾸다 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-caption .correspondent { color: #7c3a36; font-style: italic; }
+        .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 28px 0 8px; }
+        .photo-grid img { width: 100%; height: auto; display: block; border-radius: 2px; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-17.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="리야드 메트로 개통, 사우디의 시간·생활·미래를 바꾸다 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-17.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="리야드 메트로 개통, 사우디의 시간·생활·미래를 바꾸다 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">문화정책/이슈 — Cultural Policy &amp; Issues</p>
+                    <h1 class="article-title-ko">리야드 메트로 개통, 사우디의 시간·생활·미래를 바꾸다</h1>
+                    <p class="article-title-en">The Riyadh Metro Opens — Transforming Saudi Arabia's Time, Daily Life and Future</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">23 November 2025</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · November 2025</span></div>
+        <div class="article-text" id="text-ko"><div class="text-ko">
+<h2>문화·역사적 전환: 자동차 도시에서 공공성의 도시로</h2>
+<p>리야드는 오랫동안 자동차에 절대적으로 의존해 온 도시였다. 이동은 프라이버시와 개별성을 전제로 한 차량 중심 문화 속에서 이루어졌고, 도시 구조 또한 광폭 도로·대형 교차로·고속도로 네트워크를 중심으로 설계되어 시민들이 동일한 공간을 공유하며 이동하는 경험은 사실상 존재하지 않았다. 이 같은 환경에서 리야드 메트로의 개통은 단순히 새로운 교통수단을 도입한 사건이 아니라, 도시에서 처음으로 '공공 이동'이 일상적 경험으로 자리 잡는 구조적 전환의 순간이다. 2025년 1월 전체 노선이 가동된 리야드 메트로는 도시가 두바이·아부다비·도하 등 중동 주요 도시와 경쟁하는 '글로벌 메트로폴리스'의 반열에 본격적으로 올라섰음을 보여준 상징적 사건이다. 이번 사업은 아리야드 개발청(ADA)이 추진한 압둘아지즈 국왕 프로젝트(King Abdulaziz Project for Riyadh Public Transport)의 핵심으로, 2012년 설계가 시작되어 2014년 4월 3일 공식 착공에 들어갔다.</p>
+<div class="photo-grid">
+    <img src="kofice-17-images/img-000.jpg" alt="리야드 메트로 홍보 사진 — 출처: 사우디 관광청">
+    <img src="kofice-17-images/img-001.jpg" alt="리야드 메트로 노선표 — 출처: 사우디 관광청">
+</div>
+<p class="photo-caption">▲ 리야드 메트로 홍보 사진 및 노선표 — 출처: 사우디 관광청</p>
+<h2>전환기의 정책: 우버 지원과 버스 통합 네트워크</h2>
+<p>사우디 정부는 메트로 개통 초기 시민들의 적응을 돕기 위해 우버(Uber) 비용을 지원하는 이례적 정책을 시행했다. 지하철역과 목적지가 3km 이내일 경우 평일 하루 두 차례 우버 비용을 무료로 제공해, 대중교통 경험이 거의 없던 시민들이 새로운 이동 방식을 적극적으로 이용할 수 있도록 했다. 통신원 또한 집에서 가장 가까운 역까지의 거리가 3km 이상이라 혜택을 전부 누리지는 못하지만, 날씨가 좋은 날엔 도보로 지하철을 이용하거나 3km 이내 목적지를 설정해 우버 지원을 활용하는 등 변화된 이동 환경을 직접 체감하고 있다. 또한 이번 개통은 지하철 단독 변화가 아니라, 2023년 3월 개통된 리야드 버스 네트워크와의 통합 운영을 전제로 구축되었다. 2,800여 개 정류장과 80여 개 노선으로 구성된 버스 시스템은 메트로 역과 주거지·상업지·기존 도심을 촘촘히 연결하며 '첫·마지막 마일(First/Last Mile)' 이동 문제를 해결하는 구조로 설계됐다. 특히 리야드 버스 정류장에는 에어컨이 작동하는 밀폐형 셸터가 마련되어 있어 고온의 기후에서도 시민들이 쾌적하게 대기할 수 있다.</p>
+<div class="photo-grid">
+    <img src="kofice-17-images/img-013.jpg" alt="이용객들로 가득 찬 열차 내부 — 출처: 통신원 촬영">
+    <img src="kofice-17-images/img-014.jpg" alt="이용객들로 가득 찬 열차 내부 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ 이용객들로 가득 찬 열차 내부 — 출처: <span class="correspondent">통신원 촬영</span></p>
+<h2>경제적 전환: 극심한 교통체증을 넘어 도시 경쟁력으로</h2>
+<p>리야드는 오랫동안 극심한 교통체증에 시달려 왔다. 전체 이동의 약 90%가 차량에 의존하는 구조 속에서, 20~30분 거리도 출퇴근 시간에는 두세 시간이 걸리는 일이 흔했다. 리야드 메트로는 이러한 병목 현상을 완화하며, 출퇴근 이동 시간이 단축되면서 근로자의 생산성과 생활 효율이 자연스럽게 높아져 기업의 인력 운영도 안정되고 있다. 이 변화는 사우디의 국가 전략 '비전 2030'과 긴밀하게 맞물린다. 사업에는 미국의 벡텔(Bechtel), 독일 지멘스(Siemens), 스페인 FCC, 프랑스 이지스·시스트라(Egis·Systra) 등 세계 유수 기업들이 참여해 사우디가 국제 기준의 초대형 도시 프로젝트를 운영·조정할 역량을 확보하고 있음을 보여준다. 올해 11월에 리야드 메트로는 혁신적 엔지니어링과 복합 네트워크 조정 능력이 인정돼 《미드(MEED)》가 '2025 중동·북아프리카 올해의 메가 프로젝트'로 선정하며 국제적 평가에서도 높은 성과를 거두었다.</p>
+<div class="article-photo"><img src="kofice-17-images/img-015.jpg" alt="교통 체증이 극심한 리야드 도로 전경 — 출처: 아랍 뉴스(Arab News)"></div>
+<p class="photo-caption">▲ 교통 체증이 극심한 리야드 도로 전경 — 출처: 아랍 뉴스(Arab News)</p>
+<h2>디자인·사회적 전환: 도시의 얼굴과 이동권의 확장</h2>
+<p>리야드 메트로는 총 6개 노선, 85개 역, 약 176km 규모의 세계 최대급 무인 운전 시스템으로 구축되었다. 특히 세계적 건축가 자하 하디드(Zaha Hadid)가 설계한 카프드(KAFD) 역은 사막 바람과 지층에서 영감을 받은 외피, 유기적 흐름의 내부 공간, 고성능 콘크리트 패널의 조형미로 국제적 주목을 받았다.</p>
+<div class="article-photo"><img src="kofice-17-images/img-016.jpg" alt="자하 하디드가 설계한 KAFD 역 전경 — 출처: 아크데일리(Archdaily)"></div>
+<p class="photo-caption">▲ 자하 하디드가 설계한 KAFD 역 전경 — 출처: 아크데일리(Archdaily)</p>
+<p>사회적 변화 또한 크다. 메트로 도입으로 여성·청년층·외국인의 이동권이 확대되었고, 운전을 강제하지 않는 이동 선택지가 생기면서 일상의 활동 반경이 넓어졌다. 차량 내부는 싱글(Single) 칸, 패밀리(Family) 칸, 퍼스트 클래스(First Class) 칸으로 구분된다. 패밀리 칸은 여성과 가족 단위 이용객을 위한 공간으로 운영되며, 싱글 칸은 남성 단독 구역으로 제공되는 등 성별·가족 구조가 공공교통 설계에 반영되어 있다. 2시간 이용권이 4리얄(약 1,500원)에 불과해 여행자와 장기 체류 외국인 모두 부담 없이 이용할 수 있다. 올해 8월 기준, 메트로는 개통 9개월 만에 이용객 1억 명을 돌파하고 99.7%의 정시 운행률을 기록해 대중교통 전환의 효과를 수치로 입증했다.</p>
+<div class="photo-grid">
+    <img src="kofice-17-images/img-017.jpg" alt="패밀리 칸 승강장에서 열차를 기다리는 이용객들 — 출처: 통신원 촬영">
+    <img src="kofice-17-images/img-018.jpg" alt="싱글 칸 승강장에서 열차를 기다리는 이용객들 — 출처: 통신원 촬영">
+</div>
+<p class="photo-caption">▲ 패밀리 칸·싱글 칸 승강장에서 열차를 기다리는 이용객들 — 출처: <span class="correspondent">통신원 촬영</span></p>
+<p>리야드 메트로는 단순한 교통수단의 도입이 아니라, 도시의 시간 구조와 시민의 생활 방식, 그리고 사우디의 미래 전략을 동시에 재편하는 역사적 사건이다.</p>
+<div class="sources">
+    <p class="sources-label">사진 출처 및 참고자료</p>
+    <p>통신원 촬영</p>
+    <p>사우디 관광청, <a href="https://www.visitsaudi.com/en/destinations/riyadh/stories/riyadh-metro" target="_blank" rel="noopener">visitsaudi.com</a></p>
+    <p>《Archdaily》 (2025. 01. 08). Riyadh Metro Orange Line Now Is Operational, <a href="https://www.archdaily.com/1025459/riyadh-metro-orange-line-now-operational-marking-completion-of-citywide-network-in-saudi-arabia" target="_blank" rel="noopener">archdaily.com</a></p>
+    <p>《ARAB NEWS》 (2024. 11. 21). Traffic congestion in Riyadh needs a lifeline, <a href="https://arab.news/wdfez" target="_blank" rel="noopener">arab.news/wdfez</a></p>
+    <p>《ARAB NEWS》 (2024. 11. 30). Riyadh launches Middle East's largest urban rail network, <a href="https://arab.news/bqbrn" target="_blank" rel="noopener">arab.news/bqbrn</a></p>
+    <p>《ARAB NEWS》 (2025. 04. 03). Riyadh Metro on its way to reshaping the city, <a href="https://arab.news/9u2hb" target="_blank" rel="noopener">arab.news/9u2hb</a></p>
+    <p>《ARAB NEWS》 (2025. 08. 26). Riyadh Metro surpasses 100m passengers in under 9 months, <a href="https://arab.news/n52r6" target="_blank" rel="noopener">arab.news/n52r6</a></p>
+    <p>《Railway-News》 (2025. 11. 24). Riyadh Metro Receives "Mega Project of the Year" Award from MEED, <a href="https://railway-news.com/riyadh-metro-receives-mega-project-of-the-year-award-from-meed/" target="_blank" rel="noopener">railway-news.com</a></p>
+</div>
+</div></div>
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+<h2>Cultural and Historical Shift: From a Car City to a City of Shared Space</h2>
+<p>Riyadh has long been a city in absolute dependence on the car. Movement took place within a vehicle-centred culture premised on privacy and individuality, and the urban structure was designed around wide roads, large intersections, and motorway networks — leaving virtually no experience of citizens sharing the same space while in transit. In this context, the opening of the Riyadh Metro is not simply the introduction of a new mode of transport: it is the structural turning point at which 'public movement' becomes a daily experience for the first time. The Riyadh Metro, with all lines operational as of January 2025, is a symbolic event demonstrating that the city has formally joined the ranks of a 'global metropolis' competing with Dubai, Abu Dhabi, and Doha. The project is the centrepiece of the King Abdulaziz Project for Riyadh Public Transport, promoted by the Arriyadh Development Authority (ADA); design began in 2012 and construction officially broke ground on 3 April 2014.</p>
+<div class="photo-grid">
+    <img src="kofice-17-images/img-000.jpg" alt="Riyadh Metro promotional image — Source: Saudi Tourism Authority">
+    <img src="kofice-17-images/img-001.jpg" alt="Riyadh Metro route map — Source: Saudi Tourism Authority">
+</div>
+<p class="photo-caption">▲ Riyadh Metro promotional image and route map — Source: Saudi Tourism Authority</p>
+<h2>Transitional Policy: Uber Support and Integrated Bus Network</h2>
+<p>In the early stages of the metro's opening, the Saudi government implemented the unusual policy of subsidising Uber costs to help citizens adapt. When a metro station and a destination are within 3km of each other, Uber rides are provided free of charge twice a day on weekdays, enabling citizens with little experience of public transport to embrace the new way of getting around. The correspondent's nearest station is more than 3km away, so she cannot take full advantage of the scheme — but on fine days she walks to the metro, or sets a destination within 3km to make use of the Uber subsidy, experiencing first-hand the changing transport environment. This opening was also built around integrated operation with the Riyadh bus network, launched in March 2023. A bus system comprising over 2,800 stops and more than 80 routes densely connects metro stations with residential, commercial, and existing city-centre areas, designed to solve the First/Last Mile problem. Riyadh bus stops are equipped with sealed, air-conditioned shelters, allowing citizens to wait comfortably even in the extreme heat.</p>
+<div class="photo-grid">
+    <img src="kofice-17-images/img-013.jpg" alt="Train interior packed with passengers — correspondent's own photograph">
+    <img src="kofice-17-images/img-014.jpg" alt="Train interior packed with passengers — correspondent's own photograph">
+</div>
+<p class="photo-caption">▲ Train interior packed with passengers — Source: <span class="correspondent">correspondent's own photographs</span></p>
+<h2>Economic Shift: From Extreme Congestion to Urban Competitiveness</h2>
+<p>Riyadh has long suffered from severe traffic congestion. In a structure where approximately 90% of all journeys rely on private vehicles, it was common for a 20–30 minute distance to take two or three hours during rush hour. The Riyadh Metro is alleviating these bottlenecks — reduced commute times are naturally raising worker productivity and daily efficiency, and stabilising workforce management for companies. This change aligns closely with Saudi Arabia's national strategy, Vision 2030. The project involved world-class companies including Bechtel (USA), Siemens (Germany), FCC (Spain), and Egis·Systra (France), demonstrating Saudi Arabia's capacity to operate and coordinate mega-scale urban projects to international standards. In November 2025, Riyadh Metro was selected as the 'MENA Mega Project of the Year 2025' by MEED, in recognition of its innovative engineering and complex network coordination.</p>
+<div class="article-photo"><img src="kofice-17-images/img-015.jpg" alt="Severe traffic congestion on a Riyadh road — Source: Arab News"></div>
+<p class="photo-caption">▲ Severe traffic congestion on a Riyadh road — Source: Arab News</p>
+<h2>Design and Social Shift: The City's Face and Expanding Mobility Rights</h2>
+<p>The Riyadh Metro is built as one of the world's largest driverless systems, comprising 6 lines, 85 stations, and approximately 176km of track. In particular, the KAFD station designed by world-renowned architect Zaha Hadid has attracted international attention for its facade inspired by desert winds and geological strata, its organically flowing interior spaces, and the sculptural quality of its high-performance concrete panels.</p>
+<div class="article-photo"><img src="kofice-17-images/img-016.jpg" alt="KAFD station designed by Zaha Hadid — Source: Archdaily"></div>
+<p class="photo-caption">▲ KAFD station designed by Zaha Hadid — Source: Archdaily</p>
+<p>The social changes are also significant. The metro has expanded mobility rights for women, young people, and foreigners, and the appearance of a travel option that doesn't require driving has broadened daily activity ranges. Train carriages are divided into Single, Family, and First Class sections — Family carriages serve women and family groups, while Single carriages are designated for men travelling alone, reflecting gender and family structure in public transport design. A two-hour ticket costs just 4 riyals (approximately ₩1,500), making it affordable for both visitors and long-term foreign residents. As of August 2025, the metro surpassed 100 million passengers in under nine months of operation and recorded a 99.7% on-time rate, proving the effect of the public transport transition in numbers.</p>
+<div class="photo-grid">
+    <img src="kofice-17-images/img-017.jpg" alt="Passengers waiting at the Family carriage platform — correspondent's own photograph">
+    <img src="kofice-17-images/img-018.jpg" alt="Passengers waiting at the Single carriage platform — correspondent's own photograph">
+</div>
+<p class="photo-caption">▲ Passengers waiting at Family and Single carriage platforms — Source: <span class="correspondent">correspondent's own photographs</span></p>
+<p>The Riyadh Metro is not simply the introduction of a transport mode: it is a historical event that simultaneously reshapes the city's temporal structure, citizens' way of life, and Saudi Arabia's future strategy.</p>
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>Correspondent's own photographs</p>
+    <p>Saudi Tourism Authority, <a href="https://www.visitsaudi.com/en/destinations/riyadh/stories/riyadh-metro" target="_blank" rel="noopener">visitsaudi.com</a></p>
+    <p><em>Archdaily</em> (2025, January 8). Riyadh Metro Orange Line Now Is Operational, <a href="https://www.archdaily.com/1025459/riyadh-metro-orange-line-now-operational-marking-completion-of-citywide-network-in-saudi-arabia" target="_blank" rel="noopener">archdaily.com</a></p>
+    <p><em>Arab News</em> (2024, November 21). Traffic congestion in Riyadh needs a lifeline, <a href="https://arab.news/wdfez" target="_blank" rel="noopener">arab.news/wdfez</a></p>
+    <p><em>Arab News</em> (2024, November 30). Riyadh launches Middle East's largest urban rail network, <a href="https://arab.news/bqbrn" target="_blank" rel="noopener">arab.news/bqbrn</a></p>
+    <p><em>Arab News</em> (2025, April 3). Riyadh Metro on its way to reshaping the city, <a href="https://arab.news/9u2hb" target="_blank" rel="noopener">arab.news/9u2hb</a></p>
+    <p><em>Arab News</em> (2025, August 26). Riyadh Metro surpasses 100m passengers in under 9 months, <a href="https://arab.news/n52r6" target="_blank" rel="noopener">arab.news/n52r6</a></p>
+    <p><em>Railway-News</em> (2025, November 24). Riyadh Metro Receives "Mega Project of the Year" Award from MEED, <a href="https://railway-news.com/riyadh-metro-receives-mega-project-of-the-year-award-from-meed/" target="_blank" rel="noopener">railway-news.com</a></p>
+</div>
+</div></div>
+    </div>
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+    </script>
+    <div class="float-nav">
+        <a href="kofice-16.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-18.html">Next →</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>석유를 전시하다: 리야드 '블랙 골드 박물관(Black Gold Museum)' 개관 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 300; line-height: 1.35; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 560px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 14px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 36px 28px 48px; }
+            footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+    
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+    
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-41.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="석유를 전시하다: 리야드 '블랙 골드 박물관(Black Gold Museum)' 개관 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-41.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="석유를 전시하다: 리야드 '블랙 골드 박물관(Black Gold Museum)' 개관 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+    <nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Articles</a>
+        <a href="../essays.html">Essays</a>
+        <a href="../engagement.html">Teaching</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+    <div class="article-header">
+        <div class="header-accent">
+            <img src="../images/kofice-logo.png" alt="KOFICE">
+            <div class="accent-divider"></div>
+            <span style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6f6f6f;">KOFICE</span>
+        </div>
+        <div class="header-content">
+            <div class="header-title-col">
+                <div>
+                    <p class="article-category">시각예술 / 문화공간 — Visual Arts &amp; Cultural Space</p>
+                    <h1 class="article-title-ko">석유를 전시하다: 리야드 '블랙 골드 박물관(Black Gold Museum)' 개관</h1>
+                    <p class="article-title-en">Exhibiting Oil: Riyadh's Black Gold Museum Opens</p>
+                </div>
+            </div>
+            <div class="header-meta-col">
+                <div class="meta-grid">
+                    <div class="meta-row"><span class="meta-label">Published</span><span class="meta-value">12 April 2026</span></div>
+                    <div class="meta-row"><span class="meta-label">Publication</span><span class="meta-value">KOFICE — Korea Foundation for International Cultural Exchange</span></div>
+                    <div class="meta-row"><span class="meta-label">Author</span><span class="meta-value">정효정 (Hyojung Jung) — Saudi Arabia Correspondent</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-bar">
+        <button class="lang-btn active" onclick="showLang('ko')" id="btn-ko">한국어</button>
+        <button class="lang-btn" onclick="showLang('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="article-body">
+        <div class="article-sidebar"><span class="sidebar-label">KOFICE · April 2026</span></div>
+
+        <!-- KOREAN -->
+        <div class="article-text" id="text-ko"><div class="text-ko">
+
+<p>사우디아라비아 리야드에 최근 개관한 블랙 골드 박물관(Black Gold Museum)은 석유의 역사와 그 사회적인 영향을 현대미술을 통해 조명하는 문화 공간이다. 이번 전시에서는 일명 '블랙 골드(Black Gold)'로 불리는 석유를 단순한 산업 자원이 아닌 하나의 서사로 풀어냈다.</p>
+
+<div class="article-photo"><img src="kofice-41-images/img-01.jpg" alt="블랙 골드 박물관 외관 — 출처: 칸바스(Canvas)"></div>
+<p class="photo-caption">▲ 블랙 골드 박물관 외관 — 출처: 칸바스(Canvas)</p>
+
+<p>이 박물관은 리야드의 킹 압둘라 석유연구센터(King Abdullah Petroleum Studies and Research Center, KAPSARC) 내에 위치한다. 건물은 자하 하디드(Zaha Hadid) 건축가가 설계한 복합 단지의 일부로, 과거 연구 도서관으로 사용되던 공간을 전시 공간으로 전환해 조성됐다. 산업 연구 중심의 시설이 문화 공간으로 바뀌었다는 점은, 사우디가 기존 산업 기반을 문화 자산으로 확장하고 있음을 보여준다.</p>
+
+<p>블랙 골드 박물관(Black Gold Museum)은 약 170명의 작가가 참여하고 350여 점의 작품을 선보이는 전시를 기반으로 운영된다. 사우디를 대표하는 마날 알도와얀(Manal AlDowayan), 무한나드 쇼노(Muhannad Shono), 아흐메드 마테르(Ahmed Mater), 모하메드 알파라즈(Mohammad Alfaraj), 아이만 제다니(Ayman Zedani) 현대미술가 등이 참여했으며, 이들은 회화와 설치, 영상 등 다양한 매체를 통해 석유가 인류 사회에 미친 영향을 다각도로 다룬다. 전시는 '만남(Encounter)', '꿈(Dreams)', '의문(Doubts)', '미래(Future)'의 네 개 구역으로 구성되며, 이를 통해 석유의 발견에서 출발해 산업화와 경제 성장, 그에 따른 사회적인 변화, 그리고 미래에 대한 질문까지 이어지는 흐름을 단계적으로 제시한다. 이를 통해 관람객은 석유를 단순한 자원이 아니라 인간 사회와 긴밀히 연결된 역사적·문화적 요소로 이해하게 된다.</p>
+
+<div class="article-photo"><img src="kofice-41-images/img-02.jpg" alt="블랙 골드 박물관 전시장 내부 — 출처: 칸바스(Canvas)"></div>
+<div class="article-photo" style="margin-top:8px;"><img src="kofice-41-images/img-04.jpg" alt="블랙 골드 박물관 전시장 내부 — 출처: 칸바스(Canvas)"></div>
+<p class="photo-caption">▲ 블랙 골드 박물관 전시장 내부 — 출처: 칸바스(Canvas)</p>
+
+<p>블랙 골드 박물관은 2020년 사우디 문화부와 에너지부가 공동으로 발표한 프로젝트로, 삶의 질 향상 프로그램(Quality of Life Program)과 '전문화 박물관 이니셔티브(Specialized Museums Initiative)'의 일환으로 추진됐다. 이는 특정 주제에 특화된 박물관을 확충해 사우디아라비아의 문화 생태계를 다각화하려는 정책적 흐름과 연결된다. 사우디아라비아는 세계적인 석유 생산국으로, 석유는 국가 경제뿐 아니라 사회 구조와 정체성을 형성해온 핵심 요소다. 이러한 자원을 문화적인 맥락에서 재해석한다는 점은, 산업 중심의 국가 서사를 문화적인 담론으로 확장하려는 시도로 볼 수 있다.</p>
+
+<div class="article-photo"><img src="kofice-41-images/img-03.jpg" alt="블랙 골드 박물관에 설치된 작품들 — 출처: 비지트사우디(VisitSaudi)"></div>
+<div class="article-photo" style="margin-top:8px;"><img src="kofice-41-images/img-05.jpg" alt="블랙 골드 박물관에 설치된 작품들 — 출처: 비지트사우디(VisitSaudi)"></div>
+<p class="photo-caption">▲ 블랙 골드 박물관에 설치된 작품들 — 출처: 비지트사우디(VisitSaudi)</p>
+
+<p>전시장은 다양한</p> 공간 연출 속에서 영상과 설치 작품을 결합한 구성으로 관람 흐름을 형성한다. 일부 작품은 대형 화면과 소리를 활용해 석유 채굴과 산업화 과정을 시각적으로 제시하고, 오브제(objet)와 문헌(text)을 통해 자원의 의미를 탐색하도록 구성된 점이 특징이다. 또한 석유가 인간의 삶과 사회에 미친 영향을 다양한 관점에서 다루는 작품들도 포함돼, 산업 자원을 다층적으로 이해할 수 있도록 한다.</p>
+
+<p>이처럼 최근 사우디 전역에서는 미술관과 전시 공간이 빠르게 늘어나고 있다. 블랙 골드 박물관(Black Gold Museum)은 이러한 변화 속에서 등장한 대표적인 사례다. 석유로 성장한 국가가 이제 그 자원을 '이야기'로 재구성하고 있다는 점에서, 이 미술관은 사우디가 나아가고자 하는 방향을 드러낸다. 산업의 중심에 있던 자원이 문화적 해석의 대상이 되는 이 변화는, 사우디가 글로벌(global) 문화 환경 속에서 새로운 정체성을 구축해가는 과정으로 읽힌다.</p>
+
+<p>특히 블랙 골드 박물관은 석유를 산업적 성과로만 다루지 않고, 그것이 사우디아라비아의 사회적 기억과 정체성 속에서 어떻게 축적되고 이해되어 왔는지를 보여준다. 전시는 석유 산업의 발전 과정과 더불어 그것이 개인의 삶, 노동 구조, 도시 형성에 미친 영향을 함께 다루며 석유의 의미를 확장한다. 이는 석유를 경제적 가치 중심으로만 보던 기존 관점에서 벗어나, 이를 사회적·문화적 경험의 영역으로 다시 바라보게 한다.</p>
+
+<div class="sources">
+    <p class="sources-label">사진 출처 및 참고자료</p>
+    <p>— ≪아트뉴스(ARTnews)≫ (2026. 4. 7). Riyadh's New Black Gold Museum Attempts to Convey 'The Legacy of Oil Through Art'. <a href="https://www.artnews.com/list/art-news/news/riyadh-new-black-gold-museum-legacy-oil-through-art-1234780355/" target="_blank">artnews.com</a></p>
+    <p>— ≪칸바스(Canvas)≫ (2026. 4. 8). Black Gold Museum Opens in Riyadh. <a href="https://canvasonline.com/black-gold-museum-opens-in-riyadh/" target="_blank">canvasonline.com</a></p>
+    <p>— ≪사우디페디아(Saudipedia)≫ (2025. 10. 11). Black Gold Museum. <a href="https://saudipedia.com/en/black-gold-museum" target="_blank">saudipedia.com</a></p>
+    <p>— 비지트사우디(VisitSaudi). <a href="https://www.visitsaudi.com/en/riyadh/attractions/black-gold-museum" target="_blank">visitsaudi.com</a></p>
+    <p>— 블랙 골드 박물관 공식 X (@BGM_moc). <a href="https://x.com/BGM_moc" target="_blank">x.com/BGM_moc</a></p>
+</div>
+
+        </div></div>
+
+        <!-- ENGLISH -->
+        <div class="article-text hidden" id="text-en"><div class="text-en">
+
+<p>The Black Gold Museum, recently opened in Riyadh, Saudi Arabia, is a cultural space that examines the history of oil and its social impact through contemporary art. The exhibition reframes oil — known as "Black Gold" — not merely as an industrial resource, but as a narrative.</p>
+
+<div class="article-photo"><img src="kofice-41-images/img-01.jpg" alt="Black Gold Museum exterior — Source: Canvas"></div>
+<p class="photo-caption">▲ Black Gold Museum exterior — Source: Canvas</p>
+
+<p>The museum is located within the King Abdullah Petroleum Studies and Research Center (KAPSARC) in Riyadh. The building forms part of a complex designed by architect Zaha Hadid; what was formerly a research library has been converted into exhibition space. The transformation of an industrial research facility into a cultural venue reflects Saudi Arabia's broader effort to reframe its existing industrial foundations as cultural assets.</p>
+
+<p>The Black Gold Museum features works by approximately 170 artists, with over 350 pieces on display. Leading Saudi contemporary artists — including Manal AlDowayan, Muhannad Shono, Ahmed Mater, Mohammad Alfaraj, and Ayman Zedani — explore, through painting, installation, and video, the manifold ways oil has shaped human society. The exhibition is organised into four zones: <em>Encounter</em>, <em>Dreams</em>, <em>Doubts</em>, and <em>Future</em> — tracing a narrative arc from the discovery of oil through industrialisation and economic growth, to social transformation and questions about what lies ahead. Visitors are invited to understand oil not simply as a resource, but as a historical and cultural force intimately bound to human society.</p>
+
+<div class="article-photo"><img src="kofice-41-images/img-02.jpg" alt="Black Gold Museum interior — Source: Canvas"></div>
+<div class="article-photo" style="margin-top:8px;"><img src="kofice-41-images/img-04.jpg" alt="Black Gold Museum interior — Source: Canvas"></div>
+<p class="photo-caption">▲ Black Gold Museum interior — Source: Canvas</p>
+
+<p>The Black Gold Museum was jointly announced in 2020 by Saudi Arabia's Ministries of Culture and Energy, forming part of the Quality of Life Program and the Specialized Museums Initiative. These programmes aim to diversify Saudi Arabia's cultural ecosystem through the development of thematically focused museums. As one of the world's foremost oil-producing nations, Saudi Arabia has long had its economy, social structure, and national identity shaped by oil. Reinterpreting this resource within a cultural context represents an attempt to expand a resource-centred national narrative into the realm of cultural discourse.</p>
+
+<div class="article-photo"><img src="kofice-41-images/img-03.jpg" alt="Artworks installed at the Black Gold Museum — Source: VisitSaudi"></div>
+<div class="article-photo" style="margin-top:8px;"><img src="kofice-41-images/img-05.jpg" alt="Artworks installed at the Black Gold Museum — Source: VisitSaudi"></div>
+<p class="photo-caption">▲ Artworks installed at the Black Gold Museum — Source: VisitSaudi</p>
+
+<p>The exhibition combines video and installation works within varied spatial arrangements to guide the visitor's journey. Some works use large-scale screens and sound to render the processes of oil extraction and industrialisation visually; others employ objects and text to invite reflection on the meaning of resources. Works exploring oil's impact on human life and society from multiple perspectives are also included, enabling a layered understanding of an industrial resource.</p>
+
+<p>Across Saudi Arabia, museums and exhibition spaces are multiplying rapidly. The Black Gold Museum stands as a representative case within this broader transformation. In a nation built on oil, the very act of recasting that resource as "story" signals the direction Saudi Arabia intends to move. The shift — from industrial resource to subject of cultural interpretation — reads as part of Saudi Arabia's process of constructing a new identity within a global cultural landscape.</p>
+
+<p>The Black Gold Museum does not treat oil solely as an industrial achievement; it explores how oil has been accumulated and understood within Saudi Arabia's social memory and national identity. The exhibition extends beyond the development of the oil industry to address oil's impact on individual lives, structures of labour, and the formation of cities — expanding the very meaning of the resource. This invites us to move beyond viewing oil through the lens of economic value alone, and to recognise it as a domain of social and cultural experience.</p>
+
+<div class="sources">
+    <p class="sources-label">Sources</p>
+    <p>— <em>ARTnews</em> (7 April 2026). Riyadh's New Black Gold Museum Attempts to Convey 'The Legacy of Oil Through Art'. <a href="https://www.artnews.com/list/art-news/news/riyadh-new-black-gold-museum-legacy-oil-through-art-1234780355/" target="_blank">artnews.com</a></p>
+    <p>— <em>Canvas</em> (8 April 2026). Black Gold Museum Opens in Riyadh. <a href="https://canvasonline.com/black-gold-museum-opens-in-riyadh/" target="_blank">canvasonline.com</a></p>
+    <p>— <em>Saudipedia</em> (11 October 2025). Black Gold Museum. <a href="https://saudipedia.com/en/black-gold-museum" target="_blank">saudipedia.com</a></p>
+    <p>— VisitSaudi. <a href="https://www.visitsaudi.com/en/riyadh/attractions/black-gold-museum" target="_blank">visitsaudi.com</a></p>
+    <p>— Black Gold Museum official X (@BGM_moc). <a href="https://x.com/BGM_moc" target="_blank">x.com/BGM_moc</a></p>
+</div>
+
+        </div></div>
+    </div>
+
+    <footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+    <div class="float-nav">
+        <a href="kofice-40.html">← Previous</a>
+        <a href="../writing.html" class="float-center">All Articles</a>
+        <a href="kofice-42.html">Next →</a>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+            document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>
