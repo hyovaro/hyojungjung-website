@@ -147,6 +147,14 @@
     /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
     .sources p,.sources p a,.sources a{font-size:12px;}
     @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
 </style>
     <!-- launch-meta -->
     <link rel="canonical" href="https://hyojungjung.com/articles/kofice-21.html">
@@ -176,7 +184,7 @@
         <a href="../theatre.html">Theatre</a>
         <a href="../engagement.html">Engagement</a>
         <a href="../writing.html" class="active">Journalism</a>
-        <a href="../essays.html">Essays</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
     </div>
