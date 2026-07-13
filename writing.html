@@ -243,11 +243,11 @@
     
     /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
     /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
-    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    .about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
     /* Keyboard focus visibility on every interactive element */
     a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
     /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
-    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    @media (hover:hover){.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
     /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
     @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
     /* Press/active feedback for touch */
