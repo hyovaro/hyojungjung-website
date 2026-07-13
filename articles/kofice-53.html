@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식을 넘어 공간으로, 사우디를 사로잡은 한식의 진화 — 알코바르 '코이 코리안 카페 앤 퀴진' — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-53.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="음식을 넘어 공간으로, 사우디를 사로잡은 한식의 진화 — 알코바르 '코이 코리안 카페 앤 퀴진' — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-53.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="음식을 넘어 공간으로, 사우디를 사로잡은 한식의 진화 — 알코바르 '코이 코리안 카페 앤 퀴진' — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../engagement.html">Engagement</a>
+        <a href="../writing.html" class="active">Journalism</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">음식을 넘어 공간으로, 사우디를 사로잡은 한식의 진화 — 알코바르 '코이 코리안 카페 앤 퀴진(Koyee Korean Cafe and Cuisine)'을 가다</h1>
+                <p class="article-title-en">Beyond Food, Into Space: The Evolution of Korean Cuisine Winning Over Saudi Arabia — A Visit to Koyee Korean Cafe and Cuisine in Al Khobar</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">June 29, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Korean Food / Restaurants</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>사우디아라비아에서 한류는 이제 음악과 드라마를 넘어 식문화로까지 빠르게 확산되고 있다. 한국 드라마와 케이팝을 통해 한국에 관심을 갖게 된 현지인들이 한식당을 찾는다. 그뿐만이 아니다. 한국을 여행했던 외국인들 또한 여행지에서 맛본 음식을 다시 먹기 위해 한식당에 온다. 최근에는 단순히 한식을 먹는 것을 넘어 한국적인 공간과 분위기, 문화를 함께 경험하려는 수요도 커지고 있다.</p>
+
+            <p>사우디 동부의 경제 중심지 알코바르(Al Khobar)에 위치한 코이 코리안 카페 앤 퀴진(Koyee Korean Cafe and Cuisine)은 이러한 흐름을 보여 주는 곳이다. 리야드점과 알코바르점을 운영 중인 코이(Koyee)는 정통 한식과 한국식 베이커리, 문화 프로그램을 함께 선보이며 현지에서 한국 문화를 경험하는 공간으로 자리 잡고 있다. 통신원은 알코바르점을 찾아 최명희 마케팅 총괄 이사를 만나 코이의 시작과 운영 철학, 그리고 사우디 고객들의 반응이 어떤지 이야기를 들었다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-01.jpg" alt="코이 코리안 카페 앤 퀴진 전경">
+            </div>
+            <div class="article-photo">
+                <img src="kofice-53-images/img-02.jpg" alt="코이 코리안 카페 앤 퀴진 내부">
+            </div>
+            <p class="photo-caption">코이 코리안 카페 앤 퀴진 전경 및 내부 — 출처: 통신원 촬영</p>
+
+            <h2>Q. 코이를 시작하게 된 계기는 무엇인가요?</h2>
+
+            <p>코이의 최명희 마케팅 총괄 이사는 사우디에서 건설업을 운영해 온 기업이 사업 영역을 외식업으로 확장하면서 시작한 프로젝트가 코이라고 소개했다. 그는 2025년 6월까지 약 17년간 에미레이트항공 두바이 베이스에서 근무했으며, 지난해 7월 사우디로 옮겨 코이와 함께 새로운 삶을 시작했다고 말했다. 오랜 해외 생활을 하며 한국 문화와 음식이 사람들을 자연스럽게 이어 주는 힘이 있다는 것을 느꼈다며 사우디에서도 "한국 문화를 향한 관심이 생각보다 크다는 것을 직접 경험했고, 단순히 한식을 판매하는 식당이 아니라 한국의 음식과 문화를 함께 경험할 수 있는 공간을 만들고 싶었다"고 설명했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-03.jpg" alt="최명희 마케팅 총괄 이사">
+            </div>
+            <p class="photo-caption">최명희 마케팅 총괄 이사 — 출처: 통신원 촬영</p>
+
+            <p>또한 브랜드명 '코이(Koyee)'는 한국(Korean)을 의미하는 'Ko'와 창업자의 성인 'Lee'에서 착안한 이름으로, 동양 문화권에서 번영과 행운을 상징하는 잉어(こい, Koi)의 의미 또한 함께 담았다고 소개했다. 이어 알코바르를 선택한 이유에 대해서는 사우디 동부의 경제 중심지이자 다양한 국적의 사람들이 함께 생활하는 국제도시라는 점을 꼽았다. 이곳은 새로운 문화를 향한 관심이 높고 성장 가능성이 큰 지역인 데다 사우디 동부 지역에도 제대로 된 한국의 맛과 문화를 소개할 공간이 필요하다고 판단했다고 설명했다.</p>
+
+            <p>통신원이 매장을 둘러보며 가장 먼저 느낀 것 역시 음식이 아닌 공간의 분위기였다. 넓고 개방된 실내와 한국적인 감성을 담은 인테리어, 곳곳에 놓인 소품들은 일반적인 식당이라기보다 한국 문화를 경험하는 복합문화공간에 가까운 인상을 남겼다. 실내 곳곳에는 한국적인 소품과 장식이 배치돼 있었고, 차분한 분위기 속에서 식사를 즐기는 현지 손님들의 모습도 눈에 띄었다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-04.jpg" alt="한국적 감성을 담은 코이의 실내 공간">
+            </div>
+            <p class="photo-caption">한국적 감성을 담은 코이의 실내 공간 — 출처: 통신원 촬영</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-05.jpg" alt="코이 코리안 카페 앤 퀴진 인테리어">
+            </div>
+            <p class="photo-caption">코이 코리안 카페 앤 퀴진 인테리어 — 출처: 통신원 촬영</p>
+
+            <h2>Q. 코이의 대표 메뉴는 무엇이며, 한국의 맛을 어떻게 구현하고 있나요?</h2>
+
+            <p>최 이사는 코이가 한국인 수석 요리사가 주방을 책임지며 정통 한식의 맛을 그대로 구현하는 것을 원칙으로 하고 있다고 설명했다. 식재료와 조리법 모두 한국 본연의 맛을 최대한 그대로 전달하는 데 중점을 두고 있으며, 한국에서 먹는 것과 같은 맛을 경험할 수 있도록 노력하고 있다고 말했다. 대표 메뉴는 와규바비큐, 돌솥비빔밥, 닭갈비다. 최근에는 메밀막국수와 메밀치킨도 꾸준히 인기를 얻고 있다고 전했다. 특히 메밀막국수는 사우디에서는 쉽게 접하기 어려운 메뉴임에도 이를 맛본 고객들의 재방문율이 높을 정도로 좋은 반응을 얻고 있다고 소개했다. 그는 고객들이 "시원하고 깔끔하다", "더운 날씨와 잘 어울린다", "차가운 국수에 대한 편견을 깼다"는 반응을 자주 보인다고 덧붙였다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-06.jpg" alt="여름 특별메뉴 메밀 막국수">
+            </div>
+            <p class="photo-caption">여름 특별메뉴 메밀 막국수 — 출처: 통신원 촬영</p>
+
+            <p>통신원 역시 메밀막국수를 직접 맛봤다. 시원한 육수와 담백한 메밀 향이 무더운 사우디의 여름과 잘 어울렸다. 강원도에서 맛본 메밀막국수가 떠오르는 정통의 맛이었다. 실제로 한국 강원도를 여행하며 메밀막국수를 맛본 경험이 있는 한 외국인 고객은 "사우디에서 다시 이런 정통 메밀막국수를 맛볼 수 있을 줄은 몰랐다. 한국 여행의 기억이 자연스럽게 떠올랐다"고 통신원에게 전했다.</p>
+
+            <h2>Q. 한국식 베이커리에 대한 현지 고객들의 반응은 어떠한가요?</h2>
+
+            <p>최 이사는 한국인 제빵사가 직접 만드는 다양한 빵과 디저트가 현지 고객뿐 아니라 다른 여러 국적의 외국인들에게도 좋은 반응을 얻고 있다고 설명했다. 또한 한국식 베이커리가 예상보다 훨씬 큰 인기를 얻고 있으며, 식사 후 빵과 커피를 함께 즐기는 문화도 자연스럽게 자리 잡고 있다고 전했다.</p>
+
+            <p>이처럼 한국식 베이커리가 현지에서 좋은 반응을 얻는 배경에는 한국과 사우디의 공통된 커피 문화가 있다. 한국처럼 사우디 역시 카페 이용 문화가 일상화돼 있고, 커피와 함께 베이커리를 즐기는 소비문화가 자연스럽게 형성돼 있다. 이러한 공통된 식문화는 한국식 베이커리가 현지에 자연스럽게 자리 잡는 데 긍정적인 역할을 하고 있다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-07.jpg" alt="한국식 베이커리">
+            </div>
+            <div class="article-photo">
+                <img src="kofice-53-images/img-08.jpg" alt="한국식 디저트">
+            </div>
+            <p class="photo-caption">한국식 베이커리와 디저트 — 출처: 통신원 촬영</p>
+
+            <p>한국 여행 경험이 있는 외국인 고객은 한국에서 먹었던 단팥빵을 사우디에서는 쉽게 찾을 수 없었는데 코이에서 다시 맛볼 수 있어 정말 반가웠다고, 덕분에 한국 여행의 추억이 자연스럽게 떠올랐다고 통신원에게 말했다.</p>
+
+            <h2>Q. 최근 사우디에서 한류와 한식에 대한 관심을 어떻게 체감하고 계신가요?</h2>
+
+            <p>최 이사는 한국 드라마와 케이팝을 통해 한국에 관심을 갖게 된 고객들이 한식을 맛보기 위해 매장을 찾는 경우가 꾸준히 늘고 있다고 말했다. 식사 후 한국 여행이나 한국어를 묻는 고객들도 많았으며, 지난 2월 개최한 한글 워크숍 역시 기대 이상으로 많은 사람들이 참여했다고 한다. 그는 "한식은 이제 단순한 음식이 아니라 한국 문화를 경험하는 하나의 창구가 되고 있다는 것을 더욱 실감했다"고 말했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-09.jpg" alt="코이에서 열린 한글 워크숍">
+            </div>
+            <p class="photo-caption">코이에서 열린 한글 워크숍 — 출처: 코이 코리안 카페 앤 퀴진 공식 인스타그램(@koyeekoreancafeandcuisine)</p>
+
+            <h2>Q. 앞으로 코이의 계획은 무엇인가요?</h2>
+
+            <p>최 이사는 앞으로도 한국의 맛을 정직하게 전하는 것은 물론, 음식과 함께 한국 문화를 경험할 수 있는 다양한 프로그램을 지속적으로 선보일 계획이라고 밝혔다. 또한 한국식 베이커리와 한식당의 메뉴를 꾸준히 개발해 장기적으로는 사우디 동부를 대표하는 한국 레스토랑을 넘어 사우디 전역에 한국의 맛과 문화를 알리는 브랜드로 성장하는 것이 목표라고 말했다.</p>
+
+            <p>코이의 운영 방식은 한식을 중심으로 공간과 문화 경험을 함께 제공한다는 점에서 의미가 있다. 이처럼 음식을 매개로 한국의 라이프스타일과 문화를 함께 전달하는 시도는 사우디에서 한식이 단순한 외식을 넘어 하나의 문화 경험으로 자리 잡아가고 있음을 보여 준다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 통신원 촬영</p>
+                <p>— 코이 코리안 카페 앤 퀴진(Koyee Korean Cafe and Cuisine) 공식 인스타그램(@koyeekoreancafeandcuisine), <a href="https://www.instagram.com/koyeekoreancafeandcuisine/?hl=en" target="_blank">instagram.com/koyeekoreancafeandcuisine</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>In Saudi Arabia, the Korean Wave is now spreading rapidly beyond music and drama into food culture. Locals who came to take an interest in Korea through Korean dramas and K-pop are seeking out Korean restaurants. And it does not stop there: foreigners who have travelled in Korea also come to Korean restaurants to taste again the dishes they enjoyed on their trip. Lately, demand has been growing not simply to eat Korean food but to experience a Korean space, atmosphere and culture along with it.</p>
+
+            <p>Koyee Korean Cafe and Cuisine, located in Al Khobar — the economic hub of Saudi Arabia's Eastern Province — is a place that captures this trend. Operating branches in both Riyadh and Al Khobar, Koyee presents authentic Korean food, a Korean-style bakery and cultural programmes together, establishing itself as a space in which to experience Korean culture locally. The correspondent visited the Al Khobar branch and met marketing director Choi Myung-hee to hear about Koyee's beginnings, its operating philosophy, and how Saudi customers have responded.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-01.jpg" alt="Exterior of Koyee Korean Cafe and Cuisine">
+            </div>
+            <div class="article-photo">
+                <img src="kofice-53-images/img-02.jpg" alt="Interior of Koyee Korean Cafe and Cuisine">
+            </div>
+            <p class="photo-caption">The exterior and interior of Koyee Korean Cafe and Cuisine — Source: photo by the correspondent</p>
+
+            <h2>Q. What led you to start Koyee?</h2>
+
+            <p>Koyee's marketing director Choi Myung-hee explained that Koyee is a project launched by a company that had run a construction business in Saudi Arabia as it expanded into the food-service sector. She said she had worked at Emirates' Dubai base for about seventeen years until June 2025, then moved to Saudi Arabia last July and began a new life with Koyee. Over her long years living abroad, she said, she had come to feel that Korean culture and food have a power to connect people naturally, and in Saudi Arabia too she "experienced first-hand that interest in Korean culture is greater than expected, and wanted to create not simply a restaurant selling Korean food, but a space where people can experience Korean food and culture together."</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-03.jpg" alt="Marketing director Choi Myung-hee">
+            </div>
+            <p class="photo-caption">Marketing director Choi Myung-hee — Source: photo by the correspondent</p>
+
+            <p>She also explained that the brand name "Koyee" was inspired by "Ko," for Korean, and "Lee," the founder's family name, while also carrying the meaning of the carp (こい, Koi) — a symbol of prosperity and good fortune in East Asian cultures. As for why Al Khobar was chosen, she pointed to its status as the economic hub of Saudi Arabia's Eastern Province and an international city where people of many nationalities live together. It is a region with keen interest in new cultures and great growth potential, she said, and she judged that the Eastern Province, too, needed a space to introduce authentic Korean taste and culture.</p>
+
+            <p>The first thing the correspondent felt while looking around the store was likewise not the food but the atmosphere of the space. The wide, open interior, the design imbued with a Korean sensibility, and the objects placed here and there left an impression closer to a cultural complex for experiencing Korean culture than to an ordinary restaurant. Korean-style objects and decorations were arranged throughout the interior, and local guests could be seen enjoying their meals in a calm atmosphere.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-04.jpg" alt="Koyee's interior imbued with a Korean sensibility">
+            </div>
+            <p class="photo-caption">Koyee's interior, imbued with a Korean sensibility — Source: photo by the correspondent</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-05.jpg" alt="Interior of Koyee Korean Cafe and Cuisine">
+            </div>
+            <p class="photo-caption">The interior of Koyee Korean Cafe and Cuisine — Source: photo by the correspondent</p>
+
+            <h2>Q. What are Koyee's signature dishes, and how do you recreate the taste of Korea?</h2>
+
+            <p>Director Choi explained that Koyee's principle is to have a Korean head chef take charge of the kitchen and recreate the taste of authentic Korean cuisine as it is. Both in ingredients and in cooking methods, the focus is on conveying Korea's original flavours as faithfully as possible, she said, so that customers can experience the same taste as eating in Korea. The signature dishes are wagyu barbecue, dolsot bibimbap (stone-pot bibimbap) and dak-galbi (spicy stir-fried chicken). Recently, she added, buckwheat makguksu and buckwheat chicken have also been steadily gaining popularity. Buckwheat makguksu in particular, though a dish not easily encountered in Saudi Arabia, has drawn such a good response that customers who taste it return at a high rate. She added that customers frequently react by saying it is "refreshing and clean," that it "goes well with the hot weather," and that it "broke my prejudice against cold noodles."</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-06.jpg" alt="Buckwheat makguksu, a summer special">
+            </div>
+            <p class="photo-caption">Buckwheat makguksu, the summer special — Source: photo by the correspondent</p>
+
+            <p>The correspondent, too, tasted the buckwheat makguksu. Its cool broth and the light aroma of buckwheat paired well with Saudi Arabia's sweltering summer. It was an authentic taste reminiscent of the makguksu enjoyed in Gangwon Province. Indeed, one foreign customer who had tasted makguksu while travelling in Korea's Gangwon Province told the correspondent, "I never thought I would get to taste such authentic buckwheat makguksu again in Saudi Arabia. Memories of my trip to Korea came back to me naturally."</p>
+
+            <h2>Q. How have local customers responded to the Korean-style bakery?</h2>
+
+            <p>Director Choi explained that the variety of breads and desserts made by a Korean baker have won a good response not only from local customers but also from foreigners of many other nationalities. The Korean-style bakery, she said, has become far more popular than expected, and a culture of enjoying bread and coffee together after a meal is taking root naturally.</p>
+
+            <p>Behind the Korean-style bakery's warm local reception lies a coffee culture shared by Korea and Saudi Arabia. Like Korea, Saudi Arabia has made café-going part of everyday life, and a consumer culture of enjoying bakery items alongside coffee has formed naturally. This shared food culture is playing a positive role in helping the Korean-style bakery settle in locally.</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-07.jpg" alt="Korean-style bakery">
+            </div>
+            <div class="article-photo">
+                <img src="kofice-53-images/img-08.jpg" alt="Korean-style desserts">
+            </div>
+            <p class="photo-caption">Korean-style bakery and desserts — Source: photo by the correspondent</p>
+
+            <p>A foreign customer with experience travelling in Korea told the correspondent that the danpatppang (sweet red-bean bun) she had eaten in Korea was not easy to find in Saudi Arabia, so she was truly delighted to be able to taste it again at Koyee — and that, thanks to it, memories of her trip to Korea came back to her naturally.</p>
+
+            <h2>Q. How do you sense the recent interest in the Korean Wave and Korean food in Saudi Arabia?</h2>
+
+            <p>Director Choi said that the number of customers who, having taken an interest in Korea through Korean dramas and K-pop, visit the store to taste Korean food has been steadily rising. Many customers ask about travelling to Korea or about the Korean language after their meal, and the Hangeul workshop held this past February also drew more participants than expected. "I have come to feel even more strongly," she said, "that Korean food is now not merely food, but is becoming a window through which to experience Korean culture."</p>
+
+            <div class="article-photo">
+                <img src="kofice-53-images/img-09.jpg" alt="A Hangeul workshop held at Koyee">
+            </div>
+            <p class="photo-caption">A Hangeul workshop held at Koyee — Source: Koyee Korean Cafe and Cuisine official Instagram (@koyeekoreancafeandcuisine)</p>
+
+            <h2>Q. What are Koyee's plans going forward?</h2>
+
+            <p>Director Choi said that going forward Koyee plans to keep conveying the taste of Korea honestly, and to continue presenting a range of programmes through which people can experience Korean culture along with the food. She added that by steadily developing the menus of its Korean-style bakery and Korean restaurant, Koyee's long-term goal is to grow beyond being the Eastern Province's representative Korean restaurant into a brand that introduces Korean taste and culture across all of Saudi Arabia.</p>
+
+            <p>Koyee's approach is significant in that it offers, around Korean food, an experience of space and culture together. Such an attempt to convey Korea's lifestyle and culture through the medium of food shows that in Saudi Arabia Korean cuisine is settling in as a cultural experience, beyond simply a meal out.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— Photos by the correspondent</p>
+                <p>— Koyee Korean Cafe and Cuisine official Instagram (@koyeekoreancafeandcuisine), <a href="https://www.instagram.com/koyeekoreancafeandcuisine/?hl=en" target="_blank">instagram.com/koyeekoreancafeandcuisine</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-52.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+    <a href="kofice-54.html">Next →</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>
