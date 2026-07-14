@@ -220,6 +220,8 @@
             max-width: 170px;
             object-fit: contain;
         }
+        /* kofic is a wide horizontal lockup — give it more width so its wordmark matches KOFICE's height */
+        .logo-kofic { height: 84px; max-width: 184px; }
         .logo-divider { width: 0.5px; height: 36px; background: #c5c0b8; flex-shrink: 0; align-self: center; }
         .card-text-label { text-align: center; padding: 0 16px; }
         .card-text-main {
@@ -569,7 +571,7 @@
             <div class="card-img">
                 <img src="images/kofice-logo.png" alt="KOFICE" class="logo-img">
                 <div class="logo-divider"></div>
-                <img src="images/kofic-logo.png" alt="KOFIC" class="logo-img">
+                <img src="images/kofic-logo.png" alt="KOFIC" class="logo-img logo-kofic">
             </div>
             <p class="work-since">KOFICE since 2025 &nbsp;·&nbsp; KOFIC since 2026</p>
             <h2 class="work-title">Journalism</h2>
