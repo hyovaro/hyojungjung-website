@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 넷플릭스 6월 통계 — 한국 콘텐츠 미국 이어 2위 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        /* data table (production-country breakdown) */
+        .data-table-wrap { overflow-x: auto; margin: 28px 0 8px; -webkit-overflow-scrolling: touch; border: 0.5px solid rgba(0,0,0,0.1); border-radius: 2px; }
+        .data-table { border-collapse: collapse; width: 100%; min-width: 560px; font-family: 'Inter', sans-serif; font-size: 13px; }
+        .data-table th, .data-table td { text-align: left; padding: 10px 16px; border-bottom: 0.5px solid rgba(0,0,0,0.08); vertical-align: top; }
+        .data-table thead th { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.22); background: #ede9e2; }
+        .data-table tbody tr:last-child td { border-bottom: none; }
+        .data-table td.num { font-variant-numeric: tabular-nums; color: #5e5e5e; white-space: nowrap; text-align: center; }
+        .data-table td.tot { font-variant-numeric: tabular-nums; color: #1a1a1a; font-weight: 500; text-align: center; }
+        .data-table .country { white-space: nowrap; color: #1a1a1a; font-weight: 500; }
+        .data-table .titles { color: #6f6f6f; font-size: 12px; line-height: 1.55; }
+        .data-table tr.row-kr { background: rgba(124,58,54,0.07); }
+        .data-table tr.row-kr .country, .data-table tr.row-kr td.tot { color: #7c3a36; }
+        .table-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin: 10px 0 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-56.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 넷플릭스 6월 통계 — 한국 콘텐츠 미국 이어 2위 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-56.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 넷플릭스 6월 통계 — 한국 콘텐츠 미국 이어 2위 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../engagement.html">Engagement</a>
+        <a href="../writing.html" class="active">Journalism</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">사우디 넷플릭스 통계, 6월에도 한국 콘텐츠 강세 — 미국 이어 2위, 아시아·아랍권 중 독보적 선두</h1>
+                <p class="article-title-en">Saudi Netflix Stats — Korean Content Stays Strong in June, Ranking 2nd After the U.S. and a Clear Leader Across Asia and the Arab World</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">July 9, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">OTT / Streaming</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>6월 사우디아라비아 넷플릭스에서는 한국 콘텐츠가 드라마와 영화 부문 모두에서 꾸준한 강세를 이어갔다. 특히 제작국별 작품 수 기준으로 미국에 이어 2위를 차지하며, 아랍권 현지 콘텐츠는 물론 지리적으로 가까운 인도와 스페인·폴란드·영국 등 유럽 국가들보다도 높은 존재감을 보였다. 5월에 이어 두 달 연속 제작국 2위를 기록한 것으로, 사우디 스트리밍 시장에서 한국 콘텐츠의 경쟁력이 일시적인 현상이 아니라 지속적인 흐름으로 자리 잡고 있음을 보여줬다.</p>
+
+            <h2>〈참교육〉 한 달 내내 최상위권… 〈김부장〉 톱10 진입, 〈옥씨부인전〉·〈원더풀스〉도 장기 흥행</h2>
+
+            <p>6월 시리즈 부문에서 가장 눈에 띈 작품은 10부작 드라마 〈참교육(Teach You a Lesson)〉(연출 홍종찬, 극본 이남규·김다희·문종호)이다. 6월 5일 넷플릭스를 통해 공개된 이 작품은 2·3주 차 2주 연속 1위에 올랐으며, 1주 차부터 4주 차까지 한 차례도 톱10 상위권에서 벗어나지 않으며 한 달 내내 사우디 시청자들의 높은 관심을 받았다. 작품은 선을 넘는 학생과 교사, 학부모로 인해 무너진 교권을 바로 세우기 위해 창설된 교권보호국의 활약을 그린 수사·액션·범죄 드라마다. 공개 당시 넷플릭스 글로벌 1위에 오르는 등 전 세계적인 흥행을 기록했으며, 이러한 인기는 사우디아라비아에서도 이어졌다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-56-images/img-01.jpg" alt="사우디아라비아 넷플릭스 6월 시리즈 톱10 — 참교육 1위">
+            </div>
+            <p class="photo-caption">사우디아라비아 넷플릭스에서 6월 2·3주 차 1위를 기록한 드라마 〈참교육〉 — 출처: 투둠 바이 넷플릭스(Tudum by Netflix)</p>
+
+            <p>소지섭 주연의 〈김부장(Agent Kim Reactivated)〉도 상승세를 보였다. 6월 마지막 주에 4위로 처음 진입하며 눈길을 끌었으며, 은퇴한 요원이 다시 현장에 복귀하는 액션 스릴러 장르로 사우디 시청자들의 관심을 모았다. 판타지 사극 〈옥씨부인전(My Royal Nemesis)〉도 6월 내내 꾸준히 순위권을 유지했다. 조선시대를 배경으로 악녀의 영혼이 깃든 무명배우와 재벌 후계자의 이야기를 그린 이 작품은 독특한 설정과 유쾌한 전개를 앞세워 현지 시청자들의 관심을 이어갔다. 〈원더풀스(The WONDERfools)〉 역시 1·2주 차에 이어 후반부에도 순위권에 오르며 장기 흥행을 이어갔다.</p>
+
+            <p>영화 부문에서는 박규태 감독의 코미디 영화 〈남편들(Husbands in Action)〉이 눈에 띄는 성과를 거뒀다. 6월 19일 넷플릭스를 통해 공개된 직후 3주 차 영화 부문 톱10에 진입한 데 이어, 4주 차에는 4위까지 상승하며 흥행세를 이어갔다. 사우디 넷플릭스에서 한국 영화가 톱10에 이름을 올리는 사례가 드라마에 비해 드문 점을 고려하면 더욱 의미 있는 성과로 평가된다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-56-images/img-02.jpg" alt="사우디아라비아 넷플릭스 6월 영화 톱10 — 남편들 4위">
+            </div>
+            <p class="photo-caption">사우디아라비아 넷플릭스 6월 4주 차 4위를 기록한 영화 〈남편들〉 — 출처: 투둠 바이 넷플릭스(Tudum by Netflix)</p>
+
+            <p>특정 작품에만 관심이 집중되기보다 여러 한국 드라마가 동시에 순위권을 유지한 점은 사우디에서 한국 콘텐츠의 저변이 한층 확대되고 있음을 보여준다. 5월에는 〈기리고〉·〈오늘도 매진했습니다〉·〈멋진 신세계〉·〈원더풀스〉 등이 흥행을 이끌었다면, 6월에는 〈참교육〉·〈김부장〉·〈남편들〉이 바통을 이어받으며 한국 콘텐츠의 흥행세가 꾸준히 이어지는 모습을 보였다.</p>
+
+            <h2>미국 이어 2위… 아시아·아랍권 중 독보적 선두</h2>
+
+            <p>6월 사우디 넷플릭스 영화·TV 시리즈 톱10에 등장한 고유 작품을 제작국별로 분석한 결과, 미국이 TV 8편·영화 13편 등 총 21편으로 압도적인 1위를 차지했다. 한국은 TV 4편·영화 1편 등 총 5편으로 2위에 올랐다. 전체 작품 수에서는 미국과 격차가 크지만, TV 시리즈만 놓고 보면 미국 8편·한국 4편으로 차이가 크게 좁혀졌다. 미국이 영화 부문에서 압도적인 우위를 보인 반면, TV 시리즈에서는 한국 콘텐츠가 경쟁력을 입증한 셈이다.</p>
+
+            <div class="data-table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>제작국</th><th>TV</th><th>영화</th><th>합계</th><th>순위권 주요 작품</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="country">미국</td><td class="num">8</td><td class="num">13</td><td class="tot">21</td><td class="titles">〈나를 찾아줘〉, 〈아바타: 아앙의 전설〉, 〈007 노 타임 투 다이〉, 〈오피스 로맨스〉 등</td></tr>
+                        <tr class="row-kr"><td class="country">대한민국</td><td class="num">4</td><td class="num">1</td><td class="tot">5</td><td class="titles">〈참교육〉, 〈김부장〉, 〈옥씨부인전〉, 〈원더풀스〉, 〈남편들〉</td></tr>
+                        <tr><td class="country">인도</td><td class="num">0</td><td class="num">3</td><td class="tot">3</td><td class="titles">〈부트 방글라〉, 〈마아 베헨〉, 〈블래스트〉</td></tr>
+                        <tr><td class="country">스페인</td><td class="num">2</td><td class="num">1</td><td class="tot">3</td><td class="titles">〈베를린〉, 〈오아시스〉, 〈낯선 여인〉</td></tr>
+                        <tr><td class="country">이집트</td><td class="num">0</td><td class="num">2</td><td class="tot">2</td><td class="titles">〈패밀리 비즈니스〉, 〈에사예트 엘 마아후〉</td></tr>
+                        <tr><td class="country">사우디아라비아</td><td class="num">1</td><td class="num">1</td><td class="tot">2</td><td class="titles">〈알할랏: 더 시리즈〉, 〈알자르파: 한후니아 지옥 탈출〉</td></tr>
+                        <tr><td class="country">폴란드</td><td class="num">0</td><td class="num">1</td><td class="tot">1</td><td class="titles">〈악의 색: 블랙〉</td></tr>
+                        <tr><td class="country">영국</td><td class="num">1</td><td class="num">0</td><td class="tot">1</td><td class="titles">〈증인〉</td></tr>
+                        <tr><td class="country">터키</td><td class="num">1</td><td class="num">0</td><td class="tot">1</td><td class="titles">〈어나더 셀프〉</td></tr>
+                        <tr><td class="country">멕시코</td><td class="num">1</td><td class="num">0</td><td class="tot">1</td><td class="titles">〈장미와 초콜릿〉</td></tr>
+                        <tr><td class="country">일본</td><td class="num">1</td><td class="num">0</td><td class="tot">1</td><td class="titles">〈바이럴 히트〉</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-caption">6월 사우디아라비아 넷플릭스 영화·TV 시리즈 톱10 제작국별 분석(고유 작품 기준) — 출처: 투둠 바이 넷플릭스(Tudum by Netflix)</p>
+
+            <p>미국을 제외하면 한국의 존재감은 더욱 두드러졌다. 아시아에서는 일본이 〈바이럴 히트(Viral Hit)〉 1편을 올리는 데 그쳤고, 중국과 동남아시아 국가들은 순위권에 진입하지 못했다. 한국은 5편으로 아시아 국가 가운데 가장 많은 작품을 순위권에 올렸다. 아랍권에서도 한국 콘텐츠의 강세는 이어졌다. 사우디아라비아가 TV와 영화 각 1편씩 총 2편, 이집트가 영화 2편을 기록하는 데 그친 반면, 한국은 총 5편으로 현지 콘텐츠를 앞섰다. 또한 지리적으로 가까운 인도(3편)보다도 많은 작품이 순위권에 포함됐으며, 스페인(3편)·폴란드(1편)·영국(1편)·터키(1편)·멕시코(1편) 등 유럽과 중남미 국가들도 이름을 올렸지만 단일 국가 기준으로는 한국(5편)이 이들보다 많은 작품을 기록했다.</p>
+
+            <h2>액션·범죄·코미디 장르 선호 뚜렷… 한국 콘텐츠, 장르 다양성도 입증</h2>
+
+            <p>장르별로는 액션과 범죄·스릴러, 코미디가 가장 높은 비중을 차지했다. 이는 사우디 시청자들이 빠른 전개와 긴장감 있는 서사, 오락성을 갖춘 작품을 선호하는 경향을 보여준다. 미국 콘텐츠는 범죄 드라마와 액션, 애니메이션 등 다양한 장르에서 고르게 강세를 보였다. 스페인은 〈베를린〉·〈오아시스〉·〈낯선 여인〉 등 범죄·미스터리 장르 작품 3편을 톱10에 올리며 유럽 국가 가운데 가장 두드러진 성과를 냈고, 인도는 코미디·호러·액션 장르의 영화 3편이 순위권에 진입했다. 이집트는 코미디 영화 2편이 꾸준히 상위권을 유지하며 아랍권 콘텐츠의 저력을 보여줬으며, 영국의 〈증인(The Witness)〉은 1992년 실제 살인 사건을 소재로 한 범죄 드라마로 4주 내내 순위권을 지켰다.</p>
+
+            <p>한국 콘텐츠도 특정 장르에 치우치지 않는 경쟁력을 보였다. 액션·범죄 장르의 〈참교육〉과 〈김부장〉, 판타지 사극 〈옥씨부인전〉, 슈퍼히어로 코미디 〈원더풀스〉, 코미디 영화 〈남편들〉까지 다양한 장르의 작품이 고르게 순위권에 올랐다. 이는 한국 콘텐츠가 특정 장르에 의존하기보다 폭넓은 장르 스펙트럼으로 현지 시청자층을 공략하고 있음을 보여준다.</p>
+
+            <p>5월에 이어 6월에도 제작국 기준 미국에 이어 2위를 기록한 한국 콘텐츠는 아랍권·아시아·유럽 등 다양한 국가의 작품과 경쟁하는 사우디 넷플릭스 시장에서 꾸준한 존재감을 이어갔다. 특히 단일 작품의 일시적인 흥행이 아니라 여러 작품이 동시에 상위권에 오른 점은, 한국 콘텐츠가 중동 스트리밍 시장에서 안정적인 입지를 넓혀가고 있음을 보여주는 대목이다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 투둠 바이 넷플릭스(Tudum by Netflix), <a href="https://www.netflix.com/tudum/top10/saudi-arabia/tv" target="_blank">netflix.com/tudum/top10/saudi-arabia</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>On Saudi Arabia's Netflix in June, Korean content sustained its strength across both the series and film categories. By the number of unique titles per producing country, Korea ranked second after the United States, showing a stronger presence than not only local Arab-world productions but also geographically nearby India and European countries such as Spain, Poland and the United Kingdom. It was Korea's second consecutive month in second place by producing country after May — evidence that the competitiveness of Korean content in the Saudi streaming market is no passing phenomenon but a lasting trend.</p>
+
+            <h2>Teach You a Lesson Tops the Charts All Month; Agent Kim Enters the Top 10, My Royal Nemesis and The WONDERfools Endure</h2>
+
+            <p>The standout in the June series category was the ten-part drama <em>Teach You a Lesson</em> (directed by Hong Jong-chan; written by Lee Nam-gyu, Kim Da-hui and Moon Jong-ho). Released on Netflix on 5 June, it took first place for two straight weeks in the second and third weeks of the month and never once dropped out of the upper Top 10 from week one through week four, holding Saudi viewers' attention all month long. The work is an investigative action-crime drama depicting the exploits of a newly created teachers'-rights protection bureau, formed to restore an educational authority undermined by boundary-crossing students, teachers and parents. It topped Netflix's global chart on release and, amid worldwide success, that popularity carried over to Saudi Arabia.</p>
+
+            <div class="article-photo">
+                <img src="kofice-56-images/img-01.jpg" alt="Saudi Arabia Netflix June series Top 10 — Teach You a Lesson at No. 1">
+            </div>
+            <p class="photo-caption">The drama <em>Teach You a Lesson</em>, No. 1 on Saudi Arabia's Netflix in the second and third weeks of June — Source: Tudum by Netflix</p>
+
+            <p><em>Agent Kim Reactivated</em>, starring So Ji-sub, also climbed. It entered at No. 4 in the final week of June, an action-thriller in which a retired agent returns to the field, drawing Saudi viewers' interest. The fantasy period drama <em>My Royal Nemesis</em> held its place in the rankings steadily throughout June; set in the Joseon era and following an unknown actor possessed by the spirit of a villainess alongside a conglomerate heir, it kept local viewers engaged with its distinctive premise and lively storytelling. <em>The WONDERfools</em>, too, returned to the rankings in the latter half of the month after ranking in weeks one and two, sustaining a long run.</p>
+
+            <p>In the film category, director Park Kyu-tae's comedy <em>Husbands in Action</em> posted a notable result. Released on Netflix on 19 June, it entered the film Top 10 in week three and rose as high as No. 4 in week four. Given how rare it is for a Korean film — as opposed to a drama — to place in Saudi Arabia's Netflix Top 10, the achievement is all the more significant.</p>
+
+            <div class="article-photo">
+                <img src="kofice-56-images/img-02.jpg" alt="Saudi Arabia Netflix June film Top 10 — Husbands in Action at No. 4">
+            </div>
+            <p class="photo-caption">The film <em>Husbands in Action</em>, No. 4 on Saudi Arabia's Netflix in the fourth week of June — Source: Tudum by Netflix</p>
+
+            <p>Rather than attention concentrating on a single title, several Korean dramas held the rankings at once — a sign that the base for Korean content in Saudi Arabia is broadening. Where May's hits were led by titles such as <em>Girigo</em>, <em>Sold Out Again Today</em>, <em>Brave New World</em> and <em>The WONDERfools</em>, June saw <em>Teach You a Lesson</em>, <em>Agent Kim Reactivated</em> and <em>Husbands in Action</em> take up the baton, keeping the momentum of Korean content going steadily.</p>
+
+            <h2>Second After the U.S. — a Clear Leader Across Asia and the Arab World</h2>
+
+            <p>An analysis of the unique titles appearing in Saudi Arabia's June Netflix film and TV-series Top 10 by producing country found the United States an overwhelming first with 21 titles in all — 8 TV and 13 film. Korea came second with 5 titles in all — 4 TV and 1 film. The gap in overall count is wide, but for TV series alone it narrows sharply, at 8 for the U.S. and 4 for Korea. Where the U.S. held a commanding lead in film, Korean content proved its competitiveness in TV series.</p>
+
+            <div class="data-table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Producing country</th><th>TV</th><th>Film</th><th>Total</th><th>Selected charting titles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="country">United States</td><td class="num">8</td><td class="num">13</td><td class="tot">21</td><td class="titles"><em>I Will Find You</em>, <em>Avatar: The Last Airbender</em>, <em>No Time to Die</em>, <em>Office Romance</em>, and more</td></tr>
+                        <tr class="row-kr"><td class="country">South Korea</td><td class="num">4</td><td class="num">1</td><td class="tot">5</td><td class="titles"><em>Teach You a Lesson</em>, <em>Agent Kim Reactivated</em>, <em>My Royal Nemesis</em>, <em>The WONDERfools</em>, <em>Husbands in Action</em></td></tr>
+                        <tr><td class="country">India</td><td class="num">0</td><td class="num">3</td><td class="tot">3</td><td class="titles"><em>Bhooth Bangla</em>, <em>Maa Behen</em>, <em>Blast</em></td></tr>
+                        <tr><td class="country">Spain</td><td class="num">2</td><td class="num">1</td><td class="tot">3</td><td class="titles"><em>Berlin</em>, <em>Oasis</em>, <em>The Marked Woman</em></td></tr>
+                        <tr><td class="country">Egypt</td><td class="num">0</td><td class="num">2</td><td class="tot">2</td><td class="titles"><em>Family Business</em>, <em>Esabet El Maahu</em></td></tr>
+                        <tr><td class="country">Saudi Arabia</td><td class="num">1</td><td class="num">1</td><td class="tot">2</td><td class="titles"><em>Alhallat: The Series</em>, <em>Alzarfah: Escape from Hanhounia Hell</em></td></tr>
+                        <tr><td class="country">Poland</td><td class="num">0</td><td class="num">1</td><td class="tot">1</td><td class="titles"><em>Colors of Evil: Black</em></td></tr>
+                        <tr><td class="country">United Kingdom</td><td class="num">1</td><td class="num">0</td><td class="tot">1</td><td class="titles"><em>The Witness</em></td></tr>
+                        <tr><td class="country">Türkiye</td><td class="num">1</td><td class="num">0</td><td class="tot">1</td><td class="titles"><em>Another Self</em></td></tr>
+                        <tr><td class="country">Mexico</td><td class="num">1</td><td class="num">0</td><td class="tot">1</td><td class="titles"><em>Roses &amp; Chocolates</em></td></tr>
+                        <tr><td class="country">Japan</td><td class="num">1</td><td class="num">0</td><td class="tot">1</td><td class="titles"><em>Viral Hit</em></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-caption">June 2026 breakdown of Saudi Arabia's Netflix film and TV-series Top 10 by producing country (unique titles) — Source: Tudum by Netflix</p>
+
+            <p>Setting the U.S. aside, Korea's presence stood out all the more. In Asia, Japan managed only one title, <em>Viral Hit</em>, while China and Southeast Asian countries did not chart at all; Korea's 5 titles were the most of any Asian country in the rankings. In the Arab world too, Korean content stayed strong: Saudi Arabia recorded 2 titles (one TV and one film) and Egypt 2 films, while Korea's 5 titles outpaced local content. Korea also placed more titles than nearby India (3), and while European and Latin American countries — Spain (3), Poland (1), the U.K. (1), Türkiye (1) and Mexico (1) — appeared in the rankings, by single-country count Korea (5) logged more titles than any of them.</p>
+
+            <h2>A Clear Taste for Action, Crime and Comedy — and Korean Content Proves Its Range</h2>
+
+            <p>By genre, action, crime-thriller and comedy accounted for the largest share — a reflection of Saudi viewers' preference for fast-moving, tense and entertaining works. U.S. content showed even strength across a range of genres, from crime drama and action to animation. Spain placed three crime and mystery titles in the Top 10 — <em>Berlin</em>, <em>Oasis</em> and <em>The Marked Woman</em> — the most notable showing among European countries, while India charted three films across comedy, horror and action. Egypt's two comedy films held the upper ranks steadily, demonstrating the strength of Arab-world content, and the U.K.'s <em>The Witness</em>, a crime drama based on a real 1992 murder case, held the rankings for all four weeks.</p>
+
+            <p>Korean content, too, showed a competitiveness not confined to any single genre. Works spanning a wide range placed evenly in the rankings — the action-crime titles <em>Teach You a Lesson</em> and <em>Agent Kim Reactivated</em>, the fantasy period drama <em>My Royal Nemesis</em>, the superhero comedy <em>The WONDERfools</em> and the comedy film <em>Husbands in Action</em> — showing that Korean content is winning over local viewers with a broad genre spectrum rather than leaning on any one genre.</p>
+
+            <p>Ranking second after the U.S. by producing country in June as it had in May, Korean content maintained a steady presence in a Saudi Netflix market where it competes with works from across the Arab world, Asia and Europe. That several titles rose to the upper ranks at once — rather than a single work's fleeting hit — points to Korean content steadily widening a stable foothold in the Middle Eastern streaming market.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— Tudum by Netflix, <a href="https://www.netflix.com/tudum/top10/saudi-arabia/tv" target="_blank">netflix.com/tudum/top10/saudi-arabia</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-55.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>

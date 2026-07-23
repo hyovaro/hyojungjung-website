@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디 필름 페스티벌 ‘한국영화와 사우디 관객’ 패널 토론 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-55.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디 필름 페스티벌 ‘한국영화와 사우디 관객’ 패널 토론 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-55.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디 필름 페스티벌 ‘한국영화와 사우디 관객’ 패널 토론 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../engagement.html">Engagement</a>
+        <a href="../writing.html" class="active">Journalism</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">사우디 필름 페스티벌 ‘한국영화와 사우디 관객’ 패널 토론으로 한·사우디 영화 교류를 논하다</h1>
+                <p class="article-title-en">A Saudi Film Festival Panel — "Korean Cinema and the Saudi Audience" — Explores Korea–Saudi Film Exchange</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">July 6, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Film / Cinema</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>제12회 사우디 필름 페스티벌(Saudi Film Festival)이 열린 이쓰라(Ithra) 지식타워(Knowledge Tower) 3층에서 지난 6월 28일 ‘한국영화와 사우디 관객(Korean Cinema and the Saudi Audience)’을 주제로 한 패널 토론이 개최됐다. 이번 세션에는 영화 〈후광(HALO)〉의 노영완 감독, 부산국제단편영화제 이상훈 부집행위원장 겸 예술감독, 사우디 영화평론가 살만 알아흐마디(Salman Al Ahmadi)가 패널로 참여했으며, 리야드 세종학당 한국문화교원인 통신원이 사회를 맡아 진행했다. 이번 패널은 영화를 통해 한국과 사우디가 어떻게 서로를 이해하고 연결될 수 있는지를 중심으로 ▲한국영화의 세계화 ▲영화제의 역할 ▲사우디 관객이 한국영화에 공감하는 이유 ▲사우디 영화산업의 성장 ▲한·사우디 영화계의 협력 가능성 등 다양한 주제를 다뤘다.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-55-images/img-01.jpg" alt="‘한국영화와 사우디 관객’ 패널 토론 포스터">
+            </div>
+            <p class="photo-caption">‘한국영화와 사우디 관객’ 패널 토론 포스터 — 출처: 사우디 필름 페스티벌</p>
+
+            <h2>한국영화의 세계화, 영화제는 어떤 역할을 했나</h2>
+
+            <p>첫 번째 질문은 한국영화가 세계 영화계에서 지금과 같은 위상을 갖게 되는 과정에서 영화제가 어떤 역할을 했는지에 관한 것이었다. 이상훈 부산국제단편영화제 부집행위원장은 영화제를 단순히 영화를 상영하는 공간이 아니라, 수많은 작품 가운데 의미 있는 영화를 선정하고 큐레이션해 관객과 연결하는 플랫폼이라고 설명했다. 그는 20세기 말까지만 해도 한국영화는 국제 영화계에서 변방에 가까웠지만, 프랑스 낭트 3대륙영화제를 비롯해 브졸아시아영화제, 도빌아시아영화제 등 유럽 영화제들이 한국영화를 꾸준히 소개했고, 이후 칸·베니스·베를린 국제영화제를 거치며 한국영화가 세계 영화계의 주목을 받게 됐다고 설명했다. 이러한 흐름 속에서 ‘코리안 뉴웨이브(Korean New Wave)’가 세계 영화계의 한 축으로 자리 잡았으며, 이는 이후 한국 드라마와 케이팝, 음식 등 한국 문화 전반이 세계로 확산되는 기반이 됐다고 평가했다. 그는 “한국영화가 오늘날과 같은 국제적 위상을 갖게 된 데에는 영화제의 역할이 결정적이었다”고 강조했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-02.jpg" alt="패널 토론 현장">
+            </div>
+            <p class="photo-caption">패널 토론 현장 — 출처: 사우디 필름 페스티벌</p>
+
+            <p>이어 OTT 플랫폼의 성장으로 영화제의 역할이 변화했는지에 대한 질문이 이어졌다. 이 부위원장은 오히려 영화제의 역할이 앞으로 더욱 중요해질 것이라고 전망했다. 스마트폰과 인공지능 기술의 발전으로 앞으로는 지금보다 훨씬 많은 영화가 제작될 것이며, 그만큼 어떤 작품을 관객에게 소개할 것인가를 결정하는 ‘큐레이션’의 가치가 더욱 커질 것이라는 설명이다. 그는 “넷플릭스 역시 결국 하나의 큐레이션 플랫폼”이라며, 최근 한국에서는 극장 관객은 감소하는 반면 영화제 관객은 꾸준히 증가하고 있다는 점을 소개했다. 앞으로도 영화제는 새로운 작품과 창작자를 발굴하고 관객과 연결하는 중요한 문화 플랫폼으로서의 역할을 이어갈 것이라고 덧붙였다.</p>
+
+            <h2>사우디 관객은 왜 한국영화에 공감하는가</h2>
+
+            <p>사우디 영화평론가 살만 알아흐마디는 한국영화에 대한 사우디 관객들의 관심이 최근 갑자기 형성된 것이 아니라 오래전부터 꾸준히 이어져 왔다고 설명했다. 그는 개인적으로도 오랫동안 한국영화를 즐겨 봤으며, 특히 박찬욱 감독의 작품을 좋아한다고 소개했다. 이어 한국영화의 가장 큰 특징으로 예상치 못한 반전과 긴장감 있는 서사 구조를 꼽았다. 평범해 보이는 인물들이 전혀 예상하지 못한 사건을 마주하거나 극적인 선택을 하며 이야기가 전개되는 방식은 한국영화만의 독창적인 매력이라고 평가했다. 또한 한국영화는 장르적 재미뿐 아니라 인간의 감정과 사회적 현실을 함께 담아낸다는 점에서 문화적 차이를 넘어 사우디 관객들도 자연스럽게 공감할 수 있다고 설명했다.</p>
+
+            <p>영화 〈후광〉을 연출한 노영완 감독에게는 지역적인 이야기가 어떻게 세계 관객과 연결될 수 있는지에 대한 질문이 이어졌다. 노 감독은 전날 진행된 상영과 관객과의 대화(GV)를 언급하며, 사우디 관객들이 문화적 배경은 다르지만 작품 속 감정과 메시지를 깊이 이해하고 공감해 준 점이 매우 인상적이었다고 말했다. 그는 이러한 경험을 통해 영화가 언어와 국경을 넘어 사람과 사람을 연결하는 힘을 지닌 예술이라는 사실을 다시 한번 확인했다고 밝혔다. 이어 지역적인 이야기가 세계 관객에게도 공감을 얻는 이유는 결국 ‘사람’에 있다고 설명했다. 문화와 환경은 서로 다르지만 그 안에서 살아가는 사람들의 감정과 관계, 삶의 고민은 크게 다르지 않다며, 한 사회의 이야기를 깊이 들여다볼수록 오히려 다른 문화권의 사람들도 그 이야기를 이해하고 공감하게 된다고 말했다. 그는 “지역의 이야기를 깊이 있게 담아낼 때, 그 이야기는 더 이상 특정 지역만의 이야기가 아니라 모두의 이야기가 된다”고 덧붙였다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-03.jpg" alt="패널 토론에서 질문에 답변하고 있는 노영완 감독">
+            </div>
+            <p class="photo-caption">패널 토론에서 질문에 답변하고 있는 노영완 감독 — 출처: 사우디 필름 페스티벌</p>
+
+            <h2>문화적 정체성과 한·사우디 영화 협력</h2>
+
+            <p>패널 후반부에서는 한국영화가 세계적인 성공을 거두면서도 문화적 정체성을 유지할 수 있었던 배경에 대한 질문이 이어졌다. 노 감독은 오늘날 한국영화의 경쟁력은 하루아침에 만들어진 것이 아니라 오랜 시간 선배 영화인들이 축적해 온 경험과 영화적 자산 위에서 가능했다고 설명했다. 수많은 작품이 제작되고 다양한 시도가 이어지면서 한국 영화계만의 문화적 데이터와 창작의 역사가 쌓였고, 그것이 현재 한국영화의 경쟁력으로 이어졌다는 것이다. 이어 앞으로도 영화를 꾸준히 만들고 서로 교류하며 공동 작업을 이어가는 과정 속에서 새로운 문화적 자산이 축적될 것이라며, 한국과 사우디 역시 지속적인 영화 교류를 통해 함께 성장해 나가길 기대한다고 말했다.</p>
+
+            <p>최근 사우디 영화산업의 성장과 양국 영화계의 협력 가능성에 대한 질문도 이어졌다. 이상훈 부위원장은 과거 중동 영화계에서는 이란이 대표적인 영화 강국으로 주목받았지만, 최근에는 레드씨 국제영화제(Red Sea International Film Festival)와 사우디 필름 페스티벌 등을 중심으로 사우디가 새로운 영화 허브로 빠르게 성장하고 있다고 평가했다. 또한 영화제 기간 동안 직접 만난 사우디의 젊은 감독과 제작자들의 작품에서 시나리오와 촬영, 편집 등 전반적으로 높은 완성도를 확인할 수 있었다며, 정부의 적극적인 지원과 창작자들의 역량이 함께 성장하고 있는 만큼 사우디 영화산업의 미래가 더욱 기대된다고 말했다. 이어 부산국제단편영화제가 운영하는 주빈국 프로그램에 향후 사우디아라비아를 초청하는 방안도 검토하고 있다고 밝혔다. 노 감독 역시 현재 차기작을 집필하고 있으며, 이번 사우디 방문을 계기로 사우디 제작진과 함께 작품을 만들어 보고 싶다는 의사를 밝혔다.</p>
+
+            <h2>영화가 만든 새로운 연결</h2>
+
+            <p>공식 패널이 종료된 뒤에도 관객들의 질문은 계속됐다. 한 영화감독 지망생이 시나리오 수정은 얼마나 이루어지며 언제쯤 완성됐다고 할 수 있는지 묻자, 노영완 감독은 본인도 계속 호텔에서 시나리오 작업을 하고 왔다며 “예산이 떨어지기 전에는 완성해야 한다”고 재치 있게 답해 객석의 웃음을 자아냈다. 이어 한 관객이 “사우디에서 케이팝과 한국 드라마, 한국영화가 큰 사랑을 받고 있다는 사실을 한국 사람들도 알고 있느냐”고 묻자, 이상훈 부위원장과 노영완 감독은 한국에서는 미처 체감하지 못했지만 사우디를 직접 방문해 현지 관객들의 높은 관심과 애정을 확인하며 놀랐다고 답했다.</p>
+
+            <p>패널 토론을 마무리하며 통신원은 한국영화가 사우디에서 꾸준히 소개되며 많은 사랑을 받고 있는 것과 달리, 한국에서는 아직 사우디 영화를 접할 기회가 많지 않다는 점을 언급했다. 이어 한국영화가 사우디 관객들에게 더 큰 공감을 얻기 위해서는 한국 역시 사우디 영화를 더 많이 만나고 이해하려는 노력이 필요하다고 강조했다. 또한 올해 처음 관람한 샤하다 아민(Shahad Ameen) 감독의 〈히즈라(Hijra)〉를 예로 들며, 한 편의 영화가 한 나라를 이해하는 가장 좋은 출발점이 될 수 있다고 말했다. 〈히즈라〉는 2026년 제98회 아카데미 국제장편영화상 부문 사우디아라비아 공식 출품작으로 선정됐으며, 베니스 국제영화제 스포트라이트 경쟁부문에 초청되는 등 국제적으로도 주목받은 작품이다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-04.jpg" alt="영화 히즈라의 한 장면">
+            </div>
+            <p class="photo-caption">영화 〈히즈라(Hijra)〉의 한 장면 — 출처: 레드씨 국제영화제</p>
+
+            <p>통신원은 특히 영화 속 성지순례의 여정을 따라 펼쳐지는 사우디 각 지역의 아름다운 자연경관과 다채로운 풍경이 인상적이었다며, 영화를 통해 사우디 사회와 문화, 그리고 여성들의 삶을 이전보다 더욱 깊이 이해하게 됐다고 말했다. 낯설게만 느껴졌던 문화가 한 편의 영화를 통해 훨씬 가깝고 친근하게 다가왔으며, 이것이야말로 문화예술이 지닌 가장 큰 힘이라고 덧붙였다. 끝으로 통신원은 “한국영화가 사우디에서 많은 사랑을 받고 있는 것처럼, 이제는 우리도 사우디 영화를 더 많이 만나야 한다”며, “서로의 예술을 이해하는 것이 서로의 문화를 이해하는 가장 좋은 출발점이 될 수 있다”고 말하며 패널 토론을 마무리했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-05.jpg" alt="패널 토론 단체사진">
+            </div>
+            <p class="photo-caption">패널 토론 단체사진 — 출처: 사우디 필름 페스티벌</p>
+
+            <p>패널 종료 직후에는 사우디 국영방송(Saudi Broadcasting Authority, SBA)이 이상훈 부위원장을 대상으로 별도의 인터뷰를 진행하며 한국 영화계가 바라본 사우디 영화산업에 대한 관심을 이어갔다. 사우디를 처음 방문했다는 이 부위원장은 “오기 전에는 더운 날씨 때문에 걱정을 많이 했지만, 이곳에서 만난 모든 분들이 매우 친절하게 맞아주셨다”고 소감을 밝혔다. 이어 “사우디 필름 페스티벌은 앞으로 더욱 발전할 가능성이 큰 영화제라고 생각한다”며 “한국과 사우디가 영화를 통해 함께 협력할 수 있는 기회가 앞으로 많이 생기길 바라며, 저 역시 함께 일해보고 싶다”고 말했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-06.jpg" alt="사우디 국영방송과 인터뷰 중인 이상훈 부산국제단편영화제 부위원장">
+            </div>
+            <p class="photo-caption">사우디 국영방송(SBA)과 인터뷰 중인 이상훈 부산국제단편영화제 부위원장 — 출처: 통신원 촬영</p>
+
+            <p>이번 패널은 한국영화가 세계와 소통해 온 경험을 공유하는 데 그치지 않고, 빠르게 성장하고 있는 사우디 영화산업과의 접점을 모색하며 한·사우디 영화 교류의 새로운 가능성을 확인한 자리였다. 영화가 언어와 국경을 넘어 서로 다른 문화를 이해하고 연결하는 가장 강력한 매개체가 될 수 있음을 다시 한번 보여준 의미 있는 시간이었다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 통신원 촬영</p>
+                <p>— 사우디 필름 페스티벌 공식 인스타그램(@saudifilmfestival), <a href="https://www.instagram.com/saudifilmfestival" target="_blank">instagram.com/saudifilmfestival</a></p>
+                <p>— 베니스 국제영화제(Venice International Film Festival) 공식 홈페이지, <a href="https://www.labiennale.org/en/cinema/2025/venezia-spotlight/hijra" target="_blank">labiennale.org</a></p>
+                <p>— 레드씨 국제영화제(Red Sea International Film Festival), <a href="https://redseafilmfest.com/en/rsiff_film/hijra/" target="_blank">redseafilmfest.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>On 28 June, on the third floor of the Knowledge Tower at Ithra — the venue of the 12th Saudi Film Festival — a panel discussion was held on the theme of "Korean Cinema and the Saudi Audience." The session brought together Roh Young-wan, director of the film <em>Halo</em>; Lee Sang-hoon, deputy chair and artistic director of the Busan International Short Film Festival; and Saudi film critic Salman Al Ahmadi, with the correspondent — a Korean-culture instructor at the King Sejong Institute Riyadh — serving as moderator. Centred on how film can help Korea and Saudi Arabia understand and connect with one another, the panel ranged across the globalisation of Korean cinema, the role of film festivals, why Saudi audiences connect with Korean films, the growth of the Saudi film industry, and the potential for Korea–Saudi film cooperation.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-55-images/img-01.jpg" alt="Poster for the 'Korean Cinema and the Saudi Audience' panel">
+            </div>
+            <p class="photo-caption">Poster for the "Korean Cinema and the Saudi Audience" panel — Source: Saudi Film Festival</p>
+
+            <h2>How Did Film Festivals Shape the Rise of Korean Cinema?</h2>
+
+            <p>The first question concerned the role film festivals played as Korean cinema rose to its current standing on the world stage. Lee Sang-hoon explained that a festival is not merely a place to screen films but a platform that selects and curates meaningful works from among a great many and connects them with audiences. Until the end of the twentieth century, he noted, Korean cinema sat close to the margins of the international film world; but European festivals — the Three Continents Festival in Nantes, the Vesoul and Deauville Asian film festivals among them — introduced Korean films steadily, and Korean cinema went on to draw the world's attention through Cannes, Venice and Berlin. Within that current, he said, the "Korean New Wave" established itself as one axis of world cinema, becoming the foundation on which Korean drama, K-pop, food and Korean culture at large later spread across the globe. "The role of film festivals," he stressed, "was decisive in Korean cinema attaining the international standing it holds today."</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-02.jpg" alt="The panel discussion in progress">
+            </div>
+            <p class="photo-caption">The panel discussion in progress — Source: Saudi Film Festival</p>
+
+            <p>A further question asked whether the growth of OTT platforms had changed the role of festivals. Lee predicted that, if anything, their role would only grow more important. As smartphones and artificial intelligence advance, far more films will be made than now, and the value of "curation" — deciding which works to bring to audiences — will grow accordingly. "Netflix, too, is ultimately a curation platform," he said, noting that cinema attendance has been falling in Korea of late while festival attendance keeps rising. Festivals, he added, will continue to serve as vital cultural platforms that discover new works and creators and connect them with audiences.</p>
+
+            <h2>Why Do Saudi Audiences Connect with Korean Films?</h2>
+
+            <p>Saudi film critic Salman Al Ahmadi explained that Saudi audiences' interest in Korean cinema is not a sudden, recent phenomenon but one that has built steadily over a long time. He said he had personally enjoyed Korean films for years, with a particular fondness for the work of director Park Chan-wook. He singled out the unexpected twists and taut narrative structures as Korean cinema's defining traits: the way ordinary-seeming characters meet wholly unforeseen events or make dramatic choices as a story unfolds, he said, is a distinctive charm unique to Korean film. Because Korean cinema captures not only genre pleasures but also human emotion and social reality, he added, Saudi audiences can connect with it naturally, across cultural difference.</p>
+
+            <p>Roh Young-wan, director of <em>Halo</em>, was asked how a local story can connect with a global audience. Referring to the previous day's screening and audience talk (GV), Roh said he had been deeply struck that Saudi audiences, despite a different cultural background, understood and empathised so profoundly with the emotions and message of the work. Through that experience, he said, he had confirmed once again that film is an art with the power to connect one person to another across language and borders. The reason a local story resonates with a global audience, he explained, ultimately lies in "people." Cultures and circumstances differ, but the emotions, relationships and life-worries of the people living within them do not differ greatly; and the more deeply one looks into one society's story, he said, the more people of other cultures come to understand and empathise with it. "When a local story is told with real depth," he added, "it is no longer the story of one place alone, but everyone's story."</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-03.jpg" alt="Director Roh Young-wan answering a question during the panel">
+            </div>
+            <p class="photo-caption">Director Roh Young-wan answering a question during the panel — Source: Saudi Film Festival</p>
+
+            <h2>Cultural Identity and Korea–Saudi Film Cooperation</h2>
+
+            <p>Later in the panel came a question about how Korean cinema had preserved its cultural identity even as it achieved global success. Roh explained that Korean cinema's competitiveness today was not made overnight but rests on the experience and cinematic assets that senior filmmakers accumulated over a long time. As countless works were produced and diverse experiments pursued, Korean cinema built up a body of cultural data and a history of creation all its own, and that has fed its present competitiveness. New cultural assets, he said, would continue to accumulate through steadily making films, exchanging with one another and pursuing joint work — and he hoped that Korea and Saudi Arabia, too, would grow together through sustained film exchange.</p>
+
+            <p>Questions also turned to the recent growth of the Saudi film industry and the potential for cooperation between the two countries. Lee Sang-hoon observed that while Iran was once the Middle East's foremost film power, Saudi Arabia is now growing fast into a new film hub, driven by the Red Sea International Film Festival and the Saudi Film Festival among others. He said the works of the young Saudi directors and producers he met during the festival showed high overall polish in screenwriting, cinematography and editing, and that with active government support and creators' capabilities growing together, the future of the Saudi film industry was all the more promising. He also revealed that the Busan International Short Film Festival is considering inviting Saudi Arabia as a guest country of honour in future editions of its programme. Roh, for his part, said he is currently writing his next project and, prompted by this visit, would like to make a film together with a Saudi production team.</p>
+
+            <h2>New Connections Made by Film</h2>
+
+            <p>Even after the official panel ended, questions from the audience continued. When an aspiring director asked how much a screenplay is revised and when one can call it finished, Roh replied — to laughter from the floor — that he too had kept working on his script back at the hotel, quipping that "you have to finish before the budget runs out." When another audience member asked whether Koreans back home are aware that K-pop, Korean drama and Korean film are so beloved in Saudi Arabia, Lee and Roh answered that they had not fully grasped it in Korea, and had been astonished to see for themselves, on visiting Saudi Arabia, the depth of local audiences' interest and affection.</p>
+
+            <p>In closing the discussion, the correspondent noted that, unlike Korean films — which are introduced continuously and warmly received in Saudi Arabia — there are still few chances to encounter Saudi films in Korea. For Korean cinema to win still deeper empathy from Saudi audiences, she stressed, Korea too must make more of an effort to meet and understand Saudi film. She offered the example of <em>Hijra</em>, directed by Shahad Ameen, which she had seen for the first time this year, suggesting that a single film can be the best starting point for understanding a country. <em>Hijra</em> was selected as Saudi Arabia's official submission for Best International Feature at the 98th Academy Awards in 2026, and drew international notice with an invitation to the Spotlight Competition at the Venice International Film Festival.</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-04.jpg" alt="A scene from the film Hijra">
+            </div>
+            <p class="photo-caption">A scene from the film <em>Hijra</em> — Source: Red Sea International Film Festival</p>
+
+            <p>The correspondent said she had been especially moved by the beautiful natural scenery and varied landscapes of Saudi Arabia's regions that unfold along the film's pilgrimage journey, and that through the film she had come to understand Saudi society, culture and the lives of its women more deeply than before. A culture that had felt only unfamiliar came, through a single film, to feel far closer and more familiar — and that, she added, is the greatest power of the arts. "Just as Korean films are so loved in Saudi Arabia," she said in conclusion, "now we too must meet more Saudi films," adding that "understanding one another's art can be the best starting point for understanding one another's culture."</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-05.jpg" alt="Group photo from the panel discussion">
+            </div>
+            <p class="photo-caption">Group photo from the panel discussion — Source: Saudi Film Festival</p>
+
+            <p>Immediately after the panel, the Saudi Broadcasting Authority (SBA) conducted a separate interview with Lee Sang-hoon, extending its interest in how the Korean film world views the Saudi industry. Visiting Saudi Arabia for the first time, Lee shared that "before coming, I worried a great deal about the heat, but everyone I met here welcomed me so warmly." He went on: "I think the Saudi Film Festival is a festival with great potential to grow further. I hope many opportunities arise for Korea and Saudi Arabia to cooperate through film, and I would love to work together myself."</p>
+
+            <div class="article-photo">
+                <img src="kofice-55-images/img-06.jpg" alt="Lee Sang-hoon of the Busan International Short Film Festival being interviewed by the Saudi Broadcasting Authority">
+            </div>
+            <p class="photo-caption">Lee Sang-hoon of the Busan International Short Film Festival being interviewed by the Saudi Broadcasting Authority (SBA) — Source: photo by the correspondent</p>
+
+            <p>This panel did more than share Korean cinema's experience of communicating with the world; it sought points of contact with a fast-growing Saudi film industry and affirmed new possibilities for Korea–Saudi film exchange. It was a meaningful occasion that showed, once again, how film can be the most powerful medium for understanding and connecting different cultures across language and borders.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— Photos by the correspondent</p>
+                <p>— Saudi Film Festival official Instagram (@saudifilmfestival), <a href="https://www.instagram.com/saudifilmfestival" target="_blank">instagram.com/saudifilmfestival</a></p>
+                <p>— Venice International Film Festival official website, <a href="https://www.labiennale.org/en/cinema/2025/venezia-spotlight/hijra" target="_blank">labiennale.org</a></p>
+                <p>— Red Sea International Film Festival, <a href="https://redseafilmfest.com/en/rsiff_film/hijra/" target="_blank">redseafilmfest.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-54.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+    <a href="kofice-56.html">Next →</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>
