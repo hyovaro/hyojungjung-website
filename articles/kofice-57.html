@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디, 한국 영화·드라마 제작사에 무료 로케이션 투어 — 최대 60% 캐시 리베이트 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        /* data table (production-country breakdown) */
+        .data-table-wrap { overflow-x: auto; margin: 28px 0 8px; -webkit-overflow-scrolling: touch; border: 0.5px solid rgba(0,0,0,0.1); border-radius: 2px; }
+        .data-table { border-collapse: collapse; width: 100%; min-width: 560px; font-family: 'Inter', sans-serif; font-size: 13px; }
+        .data-table th, .data-table td { text-align: left; padding: 10px 16px; border-bottom: 0.5px solid rgba(0,0,0,0.08); vertical-align: top; }
+        .data-table thead th { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.22); background: #ede9e2; }
+        .data-table tbody tr:last-child td { border-bottom: none; }
+        .data-table td.num { font-variant-numeric: tabular-nums; color: #5e5e5e; white-space: nowrap; text-align: center; }
+        .data-table td.tot { font-variant-numeric: tabular-nums; color: #1a1a1a; font-weight: 500; text-align: center; }
+        .data-table .country { white-space: nowrap; color: #1a1a1a; font-weight: 500; }
+        .data-table .titles { color: #6f6f6f; font-size: 12px; line-height: 1.55; }
+        .data-table tr.row-kr { background: rgba(124,58,54,0.07); }
+        .data-table tr.row-kr .country, .data-table tr.row-kr td.tot { color: #7c3a36; }
+        .table-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin: 10px 0 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-57.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디, 한국 영화·드라마 제작사에 무료 로케이션 투어 — 최대 60% 캐시 리베이트 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-57.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디, 한국 영화·드라마 제작사에 무료 로케이션 투어 — 최대 60% 캐시 리베이트 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../engagement.html">Engagement</a>
+        <a href="../writing.html" class="active">Journalism</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">사우디, 한국 영화·드라마 제작사에 무료 로케이션 투어 — 최대 60% 캐시 리베이트</h1>
+                <p class="article-title-en">Saudi Arabia Offers Korean Film & Drama Studios Free Location Tours — Up to 60% Cash Rebate</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">July 14, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Film Industry / Production</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>사우디아라비아가 해외 콘텐츠 제작 유치를 본격화하는 가운데, 한국 영화·드라마 제작사와의 협력 확대에도 적극적으로 나서고 있다. 통신원은 최근 리야드(Riyadh)에 위치한 시티알엘 프로덕션 서비스(CTRL Production Services)를 직접 방문해 관계자들과 미팅을 가졌다. 2019년 설립된 시티알엘은 사우디아라비아 최초의 프로덕션 서비스 전문 회사로, 국제 영화·드라마·광고 제작에 필요한 로케이션 헌팅, 촬영 허가, 현지 크루 및 장비 수급, 제작 물류 등을 종합 지원한다. 2024년 6월에는 사우디 필름 커미션(Saudi Film Commission)과 공식 파트너십 계약을 체결해 인센티브 프로그램 운영을 위한 공식 실행 파트너로 지정됐다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-57-images/img-01.jpg" alt="시티알엘 프로덕션 서비스 오피스 내부">
+            </div>
+            <div class="article-photo">
+                <img src="kofice-57-images/img-02.jpg" alt="시티알엘 프로덕션 서비스 오피스 라운지">
+            </div>
+            <p class="photo-caption">시티알엘(CTRL) 프로덕션 서비스 오피스 내부 — 출처: 통신원 촬영</p>
+
+            <h2>한국 영화·드라마와의 협력 강화에 나선 사우디</h2>
+
+            <p>시티알엘이 지원한 주요 프로젝트는 다음과 같다. 엠비시(MBC) 스튜디오, 에이지시(AGC) 스튜디오, 제이비(JB) 픽처스, 스튜디오 메커니컬(Studio Mechanical)이 공동 제작한 대규모 역사 서사극 〈데저트 워리어(Desert Warrior)〉는 사우디 북서부 네옴(NEOM) 및 타부크 전역에서 촬영됐으며, 버티컬 엔터테인먼트(Vertical Entertainment)가 국제 배급을 맡았다. 제라드 버틀러(Gerard Butler)의 제작사 지베이스(G-BASE)와 엠비시 스튜디오, 썬더 로드 픽처스(Thunder Road Pictures), 캡스톤 스튜디오(Capstone Studios)가 함께한 〈칸다하르(Kandahar)〉, 볼리우드 장편 〈던킨(Dunkin)〉, 아마존(Amazon) MGM 및 F1 관련 제작물도 포함된다. 또한 리야드에서 개최된 사우디 필름 콘펙스(Saudi Film Confex)에서는 배우 조니 뎁(Johnny Depp)의 기조 세션 운영도 지원했다.</p>
+
+            <p>이번 미팅에는 시티알엘 측에서 제너럴 매니저 모하메드 마르완(Mohammed Marwan), 프로젝트 디렉터 압둘마지드 알-샴마리(Abdulmajeed Al-Shammari), 오퍼레이션 매니저 란드 토후즈(Rand Tghouj), 프로덕션 매니저 하젬 알 알리(Hazem Al Ali)와 아흐메드 자이타위(Ahmed Zaitawi)가 참석했다. 시티알엘은 한국 콘텐츠의 글로벌 경쟁력과 제작 역량에 높은 관심을 표하며, 한국 영화·드라마 제작사를 위한 사우디의 제작 지원 프로그램과 협력 가능성을 소개했다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-57-images/img-03.jpg" alt="시티알엘 관계자들과 통신원의 단체 사진">
+            </div>
+            <p class="photo-caption">왼쪽부터 란드 토후즈(Rand Tghouj) 오퍼레이션 매니저, 모하메드 마르완(Mohammed Marwan) 제너럴 매니저, 통신원, 하젬 알 알리(Hazem Al Ali)·아흐메드 자이타위(Ahmed Zaitawi) 프로덕션 매니저 — 출처: 통신원 촬영</p>
+
+            <h2>무료 로케이션 투어와 현지 제작 지원</h2>
+
+            <p>사우디 필름 커미션이 인센티브 프로그램의 일환으로 해외 제작사에 제공하는 대표 지원책은 무료 로케이션 투어(Location Tour)다. 시티알엘은 이 프로그램의 운영을 맡은 공식 실행 파트너로서 투어 전반을 실무 지원한다. 시나리오가 완성되고 제작 예산이 확정된 프로젝트라면 항공, 숙박, 현지 교통, 식사 등을 지원받아 사우디의 촬영 로케이션을 직접 답사할 수 있다. 관계자에 따르면 이 프로그램은 제작사가 촬영을 확정하기 전에 사우디의 촬영 환경을 미리 경험할 수 있도록 설계됐으며, 투어 이후 사우디에서 촬영하지 않기로 결정하더라도 별도의 페널티는 없다. 다만 실제로 촬영을 검토 중인 프로젝트를 대상으로 한다.</p>
+
+            <div class="data-table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>구분</th><th>내용</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="country">지원 대상</td><td>장편 영화, 드라마, 다큐멘터리, 애니메이션, 단편 영화</td></tr>
+                        <tr><td class="country">신청 요건</td><td>시나리오 완성 + 제작 예산 확정</td></tr>
+                        <tr><td class="country">최소 제작비</td><td>장편 영화 USD 200,000(약 2억 7,000만 원) · 다큐멘터리·애니메이션 USD 50,000(약 6,700만 원) · 단편 영화 추후 공지</td></tr>
+                        <tr><td class="country">지원 인원</td><td>프로젝트당 최대 18명</td></tr>
+                        <tr><td class="country">지원 내역</td><td>항공권, 숙박, 현지 교통, 식사</td></tr>
+                        <tr><td class="country">제작 지원</td><td>로케이션 제안, 스튜디오 연결, 촬영 허가, 장비·크루 수급, 제작 물류</td></tr>
+                        <tr><td class="country">지원 범위</td><td>프리 프로덕션~포스트 프로덕션 전 단계 / 걸프협력회의(GCC) 배급·판매 네트워크 연결</td></tr>
+                        <tr><td class="country">비자 비용</td><td>제작사 부담(안내 제공)</td></tr>
+                        <tr><td class="country">기타</td><td>투어 후 촬영 불참 결정 시 페널티 없음</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-caption">사우디아라비아 로케이션 투어 지원 개요 — 출처: 시티알엘(CTRL) 프로덕션 서비스 미팅, 통신원 정리</p>
+
+            <h2>사우디 주요 촬영 로케이션</h2>
+
+            <p>미팅에서 시티알엘은 사우디의 주요 촬영지를 다음과 같이 소개했다. <strong>알울라(AlUla)</strong>는 웅장한 암석 지형과 광활한 사막 경관이 어우러진 유서 깊은 지역으로 역사 대서사극·판타지·어드벤처 장르에 적합하다. <strong>헤그라(Hegra, 마다인 살레)</strong>는 사우디 최초의 유네스코 세계문화유산으로, 2,000년이 넘는 나바테아 왕국의 고분군이 남아 역사·시대물 제작에 최적의 무대를 제공한다. <strong>네옴(NEOM)</strong>은 사막·산악·해안·미래적 경관이 공존해 SF·액션·현대물 장르에 적합하며, <strong>리야드</strong>는 현대적 건축과 전통 시장이 공존하는 수도로 첨단 스튜디오와 인프라를 갖춰 도시 배경 서사와 스튜디오 기반 제작 모두에 활용할 수 있다. <strong>홍해</strong>는 맑은 바다와 산호초, 청정 해변으로 유명해 해양 영상·리조트 배경·해안 스토리 제작에 뛰어난 환경을 제공한다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-57-images/img-04.jpg" alt="네옴의 자연 경관">
+            </div>
+            <p class="photo-caption">네옴(NEOM)의 자연 경관 — 출처: 네옴시티 공식 웹사이트</p>
+
+            <p>시티알엘은 로케이션 제안 외에도 스튜디오 연결, 촬영 허가, 장비·크루 수급, 제작 물류 등 현장 제작 지원을 종합적으로 제공한다. 현재 연결 가능한 주요 스튜디오 및 시설로는 잭스×소니 스튜디오(JAX×Sony Studio), 네옴 미디어 시티(NEOM Media City), 알울라 미디어(AlUla Media), 알 하산 스튜디오 리야드(Al Hassan Studio, Riyadh), 버추얼 스튜디오(Virtual Studio) 등이 있다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-57-images/img-05.jpg" alt="네옴 로케이션을 설명 중인 시티알엘 관계자들">
+            </div>
+            <p class="photo-caption">네옴(NEOM) 로케이션을 설명 중인 모하메드 마르완(Mohammed Marwan) 제너럴 매니저와 압둘마지드 알-샴마리(Abdulmajeed Al-Shammari) 프로젝트 디렉터 — 출처: 통신원 촬영</p>
+
+            <h2>최대 60% 캐시 리베이트 — 현지 파트너십이 핵심</h2>
+
+            <p>사우디에서 실제로 촬영을 진행하는 제작사는 다양한 인센티브를 받을 수 있다. 사우디 내에서 최소 5일 이상 촬영하고 전체 인력의 40% 이상을 현지 크루로 고용하는 경우 최대 60%의 캐시 리베이트를 신청할 수 있다. 사우디에서만 전체 프로젝트를 촬영할 필요는 없으며, 한국을 포함한 여러 나라에서 진행되는 작품과 공동 제작 프로젝트도 지원 대상에 포함된다. 단, 캐시 리베이트 신청은 반드시 사우디 내 등록 법인을 통해 이루어져야 하기 때문에 해외 제작사로서는 시티알엘과 같은 현지 프로덕션 서비스 회사와의 협력이 사실상 필수다. 이들 회사는 로케이션 헌팅과 촬영 허가뿐 아니라 스튜디오 조율, 장비·크루 수급, 행정 절차까지 담당하며 국제 제작사의 전방위적 현지 파트너 역할을 한다. 관계자에 따르면 장르 제한은 없으나 사막·해안·산악·현대 도시 등 사우디의 다양한 자연 경관을 적극 활용하는 작품이 선호되며, 종교적·정치적으로 민감한 소재를 다루는 프로젝트는 사전에 충분한 협의가 필요하다.</p>
+
+            <h2>중동 프로덕션 허브로 자리매김하는 사우디</h2>
+
+            <p>사우디아라비아는 국제 영화제 참가, 제작 인프라 확충, 촬영 인센티브 강화를 통해 글로벌 콘텐츠 제작 허브로서의 입지를 꾸준히 다져가고 있다. 이번 미팅을 통해 확인된 지원 체계는 로케이션 투어와 현지 제작 지원에서부터 스튜디오 접근성과 중동 시장 진출 경로까지 아우르는 종합 전략의 일환으로 읽힌다. 한국 영화·드라마 제작사들이 국제 공동 제작과 해외 로케이션 촬영을 점차 확대하는 가운데, 사우디아라비아는 촬영지이자 제작 파트너로서의 잠재력을 높여가고 있다. 현지 지원 시스템과 인센티브 활용에 열린 자세로 임하는 한국 제작사들에게 사우디아라비아는 주목할 만한 새로운 선택지가 될 수 있다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 통신원 촬영</p>
+                <p>— 시티알엘(CTRL) 프로덕션, <a href="https://ctrl.film/" target="_blank">ctrl.film</a></p>
+                <p>— 필름 사우디 인센티브 프로그램(Film Saudi Incentive Program), <a href="https://film.sa/incentive-programs/" target="_blank">film.sa/incentive-programs</a></p>
+                <p>— 네옴시티(NEOM City), <a href="https://www.neom.com/en-us/newsroom/resources" target="_blank">neom.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>As Saudi Arabia moves in earnest to attract foreign content production, it is also actively expanding cooperation with Korean film and drama studios. The correspondent recently visited CTRL Production Services in Riyadh in person for a meeting with its staff. Founded in 2019, CTRL is Saudi Arabia's first dedicated production-services company, offering end-to-end support for international film, drama and advertising shoots — location scouting, filming permits, local crew and equipment sourcing, and production logistics. In June 2024 it signed an official partnership with the Saudi Film Commission, designating it as an official implementing partner for running the incentive programme.</p>
+
+            <div class="article-photo">
+                <img src="kofice-57-images/img-01.jpg" alt="Inside the CTRL Production Services office">
+            </div>
+            <div class="article-photo">
+                <img src="kofice-57-images/img-02.jpg" alt="The CTRL Production Services office lounge">
+            </div>
+            <p class="photo-caption">Inside the CTRL Production Services office — Source: photo by the correspondent</p>
+
+            <h2>Saudi Arabia Deepens Cooperation with Korean Film and Drama</h2>
+
+            <p>Major projects CTRL has supported include the large-scale historical epic <em>Desert Warrior</em> — co-produced by MBC Studios, AGC Studios, JB Pictures and Studio Mechanical — which was shot across NEOM and Tabuk in Saudi Arabia's north-west, with Vertical Entertainment handling international distribution. Others include <em>Kandahar</em>, made together with Gerard Butler's G-BASE, MBC Studios, Thunder Road Pictures and Capstone Studios; the Bollywood feature <em>Dunkin</em>; and Amazon MGM and F1-related productions. CTRL also supported the running of actor Johnny Depp's keynote session at the Saudi Film Confex held in Riyadh.</p>
+
+            <p>Representing CTRL at the meeting were general manager Mohammed Marwan, project director Abdulmajeed Al-Shammari, operations manager Rand Tghouj, and production managers Hazem Al Ali and Ahmed Zaitawi. CTRL expressed strong interest in the global competitiveness and production capabilities of Korean content, and introduced Saudi Arabia's production-support programmes and cooperation possibilities for Korean film and drama studios.</p>
+
+            <div class="article-photo">
+                <img src="kofice-57-images/img-03.jpg" alt="Group photo of CTRL staff with the correspondent">
+            </div>
+            <p class="photo-caption">From left: operations manager Rand Tghouj, general manager Mohammed Marwan, the correspondent, and production managers Hazem Al Ali and Ahmed Zaitawi — Source: photo by the correspondent</p>
+
+            <h2>Free Location Tours and On-the-Ground Production Support</h2>
+
+            <p>The flagship measure the Saudi Film Commission offers foreign producers as part of its incentive programme is the free Location Tour, for which CTRL provides hands-on support as the official implementing partner. Any project with a completed screenplay and a confirmed production budget can scout Saudi filming locations in person, with flights, accommodation, local transport and meals covered. According to staff, the programme is designed so that producers can experience Saudi Arabia's filming environment before committing to shoot there; there is no penalty for deciding afterwards not to film in the country, though it is intended for projects genuinely under consideration.</p>
+
+            <div class="data-table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Category</th><th>Details</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="country">Eligible works</td><td>Feature films, dramas, documentaries, animation, short films</td></tr>
+                        <tr><td class="country">Requirements</td><td>Completed screenplay + confirmed production budget</td></tr>
+                        <tr><td class="country">Minimum budget</td><td>Features USD 200,000 · documentaries/animation USD 50,000 · shorts to be announced</td></tr>
+                        <tr><td class="country">Participants</td><td>Up to 18 people per project</td></tr>
+                        <tr><td class="country">Covered</td><td>Flights, accommodation, local transport, meals</td></tr>
+                        <tr><td class="country">Production support</td><td>Location proposals, studio introductions, filming permits, equipment/crew sourcing, logistics</td></tr>
+                        <tr><td class="country">Scope</td><td>Pre-production through post-production / connection to GCC distribution and sales networks</td></tr>
+                        <tr><td class="country">Visa costs</td><td>Borne by the producer (guidance provided)</td></tr>
+                        <tr><td class="country">Note</td><td>No penalty if the tour does not lead to a shoot</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-caption">Overview of Saudi Arabia's Location Tour support — Source: CTRL Production Services meeting, compiled by the correspondent</p>
+
+            <h2>Saudi Arabia's Key Filming Locations</h2>
+
+            <p>At the meeting, CTRL introduced Saudi Arabia's principal filming locations. <strong>AlUla</strong> is a historic region of majestic rock formations and vast desert vistas, well suited to historical epics, fantasy and adventure. <strong>Hegra (Mada'in Salih)</strong>, Saudi Arabia's first UNESCO World Heritage Site, preserves Nabataean tombs more than 2,000 years old, offering an ideal stage for historical and period productions. <strong>NEOM</strong> combines desert, mountains, coast and futuristic scenery, fitting sci-fi, action and contemporary work, while <strong>Riyadh</strong> — a capital where modern architecture meets traditional markets — boasts advanced studios and infrastructure for both urban narratives and studio-based production. <strong>The Red Sea</strong>, famed for its clear waters, coral reefs and pristine beaches, offers an outstanding setting for marine footage, resort backdrops and coastal stories.</p>
+
+            <div class="article-photo">
+                <img src="kofice-57-images/img-04.jpg" alt="Natural landscape of NEOM">
+            </div>
+            <p class="photo-caption">The natural landscape of NEOM — Source: NEOM official website</p>
+
+            <p>Beyond location proposals, CTRL provides comprehensive on-the-ground support — studio introductions, filming permits, equipment and crew sourcing, and production logistics. Major studios and facilities it can currently connect producers to include JAX×Sony Studio, NEOM Media City, AlUla Media, Al Hassan Studio in Riyadh, and Virtual Studio.</p>
+
+            <div class="article-photo">
+                <img src="kofice-57-images/img-05.jpg" alt="CTRL staff explaining NEOM as a filming location">
+            </div>
+            <p class="photo-caption">General manager Mohammed Marwan and project director Abdulmajeed Al-Shammari explaining NEOM as a filming location — Source: photo by the correspondent</p>
+
+            <h2>Up to 60% Cash Rebate — Local Partnership Is Key</h2>
+
+            <p>Producers who actually shoot in Saudi Arabia can receive a range of incentives. A project that films for at least five days in the country and hires local crew for at least 40% of its workforce can apply for a cash rebate of up to 60%. There is no need to shoot the entire project in Saudi Arabia; works produced across several countries, including Korea, and co-productions are also eligible. However, because cash-rebate applications must be made through a locally registered entity, cooperation with a local production-services company such as CTRL is effectively essential for foreign producers. These companies handle not only location scouting and permits but also studio coordination, equipment and crew sourcing, and administrative procedures — serving as an all-round local partner for international producers. According to staff, there are no genre restrictions, but works that make active use of Saudi Arabia's varied natural scenery — desert, coast, mountains and modern cities — are preferred, and projects dealing with religiously or politically sensitive material require thorough consultation in advance.</p>
+
+            <h2>Saudi Arabia Positions Itself as a Middle Eastern Production Hub</h2>
+
+            <p>Through participation in international festivals, expanded production infrastructure and stronger filming incentives, Saudi Arabia is steadily building its standing as a global content-production hub. The support system confirmed at this meeting reads as part of a comprehensive strategy that spans location tours and on-the-ground support through studio access and routes into the Middle Eastern market. As Korean film and drama studios increasingly pursue international co-productions and overseas location shoots, Saudi Arabia is raising its potential as both a filming location and a production partner. For Korean producers open to using the local support systems and incentives, Saudi Arabia could be a noteworthy new option.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— Photos by the correspondent</p>
+                <p>— CTRL Production Services, <a href="https://ctrl.film/" target="_blank">ctrl.film</a></p>
+                <p>— Film Saudi Incentive Program, <a href="https://film.sa/incentive-programs/" target="_blank">film.sa/incentive-programs</a></p>
+                <p>— NEOM City, <a href="https://www.neom.com/en-us/newsroom/resources" target="_blank">neom.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-56.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+    <a href="kofice-58.html">Next →</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두바이 초콜릿의 뒤를 이을까? 사우디가 내놓은 ‘리야드 초콜릿’ — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-58.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="두바이 초콜릿의 뒤를 이을까? 사우디가 내놓은 ‘리야드 초콜릿’ — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-58.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="두바이 초콜릿의 뒤를 이을까? 사우디가 내놓은 ‘리야드 초콜릿’ — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../engagement.html">Engagement</a>
+        <a href="../writing.html" class="active">Journalism</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">두바이 초콜릿의 뒤를 이을까? 사우디가 내놓은 ‘리야드 초콜릿’</h1>
+                <p class="article-title-en">Following Dubai Chocolate? Saudi Arabia's Answer — “Riyadh Chocolate”</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">July 26, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Food / Culture</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>2024년부터 세계적인 인기를 끈 ‘두바이 초콜릿’은 하나의 디저트를 넘어 도시 이름을 앞세운 브랜드로 자리 잡았다. 피스타치오 크림과 바삭한 카다이프(Kataifi)를 채운 식감은 소셜미디어를 타고 빠르게 퍼졌고, 한국에서도 품절 대란이 이어질 만큼 큰 인기를 얻었다. 두바이 초콜릿 열풍에 이어, 사우디아라비아에서도 수도 이름을 내건 프리미엄 초콜릿이 등장했다. 사우디 대표 프리미엄 식품 브랜드 바틸(Bateel)이 2026년 4월 11일 리야드(Riyadh)에서 공개한 ‘리야드 스타일 초콜릿(Riyadh Style Chocolate, 이하 리야드 초콜릿)’이다.</p>
+
+            <p>리야드 초콜릿은 초콜릿 바와 데이트 초콜릿 두 종으로 구성됐고, 사우디 내 바틸 부티크와 공식 온라인몰에서 판매한다. 두바이 초콜릿이 피스타치오와 카다이프를 앞세웠다면, 리야드 스타일 초콜릿은 싱글 오리진 초콜릿에 사우디 전통 커피 카흐와(Qahwa)의 풍미를 입히고 유기농 대추야자와 사프란(saffron), 카다멈(cardamom), 바삭한 쿠나파(Kunafa)를 더했다. 사우디를 대표하는 식재료로 ‘사우디의 맛’을 정의하겠다는 구상이다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-58-images/img-01.jpg" alt="바틸이 출시한 리야드 초콜릿">
+            </div>
+            <div class="article-photo">
+                <img src="kofice-58-images/img-02.jpg" alt="리야드 데이트 초콜릿 제품">
+            </div>
+            <p class="photo-caption">바틸(Bateel)이 출시한 리야드 초콜릿 — 출처: 통신원 촬영</p>
+
+            <h2>사우디에서 시작된 프리미엄 브랜드, 바틸</h2>
+
+            <p>‘바틸’이라는 이름은 ‘새로운 나무로 자랄 수 있는 대추야자의 어린 가지’를 뜻하는 아랍어에서 유래했다. 브랜드의 뿌리는 1930년대 리야드 북쪽 알가트(Al Ghat) 지역에 조성한 대추야자 농장이다. 1990년대 초 리야드에 첫 부티크를 열며 소매 사업을 시작했고, 지금은 25개국에서 180여 개 매장을 운영한다. 2029년까지 매장 수를 약 500개 규모로 확대한다는 계획도 밝혔다.</p>
+
+            <p>바틸은 단순히 대추야자를 파는 기업이 아니라 대추야자를 고급 디저트로 바꿔 놓은 브랜드로 통한다. 초콜릿을 입힌 데이트 초콜릿, 피스타치오·아몬드·마카다미아를 채운 스터프드 데이트가 대표 상품이다. 자체 유기농 농장에서 기른 대추야자만 쓰는 ‘팜 투 부티크(Farm to Boutique)’ 원칙을 내세워 프리미엄 이미지를 쌓았다. 현지에서 바틸은 명절과 비즈니스 미팅, 해외 방문 선물로 자주 쓰인다. 통신원 역시 해외에 있는 가족과 친구를 만날 때 바틸 제품을 몇 차례 선물로 가져간 경험이 있다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-58-images/img-03.jpg" alt="프리미엄 대추야자 상품">
+            </div>
+            <p class="photo-caption">프리미엄 대추야자(Dates) 상품 — 출처: 통신원 촬영</p>
+
+            <h2>대추야자, 상징에서 산업으로</h2>
+
+            <p>리야드 초콜릿의 핵심 재료인 대추야자(date)는 한국의 대추(jujube)와는 다른 과일이다. 야자수에서 열리는 열매로, 캐러멜처럼 진한 단맛과 쫀득한 식감이 특징이다. 사우디에서 대추야자는 단순한 과일이 아니다. 척박한 사막에서 오랫동안 생명을 이어준 식량이었으며, 오늘날에도 라마단 금식을 마칠 때 가장 먼저 먹는 음식이다. 손님에게 카흐와(Qahwa)와 대추야자를 함께 내는 것은 사우디 환대 문화를 상징하는 전통이기도 하다. 이러한 상징성은 국가 문장(emblem)에도 담겨 있다. 사우디 국가 문장은 두 자루의 교차된 검 위에 야자수를 배치한 형태로, 검은 국가의 힘과 보호를, 야자수는 성장과 번영, 풍요를 상징한다.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-58-images/img-04.jpg" alt="사우디 국가 문장">
+            </div>
+            <p class="photo-caption">사우디 국가 문장(Emblem) — 출처: 사우디페디아(Saudipedia) 웹사이트</p>
+
+            <p>산업으로서의 위상도 크다. 사우디는 세계 1위 대추야자 수출국이며, 2011년 왕령에 따라 국가 대추야자·야자수센터(NCPD, National Center for Palms &amp; Dates)를 세워 재배와 품종을 체계적으로 관리해 왔다. 또한 비전 2030(Vision 2030) 역시 농식품을 미래 성장 동력의 하나로 꼽는다.</p>
+
+            <h2>‘두바이’에서 ‘리야드’로, 도시 이름을 건 경쟁</h2>
+
+            <p>눈에 띄는 것은 제품 이름이다. 두바이 초콜릿이 ‘두바이(Dubai)’라는 도시 이름을 앞세워 세계적인 인기를 얻은 데 이어, 바틸은 수도 리야드의 이름을 전면에 세웠다. 생산지 표기를 넘어, 리야드의 도시 브랜드를 강화하려는 전략이다.</p>
+
+            <p>아직 리야드 초콜릿이 두바이 초콜릿만 한 열풍을 만들었다고 보기는 어렵다. 두바이 초콜릿은 소셜미디어 확산과 여러 브랜드의 참여가 맞물려 대중 트렌드가 됐지만, 리야드 초콜릿은 프리미엄 브랜드 한 곳이 사우디의 식문화와 정체성을 담아 내놓은 제품에 가깝다. 그럼에도 단순한 신제품 이상의 의미가 있다. 대추야자와 카흐와, 사프란처럼 사우디를 대표하는 식재료를 현대 디저트로 옮기고, 이를 통해 도시와 국가의 이미지를 세계 시장에 내보이려는 시도이기 때문이다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-58-images/img-05.jpg" alt="바틸 매장의 두바이 초콜릿과 리야드 초콜릿">
+            </div>
+            <p class="photo-caption">바틸(Bateel) 매장에서 판매하는 두바이 초콜릿과 리야드 초콜릿 — 출처: 통신원 촬영</p>
+
+            <h2>도시 브랜드가 만드는 프리미엄 전략</h2>
+
+            <p>흥미롭게도 바틸은 이미 한국에도 진출해 있다. 2024년 11월 잠실 롯데월드몰에 동아시아 1호점을 열었지만, 당시 국내 언론에서는 바틸을 대부분 ‘두바이 프리미엄 디저트 브랜드’로 소개했다. 실제로는 사우디 알가트(Al Ghat)의 대추야자 농장에서 시작한 브랜드임에도 한국 시장에서는 ‘두바이’라는 도시 브랜드가 더 익숙하게 받아들여진 것이다.</p>
+
+            <p>이뿐만 아니라 통신원은 최근 스페인 빌바오(Bilbao)의 한 백화점 프리미엄 초콜릿 코너에서 바틸의 두바이 초콜릿 제품이 판매되는 모습을 직접 확인했다. 이는 ‘두바이 초콜릿’이라는 이름이 중동, 동아시아를 넘어 유럽 시장에서도 프리미엄 디저트로 유통되고 있음을 보여준다. 바틸이 기존의 두바이 초콜릿에 이어 리야드 초콜릿을 선보인 것 역시 도시 이름과 지역의 식문화를 결합한 제품 전략의 연장선으로 볼 수 있다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-58-images/img-06.jpg" alt="유럽에서 판매되고 있는 바틸의 두바이 초콜릿">
+            </div>
+            <p class="photo-caption">유럽에서 판매되고 있는 바틸의 두바이 초콜릿 — 출처: 통신원 촬영</p>
+
+            <p>두바이 초콜릿이 세계적인 화제를 모으며 도시 이름을 앞세운 프리미엄 디저트 브랜드로 자리매김한 것처럼, 리야드 초콜릿 역시 대추야자와 카흐와 등 사우디를 대표하는 식재료를 활용해 차별화된 정체성을 구축하고 있다. 리야드 초콜릿이 사우디를 대표하는 프리미엄 디저트로 자리 잡고, 리야드의 도시 이미지를 세계에 알리는 계기가 될 수 있을지 주목된다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— 통신원 촬영</p>
+                <p>— 바틸(Bateel) 공식 웹사이트, <a href="https://bateel.com/en_sa/premium-chocolates/riyadh-date-chocolate.html" target="_blank">bateel.com</a></p>
+                <p>— 《인플루언서 타임 매거진(Influencer Time Magazine)》 (2026. 04. 11), “Introducing Riyadh Style Chocolate – Bateel's tribute to the Kingdom”</p>
+                <p>— 《뉴스위크(Newsweek)》 (2025. 08. 06), “Saudi Arabia's Luxury Brand Bateel Has a Plan to Take Dates Global”</p>
+                <p>— 《한국경제》 (2024. 11. 14), 프리미엄 명품 디저트 ‘바틸(Bateel)’ 잠실 롯데월드몰 상륙</p>
+                <p>— 국가 대추야자·야자수센터(NCPD), <a href="https://ncpd.gov.sa/en" target="_blank">ncpd.gov.sa</a> · 사우디페디아(Saudipedia), <a href="https://saudipedia.com/en/what-is-the-emblem-of-saudi-arabia" target="_blank">saudipedia.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>"Dubai Chocolate," a global sensation since 2024, has grown from a single dessert into a brand fronted by a city's name. Its filling of pistachio cream and crisp kataifi spread quickly across social media and became so popular in Korea that it repeatedly sold out. In the wake of that craze, Saudi Arabia has now produced a premium chocolate bearing its capital's name: "Riyadh Style Chocolate" (hereafter Riyadh Chocolate), unveiled in Riyadh on 11 April 2026 by Bateel, Saudi Arabia's leading premium food brand.</p>
+
+            <p>Riyadh Chocolate comes in two forms — a chocolate bar and a date chocolate — sold at Bateel boutiques across Saudi Arabia and through the official online store. Where Dubai Chocolate led with pistachio and kataifi, Riyadh Style Chocolate layers the flavour of Qahwa, Saudi Arabia's traditional coffee, over single-origin chocolate, adding organic dates, saffron, cardamom and crisp kunafa — an attempt to define "the taste of Saudi Arabia" through the country's signature ingredients.</p>
+
+            <div class="article-photo">
+                <img src="kofice-58-images/img-01.jpg" alt="Riyadh Chocolate launched by Bateel">
+            </div>
+            <div class="article-photo">
+                <img src="kofice-58-images/img-02.jpg" alt="Riyadh Date Chocolate products">
+            </div>
+            <p class="photo-caption">Riyadh Chocolate, launched by Bateel — Source: photo by the correspondent</p>
+
+            <h2>Bateel, a Premium Brand Born in Saudi Arabia</h2>
+
+            <p>The name "Bateel" comes from the Arabic for a young date-palm shoot that can grow into a new tree. The brand's roots lie in a date-palm farm established in the 1930s in the Al Ghat region north of Riyadh. It began retail with its first boutique in Riyadh in the early 1990s and now runs some 180 stores across 25 countries, with a stated plan to expand to around 500 by 2029.</p>
+
+            <p>Bateel is known not simply as a seller of dates but as the brand that turned dates into a luxury dessert. Its signature products are chocolate-coated date chocolates and stuffed dates filled with pistachio, almond or macadamia. It has built a premium image around a "Farm to Boutique" principle, using only dates grown on its own organic farms. Locally, Bateel is often given as a gift at holidays and business meetings and on overseas visits; the correspondent, too, has taken Bateel products abroad several times as gifts for family and friends.</p>
+
+            <div class="article-photo">
+                <img src="kofice-58-images/img-03.jpg" alt="Premium dates products">
+            </div>
+            <p class="photo-caption">Premium dates products — Source: photo by the correspondent</p>
+
+            <h2>Dates: From Symbol to Industry</h2>
+
+            <p>The date, the key ingredient of Riyadh Chocolate, is a different fruit from the Korean jujube. Borne on the date palm, it is prized for a deep, caramel-like sweetness and a chewy texture. In Saudi Arabia the date is no ordinary fruit: it long sustained life in the harsh desert and is still the first food eaten to break the Ramadan fast. Serving guests Qahwa together with dates is a tradition that symbolises Saudi hospitality. That symbolism is even embedded in the national emblem — a date palm set above two crossed swords, the swords representing the nation's strength and protection, the palm representing growth, prosperity and abundance.</p>
+
+            <div class="article-photo-sm">
+                <img src="kofice-58-images/img-04.jpg" alt="The national emblem of Saudi Arabia">
+            </div>
+            <p class="photo-caption">The national emblem of Saudi Arabia — Source: Saudipedia website</p>
+
+            <p>Its standing as an industry is significant too. Saudi Arabia is the world's largest exporter of dates, and by royal decree in 2011 it established the National Center for Palms &amp; Dates (NCPD) to systematically manage cultivation and varieties. Vision 2030 likewise counts agrifood among its future growth engines.</p>
+
+            <h2>From "Dubai" to "Riyadh" — Competing on a City's Name</h2>
+
+            <p>What stands out is the product's name. Following Dubai Chocolate's global success in fronting the city name "Dubai," Bateel has placed the name of the capital, Riyadh, front and centre — a strategy that goes beyond marking place of origin to strengthening Riyadh's city brand.</p>
+
+            <p>It is hard to say Riyadh Chocolate has yet generated a craze on the scale of Dubai Chocolate. Where Dubai Chocolate became a mass trend through social-media spread and the participation of many brands, Riyadh Chocolate is closer to a single premium brand's product embodying Saudi food culture and identity. Even so, it carries meaning beyond a mere new release: it translates signature Saudi ingredients — dates, Qahwa, saffron — into a modern dessert, and through it seeks to present the image of a city and a nation to the world market.</p>
+
+            <div class="article-photo">
+                <img src="kofice-58-images/img-05.jpg" alt="Dubai Chocolate and Riyadh Chocolate at a Bateel store">
+            </div>
+            <p class="photo-caption">Dubai Chocolate and Riyadh Chocolate on sale at a Bateel store — Source: photo by the correspondent</p>
+
+            <h2>A Premium Strategy Built on City Brands</h2>
+
+            <p>Interestingly, Bateel has already entered Korea. It opened its first East Asian store at Lotte World Mall in Jamsil in November 2024, yet Korean media at the time mostly introduced Bateel as a "Dubai premium dessert brand." Although the brand in fact began at a date farm in Al Ghat, Saudi Arabia, the "Dubai" city brand was the more familiar frame in the Korean market.</p>
+
+            <p>Beyond that, the correspondent recently saw Bateel's Dubai Chocolate on sale at the premium-chocolate counter of a department store in Bilbao, Spain — evidence that the name "Dubai Chocolate" now circulates as a premium dessert not only across the Middle East and East Asia but in the European market too. Bateel following its Dubai Chocolate with Riyadh Chocolate can likewise be read as an extension of a product strategy that fuses a city's name with regional food culture.</p>
+
+            <div class="article-photo">
+                <img src="kofice-58-images/img-06.jpg" alt="Bateel's Dubai Chocolate on sale in Europe">
+            </div>
+            <p class="photo-caption">Bateel's Dubai Chocolate on sale in Europe — Source: photo by the correspondent</p>
+
+            <p>Just as Dubai Chocolate drew global attention and established itself as a premium dessert brand fronting a city's name, Riyadh Chocolate is building a distinct identity using signature Saudi ingredients such as dates and Qahwa. It remains to be seen whether Riyadh Chocolate can establish itself as a premium dessert representing Saudi Arabia and become an occasion to carry Riyadh's image to the world.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— Photos by the correspondent</p>
+                <p>— Bateel official website, <a href="https://bateel.com/en_sa/premium-chocolates/riyadh-date-chocolate.html" target="_blank">bateel.com</a></p>
+                <p>— <em>Influencer Time Magazine</em> (11 Apr 2026), "Introducing Riyadh Style Chocolate – Bateel's tribute to the Kingdom"</p>
+                <p>— <em>Newsweek</em> (6 Aug 2025), "Saudi Arabia's Luxury Brand Bateel Has a Plan to Take Dates Global"</p>
+                <p>— <em>The Korea Economic Daily</em> (14 Nov 2024), "Premium dessert brand Bateel lands at Lotte World Mall, Jamsil"</p>
+                <p>— National Center for Palms &amp; Dates (NCPD), <a href="https://ncpd.gov.sa/en" target="_blank">ncpd.gov.sa</a> · Saudipedia, <a href="https://saudipedia.com/en/what-is-the-emblem-of-saudi-arabia" target="_blank">saudipedia.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-57.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>
