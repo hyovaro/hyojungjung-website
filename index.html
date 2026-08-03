@@ -223,6 +223,10 @@
         /* kofic is a wide horizontal lockup — give it more width so its wordmark matches KOFICE's height */
         .logo-kofic { height: 84px; max-width: 184px; }
         .logo-divider { width: 0.5px; height: 36px; background: #c5c0b8; flex-shrink: 0; align-self: center; }
+        /* Journalism card — three publication logos share one row (uniform height so they read as a set) */
+        .card-img.logo-trio { gap: 11px; flex-wrap: wrap; padding: 0 12px; }
+        .logo-trio .logo-img { height: 20px; width: auto; max-width: none; mix-blend-mode: normal; }
+        .logo-trio .logo-divider { display: none; }
         .card-text-label { text-align: center; padding: 0 16px; }
         .card-text-main {
             display: block;
@@ -568,10 +572,12 @@
         </a>
 
         <a class="work-card" href="writing.html">
-            <div class="card-img">
+            <div class="card-img logo-trio">
                 <img src="images/kofice-logo.png" alt="KOFICE" class="logo-img">
                 <div class="logo-divider"></div>
                 <img src="images/kofic-logo.png" alt="KOFIC" class="logo-img logo-kofic">
+                <div class="logo-divider"></div>
+                <img src="images/kpipa-logo.png" alt="KPIPA" class="logo-img logo-kpipa">
             </div>
             <p class="work-since">KOFICE 2025 &nbsp;·&nbsp; KOFIC &amp; KPIPA 2026</p>
             <h2 class="work-title">Journalism</h2>
@@ -614,7 +620,7 @@
             <p><strong>Cultural Affairs Instructor & Events Coordinator</strong> — King Sejong Institute, Prince Sultan University, Riyadh <span class="info-year">2024–</span></p>
             <p><strong>Saudi Arabia Correspondent</strong> — Korea Foundation for International Cultural Exchange (KOFICE) <span class="info-year">2025–</span></p>
             <p><strong>Saudi Arabia &amp; UAE Correspondent</strong> — Korean Film Council (KOFIC) <span class="info-year">2026–</span></p>
-            <p><strong>Saudi Arabia Export Coordinator</strong> — Korea Publishing Industry Promotion Agency (KPIPA) <span class="info-year">2026–</span></p>
+            <p><strong>Saudi Arabia Export Coordinator</strong> — Publication Industry Promotion Agency of Korea (KPIPA) <span class="info-year">2026–</span></p>
             <p><strong>MA student</strong> — Shakespeare Institute, University of Birmingham <span class="info-year">2025–2028 (expected)</span></p>
         </div>
     </div>
