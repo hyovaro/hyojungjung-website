@@ -18,10 +18,11 @@
         .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
         .nav-back:hover { color: #1a1a1a; }
         .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
-        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent { background: #eb559d; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 20px; }
         .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
         .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
-        .header-accent img.accent-kpipa { max-width: 138px; max-height: 60px; mix-blend-mode: normal; }
+        .kpipa-card { background: #fff; border-radius: 4px; padding: 18px 20px; width: 100%; display: flex; align-items: center; justify-content: center; }
+        .kpipa-card img.accent-kpipa { max-width: 100%; max-height: 56px; mix-blend-mode: normal; }
         .header-content { display: grid; grid-template-columns: 45% 1fr; }
         .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
         .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
@@ -36,7 +37,7 @@
         .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
         .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
         .lang-btn:last-child { border-radius: 0 2px 2px 0; }
-        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn.active { background: #eb559d; color: #fff; border-color: #eb559d; }
         .lang-btn:not(.active):hover { color: #1a1a1a; }
         .article-body { display: grid; grid-template-columns: 180px 1fr; }
         .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
@@ -45,16 +46,16 @@
         .article-text.hidden { display: none; }
         .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
         .text-ko p { margin-bottom: 24px; }
-        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 500; color: #eb559d; margin: 36px 0 16px; padding-top: 20px; border-top: 1.5px solid #f6c9dd; }
         .text-en { font-size: 15px; line-height: 1.95; color: #333; }
         .text-en p { margin-bottom: 22px; }
-        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 500; font-style: italic; color: #eb559d; margin: 36px 0 16px; padding-top: 20px; border-top: 1.5px solid #f6c9dd; }
         .text-en em { font-style: italic; }
         .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
         .article-photo img { width: 100%; height: auto; display: block; }
         .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
         .article-photo-sm img { width: 100%; height: auto; display: block; }
-        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #f6c9dd; }
         .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
         .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
         .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
@@ -65,8 +66,8 @@
         .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
         .footer-link:hover { color: #1a1a1a; }
         .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
-        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
-        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #eb559d; color: #eb559d; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #eb559d; color: #fff; }
         @media (max-width: 900px) {
             nav { padding: 18px 28px; }
             .article-header { grid-template-columns: 1fr; }
@@ -161,19 +162,27 @@
         .report-cover { max-width: 460px; margin: 8px auto 10px; border: 0.5px solid rgba(0,0,0,0.12); border-radius: 2px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
         .report-cover img { width: 100%; height: auto; display: block; }
         .report-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 30px 0 8px; }
-        .report-btn { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 22px; border: 0.5px solid #7c3a36; color: #7c3a36; background: transparent; border-radius: 2px; transition: all 0.2s; }
-        .report-btn.primary { background: #7c3a36; color: #f7f4ef; }
-        .report-btn:hover { background: #7c3a36; color: #f7f4ef; }
-        .report-btn.primary:hover { background: #632d2a; border-color: #632d2a; }
+        .report-btn { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 22px; border: 0.5px solid #eb559d; color: #eb559d; background: transparent; border-radius: 2px; transition: all 0.2s; }
+        .report-btn.primary { background: #eb559d; color: #fff; }
+        .report-btn:hover { background: #eb559d; color: #fff; }
+        .report-btn.primary:hover { background: #d63f89; border-color: #d63f89; }
         .toc-list { margin: 8px 0 8px; }
         .toc-part { padding: 14px 0; border-top: 0.5px solid rgba(0,0,0,0.1); display: grid; grid-template-columns: 44px 1fr; gap: 4px 14px; align-items: baseline; }
-        .toc-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; color: #7c3a36; line-height: 1; }
+        .toc-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; color: #eb559d; line-height: 1; }
         .toc-heading { font-size: 14px; font-weight: 500; color: #1a1a1a; margin-bottom: 4px; }
         .toc-items { font-size: 13px; color: #6f6f6f; line-height: 1.7; }
+        .data-table-wrap { margin: 28px 0 8px; overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .data-table caption { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #eb559d; font-weight: 600; text-align: left; margin-bottom: 8px; padding-bottom: 6px; }
+        .data-table th { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #a83a6e; font-weight: 600; padding: 8px 12px; border-bottom: 1px solid #eb559d; text-align: left; background: #fdeef5; white-space: nowrap; }
+        .data-table td { padding: 9px 12px; border-bottom: 0.5px solid rgba(0,0,0,0.07); color: #333; vertical-align: top; line-height: 1.6; }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:nth-child(even) td { background: #fdf6fa; }
+        .table-note { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-top: 6px; margin-bottom: 24px; padding-left: 12px; border-left: 2px solid #f6c9dd; }
 </style>
     <!-- launch-meta -->
     <link rel="canonical" href="https://hyojungjung.com/articles/kpipa-2026-07-saudi.html">
-    <meta name="theme-color" content="#7c3a36">
+    <meta name="theme-color" content="#eb559d">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -208,7 +217,9 @@
 
 <header class="article-header">
     <div class="header-accent">
-        <img src="../images/kpipa-logo.png" alt="KPIPA — Publication Industry Promotion Agency of Korea" class="accent-kpipa">
+        <div class="kpipa-card">
+            <img src="../images/kpipa-logo.png" alt="KPIPA — Publication Industry Promotion Agency of Korea" class="accent-kpipa">
+        </div>
     </div>
     <div class="header-content">
         <div class="header-title-col">
@@ -262,7 +273,7 @@
             </div>
 
             <div class="report-actions">
-                <a class="report-btn primary" href="kpipa-2026-07-saudi.pdf" target="_blank">전체 보고서 보기 (PDF)</a>
+                <a class="report-btn primary" href="kpipa-2026-07-saudi.pdf" target="_blank">전체 보고서 다운로드 (한글 PDF)</a>
                 <a class="report-btn" href="https://www.kpipa.or.kr/p/g3_5/270" target="_blank">KPIPA 공식 페이지</a>
             </div>
 
@@ -298,7 +309,162 @@
                 </div>
             </div>
 
-            <p>전체 보고서(12페이지)는 위 ‘전체 보고서 보기(PDF)’ 또는 KPIPA 공식 페이지에서 확인할 수 있다.</p>
+            <p>보고서 전문은 아래와 같다. 원문 그대로 읽고 싶다면 위 ‘전체 보고서 다운로드(한글 PDF)’를 이용하면 된다 — 다운로드되는 PDF는 한글본만 제공된다.</p>
+
+            <h2>한국문학에서 웹툰까지, 사우디 출판시장의 변화와 한국 콘텐츠의 가능성</h2>
+
+            <p>최근 사우디아라비아에서는 문화산업 육성을 핵심 과제로 추진하는 ‘비전 2030(Vision 2030)’ 정책에 따라 출판산업과 콘텐츠 산업이 빠르게 성장하고 있다. 리야드 국제도서전(Riyadh International Book Fair)을 비롯한 대형 도서 행사가 확대되고 있으며, 디지털 출판과 만화·웹툰 플랫폼도 활발하게 성장하는 등 출판시장의 외연이 지속적으로 넓어지고 있다.</p>
+
+            <p>한국 콘텐츠에 대한 관심 역시 K-pop과 드라마를 중심으로 꾸준히 증가하고 있으며, 최근에는 한국문학과 웹툰 등 출판콘텐츠로까지 관심이 확대되는 모습을 보이고 있다. 특히 노벨문학상 수상 이후 한국문학에 대한 국제적 관심이 높아지면서 중동 지역에서도 한국 작가와 번역 도서에 대한 관심이 점차 증가하고 있다.</p>
+
+            <p>본 보고서는 사우디아라비아 내에서 유통되고 있는 한국도서의 출간 현황을 살펴보고, 현지 독자의 반응과 함께 디지털 출판 플랫폼인 망가 아라비아(Manga Arabia) 사례를 통해 한국 출판콘텐츠의 확장 가능성을 분석하고자 한다.</p>
+
+            <h2>사우디아라비아 내 한국도서 출간 현황</h2>
+
+            <p>사우디아라비아에서 유통되는 한국 도서는 사우디 현지 출판사가 직접 번역·출간한 것이 아니라, 이집트·레바논·UAE 등 아랍어권 번역 출판 허브에서 제작된 번역본을 수입하는 형태로 공급되고 있다. 즉, 사우디아라비아는 한국 도서의 번역·출판 주체라기보다 소비·유통 시장으로 기능하고 있다.</p>
+
+            <p>오프라인 유통의 경우, 사우디 최대 서점 체인인 자릴 북스토어(Jarir Bookstore)가 대표적인 창구다. 자릴 북스토어는 1974년 리야드에서 출발해 현재 사우디아라비아와 걸프협력회의(GCC) 전역으로 사업을 확장한 서점·유통 기업으로, 자체 출판 부문인 자릴 퍼블리케이션스(Jarir Publications)를 통해 국제 베스트셀러의 아랍어 번역 출판도 병행하고 있다. 필자가 2026년 5월과 7월 리야드 그라나다몰(Granada Mall) 지점과 알야스민(Al Yasmin) 지점을 직접 방문해 확인한 결과, 매장 내 동아시아 문학 코너에 일본·중국 도서와 함께 한국 도서가 진열되어 있었다. 진열 도서 수는 일본·중국 도서에 비해 상대적으로 적었으나, 소설·에세이·단편집은 물론 한국어 학습 교재, 한국 문화 관련 도서, 한국 웹툰 원작 만화까지 다양한 형태의 한국 콘텐츠가 영어 및 아랍어 번역본으로 함께 확인됐다.</p>
+
+            <p>자릴 북스토어를 비롯한 사우디아라비아 서점들은 도서별 판매 부수를 공식적으로 공개하는 시스템을 갖추고 있지 않으며, 온라인에서는 베스트셀러 표기, 오프라인에서는 베스트셀러 모음 진열 방식으로 수요를 간접적으로 확인할 수 있는 정도다. 다만 매장 직원에 따르면 오프라인 매장에 진열된다는 사실 자체가 판매량을 반영한 결과라고 하며, 이를 근거로 현재 사우디아라비아 오프라인 서점에서 한국 도서가 일정 수준의 판매고를 올리고 있음을 유추할 수 있다.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>[표 1] 자릴 북스토어 오프라인 진열 한국 관련 도서 현황(2026. 5.~7.)</caption>
+                <thead><tr><th>한국어 원제(영어 제목)</th><th>작가명</th><th>번역 언어</th><th>출판사</th><th>분야</th></tr></thead>
+                <tbody>
+                <tr><td>불편한 편의점(The Convenience Store)</td><td>김호연(Kim Ho-yeon)</td><td>아랍어</td><td>아랍 사이언티픽 퍼블리셔스(레바논)</td><td>소설</td></tr>
+                <tr><td>어서 오세요, 휴남동 서점입니다(Welcome to the Hyunam-Dong Bookshop)</td><td>황보름(Hwang Bo-reum)</td><td>아랍어·영어</td><td>시드라 퍼블리싱(UAE)·블룸즈버리(영국)</td><td>소설</td></tr>
+                <tr><td>쇼코의 미소(Shoko's Smile)</td><td>최은영(Choi Eun-young)<sup>1</sup></td><td>아랍어</td><td>알마흐루사(이집트)</td><td>단편집</td></tr>
+                <tr><td>달러구트 꿈 백화점 2(Dallergut Dream Department Store 2)</td><td>이미예(Lee Mi-ye)</td><td>아랍어</td><td>아시르 알쿠투브(이집트)</td><td>소설</td></tr>
+                <tr><td>살인자의 쇼핑몰(The Killer's Shopping Mall)</td><td>강지영(Kang Ji-young)</td><td>아랍어</td><td>아시르 알쿠투브(이집트)</td><td>소설</td></tr>
+                <tr><td>거기, 내가 가면 안 돼요?(Can't I Leave?)</td><td>이금이(Lee Geum-i)</td><td>아랍어</td><td>아시르 알쿠투브(이집트)</td><td>소설</td></tr>
+                <tr><td>어디선가 나를 찾는 전화벨이 울리고(I'll Be Right There)</td><td>신경숙(Shin Kyung-sook)</td><td>아랍어</td><td>마흐루사 센터 포 퍼블리싱(이집트)</td><td>소설</td></tr>
+                <tr><td>파친코(Pachinko)</td><td>민진 리(Min Jin Lee)<sup>2</sup></td><td>아랍어·영어</td><td>아랍 사이언티픽 퍼블리셔스(레바논)·그랜드 센트럴 퍼블리싱(미국)</td><td>소설</td></tr>
+                <tr><td>아몬드(Almond)</td><td>손원평(Son Won-pyeong)</td><td>영어</td><td>하퍼비아(미국)</td><td>소설</td></tr>
+                <tr><td>82년생 김지영(Kim Jiyoung, Born 1982)</td><td>조남주(Cho Nam-joo)</td><td>영어</td><td>사이먼 앤 슈스터(미국)</td><td>소설</td></tr>
+                <tr><td>트렁크(The Trunk)</td><td>김려령(Kim Ryeo-ryeong)</td><td>영어</td><td>더블데이(미국)</td><td>소설</td></tr>
+                <tr><td>천 개의 파랑(A Thousand Blues)</td><td>천선란(Cheon Seon-ran)</td><td>영어</td><td>더블데이(미국)</td><td>소설</td></tr>
+                <tr><td>바쿠다 사진관(Hakuda Photo Studio)</td><td>허태연(Her Taeyeon)</td><td>영어</td><td>확인 필요</td><td>소설</td></tr>
+                <tr><td>나는 나로 살기로 했다(I Decided to Live as Me)</td><td>김수현(Kim Su-hyun)</td><td>영어</td><td>확인 필요</td><td>에세이</td></tr>
+                <tr><td>모든 순간이 너였다(Every Moment Was You)</td><td>하태완(Ha Tae-wan)</td><td>영어</td><td>피아트쿠스(영국)</td><td>에세이</td></tr>
+                <tr><td>BTS: Icons of K-Pop</td><td>—</td><td>영어</td><td>오마라북스(영국)</td><td>전기/교양</td></tr>
+                <tr><td>Solo Leveling Vol.5</td><td>추공/DUBU(Chugong/DUBU)</td><td>영어</td><td>아이즈프레스(미국)</td><td>만화</td></tr>
+                <tr><td>한국어 학습 교재 다수(Tuttle Korean Dictionary 외)</td><td>다수</td><td>영어</td><td>터틀 퍼블리싱 외(미국)</td><td>어학</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">1 현지 아랍어 번역본에 저자명이 ‘Choi In-young’으로 잘못 표기되어 있으나, 올바른 표기는 ‘Choi Eun-young’임<br>2 민진 리(Min Jin Lee)는 한국계 미국인 작가로, 한국 관련 콘텐츠로 포함함<br>출처 — 통신원 직접 방문 조사(2026. 5.~7.), 자릴 북스토어(Jarir Bookstore) 그라나다몰(Granada Mall) 지점 및 알야스민(Al Yasmin) 지점. 자릴 북스토어는 공식 판매 순위를 외부에 공개하지 않으므로 순위는 진열 순서 기준이며, 오프라인 매장 진열 자체가 현지 수요를 반영하는 지표로 볼 수 있음. 아랍어 번역 출판사는 이집트(알마흐루사·아시르 알쿠투브·마흐루사 센터 포 퍼블리싱), 레바논(아랍 사이언티픽 퍼블리셔스), UAE(시드라 퍼블리싱) 소재이며, 사우디아라비아 현지 번역 출판사는 확인되지 않음.</p>
+
+            <div class="article-photo"><img src="kpipa-2026-07-images/jarir-bookstore-korean-lit.jpg" alt="자릴 북스토어 그라나다몰 지점에서 구입한 한국문학 모음"></div>
+            <p class="photo-caption">▲ 자릴 북스토어(Jarir Bookstore) 그라나다몰(Granada Mall) 지점에서 구입한 한국문학 모음.</p>
+
+            <div class="article-photo"><img src="kpipa-2026-07-images/al-yasmin-shelf.jpg" alt="알야스민 지점의 소설과 이야기 코너에 진열된 한국 도서"></div>
+            <p class="photo-caption">▲ 알야스민(Al Yasmin) 지점의 소설과 이야기(القصة والرواية) 코너. 《쇼코의 미소》(Shoko's Smile) 아랍어판 등 한국 도서가 함께 진열되어 있다. — 출처: 필자 직접 촬영(2026. 5.~7.)</p>
+
+            <p>온라인 유통 채널에서도 한국문학의 입지가 확인된다. 리야드 기반 온라인 서점 다르 알순(Dar Alsun)은 자체 카테고리 분류 체계 안에 ‘한국 문학(الأدب الكوري)’을 독립 항목으로 운영하고 있다. 이는 한국문학이 ‘동아시아 문학’이나 ‘번역 문학’의 하위 항목으로 묶이는 일반적인 분류 방식에서 벗어나, 독자적인 장르로 인식되기 시작했음을 보여주는 사례다. 자릴 북스토어 온라인 스토어에서도 소설 외에 한국어 학습 교재, 한국 문화 관련 도서 등 다양한 한국 관련 콘텐츠가 유통되고 있으며, 두 채널을 합산하면 사우디아라비아에서 유통 중인 한국 관련 도서의 저변은 오프라인 매장보다 훨씬 넓다.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>[표 2] 사우디아라비아 내 한국 관련 도서 온라인 유통 현황(2026. 7. 기준)</caption>
+                <thead><tr><th>한국어 원제(영어 제목)</th><th>작가명</th><th>번역 언어</th><th>출판사</th><th>분야</th><th>판매처</th></tr></thead>
+                <tbody>
+                <tr><td>불편한 편의점(The Convenience Store)</td><td>김호연(Kim Ho-yeon)</td><td>아랍어</td><td>아랍 사이언티픽 퍼블리셔스(레바논)</td><td>소설</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>거기, 내가 가면 안 돼요?(Can't I Leave?)</td><td>이금이(Lee Geum-i)</td><td>아랍어</td><td>아시르 알쿠투브(이집트)</td><td>소설</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>쇼코의 미소(Shoko's Smile)</td><td>최은영<sup>3</sup></td><td>아랍어</td><td>알마흐루사(이집트)</td><td>단편집</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>파친코(Pachinko)</td><td>민진 리(Min Jin Lee)<sup>4</sup></td><td>아랍어</td><td>아랍 사이언티픽 퍼블리셔스(레바논)</td><td>소설</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>소금(Salt)</td><td>강경애(Kang Kyeong-ae)</td><td>아랍어</td><td>사프사파 퍼블리싱(이집트)</td><td>소설</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>보리(Barley)</td><td>김남천(Kim Nam-chun)</td><td>아랍어</td><td>사프사파 퍼블리싱(이집트)</td><td>소설</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>어린 벗에게(Letters to a Young Friend)</td><td>이광수(Lee Gwang-su)</td><td>아랍어</td><td>사프사파 퍼블리싱(이집트)</td><td>산문/서한</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>아몬드(Almond)</td><td>손원평(Son Won-pyeong)</td><td>아랍어</td><td>사프사파 퍼블리싱(이집트)</td><td>소설</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>희랍어 시간(Greek Lessons)</td><td>한강(Han Kang)</td><td>아랍어</td><td>타쉬킬 퍼블리싱(이집트)</td><td>소설</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>저주토끼(Cursed Bunny)</td><td>정보라(Bora Chung)</td><td>아랍어</td><td>다르 알마흐루사(이집트)</td><td>단편집</td><td>다르 알순(온라인)</td></tr>
+                <tr><td>어서 오세요, 휴남동 서점입니다(Welcome to the Hyunam-Dong Bookshop)</td><td>황보름(Hwang Bo-reum)</td><td>아랍어·영어</td><td>시드라 퍼블리싱(UAE)·블룸즈버리(영국)</td><td>소설</td><td>다르 알순·자릴(온라인)</td></tr>
+                <tr><td>메리골드 마음 세탁소(Marigold Mind Laundry)</td><td>윤정은(Jungeun Yun)</td><td>영어</td><td>펭귄(영국)</td><td>소설</td><td>자릴(온라인)</td></tr>
+                <tr><td>비가 오면 열리는 상점(The Rainfall Market)</td><td>유영광(You Yeong-gwang)</td><td>영어</td><td>펭귄(영국)</td><td>소설</td><td>자릴(온라인)</td></tr>
+                <tr><td>연남동 세탁소(Yeonnam-dong's Smiley Laundromat)</td><td>김지윤(Kim Jiyun)</td><td>영어</td><td>쿼커스(영국)</td><td>소설</td><td>자릴(온라인)</td></tr>
+                <tr><td>모두와 잘 지내지 않아도 괜찮아(It's Okay Not to Get Along with Everyone)</td><td>댄싱 스네일(Dancing Snail)</td><td>영어</td><td>보니어 퍼블리싱(영국)</td><td>에세이/일러스트</td><td>자릴(온라인)</td></tr>
+                <tr><td>나는 게으른 게 아니라 에너지 절약 모드(I'm Not Lazy, I'm On Energy Saving Mode)</td><td>댄싱 스네일(Dancing Snail)</td><td>영어</td><td>보니어 퍼블리싱(영국)</td><td>에세이/일러스트</td><td>자릴(온라인)</td></tr>
+                <tr><td>82년생 김지영(Kim Jiyoung, Born 1982)</td><td>조남주(Cho Nam-joo)</td><td>영어</td><td>사이먼 앤 슈스터(미국)</td><td>소설</td><td>자릴(온라인)</td></tr>
+                <tr><td>한국어 학습 교재 다수(Tuttle Korean Dictionary 외)</td><td>다수</td><td>영어</td><td>터틀·베를리츠·콜린스·DK 등</td><td>어학</td><td>자릴(온라인)</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">3 현지 표기 ‘Choi In-young’은 오기이며, 올바른 표기는 ‘Choi Eun-young’임<br>4 민진 리(Min Jin Lee)는 한국계 미국인 작가로, 한국 관련 콘텐츠로 포함함<br>출처 — 자릴 북스토어 온라인 스토어(jarir.com/sa-en), 다르 알순(daralsun.com), 2026. 7. 기준. 아랍어 번역 출판사는 이집트(알마흐루사·아시르 알쿠투브·사프사파 퍼블리싱·타쉬킬·다르 알마흐루사), 레바논(아랍 사이언티픽 퍼블리셔스), UAE(시드라 퍼블리싱) 소재이며, 사우디아라비아 현지 번역 출판사는 확인되지 않음.</p>
+
+            <div class="article-photo article-photo-sm"><img src="kpipa-2026-07-images/dar-alsun-online.jpg" alt="다르 알순 온라인 서점의 한국문학 카테고리 화면"></div>
+            <p class="photo-caption">▲ 다르 알순(Dar Alsun) 온라인 서점의 한국문학 카테고리 화면 중 일부. — 출처: 다르 알순, daralsun.com(2026. 7. 기준)</p>
+
+            <p>[표 1]과 [표 2]를 비교하면 사우디아라비아 내 한국 출판콘텐츠의 유통 구조가 오프라인과 온라인에서 뚜렷한 차이를 보인다. 자릴 북스토어 오프라인 매장은 글로벌 베스트셀러와 영상화 작품 등 판매성이 검증된 소설을 중심으로 진열하는 반면, 온라인에서는 《희랍어 시간》, 《저주토끼》, 《소금》 등 보다 다양한 장르와 문학성을 갖춘 작품까지 유통되고 있다. 또한 오프라인에서는 영어판의 비중이 상대적으로 높은 반면, 온라인에서는 아랍어 번역본이 확대되는 양상을 보여 온라인 채널이 현지 아랍어 독자층을 대상으로 한국문학을 확산시키는 역할을 수행하고 있음을 시사한다. 이러한 차이는 오프라인이 대중성과 판매성을 검증하는 공간이라면, 온라인은 작품 다양성을 확대하는 플랫폼으로 기능하고 있음을 보여주는 사례라 할 수 있다.</p>
+
+            <p>한국 도서의 아랍어 번역 출판은 이집트(알마흐루사·아시르 알쿠투브·사프사파 퍼블리싱·타쉬킬·다르 알마흐루사), 레바논(아랍 사이언티픽 퍼블리셔스), UAE(시드라 퍼블리싱) 등 아랍어권 출판 허브에서 이루어지고 있으며, 사우디아라비아 현지에서 직접 번역·출간하는 출판사는 확인되지 않는다. 특히 이집트 출판사 사프사파 퍼블리싱(Sefsafa Publishing)은 강경애의 《소금》, 김남천의 《보리》, 이광수의 《어린 벗에게》 등 한국 근현대 고전 문학을 집중적으로 아랍어로 번역·출판하고 있어 주목된다. UAE의 신생 출판사 시드라 퍼블리싱(Sidra Publishing)이 황보름의 《어서 오세요, 휴남동 서점입니다》 아랍어판을 출간한 사례는 아랍어 번역 출판의 지리적 범위가 이집트·레바논 중심에서 UAE로도 확장되고 있음을 보여준다.</p>
+
+            <h2>한국도서 및 한국 작가에 대한 현지 반응</h2>
+
+            <p>사우디아라비아에서 한국문학에 대한 관심은 비교적 최근에 형성되기 시작했다. 불과 1~2년 전만 해도 현지 서점에서 한국문학을 접하기 쉽지 않았으나, 한국 드라마·영화·음악 콘텐츠가 중동 지역 젊은 층을 중심으로 빠르게 확산되면서 출판 분야로도 그 관심이 번지는 흐름이 감지되고 있다.</p>
+
+            <p>자릴 북스토어 그라나다몰 지점에서 근무하는 직원 곤잘라그디(Gonzalagdi)는 필자와의 현장 인터뷰에서 동아시아 문학 독자층의 변화를 직접적으로 언급했다. 그는 과거에는 일본문학을 찾는 고객이 주를 이뤘으나, 최근 들어 한국 드라마와 영화, 케이팝의 영향으로 한국문학을 찾는 고객이 눈에 띄게 늘었다고 전했다. 그가 현재 매장에서 가장 반응이 좋은 한국문학 작품으로 꼽은 것은 황보름의 《어서 오세요, 휴남동 서점입니다》였다. 그는 또한 오프라인 매장 진열 자체가 판매량을 반영한 결과임을 강조하며, 현재 한국 도서가 동아시아 문학 코너에서 꾸준히 자리를 유지하고 있다고 밝혔다.</p>
+
+            <p>진열된 작품들의 면면을 살펴보면, 대부분이 국내에서도 폭넓은 독자층을 확보한 베스트셀러다. 성장 서사를 다룬 《아몬드》, 여성의 삶과 사회 구조를 정면으로 다룬 《82년생 김지영》, 공동체와 위로의 가치를 그린 《불편한 편의점》 등은 이미 다수의 언어로 번역되어 해외 독자들과 만나고 있는 작품들이다. 또한 《트렁크》처럼 OTT 드라마 시리즈의 원작으로 알려진 작품이 포함된 것은 영상 콘텐츠의 인기가 원작 도서에 대한 수요로 이어지는 경로가 실제로 작동하고 있음을 보여주는 사례로 주목된다.</p>
+
+            <p>한국 소설·에세이 외에도 한국어 학습 교재와 BTS 전기 《BTS: Icons of K-Pop》, 한국 웹툰 원작 만화 《솔로 레벨링(Solo Leveling)》 영어판까지 함께 진열되어 있었다는 점도 주목할 만하다. 이는 현지 독자들의 관심이 한국문학에 그치지 않고 한국어·한국문화 전반으로 확장되고 있음을 보여주는 징표로 읽힌다.</p>
+
+            <p>온라인 채널에서도 유사한 흐름이 확인된다. 다르 알순이 ‘한국 문학’을 독립 카테고리로 운영하고 있다는 점은 한국문학이 단순한 번역 문학의 일부로 소비되는 수준을 넘어, 장르로서의 정체성을 인정받기 시작했다는 신호로 읽힌다.</p>
+
+            <h2>망가 프로덕션(Manga Productions): 국가 주도 콘텐츠 산업의 부상</h2>
+
+            <p>망가 프로덕션(Manga Productions)은 사우디아라비아 비영리 재단 미스크 파운데이션(MiSK Foundation) 산하 콘텐츠 기업으로, 애니메이션·만화·게임 분야의 제작과 IP(지식재산권) 개발·유통을 핵심 사업으로 운영하고 있다. 비전 2030(Vision 2030) 기조 아래 콘텐츠 산업을 국가 미래 성장 동력으로 육성한다는 방향 속에서 설립된 기업으로, 글로벌 콘텐츠 제작 시스템 도입과 현지 청년 인재 양성을 주요 목표로 내세우고 있다.</p>
+
+            <p>2025년 연간보고서에 따르면, 회사는 사우디 문화와 지역 서사를 기반으로 한 오리지널 콘텐츠 제작에 집중하는 한편, 애니메이션·게임·더빙 분야 교육 프로그램과 워크숍을 운영하여 4,000명 이상의 교육 참가자를 지원했다. 아랍어 현지화(localization)를 핵심 전략으로 삼아 번역·언어 감수·게임 내 아랍어 통합·디지털 플랫폼 적용을 포괄하는 자체 현지화 시스템도 구축했다.</p>
+
+            <p>주목할 점은 망가 프로덕션이 일본 애니메이션·게임 산업과의 전략적 연계를 적극적으로 추진하고 있다는 것이다. 회사는 일본 도쿄에 별도 오피스를 운영하며, 이를 세계 주요 애니메이션·게임 생태계와 연결되는 전략 거점으로 활용하고 있다. 2025년에는 일본 애니메이션 IP인 《캡틴 츠바사》와 《그랜드라이저 U》의 중동 지역 배급에 참여했으며, ‘애니메 재팬(Anime Japan) 2025’에 동아시아 외 기업 최초의 공식 스폰서로 이름을 올렸다. 이는 사우디가 콘텐츠 소비국의 역할에 머물지 않고, 일본식 제작 시스템을 자국 산업에 적극적으로 도입하려는 전략적 의도를 반영한다.</p>
+
+            <p class="table-note">출처 — 망가 프로덕션(Manga Productions) 2025년 연간보고서, manga.com.sa</p>
+
+            <h2>망가 아라비아(Manga Arabia): 한국 웹툰의 공식 아랍어 서비스 진출</h2>
+
+            <p>망가 아라비아(Manga Arabia)는 사우디 리서치 앤 미디어 그룹(Saudi Research and Media Group, SRMG) 산하의 아랍어 만화 플랫폼이다. 2025년 한국의 키다리스튜디오(Kidari Studio)와 브이브로(V-Bros)와 협력 계약을 체결하고, 한국 웹툰의 아랍어 서비스를 공식적으로 시작했다. 서비스 개시 작품으로는 《메디컬 환생》, 《식물인간》, 《신기록》이 포함됐다.</p>
+
+            <p>《식물인간》(글그림 진아)은 거대 회귀식물 ‘Z’로 인해 전 세계에 퍼진 재앙 속에서 치료법을 찾아 세계를 떠도는 식물학자들의 이야기를 담은 힐링 판타지 작품이다. 《메디컬 환생》(글그림 키다리스튜디오)은 실패한 외과 의사가 중학생 시절로 회귀해 새로운 삶을 살아가는 회귀 판타지 웹툰이며, 《신기록》(글그림 리율)은 신을 기록하는 소녀 세진과 인간이 인지하지 못하는 존재들의 이야기를 담은 한국형 판타지·괴담 웹툰이다.</p>
+
+            <p>망가 아라비아 유스(Manga Arabia Youth) 앱 내 독자 반응을 살펴본 결과, 세 작품 가운데 가장 활발한 반응을 이끌어낸 것은 《메디컬 환생》이었다. 다음 시즌 공개를 요청하는 댓글과 업로드 속도에 대한 불만이 다수 확인됐으며, 일부 이용자들은 한국 원작의 연재 분량과 아랍어 서비스 간 격차를 지적하기도 했다. 《식물인간》은 스토리와 작화에 대한 호평이 많았던 반면, 아랍어 번역 표현에 대한 아쉬움도 함께 제기됐다. 전반적으로 댓글 수가 많지 않아 아직 본격적인 팬덤 형성 단계에는 이르지 못한 것으로 보인다.</p>
+
+            <p>현재 중동 만화 시장에서 일본 콘텐츠가 차지하는 비중은 여전히 높으며, 한국 웹툰은 제한적인 규모로 서비스되고 있다. 그러나 망가 아라비아를 통한 공식 라이선스 기반의 아랍어 서비스 개시는 정식 계약 경로로 한국 웹툰이 중동 시장에 진입했다는 점에서 의미 있는 출발점으로 평가된다. 자릴 북스토어에서도 한국 웹툰 원작 만화인 《솔로 레벨링》 영어판이 일본 만화 코너 인근에 함께 진열되어 있었던 점은 한국 만화·웹툰 콘텐츠에 대한 오프라인 유통 수요도 일정 수준 존재함을 보여준다.</p>
+
+            <p class="table-note">출처 — 망가 아라비아(Manga Arabia) 공식 웹사이트, mangaarabia.com · 망가 프로덕션(Manga Productions) 공식 웹사이트, manga.com.sa</p>
+
+            <h2>시사점 및 국내 출판사의 진출 전략</h2>
+
+            <p>이상의 조사 내용을 종합하면, 사우디아라비아 출판시장에서 한국 콘텐츠는 현재 수요 형성의 초입 단계에 있다. 한국문학은 동아시아 문학 코너를 통해 현지 독자들과 만나고 있으며, 한국어 학습 교재와 한국 문화 관련 도서, 웹툰 원작 만화까지 한국 콘텐츠의 저변이 다양하게 확산되고 있다. 다만 이 흐름이 지속적인 시장 확대로 이어지기 위해서는 구조적인 과제를 해결하기 위한 전략적 접근이 필요하다.</p>
+
+            <h2>자릴 북스토어 등 현지 대형 유통망과의 직접 협력</h2>
+
+            <p>자릴 북스토어는 사우디아라비아와 GCC 전역에 걸친 대표적인 서점·유통 기업일 뿐 아니라, 자체 출판 부문인 자릴 퍼블리케이션스(Jarir Publications)를 통해 번역 출판 기능도 함께 수행하고 있다. 현지 대표 출판사인 오베이칸 퍼블리싱(Obeikan Publishing) 역시 아랍어 번역 출판과 디지털 콘텐츠 분야에서 활발한 사업을 전개하고 있어 잠재적인 협력 파트너로 검토할 만하다. 국내 출판사는 단순한 도서 수출을 넘어 이들 기업과 바이어 계약, 공동 출판, 판권 계약 등 다양한 협력 모델을 적극 모색할 필요가 있다.</p>
+
+            <h2>사우디 현지 번역·출판 협력 체계 구축</h2>
+
+            <p>현재 사우디아라비아에서 판매되는 한국 도서의 아랍어 번역본은 대부분 이집트·레바논·UAE 등 아랍어권 국가의 출판사가 제작한 것으로 확인됐다. 조사 범위 내에서는 한국 도서를 직접 번역·출간하는 사우디 현지 출판사는 확인되지 않았다. 이는 사우디 내 한국 출판콘텐츠에 대한 수요는 형성되고 있지만, 이를 현지에서 번역·출판하는 산업 기반은 아직 충분히 구축되지 않았음을 보여준다.</p>
+
+            <p>이러한 구조는 국내 출판사에게 새로운 진출 기회를 시사한다. 기존처럼 해외 아랍어권 번역 출판사를 거치는 간접 진출 방식에서 나아가, 사우디 현지에서 번역·출판·유통을 수행할 수 있는 파트너를 선제적으로 발굴할 필요가 있다. 특히 자체 출판 기능과 대형 유통망을 함께 보유한 자릴 퍼블리케이션스(Jarir Publications)와 오베이칸 퍼블리싱(Obeikan Publishing)은 한국 도서의 현지 번역·출판 및 유통을 위한 잠재적 협력 대상으로 검토할 만하다. 이들과의 협력을 통해 번역 기획 단계부터 현지 독자의 문화적 특성과 수요를 반영할 수 있을 뿐 아니라, 오프라인 서점과 온라인 판매망을 연계한 효율적인 시장 진출도 기대할 수 있다. 한국 도서에 대한 현지 수요가 확대되고 있는 현 시점은 사우디 출판사와의 직접 협력 체계를 구축하고, 현지 번역·출판 기반을 선제적으로 마련할 수 있는 적기로 평가된다.</p>
+
+            <p class="table-note">출처 — 오베이칸 퍼블리싱(Obeikan Publishing), obeikan.com.sa/obeikan-publishing</p>
+
+            <h2>번역 품질과 아랍어 현지화 수준 제고</h2>
+
+            <p>망가 아라비아를 통해 서비스된 한국 웹툰에 대해 일부 독자들이 아랍어 번역 표현의 어색함을 지적했다는 점은 시사하는 바가 크다. 아랍어는 지역마다 방언 편차가 크고 표현 문화가 다양한 언어인 만큼, 번역의 양적 확대와 함께 현지 독자에게 자연스럽게 읽히는 번역 품질 확보가 병행되어야 한다. 이는 출판 콘텐츠뿐 아니라 웹툰 등 디지털 콘텐츠에도 동일하게 적용되는 과제다.</p>
+
+            <h2>OTT 원작 도서의 전략적 활용</h2>
+
+            <p>자릴 북스토어에서 확인된 진열 도서 가운데 OTT 드라마 원작 작품이 포함되어 있다는 사실은 영상 콘텐츠의 인기가 원작 도서에 대한 관심으로 이어지는 경로가 사우디 독자들 사이에서도 작동하고 있음을 보여준다. 이미 현지에서 인지도를 확보한 드라마·영화의 원작 도서를 우선 번역·출간하는 전략은 마케팅 비용을 줄이면서도 독자의 관심을 효과적으로 끌어낼 수 있는 방법이다.</p>
+
+            <h2>저작권 보호 기반의 디지털 콘텐츠 진출 전략</h2>
+
+            <p>현지 출판 관계자에 따르면, 사우디아라비아에서는 전자책 수요 자체는 존재하지만 저작권 보호 인프라의 미비로 인해 출판사들이 전자책 출시를 꺼리는 상황이다. 불법 복제본이 왓츠앱(WhatsApp)·텔레그램(Telegram) 등을 통해 무료로 유통되는 것이 주된 원인으로, 현재 이용 가능한 전자책 플랫폼은 자릴 리더(Jarir Reader)와 아마존 킨들(Amazon Kindle)에 그치는 것으로 파악된다. 한국 출판사가 디지털 콘텐츠로 사우디 시장에 진출하고자 할 경우 이러한 저작권 환경을 면밀히 고려한 전략이 필요하며, 웹툰은 망가 아라비아와 같은 공식 라이선스 기반 플랫폼을 통한 진출이 가장 현실적인 대안으로 판단된다.</p>
+
+            <h2>모바일 플랫폼 기반 웹툰 시장 확대</h2>
+
+            <p>망가 아라비아 사례는 현지 플랫폼과의 공식 라이선스 계약이 중동 시장 진출의 현실적인 경로임을 보여준다. 사우디아라비아의 전자책 소비 문화는 아직 성숙 단계에 이르지 못했지만, 모바일 앱 기반의 웹툰 플랫폼은 상대적으로 진입 장벽이 낮다. 다만 연재 속도와 업로드 주기에 민감한 독자 반응을 고려할 때, 현지 서비스 운영 방식에 대한 면밀한 조율이 필요하다.</p>
+
+            <p>비전 2030을 통해 문화산업 육성을 국가 핵심 전략으로 추진하고 있는 사우디아라비아는 출판·콘텐츠 시장의 성장 잠재력이 높은 시장이다. 현재 한국 출판콘텐츠는 아직 초기 수요 형성 단계에 머물러 있지만, 현지 독자의 관심은 꾸준히 확대되고 있다. 향후에는 사우디 현지 출판사 및 유통기업과의 직접 협력 체계 구축, 현지 수요를 반영한 번역·출판 확대, 저작권 보호 기반의 디지털 플랫폼 활용을 중심으로 한 전략적 협력이 이루어진다면 한국 출판콘텐츠의 지속적인 시장 확대가 가능할 것으로 기대된다.</p>
 
             <div class="sources">
                 <p class="sources-label">발행 정보</p>
@@ -320,7 +486,7 @@
             </div>
 
             <div class="report-actions">
-                <a class="report-btn primary" href="kpipa-2026-07-saudi.pdf" target="_blank">Read the full report (PDF)</a>
+                <a class="report-btn primary" href="kpipa-2026-07-saudi.pdf" target="_blank">Download the full report (PDF, Korean only)</a>
                 <a class="report-btn" href="https://www.kpipa.or.kr/p/g3_5/270" target="_blank">KPIPA official page</a>
             </div>
 
@@ -356,7 +522,162 @@
                 </div>
             </div>
 
-            <p>The full 12-page report is available via "Read the full report (PDF)" above or on the KPIPA official page.</p>
+            <p>The full report follows below. To read the original as published, use "Download the full report" above — note that the downloadable PDF is available in Korean only.</p>
+
+            <h2>From Korean Literature to Webtoons — Saudi Arabia's Shifting Market and the Potential of Korean Content</h2>
+
+            <p>Under the "Vision 2030" policy that makes nurturing cultural industries a core priority, Saudi Arabia's publishing and content industries are growing fast. Major book events such as the Riyadh International Book Fair are expanding, and with digital publishing and comics/webtoon platforms flourishing, the market's reach keeps widening.</p>
+
+            <p>Interest in Korean content, long driven by K-pop and drama, has been rising steadily, and lately has broadened to publishing content such as Korean literature and webtoons. In particular, as international attention to Korean literature has grown following a Nobel Prize in Literature, interest in Korean authors and translated books is gradually increasing in the Middle East too.</p>
+
+            <p>This report reviews the state of Korean-book publication in Saudi Arabia and local reader responses, and analyses the potential for expanding Korean publishing content through the case of the digital platform Manga Arabia.</p>
+
+            <h2>The State of Korean-Book Publication in Saudi Arabia</h2>
+
+            <p>Korean books circulating in Saudi Arabia are not translated and published directly by Saudi publishers; rather, they are supplied as translations produced by Arabic-language publishing hubs in Egypt, Lebanon, and the UAE. In other words, Saudi Arabia functions as a consumption and distribution market for Korean books rather than as a site of translation or publication in its own right.</p>
+
+            <p>In offline retail, Saudi Arabia's largest bookstore chain, Jarir Bookstore, is the primary channel. Founded in Riyadh in 1974, Jarir has since expanded across Saudi Arabia and the GCC as a bookstore and distribution company, and also publishes Arabic translations of international bestsellers through its own imprint, Jarir Publications. Visiting Jarir's Granada Mall and Al Yasmin branches in Riyadh in May and July 2026, the correspondent confirmed that Korean titles were displayed alongside Japanese and Chinese books in the East Asian literature section. The number of Korean titles on display was relatively small compared with Japanese and Chinese books, but the range spanned novels, essays, and short-story collections as well as Korean-language textbooks, books on Korean culture, and print editions of Korean webtoons — in both English and Arabic translation.</p>
+
+            <p>Jarir and other Saudi bookstores have no system for publicly disclosing sales figures by title; demand can only be inferred indirectly, through "bestseller" labelling online or bestseller-table displays offline. Store staff noted, however, that shelf placement in offline stores itself reflects sales performance — suggesting that Korean books are currently achieving a meaningful level of sales in Saudi Arabia's offline bookstores.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Table 1 — Korean-related titles on display at Jarir Bookstore (offline), May–Jul 2026</caption>
+                <thead><tr><th>Title (Korean)</th><th>Author</th><th>Translation</th><th>Publisher</th><th>Genre</th></tr></thead>
+                <tbody>
+                <tr><td>The Convenience Store (불편한 편의점)</td><td>Kim Ho-yeon</td><td>Arabic</td><td>Arab Scientific Publishers (Lebanon)</td><td>Fiction</td></tr>
+                <tr><td>Welcome to the Hyunam-Dong Bookshop (어서 오세요, 휴남동 서점입니다)</td><td>Hwang Bo-reum</td><td>Arabic, English</td><td>Sidra Publishing (UAE), Bloomsbury (UK)</td><td>Fiction</td></tr>
+                <tr><td>Shoko's Smile (쇼코의 미소)</td><td>Choi Eun-young<sup>1</sup></td><td>Arabic</td><td>Al-Mahrousa (Egypt)</td><td>Short stories</td></tr>
+                <tr><td>Dallergut Dream Department Store 2 (달러구트 꿈 백화점 2)</td><td>Lee Mi-ye</td><td>Arabic</td><td>Aseer Al-Kutub (Egypt)</td><td>Fiction</td></tr>
+                <tr><td>The Killer's Shopping Mall (살인자의 쇼핑몰)</td><td>Kang Ji-young</td><td>Arabic</td><td>Aseer Al-Kutub (Egypt)</td><td>Fiction</td></tr>
+                <tr><td>Can't I Leave? (거기, 내가 가면 안 돼요?)</td><td>Lee Geum-i</td><td>Arabic</td><td>Aseer Al-Kutub (Egypt)</td><td>Fiction</td></tr>
+                <tr><td>I'll Be Right There (어디선가 나를 찾는 전화벨이 울리고)</td><td>Shin Kyung-sook</td><td>Arabic</td><td>Mahrousa Center for Publishing (Egypt)</td><td>Fiction</td></tr>
+                <tr><td>Pachinko (파친코)</td><td>Min Jin Lee<sup>2</sup></td><td>Arabic, English</td><td>Arab Scientific Publishers (Lebanon), Grand Central Publishing (US)</td><td>Fiction</td></tr>
+                <tr><td>Almond (아몬드)</td><td>Son Won-pyeong</td><td>English</td><td>HarperVia (US)</td><td>Fiction</td></tr>
+                <tr><td>Kim Jiyoung, Born 1982 (82년생 김지영)</td><td>Cho Nam-joo</td><td>English</td><td>Simon &amp; Schuster (US)</td><td>Fiction</td></tr>
+                <tr><td>The Trunk (트렁크)</td><td>Kim Ryeo-ryeong</td><td>English</td><td>Doubleday (US)</td><td>Fiction</td></tr>
+                <tr><td>A Thousand Blues (천 개의 파랑)</td><td>Cheon Seon-ran</td><td>English</td><td>Doubleday (US)</td><td>Fiction</td></tr>
+                <tr><td>Hakuda Photo Studio (바쿠다 사진관)</td><td>Her Taeyeon</td><td>English</td><td>Unconfirmed</td><td>Fiction</td></tr>
+                <tr><td>I Decided to Live as Me (나는 나로 살기로 했다)</td><td>Kim Su-hyun</td><td>English</td><td>Unconfirmed</td><td>Essay</td></tr>
+                <tr><td>Every Moment Was You (모든 순간이 너였다)</td><td>Ha Tae-wan</td><td>English</td><td>Piatkus (UK)</td><td>Essay</td></tr>
+                <tr><td>BTS: Icons of K-Pop</td><td>—</td><td>English</td><td>Omarabooks (UK)</td><td>Biography</td></tr>
+                <tr><td>Solo Leveling Vol.5</td><td>Chugong / DUBU</td><td>English</td><td>Ize Press (US)</td><td>Comic</td></tr>
+                <tr><td>Various Korean-language textbooks (incl. Tuttle Korean Dictionary)</td><td>Various</td><td>English</td><td>Tuttle Publishing and others (US)</td><td>Language learning</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">1 The Arabic edition misprints the author's name as "Choi In-young" — the correct spelling is "Choi Eun-young."<br>2 Min Jin Lee is a Korean-American author, included here as Korean-related content.<br>Source — correspondent's site visits (May–Jul 2026), Jarir Bookstore's Granada Mall and Al Yasmin branches. Jarir does not publicly disclose official sales rankings, so ranking here follows shelf order; shelf placement itself can be read as an indicator of local demand. Arabic translations are published out of Egypt (Al-Mahrousa, Mahrousa Center for Publishing), Lebanon (Arab Scientific Publishers), and the UAE (Sidra Publishing) — no Saudi-based translation publisher was identified.</p>
+
+            <div class="article-photo"><img src="kpipa-2026-07-images/jarir-bookstore-korean-lit.jpg" alt="Korean literature purchased at Jarir Bookstore's Granada Mall branch"></div>
+            <p class="photo-caption">▲ Korean literature purchased at Jarir Bookstore's Granada Mall branch.</p>
+
+            <div class="article-photo"><img src="kpipa-2026-07-images/al-yasmin-shelf.jpg" alt="Fiction section at the Al Yasmin branch, with Korean titles on display"></div>
+            <p class="photo-caption">▲ The fiction section (القصة والرواية) at the Al Yasmin branch. Korean titles, including the Arabic edition of <em>Shoko's Smile</em>, are shelved alongside local fiction. — Source: photographed by the correspondent (May–Jul 2026)</p>
+
+            <p>Korean literature's footprint is also evident online. Riyadh-based online bookseller Dar Alsun runs "Korean Literature" (الأدب الكوري) as an independent category within its own classification system — rather than folding it into "East Asian Literature" or "Translated Literature" as is more typical, a sign that Korean literature is beginning to be recognised as a genre in its own right. Jarir's online store likewise carries Korean-language textbooks and books on Korean culture alongside fiction; combined, the two channels give Korean-related books a considerably wider footprint online than in offline stores.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Table 2 — Korean-related titles in online distribution in Saudi Arabia, as of Jul 2026</caption>
+                <thead><tr><th>Title (Korean)</th><th>Author</th><th>Translation</th><th>Publisher</th><th>Genre</th><th>Retailer</th></tr></thead>
+                <tbody>
+                <tr><td>The Convenience Store (불편한 편의점)</td><td>Kim Ho-yeon</td><td>Arabic</td><td>Arab Scientific Publishers (Lebanon)</td><td>Fiction</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Can't I Leave? (거기, 내가 가면 안 돼요?)</td><td>Lee Geum-i</td><td>Arabic</td><td>Aseer Al-Kutub (Egypt)</td><td>Fiction</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Shoko's Smile (쇼코의 미소)</td><td>Choi Eun-young<sup>3</sup></td><td>Arabic</td><td>Al-Mahrousa (Egypt)</td><td>Short stories</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Pachinko (파친코)</td><td>Min Jin Lee<sup>4</sup></td><td>Arabic</td><td>Arab Scientific Publishers (Lebanon)</td><td>Fiction</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Salt (소금)</td><td>Kang Kyeong-ae</td><td>Arabic</td><td>Sefsafa Publishing (Egypt)</td><td>Fiction</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Barley (보리)</td><td>Kim Nam-chun</td><td>Arabic</td><td>Sefsafa Publishing (Egypt)</td><td>Fiction</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Letters to a Young Friend (어린 벗에게)</td><td>Lee Gwang-su</td><td>Arabic</td><td>Sefsafa Publishing (Egypt)</td><td>Prose/letters</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Almond (아몬드)</td><td>Son Won-pyeong</td><td>Arabic</td><td>Sefsafa Publishing (Egypt)</td><td>Fiction</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Greek Lessons (희랍어 시간)</td><td>Han Kang</td><td>Arabic</td><td>Tashkeel Publishing (Egypt)</td><td>Fiction</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Cursed Bunny (저주토끼)</td><td>Bora Chung</td><td>Arabic</td><td>Dar Al-Mahrousa (Egypt)</td><td>Short stories</td><td>Dar Alsun (online)</td></tr>
+                <tr><td>Welcome to the Hyunam-Dong Bookshop (어서 오세요, 휴남동 서점입니다)</td><td>Hwang Bo-reum</td><td>Arabic, English</td><td>Sidra Publishing (UAE), Bloomsbury (UK)</td><td>Fiction</td><td>Dar Alsun, Jarir (online)</td></tr>
+                <tr><td>Marigold Mind Laundry (메리골드 마음 세탁소)</td><td>Jungeun Yun</td><td>English</td><td>Penguin (UK)</td><td>Fiction</td><td>Jarir (online)</td></tr>
+                <tr><td>The Rainfall Market (비가 오면 열리는 상점)</td><td>You Yeong-gwang</td><td>English</td><td>Penguin (UK)</td><td>Fiction</td><td>Jarir (online)</td></tr>
+                <tr><td>Yeonnam-dong's Smiley Laundromat (연남동 세탁소)</td><td>Kim Jiyun</td><td>English</td><td>Quercus (UK)</td><td>Fiction</td><td>Jarir (online)</td></tr>
+                <tr><td>It's Okay Not to Get Along with Everyone (모두와 잘 지내지 않아도 괜찮아)</td><td>Dancing Snail</td><td>English</td><td>Bonnier Publishing (UK)</td><td>Essay/illustrated</td><td>Jarir (online)</td></tr>
+                <tr><td>I'm Not Lazy, I'm On Energy Saving Mode (나는 게으른 게 아니라 에너지 절약 모드)</td><td>Dancing Snail</td><td>English</td><td>Bonnier Publishing (UK)</td><td>Essay/illustrated</td><td>Jarir (online)</td></tr>
+                <tr><td>Kim Jiyoung, Born 1982 (82년생 김지영)</td><td>Cho Nam-joo</td><td>English</td><td>Simon &amp; Schuster (US)</td><td>Fiction</td><td>Jarir (online)</td></tr>
+                <tr><td>Various Korean-language textbooks (incl. Tuttle Korean Dictionary)</td><td>Various</td><td>English</td><td>Tuttle, Berlitz, Collins, DK, and others</td><td>Language learning</td><td>Jarir (online)</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">3 The local listing misprints the author's name as "Choi In-young" — the correct spelling is "Choi Eun-young."<br>4 Min Jin Lee is a Korean-American author, included here as Korean-related content.<br>Source — Jarir Bookstore's online store (jarir.com/sa-en), Dar Alsun (daralsun.com), as of Jul 2026. Arabic translations are published out of Egypt (Al-Mahrousa, Aseer Al-Kutub, Sefsafa Publishing, Tashkeel, Dar Al-Mahrousa), Lebanon (Arab Scientific Publishers), and the UAE (Sidra Publishing) — no Saudi-based translation publisher was identified.</p>
+
+            <div class="article-photo article-photo-sm"><img src="kpipa-2026-07-images/dar-alsun-online.jpg" alt="Dar Alsun's Korean literature category page"></div>
+            <p class="photo-caption">▲ Part of Dar Alsun's "Korean Literature" online category page. — Source: Dar Alsun, daralsun.com (as of Jul 2026)</p>
+
+            <p>Comparing Tables 1 and 2, the distribution of Korean publishing content in Saudi Arabia looks markedly different offline versus online. Jarir's physical shelves favour proven sellers — global bestsellers and screen adaptations — while online, more varied and literary titles circulate too, including <em>Greek Lessons</em>, <em>Cursed Bunny</em>, and <em>Salt</em>. English editions dominate offline, whereas Arabic translations are more prominent online — suggesting online channels are doing more of the work of reaching Arabic-speaking readers directly. If offline shelves are where popularity and sales are proven, online platforms function as the space that expands the variety of titles available.</p>
+
+            <p>Arabic translations of Korean books are being published out of hubs in Egypt (Al-Mahrousa, Aseer Al-Kutub, Sefsafa Publishing, Tashkeel, Dar Al-Mahrousa), Lebanon (Arab Scientific Publishers), and the UAE (Sidra Publishing) — no publisher translating and publishing directly out of Saudi Arabia was identified. Notably, Egyptian publisher Sefsafa Publishing has concentrated on translating modern Korean classics into Arabic, including Kang Kyeong-ae's <em>Salt</em>, Kim Nam-chun's <em>Barley</em>, and Lee Gwang-su's <em>Letters to a Young Friend</em>. The UAE's newer Sidra Publishing releasing an Arabic edition of Hwang Bo-reum's <em>Welcome to the Hyunam-Dong Bookshop</em> shows the geography of Arabic translation publishing extending beyond its Egypt/Lebanon centre of gravity into the UAE as well.</p>
+
+            <h2>Local Response to Korean Books and Authors</h2>
+
+            <p>Interest in Korean literature in Saudi Arabia is a fairly recent development. As little as one or two years ago, Korean literature was hard to find in local bookstores; but as Korean drama, film, and music have spread rapidly among younger audiences across the Middle East, that interest is increasingly spilling over into publishing as well.</p>
+
+            <p>Gonzalagdi, a staff member at Jarir's Granada Mall branch, described the shift in East Asian literature readership directly in an on-site interview with the correspondent. In the past, he said, customers looking for East Asian fiction mostly sought out Japanese literature; more recently, the influence of Korean drama, film, and K-pop has visibly increased the number of customers seeking out Korean literature specifically. The Korean title he named as currently the best-received in store was Hwang Bo-reum's <em>Welcome to the Hyunam-Dong Bookshop</em>. He also reiterated that shelf placement in the offline store reflects sales, and that Korean books currently hold a steady place in the East Asian literature section.</p>
+
+            <p>Looking at the titles on display, most are already bestsellers with broad readerships back in Korea: <em>Almond</em>, a coming-of-age narrative; <em>Kim Jiyoung, Born 1982</em>, which confronts women's lives and social structures head-on; and <em>The Convenience Store</em>, which centres on community and the value of small kindnesses — all already translated into multiple languages and reaching readers abroad. The presence of a title like <em>The Trunk</em>, known as the source material for an OTT drama series, is also notable: it points to a real pathway by which the popularity of screen content feeds demand for its source books.</p>
+
+            <p>Beyond Korean fiction and essays, it's also worth noting that Korean-language textbooks, the BTS biography <em>BTS: Icons of K-Pop</em>, and the English edition of the Korean-webtoon-derived comic <em>Solo Leveling</em> were shelved together as well — a sign that local readers' interest extends beyond Korean literature into the Korean language and Korean culture more broadly.</p>
+
+            <p>A similar pattern shows up online. Dar Alsun running "Korean Literature" as its own standalone category reads as a signal that Korean literature is beginning to be recognised as having an identity as a genre in its own right, rather than being consumed simply as a subset of translated fiction.</p>
+
+            <h2>Manga Productions: The Rise of a State-Led Content Industry</h2>
+
+            <p>Manga Productions is a content company under the Saudi non-profit MiSK Foundation, operating in animation, comics, and games, with production and IP development/distribution as its core business. It was established in line with the Vision 2030 push to grow the content industry into a national growth engine, with the introduction of global content-production systems and the training of local young talent as key objectives.</p>
+
+            <p>According to its 2025 annual report, the company focuses on producing original content grounded in Saudi culture and regional narratives, while running education programmes and workshops in animation, gaming, and dubbing that have supported more than 4,000 participants. It has also built its own localisation system centred on Arabic-language localisation — spanning translation, linguistic review, in-game Arabic integration, and adaptation across digital platforms.</p>
+
+            <p>Notably, Manga Productions has been actively pursuing strategic ties with Japan's animation and games industry. The company operates a separate office in Tokyo, using it as a strategic foothold connecting into the world's major animation and gaming ecosystems. In 2025 it took part in Middle East distribution for the Japanese animation IPs <em>Captain Tsubasa</em> and <em>Grendizer U</em>, and became the first company from outside East Asia to be an official sponsor of Anime Japan 2025. This reflects a strategic intent for Saudi Arabia to move beyond the role of content consumer and actively import Japan's production systems into its own domestic industry.</p>
+
+            <p class="table-note">Source — Manga Productions 2025 Annual Report, manga.com.sa</p>
+
+            <h2>Manga Arabia: Korean Webtoons' Official Arabic-Language Launch</h2>
+
+            <p>Manga Arabia is an Arabic-language comics platform under the Saudi Research and Media Group (SRMG). In 2025 it signed partnership agreements with Korea's Kidari Studio and V-Bros and officially launched Arabic-language service of Korean webtoons, beginning with <em>Medical Return</em>, <em>Plant Human</em>, and <em>Shin-girok (God's Record)</em>.</p>
+
+            <p><em>Plant Human</em> (writer/artist: Jina) is a healing fantasy about botanists roaming the world in search of a cure amid a disaster spread by a giant recurring plant called "Z." <em>Medical Return</em> (Kidari Studio) is a regression-fantasy webtoon about a failed surgeon who goes back to his middle-school years and builds a new life; <em>Shin-girok</em> (Riyul) is a Korean-style fantasy/horror webtoon about Sejin, a girl who records gods, and beings that humans cannot perceive.</p>
+
+            <p>Looking at reader response within the Manga Arabia Youth app, <em>Medical Return</em> drew by far the most active engagement of the three. Comments requesting the next season and complaints about upload speed were common, and some users pointed out the gap between how far the original Korean serialisation had progressed and where the Arabic service stood. <em>Plant Human</em> drew praise for its story and art, alongside some dissatisfaction with the Arabic translation. Overall, comment volume remained modest, suggesting genuine fandom formation is still at an early stage.</p>
+
+            <p>Japanese content still accounts for the bulk of the Middle East's comics market, and Korean webtoons remain a comparatively small part of it. Even so, Manga Arabia's official, licensed Arabic-language launch marks a meaningful starting point — Korean webtoons entering the Middle East market through a proper contractual channel. That an English edition of the Korean-webtoon-derived comic <em>Solo Leveling</em> was also shelved near the Japanese-manga section at Jarir Bookstore suggests a degree of offline demand for Korean comics and webtoon content as well.</p>
+
+            <p class="table-note">Source — Manga Arabia official website, mangaarabia.com · Manga Productions official website, manga.com.sa</p>
+
+            <h2>Implications and Entry Strategies for Korean Publishers</h2>
+
+            <p>Taken together, these findings suggest that Korean content in Saudi Arabia's publishing market is still at the earliest stage of demand formation. Korean literature is reaching local readers through the East Asian literature section, and the base of Korean content — Korean-language textbooks, books on Korean culture, even webtoon-derived comics — is diversifying. For this momentum to translate into sustained market growth, however, a strategic approach to several structural challenges will be needed.</p>
+
+            <h2>Direct Cooperation with Major Local Distributors such as Jarir Bookstore</h2>
+
+            <p>Jarir Bookstore is not only a leading bookstore and distribution company across Saudi Arabia and the GCC, but also carries out translation-publishing functions through its own imprint, Jarir Publications. Obeikan Publishing, a leading local publisher, is similarly active in Arabic translation publishing and digital content, making it worth considering as a potential partner too. Korean publishers should look beyond simple book exports and actively explore a range of cooperation models with these companies — buyer agreements, co-publishing, and rights deals among them.</p>
+
+            <h2>Building Local Translation and Publishing Partnerships in Saudi Arabia</h2>
+
+            <p>Arabic translations of Korean books currently sold in Saudi Arabia are, in almost every case, produced by publishers in Egypt, Lebanon, and the UAE. Within the scope of this research, no Saudi-based publisher translating and publishing Korean books directly was identified. This suggests that while demand for Korean publishing content is forming within Saudi Arabia, the local industry infrastructure for translating and publishing it has not yet been sufficiently built.</p>
+
+            <p>This structure points to a new entry opportunity for Korean publishers. Rather than continuing to rely solely on indirect entry via existing Arabic-language translation publishers abroad, there is a case for proactively identifying partners within Saudi Arabia itself capable of handling translation, publishing, and distribution locally. Jarir Publications and Obeikan Publishing — both of which combine in-house publishing capability with major distribution networks — are worth particular consideration as potential partners for local translation, publishing, and distribution of Korean books. Partnering with them could allow the cultural characteristics and preferences of local readers to be reflected from the translation-planning stage onward, as well as enabling efficient market entry that links offline bookstores with online sales channels. With local demand for Korean books on the rise, now is judged to be an opportune moment to build direct partnerships with Saudi publishers and proactively lay the groundwork for local translation and publishing.</p>
+
+            <p class="table-note">Source — Obeikan Publishing, obeikan.com.sa/obeikan-publishing</p>
+
+            <h2>Raising Translation Quality and the Level of Arabic Localisation</h2>
+
+            <p>That some readers criticised the awkwardness of Arabic translation in Korean webtoons serviced via Manga Arabia is telling. Arabic varies considerably by region in dialect and expression, so quantitative expansion of translation needs to go hand in hand with translation quality that reads naturally to local readers. This challenge applies equally to published books and to digital content such as webtoons.</p>
+
+            <h2>Strategic Use of Books Behind OTT Adaptations</h2>
+
+            <p>The presence of OTT-drama source titles among the books on display at Jarir Bookstore shows that the pathway from screen-content popularity to interest in source books operates among Saudi readers too. Prioritising the translation and publication of source books for dramas and films that have already gained local recognition is a way to draw reader interest effectively while keeping marketing costs down.</p>
+
+            <h2>A Copyright-Protection-Based Strategy for Digital Content Entry</h2>
+
+            <p>According to local publishing sources, demand for e-books exists in Saudi Arabia, but weak copyright-protection infrastructure makes publishers reluctant to release e-book editions. The main cause is free, unauthorised circulation of pirated copies via WhatsApp and Telegram; currently, the available legitimate e-book platforms are understood to be limited to Jarir Reader and Amazon Kindle. Korean publishers looking to enter the Saudi market with digital content need a strategy that accounts carefully for this copyright environment — for webtoons in particular, entry via an official, licensed platform such as Manga Arabia is judged the most realistic option.</p>
+
+            <h2>Expanding the Mobile-Platform-Based Webtoon Market</h2>
+
+            <p>The Manga Arabia case shows that an official licensing agreement with a local platform is a realistic route into the Middle East market. Saudi Arabia's e-book consumption culture has not yet matured, but mobile-app-based webtoon platforms face a comparatively low barrier to entry. That said, given how sensitive readers are to serialisation pace and upload schedules, careful coordination of local service operations will be needed.</p>
+
+            <p>Saudi Arabia, pursuing the growth of its cultural industries as a national priority through Vision 2030, is a market with high growth potential in publishing and content. Korean publishing content is still at an early stage of demand formation there, but local reader interest continues to expand steadily. Going forward, strategic cooperation centred on building direct partnerships with local Saudi publishers and distributors, expanding translation and publishing to reflect local demand, and making use of copyright-protected digital platforms could allow for the continued growth of Korean publishing content in this market.</p>
 
             <div class="sources">
                 <p class="sources-label">Publication Details</p>
