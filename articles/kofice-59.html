@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디, 엔터테인먼트 산업 제도화 본격화... 새 「엔터테인먼트 활동 및 지원 활동법」 제정 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .data-table-wrap { margin: 28px 0 8px; overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .data-table caption { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; text-align: left; margin-bottom: 8px; padding-bottom: 6px; }
+        .data-table th { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; font-weight: 500; padding: 8px 12px; border-bottom: 0.5px solid rgba(0,0,0,0.15); text-align: left; background: #ede9e2; white-space: nowrap; }
+        .data-table td { padding: 9px 12px; border-bottom: 0.5px solid rgba(0,0,0,0.07); color: #333; vertical-align: top; line-height: 1.6; }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:nth-child(even) td { background: rgba(0,0,0,0.018); }
+        .table-note { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-top: 6px; margin-bottom: 24px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-59.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디, 엔터테인먼트 산업 제도화 본격화... 새 「엔터테인먼트 활동 및 지원 활동법」 제정 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-59.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디, 엔터테인먼트 산업 제도화 본격화... 새 「엔터테인먼트 활동 및 지원 활동법」 제정 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../writing.html" class="active">Journalism</a>
+        <a href="../engagement.html">Engagement</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">사우디, 엔터테인먼트 산업 제도화 본격화... 새 「엔터테인먼트 활동 및 지원 활동법」 제정</h1>
+                <p class="article-title-en">Saudi Arabia Moves to Formalize Its Entertainment Industry — New "Entertainment Activities and Supporting Activities Law" Enacted</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">July 31, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Policy / Entertainment Industry</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>2018년 영화관 운영이 재개된 이후 사우디아라비아의 엔터테인먼트 산업은 빠르게 성장해 왔다. 리야드 시즌(Riyadh Season)을 비롯한 대규모 축제와 국제 콘서트, 라이브 공연이 일상적인 문화 소비의 일부로 자리 잡았다. 사우디 종합엔터테인먼트청(GEA)의 2025년 규제업무 연례보고서에 따르면 2025년 사우디 엔터테인먼트 부문 방문객은 8,900만 명을 넘어섰으며, 연간 1,690건의 행사와 7만 5,661일의 행사 운영이 이뤄지는 등 산업 규모가 크게 확대됐다.</p>
+
+            <p>사우디 종합엔터테인먼트청은 비전2030 추진 과정에서 엔터테인먼트 산업을 육성·관리하기 위해 설립된 정부기관이다. 그동안 사우디는 대형 공연과 국제 행사를 적극 유치하며 시장 규모를 확대해 왔지만, 산업 전반을 포괄하는 법적 기반은 상대적으로 뒤늦게 마련됐다.</p>
+
+            <p>사우디 정부가 2026년 6월 16일 승인하고 7월 3일 《움알쿠라 관보(Umm Al-Qura Gazette)》에 게재한 「엔터테인먼트 활동 및 지원 활동법(Entertainment Activities and Supporting Activities Law)」은 엔터테인먼트 산업이 양적 성장 단계를 넘어 제도화 단계로 진입했음을 보여주는 변화다. 이 법은 왕령 제M/12호(2026년 6월 22일 발령)와 내각 결정 제18호를 통해 승인됐으며, 관보 게재일로부터 180일 후 시행될 예정이다.</p>
+
+            <h2>행정규정 중심 운영에서 국가 법률 체계로</h2>
+
+            <p>그동안 사우디 엔터테인먼트 산업은 사우디 종합엔터테인먼트청이 마련한 라이선스와 감독 규정을 중심으로 운영돼 왔다. 2023년 공개된 관련 규정 역시 엔터테인먼트 활동과 지원 서비스의 허가, 감독, 점검 절차를 규정하는 행정적 기준이었다. 이번 법은 기존 허가제도에 국가 법률상의 근거를 마련하고, 이를 통합적인 관리체계로 운영할 수 있는 기반을 갖췄다는 점에서 의미가 있다.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>사업 유형별 인허가 구분 (「엔터테인먼트 활동 및 지원 활동법」 제5조 기준)</caption>
+                <thead><tr><th>활동구분</th><th>세부 내용</th><th>필요 절차</th><th>발급 기관</th></tr></thead>
+                <tbody>
+                <tr><td>엔터테인먼트 활동</td><td>놀이공원 운영</td><td>라이선스</td><td>사우디 종합엔터테인먼트청</td></tr>
+                <tr><td>엔터테인먼트 활동</td><td>엔터테인먼트센터 운영</td><td>라이선스</td><td>사우디 종합엔터테인먼트청</td></tr>
+                <tr><td>엔터테인먼트 활동</td><td>엔터테인먼트 행사·쇼 개최</td><td>허가</td><td>사우디 종합엔터테인먼트청</td></tr>
+                <tr><td>엔터테인먼트 활동</td><td>라이브 공연 개최</td><td>허가</td><td>사우디 종합엔터테인먼트청</td></tr>
+                <tr><td>지원 활동</td><td>관중·군중 관리</td><td>인증서</td><td>사우디 종합엔터테인먼트청</td></tr>
+                <tr><td>지원 활동</td><td>예약·티켓 판매 서비스</td><td>인증서</td><td>사우디 종합엔터테인먼트청</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">출처 — 움알쿠라 관보(Umm Al-Qura) 「엔터테인먼트 활동 및 지원 활동법」 (2026.7.3)</p>
+
+            <p>법의 목적은 엔터테인먼트 활동과 지원 활동을 규율하고 산업 발전과 서비스 품질 향상을 도모하는 것이다. 법은 엔터테인먼트 활동을 놀이공원과 엔터테인먼트센터 운영, 엔터테인먼트 행사와 라이브 공연 등으로 정의했다. 지원 활동에는 관중·군중 관리와 예약·티켓 판매 서비스 등이 포함된다. 다만 일반 대중에게 공개되지 않는 사적 행사와 공연은 법 적용 대상에서 제외된다.</p>
+
+            <p>사업 형태에 따라 필요한 행정 절차도 구분된다. 놀이공원과 엔터테인먼트센터 운영에는 라이선스가, 행사·라이브 공연 개최에는 허가가 필요하다. 관중 관리나 티켓 서비스를 제공하는 지원 사업자는 사우디 종합엔터테인먼트청의 인증서를 받아야 한다. 즉 공연 주최자뿐 아니라 티켓 플랫폼과 군중 관리업체도 법률상 관리 대상으로 명시됐다.</p>
+
+            <p>또한 사우디 종합엔터테인먼트청은 사업자와 활동을 기술적 자격, 운영 효율성, 서비스 품질 등에 따라 분류하고 관련 인증서를 발급할 수 있다. 이에 따라 새 법은 단순히 사업 허가 여부를 판단하는 수준을 넘어 엔터테인먼트 서비스의 품질 기준과 산업 표준을 마련하는 역할도 수행할 것으로 전망된다.</p>
+
+            <h2>감독과 제재를 명문화한 산업 관리체계</h2>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>위반 시 제재 수준 (「엔터테인먼트 활동 및 지원 활동법」 제12·13·7조 기준)</caption>
+                <thead><tr><th>구분</th><th>내용</th></tr></thead>
+                <tbody>
+                <tr><td>경고</td><td>—</td></tr>
+                <tr><td>벌금</td><td>최대 100만 사우디 리얄(약 3억 8,463만 원)</td></tr>
+                <tr><td>영업 금지</td><td>최대 5년</td></tr>
+                <tr><td>라이선스·허가·인증</td><td>정지 또는 취소</td></tr>
+                <tr><td>이의제기 기한</td><td>통보일로부터 60일 이내(행정법원)</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">출처 — 움알쿠라 관보(Umm Al-Qura) 「엔터테인먼트 활동 및 지원 활동법」 (2026.7.3)</p>
+
+            <p>새 법은 사우디 종합엔터테인먼트청의 감독과 집행 권한도 구체적으로 규정했다. 사우디 종합엔터테인먼트청은 공중의 안전이나 건강에 위험이 있거나 법령을 위반한 경우, 또는 공익상 필요하다고 판단되는 경우 엔터테인먼트 활동과 지원 활동을 전부 또는 일부, 영구 또는 일시적으로 중단시킬 수 있다.</p>
+
+            <p>또한 사우디 종합엔터테인먼트청 소속 검사관은 사업장과 시설에 출입해 관련 기록과 자료를 확인하고 신고와 민원을 접수할 수 있으며, 필요할 경우 관계 기관의 협조를 받을 수 있다. 다만 위반 사업자에게는 정식 제재에 앞서 시정 기간을 부여할 수 있도록 했다.</p>
+
+            <p>법 위반 시에는 경고, 최대 100만 사우디 리얄(약 3억 8,500만 원)의 벌금, 최대 5년간 영업 금지, 라이선스·허가·인증의 정지 또는 취소 등의 제재가 가능하다. 위반 심의위원회의 결정에 대해서는 통보일로부터 60일 이내에 행정법원에 이의를 제기할 수 있도록 해 사업자의 권리구제 절차도 법률에 명시했다.</p>
+
+            <p>또한 사우디 종합엔터테인먼트청은 엔터테인먼트 활동의 티켓 판매액 가운데 최대 10% 범위에서 부담금을 부과할 수 있다. 구체적인 적용 기준은 시행규칙에서 정해질 예정이지만, 공연기획사와 행사 주최자, 티켓 플랫폼에는 수익 구조와 티켓 가격 정책에 영향을 미칠 수 있는 조항으로 평가된다.</p>
+
+            <h2>한국 문화산업에 주는 의미</h2>
+
+            <p>사우디 엔터테인먼트 시장에 진출하려는 한국 공연·콘텐츠 기업에도 이번 법은 중요한 변화다. 케이팝 콘서트와 뮤지컬, 라이브 공연 등을 추진하는 사업자는 행사 허가뿐 아니라 현지 파트너의 라이선스 보유 여부, 티켓 판매 구조, 관중 관리업체의 인증 여부까지 함께 확인해야 할 가능성이 커졌다. 다만 일반 대중에게 공개되지 않는 비공개 행사와 공연은 법 적용 대상에서 제외된다. 따라서 행사의 성격과 공개 여부에 따라 필요한 인허가 절차를 사전에 검토할 필요가 있다.</p>
+
+            <p>허가 신청 절차와 처리 기준, 티켓 부담금의 적용 방식 등 세부 사항은 관보 게재일로부터 180일 이내 마련될 시행규칙에서 구체화될 예정이다. 따라서 실제 제도 운영 방식과 사업자에게 적용되는 세부 기준은 시행규칙이 마련된 이후 보다 명확해질 것으로 보인다.</p>
+
+            <p>2018년 이후 사우디의 엔터테인먼트 정책이 새로운 공연과 행사를 유치하고 시장을 확대하는 데 집중했다면, 이번 법 제정은 빠르게 성장한 산업을 제도적으로 관리하고 지속 가능한 산업 생태계로 정착시키려는 전환점으로 평가된다.</p>
+
+            <div class="sources">
+                <p class="sources-label">참고자료</p>
+                <p>— 《옴알쿠라 관보(Umm Al-Qura)》 (2026. 07. 03), 「엔터테인먼트 활동 및 지원 활동법」, <a href="https://www.uqn.gov.sa/decisions-and-regulations/4001278" target="_blank">uqn.gov.sa</a></p>
+                <p>— 디크리 사우디(Decree Saudi), <a href="https://decreesa.com/p/516901/" target="_blank">decreesa.com</a></p>
+                <p>— 《사우디 국영통신(SPA)》 (2026. 07. 04), “GEA: Entertainment Activities Regulation Supports Sector Growth, Service Quality,” <a href="https://www.spa.gov.sa/en/N2627087" target="_blank">spa.gov.sa</a></p>
+                <p>— 《사우디 국영통신(SPA)》 (2026. 06. 16), “GEA Chairman Thanks Leadership as Cabinet Approves Law of Entertainment Activities and Their Supporting Activities,” <a href="https://spa.gov.sa/N2614051" target="_blank">spa.gov.sa</a></p>
+                <p>— 《카이로씬(CairoScene)》 (2026. 07. 07), “Licences for Amusement Parks &amp; Entertainment Events Required in Saudi,” <a href="https://cairoscene.com/News/Licences-for-Amusement-Parks-Entertainment-Events-Required-in-Saudi" target="_blank">cairoscene.com</a></p>
+                <p>— 《아랍뉴스(Arab News)》 (2026. 04. 03), “Saudi Arabia hosts over 89m visitors in its entertainment sector in 2025: GEA,” <a href="https://www.arabnews.com/node/2638653/business-economy" target="_blank">arabnews.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>Since cinemas reopened in 2018, Saudi Arabia's entertainment industry has grown rapidly. Large-scale festivals such as Riyadh Season, international concerts, and live performances have become part of everyday cultural life. According to the General Entertainment Authority's (GEA) 2025 annual regulatory report, visitors to Saudi Arabia's entertainment sector topped 89 million in 2025, with 1,690 events held over 75,661 event-days across the year — a sharp expansion in the scale of the industry.</p>
+
+            <p>The GEA is the government body established to nurture and manage the entertainment industry as part of the Vision 2030 push. Saudi Arabia has actively courted major performances and international events to grow the market, but the legal foundation covering the industry as a whole has, by comparison, arrived relatively late.</p>
+
+            <p>The "Entertainment Activities and Supporting Activities Law," approved by the Saudi government on 16 June 2026 and published in the <em>Umm Al-Qura Gazette</em> on 3 July, marks a shift from a phase of purely quantitative growth to one of formal institutionalisation. The law was approved via Royal Order No. M/12 (issued 22 June 2026) and Cabinet Decision No. 18, and is due to take effect 180 days after its gazette publication.</p>
+
+            <h2>From Administrative Regulation to a National Legal Framework</h2>
+
+            <p>Until now, Saudi Arabia's entertainment industry has operated primarily under licensing and oversight rules set by the GEA. Regulations released in 2023 were likewise administrative standards governing the licensing, supervision, and inspection procedures for entertainment activities and supporting services. This new law is significant in that it gives the existing licensing system a statutory, national-law basis and a foundation for operating it as an integrated management framework.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Licensing categories by business type (per Article 5 of the Entertainment Activities and Supporting Activities Law)</caption>
+                <thead><tr><th>Category</th><th>Activity</th><th>Requirement</th><th>Issuing body</th></tr></thead>
+                <tbody>
+                <tr><td>Entertainment activity</td><td>Operating an amusement park</td><td>Licence</td><td>General Entertainment Authority</td></tr>
+                <tr><td>Entertainment activity</td><td>Operating an entertainment centre</td><td>Licence</td><td>General Entertainment Authority</td></tr>
+                <tr><td>Entertainment activity</td><td>Holding an entertainment event/show</td><td>Permit</td><td>General Entertainment Authority</td></tr>
+                <tr><td>Entertainment activity</td><td>Holding a live performance</td><td>Permit</td><td>General Entertainment Authority</td></tr>
+                <tr><td>Supporting activity</td><td>Crowd/audience management</td><td>Certificate</td><td>General Entertainment Authority</td></tr>
+                <tr><td>Supporting activity</td><td>Booking/ticketing services</td><td>Certificate</td><td>General Entertainment Authority</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">Source — Umm Al-Qura Gazette, Entertainment Activities and Supporting Activities Law (3 Jul 2026)</p>
+
+            <p>The law's stated purpose is to regulate entertainment and supporting activities and to promote industry development and service quality. It defines entertainment activities as covering amusement parks, entertainment centres, entertainment events, and live performances, while supporting activities include crowd/audience management and booking/ticketing services. Private events and performances not open to the general public are excluded from the law's scope.</p>
+
+            <p>Administrative requirements differ by business type: operating amusement parks or entertainment centres requires a licence, while holding events or live performances requires a permit. Supporting-service providers offering crowd management or ticketing must obtain certification from the GEA — meaning that not only event organisers but also ticketing platforms and crowd-management companies are now explicitly subject to regulation under the law.</p>
+
+            <p>The GEA may also classify operators and activities by technical qualification, operational efficiency, and service quality, and issue certification accordingly. The new law is thus expected to go beyond simply determining whether a business may operate, and to also play a role in setting quality benchmarks and industry standards for entertainment services.</p>
+
+            <h2>An Industry Oversight Regime with Codified Sanctions</h2>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Sanctions for violations (per Articles 12, 13, and 7 of the Entertainment Activities and Supporting Activities Law)</caption>
+                <thead><tr><th>Category</th><th>Detail</th></tr></thead>
+                <tbody>
+                <tr><td>Warning</td><td>—</td></tr>
+                <tr><td>Fine</td><td>Up to SAR 1 million (approx. KRW 384.63 million)</td></tr>
+                <tr><td>Business suspension</td><td>Up to 5 years</td></tr>
+                <tr><td>Licence/permit/certificate</td><td>Suspension or revocation</td></tr>
+                <tr><td>Appeal window</td><td>Within 60 days of notice (Administrative Court)</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">Source — Umm Al-Qura Gazette, Entertainment Activities and Supporting Activities Law (3 Jul 2026)</p>
+
+            <p>The new law also spells out the GEA's supervisory and enforcement powers in detail. The GEA may suspend entertainment or supporting activities — in whole or in part, permanently or temporarily — where there is a risk to public safety or health, a violation of regulations, or where it judges suspension necessary in the public interest.</p>
+
+            <p>GEA-affiliated inspectors are empowered to enter business premises and facilities to examine relevant records and materials and to receive reports and complaints, and may draw on the cooperation of other relevant agencies as needed. Businesses found in violation, however, must be given a period to remedy the issue before formal sanctions are imposed.</p>
+
+            <p>Violations can draw a warning, a fine of up to SAR 1 million (approx. KRW 385 million), a business suspension of up to five years, and the suspension or revocation of licences, permits, or certifications. The law also enshrines an avenue for redress: operators may appeal a violations committee's decision to the Administrative Court within 60 days of notification.</p>
+
+            <p>The GEA may additionally levy a charge of up to 10% on ticket-sale revenue from entertainment activities. The specific criteria for applying this charge are to be set out in implementing regulations, but it is seen as a provision with real potential to affect revenue structures and ticket-pricing policy for event promoters, organisers, and ticketing platforms.</p>
+
+            <h2>What It Means for Korea's Cultural Industry</h2>
+
+            <p>This law is also a significant shift for Korean performance and content companies looking to enter the Saudi entertainment market. Operators pursuing K-pop concerts, musicals, or other live performances are now more likely to need to confirm not just their own event permit but whether local partners hold the required licences, how ticket sales are structured, and whether crowd-management vendors are certified. Private events and performances not open to the general public remain outside the law's scope, so the nature and public/private status of an event should be reviewed in advance to determine which permits are actually required.</p>
+
+            <p>Details such as licence-application procedures, processing standards, and how the ticket levy will be applied are to be set out in implementing regulations due within 180 days of the gazette publication. The practical workings of the system, and the specific standards that will apply to operators, should become clearer once those regulations are in place.</p>
+
+            <p>Where Saudi Arabia's entertainment policy since 2018 has focused on attracting new performances and events and expanding the market, this new law is seen as a turning point — an effort to bring institutional management to a rapidly grown industry and set it on a sustainable footing.</p>
+
+            <div class="sources">
+                <p class="sources-label">References</p>
+                <p>— <em>Umm Al-Qura Gazette</em> (3 Jul 2026), Entertainment Activities and Supporting Activities Law, <a href="https://www.uqn.gov.sa/decisions-and-regulations/4001278" target="_blank">uqn.gov.sa</a></p>
+                <p>— Decree Saudi, <a href="https://decreesa.com/p/516901/" target="_blank">decreesa.com</a></p>
+                <p>— Saudi Press Agency (SPA) (4 Jul 2026), "GEA: Entertainment Activities Regulation Supports Sector Growth, Service Quality," <a href="https://www.spa.gov.sa/en/N2627087" target="_blank">spa.gov.sa</a></p>
+                <p>— Saudi Press Agency (SPA) (16 Jun 2026), "GEA Chairman Thanks Leadership as Cabinet Approves Law of Entertainment Activities and Their Supporting Activities," <a href="https://spa.gov.sa/N2614051" target="_blank">spa.gov.sa</a></p>
+                <p>— <em>CairoScene</em> (7 Jul 2026), "Licences for Amusement Parks &amp; Entertainment Events Required in Saudi," <a href="https://cairoscene.com/News/Licences-for-Amusement-Parks-Entertainment-Events-Required-in-Saudi" target="_blank">cairoscene.com</a></p>
+                <p>— <em>Arab News</em> (3 Apr 2026), "Saudi Arabia hosts over 89m visitors in its entertainment sector in 2025: GEA," <a href="https://www.arabnews.com/node/2638653/business-economy" target="_blank">arabnews.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-58.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+    <a href="kofice-60.html">Next →</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>
