@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 e스포츠 월드컵(EWC), 사우디가 만든 무대에서 빛난 한국 선수들 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #1a1a1a; color: #f7f4ef; border-color: #1a1a1a; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; font-style: italic; color: #1a1a1a; margin: 36px 0 16px; padding-top: 20px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .text-en em { font-style: italic; }
+        .data-table-wrap { margin: 28px 0 8px; overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .data-table caption { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; text-align: left; margin-bottom: 8px; padding-bottom: 6px; }
+        .data-table th { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; font-weight: 500; padding: 8px 12px; border-bottom: 0.5px solid rgba(0,0,0,0.15); text-align: left; background: #ede9e2; white-space: nowrap; }
+        .data-table td { padding: 9px 12px; border-bottom: 0.5px solid rgba(0,0,0,0.07); color: #333; vertical-align: top; line-height: 1.6; }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:nth-child(even) td { background: rgba(0,0,0,0.018); }
+        .table-note { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-top: 6px; margin-bottom: 24px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #e0dbd3; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #7c3a36; color: #7c3a36; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #7c3a36; color: #f7f4ef; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kofice-62.html">
+    <meta name="theme-color" content="#7c3a36">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="2026 e스포츠 월드컵(EWC), 사우디가 만든 무대에서 빛난 한국 선수들 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kofice-62.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2026 e스포츠 월드컵(EWC), 사우디가 만든 무대에서 빛난 한국 선수들 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../engagement.html">Engagement</a>
+        <a href="../writing.html" class="active">Journalism</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kofice-logo.png" alt="KOFICE">
+        <div class="accent-divider"></div>
+        <img src="../images/kofice-logo.png" alt="" style="opacity:0; height:1px;">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KOFICE — Saudi Arabia Correspondent</p>
+                <h1 class="article-title-ko">2026 e스포츠 월드컵(EWC), 사우디가 만든 무대에서 빛난 한국 선수들</h1>
+                <p class="article-title-en">Korean Players Shine on the Stage Saudi Arabia Built for the 2026 Esports World Cup — From Faker's Game Ambassador Role to Korean Stars on Clubs Abroad</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">August 24, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KOFICE 한국국제문화교류진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Games / Esports</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KOFICE · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>사우디아라비아가 최근 적극적으로 육성하고 있는 산업 가운데 하나가 게임과 e스포츠다. 그 중심에는 사우디가 2024년 출범시킨 국제 e스포츠 대회 ‘e스포츠 월드컵(Esports World Cup, EWC)’이 있다. 2024년과 2025년 리야드에서 열린 e스포츠 월드컵은 올해 처음으로 사우디를 벗어나 프랑스 파리에서 개최됐다.</p>
+
+            <p>이번 대회에서는 한국 선수들의 존재감도 두드러졌다. ‘페이커(Faker)’ 이상혁과 ‘쵸비(Chovy)’ 정지훈 같은 세계적인 스타부터 오버워치 종목의 한국 선수들까지 다양한 무대에서 활약했다. 특히 한국 선수들은 경기뿐 아니라 e스포츠 월드컵의 공식 홍보 콘텐츠에서도 중요한 역할을 맡았다.</p>
+
+            <h2>사우디에서 시작해 파리로 간 e스포츠 월드컵</h2>
+
+            <p>e스포츠 월드컵은 하나의 게임으로 승부를 가리는 대회가 아니라 여러 인기 게임을 한데 모은 종합 e스포츠 대회다. 올림픽에서 서로 다른 종목의 경기가 열리는 것처럼 e스포츠 월드컵에서도 리그 오브 레전드(League of Legends), 오버워치(Overwatch), 발로란트(VALORANT), 배틀그라운드(PUBG), 철권(Tekken), 체스 등의 대회가 진행된다. 2026년에는 24개 게임에서 총 25개 토너먼트가 열렸으며 2,000명 이상의 선수와 200개 이상의 클럽이 참가했다.</p>
+
+            <p>각 게임에서 별도의 우승자를 가리지만 성적은 소속 e스포츠 구단의 ‘클럽 챔피언십(Club Championship)’ 포인트에도 반영된다. 여러 종목의 포인트를 합산해 e스포츠 월드컵 전체에서 가장 뛰어난 성적을 거둔 구단을 선정하는 구조다.</p>
+
+            <p>2026 e스포츠 월드컵은 7월 6일부터 8월 23일까지 7주 동안 프랑스 파리(Paris)에서 열렸다. 당초 올해 대회 역시 리야드(Riyadh)에서 개최될 예정이었으나 중동 지역의 분쟁과 이동·안전 문제로 파리로 이전되면서 e스포츠 월드컵 출범 이후 첫 해외 개최가 됐다. 한편 국가대표팀이 경쟁하는 별도의 ‘e스포츠 네이션스컵(Esports Nations Cup, ENC)’은 당초 올해 11월 리야드에서 처음 열릴 예정이었으나, 최근 지역 정세를 이유로 2027년 11월로 연기됐다.</p>
+
+            <p>8월 23일 파리 그랑 팔레(Grand Palais)에서 열린 폐막식에는 무함마드 빈 살만(Mohammed bin Salman) 사우디 왕세자와 에마뉘엘 마크롱(Emmanuel Macron) 프랑스 대통령이 함께 참석했다. 마크롱 대통령은 종합 우승을 차지한 에이지닷에이엘(AG.AL, All Gamers Global)에 직접 트로피를 수여했다. 빈 살만 왕세자의 이번 파리 방문은 프랑스 공식 방문 일정의 시작으로, 폐막식 이후 양국은 별도 정상회담을 갖고 다양한 분야의 협력 방안을 논의했다. 게임과 e스포츠가 사우디의 산업 육성을 넘어 국제 협력의 접점으로 활용되고 있음을 보여주는 장면이었다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-62-images/img-01.jpg" alt="e스포츠 월드컵 폐막식에 참석한 마크롱 프랑스 대통령과 무함마드 빈 살만 사우디 왕세자">
+            </div>
+            <p class="photo-caption">e스포츠 월드컵 폐막식에 참석한 마크롱 프랑스 대통령, 무함마드 빈 살만 사우디 왕세자 — 출처: 엔트아라비(EntArabi) 웹사이트</p>
+
+            <h2>e스포츠 월드컵의 얼굴이 된 페이커</h2>
+
+            <p>한국 선수들의 존재감은 경기장 안팎에서 확인할 수 있었다. 지난 7월 e스포츠 월드컵을 운영하는 e스포츠 월드컵 재단(Esports World Cup Foundation, EWCF)은 한국의 리그 오브 레전드 선수 이상혁(Faker)을 e스포츠 월드컵과 e스포츠 네이션스컵의 ‘게임 앰배서더(Game Ambassador)’로 임명했다. 활동 기간은 2028년까지다. 이상혁은 축구 스타 크리스티아누 호날두(Cristiano Ronaldo), 체스의 마그누스 칼센(Magnus Carlsen) 등과 함께 e스포츠 월드컵 앰배서더 프로그램의 주요 인물이 됐다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-62-images/img-02.jpg" alt="e스포츠 월드컵 게임 앰배서더에 임명된 한국선수 이상혁(Faker)">
+            </div>
+            <p class="photo-caption">e스포츠 월드컵 게임 앰배서더에 임명된 한국선수 이상혁(Faker) — 출처: e스포츠 월드컵 웹사이트</p>
+
+            <p>e스포츠 월드컵은 이상혁과 젠지(Gen.G) 소속 정지훈(Chovy)의 라이벌 관계를 활용한 콘텐츠도 선보였다. 두 선수가 직접 사용하고 서명한 수제 체스판을 단 하나뿐인 공식 수집품으로 제작해 경매에 내놓은 것이다. 두 선수가 체스 종목에서 실제 선수로 대결한 것은 아니며, 두 한국 선수의 경쟁 구도를 체스라는 소재로 표현한 콘텐츠다. 한국 선수들의 스타성이 경기 결과를 넘어 e스포츠 월드컵의 글로벌 콘텐츠로 활용되고 있는 셈이다.</p>
+
+            <h2>사우디 e스포츠와 이어지는 한국 선수들</h2>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>2026년 e스포츠 월드컵 주요 한국 선수 및 소속팀 성적</caption>
+                <thead><tr><th>종목</th><th>성적</th><th>구단(국가)</th><th>주요 한국 선수</th></tr></thead>
+                <tbody>
+                <tr><td>리그 오브 레전드</td><td>1위</td><td>디플러스 기아(한국)</td><td>쇼메이커·루시드·스매시·캐리어·시우</td></tr>
+                <tr><td>리그 오브 레전드</td><td>2위</td><td>카민 코프(프랑스)</td><td>칸나·강예후</td></tr>
+                <tr><td>리그 오브 레전드</td><td>3위</td><td>젠지(한국)</td><td>쵸비 등</td></tr>
+                <tr><td>오버워치</td><td>1위</td><td>제타 디비전(일본)</td><td>김동현·김진서·박민기·신세원·이선우</td></tr>
+                <tr><td>오버워치</td><td>3위</td><td>티원(한국)</td><td>동학·프라우드·스큐드·제스트</td></tr>
+                <tr><td>발로란트</td><td>3위</td><td>농심 레드포스(한국)</td><td>문우현·정환·구상민·김무빈·이혁규·박성현</td></tr>
+                <tr><td>PUBG 모바일</td><td>2위</td><td>농심 레드포스(한국)</td><td>SOEZ·XZY·TIZ1·HYUNBIN</td></tr>
+                <tr><td>철권 8</td><td>2위</td><td>키움 DRX(한국)</td><td>윤선웅(LowHigh)</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">※ 클럽 챔피언십 종합 순위에서는 한국 구단 티원(T1)이 10위를 기록했다. ※ 선수명은 대회 등록 활동명 또는 공식적으로 확인 가능한 이름을 기준으로 표기했다.</p>
+
+            <p>대회 전체에서 가장 높은 순간 시청자 수를 기록한 리그 오브 레전드에서는 한국 구단 디플러스 기아가 우승을 차지했으며, 젠지와 티원도 각각 3위와 4위에 올랐다. 준우승한 프랑스 구단 카민 코프에서도 한국 선수 김창동(Canna)과 강예후(kyeahoo)가 주전으로 활약했다.</p>
+
+            <p>한국 선수들의 경기력은 팀 기반 슈팅게임 ‘오버워치(Overwatch)’에서도 두드러졌다. 일본 구단 제타 디비전(ZETA DIVISION)은 결승에서 사우디 구단 트위스티드 마인즈(Twisted Minds)를 4대 2로 꺾고 우승했다. 일본 구단이지만 김동현(Proper), 김진서(Shu), 박민기(Viol2t), 신세원(BERNAR), 이선우(KNIFE) 등 한국 선수들이 로스터의 중심을 이뤘다. 한국 구단 티원(T1)도 중국 웨이보 게이밍(Weibo Gaming)을 3대 0으로 꺾고 3위를 차지했다. 특히 김동현은 2025년 사우디 구단 팀 팔콘스 소속으로 e스포츠 월드컵 오버워치 우승을 차지하고 대회 엠브이피(MVP)에도 선정됐다. 이후 일본 구단 제타 디비전으로 이적해 올해 다시 정상에 오르며 2년 연속 e스포츠 월드컵 오버워치 우승을 경험했다.</p>
+
+            <p>사우디 구단 팀 팔콘스의 오버워치 팀에는 한빈(Hanbin), 필더(Fielder), 프로퍼(Proper), 치요(ChiYo) 등 세계 정상급 한국 선수들이 활동해 왔다. 특히 2025년에는 한국 선수 중심의 전력으로 e스포츠 월드컵 오버워치 정상에 올랐다. 그러나 올해는 상황이 달랐다. 김동현이 없는 팀 팔콘스는 웨이보 게이밍과 티원에 연이어 패하며 오버워치에서 일찍 탈락했다.</p>
+
+            <p>그럼에도 팀 팔콘스는 여러 종목의 성적을 합산하는 e스포츠 월드컵 클럽 챔피언십(Club Championship)에서 종합 2위에 올랐다. 최종 순위에서는 중국 구단 에이지닷에이엘(AG.AL)이 5,300점으로 우승했고, 사우디 구단 팀 팔콘스가 4,600점으로 2위, 프랑스 구단 팀 바이탈리티(Team Vitality)가 3,300점으로 3위를 기록했다.</p>
+
+            <p>특히 팀 바이탈리티의 종합 성적에는 여성 선수들의 활약도 힘을 보탰다. 팀 바이탈리티의 여성팀은 모바일 레전드: 뱅뱅(Bang Bang) 여성 국제대회(MWI)에서 우승하며 클럽 챔피언십 포인트를 획득했다. 여성 선수들이 e스포츠 월드컵 무대에서 구단의 종합 성적에 직접 기여했다는 점에서도 눈길을 끈다.</p>
+
+            <div class="article-photo">
+                <img src="kofice-62-images/img-03.jpg" alt="대회 종합 1위 중국 구단 에이지닷에이엘(AG.AL)">
+            </div>
+            <p class="photo-caption">대회 종합 1위 중국 구단 에이지닷에이엘(AG.AL) — 출처: e스포츠 월드컵 웹사이트</p>
+
+            <div class="article-photo">
+                <img src="kofice-62-images/img-04.jpg" alt="대회 종합 2위 사우디 구단 팀 팔콘스, 3위 프랑스 구단 팀 바이탈리티">
+            </div>
+            <p class="photo-caption">대회 종합 2위 사우디 구단 팀 팔콘스, 3위 프랑스 구단 팀 바이탈리티 — 출처: e스포츠 월드컵 웹사이트</p>
+
+            <p>한국 선수들의 존재감은 이처럼 여러 층위에서 나타난다. 페이커처럼 e스포츠 월드컵을 세계에 알리는 스타가 있는가 하면, 한국 선수들이 해외 또는 사우디 구단의 핵심 전력으로 우승을 이끌기도 한다. 사우디가 e스포츠를 글로벌 산업과 문화 콘텐츠로 확장하는 과정에서 한국 선수들은 ‘선수’, ‘구단의 전력’, ‘글로벌 홍보 자산’이라는 서로 다른 방식으로 그 접점을 넓혀가고 있다.</p>
+
+            <div class="sources">
+                <p class="sources-label">사진출처 및 참고자료</p>
+                <p>— e스포츠 월드컵(Esports World Cup) 웹사이트, <a href="https://esportsworldcup.com/en/news/ewc-trophy-award-ceremony-crowns-agal" target="_blank">esportsworldcup.com</a></p>
+                <p>— e스포츠 월드컵(Esports World Cup) 웹사이트, <a href="https://esportsworldcup.com/en/press-releases/faker-ewc26-and-enc-game-ambassador" target="_blank">esportsworldcup.com</a></p>
+                <p>— e스포츠 월드컵(Esports World Cup) 웹사이트, <a href="https://esportsworldcup.com/en/press-releases/zeta-division-triumph-to-take-the-owcs-midseason-championship-at-ewc2026-trophy" target="_blank">esportsworldcup.com</a></p>
+                <p>— e스포츠 네이션스 컵(Esports Nations Cup) 웹사이트, <a href="https://www.esportsnationscup.com/en/press-releases/ef-postpones-enc-to-november-2027" target="_blank">esportsnationscup.com</a></p>
+                <p>— 《사우디 프레스 에이전시(Saudi Press Agency)》 (2026. 08. 23), “HRH the Crown Prince Attends the Esports World Cup 2026 Closing Ceremony in Paris,” <a href="https://www.spa.gov.sa/en/N2660141" target="_blank">spa.gov.sa</a></p>
+                <p>— 《엔트아라비(EntArabi)》 (2026. 08. 24), “Macron Crowns All Gamers Global Esports World Cup 2026 Champion in Paris,” <a href="https://entarabi.com/en/2026/08/macron-crowns-all-gamers-global-esports-world-cup-2026-champion-in-paris/" target="_blank">entarabi.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>Games and esports are among the industries Saudi Arabia has been most aggressively building up in recent years. At the centre of that push is the Esports World Cup (EWC), the international esports tournament Saudi Arabia launched in 2024. Held in Riyadh in 2024 and 2025, the EWC left Saudi Arabia for the first time this year, taking place in Paris, France.</p>
+
+            <p>Korean players had a notable presence at this year's tournament. From global stars such as "Faker" Lee Sang-hyeok and "Chovy" Jeong Ji-hoon to Korean players competing in Overwatch, they were active across a range of stages. Korean players also played a significant role beyond competition itself, featuring prominently in the EWC's official promotional content.</p>
+
+            <h2>From Saudi Arabia to Paris: The Esports World Cup's Road So Far</h2>
+
+            <p>The Esports World Cup is not a tournament decided by a single game but a combined event that brings together numerous popular titles. Much as the Olympics hosts competitions across different sports, the EWC runs tournaments in League of Legends, Overwatch, VALORANT, PUBG, Tekken, chess and more. In 2026 it held a total of 25 tournaments across 24 games, drawing more than 2,000 players and over 200 clubs.</p>
+
+            <p>Each game crowns its own champion, but results also count toward a club's points in the EWC's overall "Club Championship" — a structure that combines points across disciplines to determine which club performed best across the tournament as a whole.</p>
+
+            <p>The 2026 Esports World Cup ran for seven weeks, from 6 July to 23 August, in Paris. This year's edition had originally been planned for Riyadh as well, but was relocated to Paris because of conflict and travel and safety concerns in the Middle East — marking the EWC's first edition held outside Saudi Arabia since its founding. Separately, the Esports Nations Cup (ENC), in which national teams compete, had been due to hold its inaugural edition in Riyadh this November, but was recently postponed to November 2027 citing the regional situation.</p>
+
+            <p>The closing ceremony, held on 23 August at the Grand Palais in Paris, was attended jointly by Saudi Crown Prince Mohammed bin Salman and French President Emmanuel Macron. Macron personally presented the trophy to overall champion AG.AL (All Gamers Global). The Crown Prince's visit to Paris marked the start of an official visit to France, and following the closing ceremony the two countries held a separate summit to discuss cooperation across a range of fields — a scene that illustrated how gaming and esports are being used not just to build up Saudi industry, but as a point of contact for international cooperation.</p>
+
+            <div class="article-photo">
+                <img src="kofice-62-images/img-01.jpg" alt="French President Emmanuel Macron and Saudi Crown Prince Mohammed bin Salman at the Esports World Cup closing ceremony">
+            </div>
+            <p class="photo-caption">French President Emmanuel Macron and Saudi Crown Prince Mohammed bin Salman at the Esports World Cup closing ceremony — Source: EntArabi website</p>
+
+            <h2>Faker, the Face of the Esports World Cup</h2>
+
+            <p>Korean players' presence was visible both on and off the competition floor. In July, the Esports World Cup Foundation (EWCF), which operates the EWC, appointed Korean League of Legends player Lee Sang-hyeok (Faker) as "Game Ambassador" for both the Esports World Cup and the Esports Nations Cup, a role running through 2028. Lee joins football star Cristiano Ronaldo and chess's Magnus Carlsen among the central figures of the EWC's ambassador programme.</p>
+
+            <div class="article-photo">
+                <img src="kofice-62-images/img-02.jpg" alt="Korean player Lee Sang-hyeok (Faker), appointed Game Ambassador of the Esports World Cup">
+            </div>
+            <p class="photo-caption">Korean player Lee Sang-hyeok (Faker), appointed Game Ambassador of the Esports World Cup — Source: Esports World Cup website</p>
+
+            <p>The EWC also produced content built around the rivalry between Lee and Gen.G's Jeong Ji-hoon (Chovy): a handmade chess set used and signed by both players was made into a one-of-a-kind official collectible and put up for auction. The two never actually competed against each other in chess — the set was simply a way of expressing their rivalry as Korean players through the medium of chess. In other words, Korean players' star power is being used as global EWC content in its own right, beyond match results.</p>
+
+            <h2>Korean Players Woven Through Saudi Esports</h2>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Key Korean players and club results — 2026 Esports World Cup</caption>
+                <thead><tr><th>Game</th><th>Result</th><th>Club (Country)</th><th>Key Korean players</th></tr></thead>
+                <tbody>
+                <tr><td>League of Legends</td><td>1st</td><td>Dplus KIA (Korea)</td><td>ShowMaker, Lucid, Smash, Carrier, Siwoo</td></tr>
+                <tr><td>League of Legends</td><td>2nd</td><td>Karmine Corp (France)</td><td>Canna, kyeahoo</td></tr>
+                <tr><td>League of Legends</td><td>3rd</td><td>Gen.G (Korea)</td><td>Chovy, and others</td></tr>
+                <tr><td>Overwatch</td><td>1st</td><td>ZETA DIVISION (Japan)</td><td>Proper, Shu, Viol2t, BERNAR, KNIFE</td></tr>
+                <tr><td>Overwatch</td><td>3rd</td><td>T1 (Korea)</td><td>Donghak, Proud, Skud, Zest</td></tr>
+                <tr><td>VALORANT</td><td>3rd</td><td>NS RedForce (Korea)</td><td>Moon Woo-hyeon, Jung Hwan, Koo Sang-min, Kim Moo-bin, Lee Hyeok-gyu, Park Seong-hyeon</td></tr>
+                <tr><td>PUBG Mobile</td><td>2nd</td><td>NS RedForce (Korea)</td><td>SOEZ, XZY, TIZ1, HYUNBIN</td></tr>
+                <tr><td>Tekken 8</td><td>2nd</td><td>Kiwoom DRX (Korea)</td><td>Yoon Sun-woong (LowHigh)</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="table-note">Note — In the overall Club Championship standings, Korean club T1 placed 10th. Player names are given as registered competition handles or by officially confirmed names.</p>
+
+            <p>League of Legends, which drew the tournament's single highest peak viewership, was won by Korean club Dplus KIA, with Gen.G and T1 finishing third and fourth respectively. Korean players Kim Chang-dong (Canna) and Kang Ye-hoo (kyeahoo) were also starters for runner-up French club Karmine Corp.</p>
+
+            <p>Korean players' form stood out in the team shooter Overwatch as well. Japanese club ZETA DIVISION beat Saudi club Twisted Minds 4–2 in the final to win the title — and although a Japanese club, its roster was built around Korean players Kim Dong-hyeon (Proper), Kim Jin-seo (Shu), Park Min-ki (Viol2t), Shin Se-won (BERNAR) and Lee Seon-woo (KNIFE). Korean club T1 also beat China's Weibo Gaming 3–0 to finish third. Notably, Kim Dong-hyeon won the EWC Overwatch title in 2025 with Saudi club Team Falcons and was named tournament MVP; after transferring to Japan's ZETA DIVISION, he reached the top again this year, winning the EWC Overwatch title for a second consecutive year.</p>
+
+            <p>Team Falcons' Overwatch roster has long featured world-class Korean players such as Hanbin, Fielder, Proper and ChiYo, and in 2025 the club, built largely around Korean players, reached the top of EWC Overwatch. This year was different: without Kim Dong-hyeon, Team Falcons lost consecutive matches to Weibo Gaming and T1 and were eliminated early from Overwatch.</p>
+
+            <p>Even so, Team Falcons finished second overall in the EWC Club Championship, which combines results across disciplines. In the final standings, Chinese club AG.AL won with 5,300 points, Saudi club Team Falcons placed second with 4,600 points, and French club Team Vitality placed third with 3,300 points.</p>
+
+            <p>Team Vitality's overall result was helped in part by its female players: the club's women's team won the Mobile Legends: Bang Bang Women's International (MWI), earning Club Championship points in the process — notable in that female players contributed directly to their club's overall EWC standing.</p>
+
+            <div class="article-photo">
+                <img src="kofice-62-images/img-03.jpg" alt="Overall champion, Chinese club AG.AL">
+            </div>
+            <p class="photo-caption">Overall champion — Chinese club AG.AL — Source: Esports World Cup website</p>
+
+            <div class="article-photo">
+                <img src="kofice-62-images/img-04.jpg" alt="Overall runner-up Saudi club Team Falcons, third-place French club Team Vitality">
+            </div>
+            <p class="photo-caption">Overall runner-up Saudi club Team Falcons, third-place French club Team Vitality — Source: Esports World Cup website</p>
+
+            <p>Korean players' presence showed up at several different levels this year. Some, like Faker, are stars who introduce the EWC to the world; others form the core strength that carries overseas or Saudi clubs to victory. As Saudi Arabia works to expand esports into a global industry and cultural content, Korean players are widening that point of contact in several distinct roles at once — as competitors, as the backbone of club rosters, and as global promotional assets.</p>
+
+            <div class="sources">
+                <p class="sources-label">Image Sources &amp; References</p>
+                <p>— Esports World Cup website, <a href="https://esportsworldcup.com/en/news/ewc-trophy-award-ceremony-crowns-agal" target="_blank">esportsworldcup.com</a></p>
+                <p>— Esports World Cup website, <a href="https://esportsworldcup.com/en/press-releases/faker-ewc26-and-enc-game-ambassador" target="_blank">esportsworldcup.com</a></p>
+                <p>— Esports World Cup website, <a href="https://esportsworldcup.com/en/press-releases/zeta-division-triumph-to-take-the-owcs-midseason-championship-at-ewc2026-trophy" target="_blank">esportsworldcup.com</a></p>
+                <p>— Esports Nations Cup website, <a href="https://www.esportsnationscup.com/en/press-releases/ef-postpones-enc-to-november-2027" target="_blank">esportsnationscup.com</a></p>
+                <p>— Saudi Press Agency (23 Aug 2026), "HRH the Crown Prince Attends the Esports World Cup 2026 Closing Ceremony in Paris," <a href="https://www.spa.gov.sa/en/N2660141" target="_blank">spa.gov.sa</a></p>
+                <p>— EntArabi (24 Aug 2026), "Macron Crowns All Gamers Global Esports World Cup 2026 Champion in Paris," <a href="https://entarabi.com/en/2026/08/macron-crowns-all-gamers-global-esports-world-cup-2026-champion-in-paris/" target="_blank">entarabi.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kofice-61.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+    <a href="kofice-63.html">Next →</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>
