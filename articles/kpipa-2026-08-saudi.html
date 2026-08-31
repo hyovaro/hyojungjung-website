@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사우디아라비아 및 GCC·아랍권 출판시장 보고서(8월) — 주요 도서전과 문학상 — Hyojung Jung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f4ef; color: #1a1a1a; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); position: sticky; top: 0; background: #f7f4ef; z-index: 100; }
+        .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 400; letter-spacing: 0.04em; color: #5e5e5e; transition: color 0.2s; }
+        .nav-brand-ko { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', serif; font-size: 12px; font-weight: 300; margin-left: 4px; }
+        .nav-brand:hover { color: #7c3a36; }
+        [lang="ko"] { font-family: 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif; word-break: keep-all; }
+        .nav-back { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .nav-back:hover { color: #1a1a1a; }
+        .article-header { display: grid; grid-template-columns: 180px 1fr; border-bottom: 0.5px solid rgba(0,0,0,0.1); min-height: 240px; }
+        .header-accent { background: #ede9e2; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 28px 20px; }
+        .header-accent img { max-width: 120px; max-height: 44px; object-fit: contain; mix-blend-mode: multiply; }
+        .header-accent .accent-divider { width: 32px; height: 0.5px; background: #c5c0b8; }
+        .header-accent img.accent-kpipa { max-width: 138px; max-height: 60px; mix-blend-mode: normal; }
+        .header-content { display: grid; grid-template-columns: 45% 1fr; }
+        .header-title-col { padding: 44px 40px 40px 52px; border-right: 0.5px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .article-category { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 14px; }
+        .article-title-ko { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.4; color: #1a1a1a; }
+        .article-title-en { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; line-height: 1.4; color: #5e5e5e; margin-top: 10px; }
+        .header-meta-col { padding: 44px 52px 40px 44px; display: flex; flex-direction: column; justify-content: space-between; }
+        .meta-grid { display: flex; flex-direction: column; gap: 16px; }
+        .meta-row { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; }
+        .meta-value { font-size: 12px; color: #454545; }
+        .lang-bar { padding: 14px 52px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; }
+        .lang-btn { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 16px; border: 0.5px solid rgba(0,0,0,0.2); cursor: pointer; transition: all 0.2s; background: transparent; color: #6f6f6f; }
+        .lang-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+        .lang-btn:last-child { border-radius: 0 2px 2px 0; }
+        .lang-btn.active { background: #eb559d; color: #fff; border-color: #eb559d; }
+        .lang-btn:not(.active):hover { color: #1a1a1a; }
+        .article-body { display: grid; grid-template-columns: 180px 1fr; }
+        .article-sidebar { border-right: 0.5px solid rgba(0,0,0,0.1); padding: 40px 20px 40px 52px; }
+        .sidebar-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; writing-mode: vertical-rl; transform: rotate(180deg); }
+        .article-text { padding: 48px 80px 64px 52px; max-width: 760px; }
+        .article-text.hidden { display: none; }
+        .text-ko { font-size: 15px; line-height: 2; color: #333; word-break: keep-all; }
+        .text-ko p { margin-bottom: 24px; }
+        .text-ko h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 500; color: #eb559d; margin: 36px 0 16px; padding-top: 20px; border-top: 1.5px solid #f6c9dd; }
+        .text-en { font-size: 15px; line-height: 1.95; color: #333; }
+        .text-en p { margin-bottom: 22px; }
+        .text-en h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 500; font-style: italic; color: #eb559d; margin: 36px 0 16px; padding-top: 20px; border-top: 1.5px solid #f6c9dd; }
+        .text-en em { font-style: italic; }
+        .article-photo { width: 100%; margin: 28px 0 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo img { width: 100%; height: auto; display: block; }
+        .article-photo-sm { max-width: 440px; margin: 28px auto 8px; border-radius: 2px; overflow: hidden; }
+        .article-photo-sm img { width: 100%; height: auto; display: block; }
+        .photo-caption { font-size: 11px; color: #6f6f6f; line-height: 1.6; margin-bottom: 28px; padding-left: 12px; border-left: 2px solid #f6c9dd; }
+        .sources { margin-top: 48px; padding-top: 24px; border-top: 0.5px solid rgba(0,0,0,0.1); }
+        .sources-label { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6f6f; margin-bottom: 12px; }
+        .sources p { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-bottom: 6px; }
+        .sources a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        .float-nav { position: fixed; bottom: 28px; right: 28px; display: flex; gap: 2px; z-index: 200; }
+        .float-nav a { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px; border: 0.5px solid #eb559d; color: #eb559d; background: #f7f4ef; transition: background 0.2s, color 0.2s; text-decoration: none; white-space: nowrap; }
+        .float-nav a:hover { background: #eb559d; color: #fff; }
+        @media (max-width: 900px) {
+            nav { padding: 18px 28px; }
+            .article-header { grid-template-columns: 1fr; }
+            .header-accent { min-height: 80px; flex-direction: row; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-content { grid-template-columns: 1fr; }
+            .header-title-col { padding: 32px 28px 24px; border-right: none; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+            .header-meta-col { padding: 24px 28px 32px; }
+            .lang-bar { padding: 12px 28px; }
+            .article-body { grid-template-columns: 1fr; }
+            .article-sidebar { display: none; }
+            .article-text { padding: 32px 28px 48px; }
+            .float-nav { bottom: 20px; right: 16px; gap: 6px; }
+            .float-nav a { padding: 9px 12px; font-size: 9px; }
+        }
+
+/* fn-mobile-fix */@media (max-width:768px){.float-nav{left:0;right:0;bottom:0;gap:6px;justify-content:center;flex-wrap:wrap;padding:8px 10px;background:rgba(247,244,239,0.96);border-top:.5px solid #d5d0c8}.float-nav a{padding:8px 11px;font-size:10px}body{padding-bottom:60px}}
+
+        /* bb3-unify nav+footer */
+        .nav-links { display: flex; gap: 28px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5e5e5e; align-items: center; }
+        .nav-links a { color: #5e5e5e; transition: color 0.2s; }
+        .nav-links a:hover { color: #7c3a36; }
+        .nav-links a.active { color: #1a1a1a; }
+        footer { padding: 40px 52px; border-top: 0.5px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #6f6f6f; }
+        .footer-right { display: flex; gap: 24px; }
+        .footer-link { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6f6f6f; transition: color 0.2s; }
+        .footer-link:hover { color: #1a1a1a; }
+        @media (max-width: 768px) {
+            nav { padding: 14px 20px; }
+            .nav-links { gap: 12px 14px; flex-wrap: wrap; justify-content: flex-end; font-size: 10px; }
+            footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+    /* bd3-a11y : affordances + contrast + touch (reversible — delete this block to revert) */
+    /* Persistent underline affordance on in-text/content links (RED_TEAM U-02) */
+    .article-link,.about-link,.contact-email,.contact-link,.tz-press,.social-link,.link{text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:3px;text-decoration-color:rgba(26,26,26,.3);}
+    /* Keyboard focus visibility on every interactive element */
+    a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7c3a36;outline-offset:2px;border-radius:1px;}
+    /* Hover deepen — gated so touch devices don't stick (RED_TEAM M3) */
+    @media (hover:hover){.article-link:hover,.about-link:hover,.contact-email:hover,.contact-link:hover,.tz-press:hover,.social-link:hover,.link:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+    /* Production tiles: the "View production" cue is hover-only -> invisible on touch, so show it persistently there (RED_TEAM U-03) */
+    @media (hover:none){.production-img-overlay{opacity:1;background:rgba(26,26,26,.32);}}
+    /* Press/active feedback for touch */
+    .float-nav a:active,.lb-back:active,.lb-prev:active,.lb-next:active,.lb-close:active,.pdf-link:active,.press-link:active,.nav-links a:active,.footer-link:active{opacity:.7;}
+    /* >=44px tap targets on lightbox controls (all viewports) */
+    .lb-close,.lb-prev,.lb-next{min-width:44px;min-height:44px;box-sizing:border-box;}
+    .lb-close{display:flex;align-items:center;justify-content:center;}
+    /* >=44px tap targets on standalone controls, mobile (RED_TEAM M1, M2) */
+    @media (max-width:768px){
+      .nav-links a,.footer-link{min-height:44px;display:inline-flex;align-items:center;}
+      .float-nav a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
+      .pdf-link,.press-link,.btn-video,.social-link,.hero-nav-link{min-height:44px;display:inline-flex;align-items:center;}
+      summary{min-height:44px;}
+    }
+/* be2-typescale */
+:root{
+  --fs-eyebrow:10px;--fs-caption:12px;--fs-meta:13px;--fs-body:15px;
+  --fs-lead:17px;--fs-lg:19px;--fs-h4:24px;--fs-h3:30px;--fs-h2:40px;
+  --fs-h1:46px;--fs-display:56px;
+  --lh-heading:1.15;--lh-body:1.7;--lh-relaxed:1.85;
+  --ko-optical:1.03em;--lh-ko:1.8;
+}
+/* KO/EN optical harmony — zero-specificity fallback, never overrides hand-tuned sizes */
+:where(span,em,a,strong)[lang="ko"]{font-size:var(--ko-optical);}
+:where(p,li,dd,blockquote,figcaption)[lang="ko"]{line-height:var(--lh-ko);}
+:where([lang="ko"]){word-break:keep-all;}
+/* /be2-typescale */
+
+/* rt1-responsive : consistent tablet band (768-1023) + mobile safety net — reversible, delete this block to revert */
+@media (min-width:768px) and (max-width:1023px){
+  body{padding-left:0;}
+  .spine{display:none;}
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:767px){
+  .perf-grid,.photo-grid-3,.recognition-grid,.plays-grid,.program-grid,.prog-grid,.portrait-grid,.trilogy-grid,.materials-3,.events-grid,.productions-grid,.work-grid{grid-template-columns:1fr;}
+}
+/* /rt1-responsive */
+
+    /* bd5-linksize : article citation links min 12px + hover feedback (reversible — delete this block to revert) */
+    .sources p,.sources p a,.sources a{font-size:12px;}
+    @media (hover:hover){.sources a:hover{color:#7c3a36;text-decoration-color:#7c3a36;}}
+
+/* nav-fit-4 (mobile) — reversible: delete this block + .nav-break spans */
+.nav-break{ display: none; }
+@media (max-width: 767px){
+  .nav-links{ gap: 6px 8px !important; }
+  .nav-links a{ font-size: 9px !important; letter-spacing: 0.2px !important; }
+  .nav-links .nav-break{ display: block; flex-basis: 100%; height: 0; margin: 0; padding: 0; }
+}
+        /* report landing — cover + action buttons */
+        .report-cover { max-width: 460px; margin: 8px auto 10px; border: 0.5px solid rgba(0,0,0,0.12); border-radius: 2px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+        .report-cover img { width: 100%; height: auto; display: block; }
+        .report-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 30px 0 8px; }
+        .report-btn { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 22px; border: 0.5px solid #eb559d; color: #eb559d; background: transparent; border-radius: 2px; transition: all 0.2s; }
+        .report-btn.primary { background: #eb559d; color: #fff; }
+        .report-btn:hover { background: #eb559d; color: #fff; }
+        .report-btn.primary:hover { background: #d63f89; border-color: #d63f89; }
+        .toc-list { margin: 8px 0 8px; }
+        .toc-part { padding: 14px 0; border-top: 0.5px solid rgba(0,0,0,0.1); display: grid; grid-template-columns: 44px 1fr; gap: 4px 14px; align-items: baseline; }
+        .toc-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; color: #eb559d; line-height: 1; }
+        .toc-heading { font-size: 14px; font-weight: 500; color: #1a1a1a; margin-bottom: 4px; }
+        .toc-items { font-size: 13px; color: #6f6f6f; line-height: 1.7; }
+        .data-table-wrap { margin: 28px 0 8px; overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .data-table caption { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #eb559d; font-weight: 600; text-align: left; margin-bottom: 8px; padding-bottom: 6px; }
+        .data-table th { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #a83a6e; font-weight: 600; padding: 8px 12px; border-bottom: 1px solid #eb559d; text-align: left; background: #fdeef5; white-space: nowrap; }
+        .data-table td { padding: 9px 12px; border-bottom: 0.5px solid rgba(0,0,0,0.07); color: #333; vertical-align: top; line-height: 1.6; }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:nth-child(even) td { background: #fdf6fa; }
+        .table-note { font-size: 11px; color: #6f6f6f; line-height: 1.7; margin-top: 6px; margin-bottom: 24px; padding-left: 12px; border-left: 2px solid #f6c9dd; }
+</style>
+    <!-- launch-meta -->
+    <link rel="canonical" href="https://hyojungjung.com/articles/kpipa-2026-08-saudi.html">
+    <meta name="theme-color" content="#eb559d">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hyojung Jung 정효정">
+    <meta property="og:title" content="사우디아라비아 및 GCC·아랍권 출판시장 보고서(8월) — 주요 도서전과 문학상 — Hyojung Jung">
+    <meta property="og:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta property="og:url" content="https://hyojungjung.com/articles/kpipa-2026-08-saudi.html">
+    <meta property="og:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="ko">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="사우디아라비아 및 GCC·아랍권 출판시장 보고서(8월) — 주요 도서전과 문학상 — Hyojung Jung">
+    <meta name="twitter:description" content="Hyojung Jung (정효정) — Korean actor, theatre director, writer, and cultural educator. Founder of Nangman Theatre, working between Seoul, Riyadh, and London.">
+    <meta name="twitter:image" content="https://hyojungjung.com/images/headshot.jpg">
+    <!-- /launch-meta -->
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="nav-brand">Hyojung Jung <span class="nav-brand-ko" lang="ko">정효정</span></a>
+    <div class="nav-links">
+        <a href="../theatre.html">Theatre</a>
+        <a href="../engagement.html">Engagement</a>
+        <a href="../writing.html" class="active">Journalism</a>
+        <a href="../essays.html">Essays</a><span class="nav-break"></span>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="header-accent">
+        <img src="../images/kpipa-logo.png" alt="KPIPA — Publication Industry Promotion Agency of Korea" class="accent-kpipa">
+    </div>
+    <div class="header-content">
+        <div class="header-title-col">
+            <div>
+                <p class="article-category">KPIPA — Saudi Arabia Export Coordinator</p>
+                <h1 class="article-title-ko">사우디아라비아 및 GCC·아랍권 출판시장 보고서(8월) — 주요 도서전과 문학상</h1>
+                <p class="article-title-en">Saudi Arabia &amp; GCC Publishing Market Report (August 2026) — Major Book Fairs and Literary Awards</p>
+            </div>
+        </div>
+        <div class="header-meta-col">
+            <div class="meta-grid">
+                <div class="meta-row">
+                    <span class="meta-label">Published</span>
+                    <span class="meta-value">August 31, 2026</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Publisher</span>
+                    <span class="meta-value">KPIPA 한국출판문화산업진흥원</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Region</span>
+                    <span class="meta-value">Saudi Arabia &amp; GCC</span>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Topic</span>
+                    <span class="meta-value">Publishing / Book Fairs &amp; Literary Awards</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="lang-bar">
+    <button class="lang-btn active" onclick="showLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="showLang('en', this)">English</button>
+</div>
+
+<div class="article-body">
+    <aside class="article-sidebar">
+        <span class="sidebar-label">KPIPA · 2026</span>
+    </aside>
+
+    <!-- KOREAN -->
+    <div class="article-text" id="text-ko">
+        <div class="text-ko" lang="ko">
+
+            <p>통신원이 한국출판문화산업진흥원(KPIPA) 사우디아라비아 수출 코디네이터로서 작성한 〈해외 출판시장 보고서 — 사우디아라비아〉 2026년 8월호다. KPIPA의 <em>Global Publishing Trends Report</em>(해외 출판시장 보고서) 시리즈로 발간됐으며, 사우디아라비아와 GCC(걸프협력회의)·아랍권의 주요 도서전과 문학상을 살펴보고 한국 출판콘텐츠의 진출 가능성을 짚는다.</p>
+
+            <div class="report-cover">
+                <img src="kpipa-2026-08-images/cover.jpg" alt="8월 사우디아라비아 해외 출판시장 보고서 표지">
+            </div>
+
+            <div class="report-actions">
+                <a class="report-btn primary" href="kpipa-2026-08-saudi.pdf" target="_blank">전체 보고서 다운로드 (한글 PDF)</a>
+                <a class="report-btn" href="https://www.kpipa.or.kr/p/g3_5/270" target="_blank">KPIPA 공식 페이지</a>
+            </div>
+
+            <h2>보고서 구성</h2>
+
+            <div class="toc-list">
+                <div class="toc-part">
+                    <span class="toc-num">1</span>
+                    <div>
+                        <div class="toc-heading">사우디아라비아 및 GCC·아랍권 도서전</div>
+                        <div class="toc-items">사우디아라비아 주요 도서전 및 한국 교류 현황 · GCC·아랍권 주요 도서전과 한국 출판콘텐츠 진출 가능성</div>
+                    </div>
+                </div>
+                <div class="toc-part">
+                    <span class="toc-num">2</span>
+                    <div>
+                        <div class="toc-heading">사우디아라비아 및 GCC·아랍권 문학상</div>
+                        <div class="toc-items">사우디아라비아 주요 문학상과 산업적 특징 · GCC·아랍권 주요 문학상과 번역·출판 연계 구조</div>
+                    </div>
+                </div>
+                <div class="toc-part">
+                    <span class="toc-num">3</span>
+                    <div>
+                        <div class="toc-heading">종합 시사점 및 한국 출판계의 진출 방향</div>
+                        <div class="toc-items">도서전·문학상 조사 결과 종합 · 한국 출판계를 위한 진출 전략 제언</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>보고서 전문은 아래와 같다. 원문 그대로 읽고 싶다면 위 ‘전체 보고서 다운로드(한글 PDF)’를 이용하면 된다 — 다운로드되는 PDF는 한글본만 제공된다.</p>
+
+            <h2>사우디아라비아 및 GCC·아랍권 도서전 및 문학상 정보</h2>
+
+            <p>사우디아라비아 출판시장은 언어와 출판 유통, 저작권 거래 측면에서 GCC(걸프협력회의) 및 아랍권 시장과 밀접하게 연결돼 있다. 아랍어 출판물은 개별 국가에 한정되지 않고 역내 시장을 통해 유통되며, 주요 도서전과 문학상 역시 국가 간 출판·번역·저작권 교류의 중요한 창구로 기능한다. 이에 이번 보고서에서는 사우디아라비아의 주요 도서전과 문학상을 중심으로 살펴보되, 사우디 출판시장의 지역적 위치와 한국 출판콘텐츠의 진출 가능성을 보다 입체적으로 파악하기 위해 GCC 및 아랍권의 주요 사례를 함께 조사·비교했다.</p>
+
+            <h2>사우디아라비아 주요 도서전 및 한국 교류 현황</h2>
+
+            <p>사우디아라비아에서는 수도 리야드와 서부의 제다를 중심으로 대규모 도서전이 개최되고 있으며, 최근에는 메디나와 동부지역 등으로 도서 행사가 확대되고 있다. 사우디 문화부 산하 문학·출판·번역위원회(Literature, Publishing and Translation Commission, 이하 LPT)는 이러한 도서전을 출판사와 독자를 연결하는 행사뿐 아니라 출판산업 활성화와 국내외 문화교류를 위한 플랫폼으로 운영하고 있다. 이와 별도로 다흐란의 킹압둘아지즈세계문화센터(Ithra)는 아동문학에 특화된 아동도서전을 매년 개최하고 있다.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>[표 1] 사우디아라비아 주요 도서전</caption>
+                <thead><tr><th>도서전명</th><th>도시</th><th>시작연도</th><th>2026년 일정</th><th>특징(키워드)</th></tr></thead>
+                <tbody>
+                <tr><td>리야드 국제도서전(Riyadh International Book Fair, RIBF)</td><td>리야드</td><td>1978년</td><td>10월 예정(일자 미정)</td><td>사우디 최대 규모 국제도서전, 2026년 명예국가 시리아, 출판·저작권 비즈니스 기능</td></tr>
+                <tr><td>제다 국제도서전(Jeddah International Book Fair, JIBF)</td><td>제다</td><td>2015년</td><td>12월 예상(일자 미정)</td><td>사우디 주요 국제도서전, 서부권 대표 도서 전시·판매 및 문화 프로그램 운영</td></tr>
+                <tr><td>이쓰라 아동도서전(Ithra Children's Book Fair)</td><td>다흐란</td><td>2021년</td><td>7.20.–7.25.(완료)</td><td>4~14세 대상 아동 전문 도서전, 2025년 한국 명예국가, 2026년 시리아 명예국가</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>리야드 국제도서전(Riyadh International Book Fair)은 사우디를 대표하는 최대 규모의 국제도서전이다. 1978년 당시 리야드대학교(현 킹사우드대학교)에서 시작됐으며, 현재는 LPT가 주관한다. 2025년에는 프린세스 누라 빈트 압둘라흐만 대학교에서 개최돼 25개국 이상의 출판사와 에이전시 2,000곳 이상이 참가했다. 일반 독자를 위한 도서 전시·판매뿐 아니라 저작권과 라이선싱, 출판 에이전시 간 교류 등을 위한 비즈니스 프로그램도 운영돼 사우디 출판산업의 주요 국제 교류 창구 역할을 하고 있다. 2026년 행사는 10월 개최 예정이며 시리아가 명예국가(Guest of Honor)로 선정됐다.</p>
+
+            <p>제다 도서전(Jeddah Book Fair)은 사우디 서부지역을 대표하는 대규모 도서전이다. 2025년에는 제다 슈퍼돔에서 12월 11일부터 20일까지 열렸으며, 24개국에서 1,000곳 이상의 국내외 출판사와 에이전시가 참가해 약 400개 부스를 운영했다. 도서 전시·판매와 함께 세미나, 토론, 워크숍, 어린이 프로그램 등이 진행되는 등 일반 독자와 가족 단위 방문객을 위한 문화행사의 성격도 강하다. 2026년 개최 일정은 8월 현재 공식 발표되지 않았다.</p>
+
+            <p>이쓰라 아동도서전(Ithra Children's Book Fair)은 다흐란의 킹압둘아지즈세계문화센터가 개최하는 아동·청소년 전문 도서전이다. 특히 한국 출판시장과의 접점이 확인된다는 점에서 주목할 만하다. 2025년 제5회 행사에서는 한국이 명예국가로 선정돼 한국 아동문학을 소개하는 특별 전시가 마련됐다. 특히 2025년 볼로냐 라가치 크로스미디어상(BolognaRagazzi CrossMedia Award)을 수상한 한담희 작가의 그림책 《별 아저씨(Star Papa)》가 아랍어로 번역·출간돼 현지 독자들에게 소개되었다. 또한 한담희 작가가 직접 참여해 미니북과 한국 전통 부채를 만드는 어린이 워크숍도 진행했다.</p>
+
+            <p>이외에도 LPT는 메디나 도서전(Madinah Book Fair)과 동부지역 도서전(Eastern Region Book Fair) 등을 운영하며 지역 단위의 독서문화와 출판 생태계 확대를 추진하고 있다. 리야드와 제다의 대규모 도서전에 비해 지역적 성격이 강하지만, 수도와 주요 대도시를 넘어 다양한 지역에서 출판사와 독자가 만날 수 있는 기반을 확대한다는 점에서 의미가 있다.</p>
+
+            <h2>한국과의 교류 및 참여 현황</h2>
+
+            <p>사우디아라비아는 2024년 서울국제도서전에 주빈국으로 참가해 사우디 문학과 출판 콘텐츠를 한국에 소개했으며, 이듬해인 2025년에는 앞서 언급한 대로 한국이 이쓰라 아동도서전의 명예국가로 참여했다. 사우디 콘텐츠의 한국 소개와 한국 아동문학의 사우디 소개가 양방향으로 이루어진 사례가 이어진 것이다.</p>
+
+            <p>한국 출판사의 입장에서는 리야드 국제도서전의 저작권·라이선싱 및 출판 비즈니스 프로그램을 현지 출판사 및 관계자와의 네트워크 구축과 아랍어권 진출을 위한 창구로 활용할 수 있다. 또한 이쓰라 아동도서전은 2025년 한국과 이미 교류한 전력이 있다는 점에서 한국 그림책과 아동청소년 출판콘텐츠의 사우디 진출을 위한 구체적인 협력 접점으로 활용할 수 있다.</p>
+
+            <p class="table-note">출처 — 사우디 문화부 산하 문학·출판·번역위원회(Literature, Publishing and Translation Commission, LPT), 「사우디 주요 도서전 관련 자료」, 2026. 8. 기준, lpt.moc.gov.sa · 사우디 프레스 에이전시(Saudi Press Agency), 「시리아, 2026 리야드 국제도서전 명예국가 선정」·「사우디, 2024 서울국제도서전 주빈국 참가」 관련 자료, spa.gov.sa</p>
+
+            <h2>GCC·아랍권 주요 도서전과 한국 출판콘텐츠 진출 가능성</h2>
+
+            <p>GCC 및 아랍권에는 다양한 규모의 국제도서전이 개최되고 있다. 이 가운데 행사 규모와 국제 출판사 참여도, 출판시장 내 영향력, 저작권·번역 교류 기능 등을 고려해 주요 도서전 6곳을 선정했다. GCC에서는 샤르자·도하·아부다비·쿠웨이트·무스카트의 5개 도서전을, GCC 외 아랍권에서는 대규모 출판시장과 독자층을 보유한 이집트의 카이로 국제도서전을 포함했다.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>[표 2] GCC 및 아랍권 주요 도서전</caption>
+                <thead><tr><th>도서전명</th><th>도시</th><th>시작연도</th><th>2026년 일정</th><th>특징(키워드)</th></tr></thead>
+                <tbody>
+                <tr><td>카이로 국제도서전(Cairo International Book Fair, CIBF)</td><td>이집트·카이로</td><td>1969년</td><td>1.21.–2.3.(완료)</td><td>아랍권 대표 대형 도서전, 2026년 83개국·1,457개 출판사·6,637개 전시 참가자</td></tr>
+                <tr><td>샤르자 국제도서전(Sharjah International Book Fair, SIBF)</td><td>UAE·샤르자</td><td>1982년</td><td>11.4.–11.15.</td><td>세계적 규모의 국제도서전, 출판 전문·번역지원 프로그램 운영, 2026년 명예국가 오만</td></tr>
+                <tr><td>도하 국제도서전(Doha International Book Fair, DIBF)</td><td>카타르·도하</td><td>1972년</td><td>5.14.–5.23.(완료)</td><td>GCC 주요 국제도서전, 2026년 37개국·520개 출판사·910개 부스 참가</td></tr>
+                <tr><td>아부다비 국제도서전(Abu Dhabi International Book Fair, ADIBF)</td><td>UAE·아부다비</td><td>1981년</td><td>9.13.–9.18.</td><td>저작권·라이선싱 B2B 중심, 매년 ‘올해의 인물’ 선정</td></tr>
+                <tr><td>쿠웨이트 국제도서전(Kuwait International Book Fair, KIBF)</td><td>쿠웨이트시티</td><td>1975년</td><td>2026년 일정 미발표</td><td>아랍권의 오랜 도서전 중 하나, 국내외 출판사 참가, 아동·청소년 및 문화 프로그램 운영</td></tr>
+                <tr><td>무스카트 국제도서전(Muscat International Book Fair, MIBF)</td><td>오만·무스카트</td><td>1992년</td><td>연기(당초 3.26.–4.5.)</td><td>오만 대표 국제도서전, 지역 정세로 제30회 행사 연기, 새 일정 미발표</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>카이로 국제도서전(Cairo International Book Fair, CIBF)은 1969년 시작된 아랍권의 대표적인 대형 도서전이다. 2026년 제57회 행사는 1월 21일부터 2월 3일까지 개최됐으며, 83개국 1,457개 출판사와 6,637개의 전시 참가자가 참여했다. 특히 2026년 행사에는 총 620만 명 이상의 관람객이 방문해 대규모 독자층을 기반으로 한 카이로 국제도서전의 영향력을 보여줬다. 일반 독자를 대상으로 한 도서 전시·판매뿐 아니라 작가 행사와 세미나, 문화 프로그램 등이 대규모로 진행돼 아랍어권 출판시장과 독자 동향을 파악할 수 있는 주요 행사다.</p>
+
+            <p>샤르자 국제도서전(Sharjah International Book Fair, SIBF)은 1982년 샤르자 통치자 술탄 빈 무함마드 알카시미의 주도로 시작됐으며, 샤르자 도서청(Sharjah Book Authority, SBA)이 운영한다. 대규모 일반 독자층을 보유한 동시에 국제 출판사와 에이전트가 참여하는 출판 전문 프로그램을 운영하는 것이 특징이다. 특히 번역지원 프로그램을 통해 아랍어 도서의 해외 번역과 해외 도서의 아랍어 번역을 지원하는 등 국제 출판·번역 교류 기능이 강하다. 2026년 제45회 행사는 11월 4일부터 15일까지 개최될 예정이며 오만이 명예국가(Guest of Honor)로 선정됐다.</p>
+
+            <p>도하 국제도서전(Doha International Book Fair, DIBF)은 1972년 시작된 카타르의 대표적인 국제도서전이다. 초기에는 격년제로 개최됐으나 2002년부터 매년 개최되고 있다. 2026년 제35회 행사는 5월 14일부터 23일까지 개최됐으며, 37개국 520개 출판사가 910개 부스로 참가했다. 도서 전시·판매와 함께 신간 발표, 세미나, 토론, 워크숍 등 다양한 문화 프로그램을 운영해 카타르의 주요 출판·문화 플랫폼 역할을 하고 있다.</p>
+
+            <p>아부다비 국제도서전(Abu Dhabi International Book Fair, ADIBF)은 1981년 시작돼 현재 아부다비 아랍어센터(Abu Dhabi Arabic Language Centre, ALC)가 주관한다. 특히 저작권·라이선싱 거래와 출판 관계자 간 네트워킹 등 B2B 기능이 강한 도서전으로, 번역과 국제 저작권 거래를 지원하는 프로그램도 운영한다. 이에 따라 해외 출판사가 아랍권 출판사 및 에이전트와 비즈니스 네트워크를 구축할 수 있는 주요 플랫폼으로 활용되고 있다. 2026년 제35회 행사는 9월 13일부터 18일까지 개최될 예정이다.</p>
+
+            <p>쿠웨이트 국제도서전(Kuwait International Book Fair, KIBF)은 1975년 시작된 오랜 역사의 도서전으로, 쿠웨이트 국가문화예술문학위원회(National Council for Culture, Arts and Letters, NCCAL)가 주관한다. 국내외 출판사의 도서 전시·판매뿐 아니라 작가 행사와 강연, 아동·청소년 프로그램 등 다양한 문화 프로그램을 함께 운영한다. 특히 가족과 젊은 독자층을 대상으로 한 프로그램의 비중이 높은 것이 특징이다. 2026년 개최 일정은 현재 공식 발표되지 않았다.</p>
+
+            <p>무스카트 국제도서전(Muscat International Book Fair, MIBF)은 1992년 시작된 오만의 대표적인 국제도서전이다. 국내외 출판사가 참여하며 도서 전시·판매와 함께 다양한 문학·문화 프로그램을 운영해 오만의 주요 문화행사로 자리 잡았다. 2026년 제30회 행사는 당초 3월 26일부터 4월 5일까지 개최될 예정이었으나 지역 정세로 연기됐으며, 2026년 8월 현재 새로운 일정은 발표되지 않았다.</p>
+
+            <h2>한국과의 교류 및 참여 현황</h2>
+
+            <p>한국과 GCC 지역 도서전 간 교류에서 가장 대표적인 사례는 샤르자 국제도서전이다. 한국은 2023년 제42회 샤르자 국제도서전의 주빈국(Guest of Honor)으로 참가해 한국문학과 출판 콘텐츠를 집중적으로 소개했다. 한국문학 특별전과 그림책 전시, 한국 작가 북토크, 한국과 UAE 출판 관계자 간 라운드테이블 등이 진행됐으며, 문학뿐 아니라 음악·한복 등 한국문화를 소개하는 프로그램도 함께 운영됐다.</p>
+
+            <p>특히 같은 해 샤르자 역시 2023년 서울국제도서전의 주빈국으로 참가했다. 샤르자가 한국에서 자국 문학과 출판문화를 소개한 데 이어 한국이 샤르자에서 주빈국으로 참여하면서, 양국이 서로의 주요 도서전을 통해 출판 콘텐츠와 문화를 소개하는 상호 교류가 이루어졌다.</p>
+
+            <p>2024년 아부다비 국제도서전에서는 주UAE 한국문화원이 현지 문화기관과 공동으로 한국문화 콘퍼런스(Korean Culture Conference)를 개최했다. 현지 출판 관계자와 콘텐츠 관계자 등이 참여해 한국문화의 국제적 확산과 중동지역에서의 한국문학 소개 가능성 등을 논의했다.</p>
+
+            <p>반대 방향의 최근 교류 사례로는 2024년 오만의 서울국제도서전 참가도 있다. 오만은 2024년 서울국제도서전에 ‘스포트라이트 컨트리(Spotlight Country)’로 참가해 한·오만 수교 50주년을 계기로 문학·출판 교류 프로그램을 운영했다. 이는 한국과 걸프지역의 출판교류가 UAE뿐 아니라 다른 GCC 국가로도 이어지고 있음을 보여주는 사례다.</p>
+
+            <p>이러한 사례를 종합하면 한국과 GCC·아랍권 출판시장의 교류에서는 현재 UAE가 비교적 구체적인 협력 기반을 형성하고 있다. 특히 샤르자는 상호 주빈국 참여와 번역지원 프로그램을 통한 출판·번역 교류의 접점이 있으며, 아부다비는 저작권·라이선싱 등 B2B 기능이 강해 한국 출판사의 아랍어권 진출을 위한 네트워크 구축에 활용할 수 있다. 동시에 카이로와 같이 대규모 독자층을 보유한 도서전은 아랍어권 독자시장과 출판 동향을 파악하는 창구라는 점에서 각각 다른 활용 가능성을 갖는다.</p>
+
+            <p class="table-note">출처 — 이집트 국가정보서비스(State Information Service), 「제57회 카이로 국제도서전 관련 자료」, 2026. 8. 기준 · 샤르자 도서청(Sharjah Book Authority), 도하 국제도서전(DIBF), 아부다비 국제도서전(ADIBF), 쿠웨이트 국가문화예술문학위원회(NCCAL), 오만 뉴스 에이전시(Oman News Agency) 공식 자료, 2026. 8. 기준 · 대한민국 정책브리핑 Korea.net(2023), 오만 외교부(2024) 자료</p>
+
+            <h2>사우디아라비아 주요 문학상과 산업적 특징</h2>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>[표 3] 사우디아라비아 문학상</caption>
+                <thead><tr><th>문학상명</th><th>제정 시기</th><th>특징</th></tr></thead>
+                <tbody>
+                <tr><td>킹 파이살상 아랍어·문학 부문(King Faisal Prize – Arabic Language and Literature, KFP)</td><td>1977년 제정, 1979년 첫 시상</td><td>사우디 대표 국제 학술·문화상, 5개 부문 운영, 아랍어·문학은 매년 주제 지정</td></tr>
+                <tr><td>국가문화상 – 문학·번역·출판(National Cultural Awards – Literature/Translation/Publishing)</td><td>2020년 출범</td><td>사우디 문화부 주관 국가 문화상, 문학·번역·출판 각각 독립 분야상</td></tr>
+                <tr><td>골든펜상(Golden Pen Award)</td><td>2024년 출범</td><td>총상금 74만 달러, 대중소설·번역·출판 등 시상, 수상작 영화화 연계, 엔터테인먼트청(GEA) 주관</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>사우디아라비아에서 운영되는 문학·출판 관련 상 가운데 국가적 위상과 문학·출판산업과의 연계성을 고려해 킹 파이살상(King Faisal Prize), 국가문화상(National Cultural Awards), 골든펜상(Golden Pen Award)을 주요 사례로 선정했다. 세 상은 각각 학술·문학적 성취, 국가 문화정책, 대중문학과 영상산업 연계라는 서로 다른 성격을 보여준다.</p>
+
+            <p>킹 파이살상(King Faisal Prize, KFP)은 킹 파이살 재단이 운영하는 사우디의 대표적인 국제 학술·문화상이다. 1977년 제정돼 1979년 처음 수여됐으며, 이슬람 봉사, 이슬람학, 아랍어·문학, 의학, 과학의 5개 부문으로 구성된다. 이 가운데 아랍어·문학(Arabic Language and Literature) 부문은 매년 특정 연구 주제를 선정해 해당 분야에서 뛰어난 학술·문화적 성과를 낸 개인 또는 기관을 시상한다. 2024년과 2025년에는 심사 기준을 충족하는 수상자를 선정하지 않았으며, 2026년에는 ‘프랑스어로 쓰인 아랍문학(Arabic Literature in French)’을 주제로 프랑스의 피에르 라르셰(Pierre Larcher) 교수가 수상했다.</p>
+
+            <p>국가문화상(National Cultural Awards)은 사우디 문화부가 국가 문화전략과 비전 2030의 일환으로 운영하는 종합 문화상이다. 2019년 바드르 빈 압둘라 빈 파르한 문화부 장관이 도입을 발표했으며, 2020년 사업이 공식 출범했다. 초기에는 문학·출판·번역을 비롯한 문화 분야별 상을 중심으로 운영됐으며 이후 부문이 확대됐다. 2026년 제6회 국가문화상은 7개 주요상과 12개 분야별 상으로 구성되며, 분야별 상에는 문학상(Literature Award), 출판상(Publishing Award), 번역상(Translation Award)이 각각 독립 부문으로 포함된다. 이 상은 개별 작품 하나만을 대상으로 하는 일반적인 문학상이라기보다 사우디 문화 분야에서 성과를 낸 개인과 기관을 국가 차원에서 발굴·포상하는 성격이 강하다. 예를 들어 2024년 제4회에서는 소설가 오사마 알무슬림(Osamah Al-Muslim)이 문학상을, 아동전문 출판사 Qyadiya Publishing House가 출판상을, 왈리드 알오마리(Walid Al-Omari)가 번역상을 수상했다.</p>
+
+            <p>골든펜상(Golden Pen Award)은 사우디 엔터테인먼트청(General Entertainment Authority, GEA)이 2024년 출범시킨 아랍어권 소설·스토리 IP 중심의 상이다. 기존 문학상과 달리 대중성과 영화화 가능성이 높은 소설과 시나리오를 발굴해 출판 콘텐츠를 영상산업으로 연결하는 데 중점을 둔 것이 특징이다. 소설 부문은 스릴러·미스터리/범죄·로맨스·판타지·코미디·역사·호러·리얼리즘 등 8개 장르로 세분화돼 있으며, 문학작품을 원작으로 한 시나리오, 최우수 번역소설, 최우수 아랍 출판사, 독자상 등도 운영한다.</p>
+
+            <p>공식 발표 기준 총상금은 74만 달러이며, 소설 대상 1위에는 10만 달러와 함께 영화 제작 기회가 주어진다. 2위 역시 5만 달러와 영화 제작이 제공되며, 장르별 소설상은 각각 2만 5,000달러다. 최우수 번역소설에는 10만 달러, 최우수 아랍 출판사에는 5만 달러가 수여된다. 따라서 골든펜상은 문학 창작뿐 아니라 소설 IP의 영화화, 번역, 출판까지 하나의 산업적 구조로 연결한다는 점에서 최근 사우디 콘텐츠산업의 변화를 보여주는 사례로 볼 수 있다.</p>
+
+            <h2>출판시장 관점에서의 특징</h2>
+
+            <p>세 문학상은 사우디 문학·출판정책의 서로 다른 축을 보여준다. 킹 파이살상은 아랍어와 문학 분야의 국제적 학술 권위, 국가문화상은 문학·출판·번역 생태계에 대한 국가 차원의 지원과 인정, 골든펜상은 문학 IP의 대중화와 영상산업 확장에 각각 무게를 두고 있다.</p>
+
+            <p>특히 출판시장 측면에서는 국가문화상이 문학뿐 아니라 출판과 번역을 별도 분야로 시상하고 있다는 점과, 골든펜상이 작가뿐 아니라 번역소설과 아랍 출판사를 시상하고 소설의 영화화를 직접 연계한다는 점이 주목된다. 이는 최근 사우디에서 문학을 독립적인 예술 영역에만 두기보다 출판·번역·영화 등 다른 콘텐츠산업과 연결하려는 흐름이 나타나고 있음을 보여준다.</p>
+
+            <p class="table-note">출처 — 킹 파이살상(King Faisal Prize) 공식 홈페이지, kingfaisalprize.org, 2026. 8. 기준 · 사우디 프레스 에이전시(Saudi Press Agency), 「국가문화상 제6회 출범 관련」, 2026. 3. 1. · 리야드 리뷰 오브 북스(Riyadh Review of Books), 골든펜상 관련 기사</p>
+
+            <h2>GCC·아랍권 주요 문학상과 번역·출판 연계 구조</h2>
+
+            <p>GCC 및 아랍권에서 운영되는 문학·출판 관련 상 가운데 국제적 권위와 상금 규모, 번역·출판 및 해외 진출과의 연계성을 고려해 6개 주요 상을 선정했다. 국제 아랍소설상(IPAF)과 셰이크 자이드 도서상, 카타라 아랍소설상, 나기브 마푸즈 메달, 투르주만상, 셰이크 하마드 번역·국제이해상으로, 문학 창작뿐 아니라 번역과 출판, 해외 유통을 지원하는 상들을 함께 포함했다.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>[표 4] GCC 및 아랍권 주요 문학상</caption>
+                <thead><tr><th>문학상명</th><th>제정 시기</th><th>특징</th></tr></thead>
+                <tbody>
+                <tr><td>국제 아랍소설상(International Prize for Arabic Fiction, IPAF)</td><td>2007년 출범, 2008년 첫 시상</td><td>아랍어 소설 대표 국제 문학상, ALC 후원, 해외 번역·출판 지원</td></tr>
+                <tr><td>셰이크 자이드 도서상(Sheikh Zayed Book Award, SZBA)</td><td>2006년 제정</td><td>문학·번역·출판 등 10개 부문, 총상금 775만 디르함</td></tr>
+                <tr><td>카타라 아랍소설상(Katara Prize for Arabic Novel)</td><td>2014년 제정</td><td>아랍어 소설 창작·출판 지원, 2026년 총상금 37만 5,000달러, 번역 연계</td></tr>
+                <tr><td>나기브 마푸즈 메달(Naguib Mahfouz Medal for Literature)</td><td>1996년 제정</td><td>현대 아랍어 소설 대상, 수상작 영어 번역·해외 출판 연계</td></tr>
+                <tr><td>투르주만상(Turjuman Award)</td><td>2016년 제정</td><td>아랍어 도서의 외국어 번역·출판 지원, 번역가·출판사 대상, SBA 운영</td></tr>
+                <tr><td>셰이크 하마드 번역·국제이해상(Sheikh Hamad Award for Translation and International Understanding)</td><td>2015년 제정</td><td>카타르 국제 번역상, 아랍어↔외국어 양방향 번역 지원</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>국제 아랍소설상(International Prize for Arabic Fiction, IPAF)은 2007년 출범해 2008년 첫 시상된 아랍어 소설 분야의 대표적인 국제 문학상이다. 현재 아부다비 아랍어센터(Abu Dhabi Arabic Language Centre, ALC)의 후원을 받으며 독립적인 이사회가 운영한다. 최종 후보 6명에게 각각 1만 달러가 지급되고 최종 수상자는 추가로 5만 달러를 받는다. 수상작의 영어 번역을 지원하고 다른 언어로의 번역도 장려해 아랍어 소설의 국제 출판시장 진출을 지원하는 것이 특징이다.</p>
+
+            <p>셰이크 자이드 도서상(Sheikh Zayed Book Award, SZBA)은 2006년 제정된 아부다비의 대표적인 종합 문화·도서상으로, 현재 아부다비 아랍어센터가 운영한다. 문학·번역·아동문학·출판 및 기술 등 10개 부문을 운영하며 총상금은 775만 디르함이다. 작가뿐 아니라 번역가와 출판사·문화기관까지 포괄해 문학 창작과 번역·출판산업을 함께 지원한다는 점이 특징이다.</p>
+
+            <p>카타라 아랍소설상(Katara Prize for Arabic Novel)은 카타르 카타라 문화마을재단(Katara Cultural Village Foundation)이 2014년 제정한 아랍어 소설상이다. 2026년 기준 총상금은 37만 5,000달러이며 출간 소설과 미출간 소설, 아동소설 등 여러 분야를 운영한다. 수상작의 번역과 출판을 연계해 아랍어 소설의 해외 확산도 지원하고 있다. 2026년 제12회 공모에서는 2,610편이 응모해 역대 최고 기록을 세웠으며, 이 가운데 1,488편이 미출간 소설, 578편이 2025년 출간 작품, 303편이 미출간 아동소설 등으로 집계됐다.</p>
+
+            <p>나기브 마푸즈 메달(Naguib Mahfouz Medal for Literature)은 카이로 아메리칸대학교(American University in Cairo, AUC) 출판부가 1996년 제정했다. 아직 영어로 번역되지 않은 현대 아랍어 소설을 대상으로 하며, 수상작에는 상금과 함께 영어 번역 및 해외 출판 기회가 제공된다. 상금 규모보다는 아랍어 작품을 영어권 출판시장으로 연결하는 기능이 두드러진다.</p>
+
+            <p>투르주만상(Turjuman Award)은 샤르자 도서청(Sharjah Book Authority, SBA)이 2016년 제정한 번역·출판 관련 상이다. 아랍어로 출간된 작품의 외국어 번역과 해외 출판을 지원하며 번역가뿐 아니라 원출판사와 해외 번역출판사를 함께 대상으로 한다. 이를 통해 아랍어 출판물의 해외시장 진출을 촉진하는 데 목적을 두고 있다.</p>
+
+            <p>셰이크 하마드 번역·국제이해상(Sheikh Hamad Award for Translation and International Understanding)은 카타르에서 2015년 제정된 국제 번역상이다. 아랍어에서 외국어로의 번역뿐 아니라 외국어에서 아랍어로의 번역도 대상으로 하는 양방향 구조가 특징이다. 따라서 아랍문학의 해외 진출뿐 아니라 해외 문학을 아랍어권에 소개하는 국제 번역교류의 성격을 갖는다.</p>
+
+            <p class="table-note">출처 — 국제 아랍소설상(IPAF) 공식 홈페이지, arabicfiction.org, 2026. 8. 기준 · 셰이크 자이드 도서상(SZBA), zayedaward.ae · 아메리칸대학교 카이로 출판부(AUC Press), 나기브 마푸즈 메달 관련 자료 · 샤르자 도서청(SBA), 투르주만상 관련 자료 · 셰이크 하마드 번역·국제이해상, hta.qa · The Peninsula, 「카타라 아랍소설상 제12회 공모 관련」, 2026</p>
+
+            <h2>종합 시사점 및 한국 출판계의 진출 방향</h2>
+
+            <p>도서전 측면에서는 사우디의 리야드·제다 국제도서전과 이쓰라 아동도서전, GCC·아랍권의 카이로·샤르자·도하·아부다비·쿠웨이트·무스카트 국제도서전 등 총 9곳을 조사했다. 각 도서전은 규모뿐 아니라 기능에서도 차이를 보인다. 카이로는 대규모 일반 독자층을 기반으로 한 아랍권 대표 도서전이며, 샤르자는 국제 출판·번역 교류, 아부다비는 저작권·라이선싱과 출판 관계자 간 B2B 네트워킹 기능이 두드러진다. 리야드 국제도서전 역시 사우디 최대 규모의 도서전으로 최근 출판 비즈니스 관련 프로그램을 확대하고 있다.</p>
+
+            <p>한국 출판콘텐츠의 아랍권 진출에서도 목적에 따라 도서전을 구분해 접근할 필요가 있다. 저작권 수출과 현지 출판사·에이전트 발굴을 목적으로 한다면 아부다비와 샤르자, 대규모 독자층을 대상으로 작품의 인지도를 높이는 데에는 카이로와 리야드를 주요 접점으로 활용할 수 있다. 특히 한국은 2023년 샤르자 국제도서전의 주빈국으로 참가했고 같은 해 샤르자 역시 서울국제도서전의 주빈국으로 참가한 경험이 있어 기존 교류 기반을 활용할 수 있다는 장점이 있다.</p>
+
+            <p>문학상 측면에서는 사우디 3종과 GCC·아랍권 6종 등 총 9개 상을 조사했다. 이들 상에서는 문학 창작에 대한 시상을 넘어 번역·출판·해외 유통까지 연계하려는 구조가 나타난다. IPAF와 나기브 마푸즈 메달은 아랍어 작품의 해외 번역·출판을 지원하고, 투르주만상은 아랍어 도서의 외국어 번역과 해외 출판을 장려한다. 셰이크 자이드 도서상은 번역과 출판을 독립적인 시상 분야로 운영하며, 카타라 아랍소설상 역시 수상작의 번역과 출판을 연계하고 있다.</p>
+
+            <div class="article-photo"><img src="kpipa-2026-08-images/fair-award-map.jpg" alt="사우디아라비아 및 GCC·아랍권 주요 도서전·문학상 지도"></div>
+            <p class="photo-caption">▲ [그림 1] 사우디아라비아 및 GCC·아랍권 주요 도서전·문학상 지도. 표기된 위치는 각 도서전 개최 도시 및 문학상 주관기관 소재지 기준이며, 지도 형태는 실제 국경선과 다를 수 있는 단순화된 개략도다. — 출처: 통신원 작성</p>
+
+            <p>특히 한국 출판콘텐츠와의 접점에서는 셰이크 하마드 번역·국제이해상의 운영방식에 주목할 필요가 있다. 투르주만상이 주로 아랍어 도서의 외국어 번역을 지원하는 데 비해, 셰이크 하마드상은 아랍어↔외국어의 양방향 번역을 대상으로 한다. 이러한 구조는 한국문학의 아랍어 번역과 아랍문학의 한국어 번역 등 향후 양방향 출판교류의 가능성을 살펴볼 수 있다는 점에서 의미가 있다.</p>
+
+            <p>사우디에서는 최근 문학과 다른 콘텐츠산업의 연계가 두드러진다. 국가문화상이 문학·번역·출판을 각각 독립 분야로 운영하고 있으며, 골든펜상은 소설·번역·출판에 대한 시상과 함께 일부 수상작의 영화 제작까지 연계한다. 이는 문학작품을 출판물에 한정하지 않고 영화·영상으로 확장할 수 있는 IP로 바라보는 산업적 접근이 강화되고 있음을 보여준다.</p>
+
+            <p>종합하면 한국 출판계의 사우디 및 GCC 시장 진출은 완성된 한국 도서를 현지에 소개하는 방식에서 나아가 현지 출판사와의 판권 거래, 한국문학의 아랍어 번역·현지 출간, 아랍문학의 한국어 번역·출간, 공동출판과 작가 교류, 문학 IP의 영상화 등으로 협력 범위를 확대할 수 있다. 특히 샤르자·아부다비의 기존 출판·번역 네트워크와 사우디에서 확대되고 있는 출판·콘텐츠산업 지원 정책을 함께 활용한다면, 단순한 콘텐츠 수출을 넘어 한국과 아랍권 간 양방향 출판·문화교류로 발전시킬 수 있을 것으로 보인다.</p>
+
+            <div class="sources">
+                <p class="sources-label">발행 정보</p>
+                <p>— 발행: 한국출판문화산업진흥원(KPIPA) · 2026년 8월 31일</p>
+                <p>— 시리즈: Global Publishing Trends Report — 해외 출판시장 보고서(Overseas Publishing Market Report)</p>
+                <p>— 원문: <a href="https://www.kpipa.or.kr/p/g3_5/270" target="_blank">kpipa.or.kr</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="article-text hidden" id="text-en">
+        <div class="text-en">
+
+            <p>The August 2026 edition of the <em>Overseas Publishing Market Report — Saudi Arabia</em>, written by the correspondent in her role as Saudi Arabia Export Coordinator at the Publication Industry Promotion Agency of Korea (KPIPA). Published as part of KPIPA's <em>Global Publishing Trends Report</em> series, it surveys the major book fairs and literary awards of Saudi Arabia and the GCC (Gulf Cooperation Council) and wider Arab world, and considers the prospects for Korean publishing content there.</p>
+
+            <div class="report-cover">
+                <img src="kpipa-2026-08-images/cover.jpg" alt="Cover of the August Saudi Arabia overseas publishing market report">
+            </div>
+
+            <div class="report-actions">
+                <a class="report-btn primary" href="kpipa-2026-08-saudi.pdf" target="_blank">Download the full report (PDF, Korean only)</a>
+                <a class="report-btn" href="https://www.kpipa.or.kr/p/g3_5/270" target="_blank">KPIPA official page</a>
+            </div>
+
+            <h2>Contents</h2>
+
+            <div class="toc-list">
+                <div class="toc-part">
+                    <span class="toc-num">1</span>
+                    <div>
+                        <div class="toc-heading">Book Fairs in Saudi Arabia and the GCC/Arab World</div>
+                        <div class="toc-items">Major book fairs in Saudi Arabia and exchange with Korea · Major book fairs in the GCC/Arab world and prospects for Korean publishing content</div>
+                    </div>
+                </div>
+                <div class="toc-part">
+                    <span class="toc-num">2</span>
+                    <div>
+                        <div class="toc-heading">Literary Awards in Saudi Arabia and the GCC/Arab World</div>
+                        <div class="toc-items">Major literary awards in Saudi Arabia and their industry character · Major literary awards in the GCC/Arab world and their links to translation and publishing</div>
+                    </div>
+                </div>
+                <div class="toc-part">
+                    <span class="toc-num">3</span>
+                    <div>
+                        <div class="toc-heading">Overall Implications and Entry Strategies for Korean Publishers</div>
+                        <div class="toc-items">Findings across book fairs and literary awards · Entry-strategy recommendations for Korean publishers</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>The full report follows below. To read the original as published, use "Download the full report" above — note that the downloadable PDF is available in Korean only.</p>
+
+            <h2>Book Fairs and Literary Awards in Saudi Arabia and the GCC/Arab World</h2>
+
+            <p>Saudi Arabia's publishing market is closely tied to the GCC (Gulf Cooperation Council) and the wider Arab world in language, distribution, and rights trading. Arabic-language publications circulate through a regional market rather than staying confined to any one country, and major book fairs and literary awards function as key channels for cross-border exchange in publishing, translation, and rights. This report accordingly focuses on Saudi Arabia's major book fairs and literary awards, while also surveying and comparing key cases from the GCC and the wider Arab world to place Saudi Arabia's publishing market in a fuller regional context and to gauge the prospects for Korean publishing content there.</p>
+
+            <h2>Major Book Fairs in Saudi Arabia and Exchange with Korea</h2>
+
+            <p>In Saudi Arabia, large-scale book fairs are held mainly in the capital Riyadh and in Jeddah in the west, and book events have recently been expanding to Madinah and the Eastern Province as well. The Literature, Publishing and Translation Commission (LPT), under the Ministry of Culture, runs these fairs not only as venues connecting publishers with readers but as platforms for invigorating the publishing industry and fostering cultural exchange at home and abroad. Separately, the King Abdulaziz Center for World Culture (Ithra) in Dhahran holds an annual book fair devoted to children's literature.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Table 1 — Major Book Fairs in Saudi Arabia</caption>
+                <thead><tr><th>Book Fair</th><th>City</th><th>Founded</th><th>2026 Dates</th><th>Features (Keywords)</th></tr></thead>
+                <tbody>
+                <tr><td>Riyadh International Book Fair (RIBF)</td><td>Riyadh</td><td>1978</td><td>Oct (date TBD)</td><td>Saudi Arabia's largest international book fair; 2026 Guest of Honor Syria; publishing/rights business functions</td></tr>
+                <tr><td>Jeddah International Book Fair (JIBF)</td><td>Jeddah</td><td>2015</td><td>Dec expected (date TBD)</td><td>Major Saudi fair; leading western-region book exhibition/sales and cultural programming</td></tr>
+                <tr><td>Ithra Children's Book Fair</td><td>Dhahran</td><td>2021</td><td>Jul 20–25 (held)</td><td>Specialist fair for ages 4–14; Korea Guest of Honor 2025, Syria Guest of Honor 2026</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>The Riyadh International Book Fair is Saudi Arabia's largest international book fair. It began in 1978 at what was then Riyadh University (now King Saud University) and is now organised by the LPT. The 2025 edition was held at Princess Nourah bint Abdulrahman University and drew more than 2,000 publishers and agencies from over 25 countries. Alongside book exhibitions and sales for general readers, it runs business programmes for rights, licensing, and exchange among publishing agencies, making it a key international-exchange channel for the Saudi publishing industry. The 2026 edition is scheduled for October, with Syria selected as Guest of Honor.</p>
+
+            <p>The Jeddah Book Fair is the leading large-scale book fair in western Saudi Arabia. The 2025 edition ran from 11 to 20 December at the Jeddah Superdome, drawing more than 1,000 domestic and international publishers and agencies from 24 countries across roughly 400 booths. Alongside book exhibition and sales, it runs seminars, panels, workshops, and children's programming, giving it a strong character as a cultural event for general readers and families. As of August 2026, no official date has been announced for the 2026 edition.</p>
+
+            <p>The Ithra Children's Book Fair is a fair for children and young readers held by the King Abdulaziz Center for World Culture in Dhahran. It is especially notable for its documented points of contact with the Korean publishing market. At its 5th edition in 2025, Korea was selected as Guest of Honor, with a special exhibition introducing Korean children's literature. Notably, illustrator Han Dam-hee's picture book <em>Star Papa</em> (별 아저씨) — winner of the 2025 BolognaRagazzi CrossMedia Award — was translated into Arabic and published, introducing it to local readers. Han also took part in person, running a children's workshop on making mini-books and traditional Korean fans.</p>
+
+            <p>The LPT also runs the Madinah Book Fair and the Eastern Region Book Fair, among others, to build reading culture and expand the publishing ecosystem at a regional level. These are more regional in character than the large fairs in Riyadh and Jeddah, but they matter for widening the base where publishers and readers can meet beyond the capital and major cities.</p>
+
+            <h2>Exchange and Participation with Korea</h2>
+
+            <p>Saudi Arabia took part as Guest of Honor at the 2024 Seoul International Book Fair, introducing Saudi literature and publishing content to Korea, and the following year, as noted above, Korea served as Guest of Honor at the Ithra Children's Book Fair in 2025. This continues a pattern of two-way exchange — Saudi content introduced in Korea, and Korean children's literature introduced in Saudi Arabia.</p>
+
+            <p>For Korean publishers, the Riyadh International Book Fair's rights, licensing, and publishing-business programming can serve as a channel for building networks with local publishers and industry contacts and for entering the Arabic-language market. The Ithra Children's Book Fair, having already engaged with Korea in 2025, also offers a concrete point of cooperation for bringing Korean picture books and children's/YA publishing content into Saudi Arabia.</p>
+
+            <p class="table-note">Sources — Literature, Publishing and Translation Commission (LPT), Ministry of Culture of Saudi Arabia, materials on major Saudi book fairs, as of August 2026, lpt.moc.gov.sa · Saudi Press Agency (SPA), on Syria as Guest of Honor at the 2026 Riyadh International Book Fair and on Saudi Arabia's 2024 pavilion as Guest of Honor at the Seoul International Book Fair, spa.gov.sa</p>
+
+            <h2>Major Book Fairs in the GCC/Arab World and Prospects for Korean Publishing Content</h2>
+
+            <p>International book fairs of various sizes are held across the GCC and the wider Arab world. Considering event scale, international-publisher participation, influence within the publishing market, and translation/rights-exchange functions, this report selected six major fairs: five in the GCC — Sharjah, Doha, Abu Dhabi, Kuwait, and Muscat — plus, outside the GCC, the Cairo International Book Fair in Egypt, which commands a large publishing market and readership.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Table 2 — Major Book Fairs in the GCC and Arab World</caption>
+                <thead><tr><th>Book Fair</th><th>City</th><th>Founded</th><th>2026 Dates</th><th>Features (Keywords)</th></tr></thead>
+                <tbody>
+                <tr><td>Cairo International Book Fair (CIBF)</td><td>Cairo, Egypt</td><td>1969</td><td>21 Jan–3 Feb (held)</td><td>Leading large-scale Arab-world fair; 2026 drew 1,457 publishers from 83 countries, 6,637 exhibitors</td></tr>
+                <tr><td>Sharjah International Book Fair (SIBF)</td><td>Sharjah, UAE</td><td>1982</td><td>4–15 Nov</td><td>World-scale international fair; publishing-professional and translation-grant programming; 2026 Guest of Honor Oman</td></tr>
+                <tr><td>Doha International Book Fair (DIBF)</td><td>Doha, Qatar</td><td>1972</td><td>14–23 May (held)</td><td>Major GCC fair; 2026 drew 520 publishers from 37 countries across 910 booths</td></tr>
+                <tr><td>Abu Dhabi International Book Fair (ADIBF)</td><td>Abu Dhabi, UAE</td><td>1981</td><td>13–18 Sep</td><td>Rights/licensing B2B focus; names a "Person of the Year" annually</td></tr>
+                <tr><td>Kuwait International Book Fair (KIBF)</td><td>Kuwait City</td><td>1975</td><td>2026 dates not announced</td><td>One of the Arab world's long-running fairs; domestic/international publishers; children's/YA and cultural programming</td></tr>
+                <tr><td>Muscat International Book Fair (MIBF)</td><td>Muscat, Oman</td><td>1992</td><td>Postponed (originally 26 Mar–5 Apr)</td><td>Oman's leading international fair; 30th edition postponed due to regional conditions, new dates not announced</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>The Cairo International Book Fair (CIBF), launched in 1969, is a leading large-scale fair in the Arab world. Its 57th edition in 2026 ran from 21 January to 3 February, drawing 1,457 publishers and 6,637 exhibitors from 83 countries. The 2026 edition also drew more than 6.2 million visitors, underscoring CIBF's influence as a fair built on a mass readership. Beyond book exhibition and sales for general readers, it hosts large-scale author events, seminars, and cultural programming, making it a key event for tracking the Arabic-language publishing market and reader trends.</p>
+
+            <p>The Sharjah International Book Fair (SIBF), launched in 1982 on the initiative of Sharjah's ruler Sheikh Sultan bin Muhammad Al Qasimi, is run by the Sharjah Book Authority (SBA). It combines a large general readership with dedicated publishing-professional programming that draws international publishers and agents. Its translation-grant programme, supporting both the translation of Arabic books abroad and the translation of foreign books into Arabic, gives it particularly strong international publishing/translation-exchange functions. The 45th edition in 2026 will run from 4 to 15 November, with Oman selected as Guest of Honor.</p>
+
+            <p>The Doha International Book Fair (DIBF), launched in 1972, is Qatar's leading international book fair. Initially biennial, it has been held annually since 2002. The 35th edition in 2026 ran from 14 to 23 May, with 520 publishers from 37 countries participating across 910 booths. Alongside book exhibition and sales, it runs new-release launches, seminars, panels, and workshops, functioning as a major publishing and cultural platform for Qatar.</p>
+
+            <p>The Abu Dhabi International Book Fair (ADIBF), launched in 1981, is now organised by the Abu Dhabi Arabic Language Centre (ALC). It is a fair with particularly strong B2B functions around rights and licensing deals and networking among publishing professionals, and it also runs programmes supporting translation and international rights transactions. This makes it a key platform for foreign publishers to build business networks with Arab-world publishers and agents. The 35th edition in 2026 will run from 13 to 18 September.</p>
+
+            <p>The Kuwait International Book Fair (KIBF), launched in 1975, is a long-running fair organised by Kuwait's National Council for Culture, Arts and Letters (NCCAL). Alongside book exhibition and sales by domestic and international publishers, it runs author events, talks, and children's/youth programming. It is notable for the weight it gives to programming aimed at families and younger readers. As of this report, no official date has been announced for the 2026 edition.</p>
+
+            <p>The Muscat International Book Fair (MIBF), launched in 1992, is Oman's leading international book fair, combining book exhibition and sales by domestic and international publishers with a range of literary and cultural programming, and has become a major cultural event in Oman. The 30th edition in 2026 was originally scheduled for 26 March to 5 April but was postponed due to regional conditions; as of August 2026, no new date has been announced.</p>
+
+            <h2>Exchange and Participation with Korea</h2>
+
+            <p>The most notable case of exchange between Korea and GCC-region book fairs is the Sharjah International Book Fair. Korea took part as Guest of Honor at the 42nd Sharjah International Book Fair in 2023, presenting an intensive introduction to Korean literature and publishing content. The programme included a special exhibition of Korean literature, a picture-book exhibition, book talks with Korean authors, and roundtables between Korean and UAE publishing professionals, alongside programming introducing Korean culture more broadly, including music and hanbok.</p>
+
+            <p>Notably, Sharjah reciprocated the same year, taking part as Guest of Honor at the 2023 Seoul International Book Fair. With Sharjah introducing its own literature and publishing culture in Korea, followed by Korea's participation as Guest of Honor in Sharjah, the two sides achieved a genuinely mutual exchange of publishing content and culture through each other's flagship book fairs.</p>
+
+            <p>At the 2024 Abu Dhabi International Book Fair, the Korean Cultural Center in the UAE co-organised a Korean Culture Conference with local cultural institutions. Local publishing and content-industry figures took part, discussing the international spread of Korean culture and the prospects for introducing Korean literature in the Middle East.</p>
+
+            <p>A recent example of exchange in the other direction is Oman's participation in the 2024 Seoul International Book Fair. Oman took part as "Spotlight Country" at the 2024 Seoul International Book Fair, running literature and publishing exchange programming to mark the 50th anniversary of Korea–Oman diplomatic relations. This shows that publishing exchange between Korea and the Gulf region extends beyond the UAE to other GCC countries as well.</p>
+
+            <p>Taken together, these cases show that the UAE currently has a relatively concrete foundation for cooperation in publishing exchange between Korea and the GCC/Arab world. Sharjah in particular offers points of contact for publishing and translation exchange through reciprocal Guest-of-Honor participation and its translation-grant programme, while Abu Dhabi's strong B2B functions around rights and licensing can be used to build networks for Korean publishers entering the Arabic-language market. At the same time, a mass-readership fair such as Cairo offers a different kind of value, functioning as a channel for reading the Arabic-language reader market and publishing trends.</p>
+
+            <p class="table-note">Sources — Egypt's State Information Service (SIS), on the 57th Cairo International Book Fair, as of August 2026 · Sharjah Book Authority (SBA); Doha International Book Fair (DIBF); Abu Dhabi International Book Fair (ADIBF); Kuwait's National Council for Culture, Arts and Letters (NCCAL); Oman News Agency (ONA) — official materials, as of August 2026 · Korea.net (2023); Oman Ministry of Foreign Affairs (2024)</p>
+
+            <h2>Major Literary Awards in Saudi Arabia and Their Industry Character</h2>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Table 3 — Literary Awards in Saudi Arabia</caption>
+                <thead><tr><th>Award</th><th>Established</th><th>Features</th></tr></thead>
+                <tbody>
+                <tr><td>King Faisal Prize – Arabic Language and Literature (KFP)</td><td>Established 1977, first awarded 1979</td><td>Saudi Arabia's leading international academic/cultural prize; 5 categories; Arabic Language &amp; Literature sets a new theme each year</td></tr>
+                <tr><td>National Cultural Awards – Literature/Translation/Publishing</td><td>Launched 2020</td><td>National cultural award run by the Ministry of Culture; literature, translation, and publishing each an independent category</td></tr>
+                <tr><td>Golden Pen Award</td><td>Launched 2024</td><td>Total prize pool of $740,000; recognises popular fiction, translation, and publishing; winners linked to film adaptation; run by the General Entertainment Authority (GEA)</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>Among the literary and publishing awards operating in Saudi Arabia, this report selected the King Faisal Prize, the National Cultural Awards, and the Golden Pen Award as key cases, based on national standing and their ties to the literature and publishing industries. The three awards each represent a different character — academic/literary achievement, national cultural policy, and the link between popular literature and the screen industry, respectively.</p>
+
+            <p>The King Faisal Prize (KFP), run by the King Faisal Foundation, is Saudi Arabia's leading international academic and cultural award. Established in 1977 and first awarded in 1979, it comprises five categories: Service to Islam, Islamic Studies, Arabic Language and Literature, Medicine, and Science. Within this, the Arabic Language and Literature category sets a specific research theme each year and honours individuals or institutions with outstanding academic or cultural achievement in that field. No winner meeting the selection criteria was named in 2024 or 2025; in 2026, under the theme "Arabic Literature in French," the prize went to Professor Pierre Larcher of France.</p>
+
+            <p>The National Cultural Awards are a comprehensive cultural award run by Saudi Arabia's Ministry of Culture as part of national cultural strategy and Vision 2030. Minister of Culture Prince Badr bin Abdullah bin Farhan announced the award's introduction in 2019, and the programme officially launched in 2020. It initially centred on awards across cultural fields including literature, publishing, and translation, and its categories have since expanded. The 6th National Cultural Awards in 2026 comprise 7 major awards and 12 category awards, with the Literature Award, Publishing Award, and Translation Award each an independent category. Rather than functioning as a conventional literary prize honouring a single work, it is more oriented toward identifying and recognising, at a national level, individuals and institutions with achievements across Saudi cultural fields. At the 4th edition in 2024, for example, novelist Osamah Al-Muslim won the Literature Award, children's specialist publisher Qyadiya Publishing House won the Publishing Award, and Walid Al-Omari won the Translation Award.</p>
+
+            <p>The Golden Pen Award, launched in 2024 by Saudi Arabia's General Entertainment Authority (GEA), centres on Arabic-language fiction and story IP. Unlike conventional literary prizes, it is distinguished by its focus on identifying novels and screenplays with strong popular and cinematic potential, connecting publishing content to the screen industry. Its fiction category is broken down into eight genres — thriller, mystery/crime, romance, fantasy, comedy, historical, horror, and realism — alongside awards for screenplays adapted from literary works, best translated novel, best Arab publisher, and a readers' choice award.</p>
+
+            <p>According to official figures, the total prize pool is $740,000. First place in fiction receives $100,000 along with a film-production opportunity; second place receives $50,000, also with film production; each genre award carries $25,000. Best translated novel receives $100,000, and best Arab publisher receives $50,000. The Golden Pen Award thus links literary creation with the film adaptation, translation, and publication of novel IP within a single industrial structure, making it a case that illustrates recent shifts in Saudi Arabia's content industry.</p>
+
+            <h2>Features from a Publishing-Market Perspective</h2>
+
+            <p>The three awards represent different axes of Saudi Arabia's literary and publishing policy: the King Faisal Prize centres on international academic authority in Arabic and literature; the National Cultural Awards, on national-level support for and recognition of the literature, publishing, and translation ecosystem; and the Golden Pen Award, on popularising literary IP and expanding into the screen industry.</p>
+
+            <p>From a publishing-market perspective, it is notable that the National Cultural Awards recognise publishing and translation as separate categories alongside literature, and that the Golden Pen Award honours not only authors but translated novels and Arab publishers, directly linking novels to film adaptation. This points to an emerging trend in Saudi Arabia of connecting literature to other content industries — publishing, translation, film — rather than treating it as a purely independent art form.</p>
+
+            <p class="table-note">Sources — King Faisal Prize, official site, kingfaisalprize.org, as of August 2026 · Saudi Press Agency (SPA), on the launch of the 6th National Cultural Awards, 1 March 2026 · Riyadh Review of Books, on the Golden Pen Award</p>
+
+            <h2>Major Literary Awards in the GCC/Arab World and Their Links to Translation and Publishing</h2>
+
+            <p>Among the literary and publishing awards operating across the GCC and the wider Arab world, this report selected six major awards based on international standing, prize scale, and links to translation, publishing, and international outreach: the International Prize for Arabic Fiction (IPAF), the Sheikh Zayed Book Award, the Katara Prize for Arabic Novel, the Naguib Mahfouz Medal for Literature, the Turjuman Award, and the Sheikh Hamad Award for Translation and International Understanding — covering not only literary creation but also translation, publishing, and international distribution.</p>
+
+            <div class="data-table-wrap">
+            <table class="data-table">
+                <caption>Table 4 — Major Literary Awards in the GCC and Arab World</caption>
+                <thead><tr><th>Award</th><th>Established</th><th>Features</th></tr></thead>
+                <tbody>
+                <tr><td>International Prize for Arabic Fiction (IPAF)</td><td>Launched 2007, first awarded 2008</td><td>Leading international award for Arabic fiction; backed by the ALC; supports translation/publication abroad</td></tr>
+                <tr><td>Sheikh Zayed Book Award (SZBA)</td><td>Established 2006</td><td>10 categories including literature, translation, publishing; total prize pool of 7.75M AED</td></tr>
+                <tr><td>Katara Prize for Arabic Novel</td><td>Established 2014</td><td>Supports the writing and publication of Arabic novels; 2026 total prize pool $375,000; linked to translation</td></tr>
+                <tr><td>Naguib Mahfouz Medal for Literature</td><td>Established 1996</td><td>Awarded for contemporary Arabic fiction; winners linked to English translation and publication abroad</td></tr>
+                <tr><td>Turjuman Award</td><td>Established 2016</td><td>Supports foreign-language translation and publication of Arabic books; for translators and publishers; run by the SBA</td></tr>
+                <tr><td>Sheikh Hamad Award for Translation and International Understanding</td><td>Established 2015</td><td>Qatar's international translation award; supports two-way Arabic↔foreign-language translation</td></tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>The International Prize for Arabic Fiction (IPAF), launched in 2007 and first awarded in 2008, is a leading international award for Arabic-language fiction. It is currently backed by the Abu Dhabi Arabic Language Centre (ALC) and run by an independent board. Each of the six shortlisted finalists receives $10,000, and the eventual winner receives a further $50,000. It is distinguished by supporting English translation of the winning work and encouraging translation into other languages as well, helping Arabic fiction reach the international publishing market.</p>
+
+            <p>The Sheikh Zayed Book Award (SZBA), established in 2006, is Abu Dhabi's leading comprehensive cultural and book award, now run by the Abu Dhabi Arabic Language Centre. It covers 10 categories including literature, translation, children's literature, and publishing and technology, with a total prize pool of 7.75 million AED. It is notable for supporting literary creation together with the translation and publishing industries, covering not just authors but translators and publishers/cultural institutions as well.</p>
+
+            <p>The Katara Prize for Arabic Novel, established in 2014 by Qatar's Katara Cultural Village Foundation, is an award for Arabic-language fiction. As of 2026 its total prize pool is $375,000, and it runs several categories including published novels, unpublished novels, and children's fiction. It also supports the international spread of Arabic fiction by linking winning works to translation and publication. The 12th edition in 2026 received a record 2,610 submissions, comprising 1,488 unpublished novels, 578 works published in 2025, and 303 unpublished children's novels, among others.</p>
+
+            <p>The Naguib Mahfouz Medal for Literature was established in 1996 by the American University in Cairo (AUC) Press. It is awarded to contemporary Arabic novels not yet translated into English, with winners receiving prize money along with English translation and publication abroad. Its significance lies less in the size of the prize than in its role connecting Arabic-language works to the English-language publishing market.</p>
+
+            <p>The Turjuman Award, established in 2016 by the Sharjah Book Authority (SBA), is a translation-and-publishing award. It supports the foreign-language translation and international publication of works originally published in Arabic, covering not only translators but also the original and international publishers involved, with the aim of promoting the international market entry of Arabic-language publications.</p>
+
+            <p>The Sheikh Hamad Award for Translation and International Understanding, established in Qatar in 2015, is an international translation award. It is distinguished by its two-way structure, covering translation from Arabic into foreign languages as well as from foreign languages into Arabic — giving it the character of an international translation exchange that serves both the international reach of Arabic literature and the introduction of foreign literature into the Arabic-speaking world.</p>
+
+            <p class="table-note">Sources — International Prize for Arabic Fiction (IPAF), official site, arabicfiction.org, as of August 2026 · Sheikh Zayed Book Award (SZBA), zayedaward.ae · American University in Cairo (AUC) Press, on the Naguib Mahfouz Medal for Literature · Sharjah Book Authority (SBA), on the Turjuman Award · Sheikh Hamad Award for Translation and International Understanding, hta.qa · The Peninsula, "record submissions for the 12th Katara Prize for Arabic Novel," 2026</p>
+
+            <h2>Overall Implications and Entry Strategies for Korean Publishers</h2>
+
+            <p>On the book-fair side, this report surveyed nine fairs in total: Saudi Arabia's Riyadh and Jeddah international book fairs and the Ithra Children's Book Fair, plus the Cairo, Sharjah, Doha, Abu Dhabi, Kuwait, and Muscat international book fairs across the GCC and wider Arab world. The fairs differ not only in scale but in function. Cairo is a leading Arab-world fair built on a mass general readership; Sharjah stands out for international publishing and translation exchange; and Abu Dhabi stands out for rights/licensing and B2B networking among publishing professionals. The Riyadh International Book Fair, Saudi Arabia's largest, has also been expanding its publishing-business programming in recent years.</p>
+
+            <p>Korean publishing content's entry into the Arab world would also benefit from approaching book fairs differently depending on the goal. Abu Dhabi and Sharjah can serve as key points of contact for rights export and identifying local publishers and agents, while Cairo and Riyadh, with their mass readerships, can help raise awareness of specific titles among general readers. Korea benefits in particular from an existing foundation of exchange, having taken part as Guest of Honor at the 2023 Sharjah International Book Fair the same year that Sharjah reciprocated as Guest of Honor at the Seoul International Book Fair.</p>
+
+            <p>On the awards side, this report surveyed nine awards in total — three in Saudi Arabia and six across the GCC/Arab world. These awards show a structure that extends beyond honouring literary creation to linking translation, publishing, and international distribution. IPAF and the Naguib Mahfouz Medal support the translation and publication of Arabic-language works abroad; the Turjuman Award encourages foreign-language translation and international publication of Arabic books; the Sheikh Zayed Book Award runs translation and publishing as independent award categories; and the Katara Prize for Arabic Novel likewise links winning works to translation and publication.</p>
+
+            <div class="article-photo"><img src="kpipa-2026-08-images/fair-award-map.jpg" alt="Map of major book fairs and literary awards in Saudi Arabia and the GCC/Arab world"></div>
+            <p class="photo-caption">▲ [Figure 1] Map of major book fairs and literary awards in Saudi Arabia and the GCC/Arab world. Locations shown are based on each fair's host city or the location of the relevant award's administering institution; the map is a simplified schematic that may not reflect actual borders. — Source: prepared by the correspondent</p>
+
+            <p>The operating structure of the Sheikh Hamad Award for Translation and International Understanding is especially worth noting for its relevance to Korean publishing content. Where the Turjuman Award mainly supports translation of Arabic books into foreign languages, the Sheikh Hamad Award covers two-way translation, Arabic↔foreign language. This structure is meaningful in that it opens a way to explore future two-way publishing exchange — Korean literature translated into Arabic, and Arabic literature translated into Korean.</p>
+
+            <p>In Saudi Arabia, the recent link between literature and other content industries is increasingly pronounced. The National Cultural Awards run literature, translation, and publishing as independent categories, and the Golden Pen Award links its awards for fiction, translation, and publishing directly to film production for some winning works. This reflects a strengthening industrial approach that treats literary works not merely as publications but as IP that can extend into film and screen content.</p>
+
+            <p>Taken together, Korean publishers' entry into the Saudi and GCC markets can expand beyond simply introducing finished Korean books to local readers — toward rights deals with local publishers, Arabic translation and local publication of Korean literature, Korean translation and publication of Arabic literature, co-publishing and author exchange, and the screen adaptation of literary IP. In particular, by drawing on Sharjah's and Abu Dhabi's existing publishing and translation networks together with Saudi Arabia's expanding support policies for the publishing and content industries, Korean publishers could develop this beyond simple content export into genuine two-way publishing and cultural exchange between Korea and the Arab world.</p>
+
+            <div class="sources">
+                <p class="sources-label">Publication Details</p>
+                <p>— Published by the Publication Industry Promotion Agency of Korea (KPIPA) · 31 August 2026</p>
+                <p>— Series: Global Publishing Trends Report — Overseas Publishing Market Report</p>
+                <p>— Source: <a href="https://www.kpipa.or.kr/p/g3_5/270" target="_blank">kpipa.or.kr</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span class="footer-left">Seoul · London · Riyadh &nbsp;·&nbsp; © 2026 Hyojung Jung</span>
+    <div class="footer-right">
+        <a href="../index.html" class="footer-link">Home</a>
+        <a href="../contact.html" class="footer-link">Contact</a>
+    </div>
+</footer>
+
+<div class="float-nav">
+    <a href="kpipa-2026-07-saudi.html">← Prev</a>
+    <a href="../writing.html" class="float-center">All Articles</a>
+</div>
+
+<script>
+function showLang(lang, btn) {
+    document.getElementById('text-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('text-en').classList.toggle('hidden', lang !== 'en');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+</script>
+</body>
+</html>

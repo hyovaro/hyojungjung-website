@@ -326,6 +326,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://hyojungjung.com/articles/kpipa-2026-08-saudi.html</loc>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://hyojungjung.com/articles/nt-inter-alia.html</loc>
     <lastmod>2026-07-04</lastmod>
     <priority>0.6</priority>
@@ -537,7 +542,7 @@
   </url>
   <url>
     <loc>https://hyojungjung.com/writing.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
